@@ -1,6 +1,10 @@
 #include "POSITION.H"
 
+<<<<<<< HEAD
 //#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+=======
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+>>>>>>> Position Class completed
 #include <doctest.h>
 
 TEST_CASE("Position x and y can be set and retrieved"){
