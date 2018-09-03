@@ -2,16 +2,20 @@
 #define POSITION_H
 
 /**
- * Position Class - A data class containing all the setters,getters and variables defining a position of an object.
+ * \class Position Class
+ * \brief A data class containing all the setters,getters and variables
+ * defining a position of an object.
+ * \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  */
 
 class Position{
 
 public:
 
-    /** \brief Default Constructor. Creates a Position object with x and y coordinates of its center.
+    /** \brief Parameterized Constructor. Creates a Position object with x and y coordinates of its center.
+     *  Default values are x-0 and y=0.
      */
-    Position();
+     Position(float x=0, float y=0);
 
     /** \brief Default destructor. destroys a Position object.
      */
@@ -37,6 +41,10 @@ public:
      */
     float getY_pos() const;
 
+    /** \brief Overloaded subtraction operator (-).
+    *   \return Position with the x and y results from the subtraction.
+    */
+    Position operator -(Position& rhs);
 
 private:
 

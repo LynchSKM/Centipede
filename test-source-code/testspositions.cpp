@@ -19,3 +19,16 @@ TEST_CASE("Position x and y can be set and retrieved"){
     CHECK(testPosition.getX_pos() == xPos);
     CHECK(testPosition.getY_pos() == yPos);
 }
+
+TEST_CASE("Two Positions can be subtracted."){
+
+    Position positionA{10.0,10.0};
+    Position positionB{5.0,5.0};
+    auto xPos = 5.0f;
+    auto yPos = 5.0f;
+
+    auto positionC = positionA-positionB;
+
+    CHECK(positionC.getX_pos() == xPos);
+    CHECK(positionC.getY_pos() == yPos);
+}
