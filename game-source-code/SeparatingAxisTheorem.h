@@ -61,7 +61,7 @@ class SeparatingAxisTheorem
         *   determine where on the axis it is located. It returns the min and max
         *   projections of the Rectangle on the axis given.
         *   \param axis is of type Position
-        *   \param vertices is of type Position
+        *   \param vertices is a vector of type Position.
         *   \return tuple<float,float> first float is the min projection of the Rectangle.
         *   Second float is the max projection of the Rectangle.
         */
