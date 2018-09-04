@@ -21,6 +21,16 @@ class IMovingEntity: public IEntity
         */
         virtual void move() = 0;
 
+        /** \brief A pure virtual function that returns the direction of an object.
+         * \return The direction of the object of type Direction of the enum class.
+         */
+        virtual Direction getDirection() const = 0;
+
+        /** \brief A pure virtual function that sets the direction of an object.
+         * \param direction of type Direction of the enum class.
+         */
+        virtual void setDirection(Direction direction) = 0;
+
         /** \brief Inherited from IEntity. A pure virtual function that returns a enum of ObjectType of
         *   a derived class object.
         *   \return An enum of the strongly typed enum class ObjectType.
