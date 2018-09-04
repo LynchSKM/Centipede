@@ -5,6 +5,7 @@
 #include "ObjectType.h"
 #include "Rectangle.h"
 #include "POSITION.H"
+#include "Direction.h"
 
 /** \class IMovingEntity
 *   \brief This is a Interface Class that inherits from the IEntity class. It
