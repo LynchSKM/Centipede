@@ -13,7 +13,8 @@ enum class Direction
     UP = 0, /**< is coded as int of value 0.*/
     DOWN,   /**< is coded as int of value 1.*/
     LEFT,   /**< is coded as int of value 2.*/
-    RIGHT   /**< is coded as int of value 3.*/
+    RIGHT,  /**< is coded as int of value 3.*/
+	NONE	/**< is coded as int of value 4.*/
 };
 
 #endif // DIRECTION_H
