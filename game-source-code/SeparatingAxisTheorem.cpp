@@ -1,23 +1,23 @@
 #include "SeparatingAxisTheorem.h"
 
-bool SeparatingAxisTheorem::checkOverlap(const Rectangle& rect_A, const Rectangle& rect_B)
+bool SeparatingAxisTheorem::checkOverlap(const BoundaryBox& rect_A, const BoundaryBox& rect_B)
 {
 
     if(!axes_.empty()) clearAll();
+    vertices_rectA_ = rect_A.getVertices();
+    vertices_rectB_ = rect_B.getVertices();
 
-    storeVertices(rect_A, vertices_rectA_);
-    storeVertices(rect_B, vertices_rectB_);
     generateAxes();
 
     return checkProjectionsOverlap();
 }
 
-void SeparatingAxisTheorem::storeVertices(const Rectangle& rect, vector<Position>& vertices)
+void SeparatingAxisTheorem::storeVertices(const BoundaryBox& rect, vector<Position>& vertices)
 {
-    vertices.push_back(rect.upperLeft);
+   /* vertices.push_back(rect.upperLeft);
     vertices.push_back(rect.upperRight);
     vertices.push_back(rect.bottomLeft);
-    vertices.push_back(rect.bottomRight);
+    vertices.push_back(rect.bottomRight); */
 
 }
 

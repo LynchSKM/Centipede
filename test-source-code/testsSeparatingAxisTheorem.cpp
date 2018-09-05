@@ -1,25 +1,22 @@
 #include "SeparatingAxisTheorem.h"
-#include "Rectangle.h"
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest.h>
 
 
-//
 TEST_CASE("Separating Axes Theorem detects overlap between two Rectangles.")
 {
 
-    struct Rectangle rectA{};
-    rectA.upperLeft   = Position(6, 8);
-    rectA.bottomLeft  = Position(6, 6);
-    rectA.upperRight  = Position(10, 8);
-    rectA.bottomRight = Position(10, 6);
+    auto width  = 30.0f;
+    auto height = 40.0f;
+    auto rotationAngle = 0.0f;
 
-    struct Rectangle rectB;
-    rectB.upperLeft   = Position(9, 4);
-    rectB.bottomLeft  = Position(9, 7);
-    rectB.upperRight  = Position(11, 4);
-    rectB.bottomRight = Position(11, 7);
+
+    Position center1{325.0f, 480.0f};
+    BoundaryBox rectA{center1, width, height, rotationAngle};
+
+    Position center2(326.0f, 485.0f);
+    BoundaryBox rectB(center2, width, height, rotationAngle);
 
     SeparatingAxisTheorem sat_algorithm{};
 
@@ -28,18 +25,14 @@ TEST_CASE("Separating Axes Theorem detects overlap between two Rectangles.")
 
 TEST_CASE("Separating Axes Theorem detects no overlap between two Rectangles.")
 {
+    auto width = 30;
+    auto height = 40;
+    auto rotationAngle = 0.0f;
+    Position center1(325.0f, 480.0f);
+    BoundaryBox rectA(center1, width, height, rotationAngle);
 
-    struct Rectangle rectA{};
-    rectA.upperLeft   = Position(6, 8);
-    rectA.bottomLeft  = Position(6, 6);
-    rectA.upperRight  = Position(10, 8);
-    rectA.bottomRight = Position(10, 6);
-
-    struct Rectangle rectB;
-    rectB.upperLeft   = Position(12, 4);
-    rectB.bottomLeft  = Position(12, 6);
-    rectB.upperRight  = Position(15, 4);
-    rectB.bottomRight = Position(15, 6);
+    Position center2(100.0f, 100.0f);
+    BoundaryBox rectB(center2, width, height, rotationAngle);
 
     SeparatingAxisTheorem sat_algorithm{};
 

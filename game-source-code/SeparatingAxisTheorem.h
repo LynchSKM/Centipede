@@ -2,7 +2,7 @@
 #define SEPARATINGAXISTHEOREM_H
 
 #include "POSITION.H"
-#include "Rectangle.h"
+#include "BoundaryBox.h"
 
 #include <cmath>
 #include <tuple>
@@ -28,7 +28,7 @@ class SeparatingAxisTheorem
         *   \param rect_B is of type Rectangle struct.
         *   \return bool which is true if there's overlap and false otherwise.
         */
-        bool checkOverlap(const Rectangle& rect_A, const Rectangle& rect_B);
+        bool checkOverlap(const BoundaryBox& rect_A, const BoundaryBox& rect_B);
 
     private:
         vector<Position> axes_;
@@ -41,7 +41,7 @@ class SeparatingAxisTheorem
         *   \param vertices is a vector of type Position.
         *   \return void
         */
-        void storeVertices(const Rectangle& rect, vector<Position>& vertices);
+        void storeVertices(const BoundaryBox& rect, vector<Position>& vertices);
 
         /** \brief Generates the normals perpendicular to the edges of a Rectangle.
         *   \details The normals are stored in a vector of type Position as it has
