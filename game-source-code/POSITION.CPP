@@ -24,6 +24,10 @@ float Position::getY_pos() const{
     return yPos_;
 }
 
-Position Position::operator -(Position& rhs){
+Position Position::operator -(const Position& rhs){
     return Position(xPos_ - rhs.xPos_, yPos_ - rhs.yPos_);
+}
+
+bool Position::operator ==(const Position& rhs) const{
+    return(xPos_ == rhs.xPos_ && yPos_ == rhs.yPos_);
 }
