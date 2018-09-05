@@ -2,7 +2,7 @@
 #define IENTITY_H
 
 #include "ObjectType.h"
-#include "Rectangle.h"
+#include "BoundaryBox.h"
 #include "POSITION.H"
 
 /** \class IEntity
@@ -31,7 +31,7 @@ class IEntity
         *   the rectangular area covered by a derived class object.
         *   \return A Rectangle object of the type Rectangle struct.
         */
-        virtual Rectangle getBoundaryBox() = 0;
+        virtual BoundaryBox getBoundaryBox() = 0;
 
         /** \brief A pure virtual function that queries if a derived class object
         *   is still alive or not.
