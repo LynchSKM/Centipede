@@ -5,18 +5,37 @@
 #include "Dimensions.h"
 #include "Grid.h"
 
+/** \class Centipede
+*   \brief This is a Class that inherits from the IMovingEntity class. It
+*   contains pure virtual functions that will be overridden by derived.
+*   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+*
+*/
 
 class Centipede : public IMovingEntity
 {
     public:
 
+        /** \brief is a strongly typed enum class representing the BodyType of the
+         *  centipede.
+         */
         enum class BodyType{
-            HEAD = 0,
-            BODY
+            HEAD = 0,/**< is coded as int of value 0. */
+            BODY     /**< is coded as int of value 0. */
         };
-        Centipede(Direction cur_Direction, BodyType bodytype, ObjectType objectType,Position position,Grid grid);
-        ~Centipede();
 
+        /** \brief Creates a centipede object parameterized constructor.
+         * \param is a direction of type Direction enum class.
+         * \param is a bodytype of type BodyType enum class.
+         * \param is a objectType of type ObjectType enum class.
+         * \param is a position of type Position.
+         * \param is grid of type grid.
+         */
+        Centipede(Direction cur_Direction, BodyType bodytype, ObjectType objectType,Position position,Grid grid);
+
+        /** Destroys the Centipede object.
+        */
+        ~Centipede();
 
         /** A pure virtual function that moves derived class objects.
         */
