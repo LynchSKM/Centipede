@@ -21,8 +21,9 @@ using std::shared_ptr;
 class Presentation
 {
     public:
-        /** \brief Default Constructor. Creates a Presentation object.
-         *  \param screen_width
+        /** \brief Parametrized Constructor. Creates a Presentation object.
+         *  \param screen_width is the width of the screen.
+         *  \param screen_height is the height of the screen.
          */
         Presentation(const unsigned int screen_width, const unsigned int screen_height);
 
@@ -65,7 +66,7 @@ class Presentation
         /** \brief Loads all the game's textures.
          *  \param game_assets is a vector of AssetManager
          */
-        void loadTextures(vector<AssetManager> game_assets);
+        //void loadTextures(vector<AssetManager> game_assets);
 
         /** \brief Default Destructor. Destroys a Presentation object.
          */

@@ -10,9 +10,9 @@
 
 enum class ScreenState{
     SPLASHSCREEN  = 0, /**< is coded as int of value 0.*/
-    GAMEWONSCREEN      /**< is coded as int of value 1.*/
-    GAMEOVERSCREEN     /**< is coded as int of value 2.*/
-    GAME_ACTIVE        /**< is coded as int of value 3.*/
+    GAMEWONSCREEN,     /**< is coded as int of value 1.*/
+    GAMEOVERSCREEN,     /**< is coded as int of value 2.*/
+    GAME_ACTIVE       /**< is coded as int of value 3.*/
 };
 
 #endif // SCREENSTATE_H

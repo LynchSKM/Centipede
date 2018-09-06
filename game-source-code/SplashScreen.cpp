@@ -33,7 +33,7 @@ void SplashScreen::show(sf::RenderWindow& render_window){
     splash_controls_text.setStyle(sf::Text::Bold);
 
     //render_window.draw(background_sprite);
-    render_window.draw(sf::Color(0,0,0));
+    render_window.clear(sf::Color(0,0,0));
     render_window.draw(splash_screen_title);
     render_window.draw(splash_controls_text);
     render_window.display();
