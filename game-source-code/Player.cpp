@@ -101,7 +101,14 @@ int Player::getRemainingLives() const
 
 vector <shared_ptr<IMovingEntity>> Player::shoot()
 {
+    struct PlayerBulletDimentions dimension;
+    auto xVal = position_.getX_pos()-dimension.speed;
+    auto yVal = position_.getY_pos();
 
+
+    vector<shared_ptr<IMovingEntity>> bullets;
+    bullets.push_back(std::make_shared<PlayerBullet>(Position{xVal,yVal},grid_));
+    return bullets;
 }
 
 void Player::addScore(int score)

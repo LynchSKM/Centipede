@@ -10,6 +10,7 @@ using std::vector;
 #include "IMovingEntity.h"
 #include "Grid.h"
 #include "Dimensions.h"
+#include "PlayerBullet.h"
 
 
 /** \class Player

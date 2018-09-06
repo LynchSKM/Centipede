@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "POSITION.H"
 
+
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest.h>
 
@@ -81,3 +82,15 @@ TEST_CASE("Player's boundary box is constructed correctly"){
     CHECK(rectA.at(3) == playerRect.at(3));
 }
 
+TEST_CASE("Player can shoot"){
+
+    Grid testGrid{650,600};
+    Player testPlayer{testGrid};
+    struct PlayerDimension playerDimension;
+
+    Position playerPosition{325.0f,600.0f-playerDimension.height*0.5f};
+
+    auto bullets = testPlayer.shoot();
+
+    CHECK(!bullets.empty());
+}
