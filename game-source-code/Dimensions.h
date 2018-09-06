@@ -14,4 +14,12 @@ struct CentipedeDemensions{
 
 };
 
+struct PlayerBulletDimentions{
+
+    const float height = 16.0;
+    const float width = 16.0;
+    const float speed = 16.0;
+
+};
+
 #endif
