@@ -47,7 +47,7 @@ public:
     Position operator -(const Position& rhs);
 
     /** \brief Overloaded equality operator (==).
-    *   \return Position with the x and y results from the subtraction.
+    *   \return bool
     */
     bool operator==(const Position& rhs) const;
 
