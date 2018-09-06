@@ -27,6 +27,11 @@ class Presentation
          */
         Presentation(const unsigned int screen_width, const unsigned int screen_height);
 
+        /** \brief Determines the keyboard keys pressed and acts accordingly.
+         *  Polling is used by default.
+         */
+        void processInputEvents();
+
         /** \brief Displays a Splashscreen at the beginning of the game.
          */
         void drawSplashScreen();
