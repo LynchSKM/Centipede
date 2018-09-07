@@ -12,6 +12,7 @@ using std::shared_ptr;
 #include "IEntity.h"
 #include "AssetManager.h"
 #include "SplashScreen.h"
+#include "GameWonScreen.h"
 
 /** \class Presentation
  *  \brief Uses the SFML Graphics Library to draw all game objects on the screen.

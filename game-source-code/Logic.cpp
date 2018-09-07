@@ -16,8 +16,9 @@ void Logic::getInputCommands()
 
 void Logic::run()
 {
-    if(screen_state_==ScreenState::SPLASHSCREEN) renderSplashScreen();
-
+    //if(screen_state_==ScreenState::SPLASHSCREEN) renderSplashScreen();
+    screen_state_=ScreenState::GAMEWONSCREEN;
+    if(screen_state_==ScreenState::GAMEWONSCREEN)renderGameWonScreen();
 
 }
 void Logic::loadAssets()
@@ -38,12 +39,12 @@ void Logic::renderGameObjects()
 
 void Logic::renderGameOverScreen()
 {
-
+    //presentation_.drawSplashScreen();
 }
 
 void Logic::renderGameWonScreen()
 {
-
+    presentation_.drawGameWonScreen(player_->getScore(),highScoreManager_.getHighScore());
 }
 
 

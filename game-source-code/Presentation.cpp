@@ -44,7 +44,8 @@ void Presentation::drawGameOverScreen(const int player_score, const int high_sco
 
 void Presentation::drawGameWonScreen(const int player_score, const int high_score)
 {
-
+    GameWonScreen gameWonScreen;
+    gameWonScreen.show(window_, player_score, high_score);
 }
 
 void Presentation::displayLives(const int remaining_lives, const int player_score, const int high_score)
