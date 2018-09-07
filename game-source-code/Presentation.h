@@ -13,6 +13,7 @@ using std::shared_ptr;
 #include "AssetManager.h"
 #include "SplashScreen.h"
 #include "GameWonScreen.h"
+#include "GameOverScreen.h"
 
 /** \class Presentation
  *  \brief Uses the SFML Graphics Library to draw all game objects on the screen.
@@ -32,6 +33,12 @@ class Presentation
          *  Polling is used by default.
          */
         void processInputEvents();
+
+        /** \brief Checks which key was pressed/released and updates its status.
+         * \param is a key of type Key from the sf keyboard
+         * \param is a bool stating if there is a key that is pressed.
+         */
+        void checkInput(const sf::Keyboard::Key key, const bool isPressed);
 
         /** \brief Displays a Splashscreen at the beginning of the game.
          */
@@ -74,6 +81,31 @@ class Presentation
          */
         //void loadTextures(vector<AssetManager> game_assets);
 
+        /** \brief returns a bool indicating whether a key was pressed.
+         *  \return a bool indicating key status.
+         */
+        bool isLeftPressed(){return isLeftPressed_;};
+
+        /** \brief returns a bool indicating whether a key was pressed.
+         *  \return a bool indicating key status.
+         */
+        bool isRightPressed(){return isRightPressed_;};
+
+        /** \brief returns a bool indicating whether a key was pressed.
+         *  \return a bool indicating key status.
+         */
+        bool isUpPressed(){return isUpPressed_;};
+
+        /** \brief returns a bool indicating whether a key was pressed.
+         *  \return a bool indicating key status.
+         */
+        bool isDownPressed(){return isDownPressed_;};
+
+        /** \brief returns a bool indicating whether a key was pressed.
+         *  \return a bool indicating key status.
+         */
+        bool isSpacePressed(){return isSpacePressed_;};
+
         /** \brief Default Destructor. Destroys a Presentation object.
          */
         ~Presentation();
@@ -83,6 +115,15 @@ class Presentation
         sf::RenderWindow window_;
         sf::Font font_;
         sf::Sprite gameObjects_;
+
+        //input keys
+        bool isLeftPressed_;
+        bool isRightPressed_;
+        bool isUpPressed_;
+        bool isDownPressed_;
+        bool isSpacePressed_;
+
+
 };
 
 #endif // PRESENTATION_H

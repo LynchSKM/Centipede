@@ -47,6 +47,7 @@ class Logic
         vector<shared_ptr<IMovingEntity>> moving_game_objects;
         int high_score_;
         ScreenState screen_state_;
+        bool debounceSpaceKey_;
 
         // Private functions:
 
