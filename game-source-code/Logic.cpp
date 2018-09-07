@@ -7,6 +7,7 @@ Logic::Logic():screen_state_{ScreenState::SPLASHSCREEN}
     moving_game_objects.push_back(player_);
     debounceSpaceKey_ = false;
     //ctor
+
 }
 
 void Logic::getInputCommands()
@@ -23,27 +24,49 @@ void Logic::getInputCommands()
 
         debounceSpaceKey_ = true;
         auto bullet_Vector = player_->shoot();
+
         for(auto &bullets: bullet_Vector){
-        game_objects_.push_back(bullets);
-        moving_game_objects.push_back(bullets);
-    }
-    if(!debounceSpaceKey_ && presentation_.isSpacePressed())debounceSpaceKey_ = false;
-}
+            game_objects_.push_back(bullets);
+            moving_game_objects.push_back(bullets);
+        }//for
+        if(!debounceSpaceKey_ && presentation_.isSpacePressed())
+            debounceSpaceKey_ = false;
+
+    }//if
+
 }
 
 void Logic::run()
 {
     if(screen_state_==ScreenState::SPLASHSCREEN) renderSplashScreen();
-    //screen_state_=ScreenState::;
-    while(screen_state_==ScreenState::GAME_ACTIVE){
 
+    loadAssets();
+    high_score_ = highScoreManager_.getHighScore();
+
+    StopWatch game_timer;
+    auto game_speed = 1.0f/5.0f;
+    auto deltaTime  = 0.0f;
+    game_timer.start();
+
+    while(screen_state_==ScreenState::GAME_ACTIVE){
+        game_timer.stop();
+        deltaTime+=game_timer.getRunTime();
+
+        game_timer.start();
+
+        // Check if time that has passed is greater than the frame speed:
+        while(deltaTime>game_speed && screen_state_ == ScreenState::GAME_ACTIVE){
+            getInputCommands();
+            updateGameObjects();
+            renderGameObjects();
+        }
     }
     //if(screen_state_==ScreenState::GAMEOVERSCREEN)renderGameOverScreen();
 
 }
 void Logic::loadAssets()
 {
-
+    presentation_.loadTextures(assetManager_.getAssetInfo());
 }
 
 void Logic::renderSplashScreen()
@@ -51,20 +74,34 @@ void Logic::renderSplashScreen()
     presentation_.drawSplashScreen();
     screen_state_ = ScreenState::GAME_ACTIVE;
 }
+void Logic::updateGameObjects()
+{
+    for(auto& object : moving_game_objects){
+        if(object->isAlive()) object->move();
+    }
+}
+
+void Logic::removeDeadEntities()
+{
+
+}
 
 void Logic::renderGameObjects()
 {
 
+    presentation_.renderWindow(game_objects_,
+                          player_->getRemainingLives(), player_->getScore(),
+                          high_score_);
 }
 
 void Logic::renderGameOverScreen()
 {
-    presentation_.drawGameOverScreen(player_->getScore(),highScoreManager_.getHighScore());
+    presentation_.drawGameOverScreen(player_->getScore(), high_score_);
 }
 
 void Logic::renderGameWonScreen()
 {
-    presentation_.drawGameWonScreen(player_->getScore(),highScoreManager_.getHighScore());
+    presentation_.drawGameWonScreen(player_->getScore(), high_score_);
 }
 
 

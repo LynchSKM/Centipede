@@ -23,11 +23,10 @@ class AssetManager{
         // Enumerate Types of Assets:
 		enum class AssetType
 		{ FONT = 0,
-          PLAYER_,
-          CENTI_HEAD,
-          CENTI_BODY,
-          MUSHROOM,
-          BULLET
+          PLAYER,
+          BULLET,
+          CENTIPEDE,
+          MUSHROOM
 		};/**< A strongly typed enumeration class used to list the different assets in the game. */
 
 
@@ -40,18 +39,18 @@ class AssetManager{
 		AssetManager(AssetType asset_type, string asset_path);
 
 		/** \brief Returns the AssetType related to the AssetManager.
-        * 	\returns AssetType enum a strongly typed enumeration of AssetType.
+        * 	\return AssetType enum a strongly typed enumeration of AssetType.
         */
         AssetType getAssetType() const;
 
         /** \brief Returns the path on the disk related to the asset.
-        * 	\returns string with path to the asset.
+        * 	\return string with path to the asset.
         */
         string getAssetPath() const;
 
         /**	\brief Returns a vector of type AssetManager containing
         *   all the asset information for the project
-        * 	\returns vector<AssetManager>
+        * 	\return vector<AssetManager>
         */
         vector<AssetManager> getAssetInfo();
 

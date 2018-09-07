@@ -3,17 +3,21 @@
 
 #include <SFML/Graphics.hpp>
 
+#include <map>
 #include <vector>
 #include <memory>
 
 using std::vector;
 using std::shared_ptr;
+using std::map;
+using std::pair;
 
 #include "IEntity.h"
 #include "AssetManager.h"
 #include "SplashScreen.h"
 #include "GameWonScreen.h"
 #include "GameOverScreen.h"
+#include "SpriteSheet.h"
 
 /** \class Presentation
  *  \brief Uses the SFML Graphics Library to draw all game objects on the screen.
@@ -79,7 +83,7 @@ class Presentation
         /** \brief Loads all the game's textures.
          *  \param game_assets is a vector of AssetManager
          */
-        //void loadTextures(vector<AssetManager> game_assets);
+        void loadTextures(vector<AssetManager> game_assets);
 
         /** \brief returns a bool indicating whether a key was pressed.
          *  \return a bool indicating key status.
@@ -114,7 +118,10 @@ class Presentation
         sf::Color background_;
         sf::RenderWindow window_;
         sf::Font font_;
-        sf::Sprite gameObjects_;
+
+        //
+        map<ObjectType, sf::Texture> game_textures;
+        vector<SpriteSheet> sprite_sheets_;
 
         //input keys
         bool isLeftPressed_;
@@ -122,6 +129,11 @@ class Presentation
         bool isUpPressed_;
         bool isDownPressed_;
         bool isSpacePressed_;
+
+        //
+        void populateSpriteSheets(ObjectType object_type, unsigned int row,
+                                  sf::Vector2u imageCount, float switchTime,
+                                  Direction direction);
 
 
 };

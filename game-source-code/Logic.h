@@ -6,6 +6,7 @@
 #include "HighScoreManager.h"
 #include "ScreenState.h"
 #include "Player.h"
+#include "StopWatch.h"
 
 
 #include <vector>
@@ -42,6 +43,7 @@ class Logic
         const Grid grid_{600, 648};
         Presentation presentation_{grid_.getWidth(), grid_.getHeight()};
         HighScoreManager highScoreManager_;
+        AssetManager assetManager_;
         shared_ptr<Player> player_;
         vector<shared_ptr<IEntity>> game_objects_;
         vector<shared_ptr<IMovingEntity>> moving_game_objects;
@@ -74,6 +76,10 @@ class Logic
         /** \brief Displays the game won screen when the player has won the game.
          */
         void renderGameWonScreen();
+
+        void updateGameObjects();
+
+        void removeDeadEntities();
 
 
 };
