@@ -7,7 +7,7 @@
 TEST_CASE("Asset path and entity type set can be retrieved")
 {
 
-    AssetManager::AssetType assetType = AssetManager::AssetType::PLAYER_;
+    AssetManager::AssetType assetType = AssetManager::AssetType::PLAYER;
     string assetPath = "Assets/PlayerAlt.png";
     AssetManager assetManager{assetType, assetPath };
 
