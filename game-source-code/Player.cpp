@@ -14,40 +14,40 @@ Player::~Player(){
 
 void Player::move()
 {
-    auto speed = 5.0f;
-    float maxWidth = grid_.getWidth();
-    float minHeight = grid_.getHeight();
-    float maxHeight = grid_.getHeight()- grid_.getHeight()*0.2;
+    struct PlayerBulletDimentions Dimension;
+    float maxWidth = grid_.getWidth()-16.0f;
+    float minHeight = grid_.getHeight()- grid_.getHeight()*0.2;
+    float maxHeight = grid_.getHeight();
     auto newXPos = 0.0f;
     auto newYPos = 0.0f;
 
     switch (direction_){
 
         case Direction::DOWN:
-            newYPos = position_.getY_pos() + speed;
+            newYPos = position_.getY_pos() + Dimension.speed;
 
-            if(newYPos <= minHeight) position_.setY_pos(newYPos);
+            if(newYPos <= (maxHeight-8.0f)) position_.setY_pos(newYPos);
 
             break;
 
         case Direction::LEFT:
-            newXPos = position_.getX_pos()- speed;
+            newXPos = position_.getX_pos()- Dimension.speed;
 
-            if(newYPos >= 0) position_.setX_pos(newXPos);
+            if(newXPos >= 8.0f) position_.setX_pos(newXPos);
 
             break;
 
         case Direction::RIGHT:
-            newXPos = position_.getX_pos()+speed;
+            newXPos = position_.getX_pos()+ Dimension.speed;
 
-            if(newXPos <= minHeight) position_.setX_pos(newXPos);
+            if(newXPos <= (maxWidth+8.0f)) position_.setX_pos(newXPos);
 
             break;
 
         case Direction::UP:
-            newYPos = position_.getY_pos() - speed;
+            newYPos = position_.getY_pos() - Dimension.speed;
 
-            if(newYPos>= maxHeight) position_.setY_pos(newYPos);
+            if(newYPos>= minHeight) position_.setY_pos(newYPos);
 
             break;
         default :

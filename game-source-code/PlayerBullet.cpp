@@ -12,7 +12,7 @@ void PlayerBullet::move()
 
     auto newYPos = position_.getY_pos() - Dimension.speed;
 
-    if(newYPos > 0.0f)position_.setY_pos(newYPos);
+    if(newYPos > 8.0f)position_.setY_pos(newYPos);
     else eliminated();
 }
 
