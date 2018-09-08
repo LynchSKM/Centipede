@@ -21,7 +21,6 @@ void Logic::getInputCommands()
     else player_->setDirection(Direction::NONE);
 
     if(!debounceSpaceKey_ && presentation_.isSpacePressed()){
-
         debounceSpaceKey_ = true;
         auto bullet_Vector = player_->shoot();
 
@@ -29,10 +28,9 @@ void Logic::getInputCommands()
             game_objects_.push_back(bullets);
             moving_game_objects.push_back(bullets);
         }//for
-        if(!debounceSpaceKey_ && presentation_.isSpacePressed())
-            debounceSpaceKey_ = false;
-
     }//if
+
+    debounceSpaceKey_ = presentation_.isSpacePressed();
 
 }
 
@@ -40,6 +38,7 @@ void Logic::run()
 {
     if(screen_state_==ScreenState::SPLASHSCREEN) renderSplashScreen();
 
+    //screen_state_ = ScreenState::GAME_ACTIVE;
     loadAssets();
     high_score_ = highScoreManager_.getHighScore();
 
@@ -59,6 +58,7 @@ void Logic::run()
             getInputCommands();
             updateGameObjects();
             renderGameObjects();
+
         }
     }
     //if(screen_state_==ScreenState::GAMEOVERSCREEN)renderGameOverScreen();
