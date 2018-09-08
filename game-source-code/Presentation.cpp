@@ -15,7 +15,7 @@ void Presentation::checkInput(const sf::Keyboard::Key key, const bool isPressed)
         else if(key == sf::Keyboard::Right) isRightPressed_ = isPressed;
         else if(key == sf::Keyboard::Up) isUpPressed_ = isPressed;
         else if(key == sf::Keyboard::Down) isDownPressed_ = isPressed;
-        else if(key == sf::Keyboard::Space) isSpacePressed_ = isPressed;
+        else if(key == sf::Keyboard::Space)isSpacePressed_ = isPressed;
 
 }
 
