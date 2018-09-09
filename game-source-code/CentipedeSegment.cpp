@@ -1,6 +1,6 @@
-#include "Centipede.h"
+#include "CentipedeSegment.h"
 
-Centipede::Centipede(Grid grid, BodyType bodytype, Position position, Direction cur_Direction):
+CentipedeSegment::CentipedeSegment(Grid grid, BodyType bodytype, Position position, Direction cur_Direction):
 cur_Direction_{cur_Direction},
 bodytype_{bodytype},
 objectType_{ObjectType::CENTIPEDE},
@@ -8,7 +8,7 @@ position_{position}, grid_{grid}
 {
     //ctor
 }
-void Centipede::moveUp(float speed)
+void CentipedeSegment::moveUp(float speed)
 {
     float maxHeight = grid_.getHeight()- grid_.getHeight()*0.2;
     auto newYPos = position_.getY_pos() - speed;
@@ -23,7 +23,7 @@ void Centipede::moveUp(float speed)
     }
 }
 
-void Centipede::moveDown(float speed)
+void CentipedeSegment::moveDown(float speed)
 {
     float maxHeight = grid_.getHeight();
     auto newYPos = position_.getY_pos() + speed;
@@ -39,7 +39,7 @@ void Centipede::moveDown(float speed)
     }
 }
 
-void Centipede::moveLeft(float speed)
+void CentipedeSegment::moveLeft(float speed)
 {
     float maxWidth = grid_.getWidth();
     auto newXPos = position_.getX_pos()- speed;
@@ -52,7 +52,7 @@ void Centipede::moveLeft(float speed)
     }
 }
 
-void Centipede::moveRight(float speed)
+void CentipedeSegment::moveRight(float speed)
 {
     float maxWidth = grid_.getWidth();
     auto newXPos = position_.getX_pos()+ speed;
@@ -66,10 +66,10 @@ void Centipede::moveRight(float speed)
 }
 
 
-void Centipede::move()
+void CentipedeSegment::move()
 {
     //Normal movement
-    struct CentipedeDemensions dimensions;
+    struct CentipedeSegmentDemensions dimensions;
     auto speed = dimensions.speed;
     if(!isPosoned_){
     switch (cur_Direction_){
@@ -99,56 +99,60 @@ void Centipede::move()
     }
 }
 
-void Centipede::setDirection(Direction direction)
+void CentipedeSegment::setDirection(Direction direction)
 {
     prev_Direction_ = cur_Direction_;
     cur_Direction_ = direction;
 }
 
-ObjectType Centipede::getObjectType() const
+ObjectType CentipedeSegment::getObjectType() const
 {
     return objectType_;
 }
 
-Position Centipede::getPosition() const
+CentipedeSegment::BodyType CentipedeSegment::getBodyType() const{
+    return bodytype_;
+}
+
+Position CentipedeSegment::getPosition() const
 {
     return position_;
 }
 
-BoundaryBox Centipede::getBoundaryBox()
+BoundaryBox CentipedeSegment::getBoundaryBox()
 {
-    struct CentipedeDemensions Dimension;
+    struct CentipedeSegmentDemensions Dimension;
     BoundaryBox box{position_,Dimension.width,Dimension.height,rotationAngle_};
     return box;
 }
 
-bool Centipede::isAlive() const
+bool CentipedeSegment::isAlive() const
 {
     return alive_;
 }
 
-void Centipede::eliminated()
+void CentipedeSegment::eliminated()
 {
     alive_ = false;
 }
 
-void Centipede::poison()
+void CentipedeSegment::poison()
 {
     isPosoned_ = true;
 }
 
-Direction Centipede::getDirection() const
+Direction CentipedeSegment::getDirection() const
 {
     return cur_Direction_;
 }
-Direction Centipede::getPrevDirection() const
+Direction CentipedeSegment::getPrevDirection() const
 {
     return prev_Direction_;
 }
-void Centipede::changeDirection(){
+void CentipedeSegment::changeDirection(){
     setDirection(Direction::DOWN);
 }
-Centipede::~Centipede()
+CentipedeSegment::~CentipedeSegment()
 {
     //dtor
 }

@@ -1,18 +1,18 @@
-#ifndef CENTIPEDE_H
-#define CENTIPEDE_H
+#ifndef CENTIPEDESEGMENT_H
+#define CENTIPEDESEGMENT_H
 
 #include "IMovingEntity.h"
 #include "Dimensions.h"
 #include "Grid.h"
 
-/** \class Centipede
+/** \class CentipedeSegment
 *   \brief This is a Class that inherits from the IMovingEntity class. It
 *   contains pure virtual functions that will be overridden by derived.
 *   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
 *
 */
 
-class Centipede : public IMovingEntity
+class CentipedeSegment : public IMovingEntity
 {
     public:
 
@@ -24,18 +24,18 @@ class Centipede : public IMovingEntity
             BODY     /**< is coded as int of value 0. */
         };
 
-        /** \brief Creates a centipede object parameterized constructor.
+        /** \brief Creates a centipede segment object parameterized constructor.
          * \param is a direction of type Direction enum class.
          * \param is a bodytype of type BodyType enum class.
          * \param is a objectType of type ObjectType enum class.
          * \param is a position of type Position.
          * \param is grid of type grid.
          */
-        Centipede(Grid grid, BodyType bodytype, Position position, Direction cur_Direction);
+        CentipedeSegment(Grid grid, BodyType bodytype, Position position, Direction cur_Direction);
 
-        /** Destroys the Centipede object.
+        /** Destroys the CentipedeSegment object.
         */
-        ~Centipede();
+        ~CentipedeSegment();
 
         /** A pure virtual function that moves derived class objects.
         */
@@ -95,6 +95,10 @@ class Centipede : public IMovingEntity
          */
         void changeDirection();
 
+        /** \brief A function that returns the body type of the centipede segment.
+         * \return The body type of the object of type BodyType of the enum class.
+         */
+        BodyType getBodyType() const;
 
     private:
         Direction cur_Direction_;
@@ -112,4 +116,4 @@ class Centipede : public IMovingEntity
         void moveRight(float newXPos);
 };
 
-#endif // CENTEPEDE_H
+#endif // CENTIPEDESEGMENT_H

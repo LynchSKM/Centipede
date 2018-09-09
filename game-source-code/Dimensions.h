@@ -8,7 +8,7 @@ struct PlayerDimension{
     const float speed = 0.001;
 };
 
-struct CentipedeDemensions{
+struct CentipedeSegmentDemensions{
 
     const float height = 16.0;
     const float width = 16.0;
