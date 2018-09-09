@@ -58,7 +58,7 @@ TEST_CASE("Centipede Segment move down when poisoned."){
 }
 
 
-TEST_CASE("Centipede Segment turns when it hits the screen boundary."){
+TEST_CASE("Centipede Segment turns when it hits the screen boundary on the right."){
 
     Grid testGrid{650,600};
     CentipedeSegment centipede_seg(testGrid, CentipedeSegment::BodyType::HEAD,
@@ -74,3 +74,18 @@ TEST_CASE("Centipede Segment turns when it hits the screen boundary."){
     CHECK(centipede_seg.getDirection()== Direction::LEFT);
 }
 
+TEST_CASE("Centipede Segment turns when it hits the screen boundary on the left."){
+
+    Grid testGrid{650,600};
+    CentipedeSegment centipede_seg(testGrid, CentipedeSegment::BodyType::HEAD,
+                               Position{0.1,300.0f},Direction::LEFT);
+
+    struct CentipedeSegmentDemensions temp;
+    auto x = centipede_seg.getPosition().getX_pos()+temp.speed;
+    auto y = centipede_seg.getPosition().getY_pos()+temp.speed;
+
+    centipede_seg.move();
+    centipede_seg.move();
+    CHECK(centipede_seg.getPosition() == Position{x, y});
+    CHECK(centipede_seg.getDirection()== Direction::RIGHT);
+}

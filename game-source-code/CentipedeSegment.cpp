@@ -44,7 +44,7 @@ void CentipedeSegment::moveLeft(float speed)
     float maxWidth = grid_.getWidth();
     auto newXPos = position_.getX_pos()- speed;
 
-    if(newXPos < maxWidth){
+    if(newXPos < maxWidth && newXPos>0){
         position_.setX_pos(newXPos);
     }else{
         setDirection(Direction::DOWN);
