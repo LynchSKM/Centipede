@@ -67,7 +67,8 @@ Position Player::getPosition() const
 
 BoundaryBox Player::getBoundaryBox()
 {
-    BoundaryBox box{position_,30.0,40.0,0.0};
+    struct PlayerDimension player_box;
+    BoundaryBox box{position_,player_box.width, player_box.height, 0.0};
     //boundary_box_ = box;
     return box;
 }
@@ -103,7 +104,7 @@ vector <shared_ptr<IMovingEntity>> Player::shoot()
 {
     struct PlayerBulletDimentions dimension;
     auto xVal = position_.getX_pos()-dimension.speed;
-    auto yVal = position_.getY_pos();
+    auto yVal = position_.getY_pos()-dimension.height/2.0f;
 
 
     vector<shared_ptr<IMovingEntity>> bullets;
