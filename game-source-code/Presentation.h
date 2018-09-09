@@ -110,6 +110,8 @@ class Presentation
          */
         bool isSpacePressed(){return isSpacePressed_;};
 
+        bool isWindowOpen() const {return window_.isOpen();};
+
         /** \brief Default Destructor. Destroys a Presentation object.
          */
         ~Presentation();

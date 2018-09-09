@@ -47,7 +47,7 @@ void Logic::run()
     auto deltaTime  = 0.0f;
     game_timer.start();
 
-    while(screen_state_==ScreenState::GAME_ACTIVE){
+    while(screen_state_ == ScreenState::GAME_ACTIVE){
         game_timer.stop();
         deltaTime+=game_timer.getRunTime();
 
@@ -56,7 +56,10 @@ void Logic::run()
         // Check if time that has passed is greater than the frame speed:
         while(deltaTime>game_speed && screen_state_ == ScreenState::GAME_ACTIVE){
             getInputCommands();
+            if(presentation_.isWindowOpen()==false) return;
             updateGameObjects();
+
+            removeDeadEntities();
             renderGameObjects();
 
         }
@@ -83,7 +86,14 @@ void Logic::updateGameObjects()
 
 void Logic::removeDeadEntities()
 {
-
+    container_erase_if(game_objects_,
+                       [](shared_ptr<IEntity>& game_object){
+                       return (!game_object->isAlive());
+                       });
+    container_erase_if(moving_game_objects,
+                   [](shared_ptr<IMovingEntity>& game_object){
+                   return (!game_object->isAlive());
+                   });
 }
 
 void Logic::renderGameObjects()
@@ -104,6 +114,14 @@ void Logic::renderGameWonScreen()
     presentation_.drawGameWonScreen(player_->getScore(), high_score_);
 }
 
+/*template<typename TypeContainer, typename PredicateT>
+void container_erase_if(TypeContainer& container, const PredicateT& predicate) {
+    for(auto iter_container = container.begin(); iter_container != container.end(); ) {
+        if( predicate(*iter_container) )
+			iter_container = container.erase(iter_container);
+        else ++iter_container;
+    }//for
+}//container_erase_if */
 
 Logic::~Logic()
 {

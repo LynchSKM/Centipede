@@ -84,4 +84,19 @@ class Logic
 
 };
 
+/**\brief  container_erase_if - a function that erases elements in a container based on a
+ * specified condition determined by the Predicate.
+ *
+ * \param container a std container passed by reference to be iterated through.
+ * \param predicate can be a function that returns true or false.
+ */
+template<typename TypeContainer, typename PredicateT>
+inline void container_erase_if(TypeContainer& container, const PredicateT& predicate) {
+    for(auto iter_container = container.begin(); iter_container != container.end(); ) {
+        if( predicate(*iter_container) )
+			iter_container = container.erase(iter_container);
+        else ++iter_container;
+    }//for
+}//
+
 #endif // LOGIC_H
