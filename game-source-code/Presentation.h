@@ -83,11 +83,6 @@ class Presentation
         void renderWindow(vector<shared_ptr<IEntity>>& game_objects,
                           const int remaining_lives, const int player_score,
                           const int high_score, float delta_time);
-        /** \brief Updates the animations of game objects that have more than one
-         * image to represent movement.
-         * \param delta_time is a float that will have the time elapsed from the game loop.
-         */
-        void updateAnimations(float delta_time);
 
         /** \brief Loads all the game's textures.
          *  \param game_assets is a vector of AssetManager
@@ -141,10 +136,24 @@ class Presentation
         bool isDownPressed_;
         bool isSpacePressed_;
 
-        //
+        /** \brief Generates SpriteSheet objects and saves them into the vector
+         *  sprite_sheets_ for the different game objects.
+         * \param object_type is of type enum class ObjectType.
+         * \param row is an unsigned int indicating the row in the spritesheet to use.
+         * \param imageCount is an sf::Vector2u and contains the number of columns and rows.
+         * \param switchTime is a float and is the time delay used between images for movement animation.
+         * \param direction is the direction the sprite faces in the image loaded as a texture.
+         */
         void populateSpriteSheets(ObjectType object_type, unsigned int row,
                                   sf::Vector2u imageCount, float switchTime,
                                   Direction direction);
+
+        /** \brief Updates the animations of game objects that have more than one
+         * image to represent movement.
+         * \param delta_time is a float that will have the time elapsed from the game loop.
+         */
+        void updateAnimations(float delta_time);
+
 
 
 };
