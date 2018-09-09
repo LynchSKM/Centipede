@@ -1,13 +1,17 @@
 #include "Logic.h"
-
+#include "CentipedeSegment.h"
 Logic::Logic():screen_state_{ScreenState::SPLASHSCREEN}
 {
     player_ = std::make_shared<Player>(grid_);
     game_objects_.push_back(player_);
     moving_game_objects.push_back(player_);
+    auto centi_pede = std::make_shared<CentipedeSegment>(grid_, CentipedeSegment::BodyType::HEAD,
+                                                   Position{0, 200}, Direction::RIGHT);
+    game_objects_.push_back(centi_pede);
+    moving_game_objects.push_back(centi_pede);
+
     debounceSpaceKey_ = false;
     //ctor
-
 }
 
 void Logic::getInputCommands()
@@ -43,25 +47,24 @@ void Logic::run()
     high_score_ = highScoreManager_.getHighScore();
 
     StopWatch game_timer;
-    auto game_speed = 1.0f/5.0f;
-    auto deltaTime  = 0.0f;
+    auto game_speed = 1.0f/6000.0f;
+    auto time_elapsed = 0.0f;
     game_timer.start();
 
     while(screen_state_ == ScreenState::GAME_ACTIVE){
         game_timer.stop();
-        deltaTime+=game_timer.getRunTime();
+        time_elapsed=game_timer.getRunTime();
 
         game_timer.start();
-
         // Check if time that has passed is greater than the frame speed:
-        while(deltaTime>game_speed && screen_state_ == ScreenState::GAME_ACTIVE){
+        while(time_elapsed>game_speed && screen_state_ == ScreenState::GAME_ACTIVE){
             getInputCommands();
             if(presentation_.isWindowOpen()==false) return;
             updateGameObjects();
 
             removeDeadEntities();
-            renderGameObjects();
-
+            renderGameObjects(time_elapsed);
+            //time_elapsed-=game_speed;
         }
     }
     //if(screen_state_==ScreenState::GAMEOVERSCREEN)renderGameOverScreen();
@@ -96,12 +99,11 @@ void Logic::removeDeadEntities()
                    });
 }
 
-void Logic::renderGameObjects()
+void Logic::renderGameObjects(float delta_time)
 {
-
     presentation_.renderWindow(game_objects_,
                           player_->getRemainingLives(), player_->getScore(),
-                          high_score_);
+                          high_score_, delta_time);
 }
 
 void Logic::renderGameOverScreen()
@@ -113,15 +115,6 @@ void Logic::renderGameWonScreen()
 {
     presentation_.drawGameWonScreen(player_->getScore(), high_score_);
 }
-
-/*template<typename TypeContainer, typename PredicateT>
-void container_erase_if(TypeContainer& container, const PredicateT& predicate) {
-    for(auto iter_container = container.begin(); iter_container != container.end(); ) {
-        if( predicate(*iter_container) )
-			iter_container = container.erase(iter_container);
-        else ++iter_container;
-    }//for
-}//container_erase_if */
 
 Logic::~Logic()
 {

@@ -6,6 +6,7 @@ SpriteSheet::SpriteSheet(ObjectType objectType, sf::Texture* gameObjectTexture,
 object_type_{objectType},
 image_count_{imageCount},
 switch_time_{switchTime},
+total_time_{0},
 row_{row}, default_direction_{direction}, currentImage_{0, row}
 {
     uv_rect_.width  = gameObjectTexture->getSize().x/static_cast<float>(imageCount.x);

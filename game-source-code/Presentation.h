@@ -13,6 +13,9 @@ using std::map;
 using std::pair;
 
 #include "IEntity.h"
+#include "IMovingEntity.h"
+#include "CentipedeSegment.h"
+
 #include "AssetManager.h"
 #include "SplashScreen.h"
 #include "GameWonScreen.h"
@@ -75,10 +78,16 @@ class Presentation
          * \param remaining_lives is an int and contains the number of lives.
          * \param player_score is an int that has the player's current score.
          * \param high_score is an int that has the game's highest score.
+         * \param delta_time is a float that has the time elapsed from the game loop.
          */
         void renderWindow(vector<shared_ptr<IEntity>>& game_objects,
                           const int remaining_lives, const int player_score,
-                          const int high_score);
+                          const int high_score, float delta_time);
+        /** \brief Updates the animations of game objects that have more than one
+         * image to represent movement.
+         * \param delta_time is a float that will have the time elapsed from the game loop.
+         */
+        void updateAnimations(float delta_time);
 
         /** \brief Loads all the game's textures.
          *  \param game_assets is a vector of AssetManager

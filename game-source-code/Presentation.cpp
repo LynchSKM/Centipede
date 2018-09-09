@@ -1,10 +1,8 @@
 #include "Presentation.h"
-#include <iostream>
-using std::cout;
-using std::endl;
+
 Presentation::Presentation(const unsigned int screen_width, const unsigned int screen_height):
     window_(sf::VideoMode(screen_width, screen_height), "Centipede LM", sf::Style::Close),
-    background_(sf::Color(0,0,0)),isLeftPressed_{false}, isRightPressed_{false},
+    background_(sf::Color::Black),isLeftPressed_{false}, isRightPressed_{false},
     isUpPressed_{false}, isDownPressed_{false}, isSpacePressed_{false}
 {
 
@@ -16,7 +14,6 @@ void Presentation::checkInput(const sf::Keyboard::Key key, const bool isPressed)
         else if(key == sf::Keyboard::Up) isUpPressed_ = isPressed;
         else if(key == sf::Keyboard::Down) isDownPressed_ = isPressed;
         else if(key == sf::Keyboard::Space)isSpacePressed_ = isPressed;
-
 }
 
 void Presentation::processInputEvents()
@@ -56,41 +53,39 @@ void Presentation::populateSpriteSheets(ObjectType object_type, unsigned int row
 void Presentation::loadTextures(vector<AssetManager>game_assets)
 {
     // Get font:
-    auto switch_time = 0.1f;
+    auto switch_time = 0.3f;
     for(const auto& asset : game_assets){
         if(asset.getAssetType() == AssetManager::AssetType::FONT)
             font_.loadFromFile(game_assets.at(0).getAssetPath());
 
-        else if(asset.getAssetType() == AssetManager::AssetType::PLAYER){
-
+        else{
             sf::Texture texture;
-            texture.loadFromFile("Assets/PlayerAlt.png");
-            auto temp = pair<ObjectType, sf::Texture>(ObjectType::PLAYER, texture);
-            game_textures.insert(temp);
+            texture.loadFromFile(asset.getAssetPath());
 
-        }//else if
-        else if(asset.getAssetType() == AssetManager::AssetType::BULLET){
 
-            sf::Texture texture;
-            texture.loadFromFile("Assets/bullet.png");
-            auto temp = pair<ObjectType, sf::Texture>(ObjectType::PLAYER_LASER_BULLET, texture);
-            game_textures.insert(temp);
+            if(asset.getAssetType() == AssetManager::AssetType::PLAYER){
+                texture.setSmooth(true);
+                auto temp = pair<ObjectType, sf::Texture>(ObjectType::PLAYER, texture);
+                game_textures.insert(temp);
 
-        }//else if
-        else if(asset.getAssetType() == AssetManager::AssetType::CENTIPEDE){
-            sf::Texture texture;
-            texture.loadFromFile("Assets/Centipede.png");
-            auto object = ObjectType::CENTIPEDE;
-            auto temp = pair<ObjectType, sf::Texture>(object, texture);
-            game_textures.insert(temp);
+            }// if
+            else if(asset.getAssetType() == AssetManager::AssetType::BULLET){
+                auto temp = pair<ObjectType, sf::Texture>(ObjectType::PLAYER_LASER_BULLET, texture);
+                game_textures.insert(temp);
 
-            //
-            auto row = 0u; // Centipede Head
-            populateSpriteSheets(object, row, sf::Vector2u{8,2}, switch_time, Direction::LEFT);
-            row = 1u; // Centipede Body
-            populateSpriteSheets(object, row, sf::Vector2u{8,2}, switch_time, Direction::LEFT);
+            }//else if
+            else if(asset.getAssetType() == AssetManager::AssetType::CENTIPEDE){
+                auto object = ObjectType::CENTIPEDE;
+                auto temp = pair<ObjectType, sf::Texture>(object, texture);
+                game_textures.insert(temp);
 
-        }//else if
+                //
+                auto row = 0u; // CentipedeSegment Head
+                populateSpriteSheets(object, row, sf::Vector2u{8,2}, switch_time, Direction::LEFT);
+                row = 1u; // CentipedeSegment Body
+                populateSpriteSheets(object, row, sf::Vector2u{8,2}, switch_time, Direction::LEFT);
+            } //else if
+        }//else
 
     }//for
 }
@@ -98,34 +93,62 @@ void Presentation::loadTextures(vector<AssetManager>game_assets)
 
 void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
                                 const int remaining_lives, const int player_score,
-                                const int high_score)
+                                const int high_score, float delta_time)
 {
     window_.clear();
-    sf::Sprite gameObjectsSprite;
-    auto half = 2;
+    auto half = 2.0f;
+    auto iter_map = game_textures.begin();
     for(const auto& object : game_objects){
-        if(object->getObjectType()==ObjectType::PLAYER){
-            auto iter_map = game_textures.find(ObjectType::PLAYER);
-            gameObjectsSprite.setTexture(iter_map->second);
+         sf::Sprite gameObjectsSprite;
+        if(object->getObjectType() == ObjectType::PLAYER ||
+           object->getObjectType() == ObjectType::PLAYER_LASER_BULLET){
+            iter_map = game_textures.find(object->getObjectType());
+
+            // Set Origin:
             gameObjectsSprite.setOrigin((iter_map->second).getSize().x/half,
                                         (iter_map->second).getSize().y/half);
-
         }
-        if(object->getObjectType()==ObjectType::PLAYER_LASER_BULLET){
-            auto iter_map = game_textures.find(ObjectType::PLAYER_LASER_BULLET);
-            gameObjectsSprite.setTexture(iter_map->second);
-            gameObjectsSprite.setOrigin((iter_map->second).getSize().x/half,
-                                        (iter_map->second).getSize().y/half);
+        else{
+             // Search for spritesheet:
+             auto entity_type = object->getObjectType();
+             auto iter_vec = find_if(sprite_sheets_.begin(), sprite_sheets_.end(),
+                                        [&, entity_type](const SpriteSheet& sheet){
+                           return (sheet.getObjectType()==entity_type);
+                           });
 
+            if(object->getObjectType()==ObjectType::CENTIPEDE){
+                iter_map = game_textures.find(ObjectType::CENTIPEDE);
+
+                auto centipede_segment = std::dynamic_pointer_cast<CentipedeSegment>(object);
+                if(centipede_segment->getBodyType()==CentipedeSegment::BodyType::BODY)
+                    ++iter_vec;
+
+                auto rect = iter_vec->getTextureRect(centipede_segment->getDirection());
+                gameObjectsSprite.setTextureRect(rect);
+                // Set Origin:
+                gameObjectsSprite.setOrigin(std::abs(rect.width)/half, rect.height/half);
+            }//if
         }
 
+        // Set Texture:
+        gameObjectsSprite.setTexture(iter_map->second);
 
-        gameObjectsSprite.setPosition(object->getPosition().getX_pos(), object->getPosition().getY_pos());
+        // Set position:
+        gameObjectsSprite.setPosition(object->getPosition().getX_pos(),
+                                      object->getPosition().getY_pos());
         window_.draw(gameObjectsSprite);
     }//for
     window_.display();
+    updateAnimations(delta_time);
+
 }
 
+void Presentation::updateAnimations(float delta_time){
+for(auto& sprite_image : sprite_sheets_){
+        if(sprite_image.getObjectType()!=ObjectType::MUSHROOM)
+            sprite_image.update(delta_time);
+    }
+}
 
 void Presentation::drawSplashScreen()
 {

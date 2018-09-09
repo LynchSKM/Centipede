@@ -66,8 +66,9 @@ class Logic
         void loadAssets();
 
         /** \brief Gives Presentation a vector of game objects to be drawn.
+         *  \param delta_time is float that will have the time that has elapsed in the game loop.
          */
-        void renderGameObjects();
+        void renderGameObjects(float delta_time);
 
         /** \brief Displays the game over screen when the player has lost the game.
          */
@@ -77,8 +78,12 @@ class Logic
          */
         void renderGameWonScreen();
 
+        /** \brief Moves all the game objects that can be moved.
+         */
         void updateGameObjects();
 
+        /** \brief Removes all dead entities from vector(s) where they exist.
+         */
         void removeDeadEntities();
 
 
