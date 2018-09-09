@@ -6,10 +6,10 @@ SpriteSheet::SpriteSheet(ObjectType objectType, sf::Texture* gameObjectTexture,
 object_type_{objectType},
 image_count_{imageCount},
 switch_time_{switchTime},
-row_{row}, default_direction_{direction}, currentImage_{0, row_}
+row_{row}, default_direction_{direction}, currentImage_{0, row}
 {
-    uv_rect_.width = gameObjectTexture->getSize().y/static_cast<float>(imageCount.x);
-    uv_rect_.width = gameObjectTexture->getSize().y/static_cast<float>(imageCount.y);
+    uv_rect_.width  = gameObjectTexture->getSize().x/static_cast<float>(imageCount.x);
+    uv_rect_.height = gameObjectTexture->getSize().y/static_cast<float>(imageCount.y);
 }
 
 void SpriteSheet::createRect(Direction direction)

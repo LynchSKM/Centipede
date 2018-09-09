@@ -55,7 +55,13 @@ class SpriteSheet
          */
         sf::IntRect getTextureRect(int col);
 
-        /** \brief Default Destructor. Destroys a SpriteSheet object.
+
+        /** \brief This function will return the object type.
+         * \return ObjectType which is of enum class ObjectType.
+         */
+        ObjectType getObjectType() const {return object_type_;};
+
+         /** \brief Default Destructor. Destroys a SpriteSheet object.
          */
         ~SpriteSheet();
     private:
