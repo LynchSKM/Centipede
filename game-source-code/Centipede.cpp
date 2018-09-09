@@ -69,7 +69,8 @@ void Centipede::moveRight(float speed)
 void Centipede::move()
 {
     //Normal movement
-    auto speed = 5.0f;
+    struct CentipedeDemensions dimensions;
+    auto speed = dimensions.speed;
     if(!isPosoned_){
     switch (cur_Direction_){
 
