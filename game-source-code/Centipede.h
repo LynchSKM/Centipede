@@ -31,7 +31,7 @@ class Centipede : public IMovingEntity
          * \param is a position of type Position.
          * \param is grid of type grid.
          */
-        Centipede(Direction cur_Direction, BodyType bodytype, ObjectType objectType,Position position,Grid grid);
+        Centipede(Grid grid, BodyType bodytype, Position position, Direction cur_Direction);
 
         /** Destroys the Centipede object.
         */

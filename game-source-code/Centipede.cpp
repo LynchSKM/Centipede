@@ -1,7 +1,10 @@
 #include "Centipede.h"
 
-Centipede::Centipede(Direction cur_Direction, BodyType bodytype, ObjectType objectType,Position position,Grid grid): cur_Direction_{cur_Direction},
-bodytype_{bodytype}, objectType_{objectType}, position_{position}, grid_{grid}
+Centipede::Centipede(Grid grid, BodyType bodytype, Position position, Direction cur_Direction):
+cur_Direction_{cur_Direction},
+bodytype_{bodytype},
+objectType_{ObjectType::CENTIPEDE},
+position_{position}, grid_{grid}
 {
     //ctor
 }
