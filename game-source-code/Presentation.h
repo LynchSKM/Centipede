@@ -78,11 +78,10 @@ class Presentation
          * \param remaining_lives is an int and contains the number of lives.
          * \param player_score is an int that has the player's current score.
          * \param high_score is an int that has the game's highest score.
-         * \param delta_time is a float that has the time elapsed from the game loop.
          */
         void renderWindow(vector<shared_ptr<IEntity>>& game_objects,
                           const int remaining_lives, const int player_score,
-                          const int high_score, float delta_time);
+                          const int high_score);
 
         /** \brief Loads all the game's textures.
          *  \param game_assets is a vector of AssetManager

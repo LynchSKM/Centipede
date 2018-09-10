@@ -49,24 +49,25 @@ void Logic::run()
     StopWatch game_timer;
     auto game_speed = 1.0f/6000.0f;
     auto time_elapsed = 0.0f;
+    auto timeSinceLastUpdate = 0.0f;
     game_timer.start();
 
     while(screen_state_ == ScreenState::GAME_ACTIVE){
         game_timer.stop();
         time_elapsed=game_timer.getRunTime();
-
+        timeSinceLastUpdate+=time_elapsed;
         game_timer.start();
         // Check if time that has passed is greater than the frame speed:
-        while(time_elapsed>game_speed && screen_state_ == ScreenState::GAME_ACTIVE){
+        while(timeSinceLastUpdate>game_speed && screen_state_ == ScreenState::GAME_ACTIVE){
+            timeSinceLastUpdate-=game_speed;
             getInputCommands();
             if(presentation_.isWindowOpen()==false) return;
             updateGameObjects();
 
             removeDeadEntities();
-            renderGameObjects(time_elapsed);
-            //time_elapsed-=game_speed;
-        }
-    }
+            renderGameObjects();
+        }//while
+    }//while
     //if(screen_state_==ScreenState::GAMEOVERSCREEN)renderGameOverScreen();
 
 }
@@ -99,11 +100,11 @@ void Logic::removeDeadEntities()
                    });
 }
 
-void Logic::renderGameObjects(float delta_time)
+void Logic::renderGameObjects()
 {
     presentation_.renderWindow(game_objects_,
                           player_->getRemainingLives(), player_->getScore(),
-                          high_score_, delta_time);
+                          high_score_);
 }
 
 void Logic::renderGameOverScreen()

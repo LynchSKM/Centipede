@@ -93,7 +93,7 @@ void Presentation::loadTextures(vector<AssetManager>game_assets)
 
 void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
                                 const int remaining_lives, const int player_score,
-                                const int high_score, float delta_time)
+                                const int high_score)
 {
     window_.clear();
     auto half = 2.0f;
@@ -139,7 +139,8 @@ void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
         window_.draw(gameObjectsSprite);
     }//for
     window_.display();
-    updateAnimations(delta_time);
+    auto animation_speed = 0.02f;
+    updateAnimations(animation_speed);
 
 }
 
