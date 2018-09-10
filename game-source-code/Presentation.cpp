@@ -2,8 +2,12 @@
 
 Presentation::Presentation(const unsigned int screen_width, const unsigned int screen_height):
     window_(sf::VideoMode(screen_width, screen_height), "Centipede LM", sf::Style::Close),
-    background_(sf::Color::Black),isLeftPressed_{false}, isRightPressed_{false},
-    isUpPressed_{false}, isDownPressed_{false}, isSpacePressed_{false}
+    background_(sf::Color::Black),
+    isLeftPressed_{false},
+    isRightPressed_{false},
+    isUpPressed_{false},
+    isDownPressed_{false},
+    isSpacePressed_{false}
 {
 
 }
@@ -86,6 +90,8 @@ void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
                                 const int high_score)
 {
     window_.clear();
+    displayLives(remaining_lives, player_score, high_score);
+
     auto half = 2.0f;
     auto iter_map = game_textures.begin();
     for(const auto& object : game_objects){
@@ -106,6 +112,7 @@ void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
                            return (sheet.getObjectType()==entity_type);
                            });
             auto rect = sf::IntRect();
+
             if(object->getObjectType()==ObjectType::CENTIPEDE){
                 iter_map = game_textures.find(ObjectType::CENTIPEDE);
 
@@ -162,11 +169,48 @@ void Presentation::drawGameWonScreen(const int player_score, const int high_scor
     gameWonScreen.show(window_, player_score, high_score);
 }
 
-void Presentation::displayLives(const int remaining_lives, const int player_score, const int high_score)
+void Presentation::displayLives(const int remaining_lives, const int player_score,
+                                const int high_score)
 {
+    sf::Sprite lives_sprite;
+    auto half = 2.0f;
+    auto iter_map = game_textures.find(ObjectType::PLAYER);
+    lives_sprite.setTexture(iter_map->second);
+    lives_sprite.setOrigin((iter_map->second).getSize().x/half,
+                           (iter_map->second).getSize().y/half);
 
+    // Draw lives using a sprite and player texture:
+    auto xPos = (iter_map->second).getSize().x;
+    for(auto i=0; i!=remaining_lives; i++){
+        lives_sprite.setPosition(xPos, (iter_map->second).getSize().y/half);
+        window_.draw(lives_sprite);
+        xPos+=(iter_map->second).getSize().x;
+    }//for
+
+    // Draw Score and high score:
+    sf::Text score_text(std::to_string(player_score), font_);
+    score_text.setCharacterSize(20);
+    sf::FloatRect titleRect = score_text.getLocalBounds();
+    score_text.setOrigin(titleRect.left + titleRect.width/half,
+    titleRect.top  + titleRect.height/half);
+    score_text.setFillColor(sf::Color::Magenta);
+
+    score_text.setPosition(sf::Vector2f(window_.getSize().x/half,
+                                        score_text.getCharacterSize()/half));
+
+    sf::Text high_score_text(std::to_string(high_score), font_);
+    high_score_text.setCharacterSize(20);
+    titleRect = high_score_text.getLocalBounds();
+    high_score_text.setOrigin(titleRect.left + titleRect.width/half,
+    titleRect.top  + titleRect.height/half);
+    high_score_text.setFillColor(sf::Color::Yellow);
+
+    high_score_text.setPosition(sf::Vector2f(window_.getSize().x-titleRect.width/half,
+                                        high_score_text.getCharacterSize()/half));
+
+    window_.draw(score_text);
+    window_.draw(high_score_text);
 }
-
 
 Presentation::~Presentation()
 {
