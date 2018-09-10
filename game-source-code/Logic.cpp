@@ -1,10 +1,9 @@
 #include "Logic.h"
-#include "CentipedeSegment.h"
+
 Logic::Logic():screen_state_{ScreenState::SPLASHSCREEN}
 {
     player_ = std::make_shared<Player>(grid_);
     game_objects_.push_back(player_);
-    moving_game_objects.push_back(player_);
 
     debounceSpaceKey_ = false;
     //ctor
@@ -26,19 +25,15 @@ void Logic::getInputCommands()
 
         for(auto &bullets: bullet_Vector){
             game_objects_.push_back(bullets);
-            moving_game_objects.push_back(bullets);
         }//for
     }//if
 
     debounceSpaceKey_ = presentation_.isSpacePressed();
-
 }
 
 void Logic::run()
 {
     if(screen_state_==ScreenState::SPLASHSCREEN) renderSplashScreen();
-
-    //screen_state_ = ScreenState::GAME_ACTIVE;
     loadAssets();
     high_score_ = highScoreManager_.getHighScore();
 
@@ -65,7 +60,9 @@ void Logic::run()
             renderGameObjects();
         }//while
     }//while
-    //if(screen_state_==ScreenState::GAMEOVERSCREEN)renderGameOverScreen();
+
+    if(screen_state_==ScreenState::GAMEOVERSCREEN) renderGameOverScreen();
+    if(screen_state_==ScreenState::GAMEWONSCREEN)  renderGameWonScreen();
 
 }
 void Logic::loadAssets()
@@ -80,8 +77,11 @@ void Logic::renderSplashScreen()
 }
 void Logic::updateGameObjects()
 {
-    for(auto& object : moving_game_objects){
-        if(object->isAlive()) object->move();
+    for(auto& object : game_objects_){
+        if(object->isAlive()&& object->getObjectType()!=ObjectType::MUSHROOM){
+            auto moving_object_ptr = std::dynamic_pointer_cast<IMovingEntity>(object);
+                moving_object_ptr->move();
+        }
     }
 }
 
@@ -91,10 +91,6 @@ void Logic::removeDeadEntities()
                        [](shared_ptr<IEntity>& game_object){
                        return (!game_object->isAlive());
                        });
-    container_erase_if(moving_game_objects,
-                   [](shared_ptr<IMovingEntity>& game_object){
-                   return (!game_object->isAlive());
-                   });
 }
 
 void Logic::renderGameObjects()
@@ -117,13 +113,10 @@ void Logic::generateNormalCentipede(){
 
     for(auto& segment: enemyFactory_.generateNormalCentipede()){
         game_objects_.push_back(segment);
-        moving_game_objects.push_back(segment);
-
     }
 }
 
 void Logic::generateCentipedeHeads(){
-
 
 }
 

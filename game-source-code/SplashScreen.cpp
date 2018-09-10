@@ -14,36 +14,47 @@ void SplashScreen::show(sf::RenderWindow& render_window){
     background_sprite.setTexture(splashScreenTexture_);
 
     // Load Font:
-    splashScreenFont_.loadFromFile("Assets/Font.otf"s);
-
+    splashScreenFont_.loadFromFile("Assets/Font.ttf"s);
+    auto half = 2.0f;
     auto game_title = "Centipede"s;
     sf::Text splash_screen_title(game_title, splashScreenFont_);
-    splash_screen_title.setPosition(render_window.getSize().x/4.8, render_window.getSize().y/7);
-    splash_screen_title.setCharacterSize(60);
-    splash_screen_title.setFillColor(sf::Color::Red);
+
+    splash_screen_title.setCharacterSize(58);
+    splash_screen_title.setFillColor(sf::Color::Green);
     splash_screen_title.setStyle(sf::Text::Bold);
+    sf::FloatRect titleRect = splash_screen_title.getLocalBounds();
+    splash_screen_title.setOrigin(titleRect.left + titleRect.width/half,
+    titleRect.top  + titleRect.height/half);
+    splash_screen_title.setPosition(render_window.getSize().x/half, render_window.getSize().y/7);
 
     auto game_controls = "Controls"s;
 
     sf::Text splash_controls_text(game_controls, splashScreenFont_);
-    splash_controls_text.setPosition(render_window.getSize().x/2.6,
-                        render_window.getSize().y/3);
+    splash_controls_text.setPosition(render_window.getSize().x/half,
+                        render_window.getSize().y/4);
     splash_controls_text.setCharacterSize(24);
     splash_controls_text.setFillColor(sf::Color::Red);
+    titleRect = splash_controls_text.getLocalBounds();
+    splash_controls_text.setOrigin(titleRect.left + titleRect.width/half,
+    titleRect.top  + titleRect.height/half);
     //splash_controls_text.setStyle(sf::Text::Bold);
 
-    auto game_controls_1 = " Move up    -- Up Arrow Key"
-                        "\n Move down   -- Down Arrow Key"
-                        "\n Move left   -- Left Arrow Key"
-                        "\n Move right  -- Right Arrow Key"
-                        "\n "
-                        "\n \t Press Enter to continue"s;
+    auto game_controls_1 = "Up Arrow\t - Move up"
+                        "\nDown Arrow  - Move down"
+                        "\nLeft Arrow   - Move left"
+                        "\nRight Arrow   - Move right"
+                        "\nSpacebar  \t- Shoot"
+                        "\n"
+                        "\n Press Enter to continue"s;
 
     sf::Text splash_controls_text_1(game_controls_1, splashScreenFont_);
-    splash_controls_text_1.setPosition(render_window.getSize().x/5.4,
-                        render_window.getSize().y/2.4);
-    splash_controls_text_1.setCharacterSize(24);
+    splash_controls_text_1.setPosition(render_window.getSize().x/5,
+                        render_window.getSize().y/3);
+    splash_controls_text_1.setCharacterSize(20);
     splash_controls_text_1.setFillColor(sf::Color::Red);
+    //titleRect = splash_controls_text_1.getLocalBounds();
+    //splash_controls_text_1.setOrigin(titleRect.left + titleRect.width/half,
+   // titleRect.top  + titleRect.height/half);
     //splash_controls_text_1.setStyle(sf::Text::Bold);
 
     //background_sprite.setPosition(render_window.getSize().x/3,
@@ -62,6 +73,10 @@ void SplashScreen::show(sf::RenderWindow& render_window){
     while(true){
         while(render_window.pollEvent(event)){
             if(event.key.code == sf::Keyboard::Enter){return;}
+            if(event.type == sf::Event::Closed){
+                render_window.close();
+                return;
+            }
         }//while
     }//while
 
