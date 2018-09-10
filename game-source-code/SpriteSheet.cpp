@@ -17,14 +17,14 @@ void SpriteSheet::createRect(Direction direction)
 {
     // Set offset of uv rect of the texture image:
     uv_rect_.top = currentImage_.y*uv_rect_.height;
-
+    auto width = std::abs(uv_rect_.width);
     if(direction==default_direction_ || direction==Direction::DOWN || direction==Direction::UP){
-        uv_rect_.left  = currentImage_.x*uv_rect_.width;
-        uv_rect_.width = std::abs(uv_rect_.width);
+        uv_rect_.left  = currentImage_.x*width;
+        uv_rect_.width = width;
     }//if
     else{
-        uv_rect_.left  = (currentImage_.x+1)*std::abs(uv_rect_.width);
-        uv_rect_.width = -std::abs(uv_rect_.width);
+        uv_rect_.left  = (currentImage_.x+1)*width;
+        uv_rect_.width = -width;
     }//else
 }
 

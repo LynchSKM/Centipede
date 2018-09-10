@@ -119,7 +119,7 @@ void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
             // Set Texture rect:
             gameObjectsSprite.setTextureRect(rect);
             // Set Origin:
-            gameObjectsSprite.setOrigin(std::abs(rect.width)/half, rect.height/half);
+            gameObjectsSprite.setOrigin(std::abs(rect.width/half), std::abs(rect.height/half));
         }
 
         // Set Texture:
