@@ -110,10 +110,30 @@ class CentipedeSegment : public IMovingEntity
         float rotationAngle_ = 0.0;
         bool isPosoned_ = false;
         bool alive_ = true;
-        void moveUp(float newYPos);
-        void moveDown(float newYPos);
-        void moveLeft(float newXPos);
-        void moveRight(float newXPos);
+
+        /** \brief A function that decrements y axis of the object's position
+         *  by the given parameter.
+         *  \param is a float
+         */
+        void moveUp(float speed);
+
+        /** \brief A function that increments y axis of the object's position
+         *  by the given parameter.
+         *  \param is a float
+         */
+        void moveDown(float speed);
+
+        /** \brief A function that decrements x axis of the object's position
+         *  by the given parameter.
+         *  \param is a float
+         */
+        void moveLeft(float speed);
+
+        /** \brief A function that increments x axis of the object's position
+         *  by the given parameter.
+         *  \param is a float
+         */
+        void moveRight(float speed);
 };
 
 #endif // CENTIPEDESEGMENT_H

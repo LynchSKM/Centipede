@@ -6,32 +6,43 @@ bodytype_{bodytype},
 objectType_{ObjectType::CENTIPEDE},
 position_{position}, grid_{grid}
 {
-    //ctor
+    prev_Direction_ = Direction::DOWN;
 }
 void CentipedeSegment::moveUp(float speed)
 {
     float maxHeight = grid_.getHeight()- grid_.getHeight()*0.2;
-    auto newYPos = position_.getY_pos() - speed;
+    auto newYPos = position_.getY_pos() - 16.0f;
 
     if(newYPos > maxHeight){
         position_.setY_pos(newYPos);
-        if(prev_Direction_==Direction::LEFT)setDirection(Direction::RIGHT);
-        else setDirection(Direction::LEFT);
+        if(prev_Direction_==Direction::LEFT){
+                setDirection(Direction::RIGHT);
+                prev_Direction_ = Direction::UP;
+        }else{
+            setDirection(Direction::LEFT);
+            prev_Direction_ = Direction::UP;
+        }//if
 
     }else{
         moveDown(speed);
-    }
+    }//if
 }
 
 void CentipedeSegment::moveDown(float speed)
 {
-    float maxHeight = grid_.getHeight();
-    auto newYPos = position_.getY_pos() + speed;
+    float maxHeight = grid_.getHeight()-8.0f;
+    auto newYPos = position_.getY_pos() + 16.0f;
 
     if(newYPos < maxHeight){
         position_.setY_pos(newYPos);
-        if(prev_Direction_==Direction::LEFT)setDirection(Direction::RIGHT);
-        else setDirection(Direction::LEFT);
+        if(prev_Direction_==Direction::LEFT){
+            setDirection(Direction::RIGHT);
+            prev_Direction_ = Direction::DOWN;
+
+         }else{
+            setDirection(Direction::LEFT);
+            prev_Direction_ = Direction::DOWN;
+         }
 
     }else{
         isPosoned_=false;
@@ -41,27 +52,37 @@ void CentipedeSegment::moveDown(float speed)
 
 void CentipedeSegment::moveLeft(float speed)
 {
-    float maxWidth = grid_.getWidth();
+    float maxWidth = grid_.getWidth()-8.0f;
     auto newXPos = position_.getX_pos()- speed;
 
-    if(newXPos < maxWidth && newXPos>0){
+    if(newXPos < maxWidth && newXPos>8.0){
         position_.setX_pos(newXPos);
     }else{
-        setDirection(Direction::DOWN);
-        moveDown(speed);
+        if(prev_Direction_==Direction::UP){
+            setDirection(Direction::UP);
+            moveUp(speed);
+        }else if(prev_Direction_==Direction::DOWN){
+            setDirection(Direction::DOWN);
+            moveDown(speed);
+        }
     }
 }
 
 void CentipedeSegment::moveRight(float speed)
 {
-    float maxWidth = grid_.getWidth();
+    float maxWidth = grid_.getWidth()-8.0f;
     auto newXPos = position_.getX_pos()+ speed;
 
     if(newXPos < maxWidth){
         position_.setX_pos(newXPos);
     }else{
-        setDirection(Direction::DOWN);
-        moveDown(speed);
+        if(prev_Direction_==Direction::UP){
+            setDirection(Direction::UP);
+            moveUp(speed);
+        }else if(prev_Direction_==Direction::DOWN){
+            setDirection(Direction::DOWN);
+            moveDown(speed);
+        }
     }
 }
 
