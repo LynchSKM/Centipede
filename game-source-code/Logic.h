@@ -7,6 +7,7 @@
 #include "ScreenState.h"
 #include "Player.h"
 #include "StopWatch.h"
+#include "EnemyFactory.h"
 
 
 #include <vector>
@@ -44,6 +45,7 @@ class Logic
         Presentation presentation_{grid_.getWidth(), grid_.getHeight()};
         HighScoreManager highScoreManager_;
         AssetManager assetManager_;
+        EnemyFactory enemyFactory_{grid_};
         shared_ptr<Player> player_;
         vector<shared_ptr<IEntity>> game_objects_;
         vector<shared_ptr<IMovingEntity>> moving_game_objects;
@@ -80,6 +82,14 @@ class Logic
         /** \brief Moves all the game objects that can be moved.
          */
         void updateGameObjects();
+
+        /** \brief generates the a centipede with one head, and multiple body segments.
+         */
+        void generateNormalCentipede();
+
+        /** \brief generates centipede heads.
+         */
+        void generateCentipedeHeads();
 
         /** \brief Removes all dead entities from vector(s) where they exist.
          */

@@ -8,6 +8,27 @@ position_{position}, grid_{grid}
 {
     prev_Direction_ = Direction::DOWN;
 }
+
+bool CentipedeSegment::isEntryMovement(){
+
+    struct CentipedeSegmentDemensions dimensions;
+    auto speed = dimensions.speed;
+    auto half_screen_width = grid_.getWidth()/2.0f;
+
+    if(position_.getY_pos() < 0 && cur_Direction_==Direction::LEFT ){
+        if(position_.getX_pos() <half_screen_width){
+            moveDown(speed);
+            return true;
+        }
+    }else if(position_.getY_pos() < 0 && cur_Direction_==Direction::RIGHT ){
+        if(position_.getX_pos() >half_screen_width){
+            moveDown(speed);
+            return true;
+        }
+    }
+
+    return false;
+}
 void CentipedeSegment::moveUp(float speed)
 {
     float maxHeight = grid_.getHeight()- grid_.getHeight()*0.2;
@@ -89,6 +110,7 @@ void CentipedeSegment::moveRight(float speed)
 
 void CentipedeSegment::move()
 {
+    if(isEntryMovement())return;
     //Normal movement
     struct CentipedeSegmentDemensions dimensions;
     auto speed = dimensions.speed;

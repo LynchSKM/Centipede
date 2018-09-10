@@ -5,10 +5,6 @@ Logic::Logic():screen_state_{ScreenState::SPLASHSCREEN}
     player_ = std::make_shared<Player>(grid_);
     game_objects_.push_back(player_);
     moving_game_objects.push_back(player_);
-    auto centi_pede = std::make_shared<CentipedeSegment>(grid_, CentipedeSegment::BodyType::HEAD,
-                                                   Position{0, 200}, Direction::RIGHT);
-    game_objects_.push_back(centi_pede);
-    moving_game_objects.push_back(centi_pede);
 
     debounceSpaceKey_ = false;
     //ctor
@@ -62,6 +58,7 @@ void Logic::run()
             timeSinceLastUpdate-=game_speed;
             getInputCommands();
             if(presentation_.isWindowOpen()==false) return;
+            generateNormalCentipede();
             updateGameObjects();
 
             removeDeadEntities();
@@ -115,6 +112,19 @@ void Logic::renderGameOverScreen()
 void Logic::renderGameWonScreen()
 {
     presentation_.drawGameWonScreen(player_->getScore(), high_score_);
+}
+void Logic::generateNormalCentipede(){
+
+    for(auto& segment: enemyFactory_.generateNormalCentipede()){
+        game_objects_.push_back(segment);
+        moving_game_objects.push_back(segment);
+
+    }
+}
+
+void Logic::generateCentipedeHeads(){
+
+
 }
 
 Logic::~Logic()

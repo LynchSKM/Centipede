@@ -111,6 +111,10 @@ class CentipedeSegment : public IMovingEntity
         bool isPosoned_ = false;
         bool alive_ = true;
 
+        /** \brief controls the movements of the centipede segment upon entry.
+         */
+        bool isEntryMovement();
+
         /** \brief A function that decrements y axis of the object's position
          *  by the given parameter.
          *  \param is a float
