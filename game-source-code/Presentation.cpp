@@ -105,7 +105,7 @@ void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
                                         [&, entity_type](const SpriteSheet& sheet){
                            return (sheet.getObjectType()==entity_type);
                            });
-
+            auto rect = sf::IntRect();
             if(object->getObjectType()==ObjectType::CENTIPEDE){
                 iter_map = game_textures.find(ObjectType::CENTIPEDE);
 
@@ -113,11 +113,13 @@ void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
                 if(centipede_segment->getBodyType()==CentipedeSegment::BodyType::BODY)
                     ++iter_vec;
 
-                auto rect = iter_vec->getTextureRect(centipede_segment->getDirection());
-                gameObjectsSprite.setTextureRect(rect);
-                // Set Origin:
-                gameObjectsSprite.setOrigin(std::abs(rect.width)/half, rect.height/half);
+                rect = iter_vec->getTextureRect(centipede_segment->getDirection());
             }//if
+
+            // Set Texture rect:
+            gameObjectsSprite.setTextureRect(rect);
+            // Set Origin:
+            gameObjectsSprite.setOrigin(std::abs(rect.width)/half, rect.height/half);
         }
 
         // Set Texture:
