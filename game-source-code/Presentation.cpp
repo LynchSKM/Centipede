@@ -61,30 +61,20 @@ void Presentation::loadTextures(vector<AssetManager>game_assets)
         else{
             sf::Texture texture;
             texture.loadFromFile(asset.getAssetPath());
+            texture.setSmooth(true);
+            auto temp = static_cast<int>(asset.getAssetType());
+            auto temp_Object = static_cast<ObjectType>(temp-1);
+            auto temp_pair = pair<ObjectType, sf::Texture>(temp_Object, texture);
+            game_textures.insert(temp_pair);
 
-
-            if(asset.getAssetType() == AssetManager::AssetType::PLAYER){
-                texture.setSmooth(true);
-                auto temp = pair<ObjectType, sf::Texture>(ObjectType::PLAYER, texture);
-                game_textures.insert(temp);
-
-            }// if
-            else if(asset.getAssetType() == AssetManager::AssetType::BULLET){
-                auto temp = pair<ObjectType, sf::Texture>(ObjectType::PLAYER_LASER_BULLET, texture);
-                game_textures.insert(temp);
-
-            }//else if
-            else if(asset.getAssetType() == AssetManager::AssetType::CENTIPEDE){
-                auto object = ObjectType::CENTIPEDE;
-                auto temp = pair<ObjectType, sf::Texture>(object, texture);
-                game_textures.insert(temp);
-
+            if(asset.getAssetType() == AssetManager::AssetType::CENTIPEDE){
                 //
+                auto object = ObjectType::CENTIPEDE;
                 auto row = 0u; // CentipedeSegment Head
                 populateSpriteSheets(object, row, sf::Vector2u{8,2}, switch_time, Direction::LEFT);
                 row = 1u; // CentipedeSegment Body
                 populateSpriteSheets(object, row, sf::Vector2u{8,2}, switch_time, Direction::LEFT);
-            } //else if
+            } // if
         }//else
 
     }//for
@@ -139,7 +129,7 @@ void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
         window_.draw(gameObjectsSprite);
     }//for
     window_.display();
-    auto animation_speed = 0.02f;
+    auto animation_speed = 0.015f;
     updateAnimations(animation_speed);
 
 }
