@@ -51,6 +51,11 @@ public:
     */
     bool operator==(const Position& rhs) const;
 
+    /** \brief Overloaded the less than operator (<).
+    *   \return bool
+    */
+    bool operator<(const Position& rhs) const;
+
 private:
 
     float xPos_, yPos_;
