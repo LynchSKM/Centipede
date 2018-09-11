@@ -18,6 +18,7 @@ string AssetManager::getAssetPath() const{
 
 vector<AssetManager> AssetManager::getAssetInfo(){
 	vector<string> file_paths = {"Assets/Font.ttf",
+                                "Assets/shoot.wav",
 								"Assets/PlayerAlt.png",
 								"Assets/bullet.png",
 								"Assets/Centipede.png",

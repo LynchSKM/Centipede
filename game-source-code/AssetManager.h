@@ -23,6 +23,7 @@ class AssetManager{
         // Enumerate Types of Assets:
 		enum class AssetType
 		{ FONT = 0,
+          GUNSHOT_SOUND,
           PLAYER,
           BULLET,
           CENTIPEDE,

@@ -2,6 +2,8 @@
 #define PRESENTATION_H
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio/Sound.hpp>
+#include <SFML/Audio/Music.hpp>
 
 #include <map>
 #include <vector>
@@ -123,6 +125,7 @@ class Presentation
         sf::Color background_;
         sf::RenderWindow window_;
         sf::Font font_;
+        sf::Music gun_shot_;
 
         //
         map<ObjectType, sf::Texture> game_textures;
@@ -135,7 +138,13 @@ class Presentation
         bool isDownPressed_;
         bool isSpacePressed_;
 
-        /** \brief Generates SpriteSheet objects and saves them into the vector
+        /** \brief Populate SpriteSheet vector, sprite_sheets_,
+         *  for the different game objects that have animated movement.
+         * \param object_type is of type enum class ObjectType.
+         */
+        void populateSpriteSheets(const ObjectType& object_type);
+
+       /** \brief Generates a SpriteSheet object and saves it into the vector
          *  sprite_sheets_ for the different game objects.
          * \param object_type is of type enum class ObjectType.
          * \param row is an unsigned int indicating the row in the spritesheet to use.
@@ -143,7 +152,7 @@ class Presentation
          * \param switchTime is a float and is the time delay used between images for movement animation.
          * \param direction is the direction the sprite faces in the image loaded as a texture.
          */
-        void populateSpriteSheets(ObjectType object_type, unsigned int row,
+        void generateSpriteSheet(ObjectType object_type, unsigned int row,
                                   sf::Vector2u imageCount, float switchTime,
                                   Direction direction);
 
@@ -152,6 +161,21 @@ class Presentation
          * \param delta_time is a float that will have the time elapsed from the game loop.
          */
         void updateAnimations(float delta_time);
+
+        /** \brief Updates the sound played when a player shoots a bullet.
+         */
+        void processPlayerShootSound();
+
+        /** \brief Returns a sprite with the correct animation for animated moving
+         *  objects.
+         *  \return sf::Sprite sprite with properties of the object given.
+         */
+        sf::Sprite generateSpriteFromSpriteSheet(shared_ptr<IEntity> object);
+
+        /** \brief Returns a sf::Sprite with the necessary properties of the object given.
+         *  \return sf::Sprite sprite with properties of the object given.
+         */
+         sf::Sprite generateSprite(shared_ptr<IEntity> object);
 
 
 
