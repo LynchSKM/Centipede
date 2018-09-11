@@ -115,29 +115,21 @@ class CentipedeSegment : public IMovingEntity
          */
         bool isEntryMovement();
 
-        /** \brief A function that decrements y axis of the object's position
-         *  by the given parameter.
-         *  \param is a float
+        /** \brief A function that decrements y axis of the object's position.
          */
-        void moveUp(float speed);
+        void moveUp();
 
-        /** \brief A function that increments y axis of the object's position
-         *  by the given parameter.
-         *  \param is a float
+        /** \brief A function that increments y axis of the object's position.
          */
-        void moveDown(float speed);
+        void moveDown();
 
-        /** \brief A function that decrements x axis of the object's position
-         *  by the given parameter.
-         *  \param is a float
+        /** \brief A function that decrements x axis of the object's position.
          */
-        void moveLeft(float speed);
+        void moveLeft();
 
-        /** \brief A function that increments x axis of the object's position
-         *  by the given parameter.
-         *  \param is a float
+        /** \brief A function that increments x axis of the object's position.
          */
-        void moveRight(float speed);
+        void moveRight();
 };
 
 #endif // CENTIPEDESEGMENT_H

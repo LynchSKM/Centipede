@@ -17,21 +17,21 @@ bool CentipedeSegment::isEntryMovement(){
 
     if(position_.getY_pos() < 0 && cur_Direction_==Direction::LEFT ){
         if(position_.getX_pos() < half_screen_width){
-            moveDown(dimensions.speedY);
-            moveDown(dimensions.speedY);
+            moveDown();
+            moveDown();
             return true;
         }
     }else if(position_.getY_pos() < 0 && cur_Direction_==Direction::RIGHT ){
         if(position_.getX_pos() > half_screen_width){
-            moveDown(dimensions.speedY);
-            moveDown(dimensions.speedY);
+            moveDown();
+            moveDown();
             return true;
         }
     }
 
     return false;
 }
-void CentipedeSegment::moveUp(float speed)
+void CentipedeSegment::moveUp()
 {
     struct CentipedeSegmentDemensions dimensions;
     float maxHeight = grid_.getHeight()- grid_.getHeight()*0.2;
@@ -48,14 +48,14 @@ void CentipedeSegment::moveUp(float speed)
         }//if
 
     }else{
-        moveDown(dimensions.speedY);
+        moveDown();
     }//if
 }
 
-void CentipedeSegment::moveDown(float speed)
+void CentipedeSegment::moveDown()
 {
     struct CentipedeSegmentDemensions dimensions;
-    float maxHeight = grid_.getHeight()-8.0f;
+    float maxHeight = grid_.getHeight()-(dimensions.height/2.0f);
     auto newYPos = position_.getY_pos() + dimensions.speedY;
 
     if(newYPos < maxHeight){
@@ -71,33 +71,33 @@ void CentipedeSegment::moveDown(float speed)
 
     }else{
         isPosoned_=false;
-        moveUp(dimensions.speedY);
+        moveUp();
     }
 }
 
-void CentipedeSegment::moveLeft(float speed)
+void CentipedeSegment::moveLeft()
 {
     struct CentipedeSegmentDemensions dimensions;
-    float maxWidth = grid_.getWidth()-8.0f;
+    float maxWidth = grid_.getWidth()-(dimensions.width/2.0f);
     auto newXPos = position_.getX_pos()- dimensions.speed;
 
-    if(newXPos < maxWidth && newXPos>8.0){
+    if(newXPos < maxWidth && newXPos > (dimensions.width/2.0f)){
         position_.setX_pos(newXPos);
     }else{
         if(prev_Direction_==Direction::UP){
             setDirection(Direction::UP);
-            moveUp(dimensions.speedY);
+            moveUp();
         }else if(prev_Direction_==Direction::DOWN){
             setDirection(Direction::DOWN);
-            moveDown(dimensions.speedY);
+            moveDown();
         }
     }
 }
 
-void CentipedeSegment::moveRight(float speed)
+void CentipedeSegment::moveRight()
 {
     struct CentipedeSegmentDemensions dimensions;
-    float maxWidth = grid_.getWidth()-8.0f;
+    float maxWidth = grid_.getWidth()-(dimensions.width/2.0f);
     auto newXPos = position_.getX_pos()+ dimensions.speed;
 
     if(newXPos < maxWidth){
@@ -105,10 +105,10 @@ void CentipedeSegment::moveRight(float speed)
     }else{
         if(prev_Direction_==Direction::UP){
             setDirection(Direction::UP);
-            moveUp(dimensions.speedY);
+            moveUp();
         }else if(prev_Direction_==Direction::DOWN){
             setDirection(Direction::DOWN);
-            moveDown(dimensions.speedY);
+            moveDown();
         }
     }
 }
@@ -119,25 +119,23 @@ void CentipedeSegment::move()
     if(isEntryMovement())return;
     //Normal movement
     struct CentipedeSegmentDemensions dimensions;
-    auto speed   = dimensions.speed;
-    auto speed_y = dimensions.speedY;
     if(!isPosoned_){
     switch (cur_Direction_){
 
         case Direction::DOWN:
-            moveDown(speed_y);
+            moveDown();
             break;
 
         case Direction::LEFT:
-            moveLeft(speed);
+            moveLeft();
             break;
 
         case Direction::RIGHT:
-            moveRight(speed);
+            moveRight();
             break;
 
         case Direction::UP:
-            moveUp(speed_y);
+            moveUp();
             break;
 
         default :
@@ -145,7 +143,7 @@ void CentipedeSegment::move()
     }//switch
     }else{
         //poisoned movement
-        moveDown(speed_y);
+        moveDown();
     }
 }
 
