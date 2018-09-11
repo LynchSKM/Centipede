@@ -138,7 +138,7 @@ void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
         window_.draw(gameObjectsSprite);
     }//for
     window_.display();
-    auto animation_speed = 0.015f;
+    auto animation_speed = 0.0040f;
     updateAnimations(animation_speed);
 
 }

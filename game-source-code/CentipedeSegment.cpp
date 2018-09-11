@@ -16,13 +16,15 @@ bool CentipedeSegment::isEntryMovement(){
     auto half_screen_width = grid_.getWidth()/2.0f;
 
     if(position_.getY_pos() < 0 && cur_Direction_==Direction::LEFT ){
-        if(position_.getX_pos() <half_screen_width){
-            moveDown(speed);
+        if(position_.getX_pos() < half_screen_width){
+            moveDown(dimensions.speedY);
+            moveDown(dimensions.speedY);
             return true;
         }
     }else if(position_.getY_pos() < 0 && cur_Direction_==Direction::RIGHT ){
-        if(position_.getX_pos() >half_screen_width){
-            moveDown(speed);
+        if(position_.getX_pos() > half_screen_width){
+            moveDown(dimensions.speedY);
+            moveDown(dimensions.speedY);
             return true;
         }
     }
@@ -31,8 +33,9 @@ bool CentipedeSegment::isEntryMovement(){
 }
 void CentipedeSegment::moveUp(float speed)
 {
+    struct CentipedeSegmentDemensions dimensions;
     float maxHeight = grid_.getHeight()- grid_.getHeight()*0.2;
-    auto newYPos = position_.getY_pos() - 16.0f;
+    auto newYPos = position_.getY_pos() - dimensions.speedY;
 
     if(newYPos > maxHeight){
         position_.setY_pos(newYPos);
@@ -45,14 +48,15 @@ void CentipedeSegment::moveUp(float speed)
         }//if
 
     }else{
-        moveDown(speed);
+        moveDown(dimensions.speedY);
     }//if
 }
 
 void CentipedeSegment::moveDown(float speed)
 {
+    struct CentipedeSegmentDemensions dimensions;
     float maxHeight = grid_.getHeight()-8.0f;
-    auto newYPos = position_.getY_pos() + 16.0f;
+    auto newYPos = position_.getY_pos() + dimensions.speedY;
 
     if(newYPos < maxHeight){
         position_.setY_pos(newYPos);
@@ -67,42 +71,44 @@ void CentipedeSegment::moveDown(float speed)
 
     }else{
         isPosoned_=false;
-        moveUp(speed);
+        moveUp(dimensions.speedY);
     }
 }
 
 void CentipedeSegment::moveLeft(float speed)
 {
+    struct CentipedeSegmentDemensions dimensions;
     float maxWidth = grid_.getWidth()-8.0f;
-    auto newXPos = position_.getX_pos()- speed;
+    auto newXPos = position_.getX_pos()- dimensions.speed;
 
     if(newXPos < maxWidth && newXPos>8.0){
         position_.setX_pos(newXPos);
     }else{
         if(prev_Direction_==Direction::UP){
             setDirection(Direction::UP);
-            moveUp(speed);
+            moveUp(dimensions.speedY);
         }else if(prev_Direction_==Direction::DOWN){
             setDirection(Direction::DOWN);
-            moveDown(speed);
+            moveDown(dimensions.speedY);
         }
     }
 }
 
 void CentipedeSegment::moveRight(float speed)
 {
+    struct CentipedeSegmentDemensions dimensions;
     float maxWidth = grid_.getWidth()-8.0f;
-    auto newXPos = position_.getX_pos()+ speed;
+    auto newXPos = position_.getX_pos()+ dimensions.speed;
 
     if(newXPos < maxWidth){
         position_.setX_pos(newXPos);
     }else{
         if(prev_Direction_==Direction::UP){
             setDirection(Direction::UP);
-            moveUp(speed);
+            moveUp(dimensions.speedY);
         }else if(prev_Direction_==Direction::DOWN){
             setDirection(Direction::DOWN);
-            moveDown(speed);
+            moveDown(dimensions.speedY);
         }
     }
 }
@@ -113,12 +119,13 @@ void CentipedeSegment::move()
     if(isEntryMovement())return;
     //Normal movement
     struct CentipedeSegmentDemensions dimensions;
-    auto speed = dimensions.speed;
+    auto speed   = dimensions.speed;
+    auto speed_y = dimensions.speedY;
     if(!isPosoned_){
     switch (cur_Direction_){
 
         case Direction::DOWN:
-            moveDown(speed);
+            moveDown(speed_y);
             break;
 
         case Direction::LEFT:
@@ -130,7 +137,7 @@ void CentipedeSegment::move()
             break;
 
         case Direction::UP:
-            moveUp(speed);
+            moveUp(speed_y);
             break;
 
         default :
@@ -138,7 +145,7 @@ void CentipedeSegment::move()
     }//switch
     }else{
         //poisoned movement
-        moveDown(speed);
+        moveDown(speed_y);
     }
 }
 
