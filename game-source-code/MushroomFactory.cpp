@@ -4,6 +4,8 @@ MushroomFactory::MushroomFactory(Grid grid):grid_{grid},maxCol_{37}, maxRow_{32}
                 maxMushrooms_{300}
 {
     //ctor
+    // Build map:
+    defineRowAndCol();
 }
 vector <shared_ptr<Mushroom>>MushroomFactory::generateMushrooms()
 {

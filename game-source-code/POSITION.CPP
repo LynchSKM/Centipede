@@ -34,8 +34,8 @@ bool Position::operator ==(const Position& rhs) const{
 }
 bool Position::operator<(const Position& rhs) const
 {
-    auto distanceL = sqrt(pow(xPos_,2)+(yPos_,2));
-    auto distanceR = sqrt(pow(rhs.xPos_,2)+(rhs.yPos_,2));
+    auto distanceL = std::sqrt(std::pow(xPos_,2)+std::pow(yPos_,2));
+    auto distanceR = std::sqrt(std::pow(rhs.xPos_,2)+std::pow(rhs.yPos_,2));
 
     return(distanceL < distanceR );
 }
