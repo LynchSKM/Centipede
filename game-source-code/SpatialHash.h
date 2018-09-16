@@ -54,7 +54,7 @@ class SpatialHash
          * \param object is a shared pointer of type IEntity.
          * \return vector<shared_ptr<IEntity>>
          */
-        vector<IEntity_ptr> retrieveNearbyObjects(IEntity_ptr object);
+        vector<IEntity_ptr> retrieveNearbyObjects(IEntity_ptr& object);
 
         /** \brief Clears the vectors in the game_object_table_.
          * \return void
@@ -82,7 +82,7 @@ class SpatialHash
          * \param object shared pointer of type IEntity.
          * \return vector<Position>
          */
-        vector<Position> getObjectLocations(IEntity_ptr object);
+        vector<Position> getObjectLocations(IEntity_ptr& object);
 
         /** \brief Maps a position to a cell based on the grid's width, height and
          * the chosen cell size.

@@ -29,6 +29,7 @@ void SpatialHash::buildMapKeys()
 
 void SpatialHash::generateSpatialHashTable(vector<IEntity_ptr>& game_objects)
 {
+    clearAll();
     for(auto& object : game_objects){
         // Save in map:
         saveLocations(object);
@@ -36,7 +37,7 @@ void SpatialHash::generateSpatialHashTable(vector<IEntity_ptr>& game_objects)
     return;
 }
 
-vector<IEntity_ptr> SpatialHash::retrieveNearbyObjects(IEntity_ptr object)
+vector<IEntity_ptr> SpatialHash::retrieveNearbyObjects(IEntity_ptr& object)
 {
     vector<unsigned int> uniqueCells(5);
     vector<IEntity_ptr> nearbyObjects;
@@ -65,7 +66,7 @@ vector<IEntity_ptr> SpatialHash::retrieveNearbyObjects(IEntity_ptr object)
     return nearbyObjects;
 }
 
-vector<Position> SpatialHash::getObjectLocations(IEntity_ptr object)
+vector<Position> SpatialHash::getObjectLocations(IEntity_ptr& object)
 {
     vector<Position> object_locations(5);
     auto iter_vec = object_locations.begin();
