@@ -5,6 +5,7 @@
 #include "BoundaryBox.h"
 
 #include <cmath>
+#include <algorithm>
 #include <tuple>
 #include <vector>
 
@@ -17,7 +18,7 @@ using std::vector;
 *   overlap between rectangles. Checks for overlap along all edges of the two
 *   rectangles being checked.
 *   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*
+*   \version
 */
 
 class SeparatingAxisTheorem
@@ -30,18 +31,20 @@ class SeparatingAxisTheorem
         */
         bool checkOverlap(const BoundaryBox& rect_A, const BoundaryBox& rect_B);
 
+        /** \brief Returns the minimum distances x and y to remove objects out of
+         *  collision.
+         * \param centre_1 is of type Position and is the centre of a BoundaryBox Shape.
+         * \param centre_2 is of type Position and is the centre of a BoundaryBox Shape.
+         * \return Position
+         */
+        Position getPenetrationDistance(Position& centre_1, Position& centre_2);
+
     private:
         vector<Position> axes_;
         vector<Position> vertices_rectA_;
         vector<Position> vertices_rectB_;
-
-        /** \brief Takes in a Rectangle object and stores the co-ordinates
-        *   of the corners into a vector of type Position.
-        *   \param rect is of type Rectangle struct.
-        *   \param vertices is a vector of type Position.
-        *   \return void
-        */
-        void storeVertices(const BoundaryBox& rect, vector<Position>& vertices);
+        float smallest_overlap_ = 1000.0f;
+        Position min_translation_vector_;
 
         /** \brief Generates the normals perpendicular to the edges of a Rectangle.
         *   \details The normals are stored in a vector of type Position as it has
@@ -55,6 +58,12 @@ class SeparatingAxisTheorem
         *   \return float which is the scalar result of the dot product.
         */
         float dotProduct(const Position& pointA, const Position& pointB);
+
+       /**  \brief Performs the normalization of a an axis normal vector.
+        *   \param axis is of type Position
+        *   \return Position which is the normalized axis vector.
+        */
+        Position normalizeAxis(const Position& axis);
 
         /** \brief Performs vector projection onto axes generated.
         *   \details The vertices of a Rectangle are projected onto an axis to

@@ -12,28 +12,33 @@ bool SeparatingAxisTheorem::checkOverlap(const BoundaryBox& rect_A, const Bounda
     return checkProjectionsOverlap();
 }
 
-void SeparatingAxisTheorem::storeVertices(const BoundaryBox& rect, vector<Position>& vertices)
+Position SeparatingAxisTheorem::normalizeAxis(const Position& axis)
 {
-   /* vertices.push_back(rect.upperLeft);
-    vertices.push_back(rect.upperRight);
-    vertices.push_back(rect.bottomLeft);
-    vertices.push_back(rect.bottomRight); */
+    float axis_x = axis.getX_pos(), axis_y = axis.getY_pos();
+    float axis_magnitude = std::sqrt((std::pow(axis_x,2))+(std::pow(axis_y,2)));
 
+    return (Position{axis_x/axis_magnitude, axis_y/axis_magnitude});
 }
+
 
 void SeparatingAxisTheorem::generateAxes(){
     //Rect A
     // UpperRight-UpperLeft
-    axes_.push_back(vertices_rectA_.at(1)-vertices_rectA_.at(0));
+    auto axis = vertices_rectA_.at(1)-vertices_rectA_.at(0);
+    axes_.push_back(normalizeAxis(axis));
+
     // UpperRight-BottomRight
-    axes_.push_back(vertices_rectA_.at(1)-vertices_rectA_.at(3));
+    axis = vertices_rectA_.at(1)-vertices_rectA_.at(3);
+    axes_.push_back(normalizeAxis(axis));
 
     //Rect B
     // UpperLeft-BottomLeft
-    axes_.push_back(vertices_rectA_.at(0)-vertices_rectA_.at(2));
-    // UpperLeft-UpperRight
-    axes_.push_back(vertices_rectA_.at(0)-vertices_rectA_.at(1));
+    axis = vertices_rectA_.at(0)-vertices_rectA_.at(2);
+    axes_.push_back(normalizeAxis(axis));
 
+    // UpperLeft-UpperRight
+    axis = vertices_rectA_.at(0)-vertices_rectA_.at(1);
+    axes_.push_back(normalizeAxis(axis));
 }
 
 float SeparatingAxisTheorem::dotProduct(const Position& pointA, const Position& pointB)
@@ -48,10 +53,10 @@ tuple<float, float> SeparatingAxisTheorem::projectVectorsOntoAxis(const Position
     auto iter_projected_vertex = begin(projected_vertices);
 
     float axis_x = axis.getX_pos(), axis_y = axis.getY_pos();
-    float axis_magnitude = (std::pow(axis_x,2))+(std::pow(axis_y,2));
+    float axis_magnitude_squared = (std::pow(axis_x,2))+(std::pow(axis_y,2));
 
     for(const auto& vertex: vertices){
-        float product = dotProduct(vertex, axis)/axis_magnitude;
+        float product = dotProduct(vertex, axis)/axis_magnitude_squared;
         iter_projected_vertex->setX_pos(product*axis.getX_pos());
         iter_projected_vertex->setY_pos(product*axis.getY_pos());
         ++iter_projected_vertex;
@@ -84,11 +89,34 @@ bool SeparatingAxisTheorem::checkProjectionsOverlap(){
 
         // If both conditions are true there is overlap:
         bool overlapOccured = (minimumProjectionB <= maximumProjectionA && maximumProjectionB >= minimumProjectionA);
-        if (overlapOccured==false)
+        if(overlapOccured==false)
             return false;
+        else{
+            float overlap = std::max(0.0f, std::min(maximumProjectionA, maximumProjectionB));
+            overlap-= std::max(minimumProjectionA, minimumProjectionB);
+            if(overlap < smallest_overlap_)
+            {
+                min_translation_vector_ = axis;
+                smallest_overlap_ = overlap;
+            }//if
+        }//else
     }//for axes
 
     return true;
+}
+Position SeparatingAxisTheorem::getPenetrationDistance(Position& centre_1,
+                                                       Position& centre_2)
+{
+  // Default is to ensure mtv points from rectA  to rectB:
+  Position b_to_a = centre_2-centre_1;
+  if(dotProduct(min_translation_vector_, b_to_a)>=0){
+    auto x = -(min_translation_vector_.getX_pos());
+    auto y = -(min_translation_vector_.getY_pos());
+    min_translation_vector_.setX_pos(x);
+    min_translation_vector_.setY_pos(y);
+  }
+  return(Position(min_translation_vector_.getX_pos()*smallest_overlap_,
+                  min_translation_vector_.getY_pos()*smallest_overlap_));
 }
 
 void SeparatingAxisTheorem::clearAll()
