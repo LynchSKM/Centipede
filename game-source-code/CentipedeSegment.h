@@ -100,6 +100,11 @@ class CentipedeSegment : public IMovingEntity
          */
         BodyType getBodyType() const;
 
+        /** \brief A function that sets the body type of the centipede segment.
+         *  \param body_type of type BodyType of the enum class.
+         */
+        void setBodyType(BodyType body_type);
+
     private:
         Direction cur_Direction_;
         Direction prev_Direction_;

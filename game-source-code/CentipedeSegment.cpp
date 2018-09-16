@@ -162,6 +162,12 @@ CentipedeSegment::BodyType CentipedeSegment::getBodyType() const{
     return bodytype_;
 }
 
+void CentipedeSegment::setBodyType(BodyType body_type)
+{
+    bodytype_ = body_type;
+}
+
+
 Position CentipedeSegment::getPosition() const
 {
     return position_;
