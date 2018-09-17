@@ -24,7 +24,7 @@ class PlayerBullet : public IMovingEntity
 
         /** Destroys the playerbullet object.
         */
-        ~PlayerBullet();
+        virtual ~PlayerBullet();
         /** A pure virtual function that moves derived class objects.
         */
         virtual void move() override;

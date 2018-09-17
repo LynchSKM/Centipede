@@ -44,6 +44,8 @@ class IEntity
         *   \return void
         */
         virtual void eliminated() = 0;
+
+        virtual ~IEntity(){};
 };
 
 #endif // IENTITY_H

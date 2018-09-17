@@ -30,7 +30,7 @@ class Player : public IMovingEntity
         Player(Grid grid);
 
         /**< \brief Destroys the player object */
-        ~Player();
+        virtual ~Player();
 
         /** \brief Inherited from IMovingEntity. A pure virtual function that
         *    moves derived class objects.

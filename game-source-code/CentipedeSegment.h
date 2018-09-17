@@ -35,7 +35,7 @@ class CentipedeSegment : public IMovingEntity
 
         /** Destroys the CentipedeSegment object.
         */
-        ~CentipedeSegment();
+        virtual~CentipedeSegment();
 
         /** A pure virtual function that moves derived class objects.
         */

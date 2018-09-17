@@ -21,7 +21,7 @@ class Mushroom : public IEntity
 
         /** \brief destroys the mushroom object.
          */
-        ~Mushroom();
+        virtual ~Mushroom();
 
         /** \brief Inherited from IEntity. A pure virtual function that returns a enum of ObjectType of
         *   a derived class object.

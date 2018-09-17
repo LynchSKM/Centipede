@@ -61,6 +61,8 @@ class IMovingEntity: public IEntity
         *   \return void
         */
         virtual void eliminated() = 0;
+
+        virtual ~IMovingEntity(){};
 };
 
 #endif // IMOVINGENTITY_H
