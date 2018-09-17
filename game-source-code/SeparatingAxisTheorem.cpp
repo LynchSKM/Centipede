@@ -110,10 +110,7 @@ Position SeparatingAxisTheorem::getPenetrationDistance(Position& centre_1,
   // Default is to ensure mtv points from rectA  to rectB:
   Position b_to_a = centre_2-centre_1;
   if(dotProduct(min_translation_vector_, b_to_a)>=0){
-    auto x = -(min_translation_vector_.getX_pos());
-    auto y = -(min_translation_vector_.getY_pos());
-    min_translation_vector_.setX_pos(x);
-    min_translation_vector_.setY_pos(y);
+    min_translation_vector_ = Position{0,0}-min_translation_vector_;
   }
   return(Position(min_translation_vector_.getX_pos()*smallest_overlap_,
                   min_translation_vector_.getY_pos()*smallest_overlap_));
@@ -124,4 +121,5 @@ void SeparatingAxisTheorem::clearAll()
     axes_.clear();
     vertices_rectA_.clear();
     vertices_rectB_.clear();
+    smallest_overlap_ = numeric_limits<float>::max();
 }

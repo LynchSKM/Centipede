@@ -5,13 +5,16 @@
 #include "BoundaryBox.h"
 
 #include <cmath>
+#include <limits>
 #include <algorithm>
 #include <tuple>
 #include <vector>
 
 using std::tuple;
 using std::vector;
-
+using std::numeric_limits;
+using std::min;
+using std::max;
 /** \class SeparatingAxisTheorem
 *   \brief This is a class used to determine overlap between Rectangle objects.
 *   \details Makes use of the Separating Axis Theorem algorithm that checks for
@@ -43,7 +46,7 @@ class SeparatingAxisTheorem
         vector<Position> axes_;
         vector<Position> vertices_rectA_;
         vector<Position> vertices_rectB_;
-        float smallest_overlap_ = 1000.0f;
+        float smallest_overlap_ = numeric_limits<float>::max();
         Position min_translation_vector_;
 
         /** \brief Generates the normals perpendicular to the edges of a Rectangle.
