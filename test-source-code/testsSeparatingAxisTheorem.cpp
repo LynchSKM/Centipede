@@ -2,7 +2,6 @@
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest.h>
-#include <iostream>
 
 TEST_CASE("Separating Axes Theorem detects overlap between two Rectangles.")
 {
@@ -10,7 +9,6 @@ TEST_CASE("Separating Axes Theorem detects overlap between two Rectangles.")
     auto width  = 30.0f;
     auto height = 40.0f;
     auto rotationAngle = 0.0f;
-
 
     Position center1{325.0f, 480.0f};
     BoundaryBox rectA{center1, width, height, rotationAngle};

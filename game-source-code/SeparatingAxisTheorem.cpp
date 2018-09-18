@@ -122,4 +122,5 @@ void SeparatingAxisTheorem::clearAll()
     vertices_rectA_.clear();
     vertices_rectB_.clear();
     smallest_overlap_ = numeric_limits<float>::max();
+    min_translation_vector_ = Position(0.0f, 0.0f);
 }
