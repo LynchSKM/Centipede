@@ -8,7 +8,7 @@
 #include "Player.h"
 #include "StopWatch.h"
 #include "EnemyFactory.h"
-
+#include "CollisionHandler.h"
 
 #include <vector>
 #include <memory>
@@ -46,6 +46,7 @@ class Logic
         HighScoreManager highScoreManager_;
         AssetManager assetManager_;
         EnemyFactory enemyFactory_{grid_};
+        CollisionHandler collisionHandler_{grid_};
         shared_ptr<Player> player_;
         vector<shared_ptr<IEntity>> game_objects_;
         int high_score_;
