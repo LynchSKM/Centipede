@@ -67,7 +67,6 @@ void Presentation::generateSpriteSheet(ObjectType object_type, unsigned int row,
 
 void Presentation::populateSpriteSheets(const ObjectType& object_type)
 {
-    auto iter_map = game_textures.find(object_type);
     auto switch_time = 0.3f;
     auto row = 0u;
     switch(object_type){

@@ -1,4 +1,7 @@
 #include "CentipedeSegment.h"
+#include <cmath>
+
+using std::round;
 
 CentipedeSegment::CentipedeSegment(Grid grid, BodyType bodytype, Position position, Direction cur_Direction):
 cur_Direction_{cur_Direction},
@@ -36,7 +39,6 @@ void CentipedeSegment::moveUp()
     struct CentipedeSegmentDemensions dimensions;
     float maxHeight = grid_.getHeight()- grid_.getHeight()*0.2;
     auto newYPos = position_.getY_pos() - dimensions.speedY;
-
     if(newYPos > maxHeight){
         position_.setY_pos(newYPos);
         if(prev_Direction_==Direction::LEFT){
@@ -58,7 +60,7 @@ void CentipedeSegment::moveDown()
     float maxHeight = grid_.getHeight()-(dimensions.height/2.0f);
     auto newYPos = position_.getY_pos() + dimensions.speedY;
 
-    if(newYPos < maxHeight){
+    if(newYPos <= maxHeight){
         position_.setY_pos(newYPos);
         if(prev_Direction_==Direction::LEFT){
             setDirection(Direction::RIGHT);
@@ -81,6 +83,10 @@ void CentipedeSegment::moveLeft()
     float maxWidth = grid_.getWidth()-(dimensions.width/2.0f);
     auto newXPos = position_.getX_pos()- dimensions.speed;
 
+
+    newXPos = (round(newXPos*10))/10;
+
+
     if(newXPos < maxWidth && newXPos > (dimensions.width/2.0f)){
         position_.setX_pos(newXPos);
     }else{
@@ -99,6 +105,8 @@ void CentipedeSegment::moveRight()
     struct CentipedeSegmentDemensions dimensions;
     float maxWidth = grid_.getWidth()-(dimensions.width/2.0f);
     auto newXPos = position_.getX_pos()+ dimensions.speed;
+
+    newXPos = (round(newXPos*10))/10;
 
     if(newXPos < maxWidth){
         position_.setX_pos(newXPos);
