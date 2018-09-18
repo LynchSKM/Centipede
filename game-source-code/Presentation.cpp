@@ -123,7 +123,6 @@ void Presentation::loadTextures(vector<AssetManager>game_assets)
             populateSpriteSheets(temp_Object);
 
         }//else
-
     }//for
 }
 
@@ -146,7 +145,15 @@ sf::Sprite Presentation::generateSpriteFromSpriteSheet(shared_ptr<IEntity> objec
             ++iter_vec;
         rect = iter_vec->getTextureRect(centipede_segment->getDirection());
 
-    }//if
+    }else if(entity_type == ObjectType::MUSHROOM){
+        auto mushroom = std::dynamic_pointer_cast<Mushroom>(object);
+        if(mushroom->isPoisoned())
+            ++iter_vec;
+            auto maxMushLives = 4;
+            auto mushCol = maxMushLives - mushroom->getRemainingLives();
+            rect = iter_vec->getTextureRect(mushCol);
+
+    }
 
     // Set Texture rect:
     gameObjectsSprite.setTextureRect(rect);

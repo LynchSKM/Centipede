@@ -26,7 +26,7 @@ class MushroomFactory
         /** \brief a parameterized constructor.
          * \param grid of type Grid.
          */
-        MushroomFactory(Grid grid);
+        MushroomFactory(Grid& grid);
 
         /** \brief destroys the Mushroom Factory object.
          */
@@ -47,20 +47,29 @@ class MushroomFactory
     private:
         Grid grid_;
         int maxCol_, maxRow_, maxMushrooms_;
-        map<Position, bool> gridPoints;
-        map<Position,bool>::iterator it_;
-
+        map<unsigned int, bool> cell_ID_List_;
         /** \brief maps the grid into rows and columns.
          */
         void defineRowAndCol();
 
-        /** \brief maps the position into the defined rows and columns.
+        /** \brief maps the position into the defined xpos and ypos.
          *  \param a position of type Position.
          *  \return a position of type Position.
          */
         Position gridPointLink(Position position);
 
+        /** \brief maps the position into the defined rows and columns.
+         *  \param a position of type Position.
+         *  \return a position of type Position.
+         */
         Position gridRowCol(Position position);
+
+        /** \brief checks if the cell is occupied.
+         *  \param cell xpos int.
+         *  \param cell ypos int.
+         *  \return a bool stating if the cell is occupied or not.
+         */
+        bool isCellOccupied(int x, int y);
 };
 
 #endif // MUSHROOMFACTORY_H

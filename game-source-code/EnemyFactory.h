@@ -4,6 +4,7 @@
 #include <vector>
 #include <memory>
 #include "CentipedeSegment.h"
+#include "MushroomFactory.h"
 
 using std::vector;
 using std::shared_ptr;
@@ -38,12 +39,17 @@ class EnemyFactory
          */
         vector <shared_ptr<CentipedeSegment>> generateCentipedeHeads();
 
+        /** \brief generates mushrooms at random positions.
+         * \return a vector of shared ptr to mushrooms.
+         */
+        vector <shared_ptr<Mushroom>> generateMushrooms();
 
     private:
         Grid grid_;
         int max_number_enemies_;
         bool isCentipedeGenerated_;
         bool isCentipedeHeadsGenerated_;
+        MushroomFactory mushroomfactory_;
 
 
 

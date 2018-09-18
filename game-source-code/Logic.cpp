@@ -36,6 +36,7 @@ void Logic::run()
     if(screen_state_==ScreenState::SPLASHSCREEN) renderSplashScreen();
     loadAssets();
     high_score_ = highScoreManager_.getHighScore();
+    generateMushrooms();
 
     StopWatch game_timer;
     auto game_speed = 1.0f/6000.0f;
@@ -118,6 +119,12 @@ void Logic::generateNormalCentipede(){
 
 void Logic::generateCentipedeHeads(){
 
+}
+void Logic::generateMushrooms()
+{
+        for(auto& mushroom: enemyFactory_.generateMushrooms()){
+        game_objects_.push_back(mushroom);
+    }
 }
 
 Logic::~Logic()

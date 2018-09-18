@@ -41,7 +41,7 @@ class Logic
         ~Logic();
 
     private:
-        const Grid grid_{600, 648};
+        const Grid grid_{592, 640};
         Presentation presentation_{grid_.getWidth(), grid_.getHeight()};
         HighScoreManager highScoreManager_;
         AssetManager assetManager_;
@@ -89,6 +89,10 @@ class Logic
         /** \brief generates centipede heads.
          */
         void generateCentipedeHeads();
+
+        /** \brief generates mushrooms
+         */
+        void generateMushrooms();
 
         /** \brief Removes all dead entities from vector(s) where they exist.
          */

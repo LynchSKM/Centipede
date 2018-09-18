@@ -1,7 +1,7 @@
 #include "EnemyFactory.h"
 
 EnemyFactory::EnemyFactory(Grid grid):grid_{grid},
-isCentipedeGenerated_{false}
+isCentipedeGenerated_{false},mushroomfactory_{grid}
 {
     //ctor
 }
@@ -39,4 +39,12 @@ vector <shared_ptr<CentipedeSegment>> EnemyFactory::generateNormalCentipede()
 vector <shared_ptr<CentipedeSegment>> EnemyFactory::generateCentipedeHeads()
 {
 
+}
+vector <shared_ptr<Mushroom>> EnemyFactory::generateMushrooms()
+{
+    vector<shared_ptr<Mushroom>> mushrooms;
+    for(auto& mushroom: mushroomfactory_.generateMushrooms()){
+        mushrooms.push_back(mushroom);
+    }
+    return mushrooms;
 }

@@ -34,7 +34,8 @@ bool Mushroom::isAlive() const
 
 void Mushroom::eliminated()
 {
-    if(numberOfLives_<=0) isAlive_ = false;
+    decrementLives();
+    if(numberOfLives_<=0)isAlive_ = false;
 }
 void Mushroom::decrementLives()
 {

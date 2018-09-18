@@ -1,5 +1,4 @@
 #include "Position.h"
-#include <cmath>
 
 Position::Position(float x, float y): xPos_{x}, yPos_{y}{
 
@@ -31,11 +30,4 @@ Position Position::operator -(const Position& rhs){
 
 bool Position::operator ==(const Position& rhs) const{
     return(xPos_ == rhs.xPos_ && yPos_ == rhs.yPos_);
-}
-bool Position::operator<(const Position& rhs) const
-{
-    auto distanceL = std::sqrt(std::pow(xPos_,2)+std::pow(yPos_,2));
-    auto distanceR = std::sqrt(std::pow(rhs.xPos_,2)+std::pow(rhs.yPos_,2));
-
-    return(distanceL < distanceR );
 }

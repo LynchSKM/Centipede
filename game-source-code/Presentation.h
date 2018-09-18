@@ -17,7 +17,7 @@ using std::pair;
 #include "IEntity.h"
 #include "IMovingEntity.h"
 #include "CentipedeSegment.h"
-
+#include "Mushroom.h"
 #include "AssetManager.h"
 #include "SplashScreen.h"
 #include "GameWonScreen.h"
