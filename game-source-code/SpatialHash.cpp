@@ -59,10 +59,14 @@ vector<IEntity_ptr> SpatialHash::retrieveNearbyObjects(IEntity_ptr& object)
         if(iter_map != game_object_table_.end()){
            for(auto& object_in_proximity : iter_map->second){
                 if(object!=object_in_proximity)
-                    nearbyObjects.push_back(object_in_proximity);
+                {
+                    if(std::count(nearbyObjects.begin(), nearbyObjects.end(), object_in_proximity)==0)
+                        nearbyObjects.push_back(object_in_proximity);
+                }
            }//for
         }//if
     }//for
+
     return nearbyObjects;
 }
 
