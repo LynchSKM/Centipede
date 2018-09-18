@@ -56,14 +56,15 @@ void Logic::run()
             if(presentation_.isWindowOpen()==false) return;
             generateNormalCentipede();
             updateGameObjects();
-
+            checkCollisions();
+            updateScores();
             removeDeadEntities();
             renderGameObjects();
         }//while
     }//while
 
-    if(screen_state_==ScreenState::GAMEOVERSCREEN) renderGameOverScreen();
-    if(screen_state_==ScreenState::GAMEWONSCREEN)  renderGameWonScreen();
+    if(screen_state_ == ScreenState::GAMEOVERSCREEN) renderGameOverScreen();
+    if(screen_state_ == ScreenState::GAMEWONSCREEN)  renderGameWonScreen();
 
 }
 void Logic::loadAssets()
@@ -125,6 +126,22 @@ void Logic::generateMushrooms()
         for(auto& mushroom: enemyFactory_.generateMushrooms()){
         game_objects_.push_back(mushroom);
     }
+}
+
+void Logic::checkCollisions()
+{
+    collisionHandler_.checkCollisions(game_objects_);
+    player_->addScore(collisionHandler_.getPointsObtained());
+}
+
+void Logic::updateScores()
+{
+    // Check highscore:
+    if(player_->getScore()>highScoreManager_.getHighScore())
+        highScoreManager_.setHighScore(player_->getScore());
+
+    if(!player_->isAlive())
+        screen_state_= ScreenState::GAMEOVERSCREEN;
 }
 
 Logic::~Logic()

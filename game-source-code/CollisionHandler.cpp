@@ -71,6 +71,7 @@ void CollisionHandler::playerCollidesWithObjects(vector<IEntity_ptr>& player)
         for(auto& object : near_by_objects)
         {
             if(!thePlayer->isAlive()) return;
+            if(object->getObjectType()==ObjectType::PLAYER_LASER_BULLET) break;
             if(sat_algorithm_.checkOverlap(thePlayer->getBoundaryBox(), object->getBoundaryBox()))
             {
                 if(object->getObjectType() == ObjectType::MUSHROOM)
@@ -204,9 +205,13 @@ void CollisionHandler::centipedeCollidesWithMushroom(vector<IEntity_ptr>& centip
         for(auto& object : near_by_objects)
         {
             if(!segment->isAlive()) break;
-            if(object->isAlive() && object->getObjectType()==ObjectType::MUSHROOM){
-                auto centipede_seg_ptr = std::dynamic_pointer_cast<CentipedeSegment>(segment);
-                centipede_seg_ptr->changeDirection();
+            if(object->isAlive() && object->getObjectType()==ObjectType::MUSHROOM)
+            {
+                if(sat_algorithm_.checkOverlap(segment->getBoundaryBox(), object->getBoundaryBox()))
+                {
+                    auto centipede_seg_ptr = std::dynamic_pointer_cast<CentipedeSegment>(segment);
+                    centipede_seg_ptr->changeDirection();
+                }
             }//if
 
         }//for

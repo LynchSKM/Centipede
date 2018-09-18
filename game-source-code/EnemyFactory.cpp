@@ -16,7 +16,7 @@ vector <shared_ptr<CentipedeSegment>> EnemyFactory::generateNormalCentipede()
     vector<shared_ptr<CentipedeSegment>> centipede;
     if(!isCentipedeGenerated_){
 
-        auto numberOfSegments = 7;
+        auto numberOfSegments = 10;
         struct CentipedeSegmentDemensions dimension;
         auto half_screen_width = (grid_.getWidth()/2.0f)-dimension.speed;
         auto centipede_head_ptr = make_shared<CentipedeSegment>(grid_, CentipedeSegment::BodyType::HEAD,

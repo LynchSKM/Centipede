@@ -95,6 +95,15 @@ class Logic
          */
         void generateMushrooms();
 
+        /** \brief Checks for collisions between game objects.
+         */
+        void checkCollisions();
+
+        /** \brief Checks whether the player's score has passed the current high
+         * score and updates the high score if true.
+         */
+        void updateScores();
+
         /** \brief Removes all dead entities from vector(s) where they exist.
          */
         void removeDeadEntities();
