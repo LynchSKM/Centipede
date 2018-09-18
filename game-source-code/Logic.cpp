@@ -4,7 +4,7 @@ Logic::Logic():screen_state_{ScreenState::SPLASHSCREEN}
 {
     player_ = std::make_shared<Player>(grid_);
     game_objects_.push_back(player_);
-
+    srand(time(0));
     debounceSpaceKey_ = false;
     //ctor
 }
@@ -39,18 +39,19 @@ void Logic::run()
     generateMushrooms();
 
     StopWatch game_timer;
-    auto game_speed = 1.0f/6000.0f;
-    auto time_elapsed = 0.0f;
-    auto timeSinceLastUpdate = 0.0f;
     game_timer.start();
+    auto game_speed = 1.0f/6000.0f;
+    //auto time_elapsed = 0.0;
+    auto timeSinceLastUpdate = 0.0;
 
-    while(screen_state_ == ScreenState::GAME_ACTIVE){
+    while(screen_state_ == ScreenState::GAME_ACTIVE)
+    {
         game_timer.stop();
-        time_elapsed=game_timer.getRunTime();
-        timeSinceLastUpdate+=time_elapsed;
+        timeSinceLastUpdate+=game_timer.getRunTime();
         game_timer.start();
         // Check if time that has passed is greater than the frame speed:
-        while(timeSinceLastUpdate>game_speed && screen_state_ == ScreenState::GAME_ACTIVE){
+        while(timeSinceLastUpdate>game_speed && screen_state_ == ScreenState::GAME_ACTIVE)
+        {
             timeSinceLastUpdate-=game_speed;
             getInputCommands();
             if(presentation_.isWindowOpen()==false) return;

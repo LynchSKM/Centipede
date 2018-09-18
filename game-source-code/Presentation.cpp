@@ -201,7 +201,7 @@ void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
     }//for
 
     window_.display();
-    auto animation_speed = 0.0040f;
+    auto animation_speed = 0.0080f;
     updateAnimations(animation_speed);
 }
 
