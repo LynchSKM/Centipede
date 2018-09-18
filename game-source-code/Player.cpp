@@ -83,6 +83,7 @@ bool Player::isAlive() const
 void Player::eliminated()
 {
     hasBeenHit_ = true;
+    numberOfLives_--;
 }
 bool Player::isHit()
 {
@@ -130,7 +131,6 @@ void Player::reincarnate()
 {
     if(isAlive()){
         struct PlayerDimension playerDimension;
-        numberOfLives_--;
         position_.setX_pos(grid_.getWidth()/2.0);
         position_.setY_pos(grid_.getHeight()-playerDimension.height*0.5);
 
