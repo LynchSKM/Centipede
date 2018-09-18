@@ -82,7 +82,11 @@ bool Player::isAlive() const
 
 void Player::eliminated()
 {
-
+    hasBeenHit_ = true;
+}
+bool Player::isHit()
+{
+    return hasBeenHit_;
 }
 
 Direction Player::getDirection() const
@@ -129,5 +133,7 @@ void Player::reincarnate()
         numberOfLives_--;
         position_.setX_pos(grid_.getWidth()/2.0);
         position_.setY_pos(grid_.getHeight()-playerDimension.height*0.5);
+
+        hasBeenHit_ = false;
     }//if
 }

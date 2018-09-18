@@ -106,12 +106,17 @@ class Player : public IMovingEntity
          */
 		void reincarnate();
 
+        /** \brief returns true if the player has collided with a deadly enemy.
+         */
+		bool isHit();
+
 
     private:
 
 		ObjectType objectType_;
         int numberOfLives_;
         int score_ = 0;
+        bool hasBeenHit_;
         const Grid grid_;
         Position position_;
         Direction direction_;
