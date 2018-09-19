@@ -28,6 +28,7 @@ void Logic::getInputCommands()
             game_objects_.push_back(bullets);
             moving_game_objects_.push_back(bullets);
         }//for
+        if(!bullet_Vector.empty()) presentation_.processPlayerShootSound();
     }//if
 
     debounceSpaceKey_ = presentation_.isSpacePressed();

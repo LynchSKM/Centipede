@@ -5,31 +5,43 @@ class StopWatch{
 
 public:
 	// Constructor:
+	/**< \brief Default Constructor. Creates a Stopwatch object. */
 	StopWatch(): startTime_(0.0), pauseTime_( 0.0),
 	resumeTime_(0.0), stopTime_(0.0), runTime_(0.0), lapTime_(0.0), mode_(Mode::STOPPED){};
 
-	// Strongly typed enum containing stopwatch operations:
+	/**< \brief Strongly typed enum containing stopwatch operations. */
 	enum class Mode{ RUNNING, PAUSED, STOPPED};
 
-	//starts the timer
+	/**< \brief Starts the timer. */
 	void start ();
 
-	// Pauses the stopwatch:
+	/**< \brief Pauses the stopwatch. */
 	void pause();
 
-	// Resumes the stopwatch:
+	/**< \brief Resumes the stopwatch. */
 	void resume();
 
-	// Stops the timer and resets:
+	/**< \brief Stops the timer and resets. */
 	void stop();
 
-	// returns the amount of time in seconds that has passed in the piece of code.
+	/** \brief Returns the amount of time in seconds that has passed in the piece of code.
+	 *  \return double
+	 */
 	double getLapTime();
 
-	// returns the amount of time in seconds that has passed in the piece of code.
+	/** \brief Returns the amount time in seconds between start() and pause().
+	 *  \return double
+	 */
+    double getPauseTime() {return pauseTime_;};
+
+	/** \brief Returns the amount of time in seconds that has passed in the piece of code.
+	 *  \return double
+	 */
 	double getRunTime();
 
-	// returns the amount of time in seconds that has passed since the process (i.e. your program) started executing
+	/** \brief Returns the amount of time in seconds that has passed since the process (i.e. your program) started executing.
+	 *  \return double
+	 */
 	double getProcessTime();
 
 private:

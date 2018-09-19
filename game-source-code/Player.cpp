@@ -1,11 +1,14 @@
 #include "Player.h"
 
-Player::Player(Grid grid):grid_{grid},objectType_{ObjectType::PLAYER}, numberOfLives_{5}, direction_{Direction::NONE}{
+Player::Player(Grid grid):grid_{grid},objectType_{ObjectType::PLAYER}, numberOfLives_{5}, direction_{Direction::NONE}
+{
     position_.setX_pos(grid_.getWidth()/2.0);
     struct PlayerDimension playerDimension;
     position_.setY_pos(grid_.getHeight()-playerDimension.height*0.5);
 
-
+    reload_timer.start();
+    timeSinceLastShoot = 0;
+    reload_time = 0.25;
 }
 
 Player::~Player(){
@@ -107,13 +110,18 @@ int Player::getRemainingLives() const
 
 vector <shared_ptr<IMovingEntity>> Player::shoot()
 {
-    struct PlayerBulletDimentions dimension;
-    auto xVal = position_.getX_pos()-dimension.speed;
-    auto yVal = position_.getY_pos()-dimension.height/2.0f;
-
-
     vector<shared_ptr<IMovingEntity>> bullets;
-    bullets.push_back(std::make_shared<PlayerBullet>(Position{xVal,yVal},grid_));
+    reload_timer.pause();
+    auto time_elapsed = reload_timer.getPauseTime();
+    if((time_elapsed-timeSinceLastShoot)>reload_time){
+        struct PlayerBulletDimentions dimension;
+        auto xVal = position_.getX_pos()-dimension.speed;
+        auto yVal = position_.getY_pos()-dimension.height/2.0f;
+
+        bullets.push_back(std::make_shared<PlayerBullet>(Position{xVal,yVal},grid_));
+        timeSinceLastShoot = time_elapsed;
+        reload_timer.resume();
+    }
     return bullets;
 }
 

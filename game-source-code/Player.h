@@ -11,14 +11,14 @@ using std::vector;
 #include "Grid.h"
 #include "Dimensions.h"
 #include "PlayerBullet.h"
-
+#include "StopWatch.h"
 
 /** \class Player
 *   \brief This is a Player Class that inherits from the IMovingEntity class. It
 *   contains virtual functions that have been overridden and new ones.
 *
 *   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*
+*   \version
 */
 class Player : public IMovingEntity
 {
@@ -110,7 +110,6 @@ class Player : public IMovingEntity
          */
 		bool isHit();
 
-
     private:
 
 		ObjectType objectType_;
@@ -118,6 +117,9 @@ class Player : public IMovingEntity
         int score_ = 0;
         bool hasBeenHit_;
         const Grid grid_;
+        StopWatch reload_timer;
+        double timeSinceLastShoot;
+        double reload_time;
         Position position_;
         Direction direction_;
 };

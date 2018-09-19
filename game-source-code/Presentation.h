@@ -120,6 +120,10 @@ class Presentation
          */
         bool isWindowOpen() const {return window_.isOpen();};
 
+        /** \brief Updates the sound played when a player shoots a bullet.
+         */
+        void processPlayerShootSound();
+
         /** \brief Default Destructor. Destroys a Presentation object.
          */
         ~Presentation();
@@ -164,10 +168,6 @@ class Presentation
          * \param delta_time is a float that will have the time elapsed from the game loop.
          */
         void updateAnimations(float delta_time);
-
-        /** \brief Updates the sound played when a player shoots a bullet.
-         */
-        void processPlayerShootSound();
 
         /** \brief Returns a sprite with the correct animation for animated moving
          *  objects.
