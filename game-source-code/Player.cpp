@@ -17,7 +17,7 @@ Player::~Player(){
 
 void Player::move()
 {
-    struct PlayerBulletDimentions Dimension;
+    struct PlayerDimension Dimension;
     float maxWidth = grid_.getWidth()-16.0f;
     float minHeight = grid_.getHeight()- grid_.getHeight()*0.2;
     float maxHeight = grid_.getHeight();
