@@ -10,6 +10,7 @@ objectType_{ObjectType::CENTIPEDE},
 position_{position}, grid_{grid}
 {
     prev_Direction_ = Direction::DOWN;
+
 }
 
 bool CentipedeSegment::isEntryMovement(){
@@ -65,11 +66,13 @@ void CentipedeSegment::moveDown()
         if(prev_Direction_==Direction::LEFT){
             setDirection(Direction::RIGHT);
             moveRight();
+            rotationAngle_ = 90.0f;
             prev_Direction_ = Direction::DOWN;
 
          }else{
             setDirection(Direction::LEFT);
             moveLeft();
+            rotationAngle_ = -90.0f;
             prev_Direction_ = Direction::DOWN;
          }
 
@@ -112,6 +115,7 @@ void CentipedeSegment::moveRight()
 
     if(newXPos < maxWidth){
         position_.setX_pos(newXPos);
+
     }else{
         if(prev_Direction_==Direction::UP){
             setDirection(Direction::UP);
@@ -137,10 +141,12 @@ void CentipedeSegment::move()
             break;
 
         case Direction::LEFT:
+            rotationAngle_ = 0.0f;
             moveLeft();
             break;
 
         case Direction::RIGHT:
+            rotationAngle_ = 0.0f;
             moveRight();
             break;
 
@@ -186,7 +192,7 @@ Position CentipedeSegment::getPosition() const
 BoundaryBox CentipedeSegment::getBoundaryBox()
 {
     struct CentipedeSegmentDemensions Dimension;
-    BoundaryBox box{position_,Dimension.width,Dimension.height,rotationAngle_};
+    BoundaryBox box{position_,Dimension.width,Dimension.height,0};
     return box;
 }
 
@@ -214,8 +220,15 @@ Direction CentipedeSegment::getPrevDirection() const
     return prev_Direction_;
 }
 void CentipedeSegment::changeDirection(){
+
+    if(cur_Direction_!=Direction::DOWN)
     setDirection(Direction::DOWN);
 }
+float CentipedeSegment::getRotationAngle() const
+{
+    return rotationAngle_;
+}
+
 CentipedeSegment::~CentipedeSegment()
 {
     //dtor

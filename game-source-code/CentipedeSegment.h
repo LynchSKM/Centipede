@@ -105,6 +105,11 @@ class CentipedeSegment : public IMovingEntity
          */
         void setBodyType(BodyType body_type);
 
+        /** \brief A function that returns the rotation angle of the centipede segment.
+         * \return The rotation angle of type float.
+         */
+        float getRotationAngle() const;
+
     private:
         Direction cur_Direction_;
         Direction prev_Direction_;
@@ -115,6 +120,7 @@ class CentipedeSegment : public IMovingEntity
         float rotationAngle_ = 0.0;
         bool isPosoned_ = false;
         bool alive_ = true;
+        bool isAtCellCentre_;
 
         /** \brief controls the movements of the centipede segment upon entry.
          */

@@ -139,11 +139,13 @@ sf::Sprite Presentation::generateSpriteFromSpriteSheet(shared_ptr<IEntity> objec
                             return (sheet.getObjectType()==entity_type);
                             });
 
-    if(entity_type == ObjectType::CENTIPEDE){
+    if(entity_type == ObjectType::CENTIPEDE)
+    {
         auto centipede_segment = std::dynamic_pointer_cast<CentipedeSegment>(object);
         if(centipede_segment->getBodyType() == CentipedeSegment::BodyType::BODY)
             ++iter_vec;
         rect = iter_vec->getTextureRect(centipede_segment->getDirection());
+        gameObjectsSprite.setRotation(centipede_segment->getRotationAngle());
 
     }else if(entity_type == ObjectType::MUSHROOM){
         auto mushroom = std::dynamic_pointer_cast<Mushroom>(object);
