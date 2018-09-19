@@ -5,10 +5,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest.h>
 
-#include <iostream>
-using std::cout;
-using std::endl;
-
 TEST_CASE("Player placed at the right position"){
 
     Grid testGrid{650,600};
@@ -18,8 +14,6 @@ TEST_CASE("Player placed at the right position"){
     Position playerPosition{325.0f,600.0f-playerDimension.height*0.5f};
 
     CHECK(playerPosition == testPlayer.getPosition());
-
-
 }
 
 TEST_CASE("Player's score can be increased and retrieved"){

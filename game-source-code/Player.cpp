@@ -114,7 +114,7 @@ vector <shared_ptr<IMovingEntity>> Player::shoot()
     reload_timer.pause();
     auto time_elapsed = reload_timer.getPauseTime();
     if((time_elapsed-timeSinceLastShoot)>reload_time){
-        struct PlayerBulletDimentions dimension;
+        struct PlayerBulletDimensions dimension;
         auto xVal = position_.getX_pos()-dimension.speed;
         auto yVal = position_.getY_pos()-dimension.height/2.0f;
 

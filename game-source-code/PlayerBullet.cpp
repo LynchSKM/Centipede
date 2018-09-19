@@ -8,7 +8,7 @@ PlayerBullet::PlayerBullet(Position position, Grid grid):position_{position},gri
 }
 
 void PlayerBullet::move()
-{   struct PlayerBulletDimentions Dimension;
+{   struct PlayerBulletDimensions Dimension;
 
     auto newYPos = position_.getY_pos() - Dimension.speed;
 
@@ -38,7 +38,7 @@ Position PlayerBullet::getPosition() const
 
 BoundaryBox PlayerBullet::getBoundaryBox()
 {
-    struct PlayerBulletDimentions Dimension;
+    struct PlayerBulletDimensions Dimension;
     BoundaryBox box{position_,Dimension.width,Dimension.height,0.0f};
     return box;
 }

@@ -17,7 +17,7 @@ struct CentipedeSegmentDemensions{
 
 };
 
-struct PlayerBulletDimentions{
+struct PlayerBulletDimensions{
 
     const float height = 12.0;
     const float width = 2.0;
