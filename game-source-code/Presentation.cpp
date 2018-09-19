@@ -12,10 +12,11 @@ isSpacePressed_{false}
 
 }
 void Presentation::processPlayerShootSound(){
-    if(isSpacePressed()){
+    //if(isSpacePressed()){
+        gun_shot_.stop();
         gun_shot_.setVolume(10);
         gun_shot_.play();
-    }else{gun_shot_.stop();}
+    //}else{gun_shot_.stop();}
 }
 
 void Presentation::checkInput(const sf::Keyboard::Key key, const bool isPressed)
@@ -26,7 +27,7 @@ void Presentation::checkInput(const sf::Keyboard::Key key, const bool isPressed)
     else if(key == sf::Keyboard::Down) isDownPressed_ = isPressed;
     else if(key == sf::Keyboard::Space)isSpacePressed_ = isPressed;
 
-    processPlayerShootSound();
+    //processPlayerShootSound();
 }
 
 void Presentation::processInputEvents()
@@ -193,7 +194,6 @@ void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
 
     for(const auto& object : game_objects){
         sf::Sprite gameObjectsSprite = generateSprite(object);
-
         // Set position:
         gameObjectsSprite.setPosition(object->getPosition().getX_pos(),
                                       object->getPosition().getY_pos());

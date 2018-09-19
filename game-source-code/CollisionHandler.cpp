@@ -13,30 +13,30 @@ int CollisionHandler::getPointsObtained()
     return points;
 }
 
-int CollisionHandler::countObjects(vector<IEntity_ptr>::iterator game_objects_begin,
-                                   vector<IEntity_ptr>::iterator game_objects_end,
+int CollisionHandler::countObjects(vector<IMovingEntity_ptr>::iterator game_objects_begin,
+                                   vector<IMovingEntity_ptr>::iterator game_objects_end,
                                    ObjectType object_type)
 {
     return (count_if(game_objects_begin,
                      game_objects_end,
-                     [&, object_type](const IEntity_ptr& object)
+                     [&, object_type](const IMovingEntity_ptr& object)
                      {
                         return(object->getObjectType()==object_type);
                      }));
 }
 
-vector<IEntity_ptr> CollisionHandler::copyObjects(vector<IEntity_ptr>::iterator game_objects_begin,
-                                   vector<IEntity_ptr>::iterator game_objects_end,
+vector<IMovingEntity_ptr> CollisionHandler::copyObjects(vector<IMovingEntity_ptr>::iterator game_objects_begin,
+                                   vector<IMovingEntity_ptr>::iterator game_objects_end,
                                    ObjectType object_type)
 {
     auto number_of_objects = countObjects(game_objects_begin, game_objects_end,
                                           object_type);
 
-    vector<IEntity_ptr> copied_elements(number_of_objects);
+    vector<IMovingEntity_ptr> copied_elements(number_of_objects);
     copy_if(game_objects_begin,
             game_objects_end,
             copied_elements.begin(),
-            [&, object_type](const IEntity_ptr& object)
+            [&, object_type](const IMovingEntity_ptr& object)
             {
                 return(object->getObjectType()==object_type);
             });
@@ -44,17 +44,18 @@ vector<IEntity_ptr> CollisionHandler::copyObjects(vector<IEntity_ptr>::iterator 
 }
 
 
-void CollisionHandler::checkCollisions(vector<IEntity_ptr>& game_objects)
+void CollisionHandler::checkCollisions(vector<IEntity_ptr>& game_objects,
+                                       vector<IMovingEntity_ptr>& moving_game_objects)
 {
     // Generate Spatial Hash:
     spatial_hash_.generateSpatialHashTable(game_objects);
 
-    auto player_bullets = copyObjects(game_objects.begin(), game_objects.end(),
+    auto player_bullets = copyObjects(moving_game_objects.begin(), moving_game_objects.end(),
                 ObjectType::PLAYER_LASER_BULLET);
 
-    auto centipede = copyObjects(game_objects.begin(), game_objects.end(),
+    auto centipede = copyObjects(moving_game_objects.begin(), moving_game_objects.end(),
                 ObjectType::CENTIPEDE);
-    auto player = copyObjects(game_objects.begin(), game_objects.end(),
+    auto player = copyObjects(moving_game_objects.begin(), moving_game_objects.end(),
                 ObjectType::PLAYER);
 
     playerBulletCollidesWithEnemies(player_bullets);
@@ -63,7 +64,7 @@ void CollisionHandler::checkCollisions(vector<IEntity_ptr>& game_objects)
     centipedeCollidesWithMushroom(centipede);
 }
 
-void CollisionHandler::playerCollidesWithObjects(vector<IEntity_ptr>& player)
+void CollisionHandler::playerCollidesWithObjects(vector<IMovingEntity_ptr>& player)
 {
     for(auto& thePlayer : player)
     {
@@ -82,34 +83,34 @@ void CollisionHandler::playerCollidesWithObjects(vector<IEntity_ptr>& player)
                                                                                       position_object);
 
                     // Resolve collision if penetration is greater than zero in x or y:
-                    auto moving_player  = std::dynamic_pointer_cast<IMovingEntity>(thePlayer);
+                    //auto moving_player  = std::dynamic_pointer_cast<IMovingEntity>(thePlayer);
                     Direction direction;
                     if(std::abs(penetration_dist.getX_pos())>=(0.1f*dimensions_player.width))
                     {
                         // Resolve in y direction:
-                        if(moving_player->getDirection()==Direction::UP)
+                        if(thePlayer->getDirection()==Direction::UP)
                             direction = Direction::DOWN;
-                        else if (moving_player->getDirection()==Direction::DOWN)
+                        else if (thePlayer->getDirection()==Direction::DOWN)
                             direction = Direction::UP;
                     }
                     else
                     {
                         // Resolve in y direction:
-                        if(moving_player->getDirection()==Direction::LEFT)
+                        if(thePlayer->getDirection()==Direction::LEFT)
                             direction = Direction::RIGHT;
-                        else if (moving_player->getDirection()==Direction::RIGHT)
+                        else if (thePlayer->getDirection()==Direction::RIGHT)
                             direction = Direction::LEFT;
                     }
 
                     // Move Player by at least one point
-                    moving_player->setDirection(direction);
+                    thePlayer->setDirection(direction);
                     while(true){
                         if(!sat_algorithm_.checkOverlap(thePlayer->getBoundaryBox(), object->getBoundaryBox()))
                            break;
-                        moving_player->move();
+                        thePlayer->move();
                     }
 
-                    moving_player->setDirection(Direction::NONE);
+                    thePlayer->setDirection(Direction::NONE);
                 }
                 else if(object->getObjectType()!=ObjectType::PLAYER_LASER_BULLET)
                 { // Anything else will kill player immediately besides it's bullets
@@ -123,7 +124,7 @@ void CollisionHandler::playerCollidesWithObjects(vector<IEntity_ptr>& player)
     }//for
 }
 
-void CollisionHandler::playerBulletCollidesWithEnemies(vector<IEntity_ptr>& player_bullets)
+void CollisionHandler::playerBulletCollidesWithEnemies(vector<IMovingEntity_ptr>& player_bullets)
 {
     for(auto& bullet : player_bullets){
         auto near_by_objects = spatial_hash_.retrieveNearbyObjects(bullet);
@@ -156,8 +157,8 @@ void CollisionHandler::playerBulletCollidesWithEnemies(vector<IEntity_ptr>& play
     }//for
 }
 
-void CollisionHandler::playerBulletCollidesWithCentipede(vector<IEntity_ptr>& player_bullets,
-                                                         vector<IEntity_ptr>& centipede)
+void CollisionHandler::playerBulletCollidesWithCentipede(vector<IMovingEntity_ptr>& player_bullets,
+                                                         vector<IMovingEntity_ptr>& centipede)
 {
     for(auto& bullet : player_bullets){
         auto near_by_objects = spatial_hash_.retrieveNearbyObjects(bullet);
@@ -175,7 +176,7 @@ void CollisionHandler::playerBulletCollidesWithCentipede(vector<IEntity_ptr>& pl
                     //Reorder centipede:
                     auto iter_segment = find(centipede.begin(), centipede.end(), object);
                     ++iter_segment;
-                    //auto centipede_new_head_ptr = std::dynamic_pointer_cast<IMovingEntity>(*iter_segment);
+                    //auto centipede_new_head_ptr = (*iter_segment);
                     if(iter_segment!=centipede.end()){
                         auto centipede_seg_ptr = std::dynamic_pointer_cast<CentipedeSegment>(*iter_segment);
                         centipede_seg_ptr->setBodyType(CentipedeSegment::BodyType::HEAD);
@@ -197,7 +198,7 @@ void CollisionHandler::playerBulletCollidesWithCentipede(vector<IEntity_ptr>& pl
     }//for
 }
 
-void CollisionHandler::centipedeCollidesWithMushroom(vector<IEntity_ptr>& centipede)
+void CollisionHandler::centipedeCollidesWithMushroom(vector<IMovingEntity_ptr>& centipede)
 {
     for(auto& segment : centipede)
     {
@@ -211,12 +212,12 @@ void CollisionHandler::centipedeCollidesWithMushroom(vector<IEntity_ptr>& centip
                 {
                     auto centipede_seg_ptr = std::dynamic_pointer_cast<CentipedeSegment>(segment);
                     centipede_seg_ptr->changeDirection();
-                }
+                }//if
+
             }//if
 
         }//for
     }//for
-
 }
 
 CollisionHandler::~CollisionHandler()

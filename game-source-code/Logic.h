@@ -49,6 +49,7 @@ class Logic
         CollisionHandler collisionHandler_{grid_};
         shared_ptr<Player> player_;
         vector<shared_ptr<IEntity>> game_objects_;
+        vector<shared_ptr<IMovingEntity>> moving_game_objects_;
         int high_score_;
         ScreenState screen_state_;
         bool debounceSpaceKey_;

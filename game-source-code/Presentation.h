@@ -115,6 +115,9 @@ class Presentation
          */
         bool isSpacePressed(){return isSpacePressed_;};
 
+        /** \brief returns a bool indicating whether the render window is open.
+         *  \return a bool window open status.
+         */
         bool isWindowOpen() const {return window_.isOpen();};
 
         /** \brief Default Destructor. Destroys a Presentation object.

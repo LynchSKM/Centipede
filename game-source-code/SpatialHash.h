@@ -54,7 +54,7 @@ class SpatialHash
          * \param object is a shared pointer of type IEntity.
          * \return vector<shared_ptr<IEntity>>
          */
-        vector<IEntity_ptr> retrieveNearbyObjects(IEntity_ptr& object);
+        vector<IEntity_ptr> retrieveNearbyObjects(IEntity_ptr object);
 
         /** \brief Clears the vectors in the game_object_table_.
          * \return void

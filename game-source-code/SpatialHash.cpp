@@ -37,7 +37,7 @@ void SpatialHash::generateSpatialHashTable(vector<IEntity_ptr>& game_objects)
     return;
 }
 
-vector<IEntity_ptr> SpatialHash::retrieveNearbyObjects(IEntity_ptr& object)
+vector<IEntity_ptr> SpatialHash::retrieveNearbyObjects(IEntity_ptr object)
 {
     vector<unsigned int> uniqueCells(5);
     vector<IEntity_ptr> nearbyObjects;

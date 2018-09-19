@@ -64,10 +64,12 @@ void CentipedeSegment::moveDown()
         position_.setY_pos(newYPos);
         if(prev_Direction_==Direction::LEFT){
             setDirection(Direction::RIGHT);
+            moveRight();
             prev_Direction_ = Direction::DOWN;
 
          }else{
             setDirection(Direction::LEFT);
+            moveLeft();
             prev_Direction_ = Direction::DOWN;
          }
 
