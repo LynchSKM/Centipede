@@ -14,7 +14,7 @@ TEST_CASE("Collision between PlayerBullet and Mushroom is detected")
     struct MushroomDimensions dimension_mushroom;
     struct PlayerBulletDimentions dimension_bullet;
     vector<IEntity_ptr> game_objects;
-
+    vector<IMovingEntity_ptr> moving_game_objects;
     // Create mushrooms:
     auto mushroom1 = make_shared<Mushroom>(Position{100, 100});
     game_objects.push_back(mushroom1);
@@ -23,14 +23,16 @@ TEST_CASE("Collision between PlayerBullet and Mushroom is detected")
 
     auto bullet = make_shared<PlayerBullet>(Position{100, 114}, grid);
     game_objects.push_back(bullet);
+    moving_game_objects.push_back(bullet);
 
     auto moves_to_be_made = bullet->getPosition().getY_pos();
     moves_to_be_made -= (mushroom1->getPosition().getY_pos()+(dimension_mushroom.width/2)-1);
     moves_to_be_made /= dimension_bullet.speed;
 
-    for(auto moves_made = 0; moves_made<=moves_to_be_made; moves_made++){
+    for(auto moves_made = 0; moves_made<=moves_to_be_made; moves_made++)
+    {
         bullet->move();
-        collision_handler.checkCollisions(game_objects);
+        collision_handler.checkCollisions(game_objects, moving_game_objects);
     }
 
     CHECK(mushroom1->getRemainingLives()==3);
@@ -45,27 +47,36 @@ TEST_CASE("Collision between PlayerBullet and Centipede Head is detected and nex
     CollisionHandler collision_handler{grid};
     struct CentipedeSegmentDemensions dimension_centipede;
     vector<IEntity_ptr> game_objects;
+    vector<IMovingEntity_ptr> moving_game_objects;
 
-    game_objects.push_back(
-        make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
-                                      Position{100,100}, Direction::LEFT));
+    auto centipede_seg_ptr = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
+                                      Position{100,100}, Direction::LEFT);
+
+    game_objects.push_back(centipede_seg_ptr);
+    moving_game_objects.push_back(centipede_seg_ptr);
+
     auto counter = 0.0f;
-    while(game_objects.size() != 4){
+    while(game_objects.size() != 4)
+    {
         counter +=(dimension_centipede.width+1);
-        game_objects.push_back(
-        make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
-                                      Position{100+counter,100}, Direction::LEFT));
+        auto segment = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
+                                      Position{100+counter,100}, Direction::LEFT);
+
+        game_objects.push_back(segment);
+        moving_game_objects.push_back(segment);
     }//while
 
     // Create PlayerBullet at position near head to cause overlap:
-    auto bullet = make_shared<PlayerBullet>(Position{100,114}, grid);
+    auto y_pos  = centipede_seg_ptr->getPosition().getY_pos()+dimension_centipede.height-1;
+    auto bullet = make_shared<PlayerBullet>(Position{100,y_pos}, grid);
     game_objects.push_back(bullet);
+    moving_game_objects.push_back(bullet);
 
-    collision_handler.checkCollisions(game_objects);
+    collision_handler.checkCollisions(game_objects, moving_game_objects);
     CHECK_FALSE(game_objects.at(0)->isAlive());
     CHECK_FALSE(bullet->isAlive());
 
-    auto centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(game_objects.at(1));
+    centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(game_objects.at(1));
     CHECK(centipede_seg_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD);
 }
 
@@ -75,30 +86,39 @@ TEST_CASE("Collision between PlayerBullet and Centipede Body is detected and nex
     CollisionHandler collision_handler{grid};
     struct CentipedeSegmentDemensions dimension_centipede;
     vector<IEntity_ptr> game_objects;
+    vector<IMovingEntity_ptr> moving_game_objects;
 
-    game_objects.push_back(
-        make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
-                                      Position{100,100}, Direction::LEFT));
+    auto centipede_seg_ptr = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
+                                      Position{100,100}, Direction::LEFT);
+
+    game_objects.push_back(centipede_seg_ptr);
+    moving_game_objects.push_back(centipede_seg_ptr);
+
     auto counter = 0.0f;
-    while(game_objects.size() != 4){
+    while(game_objects.size() != 4)
+    {
         counter +=(dimension_centipede.width+1);
-        game_objects.push_back(
-        make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
-                                      Position{100+counter,100}, Direction::LEFT));
+        auto segment = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
+                                      Position{100+counter,100}, Direction::LEFT);
 
+        game_objects.push_back(segment);
+        moving_game_objects.push_back(segment);
     }//while
 
     // Create PlayerBullet at position near head to cause overlap:
-    auto bullet = make_shared<PlayerBullet>(Position{134,114}, grid);
+    auto x_pos  = centipede_seg_ptr->getPosition().getX_pos()+2.0f*(dimension_centipede.width+1);
+    auto y_pos  = centipede_seg_ptr->getPosition().getY_pos()+dimension_centipede.height-1;
+    auto bullet = make_shared<PlayerBullet>(Position{x_pos, y_pos}, grid);
     game_objects.push_back(bullet);
+    moving_game_objects.push_back(bullet);
 
-    collision_handler.checkCollisions(game_objects);
+    collision_handler.checkCollisions(game_objects, moving_game_objects);
 
     CHECK_FALSE(game_objects.at(2)->isAlive());
     CHECK_FALSE(bullet->isAlive());
     CHECK(collision_handler.getPointsObtained()==100);
 
-    auto centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(game_objects.at(3));
+    centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(game_objects.at(3));
     CHECK(centipede_seg_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD);
 }
 
@@ -108,39 +128,52 @@ TEST_CASE("Collision between PlayerBullet and Centipede Body is detected while m
     CollisionHandler collision_handler{grid};
     struct CentipedeSegmentDemensions dimension_centipede;
     vector<IEntity_ptr> game_objects;
+    vector<IMovingEntity_ptr> moving_game_objects;
 
-    game_objects.push_back(
-    make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
-                                  Position{100,100}, Direction::LEFT));
+    auto centipede_seg_ptr = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
+                                      Position{100,100}, Direction::LEFT);
+
+    game_objects.push_back(centipede_seg_ptr);
+    moving_game_objects.push_back(centipede_seg_ptr);
+
     auto counter = 0.0f;
-    while(game_objects.size() != 5){
+    while(game_objects.size() != 5)
+    {
         counter +=(dimension_centipede.width+1);
-        game_objects.push_back(
-        make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
-                                      Position{100+counter,100}, Direction::LEFT));
+        auto segment = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
+                                      Position{100+counter,100}, Direction::LEFT);
 
+        game_objects.push_back(segment);
+        moving_game_objects.push_back(segment);
     }//while
 
     // Create PlayerBullet at position near head to cause overlap:
-    auto bullet = make_shared<PlayerBullet>(Position{168,114}, grid);
+    auto x_pos  = centipede_seg_ptr->getPosition().getX_pos()+4.0f*(dimension_centipede.width+1);
+    auto y_pos  = centipede_seg_ptr->getPosition().getY_pos()+dimension_centipede.height-1;
+    auto bullet = make_shared<PlayerBullet>(Position{x_pos, y_pos}, grid);
     game_objects.push_back(bullet);
+    moving_game_objects.push_back(bullet);
 
     // HEAD 2
-    game_objects.push_back(
-    make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
-                                  Position{100,300}, Direction::RIGHT));
+    centipede_seg_ptr = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
+                                  Position{100,300}, Direction::RIGHT);
+    game_objects.push_back(centipede_seg_ptr);
+    moving_game_objects.push_back(centipede_seg_ptr);
 
-    game_objects.push_back(
-    make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
-                                  Position{83,300}, Direction::RIGHT));
+    centipede_seg_ptr = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
+                                  Position{86,300}, Direction::RIGHT);
 
-    collision_handler.checkCollisions(game_objects);
+    game_objects.push_back(centipede_seg_ptr);
+    moving_game_objects.push_back(centipede_seg_ptr);
+
+
+    collision_handler.checkCollisions(game_objects, moving_game_objects);
     CHECK_FALSE(game_objects.at(4)->isAlive());
     CHECK_FALSE(bullet->isAlive());
     CHECK(collision_handler.getPointsObtained()==100);
 
     // Check that direction of last head is not changed.
-    auto centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(game_objects.at(game_objects.size()-2));
+    centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(game_objects.at(game_objects.size()-2));
     CHECK(centipede_seg_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD);
     CHECK(centipede_seg_ptr->getDirection()== Direction::RIGHT);
 
@@ -156,17 +189,23 @@ TEST_CASE("Collision between Centipede and Mushroom is detected")
     CollisionHandler collision_handler{grid};
     struct CentipedeSegmentDemensions dimension_centipede;
     vector<IEntity_ptr> game_objects;
+    vector<IMovingEntity_ptr> moving_game_objects;
 
-    game_objects.push_back(
-    make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
-                                  Position{100,100}, Direction::LEFT));
+    auto centipede_seg_ptr = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
+                                      Position{100,100}, Direction::LEFT);
+
+    game_objects.push_back(centipede_seg_ptr);
+    moving_game_objects.push_back(centipede_seg_ptr);
+
     auto counter = 0.0f;
-    while(game_objects.size() != 5){
+    while(game_objects.size() != 5)
+    {
         counter +=(dimension_centipede.width+1);
-        game_objects.push_back(
-        make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
-                                      Position{100+counter,100}, Direction::LEFT));
+        auto segment = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
+                                      Position{100+counter,100}, Direction::LEFT);
 
+        game_objects.push_back(segment);
+        moving_game_objects.push_back(segment);
     }//while
 
     // Create Mushroom at position in direction of head to check collisions:
@@ -180,30 +219,18 @@ TEST_CASE("Collision between Centipede and Mushroom is detected")
 
     for(auto moves_made = 0; moves_made<=moves_to_be_made; moves_made++)
     {
-        collision_handler.checkCollisions(game_objects);
+        collision_handler.checkCollisions(game_objects, moving_game_objects);
         // move
-        for(auto& object : game_objects)
-        {
-            if(object->getObjectType()!=ObjectType::MUSHROOM)
-            {
-                auto moving_object = dynamic_pointer_cast<IMovingEntity>(object);
-                moving_object->move();
-            }//if
-        }//for
-
+        for(auto& object : moving_game_objects)
+            object->move();
     }//for
 
     CHECK(mushroom->isAlive());
 
     // Check if directions have changed:
-    for(auto& object : game_objects)
-    {
-        if(object->getObjectType()!=ObjectType::MUSHROOM)
-        {
-            auto moving_object = dynamic_pointer_cast<IMovingEntity>(object);
-            CHECK(moving_object->getDirection()==Direction::RIGHT);
-        }//if
-    }//for
+    for(auto& object : moving_game_objects)
+        CHECK(object->getDirection()==Direction::RIGHT);
+
 }
 
 // ================ PLAYER COLLISIONS ================
@@ -215,10 +242,12 @@ TEST_CASE("Collision between Player and Mushroom is detected successfully and co
     struct MushroomDimensions dimensions_mushroom;
     struct PlayerDimension dimensions_player;
     vector<IEntity_ptr> game_objects;
+    vector<IMovingEntity_ptr> moving_game_objects;
 
     auto player = make_shared<Player>(grid);
     player->setDirection(Direction::RIGHT);
     game_objects.push_back(player);
+    moving_game_objects.push_back(player);
 
     auto player_pos = player->getPosition();
     auto x = player_pos.getX_pos()+(dimensions_mushroom.width)-1.0f;
@@ -228,11 +257,12 @@ TEST_CASE("Collision between Player and Mushroom is detected successfully and co
 
     CHECK(sat_algorithm.checkOverlap(player->getBoundaryBox(), mushroom->getBoundaryBox()));
     // Resolve collision:
-    collision_handler.checkCollisions(game_objects);
+    collision_handler.checkCollisions(game_objects, moving_game_objects);
 
     CHECK_FALSE(sat_algorithm.checkOverlap(player->getBoundaryBox(), mushroom->getBoundaryBox()));
     CHECK(player->getDirection()==Direction::NONE);
 }
+
 
 TEST_CASE("Collision between Player and Centipede is detected successfully")
 {
@@ -242,11 +272,13 @@ TEST_CASE("Collision between Player and Centipede is detected successfully")
     struct CentipedeSegmentDemensions dimensions_centipede_seg;
     struct PlayerDimension dimensions_player;
     vector<IEntity_ptr> game_objects;
+    vector<IMovingEntity_ptr> moving_game_objects;
 
     auto player = make_shared<Player>(grid);
     player->setDirection(Direction::RIGHT);
     auto player_lives = player->getRemainingLives();
     game_objects.push_back(player);
+    moving_game_objects.push_back(player);
 
     auto player_pos = player->getPosition();
     auto x = player_pos.getX_pos()+(dimensions_centipede_seg.width)-1.0f;
@@ -255,11 +287,12 @@ TEST_CASE("Collision between Player and Centipede is detected successfully")
     auto centipede_head = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
                                       Position{x, y}, Direction::LEFT);
     game_objects.push_back(centipede_head);
+    moving_game_objects.push_back(centipede_head);
 
     CHECK(sat_algorithm.checkOverlap(player->getBoundaryBox(), centipede_head->getBoundaryBox()));
 
     //Check:
-    collision_handler.checkCollisions(game_objects);
+    collision_handler.checkCollisions(game_objects, moving_game_objects);
     player_lives-=1;
 
     CHECK(player->isHit());
