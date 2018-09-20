@@ -58,10 +58,10 @@ void CollisionHandler::checkCollisions(vector<IEntity_ptr>& game_objects,
     auto player = copyObjects(moving_game_objects.begin(), moving_game_objects.end(),
                 ObjectType::PLAYER);
 
+    centipedeCollidesWithMushroomOrCentipede(centipede);
     playerBulletCollidesWithEnemies(player_bullets);
     playerBulletCollidesWithCentipede(player_bullets, centipede);
     playerCollidesWithObjects(player);
-    centipedeCollidesWithMushroomOrCentipede(centipede);
 }
 
 void CollisionHandler::playerCollidesWithObjects(vector<IMovingEntity_ptr>& player)
@@ -85,22 +85,22 @@ void CollisionHandler::playerCollidesWithObjects(vector<IMovingEntity_ptr>& play
                     // Resolve collision if penetration is greater than zero in x or y:
                     //auto moving_player  = std::dynamic_pointer_cast<IMovingEntity>(thePlayer);
                     Direction direction;
-                    if(std::abs(penetration_dist.getX_pos())>=(0.1f*dimensions_player.width))
-                    {
+                    //if(std::abs(penetration_dist.getX_pos())>=(0.1f*dimensions_player.width))
+                    //{
                         // Resolve in y direction:
                         if(thePlayer->getDirection()==Direction::UP)
                             direction = Direction::DOWN;
                         else if (thePlayer->getDirection()==Direction::DOWN)
                             direction = Direction::UP;
-                    }
-                    else
-                    {
+                    //}
+                    //else
+                    //{
                         // Resolve in y direction:
-                        if(thePlayer->getDirection()==Direction::LEFT)
+                        else if(thePlayer->getDirection()==Direction::LEFT)
                             direction = Direction::RIGHT;
                         else if (thePlayer->getDirection()==Direction::RIGHT)
                             direction = Direction::LEFT;
-                    }
+                    //}
 
                     // Move Player by at least one point
                     thePlayer->setDirection(direction);
@@ -202,9 +202,9 @@ void CollisionHandler::centipedeCollidesWithMushroomOrCentipede(vector<IMovingEn
 {
     for(auto& segment : centipede)
     {
-        auto centipede_ptr = std::dynamic_pointer_cast<CentipedeSegment>(segment);
-        if(centipede_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD
-           && segment->isAlive() && centipede_ptr->getDirection()!=Direction::DOWN)
+        auto centipede_head_ptr = std::dynamic_pointer_cast<CentipedeSegment>(segment);
+        if(centipede_head_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD
+           && segment->isAlive())
         {
             auto near_by_objects = spatial_hash_.retrieveNearbyObjects(segment);
             for(auto& object : near_by_objects)
@@ -219,8 +219,10 @@ void CollisionHandler::centipedeCollidesWithMushroomOrCentipede(vector<IMovingEn
 
                         if(object->getObjectType() == ObjectType::CENTIPEDE)
                         {
-                            auto centipede_head_ptr = std::dynamic_pointer_cast<CentipedeSegment>(object);
-                            if(centipede_head_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD)
+                            auto centipede_ptr = std::dynamic_pointer_cast<CentipedeSegment>(object);
+                            if(centipede_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD
+                               && centipede_head_ptr->getDirection()!=Direction::DOWN
+                               && centipede_head_ptr->getDirection()!=Direction::UP)
                                 number_of_heads++;
                         }//if
 
@@ -231,14 +233,14 @@ void CollisionHandler::centipedeCollidesWithMushroomOrCentipede(vector<IMovingEn
                             {
                                 auto centipede_seg_ptr = std::dynamic_pointer_cast<CentipedeSegment>(*iter_segment);
                                 if(centipede_seg_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD) break;
-                                centipede_seg_ptr->collisionAt(centipede_ptr->getPosition());
+                                centipede_seg_ptr->collisionAt(centipede_head_ptr->getPosition());
                             }//for
-                            centipede_ptr->changeDirection();
+                            centipede_head_ptr->changeDirection();
 
                             if(number_of_heads==2)
                             {
                                 iter_segment  = find(centipede.begin(), centipede.end(), object);
-                                centipede_ptr = std::dynamic_pointer_cast<CentipedeSegment>(object);
+                                centipede_head_ptr = std::dynamic_pointer_cast<CentipedeSegment>(object);
                             }//if
                         }
                     }//if
