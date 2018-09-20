@@ -63,10 +63,14 @@ void CentipedeSegment::moveUp()
     if(newYPos > maxHeight){
         position_.setY_pos(newYPos);
         if(prev_Direction_==Direction::LEFT){
-                setDirection(Direction::RIGHT);
-                prev_Direction_ = Direction::UP;
+            setDirection(Direction::RIGHT);
+            moveRight();
+            rotationAngle_ = 90.0f;
+            prev_Direction_ = Direction::UP;
         }else{
             setDirection(Direction::LEFT);
+            moveLeft();
+            rotationAngle_ = -90.0f;
             prev_Direction_ = Direction::UP;
         }//if
 
@@ -241,10 +245,11 @@ Direction CentipedeSegment::getPrevDirection() const
 {
     return prev_Direction_;
 }
-void CentipedeSegment::changeDirection(){
+void CentipedeSegment::changeDirection()
+{
+    if(prev_Direction_==Direction::DOWN)setDirection(Direction::DOWN);
+    else if(prev_Direction_==Direction::UP)setDirection(Direction::UP);
 
-    if(cur_Direction_!=Direction::DOWN)
-    setDirection(Direction::DOWN);
 }
 float CentipedeSegment::getRotationAngle() const
 {
