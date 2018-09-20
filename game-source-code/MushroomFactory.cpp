@@ -1,6 +1,6 @@
 #include "MushroomFactory.h"
 
-MushroomFactory::MushroomFactory(Grid& grid):grid_{grid},maxCol_{31}, maxRow_{37},
+MushroomFactory::MushroomFactory(const Grid& grid):grid_{grid},maxCol_{31}, maxRow_{37},
                 maxMushrooms_{60}
 {
     //ctor

@@ -34,7 +34,7 @@ class CentipedeSegment : public IMovingEntity
          * \param is a position of type Position.
          * \param is grid of type grid.
          */
-        CentipedeSegment(Grid grid, BodyType bodytype, Position position, Direction cur_Direction);
+        CentipedeSegment(const Grid& grid, BodyType bodytype, Position position, Direction cur_Direction);
 
         /** Destroys the CentipedeSegment object.
         */

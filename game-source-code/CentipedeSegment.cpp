@@ -3,7 +3,7 @@
 
 using std::round;
 
-CentipedeSegment::CentipedeSegment(Grid grid, BodyType bodytype, Position position, Direction cur_Direction):
+CentipedeSegment::CentipedeSegment(const Grid& grid, BodyType bodytype, Position position, Direction cur_Direction):
 cur_Direction_{cur_Direction},
 bodytype_{bodytype},
 objectType_{ObjectType::CENTIPEDE},

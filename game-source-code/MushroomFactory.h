@@ -26,7 +26,7 @@ class MushroomFactory
         /** \brief a parameterized constructor.
          * \param grid of type Grid.
          */
-        MushroomFactory(Grid& grid);
+        MushroomFactory(const Grid& grid);
 
         /** \brief destroys the Mushroom Factory object.
          */

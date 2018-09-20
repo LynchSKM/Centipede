@@ -12,7 +12,7 @@ struct CentipedeSegmentDemensions{
 
     const float height = 14.0;
     const float width = 14.0;
-    const float speed = 0.2;
+    const float speed = 0.3;
     const float speedY = 16.0;
 
 };

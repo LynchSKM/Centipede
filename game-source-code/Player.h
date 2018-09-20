@@ -27,7 +27,7 @@ class Player : public IMovingEntity
         /** \brief Creates a player object parameterized constructor.
          * \param is grid of type grid.
          */
-        Player(Grid grid);
+        Player(const Grid& grid);
 
         /**< \brief Destroys the player object */
         virtual ~Player();
