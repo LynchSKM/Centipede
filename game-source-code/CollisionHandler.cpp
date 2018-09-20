@@ -203,7 +203,8 @@ void CollisionHandler::centipedeCollidesWithMushroomOrCentipede(vector<IMovingEn
     for(auto& segment : centipede)
     {
         auto centipede_ptr = std::dynamic_pointer_cast<CentipedeSegment>(segment);
-        if(centipede_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD && segment->isAlive())
+        if(centipede_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD
+           && segment->isAlive() && centipede_ptr->getDirection()!=Direction::DOWN)
         {
             auto near_by_objects = spatial_hash_.retrieveNearbyObjects(segment);
             for(auto& object : near_by_objects)

@@ -23,7 +23,7 @@ class EnemyFactory
          * \param grid of type Grid.
          * \param
          */
-        EnemyFactory(Grid grid);
+        EnemyFactory(const Grid& grid);
 
         /** \brief destroys the enemy factory object.
          */
@@ -43,6 +43,10 @@ class EnemyFactory
          * \return a vector of shared ptr to mushrooms.
          */
         vector <shared_ptr<Mushroom>> generateMushrooms();
+
+        /** \brief Resets states of generated centipedes to false.
+         */
+         void reset();
 
     private:
         Grid grid_;

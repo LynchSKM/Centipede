@@ -59,6 +59,7 @@ void Logic::run()
             getInputCommands();
             if(presentation_.isWindowOpen()==false) return;
             generateNormalCentipede();
+            generateCentipedeHeads();
             updateGameObjects();
             checkCollisions();
             updateScores();
@@ -132,8 +133,13 @@ void Logic::generateNormalCentipede()
     }
 }
 
-void Logic::generateCentipedeHeads(){
-
+void Logic::generateCentipedeHeads()
+{
+    for(auto& segment: enemyFactory_.generateCentipedeHeads())
+    {
+        game_objects_.push_back(segment);
+        moving_game_objects_.push_back(segment);
+    }//for
 }
 void Logic::generateMushrooms()
 {
