@@ -13,7 +13,8 @@ position_{position}, grid_{grid}
 
 }
 
-bool CentipedeSegment::isEntryMovement(){
+bool CentipedeSegment::isEntryMovement()
+{
 
     struct CentipedeSegmentDemensions dimensions;
     auto speed = dimensions.speed;
@@ -35,6 +36,25 @@ bool CentipedeSegment::isEntryMovement(){
 
     return false;
 }
+
+void CentipedeSegment::collisionAt(Position position)
+{   if(bodytype_ == BodyType::HEAD) return;
+    head_collision_positions_.push_back(position);
+}
+
+void CentipedeSegment::checkHeadCollisions()
+{
+    if(head_collision_positions_.empty()) return;
+    auto iter_vec = head_collision_positions_.begin();
+    if(position_ == (*iter_vec))
+    {
+        changeDirection();
+        head_collision_positions_.erase(iter_vec);
+    }//if
+    return;
+}
+
+
 void CentipedeSegment::moveUp()
 {
     struct CentipedeSegmentDemensions dimensions;
@@ -131,6 +151,7 @@ void CentipedeSegment::moveRight()
 void CentipedeSegment::move()
 {
     if(isEntryMovement())return;
+    if(bodytype_==BodyType::BODY) checkHeadCollisions();
     //Normal movement
     struct CentipedeSegmentDemensions dimensions;
     if(!isPosoned_){

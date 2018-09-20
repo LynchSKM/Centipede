@@ -5,11 +5,14 @@
 #include "Dimensions.h"
 #include "Grid.h"
 
+#include <vector>
+using std::vector;
+
 /** \class CentipedeSegment
 *   \brief This is a Class that inherits from the IMovingEntity class. It
 *   contains pure virtual functions that will be overridden by derived.
 *   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*
+*   \version
 */
 
 class CentipedeSegment : public IMovingEntity
@@ -110,6 +113,11 @@ class CentipedeSegment : public IMovingEntity
          */
         float getRotationAngle() const;
 
+        /** \brief A function that saves positions where the head of centipede
+         * train had a collision.
+         */
+        void collisionAt(Position position);
+
     private:
         Direction cur_Direction_;
         Direction prev_Direction_;
@@ -121,6 +129,7 @@ class CentipedeSegment : public IMovingEntity
         bool isPosoned_ = false;
         bool alive_ = true;
         bool isAtCellCentre_;
+        vector<Position> head_collision_positions_;
 
         /** \brief controls the movements of the centipede segment upon entry.
          */
@@ -141,6 +150,12 @@ class CentipedeSegment : public IMovingEntity
         /** \brief A function that increments x axis of the object's position.
          */
         void moveRight();
+
+        /** \brief Determines whether the CentipedeSegment has reached a position
+         * where the head collided. If it has the changeDirection() function is called.
+         */
+        void checkHeadCollisions();
+
 };
 
 #endif // CENTIPEDESEGMENT_H

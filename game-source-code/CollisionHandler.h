@@ -97,11 +97,11 @@ class CollisionHandler
         void playerBulletCollidesWithCentipede(vector<IMovingEntity_ptr>& player_bullets,
                                                vector<IMovingEntity_ptr>& centipede);
 
-        /** \brief Checks collisions between a centipede and a mushroom.
+        /** \brief Checks collisions between a centipede and a mushroom or centipede and centipede.
          * If a collision occurs, the Centipede segment goes down and changes direction.
          * \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
          */
-        void centipedeCollidesWithMushroom(vector<IMovingEntity_ptr>& centipede);
+        void centipedeCollidesWithMushroomOrCentipede(vector<IMovingEntity_ptr>& centipede);
 
         /** \brief Checks collisions between a player and other game objects.
          * If a collision occurs, with a Mushroom the player's direction is set to NONE.

@@ -12,7 +12,7 @@ TEST_CASE("Collision between PlayerBullet and Mushroom is detected")
     const Grid grid{592, 640};
     CollisionHandler collision_handler{grid};
     struct MushroomDimensions dimension_mushroom;
-    struct PlayerBulletDimentions dimension_bullet;
+    struct PlayerBulletDimensions dimension_bullet;
     vector<IEntity_ptr> game_objects;
     vector<IMovingEntity_ptr> moving_game_objects;
     // Create mushrooms:
@@ -161,7 +161,7 @@ TEST_CASE("Collision between PlayerBullet and Centipede Body is detected while m
     moving_game_objects.push_back(centipede_seg_ptr);
 
     centipede_seg_ptr = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
-                                  Position{86,300}, Direction::RIGHT);
+                                  Position{85,300}, Direction::RIGHT);
 
     game_objects.push_back(centipede_seg_ptr);
     moving_game_objects.push_back(centipede_seg_ptr);
@@ -300,3 +300,4 @@ TEST_CASE("Collision between Player and Centipede is detected successfully")
     CHECK(player->getRemainingLives()==player_lives);
     CHECK_FALSE(centipede_head->isAlive());
 }
+
