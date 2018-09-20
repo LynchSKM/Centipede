@@ -159,6 +159,7 @@ void CentipedeSegment::move()
     }//switch
     }else{
         //poisoned movement
+        setDirection(Direction::DOWN);
         moveDown();
     }
 }
