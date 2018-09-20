@@ -109,7 +109,7 @@ TEST_CASE("Centipede Segment turns up when it hits the bottom boundary.")
     CentipedeSegment centipede_seg(testGrid, CentipedeSegment::BodyType::HEAD,
                                Position{592-(dimesions.width/2.0f),632},Direction::RIGHT);
 
-    auto x = centipede_seg.getPosition().getX_pos();
+    auto x = centipede_seg.getPosition().getX_pos()-dimesions.speed;
     auto y = centipede_seg.getPosition().getY_pos()-dimesions.speedY;
 
     centipede_seg.move();
