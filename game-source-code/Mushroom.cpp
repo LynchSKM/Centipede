@@ -57,6 +57,10 @@ int Mushroom::getRemainingLives() const
     return numberOfLives_;
 }
 
+void Mushroom::reincarnate()
+{
+    numberOfLives_ = 4;
+}
 
 Mushroom::~Mushroom()
 {

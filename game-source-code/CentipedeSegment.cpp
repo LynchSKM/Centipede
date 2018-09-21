@@ -37,9 +37,22 @@ bool CentipedeSegment::isEntryMovement()
     return false;
 }
 
+void CentipedeSegment::clearHeadCollisions()
+{
+    head_collision_positions_.clear();
+}
+
 void CentipedeSegment::collisionAt(Position position)
-{   if(bodytype_ == BodyType::HEAD) return;
-    head_collision_positions_.push_back(position);
+{   if(bodytype_ == BodyType::HEAD)
+    {
+        clearHeadCollisions();
+        return;
+    }//if
+    if(std::count(head_collision_positions_.begin(),
+                  head_collision_positions_.end(), position)==0)
+    {
+        head_collision_positions_.push_back(position);
+    }
 }
 
 void CentipedeSegment::checkHeadCollisions()
@@ -220,6 +233,19 @@ BoundaryBox CentipedeSegment::getBoundaryBox()
     struct CentipedeSegmentDemensions Dimension;
     BoundaryBox box{position_,Dimension.width,Dimension.height,0};
     return box;
+}
+
+
+int CentipedeSegment::getRemainingLives() const
+{
+    if(isAlive()) return 1;
+
+    return 0;
+}
+
+void CentipedeSegment::reincarnate()
+{
+
 }
 
 bool CentipedeSegment::isAlive() const

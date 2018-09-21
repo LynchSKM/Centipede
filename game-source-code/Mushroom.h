@@ -4,74 +4,76 @@
 #include "IEntity.h"
 #include "Dimensions.h"
 
-/** \class IEntity
-*   \brief This is a Class containing pure virtual functions that
-*   will be overridden.
-*   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*   \version
-*/
+/** \class Mushroom
+ *  \brief This is a class that defines a Mushroom object. It contains virtual functions
+ *  inherited from IEntity that will be overridden.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *  \version
+ */
 class Mushroom : public IEntity
 {
     public:
 
-        /** \brief creates a mushroom object, parameterized constructor.
-         * \param is grid of type grid.
+        /** \brief Parameterized Constructor. Creates a Mushroom object.
+         *  \param position the centre point where the Mushroom is located on the screen.
          */
         Mushroom(Position position);
 
-        /** \brief destroys the mushroom object.
+        /** \brief Virtual Destructor. Destroys a Mushroom object.
          */
         virtual ~Mushroom();
 
-        /** \brief Inherited from IEntity. A pure virtual function that returns a enum of ObjectType of
-        *   a derived class object.
-        *   \return An enum of the strongly typed enum class ObjectType.
-        */
+        /** \brief Inherited from IEntity. A virtual function that returns a enum
+         *  ObjectType::MUSHROOM of ObjectType of a object.
+         *  \return ObjectType an enum of the strongly typed enum class ObjectType.
+         */
         virtual ObjectType getObjectType() const override;
 
-        /** \brief Inherited from IEntity. A pure virtual function that returns a Position of the
-        *   derived class object.
-        *   \return Position of the derived class object containing its current position.
-        */
+        /** \brief Inherited from IEntity. A virtual function that returns a Position of the
+         *  Mushroom object.
+         *  \return Position of the Mushroom object.
+         */
         virtual Position getPosition() const override;
 
-        /** \brief Inherited from IEntity. A pure virtual function that returns a Rectangle indicating
-        *   the rectangular area covered by a derived class object.
-        *   \return A Rectangle object of the type Rectangle struct.
-        */
+        /** \brief Inherited from IEntity. A virtual function that returns a BoundaryBox indicating
+         *  the rectangular area covered by the Mushroom object.
+         *  \return BoundaryBox object of the type BoundaryBox.
+         */
         virtual BoundaryBox getBoundaryBox() override;
 
-        /** \brief Inherited from IEntity. A pure virtual function that queries if a derived class object
-        *   is still alive or not.
-        *   \return bool
-        */
+        /** \brief Inherited from IEntity. A virtual function that queries if a Mushroom object
+         *  is still alive or not.
+         *  \return bool
+         */
         virtual bool isAlive() const override;
 
-        /** \brief Inherited from IEntity. A pure virtual function that sets the derived class
-        *   object as not alive when killed.
-        *   \return void
-        */
+        /** \brief Inherited from IEntity. A virtual function that sets the Mushroom
+         *  object as not alive when killed.
+         *  \return void
+         */
         virtual void eliminated() override;
 
-        /** \brief decrements the lives of the mushroom.
+        /** \brief Inherited from IEntity. A virtual function that will be used
+         *  to set a Mushroom object's number lives to full.
+         *  \return void
          */
-        void decrementLives();
+        virtual void reincarnate() override;
 
-        /** \brief returns the health status of the mushroom.
-         *  \return a bool stating whether the mushroom is poisoned or not.
+        /** \brief Inherited from IEntity. A virtual function that will be used
+         *  to return the remaining lives of a Mushroom object.
+         *  \return int containing the number of remaining lives.
+         */
+        virtual int getRemainingLives() const override;
+
+        /** \brief Returns the health status of the mushroom.
+         *  \return bool stating whether the mushroom is poisoned or not.
          */
         bool isPoisoned() const;
 
-        /** \brief poisons the mushroom by changing the isPoisoned private member
+        /** \brief Poisons the mushroom by changing the isPoisoned private member
          *  to true.
          */
         void poison();
-
-        /** \brief returns the number of remaining lives.
-         *  \return number of lives of type int.
-         */
-        int getRemainingLives() const;
-
 
     private:
         Position position_;
@@ -79,6 +81,10 @@ class Mushroom : public IEntity
         bool isPoisoned_;
         bool isAlive_;
         int numberOfLives_;
+
+        /** \brief Decrements the lives of the mushroom.
+         */
+        void decrementLives();
 
 };
 

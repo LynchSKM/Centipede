@@ -24,87 +24,89 @@ class Player : public IMovingEntity
 {
     public:
 
-        /** \brief Creates a player object parameterized constructor.
-         * \param is grid of type grid.
+        /** \brief Parameterized constructor. Creates a Player object.
+         *  \param grid is of type grid.
          */
         Player(const Grid& grid);
 
         /**< \brief Destroys the player object */
         virtual ~Player();
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that
-        *    moves derived class objects.
-        */
+        /** \brief Inherited from IMovingEntity. A virtual function that
+         *   moves a Player object.
+         */
         virtual void move() override;
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that
-        *    returns a enum of ObjectType of a derived class object.
-        *   \return An enum of the strongly typed enum class ObjectType.
-        */
+        /** \brief Inherited from IMovingEntity. A virtual function that
+         *  returns a enum of ObjectType of the Player object.
+         *  \return An enum of the strongly typed enum class ObjectType.
+         */
         virtual ObjectType getObjectType() const override;
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that
-        *    returns a Position of the derived class object.
-        *   \return Position of the derived class object containing its current
-        *    position.
-        */
+        /** \brief Inherited from IMovingEntity. A virtual function that
+         *  returns a Position of the Player object.
+         *  \return Position of the Player object containing its current position.
+         */
         virtual Position getPosition() const override;
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that
-        *   returns a Rectangle indicating the rectangular area covered by a
-        *    derived class object.
-        *   \return A Rectangle object of the type Rectangle struct.
-        */
+        /** \brief Inherited from IMovingEntity. A virtual function that
+         *  returns a boundary box indicating the rectangular area covered by a
+         *  Player object.
+         *  \return BoundaryBox object of the type BoundaryBox.
+         */
         virtual BoundaryBox getBoundaryBox() override;
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that
-        *    queries if a derived class object is still alive or not.
-        *   \return bool
-        */
+        /** \brief Inherited from IMovingEntity. A virtual function that
+         *  queries if a Player object is still alive or not.
+         *  \return bool
+         */
         virtual bool isAlive() const override;
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that
-        *    sets the derived class object as not alive when killed.
-        *   \return void
-        */
+        /** \brief Inherited from IMovingEntity. A virtual function that
+         *  sets the Player as not alive when killed.
+         *  \return void
+         */
         virtual void eliminated() override;
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that
-        *    returns the direction of an object.
-         * \return The direction of the object of type Direction of the enum class.
+        /** \brief Inherited from IMovingEntity. A virtual function that
+         *  returns the direction of the Player.
+         *  \return Direction of the Player of type Direction of the enum class.
          */
         virtual Direction getDirection() const override;
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that
-        *    sets the direction of an object.
-         * \param direction of type Direction of the enum class.
+        /** \brief Inherited from IMovingEntity. A virtual function that
+         *  sets the direction of the Player.
+         *  \param direction of type Direction of the enum class.
          */
         virtual void setDirection(Direction direction) override;
 
-        /** \brief gets a constant copy of the object's Number of lives.
-         * \return an int a constant copy of the numberOfLives_.
+        /** \brief Inherited from IMovingEntity. A virtual function that
+         *  gets a constant copy of the Player object's number of lives left.
+         *  \return an int a constant copy of the numberOfLives_.
          */
-        int getRemainingLives() const;
+        int getRemainingLives() const override;
+
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         * used to bring the Player object back to life, if the remaining lives
+         * are not zero.
+         */
+		virtual void reincarnate() override;
 
         /** \brief Creates player bullets and stores them in a vector.
-         * \return a vector of shared_ptr to IMovingEntity.
+         *  \return a vector of shared_ptr to IMovingEntity.
          */
         vector <shared_ptr<IMovingEntity>> shoot();
 
         /** \brief adds the given score to the player's current score.
-         * \param score of type int.
+         *  \param score of type int.
          */
         void addScore(int score);
 
-         /** \brief A function that creates a constant copy of the player's score
-         *          and returns it.
-         * \return an int, a constant copy of the score.
+        /** \brief A function that creates a constant copy of the player's score
+         *  and returns it.
+         *  \return an int, a constant copy of the score.
          */
         int getScore() const;
-
-        /** \brief Decreases the number of lifes by one.
-         */
-		void reincarnate();
 
         /** \brief returns true if the player has collided with a deadly enemy.
          */

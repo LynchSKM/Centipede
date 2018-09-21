@@ -9,7 +9,7 @@
 *   \brief This is a Interface Class containing pure virtual functions that
 *   will be overridden by derived classes.
 *   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*
+*   \version
 */
 
 class IEntity
@@ -17,7 +17,7 @@ class IEntity
     public:
         /** \brief A pure virtual function that returns a enum of ObjectType of
         *   a derived class object.
-        *   \return An enum of the strongly typed enum class ObjectType.
+        *   \return ObjectType enum of the strongly typed enum class ObjectType.
         */
         virtual ObjectType getObjectType() const = 0;
 
@@ -27,9 +27,9 @@ class IEntity
         */
         virtual Position getPosition() const = 0;
 
-        /** \brief A pure virtual function that returns a Rectangle indicating
+        /** \brief A pure virtual function that returns a BoundaryBox indicating
         *   the rectangular area covered by a derived class object.
-        *   \return A Rectangle object of the type Rectangle struct.
+        *   \return BoundaryBox object of the type BoundaryBox.
         */
         virtual BoundaryBox getBoundaryBox() = 0;
 
@@ -45,6 +45,20 @@ class IEntity
         */
         virtual void eliminated() = 0;
 
+        /** \brief A pure virtual function that will be used to bring a derived
+         *  class object back to life.
+         * \return void
+         */
+        virtual void reincarnate() = 0;
+
+        /** \brief A pure virtual function that will be used to return the remaining
+         * lives of a derived class object.
+         * \return int containing the number of remaining lives.
+         */
+        virtual int getRemainingLives() const = 0;
+
+        /** \brief A virtual destructor that destroys an IEntity object.
+         */
         virtual ~IEntity(){};
 };
 

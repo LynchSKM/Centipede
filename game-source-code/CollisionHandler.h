@@ -53,6 +53,8 @@ class CollisionHandler
          */
         int getPointsObtained();
 
+        /** \brief Default Destructor. Destroys a Collision Handler object.
+         */
         ~CollisionHandler();
     private:
         SeparatingAxisTheorem sat_algorithm_;
@@ -97,11 +99,17 @@ class CollisionHandler
         void playerBulletCollidesWithCentipede(vector<IMovingEntity_ptr>& player_bullets,
                                                vector<IMovingEntity_ptr>& centipede);
 
-        /** \brief Checks collisions between a centipede and a mushroom or centipede and centipede.
+        /** \brief Checks collisions between a centipede and a mushroom.
          * If a collision occurs, the Centipede segment goes down and changes direction.
          * \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
          */
-        void centipedeCollidesWithMushroomOrCentipede(vector<IMovingEntity_ptr>& centipede);
+        void centipedeCollidesWithMushroom(vector<IMovingEntity_ptr>& centipede);
+
+        /** \brief Checks collisions between a centipede and a centipede.
+         * If a collision occurs, then both Centipedes go down or up and change their directions.
+         * \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
+         */
+        void centipedeCollidesWithCentipede(vector<IMovingEntity_ptr>& centipede);
 
         /** \brief Checks collisions between a player and other game objects.
          * If a collision occurs, with a Mushroom the player's direction is set to NONE.

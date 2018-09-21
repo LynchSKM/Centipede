@@ -5,12 +5,13 @@
 #include "Dimensions.h"
 #include "Grid.h"
 
+#include <algorithm>
 #include <vector>
 using std::vector;
 
 /** \class CentipedeSegment
 *   \brief This is a Class that inherits from the IMovingEntity class. It
-*   contains pure virtual functions that will be overridden by derived.
+*   contains virtual functions that will be overridden by CentipedeSegment class.
 *   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
 *   \version
 */
@@ -19,7 +20,8 @@ class CentipedeSegment : public IMovingEntity
 {
     public:
 
-        /** \brief is a strongly typed enum class representing the BodyType of the
+        /** \enum BodyType
+         *  \brief A strongly typed enum class representing the BodyType of the
          *  centipede.
          */
         enum class BodyType{
@@ -27,79 +29,93 @@ class CentipedeSegment : public IMovingEntity
             BODY     /**< is coded as int of value 0. */
         };
 
-        /** \brief Creates a centipede segment object parameterized constructor.
-         * \param is a direction of type Direction enum class.
-         * \param is a bodytype of type BodyType enum class.
-         * \param is a objectType of type ObjectType enum class.
-         * \param is a position of type Position.
-         * \param is grid of type grid.
+        /** \brief Parameterized Constructor. Creates a centipede segment object.
+         *  \param is a direction of type Direction enum class.
+         *  \param is a bodytype of type BodyType enum class.
+         *  \param is a objectType of type ObjectType enum class.
+         *  \param is a position of type Position.
+         *  \param is grid of type grid.
          */
         CentipedeSegment(const Grid& grid, BodyType bodytype, Position position, Direction cur_Direction);
 
-        /** Destroys the CentipedeSegment object.
-        */
+        /** Virtual Destructor. Destroys a CentipedeSegment object.
+         */
         virtual~CentipedeSegment();
 
-        /** A pure virtual function that moves derived class objects.
-        */
+        /** Inherited from IMovingEnity. A virtual function that moves a CentipedeSegment object.
+         */
         virtual void move() override;
 
-        /** \brief A pure virtual function that returns the direction of an object.
-         * \return The direction of the object of type Direction of the enum class.
+        /** \brief Inherited from IMovingEntity. A virtual function that
+         *  returns the current direction of a CentipedeSegment object.
+         *  \return Direction an enum of the enum class Direction.
          */
         virtual Direction getDirection() const override;
 
-        /** \brief A pure virtual function that sets the direction of an object.
-         * \param direction of type Direction of the enum class.
+        /** \brief Inherited from IMovingEntity. A virtual function that sets
+         *  the direction of a CentipedeSegment object.
+         *  \param direction an enum of enum class Direction.
          */
         virtual void setDirection(Direction direction) override;
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that returns a enum of ObjectType of
-        *   a derived class object.
-        *   \return An enum of the strongly typed enum class ObjectType.
-        */
+        /** \brief Inherited from IMovingEntity. A virtual function that returns
+         *  a enum of ObjectType of a CentipedeSegment object.
+         *  \return An enum of the strongly typed enum class ObjectType.
+         */
         virtual ObjectType getObjectType() const override;
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that returns a Position of the
-        *   derived class object.
-        *   \return Position of the derived class object containing its current position.
-        */
+        /** \brief Inherited from IMovingEntity. A virtual function that returns
+         * a centre position of the CentipedeSegment object.
+         *  \return Position of the CentipedeSegment object containing its current position.
+         */
         virtual Position getPosition() const override;
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that returns a Rectangle indicating
-        *   the rectangular area covered by a derived class object.
-        *   \return A Rectangle object of the type Rectangle struct.
-        */
+        /** \brief Inherited from IMovingEntity. A virtual function that returns
+         *  a BoundaryBox indicating the rectangular area covered by a CentipedeSegment object.
+         *  \return BoundaryBox object of the type BoundaryBox.
+         */
         virtual BoundaryBox getBoundaryBox() override;
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that queries if a derived class object
-        *   is still alive or not.
-        *   \return bool
-        */
+        /** \brief Inherited from IMovingEntity. A virtual function that queries
+         *  if a CentipedeSegment object is still alive or not.
+         *  \return bool
+         */
         virtual bool isAlive() const override;
 
-        /** \brief Inherited from IMovingEntity. A pure virtual function that sets the derived class
-        *   object as not alive when killed.
-        *   \return void
-        */
+        /** \brief Inherited from IMovingEntity. A virtual function that sets the CentipedeSegment
+         *  object as not alive when killed.
+         *  \return void
+         */
         virtual void eliminated() override;
+
+        /** \brief Inherited from IMovingEntity. A virtual function that
+         *  gets a constant copy of the CentipedeSegment object's number of lives left.
+         *  \return int containing the number of lives.
+         */
+        virtual int getRemainingLives() const override;
+
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         * used to bring the CentipedeSegment object back to life, if the remaining lives
+         * are not zero.
+         */
+		virtual void reincarnate() override;
 
         /** \brief A function that changes the isPoisoned status of the object to true.
          */
         void poison();
 
         /** \brief A function that returns the previous direction of an object.
-         * \return The direction of the object of type Direction of the enum class.
+         *  \return The direction of the object of type Direction of the enum class.
          */
         Direction getPrevDirection() const;
 
         /** \brief A function that changes the direction of the object to Down, this
-        *   is called when a collision is detected in front of an object.
+         *   is called when a collision is detected in front of an object.
          */
         void changeDirection();
 
         /** \brief A function that returns the body type of the centipede segment.
-         * \return The body type of the object of type BodyType of the enum class.
+         *  \return The body type of the object of type BodyType of the enum class.
          */
         BodyType getBodyType() const;
 
@@ -109,7 +125,7 @@ class CentipedeSegment : public IMovingEntity
         void setBodyType(BodyType body_type);
 
         /** \brief A function that returns the rotation angle of the centipede segment.
-         * \return The rotation angle of type float.
+         *  \return The rotation angle of type float.
          */
         float getRotationAngle() const;
 
@@ -118,6 +134,7 @@ class CentipedeSegment : public IMovingEntity
          */
         void collisionAt(Position position);
 
+        void clearHeadCollisions();
     private:
         Direction cur_Direction_;
         Direction prev_Direction_;
