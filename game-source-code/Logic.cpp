@@ -1,7 +1,6 @@
 #include "Logic.h"
 
-Logic::Logic():screen_state_{ScreenState::SPLASHSCREEN}
-{
+Logic::Logic():screen_state_{ScreenState::SPLASHSCREEN} {
     player_ = std::make_shared<Player>(grid_);
     game_objects_.push_back(player_);
     moving_game_objects_.push_back(player_);
@@ -10,8 +9,7 @@ Logic::Logic():screen_state_{ScreenState::SPLASHSCREEN}
     //ctor
 }
 
-void Logic::getInputCommands()
-{
+void Logic::getInputCommands() {
     presentation_.processInputEvents();
 
     if(presentation_.isLeftPressed()) player_->setDirection(Direction::LEFT);
@@ -20,11 +18,11 @@ void Logic::getInputCommands()
     else if(presentation_.isDownPressed()) player_->setDirection(Direction::DOWN);
     else player_->setDirection(Direction::NONE);
 
-    if(!debounceSpaceKey_ && presentation_.isSpacePressed()){
+    if(!debounceSpaceKey_ && presentation_.isSpacePressed()) {
         debounceSpaceKey_ = true;
         auto bullet_Vector = player_->shoot();
 
-        for(auto &bullets: bullet_Vector){
+        for(auto &bullets: bullet_Vector) {
             game_objects_.push_back(bullets);
             moving_game_objects_.push_back(bullets);
         }//for
@@ -34,8 +32,7 @@ void Logic::getInputCommands()
     debounceSpaceKey_ = presentation_.isSpacePressed();
 }
 
-void Logic::run()
-{
+void Logic::run() {
     if(screen_state_==ScreenState::SPLASHSCREEN) renderSplashScreen();
     loadAssets();
     high_score_ = highScoreManager_.getHighScore();
@@ -47,14 +44,12 @@ void Logic::run()
     //auto time_elapsed = 0.0;
     auto timeSinceLastUpdate = 0.0;
 
-    while(screen_state_ == ScreenState::GAME_ACTIVE)
-    {
+    while(screen_state_ == ScreenState::GAME_ACTIVE) {
         game_timer.stop();
         timeSinceLastUpdate+=game_timer.getRunTime();
         game_timer.start();
         // Check if time that has passed is greater than the frame speed:
-        while(timeSinceLastUpdate>game_speed && screen_state_ == ScreenState::GAME_ACTIVE)
-        {
+        while(timeSinceLastUpdate>game_speed && screen_state_ == ScreenState::GAME_ACTIVE) {
             timeSinceLastUpdate-=game_speed;
             getInputCommands();
             if(presentation_.isWindowOpen()==false) return;
@@ -72,100 +67,119 @@ void Logic::run()
     if(screen_state_ == ScreenState::GAMEWONSCREEN)  renderGameWonScreen();
 
 }
-void Logic::loadAssets()
-{
+void Logic::loadAssets() {
     presentation_.loadTextures(assetManager_.getAssetInfo());
 }
 
-void Logic::renderSplashScreen()
-{
+void Logic::renderSplashScreen() {
     presentation_.drawSplashScreen();
     screen_state_ = ScreenState::GAME_ACTIVE;
 }
 
-void Logic::updateGameObjects()
-{
-    for(auto& object : moving_game_objects_)
-    {
-        //if(object->isAlive()&& object->getObjectType()!=ObjectType::MUSHROOM){
-           // auto moving_object_ptr = std::dynamic_pointer_cast<IMovingEntity>(object);
+void Logic::updateGameObjects() {
+    for(auto& object : moving_game_objects_) {
         if(object->isAlive())
             object->move();
     }
 }
 
-void Logic::removeDeadEntities()
-{
+void Logic::removeDeadEntities() {
     container_erase_if(game_objects_,
-                       [](shared_ptr<IEntity>& game_object){
-                       return (!game_object->isAlive());
-                       });
+    [](shared_ptr<IEntity>& game_object) {
+        return (!game_object->isAlive());
+    });
 
     container_erase_if(moving_game_objects_,
-                       [](shared_ptr<IMovingEntity>& game_object){
-                       return (!game_object->isAlive());
-                       });
+    [](shared_ptr<IMovingEntity>& game_object) {
+        return (!game_object->isAlive());
+    });
 }
 
-void Logic::renderGameObjects()
-{
+void Logic::renderGameObjects() {
     presentation_.renderWindow(game_objects_,
-                          player_->getRemainingLives(), player_->getScore(),
-                          high_score_);
+                               player_->getRemainingLives(), player_->getScore(),
+                               high_score_);
 }
 
-void Logic::renderGameOverScreen()
-{
+void Logic::renderGameOverScreen() {
     presentation_.drawGameOverScreen(player_->getScore(), high_score_);
 }
 
-void Logic::renderGameWonScreen()
-{
+void Logic::renderGameWonScreen() {
     presentation_.drawGameWonScreen(player_->getScore(), high_score_);
 }
-void Logic::generateNormalCentipede()
-{
+void Logic::generateNormalCentipede() {
 
-    for(auto& segment: enemyFactory_.generateNormalCentipede())
-    {
+    for(auto& segment: enemyFactory_.generateNormalCentipede()) {
         game_objects_.push_back(segment);
         moving_game_objects_.push_back(segment);
     }
 }
 
-void Logic::generateCentipedeHeads()
-{
-    for(auto& segment: enemyFactory_.generateCentipedeHeads())
-    {
+void Logic::generateCentipedeHeads() {
+    for(auto& segment: enemyFactory_.generateCentipedeHeads()) {
         game_objects_.push_back(segment);
         moving_game_objects_.push_back(segment);
     }//for
 }
-void Logic::generateMushrooms()
-{
-    for(auto& mushroom: enemyFactory_.generateMushrooms())
-    {
+void Logic::generateMushrooms() {
+    for(auto& mushroom: enemyFactory_.generateMushrooms()) {
         game_objects_.push_back(mushroom);
     }
 }
 
-void Logic::checkCollisions()
-{
+void Logic::checkCollisions() {
     collisionHandler_.checkCollisions(game_objects_, moving_game_objects_);
     player_->addScore(collisionHandler_.getPointsObtained());
+    reincarnatePlayer();
+}
+
+void Logic::reincarnatePlayer() {
+    if (player_->isHit() && player_->isAlive()) {
+        container_erase_if(game_objects_,
+        [](shared_ptr<IEntity>& game_object) {
+            return (game_object->getObjectType() == ObjectType::CENTIPEDE);
+        });
+
+        container_erase_if(moving_game_objects_,
+        [](shared_ptr<IMovingEntity>& game_object) {
+            return (game_object->getObjectType() == ObjectType::CENTIPEDE);
+        });
+
+    for(auto& object : game_objects_)
+        if(object->getObjectType() == ObjectType::MUSHROOM && object->isAlive())
+            object->reincarnate();
+
+        enemyFactory_.reset();
+        generateNormalCentipede();
+        player_->reincarnate();
+
+    } else return;
 }
 
 void Logic::updateScores()
 {
-    // Check highscore:
-    if(player_->getScore()>highScoreManager_.getHighScore())
-        highScoreManager_.setHighScore(player_->getScore());
+    auto numberOfCentipedesSeg = count_if(moving_game_objects_.begin(),
+    moving_game_objects_.end(),[](const IMovingEntity_ptr& object)
+    {
+    return(object->getObjectType()==ObjectType::CENTIPEDE);
+    });
 
-    if(!player_->isAlive())
+    // Check highscore:
+    auto highScorePassed = player_->getScore()>highScoreManager_.getHighScore();
+    auto CentipedeDead   = numberOfCentipedesSeg == 0;
+    auto playerIsAlive     = player_->isAlive();
+
+    if(highScorePassed)highScoreManager_.setHighScore(player_->getScore());
+
+    if(highScorePassed && (playerIsAlive || (CentipedeDead &&!playerIsAlive )))
+        screen_state_= ScreenState::GAMEWONSCREEN;
+
+    if(!highScorePassed && (!playerIsAlive || (CentipedeDead && playerIsAlive )))
         screen_state_= ScreenState::GAMEOVERSCREEN;
+
 }
 
-Logic::~Logic()
-{
+Logic::~Logic() {
     //dtor
 }

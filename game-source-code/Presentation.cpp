@@ -151,9 +151,9 @@ sf::Sprite Presentation::generateSpriteFromSpriteSheet(shared_ptr<IEntity> objec
         auto mushroom = std::dynamic_pointer_cast<Mushroom>(object);
         if(mushroom->isPoisoned())
             ++iter_vec;
-            auto maxMushLives = 4;
-            auto mushCol = maxMushLives - mushroom->getRemainingLives();
-            rect = iter_vec->getTextureRect(mushCol);
+        auto maxMushLives = 4;
+        auto mushCol = maxMushLives - object->getRemainingLives();
+        rect = iter_vec->getTextureRect(mushCol);
 
     }
 

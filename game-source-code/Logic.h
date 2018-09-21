@@ -109,6 +109,11 @@ class Logic
          */
         void removeDeadEntities();
 
+        /** \brief Removes all centipede segments from vector(s) where they exist,
+         *      reset the position of the player and generate a new centipede train.
+         */
+        void reincarnatePlayer();
+
 
 };
 
