@@ -27,7 +27,7 @@ struct PlayerBulletDimensions{
 
 struct MushroomDimensions{
 
-    const float height = 16.0;
+    const float height = 15.0;
     const float width = 16.0;
 
 };

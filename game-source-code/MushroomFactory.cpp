@@ -42,8 +42,9 @@ void MushroomFactory::defineRowAndCol()
 
 Position MushroomFactory::gridRowCol(Position position)
 {
-    auto x = round(((position.getX_pos())-8.0)/16.0);
-    auto y = round(((position.getY_pos())-24.0)/16.0);
+    if (position.getY_pos()>= 624.0) position.setY_pos(616.0);
+    auto x = round((position.getX_pos()-8.0)/16.0);
+    auto y = round((position.getY_pos()-24.0)/16.0);
     return Position(x,y);
 }
 

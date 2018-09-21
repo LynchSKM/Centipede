@@ -44,6 +44,12 @@ class EnemyFactory
          */
         vector <shared_ptr<Mushroom>> generateMushrooms();
 
+        /** \brief generates a mushrooms at a given position.
+         * \param a position of type Position.
+         * \return a shared ptr to a mushroom object.
+         */
+        shared_ptr<Mushroom> generateAMushroom(Position position);
+
         /** \brief Resets states of generated centipedes to false.
          */
          void reset();

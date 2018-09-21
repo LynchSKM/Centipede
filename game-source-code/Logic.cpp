@@ -57,6 +57,7 @@ void Logic::run() {
             generateCentipedeHeads();
             updateGameObjects();
             checkCollisions();
+            generateMushroomAtCollision();
             updateScores();
             reincarnatePlayer();
             removeDeadEntities();
@@ -132,6 +133,15 @@ void Logic::generateMushrooms() {
 void Logic::checkCollisions() {
     collisionHandler_.checkCollisions(game_objects_, moving_game_objects_);
     player_->addScore(collisionHandler_.getPointsObtained());
+}
+
+void Logic::generateMushroomAtCollision()
+{
+    for(auto& object: game_objects_) {
+        if(object->getObjectType() == ObjectType::CENTIPEDE)
+            if(!object->isAlive())
+                game_objects_.push_back(enemyFactory_.generateAMushroom(object->getPosition()));
+    }
 }
 
 void Logic::reincarnatePlayer()

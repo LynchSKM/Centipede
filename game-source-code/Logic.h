@@ -114,6 +114,10 @@ class Logic
          */
         void reincarnatePlayer();
 
+        /** \brief transforms all dead centipede segments from vector(s) into mushrooms.
+         */
+        void generateMushroomAtCollision();
+
 
 };
 

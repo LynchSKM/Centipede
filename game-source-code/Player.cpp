@@ -8,7 +8,7 @@ Player::Player(const Grid& grid):grid_{grid},objectType_{ObjectType::PLAYER}, nu
 
     reload_timer.start();
     timeSinceLastShoot = 0;
-    reload_time = 0.25;
+    reload_time = 0.175;
 }
 
 Player::~Player(){

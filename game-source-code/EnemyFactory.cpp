@@ -79,6 +79,12 @@ vector <shared_ptr<Mushroom>> EnemyFactory::generateMushrooms()
     return mushrooms;
 }
 
+shared_ptr<Mushroom> EnemyFactory::generateAMushroom(Position position)
+{
+    auto mushroom_ptr = mushroomfactory_.generateAMushroom(position);
+    return mushroom_ptr;
+}
+
 void EnemyFactory::reset()
 {
     isCentipedeGenerated_ = false;
