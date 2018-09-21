@@ -92,6 +92,7 @@ void CollisionHandler::playerCollidesWithObjects(vector<IMovingEntity_ptr>& play
                     // Move Player by at least one point
                     thePlayer->setDirection(direction);
                     thePlayer->move();
+                    thePlayer->move();
                     thePlayer->setDirection(Direction::NONE);
                 }
                 else if(object->getObjectType()!=ObjectType::PLAYER_LASER_BULLET)

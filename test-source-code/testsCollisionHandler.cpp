@@ -188,11 +188,14 @@ TEST_CASE("Collision between Centipede and Mushroom is detected")
     const Grid grid{592, 640};
     CollisionHandler collision_handler{grid};
     struct CentipedeSegmentDemensions dimension_centipede;
+    struct MushroomDimensions dimension_mushroom;
     vector<IEntity_ptr> game_objects;
     vector<IMovingEntity_ptr> moving_game_objects;
 
+    auto x = 80.0f;
+    auto y = 56.0f;
     auto centipede_seg_ptr = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
-                                      Position{100,100}, Direction::LEFT);
+                                      Position{x, y}, Direction::LEFT);
 
     game_objects.push_back(centipede_seg_ptr);
     moving_game_objects.push_back(centipede_seg_ptr);
@@ -202,22 +205,23 @@ TEST_CASE("Collision between Centipede and Mushroom is detected")
     {
         counter +=(dimension_centipede.width+1);
         auto segment = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
-                                      Position{100+counter,100}, Direction::LEFT);
+                                      Position{x+counter, y}, Direction::LEFT);
 
         game_objects.push_back(segment);
         moving_game_objects.push_back(segment);
     }//while
 
     // Create Mushroom at position in direction of head to check collisions:
-    auto mushroom = make_shared<Mushroom>(Position{91,100});
+    auto mushroom = make_shared<Mushroom>(Position{56.0f, y});
     game_objects.push_back(mushroom);
 
     auto centipede_tail_index = game_objects.size()-2;
     auto moves_to_be_made = game_objects.at(centipede_tail_index)->getPosition().getX_pos();
-    moves_to_be_made -= mushroom->getPosition().getX_pos();
+    moves_to_be_made -= (dimension_centipede.width/2.0f);
+    moves_to_be_made -= (mushroom->getPosition().getX_pos()+dimension_mushroom.width/2.0f);
     moves_to_be_made /= dimension_centipede.speed;
 
-    for(auto moves_made = 0; moves_made<=moves_to_be_made; moves_made++)
+    for(auto moves_made = 0; moves_made<=moves_to_be_made+1; moves_made++)
     {
         collision_handler.checkCollisions(game_objects, moving_game_objects);
         // move
@@ -250,7 +254,7 @@ TEST_CASE("Collision between Player and Mushroom is detected successfully and co
     moving_game_objects.push_back(player);
 
     auto player_pos = player->getPosition();
-    auto x = player_pos.getX_pos()+(dimensions_mushroom.width)-1.0f;
+    auto x = player_pos.getX_pos()+(dimensions_mushroom.width)-dimensions_player.speed;
     auto y = player_pos.getY_pos();
     auto mushroom = make_shared<Mushroom>(Position{x, y});
     game_objects.push_back(mushroom);
