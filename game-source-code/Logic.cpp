@@ -58,6 +58,7 @@ void Logic::run() {
             updateGameObjects();
             checkCollisions();
             updateScores();
+            reincarnatePlayer();
             removeDeadEntities();
             renderGameObjects();
         }//while
@@ -131,55 +132,71 @@ void Logic::generateMushrooms() {
 void Logic::checkCollisions() {
     collisionHandler_.checkCollisions(game_objects_, moving_game_objects_);
     player_->addScore(collisionHandler_.getPointsObtained());
-    reincarnatePlayer();
 }
 
-void Logic::reincarnatePlayer() {
-    if (player_->isHit() && player_->isAlive()) {
+void Logic::reincarnatePlayer()
+{
+    if (player_->isHit() && player_->isAlive())
+    {
         container_erase_if(game_objects_,
-        [](shared_ptr<IEntity>& game_object) {
+        [](shared_ptr<IEntity>& game_object)
+        {
             return (game_object->getObjectType() == ObjectType::CENTIPEDE);
         });
 
         container_erase_if(moving_game_objects_,
-        [](shared_ptr<IMovingEntity>& game_object) {
+        [](shared_ptr<IMovingEntity>& game_object)
+        {
             return (game_object->getObjectType() == ObjectType::CENTIPEDE);
         });
 
-    for(auto& object : game_objects_)
-        if(object->getObjectType() == ObjectType::MUSHROOM && object->isAlive())
-            object->reincarnate();
+        std::transform(game_objects_.begin(), game_objects_.end(),
+                       game_objects_.begin(),
+                       [](IEntity_ptr& object)
+                       {
+                            if(object->getObjectType() == ObjectType::MUSHROOM && object->isAlive())
+                                object->reincarnate();
+
+                            return object;
+                       });
 
         enemyFactory_.reset();
         generateNormalCentipede();
         player_->reincarnate();
 
     } else return;
+
 }
 
 void Logic::updateScores()
 {
     auto numberOfCentipedesSeg = count_if(moving_game_objects_.begin(),
-    moving_game_objects_.end(),[](const IMovingEntity_ptr& object)
-    {
-    return(object->getObjectType()==ObjectType::CENTIPEDE);
-    });
+                                          moving_game_objects_.end(),
+                                          [](const IMovingEntity_ptr& object)
+                                          {
+                                            return(object->getObjectType()==ObjectType::CENTIPEDE);
+                                          });
 
     // Check highscore:
     auto highScorePassed = player_->getScore()>highScoreManager_.getHighScore();
     auto CentipedeDead   = numberOfCentipedesSeg == 0;
-    auto playerIsAlive     = player_->isAlive();
+    auto playerIsAlive   = player_->isAlive();
 
-    if(highScorePassed)highScoreManager_.setHighScore(player_->getScore());
-
-    if(highScorePassed && (!playerIsAlive || (CentipedeDead && playerIsAlive )))
-        screen_state_= ScreenState::GAMEWONSCREEN;
-
-    if(!highScorePassed && (!playerIsAlive || (CentipedeDead && playerIsAlive )))
-        screen_state_= ScreenState::GAMEOVERSCREEN;
-
+    if(!playerIsAlive || (CentipedeDead && playerIsAlive))
+    {
+        if(highScorePassed)
+        {
+            highScoreManager_.setHighScore(player_->getScore());
+            screen_state_= ScreenState::GAMEWONSCREEN;
+        }//if
+        else
+        {
+            screen_state_= ScreenState::GAMEOVERSCREEN;
+        }//else
+    }//if
 }
 
-Logic::~Logic() {
+Logic::~Logic()
+{
     //dtor
 }

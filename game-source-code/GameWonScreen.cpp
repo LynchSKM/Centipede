@@ -27,7 +27,7 @@ void GameWonScreen::show(sf::RenderWindow& render_window,
     title.setFillColor(sf::Color::Green);
     title.setPosition(sf::Vector2f(render_window.getSize().x/2.0f,render_window.getSize().y/2.0f - 150));
 
-    auto game_won_controls = "Play Again -> Press Enter"s;
+    auto game_won_controls = "Exit -> Press Enter"s;
     sf::Text controls(game_won_controls, font_);
     sf::FloatRect textRect = controls.getLocalBounds();
     controls.setOrigin(textRect.left + textRect.width/2.0f,
