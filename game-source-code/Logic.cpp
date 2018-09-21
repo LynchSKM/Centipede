@@ -172,7 +172,7 @@ void Logic::updateScores()
 
     if(highScorePassed)highScoreManager_.setHighScore(player_->getScore());
 
-    if(highScorePassed && (playerIsAlive || (CentipedeDead &&!playerIsAlive )))
+    if(highScorePassed && (!playerIsAlive || (CentipedeDead && playerIsAlive )))
         screen_state_= ScreenState::GAMEWONSCREEN;
 
     if(!highScorePassed && (!playerIsAlive || (CentipedeDead && playerIsAlive )))
