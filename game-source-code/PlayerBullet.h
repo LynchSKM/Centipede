@@ -86,6 +86,17 @@ class PlayerBullet : public IMovingEntity
          */
         virtual int getRemainingLives() const override;
 
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         *  used to return the poisoned status of a PlayerBullet object.
+         *  \return bool stating whether the PlayerBullet object is poisoned or not.
+         */
+        virtual bool isPoisoned() const override;
+
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         *  used to poison a PlayerBullet object by changing the poisoned status to true.
+         */
+        virtual void poison() override;
+
     private:
         bool alive_;
         ObjectType objectType_;

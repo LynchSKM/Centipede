@@ -65,15 +65,16 @@ class Mushroom : public IEntity
          */
         virtual int getRemainingLives() const override;
 
-        /** \brief Returns the health status of the mushroom.
-         *  \return bool stating whether the mushroom is poisoned or not.
+        /** \brief Inherited from IEntity. A virtual function that will be used
+         *  to return the poisoned status of a Mushroom object.
+         *  \return bool stating whether the Mushroom object is poisoned or not.
          */
-        bool isPoisoned() const;
+        virtual bool isPoisoned() const override;
 
-        /** \brief Poisons the mushroom by changing the isPoisoned private member
-         *  to true.
+        /** \brief Inherited from IEntity. A virtual function that will be used
+         *  to poison a Mushroom object by changing the poisoned status to true.
          */
-        void poison();
+        virtual void poison() override;
 
     private:
         Position position_;

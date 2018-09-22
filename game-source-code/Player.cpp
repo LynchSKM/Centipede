@@ -108,6 +108,16 @@ int Player::getRemainingLives() const
     return numberOfLives_;
 }
 
+bool Player::isPoisoned() const
+{
+    return false;
+}
+
+void Player::poison()
+{
+
+}
+
 vector <shared_ptr<IMovingEntity>> Player::shoot()
 {
     vector<shared_ptr<IMovingEntity>> bullets;

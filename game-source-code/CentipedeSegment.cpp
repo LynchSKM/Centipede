@@ -42,7 +42,7 @@ void CentipedeSegment::clearHeadCollisions()
     head_collision_positions_.clear();
 }
 
-void CentipedeSegment::collisionAt(Position position)
+void CentipedeSegment::collisionAt(Position position, bool poisionedCollision)
 {   if(bodytype_ == BodyType::HEAD)
     {
         clearHeadCollisions();
@@ -51,6 +51,7 @@ void CentipedeSegment::collisionAt(Position position)
     if(std::count(head_collision_positions_.begin(),
                   head_collision_positions_.end(), position)==0)
     {
+        are_head_collision_positions_poisioned_.push_back(poisionedCollision);
         head_collision_positions_.push_back(position);
     }
 }
@@ -58,11 +59,15 @@ void CentipedeSegment::collisionAt(Position position)
 void CentipedeSegment::checkHeadCollisions()
 {
     if(head_collision_positions_.empty()) return;
-    auto iter_vec = head_collision_positions_.begin();
-    if(position_ == (*iter_vec))
+    auto iter_vec_position = head_collision_positions_.begin();
+    auto iter_vec_posioned_pos = are_head_collision_positions_poisioned_.begin();
+
+    if(position_ == (*iter_vec_position))
     {
         changeDirection();
-        head_collision_positions_.erase(iter_vec);
+        isPoisoned_ = *iter_vec_posioned_pos;
+        head_collision_positions_.erase(iter_vec_position);
+        are_head_collision_positions_poisioned_.erase(iter_vec_posioned_pos);
     }//if
     return;
 }
@@ -78,12 +83,12 @@ void CentipedeSegment::moveUp()
         if(prev_Direction_==Direction::LEFT){
             setDirection(Direction::RIGHT);
             moveRight();
-            rotationAngle_ = 90.0f;
+            rotationAngle_ = 45.0f;
             prev_Direction_ = Direction::UP;
         }else{
             setDirection(Direction::LEFT);
             moveLeft();
-            rotationAngle_ = -90.0f;
+            rotationAngle_ = -45.0f;
             prev_Direction_ = Direction::UP;
         }//if
 
@@ -103,18 +108,18 @@ void CentipedeSegment::moveDown()
         if(prev_Direction_==Direction::LEFT){
             setDirection(Direction::RIGHT);
             moveRight();
-            rotationAngle_ = 90.0f;
+            rotationAngle_ = 45.0f;
             prev_Direction_ = Direction::DOWN;
 
          }else{
             setDirection(Direction::LEFT);
             moveLeft();
-            rotationAngle_ = -90.0f;
+            rotationAngle_ = -45.0f;
             prev_Direction_ = Direction::DOWN;
          }
 
     }else{
-        isPosoned_=false;
+        isPoisoned_=false;
         moveUp();
     }
 }
@@ -164,38 +169,39 @@ void CentipedeSegment::moveRight()
     }
 }
 
-
 void CentipedeSegment::move()
 {
     if(isEntryMovement())return;
-    if(bodytype_==BodyType::BODY) checkHeadCollisions();
-    //Normal movement
-    struct CentipedeSegmentDemensions dimensions;
-    if(!isPosoned_){
-    switch (cur_Direction_){
+    if(!isPoisoned_)//Normal movement
+    {   struct CentipedeSegmentDemensions dimensions;
 
-        case Direction::DOWN:
-            moveDown();
-            break;
+        if(bodytype_==BodyType::BODY) checkHeadCollisions();
+        switch (cur_Direction_){
 
-        case Direction::LEFT:
-            rotationAngle_ = 0.0f;
-            moveLeft();
-            break;
+            case Direction::DOWN:
+                moveDown();
+                break;
 
-        case Direction::RIGHT:
-            rotationAngle_ = 0.0f;
-            moveRight();
-            break;
+            case Direction::LEFT:
+                rotationAngle_ = 0.0f;
+                moveLeft();
+                break;
 
-        case Direction::UP:
-            moveUp();
-            break;
+            case Direction::RIGHT:
+                rotationAngle_ = 0.0f;
+                moveRight();
+                break;
 
-        default :
-            break;
-    }//switch
-    }else{
+            case Direction::UP:
+                moveUp();
+                break;
+
+            default :
+                break;
+        }//switch
+    }
+    else
+    {
         //poisoned movement
         setDirection(Direction::DOWN);
         moveDown();
@@ -260,7 +266,11 @@ void CentipedeSegment::eliminated()
 
 void CentipedeSegment::poison()
 {
-    isPosoned_ = true;
+    isPoisoned_ = true;
+}
+bool CentipedeSegment::isPoisoned() const
+{
+    return isPoisoned_;
 }
 
 Direction CentipedeSegment::getDirection() const

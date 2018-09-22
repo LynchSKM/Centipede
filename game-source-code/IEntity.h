@@ -57,6 +57,17 @@ class IEntity
          */
         virtual int getRemainingLives() const = 0;
 
+        /** \brief A pure virtual function that will be used to return the poisoned
+         *  status of the derived class objects.
+         *  \return bool stating whether the derived class object is poisoned or not.
+         */
+        virtual bool isPoisoned() const = 0;
+
+        /** \brief A pure virtual function that will be used to poison a
+         *  derived class object by changing the poisoned status to true.
+         */
+        virtual void poison() = 0;
+
         /** \brief A virtual destructor that destroys an IEntity object.
          */
         virtual ~IEntity(){};

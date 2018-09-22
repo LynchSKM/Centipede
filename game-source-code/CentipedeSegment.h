@@ -7,6 +7,7 @@
 
 #include <algorithm>
 #include <vector>
+
 using std::vector;
 
 /** \class CentipedeSegment
@@ -100,9 +101,16 @@ class CentipedeSegment : public IMovingEntity
          */
 		virtual void reincarnate() override;
 
-        /** \brief A function that changes the isPoisoned status of the object to true.
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         *  used to return the poisoned status of the CentipedeSegment objects.
+         *  \return bool stating whether the CentipedeSegment object is poisoned or not.
          */
-        void poison();
+        virtual bool isPoisoned() const override;
+
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         *  used to poison a CentipedeSegment object by changing the poisoned status to true.
+         */
+        virtual void poison() override;
 
         /** \brief A function that returns the previous direction of an object.
          *  \return The direction of the object of type Direction of the enum class.
@@ -132,9 +140,13 @@ class CentipedeSegment : public IMovingEntity
         /** \brief A function that saves positions where the head of centipede
          * train had a collision.
          */
-        void collisionAt(Position position);
+        void collisionAt(Position position, bool poisionedCollision);
 
+        /** \brief A function that clears the vector of positions where the head of centipede
+         * train had a collision.
+         */
         void clearHeadCollisions();
+
     private:
         Direction cur_Direction_;
         Direction prev_Direction_;
@@ -143,10 +155,11 @@ class CentipedeSegment : public IMovingEntity
         Position position_;
         const Grid grid_;
         float rotationAngle_ = 0.0;
-        bool isPosoned_ = false;
+        bool isPoisoned_ = false;
         bool alive_ = true;
         bool isAtCellCentre_;
         vector<Position> head_collision_positions_;
+        vector<bool> are_head_collision_positions_poisioned_;
 
         /** \brief controls the movements of the centipede segment upon entry.
          */
@@ -172,7 +185,6 @@ class CentipedeSegment : public IMovingEntity
          * where the head collided. If it has the changeDirection() function is called.
          */
         void checkHeadCollisions();
-
 };
 
 #endif // CENTIPEDESEGMENT_H

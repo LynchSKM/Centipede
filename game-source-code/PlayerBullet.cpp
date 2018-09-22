@@ -64,6 +64,16 @@ int PlayerBullet::getRemainingLives() const
     return 0;
 }
 
+bool PlayerBullet::isPoisoned() const
+{
+    return false;
+}
+
+void PlayerBullet::poison()
+{
+
+}
+
 
 PlayerBullet::~PlayerBullet()
 {

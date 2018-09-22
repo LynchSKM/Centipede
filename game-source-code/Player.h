@@ -92,6 +92,17 @@ class Player : public IMovingEntity
          */
 		virtual void reincarnate() override;
 
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         *  used to return the poisoned status of a Player object.
+         *  \return bool stating whether the Player object is poisoned or not.
+         */
+        virtual bool isPoisoned() const override;
+
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         *  used to poison a Player object by changing the poisoned status to true.
+         */
+        virtual void poison() override;
+
         /** \brief Creates player bullets and stores them in a vector.
          *  \return a vector of shared_ptr to IMovingEntity.
          */
