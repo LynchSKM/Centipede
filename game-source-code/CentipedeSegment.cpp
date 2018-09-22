@@ -10,6 +10,9 @@ objectType_{ObjectType::CENTIPEDE},
 position_{position}, grid_{grid}
 {
     prev_Direction_ = Direction::DOWN;
+    moveDownCount_ = 0;
+    changeWhenPoisoned_ = false;
+    centAtbottom_ = false;
 
 }
 
@@ -122,8 +125,10 @@ void CentipedeSegment::moveDown()
          }
 
     }else{
-        isPoisoned_=false;
+        centAtbottom_ = true;
         moveUp();
+        centAtbottom_ = false;
+        isPoisoned_=false;
     }
 }
 
@@ -133,6 +138,7 @@ void CentipedeSegment::moveLeft()
     float maxWidth = grid_.getWidth()-(dimensions.width/2.0f);
     auto newXPos = position_.getX_pos()- dimensions.speed;
 
+    if(isPoisoned() && centAtbottom_)newXPos = position_.getX_pos()-(dimensions.width+1);
 
     newXPos = (round(newXPos*10))/10;
 
@@ -155,6 +161,8 @@ void CentipedeSegment::moveRight()
     struct CentipedeSegmentDemensions dimensions;
     float maxWidth = grid_.getWidth()-(dimensions.width/2.0f);
     auto newXPos = position_.getX_pos()+ dimensions.speed;
+
+    if(isPoisoned() && centAtbottom_)newXPos = position_.getX_pos()+ (dimensions.width+1);
 
     newXPos = (round(newXPos*10))/10;
 
@@ -206,10 +214,34 @@ void CentipedeSegment::move()
     else
     {
         //poisoned movement
-        setDirection(Direction::DOWN);
-        moveDown();
+        //setDirection(Direction::DOWN);
+        isPoisonedMovement();
     }
 }
+
+void CentipedeSegment::isPoisonedMovement()
+{
+    if(moveDownCount_ == 0)
+    {
+        moveDown();
+        changeWhenPoisoned_ = !changeWhenPoisoned_;
+    }
+    else
+    {
+        if(changeWhenPoisoned_){
+
+            moveLeft();
+        }
+
+        if(!changeWhenPoisoned_){
+            moveRight();
+
+        }
+
+    }
+    moveDownCount_ = (++moveDownCount_)%20;
+}
+
 
 void CentipedeSegment::setDirection(Direction direction)
 {

@@ -157,7 +157,9 @@ class CentipedeSegment : public IMovingEntity
         float rotationAngle_ = 0.0;
         bool isPoisoned_ = false;
         bool alive_ = true;
-        bool isAtCellCentre_;
+        int moveDownCount_;
+        bool changeWhenPoisoned_;
+        bool centAtbottom_;
         vector<Position> head_collision_positions_;
         vector<bool> are_head_collision_positions_poisioned_;
 
@@ -185,6 +187,10 @@ class CentipedeSegment : public IMovingEntity
          * where the head collided. If it has the changeDirection() function is called.
          */
         void checkHeadCollisions();
+
+        /** \brief moves the centipede accordingly when it is poisoned.
+         */
+        void isPoisonedMovement();
 };
 
 #endif // CENTIPEDESEGMENT_H

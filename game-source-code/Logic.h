@@ -21,7 +21,7 @@ using std::shared_ptr;
  *  \brief This class controls the behaviour of the game objects created
  *  before they get displayed on the screen.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
- *  Version
+ *  \version
  */
 
 class Logic

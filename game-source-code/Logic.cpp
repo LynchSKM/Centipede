@@ -57,12 +57,11 @@ void Logic::run()
             getInputCommands();
             if(presentation_.isWindowOpen()==false) return;
             generateNormalCentipede();
-            generateCentipedeHeads();
             updateGameObjects();
             checkCollisions();
             generateMushroomAtCollision();
-            updateScores();
             reincarnatePlayer();
+            updateScores();
             removeDeadEntities();
             renderGameObjects();
         }//while
@@ -201,7 +200,8 @@ void Logic::updateScores()
                                           moving_game_objects_.end(),
                                           [](const IMovingEntity_ptr& object)
                                           {
-                                            return(object->getObjectType()==ObjectType::CENTIPEDE);
+                                            return(object->getObjectType()==ObjectType::CENTIPEDE
+                                                    && object->isAlive());
                                           });
 
     // Check highscore:
