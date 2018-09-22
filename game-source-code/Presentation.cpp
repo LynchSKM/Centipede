@@ -113,7 +113,8 @@ void Presentation::loadTextures(vector<AssetManager>game_assets)
         else{
             sf::Texture texture;
             texture.loadFromFile(asset.getAssetPath());
-            texture.setSmooth(true);
+            if(asset.getAssetType() != AssetManager::AssetType::BULLET)
+                texture.setSmooth(true);
             auto temp = static_cast<int>(asset.getAssetType());
             auto temp_Object = static_cast<ObjectType>(temp-2);
             auto temp_pair = pair<ObjectType, sf::Texture>(temp_Object, texture);

@@ -72,6 +72,11 @@ void GameWonScreen::show(sf::RenderWindow& render_window,
                 render_window.close();
                 return;
             }//if
+            if(event.type == sf::Event::Closed)
+            {
+                render_window.close();
+                return;
+            }
         }//while
     }//while
 
