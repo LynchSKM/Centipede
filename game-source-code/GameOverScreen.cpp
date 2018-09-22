@@ -17,7 +17,7 @@ void GameOverScreen::show(sf::RenderWindow& render_window,
     //Load font:
     font_.loadFromFile("Assets/Font.otf"s);
 
-    auto game_won_title = "Game Over! \n You lose."s;
+    auto game_won_title = "\tGame Over! \n \t\tYou are \n centipe-DEAD."s;
     sf::Text title(game_won_title, font_);
     title.setCharacterSize(48);
     sf::FloatRect titleRect = title.getLocalBounds();
@@ -66,15 +66,10 @@ void GameOverScreen::show(sf::RenderWindow& render_window,
     sf::Event event;
     while(true){
         while(render_window.pollEvent(event)){
-            if(event.key.code == sf::Keyboard::Enter){
+            if(event.key.code == sf::Keyboard::Enter || event.type == sf::Event::Closed){
                 render_window.close();
                 return;
             }//if
-             if(event.type == sf::Event::Closed)
-             {
-                render_window.close();
-                return;
-             }
         }//while
     }//while
 

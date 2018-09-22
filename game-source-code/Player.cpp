@@ -1,6 +1,6 @@
 #include "Player.h"
 
-Player::Player(const Grid& grid):grid_{grid},objectType_{ObjectType::PLAYER}, numberOfLives_{5}, direction_{Direction::NONE}
+Player::Player(const Grid& grid):grid_{grid},objectType_{ObjectType::PLAYER}, numberOfLives_{3}, direction_{Direction::NONE}
 {
     position_.setX_pos(grid_.getWidth()/2.0);
     struct PlayerDimension playerDimension;

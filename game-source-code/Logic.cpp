@@ -60,8 +60,8 @@ void Logic::run()
             updateGameObjects();
             checkCollisions();
             generateMushroomAtCollision();
-            reincarnatePlayer();
             updateScores();
+            reincarnatePlayer();
             removeDeadEntities();
             renderGameObjects();
         }//while
@@ -200,19 +200,18 @@ void Logic::updateScores()
                                           moving_game_objects_.end(),
                                           [](const IMovingEntity_ptr& object)
                                           {
-                                            return(object->getObjectType()==ObjectType::CENTIPEDE
-                                                    && object->isAlive());
+                                            return(object->getObjectType()==ObjectType::CENTIPEDE);
                                           });
 
     // Check highscore:
     auto highScorePassed = player_->getScore()>highScoreManager_.getHighScore();
     auto CentipedeDead   = numberOfCentipedesSeg == 0;
-    auto playerIsAlive   = player_->isAlive();
 
-    if(CentipedeDead && playerIsAlive || (!playerIsAlive && highScorePassed))
-        screen_state_= ScreenState::GAMEWONSCREEN;
-    else if(!playerIsAlive && !CentipedeDead && !highScorePassed)
+    if(!player_->isAlive())
         screen_state_= ScreenState::GAMEOVERSCREEN;
+    else if(CentipedeDead && player_->isAlive() || (!player_->isAlive() && highScorePassed))
+        screen_state_= ScreenState::GAMEWONSCREEN;
+
 
     if(highScorePassed)
     {

@@ -68,15 +68,10 @@ void GameWonScreen::show(sf::RenderWindow& render_window,
     sf::Event event;
     while(true){
         while(render_window.pollEvent(event)){
-            if(event.key.code == sf::Keyboard::Enter){
+            if(event.key.code == sf::Keyboard::Enter || event.type == sf::Event::Closed){
                 render_window.close();
                 return;
             }//if
-            if(event.type == sf::Event::Closed)
-            {
-                render_window.close();
-                return;
-            }
         }//while
     }//while
 
