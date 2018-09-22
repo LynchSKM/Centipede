@@ -220,6 +220,7 @@ TEST_CASE("Collision between Centipede and Mushroom is detected")
     moves_to_be_made -= (dimension_centipede.width/2.0f);
     moves_to_be_made -= (mushroom->getPosition().getX_pos()+dimension_mushroom.width/2.0f);
     moves_to_be_made /= dimension_centipede.speed;
+    moves_to_be_made = static_cast<int>(moves_to_be_made);
 
     for(auto moves_made = 0; moves_made<=moves_to_be_made+1; moves_made++)
     {
@@ -230,6 +231,125 @@ TEST_CASE("Collision between Centipede and Mushroom is detected")
     }//for
 
     CHECK(mushroom->isAlive());
+
+    // Check if directions have changed:
+    for(auto& object : moving_game_objects)
+        CHECK(object->getDirection()==Direction::RIGHT);
+
+}
+
+TEST_CASE("Collision between Centipede and poisoned Mushroom is detected")
+{
+    const Grid grid{1920, 1080};
+    CollisionHandler collision_handler{grid};
+    struct CentipedeSegmentDemensions dimension_centipede;
+    struct MushroomDimensions dimension_mushroom;
+    vector<IEntity_ptr> game_objects;
+    vector<IMovingEntity_ptr> moving_game_objects;
+
+    auto x = 71.3f;
+    auto y = 56.0f;
+    auto centipede_head_ptr = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
+                                      Position{x, y}, Direction::LEFT);
+
+    game_objects.push_back(centipede_head_ptr);
+    moving_game_objects.push_back(centipede_head_ptr);
+
+    auto counter = 0.0f;
+    while(game_objects.size() != 2)
+    {
+        counter +=(dimension_centipede.width+1);
+        auto segment = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
+                                      Position{x+counter, y}, Direction::LEFT);
+
+        game_objects.push_back(segment);
+        moving_game_objects.push_back(segment);
+    }//while
+    auto centipede_tail_index = game_objects.size()-1;
+
+    // Create poisoned Mushroom at position in direction of head to check collisions:
+    auto mushroom = make_shared<Mushroom>(Position{56.0f, y});
+    mushroom->poison();
+    game_objects.push_back(mushroom);
+
+    auto moves_to_be_made = game_objects.at(centipede_tail_index)->getPosition().getX_pos();
+    moves_to_be_made -= (dimension_centipede.width/2.0f);
+    moves_to_be_made -= (mushroom->getPosition().getX_pos()+dimension_mushroom.width/2.0f);
+    moves_to_be_made /= dimension_centipede.speed;
+    moves_to_be_made = static_cast<int>(moves_to_be_made);
+
+    for(auto moves_made = 0; moves_made<=moves_to_be_made+1; moves_made++)
+    {
+        collision_handler.checkCollisions(game_objects, moving_game_objects);
+        // move
+        for(auto& object : moving_game_objects)
+            object->move();
+    }//for
+
+    CHECK(mushroom->isAlive());
+    CHECK(mushroom->isPoisoned());
+    // Check if directions have changed:
+    for(auto& object : moving_game_objects)
+    {
+        CHECK(object->isPoisoned());
+    }
+
+}
+
+TEST_CASE("Centipede train follows head's collision with Mushroom even after Mushroom dies.")
+{
+    const Grid grid{592, 640};
+    CollisionHandler collision_handler{grid};
+    struct CentipedeSegmentDemensions dimension_centipede;
+    struct MushroomDimensions dimension_mushroom;
+    vector<IEntity_ptr> game_objects;
+    vector<IMovingEntity_ptr> moving_game_objects;
+
+    auto x = 400.0f;
+    auto y = 56.0f;
+    auto centipede_seg_ptr = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
+                                      Position{x, y}, Direction::LEFT);
+
+    game_objects.push_back(centipede_seg_ptr);
+    moving_game_objects.push_back(centipede_seg_ptr);
+
+    auto counter = 0.0f;
+    while(game_objects.size() != 5)
+    {
+        counter +=(dimension_centipede.width+1);
+        auto segment = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::BODY,
+                                      Position{x+counter, y}, Direction::LEFT);
+
+        game_objects.push_back(segment);
+        moving_game_objects.push_back(segment);
+    }//while
+    auto centipede_tail_index = game_objects.size()-1;
+
+    // Create Mushroom at position in direction of head to check collisions:
+    auto mushroom = make_shared<Mushroom>(Position{382.0f, y});
+    game_objects.push_back(mushroom);
+
+    auto moves_to_be_made = game_objects.at(centipede_tail_index)->getPosition().getX_pos();
+    moves_to_be_made -= (dimension_centipede.width/2.0f);
+    moves_to_be_made -= (mushroom->getPosition().getX_pos()+dimension_mushroom.width/2.0f);
+    moves_to_be_made /= dimension_centipede.speed;
+
+    for(auto moves_made = 0; moves_made<=moves_to_be_made+1; moves_made++)
+    {
+        collision_handler.checkCollisions(game_objects, moving_game_objects);
+        // move
+        int half_way = moves_to_be_made/2.0f;
+        if(moves_made == half_way)
+        {
+            for(auto i = 0; i<4; i++)
+                mushroom->eliminated();
+        }
+
+        for(auto& object : moving_game_objects)
+            object->move();
+    }//for
+
+    CHECK_FALSE(mushroom->isAlive());
 
     // Check if directions have changed:
     for(auto& object : moving_game_objects)
@@ -285,7 +405,7 @@ TEST_CASE("Collision between Player and Centipede is detected successfully")
     moving_game_objects.push_back(player);
 
     auto player_pos = player->getPosition();
-    auto x = player_pos.getX_pos()+(dimensions_centipede_seg.width)-1.0f;
+    auto x = player_pos.getX_pos()+(dimensions_centipede_seg.width)-dimensions_player.speed;
     auto y = player_pos.getY_pos();
 
     auto centipede_head = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,

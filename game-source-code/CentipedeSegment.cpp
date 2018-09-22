@@ -40,6 +40,7 @@ bool CentipedeSegment::isEntryMovement()
 void CentipedeSegment::clearHeadCollisions()
 {
     head_collision_positions_.clear();
+    are_head_collision_positions_poisioned_.clear();
 }
 
 void CentipedeSegment::collisionAt(Position position, bool poisionedCollision)
@@ -64,8 +65,9 @@ void CentipedeSegment::checkHeadCollisions()
 
     if(position_ == (*iter_vec_position))
     {
-        changeDirection();
-        isPoisoned_ = *iter_vec_posioned_pos;
+        if(*iter_vec_posioned_pos) poison();
+        else changeDirection();
+
         head_collision_positions_.erase(iter_vec_position);
         are_head_collision_positions_poisioned_.erase(iter_vec_posioned_pos);
     }//if
@@ -103,7 +105,8 @@ void CentipedeSegment::moveDown()
     float maxHeight = grid_.getHeight()-(dimensions.height/2.0f);
     auto newYPos = position_.getY_pos() + dimensions.speedY;
 
-    if(newYPos <= maxHeight){
+    if(newYPos <= maxHeight)
+    {
         position_.setY_pos(newYPos);
         if(prev_Direction_==Direction::LEFT){
             setDirection(Direction::RIGHT);
@@ -268,6 +271,7 @@ void CentipedeSegment::poison()
 {
     isPoisoned_ = true;
 }
+
 bool CentipedeSegment::isPoisoned() const
 {
     return isPoisoned_;

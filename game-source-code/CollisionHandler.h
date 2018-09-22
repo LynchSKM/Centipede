@@ -22,7 +22,7 @@ using std::begin;
 using std::end;
 using std::vector;
 using std::shared_ptr;
-
+using std::dynamic_pointer_cast;
 using IMovingEntity_ptr = shared_ptr<IMovingEntity>;
 
 /**\class CollisionHandler
