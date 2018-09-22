@@ -1,6 +1,7 @@
 #include "Logic.h"
 
-Logic::Logic():screen_state_{ScreenState::SPLASHSCREEN} {
+Logic::Logic():screen_state_{ScreenState::SPLASHSCREEN}
+{
     player_ = std::make_shared<Player>(grid_);
     game_objects_.push_back(player_);
     moving_game_objects_.push_back(player_);
@@ -9,7 +10,8 @@ Logic::Logic():screen_state_{ScreenState::SPLASHSCREEN} {
     //ctor
 }
 
-void Logic::getInputCommands() {
+void Logic::getInputCommands()
+{
     presentation_.processInputEvents();
 
     if(presentation_.isLeftPressed()) player_->setDirection(Direction::LEFT);
@@ -32,7 +34,8 @@ void Logic::getInputCommands() {
     debounceSpaceKey_ = presentation_.isSpacePressed();
 }
 
-void Logic::run() {
+void Logic::run()
+{
     if(screen_state_==ScreenState::SPLASHSCREEN) renderSplashScreen();
     loadAssets();
     high_score_ = highScoreManager_.getHighScore();
@@ -69,23 +72,27 @@ void Logic::run() {
     if(screen_state_ == ScreenState::GAMEWONSCREEN)  renderGameWonScreen();
 
 }
-void Logic::loadAssets() {
+void Logic::loadAssets()
+{
     presentation_.loadTextures(assetManager_.getAssetInfo());
 }
 
-void Logic::renderSplashScreen() {
+void Logic::renderSplashScreen()
+{
     presentation_.drawSplashScreen();
     screen_state_ = ScreenState::GAME_ACTIVE;
 }
 
-void Logic::updateGameObjects() {
+void Logic::updateGameObjects()
+{
     for(auto& object : moving_game_objects_) {
         if(object->isAlive())
             object->move();
     }
 }
 
-void Logic::removeDeadEntities() {
+void Logic::removeDeadEntities()
+{
     container_erase_if(game_objects_,
     [](shared_ptr<IEntity>& game_object) {
         return (!game_object->isAlive());
@@ -97,47 +104,57 @@ void Logic::removeDeadEntities() {
     });
 }
 
-void Logic::renderGameObjects() {
+void Logic::renderGameObjects()
+{
     presentation_.renderWindow(game_objects_,
                                player_->getRemainingLives(), player_->getScore(),
                                high_score_);
 }
 
-void Logic::renderGameOverScreen() {
+void Logic::renderGameOverScreen()
+{
     presentation_.drawGameOverScreen(player_->getScore(), high_score_);
 }
 
-void Logic::renderGameWonScreen() {
+void Logic::renderGameWonScreen()
+{
     presentation_.drawGameWonScreen(player_->getScore(), high_score_);
 }
-void Logic::generateNormalCentipede() {
+void Logic::generateNormalCentipede()
+{
 
-    for(auto& segment: enemyFactory_.generateNormalCentipede()) {
+    for(auto& segment: enemyFactory_.generateNormalCentipede())
+    {
         game_objects_.push_back(segment);
         moving_game_objects_.push_back(segment);
     }
 }
 
-void Logic::generateCentipedeHeads() {
-    for(auto& segment: enemyFactory_.generateCentipedeHeads()) {
+void Logic::generateCentipedeHeads()
+{
+    for(auto& segment: enemyFactory_.generateCentipedeHeads())
+    {
         game_objects_.push_back(segment);
         moving_game_objects_.push_back(segment);
     }//for
 }
 void Logic::generateMushrooms() {
-    for(auto& mushroom: enemyFactory_.generateMushrooms()) {
+    for(auto& mushroom: enemyFactory_.generateMushrooms())
+    {
         game_objects_.push_back(mushroom);
     }
 }
 
-void Logic::checkCollisions() {
+void Logic::checkCollisions()
+{
     collisionHandler_.checkCollisions(game_objects_, moving_game_objects_);
     player_->addScore(collisionHandler_.getPointsObtained());
 }
 
 void Logic::generateMushroomAtCollision()
 {
-    for(auto& object: game_objects_) {
+    for(auto& object: game_objects_)
+    {
         if(object->getObjectType() == ObjectType::CENTIPEDE)
             if(!object->isAlive())
                 game_objects_.push_back(enemyFactory_.generateAMushroom(object->getPosition()));
@@ -192,18 +209,15 @@ void Logic::updateScores()
     auto CentipedeDead   = numberOfCentipedesSeg == 0;
     auto playerIsAlive   = player_->isAlive();
 
-    if(!playerIsAlive || (CentipedeDead && playerIsAlive))
+    if(CentipedeDead && playerIsAlive || (!playerIsAlive && highScorePassed))
+        screen_state_= ScreenState::GAMEWONSCREEN;
+    else if(!playerIsAlive && !CentipedeDead && !highScorePassed)
+        screen_state_= ScreenState::GAMEOVERSCREEN;
+
+    if(highScorePassed)
     {
-        if(highScorePassed)
-        {
-            highScoreManager_.setHighScore(player_->getScore());
-            screen_state_= ScreenState::GAMEWONSCREEN;
-        }//if
-        else
-        {
-            screen_state_= ScreenState::GAMEOVERSCREEN;
-        }//else
-    }//if
+        highScoreManager_.setHighScore(player_->getScore());
+    }
 }
 
 Logic::~Logic()
