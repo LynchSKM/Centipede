@@ -14,7 +14,7 @@ TEST_CASE("Mushroom can be created at a specified position."){
 TEST_CASE("Mushroom's number of lives can be decreased and retrieved."){
 
     Mushroom testMushroom(Position(8.0f, 24.0f));
-    testMushroom.decrementLives();
+    testMushroom.eliminated();
     CHECK(testMushroom.getRemainingLives()==3);
 
 }
@@ -23,10 +23,10 @@ TEST_CASE("Mushroom's dies after being shot 4 times"){
 
     Mushroom testMushroom(Position(8.0f, 24.0f));
 
-    testMushroom.decrementLives();
-    testMushroom.decrementLives();
-    testMushroom.decrementLives();
-    testMushroom.decrementLives();
+    testMushroom.eliminated();
+    testMushroom.eliminated();
+    testMushroom.eliminated();
+    testMushroom.eliminated();
     CHECK(!testMushroom.isAlive());
 
 }
