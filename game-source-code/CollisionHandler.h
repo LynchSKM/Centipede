@@ -118,6 +118,8 @@ class CollisionHandler
          */
         void playerCollidesWithObjects(vector<IMovingEntity_ptr>& player);
 
+        void updateCentipedeTrain(vector<IMovingEntity_ptr>& centipede);
+
 };
 
 #endif // COLLISIONHANDLER_H
