@@ -6,8 +6,6 @@
 #include "SpatialHash.h"
 #include "SeparatingAxisTheorem.h"
 #include "CentipedeSegment.h"
-#include "Mushroom.h"
-#include "Player.h"
 #include "Dimensions.h"
 #include "ObjectType.h"
 

@@ -1,4 +1,7 @@
 #include "CollisionHandler.h"
+#include "Mushroom.h"
+#include "Player.h"
+#include "Scorpion.h"
 
 using std::make_shared;
 using std::dynamic_pointer_cast;
@@ -355,6 +358,44 @@ TEST_CASE("Centipede train follows head's collision with Mushroom even after Mus
     for(auto& object : moving_game_objects)
         CHECK(object->getDirection()==Direction::RIGHT);
 
+}
+
+// ================ SCORPION COLLISION ================
+
+TEST_CASE("Collision between Scorpion and Mushroom poisons the Mushroom")
+{
+    const Grid grid{592, 640};
+    CollisionHandler collision_handler{grid};
+    SeparatingAxisTheorem sat_algorithm{};
+    struct MushroomDimensions dimensions_mushroom;
+    struct ScorpionDimensions dimensions_scorpion;
+    vector<IEntity_ptr> game_objects;
+    vector<IMovingEntity_ptr> moving_game_objects;
+
+    auto x = 400.0f;
+    auto y = 56.0f;
+    auto mushroom = make_shared<Mushroom>(Position(x, y));
+    auto scorpion = make_shared<Scorpion>(grid,Position(x+(24.1), y),Direction::LEFT );
+
+    game_objects.push_back(mushroom);
+    game_objects.push_back(scorpion);
+    moving_game_objects.push_back(scorpion);
+
+    auto moves_to_be_made = game_objects.at(1)->getPosition().getX_pos();
+    moves_to_be_made -= (dimensions_scorpion.width/2.0f);
+    moves_to_be_made -= (mushroom->getPosition().getX_pos()+dimensions_mushroom.width/2.0f);
+    moves_to_be_made /= dimensions_scorpion.speed;
+    moves_to_be_made = static_cast<int>(moves_to_be_made);
+
+    for(auto moves_made = 0; moves_made<=moves_to_be_made+1; moves_made++)
+    {
+        collision_handler.checkCollisions(game_objects, moving_game_objects);
+        // move
+        for(auto& object : moving_game_objects)
+            object->move();
+    }//for
+
+    CHECK(mushroom->isPoisoned());
 }
 
 // ================ PLAYER COLLISIONS ================
