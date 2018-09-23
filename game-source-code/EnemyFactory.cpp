@@ -4,7 +4,8 @@ EnemyFactory::EnemyFactory(const Grid& grid):
 grid_{grid},
 isCentipedeGenerated_{false},
 mushroomfactory_{grid},
-isCentipedeHeadsGenerated_{false}
+isCentipedeHeadsGenerated_{false},
+isScorpionGenerated_{false}
 {
     //ctor
 }
@@ -85,8 +86,39 @@ shared_ptr<Mushroom> EnemyFactory::generateAMushroom(Position position)
     return mushroom_ptr;
 }
 
+vector <shared_ptr<Scorpion>> EnemyFactory::generateAScorpion()
+{
+    vector<shared_ptr<Scorpion>> scorpions;
+    if(!isScorpionGenerated_)
+    {
+        struct ScorpionDimensions dimensions;
+        auto row = rand()%10 + 10;
+        auto xPos = 0.0f;
+        auto yPos = round(row*16 +24.0);
+        auto direction = static_cast<Direction>(rand()%2 + 2);
+
+        if(direction == Direction::LEFT)
+            xPos = grid_.getWidth() -(dimensions.width/2.0 + 1);
+        else if(direction == Direction::RIGHT)
+            xPos = (dimensions.width/2.0 + 1);
+        else
+        {
+           direction = Direction::RIGHT;
+           xPos = (dimensions.width/2.0 + 1);
+        }
+
+        auto scorpion_ptr = make_shared<Scorpion>(grid_,Position(xPos,yPos),direction);
+        scorpions.push_back(scorpion_ptr);
+        //return scorpions;
+
+        isScorpionGenerated_ = true;
+    }
+    return scorpions;
+}
+
 void EnemyFactory::reset()
 {
     isCentipedeGenerated_ = false;
     isCentipedeHeadsGenerated_ = false;
+    isScorpionGenerated_ = false;
 }

@@ -12,3 +12,13 @@ TEST_CASE("Centipede segments can be created."){
 
     CHECK(!CentiSegments.empty());
 }
+
+TEST_CASE("A scorpion can be created."){
+
+    Grid testGrid{592,640};
+    EnemyFactory testEFactory{testGrid};
+
+    auto scorpions  = testEFactory.generateAScorpion();
+
+    CHECK(!scorpions.empty());
+}

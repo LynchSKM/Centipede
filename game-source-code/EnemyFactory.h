@@ -5,6 +5,7 @@
 #include <memory>
 #include "CentipedeSegment.h"
 #include "MushroomFactory.h"
+#include "Scorpion.h"
 
 using std::vector;
 using std::shared_ptr;
@@ -50,6 +51,11 @@ class EnemyFactory
          */
         shared_ptr<Mushroom> generateAMushroom(Position position);
 
+        /** \brief generates a scorpion at a random position.
+         * \return a shared ptr to a scorpion object.
+         */
+        vector <shared_ptr<Scorpion>> generateAScorpion();
+
         /** \brief Resets states of generated centipedes to false.
          */
          void reset();
@@ -59,6 +65,7 @@ class EnemyFactory
         int max_number_enemies_;
         bool isCentipedeGenerated_;
         bool isCentipedeHeadsGenerated_;
+        bool isScorpionGenerated_;
         MushroomFactory mushroomfactory_;
 
 
