@@ -32,11 +32,12 @@ TEST_CASE("Player's lives can be decreased, retrieved and knows if it's alive"){
 
     Grid testGrid{650,600};
     Player testPlayer{testGrid};
-    // Player initially has 5 lives;
+    auto numberOfLives = testPlayer.getRemainingLives();
+    // Player initially has 3 lives;
     testPlayer.eliminated();
     testPlayer.reincarnate();
 
-    CHECK(testPlayer.getRemainingLives() == 4);
+    CHECK(testPlayer.getRemainingLives() == (numberOfLives-1));
     CHECK(testPlayer.isAlive());
 
 }
