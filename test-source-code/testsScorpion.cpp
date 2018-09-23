@@ -31,7 +31,7 @@ TEST_CASE("Scorpion can move in the given Direction"){
 TEST_CASE("Scorpion gets eliminated when it goes out of boundary"){
 
     Grid testGrid{592,640};
-    Scorpion testScorpion(testGrid, Position(575.5,56.0),Direction::RIGHT);
+    Scorpion testScorpion(testGrid, Position(591.9,56.0),Direction::RIGHT);
 
     testScorpion.move();
     testScorpion.move();
