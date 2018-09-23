@@ -27,7 +27,8 @@ class AssetManager{
           PLAYER,
           BULLET,
           CENTIPEDE,
-          MUSHROOM
+          MUSHROOM,
+          SCORPION
 		};/**< A strongly typed enumeration class used to list the different assets in the game. */
 
 

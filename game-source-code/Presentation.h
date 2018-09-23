@@ -23,6 +23,7 @@ using std::pair;
 #include "GameWonScreen.h"
 #include "GameOverScreen.h"
 #include "SpriteSheet.h"
+#include "Scorpion.h"
 
 /** \class Presentation
  *  \brief Uses the SFML Graphics Library to draw all game objects on the screen.

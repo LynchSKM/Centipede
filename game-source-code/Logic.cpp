@@ -57,6 +57,7 @@ void Logic::run()
             getInputCommands();
             if(presentation_.isWindowOpen()==false) return;
             generateNormalCentipede();
+            generateAScorpion();
             updateGameObjects();
             checkCollisions();
             generateMushroomAtCollision();
@@ -158,6 +159,15 @@ void Logic::generateMushroomAtCollision()
             if(!object->isAlive())
                 game_objects_.push_back(enemyFactory_.generateAMushroom(object->getPosition()));
     }
+}
+
+void Logic::generateAScorpion()
+{
+    for(auto& scorpion: enemyFactory_.generateAScorpion())
+    {
+        game_objects_.push_back(scorpion);
+        moving_game_objects_.push_back(scorpion);
+    }//for
 }
 
 void Logic::reincarnatePlayer()

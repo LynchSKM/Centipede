@@ -118,7 +118,11 @@ class CollisionHandler
          */
         void playerCollidesWithObjects(vector<IMovingEntity_ptr>& player);
 
-        void updateCentipedeTrain(vector<IMovingEntity_ptr>& centipede);
+        /** \brief Checks collisions between a scorpion and mushroom.
+         * If a collision occurs with a mushroom, the mushroom is set to poisoned.
+         * \param scorpion vector of shared pointer(s) to an IMovingEntity object of ObjectType::SCORPION.
+         */
+        void scorpionCollidesWithMushroom(vector<IMovingEntity_ptr>& scorpions);
 
 };
 

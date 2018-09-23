@@ -12,7 +12,8 @@ enum class ObjectType
     PLAYER = 0, /**< is coded as int of value 0.*/
     PLAYER_LASER_BULLET, /**< is coded as int of value 1.*/
     CENTIPEDE,  /**< is coded as int of value 2.*/
-    MUSHROOM    /**< is coded as int of value 3.*/
+    MUSHROOM,    /**< is coded as int of value 3.*/
+    SCORPION    /**< is coded as int of value 4 */
 };
 
 #endif // OBJECTTYPE_H

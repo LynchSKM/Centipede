@@ -118,6 +118,10 @@ class Logic
          */
         void generateMushroomAtCollision();
 
+        /** \brief generates a scorpion at a random position.
+         */
+        void generateAScorpion();
+
 
 };
 

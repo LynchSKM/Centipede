@@ -32,4 +32,12 @@ struct MushroomDimensions{
 
 };
 
+struct ScorpionDimensions{
+
+    const float height = 16.0;
+    const float width = 32.0;
+    const float speed = 0.1;
+
+};
+
 #endif

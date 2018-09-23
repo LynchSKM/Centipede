@@ -22,7 +22,8 @@ vector<AssetManager> AssetManager::getAssetInfo(){
 								"Assets/PlayerAlt.png",
 								"Assets/bullet.png",
 								"Assets/Centipede.png",
-								"Assets/Mushroom.png"
+								"Assets/Mushroom.png",
+								"Assets/Scorpion.png"
 								};
 
 	vector<AssetManager> assets;

@@ -10,13 +10,13 @@ Scorpion::Scorpion(const Grid& grid, Position position, Direction direction):gri
 void Scorpion::moveLeft()
 {
     struct ScorpionDimensions dimensions;
-    float maxWidth = grid_.getWidth()-(dimensions.width/2.0f);
+    float maxWidth = grid_.getWidth();
     auto newXPos = position_.getX_pos()- dimensions.speed;
 
     newXPos = (round(newXPos*10))/10;
 
 
-    if(newXPos < maxWidth && newXPos > (dimensions.width/2.0f))
+    if(newXPos < maxWidth && newXPos > 0)
     {
         position_.setX_pos(newXPos);
     }
@@ -29,13 +29,13 @@ void Scorpion::moveLeft()
 void Scorpion::moveRight()
 {
     struct ScorpionDimensions dimensions;
-    float maxWidth = grid_.getWidth()-(dimensions.width/2.0f);
+    float maxWidth = grid_.getWidth();
     auto newXPos = position_.getX_pos()+ dimensions.speed;
 
     newXPos = (round(newXPos*10))/10;
 
 
-    if(newXPos < maxWidth && newXPos > (dimensions.width/2.0f))
+    if(newXPos < maxWidth && newXPos > 0)
     {
         position_.setX_pos(newXPos);
     }

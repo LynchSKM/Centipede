@@ -91,6 +91,13 @@ void Presentation::populateSpriteSheets(const ObjectType& object_type)
                                  Direction::NONE);
             break;
 
+        case ObjectType::SCORPION:
+            row = 0u;
+             // Scorpion
+            generateSpriteSheet(object_type, row, sf::Vector2u{4,1}, switch_time,
+                                 Direction::LEFT);
+            break;
+
         default:
             break;
 
@@ -113,7 +120,8 @@ void Presentation::loadTextures(vector<AssetManager>game_assets)
         else{
             sf::Texture texture;
             texture.loadFromFile(asset.getAssetPath());
-            if(asset.getAssetType() != AssetManager::AssetType::BULLET)
+            if(asset.getAssetType() != AssetManager::AssetType::BULLET
+            && asset.getAssetType() != AssetManager::AssetType::SCORPION)
                 texture.setSmooth(true);
             auto temp = static_cast<int>(asset.getAssetType());
             auto temp_Object = static_cast<ObjectType>(temp-2);
@@ -148,14 +156,18 @@ sf::Sprite Presentation::generateSpriteFromSpriteSheet(shared_ptr<IEntity> objec
         rect = iter_vec->getTextureRect(centipede_segment->getDirection());
         gameObjectsSprite.setRotation(centipede_segment->getRotationAngle());
 
-    }else if(entity_type == ObjectType::MUSHROOM){
-        auto mushroom = std::dynamic_pointer_cast<Mushroom>(object);
-        if(mushroom->isPoisoned())
+    }else if(entity_type == ObjectType::MUSHROOM)
+    {
+        if(object->isPoisoned())
             ++iter_vec;
         auto maxMushLives = 4;
         auto mushCol = maxMushLives - object->getRemainingLives();
         rect = iter_vec->getTextureRect(mushCol);
 
+    }else if(entity_type == ObjectType::SCORPION)
+    {
+        auto scorpion = std::dynamic_pointer_cast<IMovingEntity>(object);
+        rect = iter_vec->getTextureRect(scorpion->getDirection());
     }
 
     // Set Texture rect:
@@ -209,10 +221,19 @@ void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
 }
 
 void Presentation::updateAnimations(float delta_time){
-for(auto& sprite_image : sprite_sheets_){
+
+    for(auto& sprite_image : sprite_sheets_)
+    {
         if(sprite_image.getObjectType()!=ObjectType::MUSHROOM)
-            sprite_image.update(delta_time);
-    }
+        {
+            auto temp = delta_time;
+            if(sprite_image.getObjectType()==ObjectType::SCORPION)
+                temp/=4.0f;
+
+            sprite_image.update(temp);
+        }//if
+
+    }//for
 }
 
 void Presentation::drawSplashScreen()
@@ -245,7 +266,7 @@ void Presentation::displayLives(const int remaining_lives, const int player_scor
 
     // Draw lives using a sprite and player texture:
     auto xPos = (iter_map->second).getSize().x;
-    for(auto i=0; i!=remaining_lives; i++){
+    for(auto i=0; i<(remaining_lives-1); i++){
         lives_sprite.setPosition(xPos, (iter_map->second).getSize().y/half);
         window_.draw(lives_sprite);
         xPos+=(iter_map->second).getSize().x;
