@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <memory>
+#include <ctime>
 #include "CentipedeSegment.h"
 #include "MushroomFactory.h"
 #include "Scorpion.h"

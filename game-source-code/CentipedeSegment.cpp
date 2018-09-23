@@ -222,24 +222,24 @@ void CentipedeSegment::move()
 void CentipedeSegment::isPoisonedMovement()
 {
     if(moveDownCount_ == 0)
-    {
+    {   setDirection(Direction::DOWN);
         moveDown();
         changeWhenPoisoned_ = !changeWhenPoisoned_;
     }
     else
     {
-        if(changeWhenPoisoned_){
-
+        if(changeWhenPoisoned_)
+        {
+            setDirection(Direction::LEFT);
             moveLeft();
-        }
-
-        if(!changeWhenPoisoned_){
+        }//if
+        if(!changeWhenPoisoned_)
+        {
+            setDirection(Direction::RIGHT);
             moveRight();
-
-        }
-
-    }
-    moveDownCount_ = (++moveDownCount_)%20;
+        }//if
+    }//if
+    moveDownCount_ = (++moveDownCount_)%50;
 }
 
 
