@@ -47,7 +47,7 @@ TEST_CASE("Centipede Segment can be moved up, down, left and right.")
     CHECK(centipede_seg.getPosition() == Position{x, y});
 }
 
-TEST_CASE("Centipede Segment move down when poisoned.")
+TEST_CASE("Centipede Segment moves down when poisoned.")
 {
 
     Grid testGrid{650,600};
@@ -56,11 +56,9 @@ TEST_CASE("Centipede Segment move down when poisoned.")
 
     struct CentipedeSegmentDemensions temp;
     auto x = centipede_seg.getPosition().getX_pos();
-    auto y = centipede_seg.getPosition().getY_pos()+2.0f*temp.speedY;
+    auto y = centipede_seg.getPosition().getY_pos()+ temp.speedY;
     centipede_seg.poison();
     centipede_seg.move();
-    centipede_seg.move();
-    CHECK(x == doctest::Approx(centipede_seg.getPosition().getX_pos()));
     CHECK(y == doctest::Approx(centipede_seg.getPosition().getY_pos()));
 }
 
