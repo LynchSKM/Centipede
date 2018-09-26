@@ -60,6 +60,7 @@ int Mushroom::getRemainingLives() const
 void Mushroom::reincarnate()
 {
     numberOfLives_ = 4;
+    isPoisoned_ = false;
 }
 
 Mushroom::~Mushroom()

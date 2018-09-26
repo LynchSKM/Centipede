@@ -110,6 +110,7 @@ void CentipedeSegment::moveDown()
 
     if(newYPos <= maxHeight)
     {
+
         position_.setY_pos(newYPos);
         if(prev_Direction_==Direction::LEFT){
             setDirection(Direction::RIGHT);
@@ -128,7 +129,7 @@ void CentipedeSegment::moveDown()
         centAtbottom_ = true;
         moveUp();
         centAtbottom_ = false;
-        isPoisoned_=false;
+        isPoisonedMovementComplete_= true;
     }
 }
 
@@ -183,6 +184,7 @@ void CentipedeSegment::moveRight()
 void CentipedeSegment::move()
 {
     if(isEntryMovement())return;
+    if(isPoisonedMovementComplete_) isPoisoned_ = false;
     if(!isPoisoned_)//Normal movement
     {   struct CentipedeSegmentDemensions dimensions;
 
@@ -221,6 +223,7 @@ void CentipedeSegment::move()
 
 void CentipedeSegment::isPoisonedMovement()
 {
+    isPoisonedMovementComplete_ = false;
     if(moveDownCount_ == 0)
     {   setDirection(Direction::DOWN);
         moveDown();

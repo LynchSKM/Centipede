@@ -156,6 +156,7 @@ class CentipedeSegment : public IMovingEntity
         const Grid grid_;
         float rotationAngle_ = 0.0;
         bool isPoisoned_ = false;
+        bool isPoisonedMovementComplete_ = false;
         bool alive_ = true;
         int moveDownCount_;
         bool changeWhenPoisoned_;
