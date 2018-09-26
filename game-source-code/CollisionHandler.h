@@ -27,7 +27,7 @@ using IMovingEntity_ptr = shared_ptr<IMovingEntity>;
 *  \brief  A Logic Layer class that determines whether collisions have occurred
 *   between game objects.
 *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*  \version
+*  \version 3.0
 */
 class CollisionHandler
 {

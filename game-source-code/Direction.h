@@ -5,7 +5,7 @@
 *   \brief is a strongly typed enum class representing the directions game
 *   objects could be facing.
 *   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*
+*   \version 3.0
 */
 
 enum class Direction

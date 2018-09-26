@@ -40,4 +40,10 @@ struct ScorpionDimensions{
 
 };
 
+struct SpiderDimensions{
+    const float height = 16.0;
+    const float width = 30.0;
+    const float speed = 0.2;
+};
+
 #endif

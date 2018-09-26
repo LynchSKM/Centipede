@@ -2,10 +2,10 @@
 #define OBJECTTYPE_H
 
 /** \enum ObjectType
-*   \brief is a strongly typed enum class representing the type of game objects.
-*   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*
-*/
+ *  \brief is a strongly typed enum class representing the type of game objects.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *  \version 3.0
+ */
 
 enum class ObjectType
 {
@@ -13,7 +13,8 @@ enum class ObjectType
     PLAYER_LASER_BULLET, /**< is coded as int of value 1.*/
     CENTIPEDE,  /**< is coded as int of value 2.*/
     MUSHROOM,    /**< is coded as int of value 3.*/
-    SCORPION    /**< is coded as int of value 4 */
+    SCORPION,    /**< is coded as int of value 4 */
+    SPIDER
 };
 
 #endif // OBJECTTYPE_H
