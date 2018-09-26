@@ -60,13 +60,12 @@ void CollisionHandler::checkCollisions(vector<IEntity_ptr>& game_objects,
     auto scorpion = copyObjects(moving_game_objects.begin(), moving_game_objects.end(),
                 ObjectType::SCORPION);
 
-
-    centipedeCollidesWithCentipede(centipede);
     playerCollidesWithObjects(player);
-    playerBulletCollidesWithEnemies(player_bullets);
-    playerBulletCollidesWithCentipede(player_bullets, centipede);
+    playerBulletCollidesWithEnemies(player_bullets, centipede);
+    centipedeCollidesWithCentipede(centipede);
     centipedeCollidesWithMushroom(centipede);
     scorpionCollidesWithMushroom(scorpion);
+    spatial_hash_.clearAll();
 }
 
 void CollisionHandler::playerCollidesWithObjects(vector<IMovingEntity_ptr>& player)
@@ -105,20 +104,20 @@ void CollisionHandler::playerCollidesWithObjects(vector<IMovingEntity_ptr>& play
                     thePlayer->eliminated();
                     return;
                 }//else
-            }//if
-        }//for
-    }//for
+            }
+        }
+    }
 }
 
-void CollisionHandler::playerBulletCollidesWithEnemies(vector<IMovingEntity_ptr>& player_bullets)
+void CollisionHandler::playerBulletCollidesWithEnemies(vector<IMovingEntity_ptr>& player_bullets,
+                                                       vector<IMovingEntity_ptr>& centipede)
 {
     for(auto& bullet : player_bullets){
         auto near_by_objects = spatial_hash_.retrieveNearbyObjects(bullet);
         for(auto& object : near_by_objects)
         {
             if(!bullet->isAlive()) break;
-            if(object->getObjectType() != ObjectType::CENTIPEDE &&
-               object->getObjectType() != ObjectType::PLAYER &&
+            if(object->getObjectType() != ObjectType::PLAYER &&
                object->getObjectType() != ObjectType::PLAYER_LASER_BULLET &&
                object->isAlive())
             {
@@ -139,70 +138,74 @@ void CollisionHandler::playerBulletCollidesWithEnemies(vector<IMovingEntity_ptr>
                             points_obtained_+=40;
                             break;
 
+                        case ObjectType::CENTIPEDE:
+                            points_obtained_+=100;
+                            splitCentipedeTrain(centipede, object);
+                            break;
+
                         default:
                             break;
                     }//switch
-                }//if
-            }//if
-        }//for
-    }//for
+                }
+            }
+        }
+    }
 }
 
-void CollisionHandler::playerBulletCollidesWithCentipede(vector<IMovingEntity_ptr>& player_bullets,
-                                                         vector<IMovingEntity_ptr>& centipede)
+void CollisionHandler::splitCentipedeTrain(vector<IMovingEntity_ptr>& centipede,
+                                           IEntity_ptr& segment)
 {
-    for(auto& bullet : player_bullets){
-        auto near_by_objects = spatial_hash_.retrieveNearbyObjects(bullet);
-        for(auto& object : near_by_objects)
+    //Reorder centipede:
+    auto iter_new_head = find(centipede.begin(), centipede.end(), segment);
+    auto iter_segment  = find(centipede.begin(), centipede.end(), segment);
+    ++iter_new_head;
+    ++iter_segment;
+    if(iter_new_head!=centipede.end())
+    {
+        auto centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(*iter_new_head);
+        centipede_seg_ptr->setBodyType(CentipedeSegment::BodyType::HEAD);
+
+        auto centipede_new_head_y_pos = centipede_seg_ptr->getPosition().getY_pos();
+
+        // Update train:
+        for(++iter_segment; iter_segment!=centipede.end(); ++iter_segment)
         {
-            if(!bullet->isAlive()) break;
-            if(object->getObjectType() == ObjectType::CENTIPEDE && object->isAlive())
-            {
-                if(sat_algorithm_.checkOverlap(bullet->getBoundaryBox(), object->getBoundaryBox()))
-                {
-                    bullet->eliminated();
-                    object->eliminated();
-                    points_obtained_+=100;
+            auto centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(*iter_segment);
+            if(centipede_seg_ptr->getBodyType() == CentipedeSegment::BodyType::HEAD) break;
+            if(centipede_seg_ptr->isAlive()
+               && centipede_seg_ptr->getPosition().getY_pos() == centipede_new_head_y_pos)
+                centipede_seg_ptr->clearHeadCollisions();
+        }
+    }
+}
 
-                    //Reorder centipede:
-                    auto iter_new_head = find(centipede.begin(), centipede.end(), object);
-                    auto iter_segment  = find(centipede.begin(), centipede.end(), object);
-                    ++iter_new_head;
-                    ++iter_segment;
-                    if(iter_new_head!=centipede.end())
-                    {
-                        auto centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(*iter_new_head);
-                        centipede_seg_ptr->setBodyType(CentipedeSegment::BodyType::HEAD);
-
-                        auto centipede_new_head_y_pos = centipede_seg_ptr->getPosition().getY_pos();
-
-                        // Update train:
-                        for(++iter_segment; iter_segment!=centipede.end(); ++iter_segment)
-                        {
-                            auto centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(*iter_segment);
-                            if(centipede_seg_ptr->getBodyType() == CentipedeSegment::BodyType::HEAD) break;
-
-                            if(centipede_seg_ptr->isAlive() &&
-                               centipede_seg_ptr->getPosition().getY_pos() == centipede_new_head_y_pos)
-                                centipede_seg_ptr->clearHeadCollisions();
-                        }//for
-                    }//if
-                }//if
-            }//if
-
-        }//for
+void CollisionHandler::updateCentipedeTrain(vector<IMovingEntity_ptr>& centipede,
+                                            IEntity_ptr segment,
+                                            Position collision_point,
+                                            bool poisoned_position,
+                                            bool move_out_of_collision)
+{
+    auto iter_segment = find(centipede.begin(), centipede.end(), segment);
+    for(++iter_segment; iter_segment!=centipede.end(); ++iter_segment)
+    {
+        auto centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(*iter_segment);
+        if(centipede_seg_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD) break;
+        if(centipede_seg_ptr->isAlive())
+        {
+            centipede_seg_ptr->collisionAt(collision_point, poisoned_position);
+            if(move_out_of_collision)
+                centipede_seg_ptr->move();
+        }
     }//for
 }
 
 void CollisionHandler::centipedeCollidesWithCentipede(vector<IMovingEntity_ptr>& centipede)
 {
-    vector<IMovingEntity_ptr> centipede_heads_collided;
     for(auto& segment : centipede)
     {
-        auto found = std::count(centipede_heads_collided.begin(), centipede_heads_collided.end(), segment);
         auto centipede_head_ptr = dynamic_pointer_cast<CentipedeSegment>(segment);
-        if(segment->isAlive() && found==0 && !segment->isPoisoned()
-           && centipede_head_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD)
+        if(segment->isAlive() && !segment->isPoisoned() &&
+           centipede_head_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD)
         {
             auto near_by_objects = spatial_hash_.retrieveNearbyObjects(segment);
             for(auto& object : near_by_objects)
@@ -211,36 +214,27 @@ void CollisionHandler::centipedeCollidesWithCentipede(vector<IMovingEntity_ptr>&
                 {
                     if(sat_algorithm_.checkOverlap(segment->getBoundaryBox(), object->getBoundaryBox()))
                     {
-                        centipede_heads_collided.push_back(segment);
-                        auto iter_segment = find(centipede.begin(), centipede.end(), segment);
-                        for(++iter_segment; iter_segment!=centipede.end(); ++iter_segment)
-                        {
-                            auto centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(*iter_segment);
-                            if(centipede_seg_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD) break;
-
-                            if(centipede_seg_ptr->isAlive())
-                            {
-                                centipede_seg_ptr->collisionAt(centipede_head_ptr->getPosition(), false);
-                                centipede_seg_ptr->move();
-                            }
-                        }//for
+                        auto posioned_collison = false;
+                        auto move_out_of_collision = true;
+                        updateCentipedeTrain(centipede, segment,
+                                             centipede_head_ptr->getPosition(),
+                                             posioned_collison, move_out_of_collision);
                         centipede_head_ptr->changeDirection();
                         centipede_head_ptr->move();
-                    }//if
-
-                }//if
-            }//for
-        }//if
-    }//for
+                    }
+                }
+            }
+        }
+    }
 }
 
 void CollisionHandler::centipedeCollidesWithMushroom(vector<IMovingEntity_ptr>& centipede)
 {
     for(auto& segment : centipede)
     {
-        auto centipede_ptr = dynamic_pointer_cast<CentipedeSegment>(segment);
+        auto centipede_head_ptr = dynamic_pointer_cast<CentipedeSegment>(segment);
         if(segment->isAlive() &&
-           centipede_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD &&
+           centipede_head_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD &&
            !segment->isPoisoned())
         {
             auto near_by_objects = spatial_hash_.retrieveNearbyObjects(segment);
@@ -250,36 +244,18 @@ void CollisionHandler::centipedeCollidesWithMushroom(vector<IMovingEntity_ptr>& 
                 {
                     if(sat_algorithm_.checkOverlap(segment->getBoundaryBox(), object->getBoundaryBox()))
                     {
-                        auto iter_segment = find(centipede.begin(), centipede.end(), segment);
-                        // Update train of bodies:
-                        for(++iter_segment; iter_segment!=centipede.end(); ++iter_segment)
-                        {
-                            auto centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(*iter_segment);
-                            if(centipede_seg_ptr->getBodyType()==CentipedeSegment::BodyType::HEAD) break;
+                        auto move_out_of_collision = false;
+                        updateCentipedeTrain(centipede, segment,
+                                             centipede_head_ptr->getPosition(),
+                                             object->isPoisoned(), move_out_of_collision);
 
-                            if(centipede_seg_ptr->isAlive())
-                            {
-                                centipede_seg_ptr->collisionAt(centipede_ptr->getPosition(),
-                                                               object->isPoisoned());
-                                centipede_seg_ptr->move();
-
-                            }//if
-
-                        }//for
-
-                        if(object->isPoisoned())
-                            segment->poison();
-                        else
-                        {
-                            centipede_ptr->changeDirection();
-                            centipede_ptr->move();
-                        }
-
-                    }//if
-                }//if
-            }//for
-        }//if
-    }//for
+                        if(object->isPoisoned()) segment->poison();
+                        else centipede_head_ptr->changeDirection();
+                    }
+                }
+            }
+        }
+    }
 }
 
 void CollisionHandler::scorpionCollidesWithMushroom(vector<IMovingEntity_ptr>& scorpions)

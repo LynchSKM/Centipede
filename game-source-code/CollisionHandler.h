@@ -81,47 +81,63 @@ class CollisionHandler
                                         vector<IMovingEntity_ptr>::iterator game_objects_end,
                                         ObjectType object_type);
 
-        /** \brief Checks whether a player bullet collides with every other game object near it
-         * except for a centipede segment. If collisions occur both call their respective eliminated()
-         * functions. Mushroom will decrement its number of lives while others will set alive status false.
-         * \param player_bullets is a vector of shared pointers to IMovingEntity objects of ObjectType::PLAYER_LASER_BULLET.
+        /** \brief Checks whether a player bullet collides with every other game object near it.
+         *  If collisions occur both call their respective eliminated()
+         *  functions. Mushroom will decrement its number of lives while others will set alive status false.
+         *  \param player_bullets is a vector of shared pointers to IMovingEntity objects of ObjectType::PLAYER_LASER_BULLET.
+         *  \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
          */
-        void playerBulletCollidesWithEnemies(vector<IMovingEntity_ptr>& player_bullets);
+        void playerBulletCollidesWithEnemies(vector<IMovingEntity_ptr>& player_bullets,
+                                             vector<IMovingEntity_ptr>& centipede);
 
-        /** \brief Checks collisions between the player bullet and a Centipede segment near it.
-         * If collisions occur, bot set their alive status false. The next body segment becomes a
-         * new Centipede HEAD.
-         * \param player_bullets is a vector of shared pointers to IMovingEntity objects of ObjectType::PLAYER_LASER_BULLET.
-         * \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
+        /** \brief Updates the centipede train after a bullet has collided with a segment.
+         *  Sets the next segment as a CentipedeSegment::BodyType::HEAD and updates
+         *  the collision positions of the segments following the new head.
+         *  \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
+         *  \param segment is a shared pointer to an IEntity object of ObjectType::CENTIPEDE.
          */
-        void playerBulletCollidesWithCentipede(vector<IMovingEntity_ptr>& player_bullets,
-                                               vector<IMovingEntity_ptr>& centipede);
+        void splitCentipedeTrain(vector<IMovingEntity_ptr>& centipede,
+                                 IEntity_ptr& segment);
 
         /** \brief Checks collisions between a centipede and a mushroom.
-         * If a collision occurs, the Centipede segment goes down and changes direction.
-         * \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
+         *  If a collision occurs, the Centipede segment goes down and changes direction.
+         *  \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
          */
         void centipedeCollidesWithMushroom(vector<IMovingEntity_ptr>& centipede);
 
         /** \brief Checks collisions between a centipede and a centipede.
-         * If a collision occurs, then both Centipedes go down or up and change their directions.
-         * \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
+         *  If a collision occurs, then both Centipedes go down or up and change their directions.
+         *  \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
          */
         void centipedeCollidesWithCentipede(vector<IMovingEntity_ptr>& centipede);
 
+        /** \brief Updates the train behind a head that has has collided with a
+         *  Mushroom or another Centipede train.
+         *  \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
+         *  \param segment is a shared pointer to an IEntity object of type ObjectType::CENTIPEDE.
+         *  \param collision_point is a Position object and contains the position where a head has collided.
+         *  \param poisoned_position is bool indicating whether the head collided with a poisoned mushroom.
+         *  \param move_out_of_collision is a bool indicating whether the centipede train should be moved
+             to get out of a collision.
+         */
+        void updateCentipedeTrain(vector<IMovingEntity_ptr>& centipede,
+                                  IEntity_ptr segment,
+                                  Position collision_point,
+                                  bool poisoned_position,
+                                  bool move_out_of_collision);
+
         /** \brief Checks collisions between a player and other game objects.
-         * If a collision occurs, with a Mushroom the player's direction is set to NONE.
-         * If it's anything other than a mushroom the player loses a life.
-         * \param player is a shared pointer to an IMovingEntity object of ObjectType::PLAYER.
+         *  If a collision occurs, with a Mushroom the player's direction is set to NONE.
+         *  If it's anything other than a mushroom the player loses a life.
+         *  \param player is a shared pointer to an IMovingEntity object of ObjectType::PLAYER.
          */
         void playerCollidesWithObjects(vector<IMovingEntity_ptr>& player);
 
         /** \brief Checks collisions between a scorpion and mushroom.
-         * If a collision occurs with a mushroom, the mushroom is set to poisoned.
-         * \param scorpion vector of shared pointer(s) to an IMovingEntity object of ObjectType::SCORPION.
+         *  If a collision occurs with a mushroom, the mushroom is set to poisoned.
+         *  \param scorpion vector of shared pointer(s) to an IMovingEntity object of ObjectType::SCORPION.
          */
         void scorpionCollidesWithMushroom(vector<IMovingEntity_ptr>& scorpions);
-
 };
 
 #endif // COLLISIONHANDLER_H
