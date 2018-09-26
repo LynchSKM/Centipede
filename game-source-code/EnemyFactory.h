@@ -15,7 +15,7 @@ using std::make_shared;
 /** \class EnemyFactory
  *  \brief creates all the enemy objects of the game
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
- *  \version
+ *  \version 3.0
  */
 class EnemyFactory
 {

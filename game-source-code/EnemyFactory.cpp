@@ -96,23 +96,7 @@ vector <shared_ptr<Scorpion>> EnemyFactory::generateAScorpion()
     vector<shared_ptr<Scorpion>> scorpions;
     if(!isScorpionGenerated_)
     {
-        struct ScorpionDimensions dimensions;
-        auto row = rand()%15 + 10;
-        auto xPos = 0.0f;
-        auto yPos = round(row*16 +24.0);
-        auto direction = static_cast<Direction>(rand()%2 + 2);
-
-        if(direction == Direction::LEFT)
-            xPos = grid_.getWidth() -(dimensions.width/2.0 + 1);
-        else if(direction == Direction::RIGHT)
-            xPos = (dimensions.width/2.0 + 1);
-        else
-        {
-           direction = Direction::RIGHT;
-           xPos = (dimensions.width/2.0 + 1);
-        }
-
-        auto scorpion_ptr = make_shared<Scorpion>(grid_,Position(xPos,yPos),direction);
+        auto scorpion_ptr = make_shared<Scorpion>(grid_);
         scorpions.push_back(scorpion_ptr);
 
         isScorpionGenerated_ = true;

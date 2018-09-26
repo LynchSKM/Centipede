@@ -5,24 +5,22 @@
 #include "Dimensions.h"
 #include "Grid.h"
 
-/** \class PlayerBullet
-*   \brief This is a class that inherits from the IMovingEntity class. It models
-*   a scorpion object in the game. It contains virtual functions that
-*   will be overridden.
-*   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*   \version
-*/
+/** \class Scorpion
+ *  \brief This is a class that inherits from the IMovingEntity class. It models
+ *  a Scorpion object in the game. It contains virtual functions that
+ *  will be overridden.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *  \version 3.0
+ */
 
 class Scorpion : public IMovingEntity
 {
     public:
 
         /** \brief Parameterized Constructor. Creates a Scorpion object.
-         *  \param is grid of type grid.
-         *  \param is a position of type Position.
-         *  \param is a direction of type Direction enum class.
+         *  \param grid of type Grid.
          */
-        Scorpion(const Grid& grid, Position position, Direction direction);
+        Scorpion(const Grid& grid);
 
         /** Virtual Destructor. Destroys a Scorpion object.
          */
@@ -102,11 +100,8 @@ class Scorpion : public IMovingEntity
 
         const Grid grid_;
         Position position_;
-        ObjectType objectType_;
         Direction direction_;
-        bool isPoisoned_;
         bool isAlive_;
-        int numberOfLives_;
 
         /** \brief A function that decrements x axis of the object's position
          *  such that it moves left.

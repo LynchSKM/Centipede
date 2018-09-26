@@ -1,11 +1,20 @@
 #include "Scorpion.h"
-
-Scorpion::Scorpion(const Grid& grid, Position position, Direction direction):grid_{grid},position_{position}, direction_{direction}
+#include <ctime>
+Scorpion::Scorpion(const Grid& grid):
+    grid_{grid},
+    isAlive_{true}
 {
-        objectType_ = ObjectType::SCORPION;
-        isPoisoned_ = false;
-        isAlive_    = true;
-        numberOfLives_ = 1;
+    srand(time(0));
+    struct ScorpionDimensions dimensions;
+    auto row = rand()%15 + 10;
+    auto xPos = 0.0f;
+    position_.setY_pos(round(row*16.0f +24.0f));
+    direction_ = static_cast<Direction>(rand()%2 + 2);
+
+    if(direction_ == Direction::LEFT)
+       position_.setX_pos(grid_.getWidth()-(dimensions.width/2.0f + 1.0f));
+    else position_.setX_pos(dimensions.width/2.0f + 1.0f);
+
 }
 void Scorpion::moveLeft()
 {
@@ -63,7 +72,7 @@ void Scorpion::setDirection(Direction direction)
 
 ObjectType Scorpion::getObjectType() const
 {
-    return objectType_;
+    return ObjectType::SCORPION;
 }
 
 Position Scorpion::getPosition() const
@@ -74,8 +83,8 @@ Position Scorpion::getPosition() const
 BoundaryBox Scorpion::getBoundaryBox()
 {
     struct ScorpionDimensions dimension;
-    BoundaryBox box{position_,dimension.width,dimension.height,0};
-    return box;
+
+    return BoundaryBox{position_, dimension.width, dimension.height, 0.0f};
 }
 
 bool Scorpion::isAlive() const
@@ -85,7 +94,6 @@ bool Scorpion::isAlive() const
 
 void Scorpion::eliminated()
 {
-    if(isAlive_) --numberOfLives_;
     isAlive_ = false;
 }
 
@@ -96,18 +104,18 @@ void Scorpion::reincarnate()
 
 int Scorpion::getRemainingLives() const
 {
-    return numberOfLives_;
+    if(isAlive()) return 1;
+    return 0;
 }
 
 bool Scorpion::isPoisoned() const
 {
-    return isPoisoned_;
+    return false;
 }
 
 void Scorpion::poison()
 {
-    //Scorpion can not be poisoned
-    isPoisoned_ = false;
+
 }
 
 Scorpion::~Scorpion()
