@@ -186,13 +186,24 @@ void Logic::reincarnatePlayer()
             return (game_object->getObjectType() == ObjectType::CENTIPEDE);
         });
 
+        container_erase_if(game_objects_,
+        [](shared_ptr<IEntity>& game_object)
+        {
+            return (game_object->getObjectType() == ObjectType::PLAYER_LASER_BULLET);
+        });
+
+        container_erase_if(moving_game_objects_,
+        [](shared_ptr<IMovingEntity>& game_object)
+        {
+            return (game_object->getObjectType() == ObjectType::PLAYER_LASER_BULLET);
+        });
+
         std::transform(game_objects_.begin(), game_objects_.end(),
                        game_objects_.begin(),
                        [](IEntity_ptr& object)
                        {
                             if(object->getObjectType() == ObjectType::MUSHROOM && object->isAlive())
                                 object->reincarnate();
-
                             return object;
                        });
 

@@ -12,6 +12,7 @@
 
 #include <vector>
 #include <memory>
+#include <algorithm>
 #include <ctime>
 
 using std::vector;
@@ -132,12 +133,11 @@ class Logic
  * \param predicate can be a function that returns true or false.
  */
 template<typename TypeContainer, typename PredicateT>
-inline void container_erase_if(TypeContainer& container, const PredicateT& predicate) {
-    for(auto iter_container = container.begin(); iter_container != container.end(); ) {
-        if( predicate(*iter_container) )
-			iter_container = container.erase(iter_container);
-        else ++iter_container;
-    }//for
+inline void container_erase_if(TypeContainer& container, const PredicateT& predicate)
+{
+    container.erase(remove_if(begin(container),
+                              end(container), predicate),
+                    end(container));
 }//
 
 #endif // LOGIC_H
