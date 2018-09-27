@@ -1,26 +1,27 @@
 #include "Scorpion.h"
 #include <ctime>
+
+struct ScorpionDimensions Scorpion::dimensions_;
+
 Scorpion::Scorpion(const Grid& grid):
     grid_{grid},
     isAlive_{true}
 {
     srand(time(0));
-    struct ScorpionDimensions dimensions;
     auto row = rand()%15 + 10;
     auto xPos = 0.0f;
     position_.setY_pos(round(row*16.0f +24.0f));
     direction_ = static_cast<Direction>(rand()%2 + 2);
 
     if(direction_ == Direction::LEFT)
-       position_.setX_pos(grid_.getWidth()-(dimensions.width/2.0f + 1.0f));
-    else position_.setX_pos(dimensions.width/2.0f + 1.0f);
+       position_.setX_pos(grid_.getWidth()-(dimensions_.width/2.0f + 1.0f));
+    else position_.setX_pos(dimensions_.width/2.0f + 1.0f);
 
 }
 void Scorpion::moveLeft()
 {
-    struct ScorpionDimensions dimensions;
     float maxWidth = grid_.getWidth();
-    auto newXPos = position_.getX_pos()- dimensions.speed;
+    auto newXPos = position_.getX_pos()- dimensions_.speed;
 
     newXPos = (round(newXPos*10))/10;
 
@@ -37,9 +38,8 @@ void Scorpion::moveLeft()
 
 void Scorpion::moveRight()
 {
-    struct ScorpionDimensions dimensions;
     float maxWidth = grid_.getWidth();
-    auto newXPos = position_.getX_pos()+ dimensions.speed;
+    auto newXPos = position_.getX_pos()+ dimensions_.speed;
 
     newXPos = (round(newXPos*10))/10;
 
@@ -82,9 +82,7 @@ Position Scorpion::getPosition() const
 
 BoundaryBox Scorpion::getBoundaryBox()
 {
-    struct ScorpionDimensions dimension;
-
-    return BoundaryBox{position_, dimension.width, dimension.height, 0.0f};
+    return BoundaryBox{position_, dimensions_.width, dimensions_.height, 0.0f};
 }
 
 bool Scorpion::isAlive() const

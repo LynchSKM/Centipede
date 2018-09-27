@@ -2,6 +2,8 @@
 #include <ctime>
 #include <cmath>
 
+struct SpiderDimensions Spider::dimensions_;
+
 Spider::Spider(const Grid& grid):
     grid_{grid},
     isAlive_{true}

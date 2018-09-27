@@ -1,5 +1,7 @@
 #include "Mushroom.h"
 
+struct MushroomDimensions Mushroom::dimensions_;
+
 Mushroom::Mushroom(Position position):position_{position},
         objectType_{ObjectType::MUSHROOM},
         isPoisoned_{false},
@@ -21,8 +23,7 @@ Position Mushroom::getPosition() const
 
 BoundaryBox Mushroom::getBoundaryBox()
 {
-    struct MushroomDimensions mushBox;
-    BoundaryBox box{position_,mushBox.width, mushBox.height, 0.0};
+    BoundaryBox box{position_, dimensions_.width, dimensions_.height, 0.0};
     return box;
 }
 

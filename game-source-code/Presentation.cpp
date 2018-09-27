@@ -11,12 +11,11 @@ isSpacePressed_{false}
 {
 
 }
-void Presentation::processPlayerShootSound(){
-    //if(isSpacePressed()){
-        gun_shot_.stop();
-        gun_shot_.setVolume(10);
-        gun_shot_.play();
-    //}else{gun_shot_.stop();}
+void Presentation::processPlayerShootSound()
+{
+    gun_shot_.stop();
+    gun_shot_.setVolume(10);
+    gun_shot_.play();
 }
 
 void Presentation::checkInput(const sf::Keyboard::Key key, const bool isPressed)

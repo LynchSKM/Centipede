@@ -103,7 +103,7 @@ class PlayerBullet : public IMovingEntity
         Position position_;
         const Grid grid_;
         Direction direction_;
-
+        static struct PlayerBulletDimensions dimensions_;
 };
 
 #endif // PLAYERBULLET_H

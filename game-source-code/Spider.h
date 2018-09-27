@@ -101,7 +101,7 @@ class Spider : public IMovingEntity
         Position position_;
         Direction direction_;
         bool isAlive_;
-        struct SpiderDimensions dimensions_;
+        static struct SpiderDimensions dimensions_;
 };
 
 #endif // SPIDER_H

@@ -101,6 +101,7 @@ class Scorpion : public IMovingEntity
         const Grid grid_;
         Position position_;
         Direction direction_;
+        static struct ScorpionDimensions dimensions_;
         bool isAlive_;
 
         /** \brief A function that decrements x axis of the object's position

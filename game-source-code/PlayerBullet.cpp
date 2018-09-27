@@ -1,16 +1,18 @@
 #include "PlayerBullet.h"
 
+struct PlayerBulletDimensions PlayerBullet::dimensions_;
 
-PlayerBullet::PlayerBullet(Position position, const Grid& grid):position_{position},grid_{grid}
+PlayerBullet::PlayerBullet(Position position, const Grid& grid):
+    position_{position},
+    grid_{grid}
 {   setDirection(Direction::UP);
     alive_ = true;
     objectType_ = ObjectType::PLAYER_LASER_BULLET;
 }
 
 void PlayerBullet::move()
-{   struct PlayerBulletDimensions Dimension;
-
-    auto newYPos = position_.getY_pos() - Dimension.speed;
+{
+    auto newYPos = position_.getY_pos() - dimensions_.speed;
 
     if(newYPos > 8.0f)position_.setY_pos(newYPos);
     else eliminated();
@@ -38,8 +40,7 @@ Position PlayerBullet::getPosition() const
 
 BoundaryBox PlayerBullet::getBoundaryBox()
 {
-    struct PlayerBulletDimensions Dimension;
-    BoundaryBox box{position_,Dimension.width,Dimension.height,0.0f};
+    BoundaryBox box{position_, dimensions_.width, dimensions_.height,0.0f};
     return box;
 }
 
@@ -73,7 +74,6 @@ void PlayerBullet::poison()
 {
 
 }
-
 
 PlayerBullet::~PlayerBullet()
 {

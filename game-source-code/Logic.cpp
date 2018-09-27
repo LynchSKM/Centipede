@@ -43,8 +43,7 @@ void Logic::run()
 
     StopWatch game_timer;
     game_timer.start();
-    auto game_speed = 1.0f/6000.0f;
-    //auto time_elapsed = 0.0;
+    auto game_speed = 1.0f/1000.0f;
     auto timeSinceLastUpdate = 0.0;
 
     while(screen_state_ == ScreenState::GAME_ACTIVE) {

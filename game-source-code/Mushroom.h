@@ -82,6 +82,7 @@ class Mushroom : public IEntity
         bool isPoisoned_;
         bool isAlive_;
         int numberOfLives_;
+        static struct MushroomDimensions dimensions_;
 
         /** \brief Decrements the lives of the mushroom.
          */
