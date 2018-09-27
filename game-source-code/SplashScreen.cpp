@@ -10,8 +10,8 @@ SplashScreen::SplashScreen()
 
 void SplashScreen::show(sf::RenderWindow& render_window){
     // Load background texture:
-    sf::Sprite background_sprite;
-    background_sprite.setTexture(splashScreenTexture_);
+    //sf::Sprite background_sprite;
+    //background_sprite.setTexture(splashScreenTexture_);
 
     // Load Font:
     splashScreenFont_.loadFromFile("Assets/Font.ttf"s);
@@ -27,53 +27,29 @@ void SplashScreen::show(sf::RenderWindow& render_window){
     titleRect.top  + titleRect.height/half);
     splash_screen_title.setPosition(render_window.getSize().x/half, render_window.getSize().y/7);
 
-    auto game_controls = "Controls"s;
+    sf::Texture controls_texture;
+    controls_texture.loadFromFile("Assets/Splash_Controls.png");
+    controls_texture.setSmooth(true);
+    sf::Sprite controls_sprite;
+    controls_sprite.setTexture(controls_texture);
+    controls_sprite.scale(sf::Vector2f{0.8, 0.8});
+    controls_sprite.setOrigin(controls_texture.getSize().x/half, controls_texture.getSize().y/half);
+    controls_sprite.setPosition(render_window.getSize().x/half, render_window.getSize().y/half+50);
 
-    sf::Text splash_controls_text(game_controls, splashScreenFont_);
-    splash_controls_text.setPosition(render_window.getSize().x/half,
-                        render_window.getSize().y/4);
-    splash_controls_text.setCharacterSize(24);
-    splash_controls_text.setFillColor(sf::Color::Red);
-    titleRect = splash_controls_text.getLocalBounds();
-    splash_controls_text.setOrigin(titleRect.left + titleRect.width/half,
-    titleRect.top  + titleRect.height/half);
-    //splash_controls_text.setStyle(sf::Text::Bold);
-
-    auto game_controls_1 = "Up Arrow\t - Move up"
-                        "\nDown Arrow  - Move down"
-                        "\nLeft Arrow   - Move left"
-                        "\nRight Arrow   - Move right"
-                        "\nSpacebar  \t- Shoot"
-                        "\n"
-                        "\n Press Enter to continue"s;
-
-    sf::Text splash_controls_text_1(game_controls_1, splashScreenFont_);
-    splash_controls_text_1.setPosition(render_window.getSize().x/5,
-                        render_window.getSize().y/3);
-    splash_controls_text_1.setCharacterSize(20);
-    splash_controls_text_1.setFillColor(sf::Color::Red);
-    //titleRect = splash_controls_text_1.getLocalBounds();
-    //splash_controls_text_1.setOrigin(titleRect.left + titleRect.width/half,
-   // titleRect.top  + titleRect.height/half);
-    //splash_controls_text_1.setStyle(sf::Text::Bold);
-
-    //background_sprite.setPosition(render_window.getSize().x/3,
-    //                    render_window.getSize().y/2.6);
-
-
-    render_window.clear(sf::Color(0,0,0));
+    render_window.clear();
     //render_window.draw(background_sprite);
     render_window.draw(splash_screen_title);
-    render_window.draw(splash_controls_text);
-    render_window.draw(splash_controls_text_1);
+    render_window.draw(controls_sprite);
     render_window.display();
 
     // Poll for keyboard event Spacebar pressed to start game:
     sf::Event event;
-    while(true){
+    while(true)
+    {
         while(render_window.pollEvent(event)){
             if(event.key.code == sf::Keyboard::Enter){return;}
-            if(event.type == sf::Event::Closed){
+            if(event.type == sf::Event::Closed)
+            {
                 render_window.close();
                 return;
             }

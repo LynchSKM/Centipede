@@ -3,11 +3,11 @@
 
 #include <SFML/Graphics.hpp>
 
-/**\class SplashScreen
-*  \brief  A presentation class that uses the SFML library to display playing
+/** \class SplashScreen
+*   \brief  A presentation class that uses the SFML library to display playing
 *   instructions and the game's title.
-*  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*
+*   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+*   \version 3.0
 */
 class SplashScreen
 {
