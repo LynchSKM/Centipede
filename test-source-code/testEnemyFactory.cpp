@@ -10,7 +10,7 @@ TEST_CASE("Centipede segments can be created."){
 
     auto CentiSegments = testEFactory.generateNormalCentipede();
 
-    CHECK(!CentiSegments.empty());
+    CHECK_FALSE(CentiSegments.empty());
 }
 
 TEST_CASE("A scorpion can be created."){
@@ -20,5 +20,15 @@ TEST_CASE("A scorpion can be created."){
 
     auto scorpions  = testEFactory.generateAScorpion();
 
-    CHECK(!scorpions.empty());
+    CHECK_FALSE(scorpions.empty());
+}
+
+TEST_CASE("A Spider can be created."){
+
+    Grid testGrid{592,640};
+    EnemyFactory testEFactory{testGrid};
+
+    auto spider  = testEFactory.generateASpider();
+
+    CHECK_FALSE(spider.empty());
 }
