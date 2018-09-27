@@ -85,17 +85,33 @@ class Logic
          */
         void updateGameObjects();
 
-        /** \brief generates the a centipede with one head, and multiple body segments.
+        /** \brief Generates all the game enemies.
+         */
+        void generateGameEnemies();
+
+        /** \brief Generates the a centipede with one head, and multiple body segments.
          */
         void generateNormalCentipede();
 
-        /** \brief generates centipede heads.
+        /** \brief Generates centipede heads.
          */
         void generateCentipedeHeads();
 
-        /** \brief generates mushrooms
+        /** \brief Generates mushrooms
          */
         void generateMushrooms();
+
+        /** \brief Transforms all dead centipede segments from vector(s) into mushrooms.
+         */
+        void generateMushroomAtCollision();
+
+        /** \brief Generates a Scorpion at a random position.
+         */
+        void generateAScorpion();
+
+        /** \brief Generates a Spider at random either at the left or right boundary.
+         */
+        void generateASpider();
 
         /** \brief Checks for collisions between game objects.
          */
@@ -111,19 +127,13 @@ class Logic
         void removeDeadEntities();
 
         /** \brief Removes all centipede segments from vector(s) where they exist,
-         *      reset the position of the player and generate a new centipede train.
+         *  reset the position of the player and generate a new centipede train.
          */
         void reincarnatePlayer();
 
-        /** \brief transforms all dead centipede segments from vector(s) into mushrooms.
+        /** \brief Resets calls reincarnate of the mushroom object.
          */
-        void generateMushroomAtCollision();
-
-        /** \brief generates a scorpion at a random position.
-         */
-        void generateAScorpion();
-
-
+        void reincarnateMushroom();
 };
 
 /**\brief  container_erase_if - a function that erases elements in a container based on a

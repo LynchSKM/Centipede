@@ -13,9 +13,29 @@ isSpacePressed_{false}
 }
 void Presentation::processPlayerShootSound()
 {
-    gun_shot_.stop();
-    gun_shot_.setVolume(10);
-    gun_shot_.play();
+    auto iter_map = game_sounds_.find(GameSounds::GUN_SHOT);
+    (iter_map->second)->stop();
+    (iter_map->second)->play();
+}
+
+void Presentation::processGameObjectSound(ObjectType object_type)
+{
+
+    auto temp_object_with_sound_start = static_cast<int>(ObjectType::MUSHROOM);
+    auto temp_object = static_cast<int>(object_type);
+    if(temp_object>=temp_object_with_sound_start)
+    {
+        temp_object-=temp_object_with_sound_start;
+        auto temp_sound = static_cast<GameSounds>(temp_object+1);
+        auto iter_map = game_sounds_.find(temp_sound);
+        if((iter_map->second)->getStatus()!=sf::Music::Playing)
+        {
+            (iter_map->second)->setVolume(5);
+            (iter_map->second)->stop();
+            (iter_map->second)->play();
+        }
+    }
+
 }
 
 void Presentation::checkInput(const sf::Keyboard::Key key, const bool isPressed)
@@ -25,8 +45,6 @@ void Presentation::checkInput(const sf::Keyboard::Key key, const bool isPressed)
     else if(key == sf::Keyboard::Up) isUpPressed_ = isPressed;
     else if(key == sf::Keyboard::Down) isDownPressed_ = isPressed;
     else if(key == sf::Keyboard::Space)isSpacePressed_ = isPressed;
-
-    //processPlayerShootSound();
 }
 
 void Presentation::processInputEvents()
@@ -57,7 +75,7 @@ void Presentation::generateSpriteSheet(ObjectType object_type, unsigned int row,
                                   Direction direction)
 {
     // Add to spritesheet for animations:
-    auto iter_map = game_textures.find(object_type);
+    auto iter_map = game_textures_.find(object_type);
     SpriteSheet sprite_image{object_type, &(iter_map->second),
                  imageCount, switchTime, row, direction};
     // Save it:
@@ -69,34 +87,49 @@ void Presentation::populateSpriteSheets(const ObjectType& object_type)
 {
     auto switch_time = 0.3f;
     auto row = 0u;
+    auto image_count_columns = 0u;
+    auto image_count_rows = 0u;
     switch(object_type){
         case ObjectType::CENTIPEDE:
             row = 0u;
              // CentipedeSegment Head
-            generateSpriteSheet(object_type, row, sf::Vector2u{8,2}, switch_time,
-                                 Direction::LEFT);
+            image_count_columns = 8u;
+            image_count_rows    = 2u;
+            generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
+                                image_count_rows}, switch_time, Direction::LEFT);
             row = 1u; // CentipedeSegment Body
-            generateSpriteSheet(object_type, row, sf::Vector2u{8,2}, switch_time,
-                                 Direction::LEFT);
+            generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
+                                image_count_rows}, switch_time, Direction::LEFT);
             break;
 
         case ObjectType::MUSHROOM:
+            image_count_columns = 4u;
+            image_count_rows    = 2u;
             row = 0u; // Normal Mushroom
             switch_time = 0.0f;
-            generateSpriteSheet(object_type, row, sf::Vector2u{4,2}, switch_time,
-                                 Direction::NONE);
+            generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
+                                image_count_rows}, switch_time, Direction::NONE);
             row = 1u; // Poisoned Mushroom
-            generateSpriteSheet(object_type, row, sf::Vector2u{4,2}, switch_time,
-                                 Direction::NONE);
+            generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
+                                image_count_rows}, switch_time, Direction::NONE);
             break;
 
         case ObjectType::SCORPION:
+            image_count_columns = 4u;
+            image_count_rows    = 1u;
             row = 0u;
              // Scorpion
-            generateSpriteSheet(object_type, row, sf::Vector2u{4,1}, switch_time,
-                                 Direction::LEFT);
+            generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
+                                image_count_rows}, switch_time, Direction::LEFT);
             break;
-
+        case ObjectType::SPIDER:
+            image_count_columns = 8u;
+            image_count_rows    = 2u;
+            row = 0u;
+             // Scorpion
+            generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
+                                image_count_rows}, switch_time, Direction::DOWN);
+            break;
         default:
             break;
 
@@ -107,30 +140,45 @@ void Presentation::populateSpriteSheets(const ObjectType& object_type)
 
 void Presentation::loadTextures(vector<AssetManager>game_assets)
 {
-    // Get font:
-    for(const auto& asset : game_assets){
+    auto iter_last_sound = std::find_if(game_assets.begin(), game_assets.end(),
+                        [](const AssetManager& asset)
+                        {
+                            return (asset.getAssetType() == AssetManager::AssetType::PLAYER);
+                        });
 
-        if(asset.getAssetType() == AssetManager::AssetType::FONT)
-            font_.loadFromFile(game_assets.at(0).getAssetPath());
+    auto iter_asset = game_assets.begin();
+    font_.loadFromFile(iter_asset->getAssetPath());
 
-        else if(asset.getAssetType() == AssetManager::AssetType::GUNSHOT_SOUND)
-            gun_shot_.openFromFile(game_assets.at(1).getAssetPath());
+    // Get sounds:
+    auto sound_id = 0;
+    for(++iter_asset; iter_asset != iter_last_sound; ++iter_asset)
+    {
+        auto temp_sound = std::make_shared<sf::Music>();
+        temp_sound->openFromFile(iter_asset->getAssetPath());
+        temp_sound->setVolume(10);
+        auto temp_pair = pair<GameSounds, shared_ptr<sf::Music>>(static_cast<GameSounds>(sound_id++),
+                                                     temp_sound);
+        game_sounds_.insert(temp_pair);
+    }//for
 
-        else{
-            sf::Texture texture;
-            texture.loadFromFile(asset.getAssetPath());
-            if(asset.getAssetType() != AssetManager::AssetType::BULLET
-            && asset.getAssetType() != AssetManager::AssetType::SCORPION)
-                texture.setSmooth(true);
-            auto temp = static_cast<int>(asset.getAssetType());
-            auto temp_Object = static_cast<ObjectType>(temp-2);
-            auto temp_pair = pair<ObjectType, sf::Texture>(temp_Object, texture);
-            game_textures.insert(temp_pair);
+    // Get object textures:
+    for( ; iter_asset != game_assets.end(); ++iter_asset)
+    {
+        sf::Texture texture;
+        texture.loadFromFile(iter_asset->getAssetPath());
+        if(iter_asset->getAssetType() != AssetManager::AssetType::BULLET
+        && iter_asset->getAssetType() != AssetManager::AssetType::SCORPION)
+            texture.setSmooth(true);
 
-            // If object with animated movement, generate spritesheet object.
-            populateSpriteSheets(temp_Object);
+        auto temp_object_id   = static_cast<int>(iter_asset->getAssetType());
+        auto temp_player_id   = static_cast<int>(AssetManager::AssetType::PLAYER);
+        auto temp_object_type = static_cast<ObjectType>(temp_object_id-temp_player_id);
 
-        }//else
+        auto temp_pair = pair<ObjectType, sf::Texture>(temp_object_type, texture);
+        game_textures_.insert(temp_pair);
+
+        // If object with animated movement, generate spritesheet object.
+        populateSpriteSheets(temp_object_type);
     }//for
 }
 
@@ -138,7 +186,7 @@ sf::Sprite Presentation::generateSpriteFromSpriteSheet(shared_ptr<IEntity> objec
      // Search for spritesheet:
      sf::Sprite gameObjectsSprite;
      auto entity_type = object->getObjectType();
-     auto iter_map = game_textures.find(entity_type);
+     auto iter_map = game_textures_.find(entity_type);
      auto half = 2.0f;
      auto rect = sf::IntRect();
 
@@ -167,6 +215,10 @@ sf::Sprite Presentation::generateSpriteFromSpriteSheet(shared_ptr<IEntity> objec
     {
         auto scorpion = std::dynamic_pointer_cast<IMovingEntity>(object);
         rect = iter_vec->getTextureRect(scorpion->getDirection());
+
+    }else
+    {
+        rect = iter_vec->getTextureRect(Direction::DOWN);
     }
 
     // Set Texture rect:
@@ -179,7 +231,7 @@ sf::Sprite Presentation::generateSpriteFromSpriteSheet(shared_ptr<IEntity> objec
 
 sf::Sprite Presentation::generateSprite(shared_ptr<IEntity> object){
     sf::Sprite gameObjectsSprite;
-    auto iter_map = game_textures.find(object->getObjectType());
+    auto iter_map = game_textures_.find(object->getObjectType());
     auto half = 2.0f;
 
     if(object->getObjectType() == ObjectType::PLAYER ||
@@ -258,7 +310,7 @@ void Presentation::displayLives(const int remaining_lives, const int player_scor
 {
     sf::Sprite lives_sprite;
     auto half = 2.0f;
-    auto iter_map = game_textures.find(ObjectType::PLAYER);
+    auto iter_map = game_textures_.find(ObjectType::PLAYER);
     lives_sprite.setTexture(iter_map->second);
     lives_sprite.setOrigin((iter_map->second).getSize().x/half,
                            (iter_map->second).getSize().y/half);

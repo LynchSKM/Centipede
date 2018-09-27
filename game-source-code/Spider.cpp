@@ -33,7 +33,8 @@ void Spider::CalculateSlope()
     if(movementDirection_ == Direction::DOWN)
     {
         auto xpos = rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width;
-        auto ypos = rand()%static_cast<int>(maxHeight - position_.getY_pos()) + position_.getY_pos();
+        auto y_difference = 0.5f*(maxHeight - position_.getY_pos());
+        auto ypos = rand()%static_cast<int>(y_difference) + position_.getY_pos() + y_difference;
 
         turningPoint_.setX_pos(xpos);
         turningPoint_.setY_pos(ypos);
@@ -44,7 +45,8 @@ void Spider::CalculateSlope()
     else
     {
         auto xpos = rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width;
-        auto ypos = rand()%static_cast<int>(position_.getY_pos() - minHeight) + position_.getY_pos();
+        auto y_difference = 0.5f*(position_.getY_pos()-minHeight);
+        auto ypos = rand()%static_cast<int>(y_difference) + position_.getY_pos();
 
         turningPoint_.setX_pos(xpos);
         turningPoint_.setY_pos(ypos);
@@ -57,6 +59,7 @@ void Spider::CalculateSlope()
 void Spider::moveUp()
 {
     float maxWidth  = grid_.getWidth();
+    float minHeight = grid_.getHeight()- grid_.getHeight()*0.25;
     auto newXpos = 0.f;
     auto newYpos = 0.f;
 
@@ -65,13 +68,14 @@ void Spider::moveUp()
     if(major_direction_ == Direction::LEFT)newXpos = position_.getX_pos()-dimensions_.speed;
     else newXpos = position_.getX_pos()+dimensions_.speed;
 
-    newYpos = position_.getY_pos()- abs(slope_*dimensions_.speed);
+    newYpos = position_.getY_pos()- std::abs(slope_*dimensions_.speed);
     if(newXpos < 0 || newXpos > maxWidth){
         isAlive_ = false;
         return;
     }
 
-    if(newYpos >= turningPoint_.getY_pos()){
+    if(newYpos >= turningPoint_.getY_pos() && newYpos >= minHeight)
+    {
         position_.setX_pos(newXpos);
         position_.setY_pos(newYpos);
     }
@@ -79,12 +83,14 @@ void Spider::moveUp()
     {
         turningPointAvailable_ = false;
         movementDirection_ = Direction::DOWN;
+        moveDown();
     }//if-else
 }
 
 void Spider::moveDown()
 {
     float maxWidth  = grid_.getWidth();
+    float maxHeight = grid_.getHeight();
     auto newXpos = 0.f;
     auto newYpos = 0.f;
 
@@ -93,12 +99,12 @@ void Spider::moveDown()
     if(major_direction_ == Direction::LEFT)newXpos = position_.getX_pos()-dimensions_.speed;
     else newXpos = position_.getX_pos()+dimensions_.speed;
 
-    newYpos = position_.getY_pos()+ abs(slope_*dimensions_.speed);
+    newYpos = position_.getY_pos()+ std::abs(slope_*dimensions_.speed);
     if(newXpos < 0 || newXpos > maxWidth){
         isAlive_ = false;
         return;
     }
-    if(newYpos <= turningPoint_.getY_pos()){
+    if(newYpos <= turningPoint_.getY_pos() && newYpos <= maxHeight){
         position_.setX_pos(newXpos);
         position_.setY_pos(newYpos);
     }
@@ -106,6 +112,7 @@ void Spider::moveDown()
     {
         turningPointAvailable_ = false;
         movementDirection_ = Direction::UP;
+        moveUp();
     }//if-else
 }
 
@@ -135,7 +142,7 @@ Direction Spider::getDirection() const
 
 ObjectType Spider::getObjectType() const
 {
-    return ObjectType::SCORPION;
+    return ObjectType::SPIDER;
 }
 
 Position Spider::getPosition() const

@@ -8,26 +8,27 @@
 #include <map>
 #include <vector>
 #include <memory>
+#include <algorithm>
 
 using std::vector;
 using std::shared_ptr;
 using std::map;
 using std::pair;
+using std::find_if;
 
 #include "IEntity.h"
 #include "IMovingEntity.h"
 #include "CentipedeSegment.h"
-#include "Mushroom.h"
 #include "AssetManager.h"
 #include "SplashScreen.h"
 #include "GameWonScreen.h"
 #include "GameOverScreen.h"
 #include "SpriteSheet.h"
-#include "Scorpion.h"
 
 /** \class Presentation
  *  \brief Uses the SFML Graphics Library to draw all game objects on the screen.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *  \version 3.0
  */
 
 class Presentation
@@ -125,6 +126,11 @@ class Presentation
          */
         void processPlayerShootSound();
 
+        /** \brief Updates the sound played when a Scorpion and Spider are moving.
+         *  Also plays the sound used when a Mushroom is being regenerated.
+         */
+        void processGameObjectSound(ObjectType object_type);
+
         /** \brief Default Destructor. Destroys a Presentation object.
          */
         ~Presentation();
@@ -136,7 +142,15 @@ class Presentation
         sf::Music gun_shot_;
 
         //
-        map<ObjectType, sf::Texture> game_textures;
+        enum class GameSounds
+        {
+            GUN_SHOT = 0,
+            MUSHROOM_REGEN,
+            SCORPION_MOVE,
+            SPIDER_MOVE,
+        };
+        map<GameSounds, shared_ptr<sf::Music>> game_sounds_;
+        map<ObjectType, sf::Texture> game_textures_;
         vector<SpriteSheet> sprite_sheets_;
 
         //input keys
@@ -180,9 +194,6 @@ class Presentation
          *  \return sf::Sprite sprite with properties of the object given.
          */
          sf::Sprite generateSprite(shared_ptr<IEntity> object);
-
-
-
 };
 
 #endif // PRESENTATION_H

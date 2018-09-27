@@ -7,11 +7,11 @@
 using std::string;
 using std::vector;
 
-/**\class AssetManager
-*  \brief  A data class containing a AssetType and the path to the asset.
-*  \details Loads the assets (textures, fonts, sounds) used by the game.
-*  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*
+/** \class AssetManager
+*   \brief  A data class containing a AssetType and the path to the asset.Loads
+*   the assets (textures, fonts, sounds) used by the game.
+*   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+*   \version 3.0
 */
 
 class AssetManager{
@@ -20,20 +20,26 @@ class AssetManager{
 		*/
 		AssetManager();
 
-        // Enumerate Types of Assets:
+        /** \enum AssetType
+         *  \brief A strongly typed enum class that contains the different game assets.
+         */
 		enum class AssetType
-		{ FONT = 0,
-          GUNSHOT_SOUND,
-          PLAYER,
-          BULLET,
-          CENTIPEDE,
-          MUSHROOM,
-          SCORPION
-		};/**< A strongly typed enumeration class used to list the different assets in the game. */
-
+		{
+            FONT = 0,
+            GUNSHOT_SOUND,
+            MUSHROOM_REGEN,
+            SCORPION_MOVE,
+            SPIDER_MOVE,
+            PLAYER,
+            BULLET,
+            CENTIPEDE,
+            MUSHROOM,
+            SCORPION,
+            SPIDER
+		};
 
 		/** \brief AssetManager - Parameterized Class Constructor.
-		*	\details Used to create a Asset Manager object containing the type
+		*	Used to create a Asset Manager object containing the type
 		*	of asset being loaded and the path where to find the asset.
 		*	\param asset_type is of type AssetType and contains the type of asset being loaded.
 		*	\param asset_path is of type std::string and contains the path to the asset being loaded.

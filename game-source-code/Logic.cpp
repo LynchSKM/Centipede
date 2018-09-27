@@ -43,20 +43,20 @@ void Logic::run()
 
     StopWatch game_timer;
     game_timer.start();
-    auto game_speed = 1.0f/1000.0f;
+    auto game_speed = 1.0f/4000.0f;
     auto timeSinceLastUpdate = 0.0;
 
-    while(screen_state_ == ScreenState::GAME_ACTIVE) {
-        game_timer.stop();
-        timeSinceLastUpdate+=game_timer.getRunTime();
-        game_timer.start();
+    while(screen_state_ == ScreenState::GAME_ACTIVE)
+    {
+        game_timer.pause();
+        auto time_elapsed = game_timer.getPauseTime();
         // Check if time that has passed is greater than the frame speed:
-        while(timeSinceLastUpdate>game_speed && screen_state_ == ScreenState::GAME_ACTIVE) {
-            timeSinceLastUpdate-=game_speed;
+        if((time_elapsed-timeSinceLastUpdate)>game_speed && screen_state_ == ScreenState::GAME_ACTIVE)
+        {
+            timeSinceLastUpdate = time_elapsed;
             getInputCommands();
             if(presentation_.isWindowOpen()==false) return;
-            generateNormalCentipede();
-            generateAScorpion();
+            generateGameEnemies();
             updateGameObjects();
             checkCollisions();
             generateMushroomAtCollision();
@@ -64,6 +64,7 @@ void Logic::run()
             reincarnatePlayer();
             removeDeadEntities();
             renderGameObjects();
+            game_timer.resume();
         }//while
     }//while
 
@@ -84,9 +85,13 @@ void Logic::renderSplashScreen()
 
 void Logic::updateGameObjects()
 {
-    for(auto& object : moving_game_objects_) {
+    for(auto& object : moving_game_objects_)
+    {
         if(object->isAlive())
+        {
             object->move();
+            presentation_.processGameObjectSound(object->getObjectType());
+        }
     }
 }
 
@@ -119,6 +124,14 @@ void Logic::renderGameWonScreen()
 {
     presentation_.drawGameWonScreen(player_->getScore(), high_score_);
 }
+
+void Logic::generateGameEnemies()
+{
+    generateNormalCentipede();
+    generateAScorpion();
+    //generateASpider();
+}
+
 void Logic::generateNormalCentipede()
 {
 
@@ -169,6 +182,43 @@ void Logic::generateAScorpion()
     }//for
 }
 
+void Logic::generateASpider()
+{
+    for(auto& spider: enemyFactory_.generateASpider())
+    {
+        game_objects_.push_back(spider);
+        moving_game_objects_.push_back(spider);
+    }//for
+}
+
+void Logic::reincarnateMushroom()
+{
+    StopWatch mushroom_reincarnate_timer;
+    mushroom_reincarnate_timer.start();
+    auto iter_mushroom = game_objects_.begin();
+    auto timeSinceLastMushroomRegen = 0.0;
+    auto delay = 0.30;
+    while(iter_mushroom!=game_objects_.end())
+    {
+        if((*iter_mushroom)->getObjectType() == ObjectType::MUSHROOM
+           && (*iter_mushroom)->getRemainingLives()<4 || (*iter_mushroom)->isPoisoned())
+        {
+            mushroom_reincarnate_timer.pause();
+            auto time_elapsed = mushroom_reincarnate_timer.getPauseTime();
+            if((time_elapsed-timeSinceLastMushroomRegen)>delay)
+            {
+                timeSinceLastMushroomRegen = time_elapsed;
+                (*iter_mushroom)->reincarnate();
+                renderGameObjects();
+                presentation_.processGameObjectSound(ObjectType::MUSHROOM);
+                mushroom_reincarnate_timer.resume();
+                ++iter_mushroom;
+            }
+        }
+        else ++iter_mushroom;
+    }
+}
+
 void Logic::reincarnatePlayer()
 {
     if (player_->isHit() && player_->isAlive())
@@ -176,36 +226,17 @@ void Logic::reincarnatePlayer()
         container_erase_if(game_objects_,
         [](shared_ptr<IEntity>& game_object)
         {
-            return (game_object->getObjectType() == ObjectType::CENTIPEDE);
+            return (game_object->getObjectType() != ObjectType::PLAYER &&
+                    game_object->getObjectType() != ObjectType::MUSHROOM);
         });
 
         container_erase_if(moving_game_objects_,
         [](shared_ptr<IMovingEntity>& game_object)
         {
-            return (game_object->getObjectType() == ObjectType::CENTIPEDE);
+            return (game_object->getObjectType() != ObjectType::PLAYER);
         });
 
-        container_erase_if(game_objects_,
-        [](shared_ptr<IEntity>& game_object)
-        {
-            return (game_object->getObjectType() == ObjectType::PLAYER_LASER_BULLET);
-        });
-
-        container_erase_if(moving_game_objects_,
-        [](shared_ptr<IMovingEntity>& game_object)
-        {
-            return (game_object->getObjectType() == ObjectType::PLAYER_LASER_BULLET);
-        });
-
-        std::transform(game_objects_.begin(), game_objects_.end(),
-                       game_objects_.begin(),
-                       [](IEntity_ptr& object)
-                       {
-                            if(object->getObjectType() == ObjectType::MUSHROOM && object->isAlive())
-                                object->reincarnate();
-                            return object;
-                       });
-
+        reincarnateMushroom();
         enemyFactory_.reset();
         generateNormalCentipede();
         player_->reincarnate();

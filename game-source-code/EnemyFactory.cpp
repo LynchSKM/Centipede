@@ -5,7 +5,8 @@ grid_{grid},
 isCentipedeGenerated_{false},
 mushroomfactory_{grid},
 isCentipedeHeadsGenerated_{false},
-isScorpionGenerated_{false}
+isScorpionGenerated_{false},
+isSpiderGenerated_{false}
 {
     //ctor
     srand(time(0));
@@ -78,17 +79,12 @@ vector <shared_ptr<CentipedeSegment>> EnemyFactory::generateCentipedeHeads()
 }
 vector <shared_ptr<Mushroom>> EnemyFactory::generateMushrooms()
 {
-    vector<shared_ptr<Mushroom>> mushrooms;
-    for(auto& mushroom: mushroomfactory_.generateMushrooms()){
-        mushrooms.push_back(mushroom);
-    }
-    return mushrooms;
+    return mushroomfactory_.generateMushrooms();
 }
 
 shared_ptr<Mushroom> EnemyFactory::generateAMushroom(Position position)
 {
-    auto mushroom_ptr = mushroomfactory_.generateAMushroom(position);
-    return mushroom_ptr;
+    return mushroomfactory_.generateAMushroom(position);
 }
 
 vector <shared_ptr<Scorpion>> EnemyFactory::generateAScorpion()
@@ -96,17 +92,27 @@ vector <shared_ptr<Scorpion>> EnemyFactory::generateAScorpion()
     vector<shared_ptr<Scorpion>> scorpions;
     if(!isScorpionGenerated_)
     {
-        auto scorpion_ptr = make_shared<Scorpion>(grid_);
-        scorpions.push_back(scorpion_ptr);
-
+        scorpions.push_back(make_shared<Scorpion>(grid_));
         isScorpionGenerated_ = true;
     }
     return scorpions;
 }
 
+vector <shared_ptr<Spider>> EnemyFactory::generateASpider()
+{
+    vector<shared_ptr<Spider>> spider;
+    if(!isSpiderGenerated_)
+    {
+        spider.push_back(make_shared<Spider>(grid_));
+        isSpiderGenerated_ = true;
+    }
+    return spider;
+}
+
 void EnemyFactory::reset()
 {
-    isCentipedeGenerated_ = false;
+    isCentipedeGenerated_      = false;
     isCentipedeHeadsGenerated_ = false;
-    isScorpionGenerated_ = false;
+    isScorpionGenerated_       = false;
+    isSpiderGenerated_         = false;
 }
