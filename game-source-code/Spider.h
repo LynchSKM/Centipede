@@ -41,7 +41,7 @@ class Spider : public IMovingEntity
          *  direction of a Spider object.
          *  \param direction an enum of enum class Direction.
          */
-        virtual void setDirection(Direction direction) = 0;
+        virtual void setDirection(Direction direction)override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that returns
          *  a enum of ObjectType::SPIDER.
@@ -99,9 +99,28 @@ class Spider : public IMovingEntity
     private:
         const Grid grid_;
         Position position_;
-        Direction direction_;
+        Direction major_direction_;
+        Direction movementDirection_;
         bool isAlive_;
+        bool turningPointAvailable_;
+        double slope_;
+        Position turningPoint_;
         static struct SpiderDimensions dimensions_;
+
+        /** \brief A function that modifies the position of the object such that the
+         * object moves up.
+         */
+        void moveUp();
+
+        /** \brief A function that modifies the position of the object such that the
+         * object move down.
+         */
+        void moveDown();
+
+        /** \brief generates the next turning point and gets the slope of the line
+         * to that point.
+         */
+        void CalculateSlope();
 };
 
 #endif // SPIDER_H
