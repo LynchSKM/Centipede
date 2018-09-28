@@ -48,12 +48,12 @@ void Logic::run()
 
     while(screen_state_ == ScreenState::GAME_ACTIVE)
     {
-        game_timer.pause();
-        auto time_elapsed = game_timer.getPauseTime();
+        timeSinceLastUpdate+=game_timer.getStopTime();
+        game_timer.start();
         // Check if time that has passed is greater than the frame speed:
-        if((time_elapsed-timeSinceLastUpdate)>game_speed && screen_state_ == ScreenState::GAME_ACTIVE)
+        while(timeSinceLastUpdate>game_speed && screen_state_ == ScreenState::GAME_ACTIVE)
         {
-            timeSinceLastUpdate = time_elapsed;
+            timeSinceLastUpdate-=game_speed;
             getInputCommands();
             if(presentation_.isWindowOpen()==false) return;
             generateGameEnemies();
@@ -64,7 +64,6 @@ void Logic::run()
             reincarnatePlayer();
             removeDeadEntities();
             renderGameObjects();
-            game_timer.resume();
         }//while
     }//while
 

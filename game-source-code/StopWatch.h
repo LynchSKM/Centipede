@@ -34,6 +34,11 @@ public:
 	 */
     double getPauseTime() {return pauseTime_;};
 
+    /** \brief Returns the amount time in seconds when stop is called.
+	 *  \return double
+	 */
+    double getStopTime();
+
 	/** \brief Returns the amount of time in seconds that has passed in the piece of code.
 	 *  \return double
 	 */

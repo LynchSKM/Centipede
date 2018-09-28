@@ -8,7 +8,7 @@ void StopWatch::start(){
 	// If stopwatch is not already running, start it:
 	if (mode_ != Mode::RUNNING)
 		mode_ = Mode::RUNNING;
-		startTime_ = getProcessTime(); 
+		startTime_ = getProcessTime();
 	return;
 }
 
@@ -16,9 +16,9 @@ void StopWatch::pause(){
 	// If stopwatch is not already paused, pause it:
 	if (mode_ != Mode::PAUSED)
 		mode_ = Mode::PAUSED;
-		pauseTime_ = getProcessTime(); 
-	
-	return;	
+		pauseTime_ = getProcessTime();
+
+	return;
 }
 
 void StopWatch::resume(){
@@ -26,19 +26,25 @@ void StopWatch::resume(){
 	if (mode_ == Mode::PAUSED){
 		// Set it to running:
 		mode_ = Mode::RUNNING;
-		resumeTime_ = getProcessTime(); 
+		resumeTime_ = getProcessTime();
 		runTime_ -= (resumeTime_ - pauseTime_);
 		lapTime_ += (resumeTime_ - pauseTime_);
 	}//if
-	return;	
+	return;
 }
 
 void StopWatch::stop(){
 	// If stopwatch is not already stopped, stop it:
 	if (mode_!=Mode::STOPPED)
 		mode_ = Mode::STOPPED;
-		stopTime_ = getProcessTime(); 
-	return;	
+		stopTime_ = getProcessTime();
+	return;
+}
+
+double StopWatch::getStopTime()
+{
+    stop();
+    return stopTime_-startTime_;
 }
 
 double StopWatch::getLapTime(){
@@ -53,7 +59,7 @@ double StopWatch::getRunTime(){
 	return runTime_;
 }
 
-// returns the amount of time in seconds that has passed since the process (i.e. your program) started executing 
+// returns the amount of time in seconds that has passed since the process (i.e. your program) started executing
 double StopWatch::getProcessTime()
 {
 	clock_t time = clock();
