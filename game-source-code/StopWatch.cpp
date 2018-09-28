@@ -9,6 +9,7 @@ void StopWatch::start(){
 	if (mode_ != Mode::RUNNING)
 		mode_ = Mode::RUNNING;
 		startTime_ = getProcessTime();
+		runTime_   = 0.0f;
 	return;
 }
 

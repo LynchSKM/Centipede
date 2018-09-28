@@ -48,6 +48,7 @@ class Logic
         AssetManager assetManager_;
         EnemyFactory enemyFactory_{grid_};
         CollisionHandler collisionHandler_{grid_};
+        StopWatch game_timer_;
         shared_ptr<Player> player_;
         vector<shared_ptr<IEntity>> game_objects_;
         vector<shared_ptr<IMovingEntity>> moving_game_objects_;

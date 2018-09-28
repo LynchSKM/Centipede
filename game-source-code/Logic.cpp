@@ -41,15 +41,15 @@ void Logic::run()
     high_score_ = highScoreManager_.getHighScore();
     generateMushrooms();
 
-    StopWatch game_timer;
-    game_timer.start();
-    auto game_speed = 1.0f/4000.0f;
+    game_timer_.start();
+    auto game_speed = 1.0f/600.0f;
     auto timeSinceLastUpdate = 0.0;
 
     while(screen_state_ == ScreenState::GAME_ACTIVE)
     {
-        timeSinceLastUpdate+=game_timer.getStopTime();
-        game_timer.start();
+        game_timer_.stop();
+        timeSinceLastUpdate+=game_timer_.getRunTime();
+        game_timer_.start();
         // Check if time that has passed is greater than the frame speed:
         while(timeSinceLastUpdate>game_speed && screen_state_ == ScreenState::GAME_ACTIVE)
         {
@@ -128,7 +128,7 @@ void Logic::generateGameEnemies()
 {
     generateNormalCentipede();
     generateAScorpion();
-    //generateASpider();
+    generateASpider();
 }
 
 void Logic::generateNormalCentipede()
@@ -192,6 +192,7 @@ void Logic::generateASpider()
 
 void Logic::reincarnateMushroom()
 {
+    game_timer_.pause();
     StopWatch mushroom_reincarnate_timer;
     mushroom_reincarnate_timer.start();
     auto iter_mushroom = game_objects_.begin();
@@ -216,6 +217,7 @@ void Logic::reincarnateMushroom()
         }
         else ++iter_mushroom;
     }
+    game_timer_.resume();
 }
 
 void Logic::reincarnatePlayer()
