@@ -28,30 +28,38 @@ void Spider::CalculateSlope()
 {
     float minHeight = grid_.getHeight()- grid_.getHeight()*0.25;
     float maxHeight = grid_.getHeight();
-    auto multFactor = 5;
+    auto xpos = 0.0f;
+    auto ypos = 0.0f;
+    auto multFactor = 4;
 
     if(movementDirection_ == Direction::DOWN)
     {
-        auto xpos = rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width;
+        if(major_direction_ == Direction::LEFT)
+             xpos = rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width + position_.getX_pos();
+        else  xpos = position_.getX_pos() - rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width;
+
         auto y_difference = 0.5f*(maxHeight - position_.getY_pos());
-        auto ypos = rand()%static_cast<int>(y_difference) + position_.getY_pos() + y_difference;
+         ypos = rand()%static_cast<int>(y_difference) + position_.getY_pos() + y_difference;
 
         turningPoint_.setX_pos(xpos);
         turningPoint_.setY_pos(ypos);
 
-        slope_ = (position_.getY_pos() - ypos)/(position_.getX_pos() - xpos);
+        slope_ = std::abs(position_.getY_pos() - ypos)/std::abs(position_.getX_pos() - xpos);
         turningPointAvailable_ = true;
     }
     else
     {
-        auto xpos = rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width;
+        if(major_direction_ == Direction::LEFT)
+             xpos = rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width + position_.getX_pos();
+        else  xpos = position_.getX_pos() - rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width;
+
         auto y_difference = 0.5f*(position_.getY_pos()-minHeight);
-        auto ypos = rand()%static_cast<int>(y_difference) + position_.getY_pos();
+         ypos =  position_.getY_pos() - rand()%static_cast<int>(y_difference);
 
         turningPoint_.setX_pos(xpos);
         turningPoint_.setY_pos(ypos);
 
-        slope_= (position_.getY_pos() - ypos)/(position_.getX_pos() - xpos);
+        slope_= std::abs(position_.getY_pos() - ypos)/std::abs(position_.getX_pos() - xpos);
         turningPointAvailable_ = true;
     }
 }
