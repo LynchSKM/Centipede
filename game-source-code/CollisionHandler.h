@@ -138,6 +138,12 @@ class CollisionHandler
          *  \param scorpion vector of shared pointer(s) to an IMovingEntity object of ObjectType::SCORPION.
          */
         void scorpionCollidesWithMushroom(vector<IMovingEntity_ptr>& scorpions);
+
+        /** \brief Checks collisions between a spider and mushroom.
+         *  If a collision occurs with a mushroom, the mushroom is set to eliminated.
+         *  \param spider vector of shared pointer(s) to an IMovingEntity object of ObjectType::SPIDER.
+         */
+        void spiderCollidesWithMushroom(vector<IMovingEntity_ptr>& spiders);
 };
 
 #endif // COLLISIONHANDLER_H

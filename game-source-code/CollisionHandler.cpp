@@ -59,12 +59,15 @@ void CollisionHandler::checkCollisions(vector<IEntity_ptr>& game_objects,
                 ObjectType::PLAYER);
     auto scorpion = copyObjects(moving_game_objects.begin(), moving_game_objects.end(),
                 ObjectType::SCORPION);
+    auto spider = copyObjects(moving_game_objects.begin(), moving_game_objects.end(),
+                ObjectType::SPIDER);
 
     playerCollidesWithObjects(player);
     playerBulletCollidesWithEnemies(player_bullets, centipede);
     centipedeCollidesWithCentipede(centipede);
     centipedeCollidesWithMushroom(centipede);
     scorpionCollidesWithMushroom(scorpion);
+    spiderCollidesWithMushroom(spider);
     spatial_hash_.clearAll();
 }
 
@@ -271,6 +274,24 @@ void CollisionHandler::scorpionCollidesWithMushroom(vector<IMovingEntity_ptr>& s
               {
                  if(sat_algorithm_.checkOverlap(scorpion->getBoundaryBox(), object->getBoundaryBox()))
                     object->poison();
+              } //if
+          } // for
+       }//if
+   }//for
+}
+void CollisionHandler::spiderCollidesWithMushroom(vector<IMovingEntity_ptr>& spiders)
+{
+   for(auto& spider :spiders)
+   {
+       if(spider->isAlive())
+       {
+          auto near_by_objects = spatial_hash_.retrieveNearbyObjects(spider);
+          for(auto& object: near_by_objects)
+          {
+              if(object->isAlive() && object->getObjectType()==ObjectType::MUSHROOM)
+              {
+                 if(sat_algorithm_.checkOverlap(spider->getBoundaryBox(), object->getBoundaryBox()))
+                    while(object->isAlive()) object->eliminated();
               } //if
           } // for
        }//if
