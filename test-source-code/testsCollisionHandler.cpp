@@ -374,8 +374,9 @@ TEST_CASE("Collision between Scorpion and Mushroom poisons the Mushroom")
 
     auto x = 400.0f;
     auto y = 56.0f;
-    auto mushroom = make_shared<Mushroom>(Position(x, y));
-    auto scorpion = make_shared<Scorpion>(grid,Position(x+(24.1), y),Direction::LEFT );
+
+    auto scorpion = make_shared<Scorpion>(grid);
+    auto mushroom = make_shared<Mushroom>(Position(x, scorpion->getPosition().getY_pos()));
 
     game_objects.push_back(mushroom);
     game_objects.push_back(scorpion);
