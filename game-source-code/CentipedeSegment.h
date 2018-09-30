@@ -2,20 +2,31 @@
 #define CENTIPEDESEGMENT_H
 
 #include "IMovingEntity.h"
-#include "Dimensions.h"
 #include "Grid.h"
 
 #include <algorithm>
 #include <vector>
-
 using std::vector;
 
+/** \struct CentipedeSegmentDemensions
+ *	\brief Contains information about a CentipedeSegment's height, width and speed.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *	\version 3.0
+ */
+struct CentipedeSegmentDemensions
+{
+    const float height = 14.0;
+    const float width  = 14.0;
+    const float speed  = 1.0;
+    const float speedY = 16.0;
+};
+
 /** \class CentipedeSegment
-*   \brief This is a Class that inherits from the IMovingEntity class. It
-*   contains virtual functions that will be overridden by CentipedeSegment class.
-*   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*   \version
-*/
+ *  \brief This is class inherits from the IMovingEntity class. It
+ *  contains virtual functions that will be overridden by CentipedeSegment class.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *  \version 3.0
+ */
 
 class CentipedeSegment : public IMovingEntity
 {
@@ -24,26 +35,28 @@ class CentipedeSegment : public IMovingEntity
         /** \enum BodyType
          *  \brief A strongly typed enum class representing the BodyType of the
          *  centipede.
+         *	\author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+         *	\version 3.0
          */
-        enum class BodyType{
-            HEAD = 0,/**< is coded as int of value 0. */
-            BODY     /**< is coded as int of value 0. */
+        enum class BodyType
+        {
+            HEAD = 0,/**< Represents whether a CentipedeSegment is a head.*/
+            BODY     /**< Represents whether a CentipedeSegment is a body.*/
         };
 
         /** \brief Parameterized Constructor. Creates a centipede segment object.
-         *  \param is a direction of type Direction enum class.
-         *  \param is a bodytype of type BodyType enum class.
-         *  \param is a objectType of type ObjectType enum class.
-         *  \param is a position of type Position.
-         *  \param is grid of type grid.
+         *  \param grid is of type grid.
+         *  \param bodytype is of type BodyType enum class.
+         *  \param position is of type Position.
+         *  \param cur_Direction is of type Direction enum class.
          */
         CentipedeSegment(const Grid& grid, BodyType bodytype, Position position, Direction cur_Direction);
 
-        /** Virtual Destructor. Destroys a CentipedeSegment object.
+        /** \brief Virtual Destructor. Destroys a CentipedeSegment object.
          */
         virtual~CentipedeSegment();
 
-        /** Inherited from IMovingEnity. A virtual function that moves a CentipedeSegment object.
+        /** \brief Inherited from IMovingEntity. A virtual function that moves a CentipedeSegment object.
          */
         virtual void move() override;
 
@@ -66,7 +79,7 @@ class CentipedeSegment : public IMovingEntity
         virtual ObjectType getObjectType() const override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that returns
-         * a centre position of the CentipedeSegment object.
+         *  a centre position of the CentipedeSegment object.
          *  \return Position of the CentipedeSegment object containing its current position.
          */
         virtual Position getPosition() const override;
@@ -95,9 +108,8 @@ class CentipedeSegment : public IMovingEntity
          */
         virtual int getRemainingLives() const override;
 
-        /** \brief Inherited from IMovingEntity. A virtual function that will be
-         * used to bring the CentipedeSegment object back to life, if the remaining lives
-         * are not zero.
+        /** \brief Inherited from IMovingEntity. A virtual function that will not
+         *	be implemented because CentipedeSegment objects have one life only.
          */
 		virtual void reincarnate() override;
 
@@ -118,7 +130,7 @@ class CentipedeSegment : public IMovingEntity
         Direction getPrevDirection() const;
 
         /** \brief A function that changes the direction of the object to Down, this
-         *   is called when a collision is detected in front of an object.
+         *  is called when a collision is detected in front of an object.
          */
         void changeDirection();
 
@@ -128,7 +140,7 @@ class CentipedeSegment : public IMovingEntity
         BodyType getBodyType() const;
 
         /** \brief A function that sets the body type of the centipede segment.
-         *  \param body_type of type BodyType of the enum class.
+         *  \param body_type is of type BodyType of the enum class.
          */
         void setBodyType(BodyType body_type);
 
@@ -138,12 +150,12 @@ class CentipedeSegment : public IMovingEntity
         float getRotationAngle() const;
 
         /** \brief A function that saves positions where the head of centipede
-         * train had a collision.
+         *  train had a collision.
          */
         void collisionAt(Position position, bool poisionedCollision);
 
         /** \brief A function that clears the vector of positions where the head of centipede
-         * train had a collision.
+         *  train had a collision.
          */
         void clearHeadCollisions();
 
@@ -151,7 +163,6 @@ class CentipedeSegment : public IMovingEntity
         Direction cur_Direction_;
         Direction prev_Direction_;
         BodyType bodytype_;
-        ObjectType objectType_;
         Position position_;
         const Grid grid_;
         float rotationAngle_ = 0.0;
@@ -163,8 +174,9 @@ class CentipedeSegment : public IMovingEntity
         bool centAtbottom_;
         vector<Position> head_collision_positions_;
         vector<bool> are_head_collision_positions_poisioned_;
+        static struct CentipedeSegmentDemensions dimensions_;
 
-        /** \brief controls the movements of the centipede segment upon entry.
+        /** \brief Controls the movements of the centipede segment upon entry.
          */
         bool isEntryMovement();
 
@@ -185,11 +197,11 @@ class CentipedeSegment : public IMovingEntity
         void moveRight();
 
         /** \brief Determines whether the CentipedeSegment has reached a position
-         * where the head collided. If it has the changeDirection() function is called.
+         *  where the head collided. If it has the changeDirection() function is called.
          */
         void checkHeadCollisions();
 
-        /** \brief moves the centipede accordingly when it is poisoned.
+        /** \brief Moves the centipede segment accordingly when it is poisoned.
          */
         void isPoisonedMovement();
 };

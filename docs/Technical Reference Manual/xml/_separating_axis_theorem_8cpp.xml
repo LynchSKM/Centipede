@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_separating_axis_theorem_8cpp" kind="file" language="C++">
+    <compoundname>SeparatingAxisTheorem.cpp</compoundname>
+    <includes refid="_separating_axis_theorem_8h" local="yes">SeparatingAxisTheorem.h</includes>
+    <incdepgraph>
+      <node id="739">
+        <label>limits</label>
+      </node>
+      <node id="734">
+        <label>POSITION.H</label>
+      </node>
+      <node id="736">
+        <label>cmath</label>
+      </node>
+      <node id="732">
+        <label>SeparatingAxisTheorem.cpp</label>
+        <link refid="_separating_axis_theorem_8cpp"/>
+        <childnode refid="733" relation="include">
+        </childnode>
+      </node>
+      <node id="735">
+        <label>BoundaryBox.h</label>
+        <link refid="_boundary_box_8h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="736" relation="include">
+        </childnode>
+        <childnode refid="737" relation="include">
+        </childnode>
+        <childnode refid="738" relation="include">
+        </childnode>
+      </node>
+      <node id="737">
+        <label>tuple</label>
+      </node>
+      <node id="738">
+        <label>vector</label>
+      </node>
+      <node id="733">
+        <label>SeparatingAxisTheorem.h</label>
+        <link refid="_separating_axis_theorem_8h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="735" relation="include">
+        </childnode>
+        <childnode refid="736" relation="include">
+        </childnode>
+        <childnode refid="739" relation="include">
+        </childnode>
+        <childnode refid="740" relation="include">
+        </childnode>
+        <childnode refid="737" relation="include">
+        </childnode>
+        <childnode refid="738" relation="include">
+        </childnode>
+      </node>
+      <node id="740">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_separating_axis_theorem_8h" kindref="compound">SeparatingAxisTheorem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_separating_axis_theorem_1a876cb95f1373c4b402f227aa0097a5e5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_separating_axis_theorem_1a876cb95f1373c4b402f227aa0097a5e5" kindref="member">SeparatingAxisTheorem::checkOverlap</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref>&amp;<sp/>rect_A,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref>&amp;<sp/>rect_B)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" kindref="member">axes_</ref>.empty())<sp/><ref refid="class_separating_axis_theorem_1a2ec4cb98d02252c57824bbdf4d5f8bbb" kindref="member">clearAll</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" kindref="member">vertices_rectA_</ref><sp/>=<sp/>rect_A.<ref refid="class_boundary_box_1ac5f649399746662fa0176e95c632ca9c" kindref="member">getVertices</ref>();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a57ea865e7718773ab625c08e5a5a033f" kindref="member">vertices_rectB_</ref><sp/>=<sp/>rect_B.<ref refid="class_boundary_box_1ac5f649399746662fa0176e95c632ca9c" kindref="member">getVertices</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1ac7613d7a7f5f05311260230b26486c63" kindref="member">generateAxes</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_separating_axis_theorem_1a574c908ebfa5df34e2f37916956c000a" kindref="member">checkProjectionsOverlap</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_separating_axis_theorem_1a4b4dccb055bac2420135d8ce4bd3446a" refkind="member"><highlight class="normal">Position<sp/><ref refid="class_separating_axis_theorem_1a4b4dccb055bac2420135d8ce4bd3446a" kindref="member">SeparatingAxisTheorem::normalizeAxis</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Position&amp;<sp/>axis)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>axis_x<sp/>=<sp/>axis.getX_pos(),<sp/>axis_y<sp/>=<sp/>axis.getY_pos();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>axis_magnitude<sp/>=<sp/>std::sqrt((std::pow(axis_x,2))+(std::pow(axis_y,2)));</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(Position{axis_x/axis_magnitude,<sp/>axis_y/axis_magnitude});</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_separating_axis_theorem_1ac7613d7a7f5f05311260230b26486c63" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_separating_axis_theorem_1ac7613d7a7f5f05311260230b26486c63" kindref="member">SeparatingAxisTheorem::generateAxes</ref>(){</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Rect<sp/>A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>UpperRight-UpperLeft</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>axis<sp/>=<sp/><ref refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" kindref="member">vertices_rectA_</ref>.at(1)-<ref refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" kindref="member">vertices_rectA_</ref>.at(0);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" kindref="member">axes_</ref>.push_back(<ref refid="class_separating_axis_theorem_1a4b4dccb055bac2420135d8ce4bd3446a" kindref="member">normalizeAxis</ref>(axis));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>UpperRight-BottomRight</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>axis<sp/>=<sp/><ref refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" kindref="member">vertices_rectA_</ref>.at(1)-<ref refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" kindref="member">vertices_rectA_</ref>.at(3);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" kindref="member">axes_</ref>.push_back(<ref refid="class_separating_axis_theorem_1a4b4dccb055bac2420135d8ce4bd3446a" kindref="member">normalizeAxis</ref>(axis));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Rect<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>UpperLeft-BottomLeft</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>axis<sp/>=<sp/><ref refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" kindref="member">vertices_rectA_</ref>.at(0)-<ref refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" kindref="member">vertices_rectA_</ref>.at(2);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" kindref="member">axes_</ref>.push_back(<ref refid="class_separating_axis_theorem_1a4b4dccb055bac2420135d8ce4bd3446a" kindref="member">normalizeAxis</ref>(axis));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>UpperLeft-UpperRight</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>axis<sp/>=<sp/><ref refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" kindref="member">vertices_rectA_</ref>.at(0)-<ref refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" kindref="member">vertices_rectA_</ref>.at(1);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" kindref="member">axes_</ref>.push_back(<ref refid="class_separating_axis_theorem_1a4b4dccb055bac2420135d8ce4bd3446a" kindref="member">normalizeAxis</ref>(axis));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_separating_axis_theorem_1ae0658d8b891bf6db5bea7fba29c1a02c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_separating_axis_theorem_1ae0658d8b891bf6db5bea7fba29c1a02c" kindref="member">SeparatingAxisTheorem::dotProduct</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Position&amp;<sp/>pointA,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Position&amp;<sp/>pointB)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dot_product<sp/>=<sp/>(pointA.getX_pos()<sp/>*<sp/>pointB.getX_pos())+(pointA.getY_pos()<sp/>*<sp/>pointB.getY_pos());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dot_product;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_separating_axis_theorem_1a568f10c3f0eed05f4cf39bb1c2d380f1" refkind="member"><highlight class="normal">tuple&lt;float,<sp/>float&gt;<sp/><ref refid="class_separating_axis_theorem_1a568f10c3f0eed05f4cf39bb1c2d380f1" kindref="member">SeparatingAxisTheorem::projectVectorsOntoAxis</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Position&amp;<sp/>axis,<sp/>vector&lt;Position&gt;&amp;<sp/>vertices)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Position&gt;<sp/>projected_vertices(4);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>iter_projected_vertex<sp/>=<sp/>begin(projected_vertices);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>axis_x<sp/>=<sp/>axis.getX_pos(),<sp/>axis_y<sp/>=<sp/>axis.getY_pos();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>axis_magnitude_squared<sp/>=<sp/>(std::pow(axis_x,2))+(std::pow(axis_y,2));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>vertex:<sp/>vertices){</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>product<sp/>=<sp/><ref refid="class_separating_axis_theorem_1ae0658d8b891bf6db5bea7fba29c1a02c" kindref="member">dotProduct</ref>(vertex,<sp/>axis)/axis_magnitude_squared;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iter_projected_vertex-&gt;setX_pos(product*axis.getX_pos());</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iter_projected_vertex-&gt;setY_pos(product*axis.getY_pos());</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++iter_projected_vertex;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//for<sp/>vertex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>minimumProjection<sp/>=<sp/><ref refid="class_separating_axis_theorem_1ae0658d8b891bf6db5bea7fba29c1a02c" kindref="member">dotProduct</ref>(axis,<sp/>projected_vertices.at(0));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maximumProjection<sp/>=<sp/>minimumProjection;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Perform<sp/>dot<sp/>product<sp/>between<sp/>vertices<sp/>and<sp/>axis:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i=1u;<sp/>i<sp/>!=<sp/>projected_vertices.size();<sp/>i++){</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>projection<sp/>=<sp/><ref refid="class_separating_axis_theorem_1ae0658d8b891bf6db5bea7fba29c1a02c" kindref="member">dotProduct</ref>(axis,<sp/>projected_vertices.at(i));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(projection<sp/>&lt;<sp/>minimumProjection)<sp/>minimumProjection<sp/>=<sp/>projection;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(projection<sp/>&gt;<sp/>maximumProjection)<sp/>maximumProjection<sp/>=<sp/>projection;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//for<sp/>vertices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>min<sp/>and<sp/>max<sp/>projections<sp/>onto<sp/>axis:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{minimumProjection,<sp/>maximumProjection};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_separating_axis_theorem_1a574c908ebfa5df34e2f37916956c000a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_separating_axis_theorem_1a574c908ebfa5df34e2f37916956c000a" kindref="member">SeparatingAxisTheorem::checkProjectionsOverlap</ref>(){</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>minimum<sp/>and<sp/>maximum<sp/>projections<sp/>onto<sp/>normals:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>axis<sp/>:<sp/><ref refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" kindref="member">axes_</ref>){</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Project<sp/>Rectangle<sp/>A:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">[minimumProjectionA,<sp/>maximumProjectionA]<sp/>=<sp/><ref refid="class_separating_axis_theorem_1a568f10c3f0eed05f4cf39bb1c2d380f1" kindref="member">projectVectorsOntoAxis</ref>(axis,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" kindref="member">vertices_rectA_</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Project<sp/>Rectangle<sp/>B:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">[minimumProjectionB,<sp/>maximumProjectionB]<sp/>=<sp/><ref refid="class_separating_axis_theorem_1a568f10c3f0eed05f4cf39bb1c2d380f1" kindref="member">projectVectorsOntoAxis</ref>(axis,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a57ea865e7718773ab625c08e5a5a033f" kindref="member">vertices_rectB_</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>both<sp/>conditions<sp/>are<sp/>true<sp/>there<sp/>is<sp/>overlap:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>overlapOccured<sp/>=<sp/>(minimumProjectionB<sp/>&lt;=<sp/>maximumProjectionA<sp/>&amp;&amp;<sp/>maximumProjectionB<sp/>&gt;=<sp/>minimumProjectionA);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(overlapOccured==</highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>overlap<sp/>=<sp/>std::max(0.0f,<sp/>std::min(maximumProjectionA,<sp/>maximumProjectionB));</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>overlap-=<sp/>std::max(minimumProjectionA,<sp/>minimumProjectionB);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(overlap<sp/>&lt;<sp/><ref refid="class_separating_axis_theorem_1aaacd09678df1c2ef9aaa5f13cb358d5b" kindref="member">smallest_overlap_</ref>)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" kindref="member">min_translation_vector_</ref><sp/>=<sp/>axis;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1aaacd09678df1c2ef9aaa5f13cb358d5b" kindref="member">smallest_overlap_</ref><sp/>=<sp/>overlap;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//if</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//for<sp/>axes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107" refid="class_separating_axis_theorem_1a68976bdca24421320b8ccedcc1e35760" refkind="member"><highlight class="normal">Position<sp/><ref refid="class_separating_axis_theorem_1a68976bdca24421320b8ccedcc1e35760" kindref="member">SeparatingAxisTheorem::getPenetrationDistance</ref>(Position&amp;<sp/>centre_1,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Position&amp;<sp/>centre_2)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>is<sp/>to<sp/>ensure<sp/>mtv<sp/>points<sp/>from<sp/>rectA<sp/><sp/>to<sp/>rectB:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>Position<sp/>b_to_a<sp/>=<sp/>centre_2-centre_1;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_separating_axis_theorem_1ae0658d8b891bf6db5bea7fba29c1a02c" kindref="member">dotProduct</ref>(<ref refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" kindref="member">min_translation_vector_</ref>,<sp/>b_to_a)&gt;=0){</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" kindref="member">min_translation_vector_</ref><sp/>=<sp/>Position{0,0}-<ref refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" kindref="member">min_translation_vector_</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(Position(<ref refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" kindref="member">min_translation_vector_</ref>.getX_pos()*<ref refid="class_separating_axis_theorem_1aaacd09678df1c2ef9aaa5f13cb358d5b" kindref="member">smallest_overlap_</ref>,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" kindref="member">min_translation_vector_</ref>.getY_pos()*<ref refid="class_separating_axis_theorem_1aaacd09678df1c2ef9aaa5f13cb358d5b" kindref="member">smallest_overlap_</ref>));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="class_separating_axis_theorem_1a2ec4cb98d02252c57824bbdf4d5f8bbb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_separating_axis_theorem_1a2ec4cb98d02252c57824bbdf4d5f8bbb" kindref="member">SeparatingAxisTheorem::clearAll</ref>()</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" kindref="member">axes_</ref>.clear();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" kindref="member">vertices_rectA_</ref>.clear();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a57ea865e7718773ab625c08e5a5a033f" kindref="member">vertices_rectB_</ref>.clear();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1aaacd09678df1c2ef9aaa5f13cb358d5b" kindref="member">smallest_overlap_</ref><sp/>=<sp/>numeric_limits&lt;float&gt;::max();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" kindref="member">min_translation_vector_</ref><sp/>=<sp/>Position(0.0f,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.cpp"/>
+  </compounddef>
+</doxygen>

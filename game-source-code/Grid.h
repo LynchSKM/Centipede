@@ -1,33 +1,33 @@
 #ifndef GRID_H
 #define GRID_H
 
-
 /** \class Grid
-*   \brief This is a Class contains details about the screen.
-*   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*
-*/
+ *  \brief This class contains details about the screen such as the screen width
+ *	and height.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *	\version 3.0
+ */
 class Grid
 {
     public:
 
-        /** \brief Creates a grid object with a default size of 800x600.
-         * \param unsigned int width.
-         * \param unsigned int height.
+        /** \brief Creates a grid object with a default size 592x640.
+         *  \param width is an unsigned int.
+         *  \param height is an unsigned int.
          */
-        Grid(unsigned int width = 800, unsigned int height = 600);
+        Grid(unsigned int width = 592, unsigned int height = 640);
 
-        /** \brief destroys the Grid object
+        /** \brief Default Destructor. Destroys a Grid object.
          */
         ~Grid();
 
-        /** \brief get a constant copy of the object's width
-         * \return unsigned int constant copy of the width
+        /** \brief Returns the grid's width.
+         *  \return unsigned int
          */
         unsigned int getWidth() const;
 
-        /** \brief get a constant copy of the object's height
-         * \return unsigned int constant copy of the height
+        /** \brief Returns the grid's height.
+         *  \return unsigned int
          */
         unsigned int getHeight() const;
 

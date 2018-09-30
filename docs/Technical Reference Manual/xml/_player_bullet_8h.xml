@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_player_bullet_8h" kind="file" language="C++">
+    <compoundname>PlayerBullet.h</compoundname>
+    <includes refid="_i_moving_entity_8h" local="yes">IMovingEntity.h</includes>
+    <includes refid="_grid_8h" local="yes">Grid.h</includes>
+    <includedby refid="_player_8h" local="yes">Player.h</includedby>
+    <includedby refid="_player_bullet_8cpp" local="yes">PlayerBullet.cpp</includedby>
+    <incdepgraph>
+      <node id="623">
+        <label>POSITION.H</label>
+      </node>
+      <node id="619">
+        <label>IMovingEntity.h</label>
+        <link refid="_i_moving_entity_8h"/>
+        <childnode refid="620" relation="include">
+        </childnode>
+        <childnode refid="621" relation="include">
+        </childnode>
+        <childnode refid="622" relation="include">
+        </childnode>
+        <childnode refid="623" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+      </node>
+      <node id="628">
+        <label>Grid.h</label>
+        <link refid="_grid_8h"/>
+      </node>
+      <node id="624">
+        <label>cmath</label>
+      </node>
+      <node id="618">
+        <label>PlayerBullet.h</label>
+        <link refid="_player_bullet_8h"/>
+        <childnode refid="619" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="622">
+        <label>BoundaryBox.h</label>
+        <link refid="_boundary_box_8h"/>
+        <childnode refid="623" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+      <node id="625">
+        <label>tuple</label>
+      </node>
+      <node id="626">
+        <label>vector</label>
+      </node>
+      <node id="621">
+        <label>ObjectType.h</label>
+        <link refid="_object_type_8h"/>
+      </node>
+      <node id="620">
+        <label>IEntity.h</label>
+        <link refid="_i_entity_8h"/>
+        <childnode refid="621" relation="include">
+        </childnode>
+        <childnode refid="622" relation="include">
+        </childnode>
+        <childnode refid="623" relation="include">
+        </childnode>
+      </node>
+      <node id="627">
+        <label>Direction.h</label>
+        <link refid="_direction_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="635">
+        <label>PlayerBullet.cpp</label>
+        <link refid="_player_bullet_8cpp"/>
+      </node>
+      <node id="632">
+        <label>Logic.cpp</label>
+        <link refid="_logic_8cpp"/>
+      </node>
+      <node id="629">
+        <label>PlayerBullet.h</label>
+        <link refid="_player_bullet_8h"/>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="635" relation="include">
+        </childnode>
+      </node>
+      <node id="633">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="631">
+        <label>Logic.h</label>
+        <link refid="_logic_8h"/>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+      </node>
+      <node id="634">
+        <label>Player.cpp</label>
+        <link refid="_player_8cpp"/>
+      </node>
+      <node id="630">
+        <label>Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="634" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_player_bullet_dimensions" prot="public">PlayerBulletDimensions</innerclass>
+    <innerclass refid="class_player_bullet" prot="public">PlayerBullet</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PLAYERBULLET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLAYERBULLET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_i_moving_entity_8h" kindref="compound">IMovingEntity.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_grid_8h" kindref="compound">Grid.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="struct_player_bullet_dimensions" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_player_bullet_dimensions" kindref="compound">PlayerBulletDimensions</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14" refid="struct_player_bullet_dimensions_1a2e4f9d114ad6c48e02671c5aa1a474ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_player_bullet_dimensions_1a2e4f9d114ad6c48e02671c5aa1a474ff" kindref="member">height</ref><sp/>=<sp/>12.0;</highlight></codeline>
+<codeline lineno="15" refid="struct_player_bullet_dimensions_1a6ff5235e1a26a2f1c59cf10342902dd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_player_bullet_dimensions_1a6ff5235e1a26a2f1c59cf10342902dd7" kindref="member">width</ref><sp/>=<sp/>2.0;</highlight></codeline>
+<codeline lineno="16" refid="struct_player_bullet_dimensions_1a2c55e33cf71fe300bcc0518ee1df0729" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_player_bullet_dimensions_1a2c55e33cf71fe300bcc0518ee1df0729" kindref="member">speed</ref><sp/>=<sp/>2.0;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_player_bullet" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_player_bullet" kindref="compound">PlayerBullet</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_bullet" kindref="compound">PlayerBullet</ref>(Position<sp/>position,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_grid" kindref="compound">Grid</ref>&amp;<sp/>grid);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_player_bullet" kindref="compound">PlayerBullet</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>move()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref><sp/>getDirection()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setDirection(<ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref><sp/>direction)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980" kindref="member">ObjectType</ref><sp/>getObjectType()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>Position<sp/>getPosition()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref><sp/>getBoundaryBox()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isAlive()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>eliminated()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reincarnate()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getRemainingLives()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isPoisoned()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>poison()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="112" refid="class_player_bullet_1aa2b59de5b247247f529d274e6b1e3601" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_bullet_1aa2b59de5b247247f529d274e6b1e3601" kindref="member">alive_</ref>;</highlight></codeline>
+<codeline lineno="113" refid="class_player_bullet_1a1590b92b539c0b82c232b9d3f40a2c81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980" kindref="member">ObjectType</ref><sp/><ref refid="class_player_bullet_1a1590b92b539c0b82c232b9d3f40a2c81" kindref="member">objectType_</ref>;</highlight></codeline>
+<codeline lineno="114" refid="class_player_bullet_1ae107bd106b1146d857b2fbcc513d639b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Position<sp/><ref refid="class_player_bullet_1ae107bd106b1146d857b2fbcc513d639b" kindref="member">position_</ref>;</highlight></codeline>
+<codeline lineno="115" refid="class_player_bullet_1aac9d7aacd4594a892493d59e33dd6ee0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_grid" kindref="compound">Grid</ref><sp/><ref refid="class_player_bullet_1aac9d7aacd4594a892493d59e33dd6ee0" kindref="member">grid_</ref>;</highlight></codeline>
+<codeline lineno="116" refid="class_player_bullet_1a4c88a15380ca5d66bd1adc3606849387" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref><sp/><ref refid="class_player_bullet_1a4c88a15380ca5d66bd1adc3606849387" kindref="member">direction_</ref>;</highlight></codeline>
+<codeline lineno="117" refid="class_player_bullet_1a1805d8cb3e847a9935e682ebd4394f21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_player_bullet_dimensions" kindref="compound">PlayerBulletDimensions</ref><sp/>dimensions_;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>PLAYERBULLET_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/PlayerBullet.h"/>
+  </compounddef>
+</doxygen>

@@ -19,6 +19,7 @@ using std::find_if;
 #include "IEntity.h"
 #include "IMovingEntity.h"
 #include "CentipedeSegment.h"
+
 #include "AssetManager.h"
 #include "SplashScreen.h"
 #include "GameWonScreen.h"
@@ -46,8 +47,8 @@ class Presentation
         void processInputEvents();
 
         /** \brief Checks which key was pressed/released and updates its status.
-         * \param is a key of type Key from the sf keyboard
-         * \param is a bool stating if there is a key that is pressed.
+         * \param key of type Key from the sf keyboard.
+         * \param isPressed is a bool stating if there is a key that is pressed.
          */
         void checkInput(const sf::Keyboard::Key key, const bool isPressed);
 
@@ -68,20 +69,20 @@ class Presentation
         void drawGameWonScreen(const int player_score, const int high_score);
 
         /** \brief Displays the player's lives, current score and the high score
-         * of the game.
-         *  \param remaining_lives is an int representing the player's lives.
+         *  of the game.
+         *  \param remaining_lives is an int representing the player's remaining lives.
          *  \param player_score is an int that has the player's current score.
          *  \param high_score is an int that has the game's highest score.
          */
         void displayLives(const int remaining_lives, const int player_score,
                           const int high_score);
 
-        /** \brief Draws all the game objects onto the screen. Including the player's
+        /**	\brief Draws all the game objects onto the screen. Including the player's
          *  score, lives and the game's highest score.
-         * \param game_objects is a vector of IEntity containing all the game objects.
-         * \param remaining_lives is an int and contains the number of lives.
-         * \param player_score is an int that has the player's current score.
-         * \param high_score is an int that has the game's highest score.
+         * 	\param game_objects is a vector of shared pointers to IEntity objects.
+         * 	\param remaining_lives is an int and contains the player's remaining lives.
+         * 	\param player_score is an int that has the player's current score.
+         * 	\param high_score is an int that has the game's highest score.
          */
         void renderWindow(vector<shared_ptr<IEntity>>& game_objects,
                           const int remaining_lives, const int player_score,
@@ -92,44 +93,44 @@ class Presentation
          */
         void loadTextures(vector<AssetManager> game_assets);
 
-        /** \brief returns a bool indicating whether a key was pressed.
+        /** \brief Returns a bool indicating whether a key was pressed.
          *  \return a bool indicating key status.
          */
         bool isLeftPressed(){return isLeftPressed_;};
 
-        /** \brief returns a bool indicating whether a key was pressed.
+        /** \brief Returns a bool indicating whether a key was pressed.
          *  \return a bool indicating key status.
          */
         bool isRightPressed(){return isRightPressed_;};
 
-        /** \brief returns a bool indicating whether a key was pressed.
+        /** \brief Returns a bool indicating whether a key was pressed.
          *  \return a bool indicating key status.
          */
         bool isUpPressed(){return isUpPressed_;};
 
-        /** \brief returns a bool indicating whether a key was pressed.
+        /** \brief Returns a bool indicating whether a key was pressed.
          *  \return a bool indicating key status.
          */
         bool isDownPressed(){return isDownPressed_;};
 
-        /** \brief returns a bool indicating whether a key was pressed.
+        /** \brief Returns a bool indicating whether a key was pressed.
          *  \return a bool indicating key status.
          */
         bool isSpacePressed(){return isSpacePressed_;};
 
-        /** \brief returns a bool indicating whether the render window is open.
+        /** \brief Returns a bool indicating whether the render window is open.
          *  \return a bool window open status.
          */
         bool isWindowOpen() const {return window_.isOpen();};
-
-        /** \brief Updates the sound played when a player shoots a bullet.
-         */
-        void processPlayerShootSound();
 
         /** \brief Updates the sound played when a Scorpion and Spider are moving.
          *  Also plays the sound used when a Mushroom is being regenerated.
          */
         void processGameObjectSound(ObjectType object_type);
+
+        /** \brief Plays the sound used to indicate that a player has shot a bullet.
+         */
+        void processPlayerShootSound();
 
         /** \brief Default Destructor. Destroys a Presentation object.
          */
@@ -139,16 +140,20 @@ class Presentation
         sf::Color background_;
         sf::RenderWindow window_;
         sf::Font font_;
-        sf::Music gun_shot_;
 
-        //
+        /** \enum GameSounds
+		 *  \brief Is a strongly typed enum class representing the type of game sounds.
+		 *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+		 *  \version 3.0
+		 */
         enum class GameSounds
         {
-            GUN_SHOT = 0,
-            MUSHROOM_REGEN,
-            SCORPION_MOVE,
-            SPIDER_MOVE,
+            GUN_SHOT = 0,	/**< is coded as int of value 0.*/
+            MUSHROOM_REGEN, /**< is coded as int of value 1.*/
+            SCORPION_MOVE,	/**< is coded as int of value 2.*/
+            SPIDER_MOVE		/**< is coded as int of value 3.*/
         };
+
         map<GameSounds, shared_ptr<sf::Music>> game_sounds_;
         map<ObjectType, sf::Texture> game_textures_;
         vector<SpriteSheet> sprite_sheets_;
@@ -161,15 +166,15 @@ class Presentation
         bool isSpacePressed_;
 
         /** \brief Populate SpriteSheet vector, sprite_sheets_,
-         *  for the different game objects that have animated movement.
-         * \param object_type is of type enum class ObjectType.
+         *  for the different game objects that have more than one image in a texture.
+         * 	\param object_type is of type enum class ObjectType.
          */
         void populateSpriteSheets(const ObjectType& object_type);
 
        /** \brief Generates a SpriteSheet object and saves it into the vector
          *  sprite_sheets_ for the different game objects.
          * \param object_type is of type enum class ObjectType.
-         * \param row is an unsigned int indicating the row in the spritesheet to use.
+         * \param row is an unsigned int indicating the row in the sprite sheet to use.
          * \param imageCount is an sf::Vector2u and contains the number of columns and rows.
          * \param switchTime is a float and is the time delay used between images for movement animation.
          * \param direction is the direction the sprite faces in the image loaded as a texture.

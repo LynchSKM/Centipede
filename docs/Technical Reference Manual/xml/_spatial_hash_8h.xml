@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_spatial_hash_8h" kind="file" language="C++">
+    <compoundname>SpatialHash.h</compoundname>
+    <includes refid="_grid_8h" local="yes">Grid.h</includes>
+    <includes refid="_i_entity_8h" local="yes">IEntity.h</includes>
+    <includes local="yes">POSITION.H</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includedby refid="_collision_handler_8h" local="yes">CollisionHandler.h</includedby>
+    <includedby refid="_spatial_hash_8cpp" local="yes">SpatialHash.cpp</includedby>
+    <incdepgraph>
+      <node id="771">
+        <label>SpatialHash.h</label>
+        <link refid="_spatial_hash_8h"/>
+        <childnode refid="772" relation="include">
+        </childnode>
+        <childnode refid="773" relation="include">
+        </childnode>
+        <childnode refid="776" relation="include">
+        </childnode>
+        <childnode refid="780" relation="include">
+        </childnode>
+        <childnode refid="781" relation="include">
+        </childnode>
+        <childnode refid="779" relation="include">
+        </childnode>
+        <childnode refid="782" relation="include">
+        </childnode>
+      </node>
+      <node id="776">
+        <label>POSITION.H</label>
+      </node>
+      <node id="772">
+        <label>Grid.h</label>
+        <link refid="_grid_8h"/>
+      </node>
+      <node id="777">
+        <label>cmath</label>
+      </node>
+      <node id="782">
+        <label>map</label>
+      </node>
+      <node id="775">
+        <label>BoundaryBox.h</label>
+        <link refid="_boundary_box_8h"/>
+        <childnode refid="776" relation="include">
+        </childnode>
+        <childnode refid="777" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+        <childnode refid="779" relation="include">
+        </childnode>
+      </node>
+      <node id="778">
+        <label>tuple</label>
+      </node>
+      <node id="779">
+        <label>vector</label>
+      </node>
+      <node id="774">
+        <label>ObjectType.h</label>
+        <link refid="_object_type_8h"/>
+      </node>
+      <node id="773">
+        <label>IEntity.h</label>
+        <link refid="_i_entity_8h"/>
+        <childnode refid="774" relation="include">
+        </childnode>
+        <childnode refid="775" relation="include">
+        </childnode>
+        <childnode refid="776" relation="include">
+        </childnode>
+      </node>
+      <node id="780">
+        <label>algorithm</label>
+      </node>
+      <node id="781">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="783">
+        <label>SpatialHash.h</label>
+        <link refid="_spatial_hash_8h"/>
+        <childnode refid="784" relation="include">
+        </childnode>
+        <childnode refid="789" relation="include">
+        </childnode>
+      </node>
+      <node id="786">
+        <label>Logic.cpp</label>
+        <link refid="_logic_8cpp"/>
+      </node>
+      <node id="788">
+        <label>CollisionHandler.cpp</label>
+        <link refid="_collision_handler_8cpp"/>
+      </node>
+      <node id="784">
+        <label>CollisionHandler.h</label>
+        <link refid="_collision_handler_8h"/>
+        <childnode refid="785" relation="include">
+        </childnode>
+        <childnode refid="788" relation="include">
+        </childnode>
+      </node>
+      <node id="787">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="785">
+        <label>Logic.h</label>
+        <link refid="_logic_8h"/>
+        <childnode refid="786" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+      </node>
+      <node id="789">
+        <label>SpatialHash.cpp</label>
+        <link refid="_spatial_hash_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_spatial_hash" prot="public">SpatialHash</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_spatial_hash_8h_1ae582ab202da5e80230f32e4d667f7fa9" prot="public" static="no">
+        <type>shared_ptr&lt; <ref refid="class_i_entity" kindref="compound">IEntity</ref> &gt;</type>
+        <definition>using IEntity_ptr =  shared_ptr&lt;IEntity&gt;</definition>
+        <argsstring></argsstring>
+        <name>IEntity_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="23" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SPATIALHASH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPATIALHASH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_grid_8h" kindref="compound">Grid.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_i_entity_8h" kindref="compound">IEntity.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;POSITION.H&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::unique_copy;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::sort;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::find;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::begin;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::end;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::vector;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::shared_ptr;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::map;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::pair;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="_spatial_hash_8h_1ae582ab202da5e80230f32e4d667f7fa9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="_spatial_hash_8h_1ae582ab202da5e80230f32e4d667f7fa9" kindref="member">IEntity_ptr</ref><sp/>=<sp/>shared_ptr&lt;IEntity&gt;;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_spatial_hash" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_spatial_hash" kindref="compound">SpatialHash</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_spatial_hash_1a2a685a824f21fef91bc7439fda0965a6" kindref="member">SpatialHash</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_grid" kindref="compound">Grid</ref>&amp;<sp/>grid);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_spatial_hash_1a0f1fc93eebd653259103671e619df094" kindref="member">generateSpatialHashTable</ref>(vector&lt;IEntity_ptr&gt;&amp;<sp/>game_objects);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;IEntity_ptr&gt;<sp/><ref refid="class_spatial_hash_1a4ce61752d2ec67c16323002d345df77b" kindref="member">retrieveNearbyObjects</ref>(<ref refid="_spatial_hash_8h_1ae582ab202da5e80230f32e4d667f7fa9" kindref="member">IEntity_ptr</ref><sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_spatial_hash_1a66a559d3ee222216bf08f7ea36be7417" kindref="member">clearAll</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_spatial_hash_1a94d1324fb7380ff6cdd98574df2d62a3" kindref="member">~SpatialHash</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="68" refid="class_spatial_hash_1a525703c707c364fb5365b90a2fec8400" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_grid" kindref="compound">Grid</ref><sp/><ref refid="class_spatial_hash_1a525703c707c364fb5365b90a2fec8400" kindref="member">grid_</ref>;</highlight></codeline>
+<codeline lineno="69" refid="class_spatial_hash_1a7fd81b6076b8dc56de145bc933ed1cca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;unsigned<sp/>int,<sp/>vector&lt;shared_ptr&lt;IEntity&gt;&gt;<sp/>&gt;<sp/><ref refid="class_spatial_hash_1a7fd81b6076b8dc56de145bc933ed1cca" kindref="member">game_object_table_</ref>;</highlight></codeline>
+<codeline lineno="70" refid="class_spatial_hash_1a4d0b5f614a759f61d76c4daad53266f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_spatial_hash_1a4d0b5f614a759f61d76c4daad53266f4" kindref="member">cell_size_</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Private<sp/>functions:</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_spatial_hash_1a23c64fe77b32c1b1480295aabe2978b8" kindref="member">buildMap</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Position&gt;<sp/><ref refid="class_spatial_hash_1a3a9f73d146cb3d5969fdbd78e524f84b" kindref="member">getObjectLocations</ref>(<ref refid="_spatial_hash_8h_1ae582ab202da5e80230f32e4d667f7fa9" kindref="member">IEntity_ptr</ref>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_spatial_hash_1ae1b06cf6d968ceaf8731a9ecbb06c836" kindref="member">generateMapKey</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Position&amp;<sp/>position);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;unsigned<sp/>int&gt;<sp/><ref refid="class_spatial_hash_1a5d0a1d19c6251359bfa99b9b2738de57" kindref="member">generateMapKeys</ref>(vector&lt;Position&gt;&amp;<sp/>positions);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_spatial_hash_1a663251e84c6eca8303b181c480e76de2" kindref="member">saveLocations</ref>(<ref refid="_spatial_hash_8h_1ae582ab202da5e80230f32e4d667f7fa9" kindref="member">IEntity_ptr</ref><sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SPATIALHASH_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h"/>
+  </compounddef>
+</doxygen>

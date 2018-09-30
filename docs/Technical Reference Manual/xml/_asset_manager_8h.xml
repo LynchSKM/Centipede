@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_asset_manager_8h" kind="file" language="C++">
+    <compoundname>AssetManager.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_presentation_8h" local="yes">Presentation.h</includedby>
+    <includedby refid="_asset_manager_8cpp" local="yes">AssetManager.cpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>AssetManager.h</label>
+        <link refid="_asset_manager_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>Logic.cpp</label>
+        <link refid="_logic_8cpp"/>
+      </node>
+      <node id="8">
+        <label>AssetManager.h</label>
+        <link refid="_asset_manager_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Presentation.cpp</label>
+        <link refid="_presentation_8cpp"/>
+      </node>
+      <node id="12">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="10">
+        <label>Logic.h</label>
+        <link refid="_logic_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>AssetManager.cpp</label>
+        <link refid="_asset_manager_8cpp"/>
+      </node>
+      <node id="9">
+        <label>Presentation.h</label>
+        <link refid="_presentation_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_asset_manager" prot="public">AssetManager</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ASSETMANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASSETMANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::vector;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_asset_manager" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_asset_manager" kindref="compound">AssetManager</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1a750ae7b39b633fbb6594443aa3ca704b" kindref="member">AssetManager</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728" kindref="member">AssetType</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a4aaf23261cd3bd2064183cf1b53f1023" kindref="member">FONT</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a8d09f2179ed9a38af4aefc3ceb396dd0" kindref="member">GUNSHOT_SOUND</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a86ef33df884491f473940b89335a4b72" kindref="member">MUSHROOM_REGEN</ref>,<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728aebc5c5eacbc3902aa67cb7b6e6e2a3f2" kindref="member">SCORPION_MOVE</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a927f84b41f3304e094cad785e03ddf3a" kindref="member">SPIDER_MOVE</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a07c80e2a355d91402a00d82b1fa13855" kindref="member">PLAYER</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a5fb9dc502beb6f75a2175f0ea535437d" kindref="member">BULLET</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728ac68f4cf41704abc0bb325bdc35cb7da5" kindref="member">CENTIPEDE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728afd232a32dcfdd49f24c59870b97e66ce" kindref="member">MUSHROOM</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728aad43791d4a1bab20f04a2d8a85ffc34b" kindref="member">SCORPION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a9e7abc16c6a1b9bcd2d330c63933d981" kindref="member">SPIDER</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1a750ae7b39b633fbb6594443aa3ca704b" kindref="member">AssetManager</ref>(<ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728" kindref="member">AssetType</ref><sp/>asset_type,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>asset_path);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728" kindref="member">AssetType</ref><sp/><ref refid="class_asset_manager_1a79e5640dadd7968dadc2c68f2841cc6d" kindref="member">getAssetType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_asset_manager_1ad530cf1291bc9a973b35ad7a113a5555" kindref="member">getAssetPath</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;AssetManager&gt;<sp/><ref refid="class_asset_manager_1ab6d8a0e2fee83023270c7e82c00dc0d7" kindref="member">getAssetInfo</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69" refid="class_asset_manager_1af90fb75825771c6cd2bee4e06fc289e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728" kindref="member">AssetType</ref><sp/><ref refid="class_asset_manager_1af90fb75825771c6cd2bee4e06fc289e1" kindref="member">assetType_</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="class_asset_manager_1a0c46a45215485aa44fe26ed4c667b454" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_asset_manager_1a0c46a45215485aa44fe26ed4c667b454" kindref="member">assetPath_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//ASSETMANAGER_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h"/>
+  </compounddef>
+</doxygen>

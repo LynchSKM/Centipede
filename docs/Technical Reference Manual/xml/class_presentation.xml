@@ -1,0 +1,919 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_presentation" kind="class" language="C++" prot="public">
+    <compoundname>Presentation</compoundname>
+    <includes refid="_presentation_8h" local="no">Presentation.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_presentation_1a7f62aed96ac24f3394d8efba586fa772" prot="private" static="no">
+        <name>GameSounds</name>
+        <enumvalue id="class_presentation_1a7f62aed96ac24f3394d8efba586fa772a9febb5f229986f78edb73071253e9a66" prot="private">
+          <name>GUN_SHOT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>is coded as int of value 0. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_presentation_1a7f62aed96ac24f3394d8efba586fa772a86ef33df884491f473940b89335a4b72" prot="private">
+          <name>MUSHROOM_REGEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>is coded as int of value 1. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_presentation_1a7f62aed96ac24f3394d8efba586fa772aebc5c5eacbc3902aa67cb7b6e6e2a3f2" prot="private">
+          <name>SCORPION_MOVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>is coded as int of value 2. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_presentation_1a7f62aed96ac24f3394d8efba586fa772a927f84b41f3304e094cad785e03ddf3a" prot="private">
+          <name>SPIDER_MOVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>is coded as int of value 3. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Is a strongly typed enum class representing the type of game sounds. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="150" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="149" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_presentation_1a6bc63a72724405388df7409cb03be06a" prot="private" static="no" mutable="no">
+        <type>sf::Color</type>
+        <definition>sf::Color Presentation::background_</definition>
+        <argsstring></argsstring>
+        <name>background_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="140" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_presentation_1ae243e0a0e6f16eaf3bcac7179e2430b9" prot="private" static="no" mutable="no">
+        <type>sf::RenderWindow</type>
+        <definition>sf::RenderWindow Presentation::window_</definition>
+        <argsstring></argsstring>
+        <name>window_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="141" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_presentation_1ab7600143ae53c8710de7ce4efb048273" prot="private" static="no" mutable="no">
+        <type>sf::Font</type>
+        <definition>sf::Font Presentation::font_</definition>
+        <argsstring></argsstring>
+        <name>font_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="142" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_presentation_1abe9fd0e9a69ea46cb1fd1b3c59dded70" prot="private" static="no" mutable="no">
+        <type>map&lt; <ref refid="class_presentation_1a7f62aed96ac24f3394d8efba586fa772" kindref="member">GameSounds</ref>, shared_ptr&lt; sf::Music &gt; &gt;</type>
+        <definition>map&lt;GameSounds, shared_ptr&lt;sf::Music&gt; &gt; Presentation::game_sounds_</definition>
+        <argsstring></argsstring>
+        <name>game_sounds_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="157" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_presentation_1a50c6e471561f2f96b279d4a5aa1e470a" prot="private" static="no" mutable="no">
+        <type>map&lt; <ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980" kindref="member">ObjectType</ref>, sf::Texture &gt;</type>
+        <definition>map&lt;ObjectType, sf::Texture&gt; Presentation::game_textures_</definition>
+        <argsstring></argsstring>
+        <name>game_textures_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="158" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_presentation_1ab1b88938eb755b4f896d8f386e4d8542" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_sprite_sheet" kindref="compound">SpriteSheet</ref> &gt;</type>
+        <definition>vector&lt;SpriteSheet&gt; Presentation::sprite_sheets_</definition>
+        <argsstring></argsstring>
+        <name>sprite_sheets_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="159" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_presentation_1a519c0df57f7d36e69a723eb2081ddc39" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Presentation::isLeftPressed_</definition>
+        <argsstring></argsstring>
+        <name>isLeftPressed_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="162" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_presentation_1a0e2be276f4cb95173da9df04c16e7981" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Presentation::isRightPressed_</definition>
+        <argsstring></argsstring>
+        <name>isRightPressed_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="163" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_presentation_1af9aba72db98840fdb1d2dc892f564a3d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Presentation::isUpPressed_</definition>
+        <argsstring></argsstring>
+        <name>isUpPressed_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="164" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_presentation_1a38e0f5a84f4b0379c6f7778db94c81e2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Presentation::isDownPressed_</definition>
+        <argsstring></argsstring>
+        <name>isDownPressed_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="165" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_presentation_1a3408af9750851434bdfbb2265ad4a76b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Presentation::isSpacePressed_</definition>
+        <argsstring></argsstring>
+        <name>isSpacePressed_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="166" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_presentation_1a19a15db3b478318bbcdb894994a81fb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Presentation::Presentation</definition>
+        <argsstring>(const unsigned int screen_width, const unsigned int screen_height)</argsstring>
+        <name>Presentation</name>
+        <param>
+          <type>const unsigned int</type>
+          <declname>screen_width</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>screen_height</declname>
+        </param>
+        <briefdescription>
+<para>Parametrized Constructor. Creates a <ref refid="class_presentation" kindref="compound">Presentation</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>screen_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the width of the screen. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>screen_height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the height of the screen. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="42" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="3" bodyend="13"/>
+        <references refid="class_presentation_1a0e2be276f4cb95173da9df04c16e7981" compoundref="_presentation_8h" startline="163">isRightPressed_</references>
+        <references refid="class_presentation_1af9aba72db98840fdb1d2dc892f564a3d" compoundref="_presentation_8h" startline="164">isUpPressed_</references>
+        <references refid="class_presentation_1a38e0f5a84f4b0379c6f7778db94c81e2" compoundref="_presentation_8h" startline="165">isDownPressed_</references>
+        <references refid="class_presentation_1a3408af9750851434bdfbb2265ad4a76b" compoundref="_presentation_8h" startline="166">isSpacePressed_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1a0ae752fb12e3530acd81469e68d743a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::processInputEvents</definition>
+        <argsstring>()</argsstring>
+        <name>processInputEvents</name>
+        <briefdescription>
+<para>Determines the keyboard keys pressed and acts accordingly. Polling is used by default. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="47" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="49" bodyend="70"/>
+        <references refid="class_presentation_1ae243e0a0e6f16eaf3bcac7179e2430b9" compoundref="_presentation_8h" startline="141">window_</references>
+        <references refid="class_presentation_1aa37ace23fc7d4fd50e520670510dd9fe" compoundref="_presentation_8cpp" startline="40" endline="47">checkInput</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1aa37ace23fc7d4fd50e520670510dd9fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::checkInput</definition>
+        <argsstring>(const sf::Keyboard::Key key, const bool isPressed)</argsstring>
+        <name>checkInput</name>
+        <param>
+          <type>const sf::Keyboard::Key</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>isPressed</declname>
+        </param>
+        <briefdescription>
+<para>Checks which key was pressed/released and updates its status. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of type Key from the sf keyboard. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isPressed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a bool stating if there is a key that is pressed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="53" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="40" bodyend="47"/>
+        <references refid="class_presentation_1a519c0df57f7d36e69a723eb2081ddc39" compoundref="_presentation_8h" startline="162">isLeftPressed_</references>
+        <references refid="class_presentation_1a0e2be276f4cb95173da9df04c16e7981" compoundref="_presentation_8h" startline="163">isRightPressed_</references>
+        <references refid="class_presentation_1af9aba72db98840fdb1d2dc892f564a3d" compoundref="_presentation_8h" startline="164">isUpPressed_</references>
+        <references refid="class_presentation_1a38e0f5a84f4b0379c6f7778db94c81e2" compoundref="_presentation_8h" startline="165">isDownPressed_</references>
+        <references refid="class_presentation_1a3408af9750851434bdfbb2265ad4a76b" compoundref="_presentation_8h" startline="166">isSpacePressed_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1ad87e0f6ada6aa68c6e15456a5e7820ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::drawSplashScreen</definition>
+        <argsstring>()</argsstring>
+        <name>drawSplashScreen</name>
+        <briefdescription>
+<para>Displays a Splashscreen at the beginning of the game. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="57" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="289" bodyend="293"/>
+        <references refid="class_splash_screen_1ae30ab2316faa3fa081f85fb61899689e" compoundref="_splash_screen_8cpp" startline="11" endline="59">SplashScreen::show</references>
+        <references refid="class_presentation_1ae243e0a0e6f16eaf3bcac7179e2430b9" compoundref="_presentation_8h" startline="141">window_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1a40d86f3b623cbef7a04db5a312ff1368" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::drawGameOverScreen</definition>
+        <argsstring>(const int player_score, const int high_score)</argsstring>
+        <name>drawGameOverScreen</name>
+        <param>
+          <type>const int</type>
+          <declname>player_score</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>high_score</declname>
+        </param>
+        <briefdescription>
+<para>Displays a Game Over Screen at the end of the game. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player_score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an int and contains the player&apos;s score. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>high_score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an int and contains the game&apos;s high score. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="63" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="295" bodyend="299"/>
+        <references refid="class_game_over_screen_1aed3579e06a894e3e0f3683494ef4b278" compoundref="_game_over_screen_8cpp" startline="10" endline="95">GameOverScreen::show</references>
+        <references refid="class_presentation_1ae243e0a0e6f16eaf3bcac7179e2430b9" compoundref="_presentation_8h" startline="141">window_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1a2ef4507daf2ddbf356b6dfca1c8f525a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::drawGameWonScreen</definition>
+        <argsstring>(const int player_score, const int high_score)</argsstring>
+        <name>drawGameWonScreen</name>
+        <param>
+          <type>const int</type>
+          <declname>player_score</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>high_score</declname>
+        </param>
+        <briefdescription>
+<para>Displays a Game Won Screen at the end of the game. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player_score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an int and contains the player&apos;s score. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>high_score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an int and contains the game&apos;s high score. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="69" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="301" bodyend="305"/>
+        <references refid="class_game_won_screen_1aaa58eb6d7d1b13468cc65cecd0243b59" compoundref="_game_won_screen_8cpp" startline="10" endline="109">GameWonScreen::show</references>
+        <references refid="class_presentation_1ae243e0a0e6f16eaf3bcac7179e2430b9" compoundref="_presentation_8h" startline="141">window_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1ac13b755328c6e531b279d2e49a5503c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::displayLives</definition>
+        <argsstring>(const int remaining_lives, const int player_score, const int high_score)</argsstring>
+        <name>displayLives</name>
+        <param>
+          <type>const int</type>
+          <declname>remaining_lives</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>player_score</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>high_score</declname>
+        </param>
+        <briefdescription>
+<para>Displays the player&apos;s lives, current score and the high score of the game. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>remaining_lives</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an int representing the player&apos;s remaining lives. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player_score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an int that has the player&apos;s current score. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>high_score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an int that has the game&apos;s highest score. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="77" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="307" bodyend="348"/>
+        <references refid="class_presentation_1a50c6e471561f2f96b279d4a5aa1e470a" compoundref="_presentation_8h" startline="158">game_textures_</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855">PLAYER</references>
+        <references refid="class_presentation_1ae243e0a0e6f16eaf3bcac7179e2430b9" compoundref="_presentation_8h" startline="141">window_</references>
+        <references refid="class_presentation_1ab7600143ae53c8710de7ce4efb048273" compoundref="_presentation_8h" startline="142">font_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1a07fe85f2fb3be047ed1bbf553662f754" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::renderWindow</definition>
+        <argsstring>(vector&lt; shared_ptr&lt; IEntity &gt;&gt; &amp;game_objects, const int remaining_lives, const int player_score, const int high_score)</argsstring>
+        <name>renderWindow</name>
+        <param>
+          <type>vector&lt; shared_ptr&lt; <ref refid="class_i_entity" kindref="compound">IEntity</ref> &gt;&gt; &amp;</type>
+          <declname>game_objects</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>remaining_lives</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>player_score</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>high_score</declname>
+        </param>
+        <briefdescription>
+<para>Draws all the game objects onto the screen. Including the player&apos;s score, lives and the game&apos;s highest score. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>game_objects</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a vector of shared pointers to <ref refid="class_i_entity" kindref="compound">IEntity</ref> objects. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>remaining_lives</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an int and contains the player&apos;s remaining lives. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player_score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an int that has the player&apos;s current score. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>high_score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an int that has the game&apos;s highest score. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="87" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="253" bodyend="271"/>
+        <references refid="class_presentation_1ae243e0a0e6f16eaf3bcac7179e2430b9" compoundref="_presentation_8h" startline="141">window_</references>
+        <references refid="class_presentation_1ac13b755328c6e531b279d2e49a5503c1" compoundref="_presentation_8cpp" startline="307" endline="348">displayLives</references>
+        <references refid="class_presentation_1ac6a714a00a8c38446e8ff298c09da90b" compoundref="_presentation_8cpp" startline="231" endline="251">generateSprite</references>
+        <references refid="class_presentation_1a82e1c667390dd7fb683548a9ce1c7c58" compoundref="_presentation_8cpp" startline="273" endline="287">updateAnimations</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1ad61f8a299c4e23f6e9d51692929f8333" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::loadTextures</definition>
+        <argsstring>(vector&lt; AssetManager &gt; game_assets)</argsstring>
+        <name>loadTextures</name>
+        <param>
+          <type>vector&lt; <ref refid="class_asset_manager" kindref="compound">AssetManager</ref> &gt;</type>
+          <declname>game_assets</declname>
+        </param>
+        <briefdescription>
+<para>Loads all the game&apos;s textures. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>game_assets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a vector of <ref refid="class_asset_manager" kindref="compound">AssetManager</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="94" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="140" bodyend="182"/>
+        <references refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a07c80e2a355d91402a00d82b1fa13855">AssetManager::PLAYER</references>
+        <references refid="class_presentation_1ab7600143ae53c8710de7ce4efb048273" compoundref="_presentation_8h" startline="142">font_</references>
+        <references refid="class_presentation_1abe9fd0e9a69ea46cb1fd1b3c59dded70" compoundref="_presentation_8h" startline="157">game_sounds_</references>
+        <references refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a5fb9dc502beb6f75a2175f0ea535437d">AssetManager::BULLET</references>
+        <references refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728aad43791d4a1bab20f04a2d8a85ffc34b">AssetManager::SCORPION</references>
+        <references refid="class_presentation_1a50c6e471561f2f96b279d4a5aa1e470a" compoundref="_presentation_8h" startline="158">game_textures_</references>
+        <references refid="class_presentation_1a04c43fe2cf2fe4b969c034eee5d4b1e2" compoundref="_presentation_8cpp" startline="85" endline="138">populateSpriteSheets</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1a7aebdf3fb5663b1dd11dbc30963984c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Presentation::isLeftPressed</definition>
+        <argsstring>()</argsstring>
+        <name>isLeftPressed</name>
+        <briefdescription>
+<para>Returns a bool indicating whether a key was pressed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a bool indicating key status. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="99" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="99" bodyend="99"/>
+        <references refid="class_presentation_1a519c0df57f7d36e69a723eb2081ddc39" compoundref="_presentation_8h" startline="162">isLeftPressed_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1ad10cbe90531e2817a33356926e538212" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Presentation::isRightPressed</definition>
+        <argsstring>()</argsstring>
+        <name>isRightPressed</name>
+        <briefdescription>
+<para>Returns a bool indicating whether a key was pressed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a bool indicating key status. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="104" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="104" bodyend="104"/>
+        <references refid="class_presentation_1a0e2be276f4cb95173da9df04c16e7981" compoundref="_presentation_8h" startline="163">isRightPressed_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1a36e1855d959346115eee06d327686551" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Presentation::isUpPressed</definition>
+        <argsstring>()</argsstring>
+        <name>isUpPressed</name>
+        <briefdescription>
+<para>Returns a bool indicating whether a key was pressed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a bool indicating key status. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="109" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="109" bodyend="109"/>
+        <references refid="class_presentation_1af9aba72db98840fdb1d2dc892f564a3d" compoundref="_presentation_8h" startline="164">isUpPressed_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1a050a12b9766886e4969069be1b841529" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Presentation::isDownPressed</definition>
+        <argsstring>()</argsstring>
+        <name>isDownPressed</name>
+        <briefdescription>
+<para>Returns a bool indicating whether a key was pressed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a bool indicating key status. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="114" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="114" bodyend="114"/>
+        <references refid="class_presentation_1a38e0f5a84f4b0379c6f7778db94c81e2" compoundref="_presentation_8h" startline="165">isDownPressed_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1a2f8e4c78cc85ccd9a0410370f66ffaba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Presentation::isSpacePressed</definition>
+        <argsstring>()</argsstring>
+        <name>isSpacePressed</name>
+        <briefdescription>
+<para>Returns a bool indicating whether a key was pressed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a bool indicating key status. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="119" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="119" bodyend="119"/>
+        <references refid="class_presentation_1a3408af9750851434bdfbb2265ad4a76b" compoundref="_presentation_8h" startline="166">isSpacePressed_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1a886dde2ac9b78eb0e1bee3aab9111be6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Presentation::isWindowOpen</definition>
+        <argsstring>() const</argsstring>
+        <name>isWindowOpen</name>
+        <briefdescription>
+<para>Returns a bool indicating whether the render window is open. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a bool window open status. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="124" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="124" bodyend="124"/>
+        <references refid="class_presentation_1ae243e0a0e6f16eaf3bcac7179e2430b9" compoundref="_presentation_8h" startline="141">window_</references>
+        <references refid="class_presentation_1ae34050372fa270232dce9f2666c1f2f6" compoundref="_presentation_8cpp" startline="21" endline="38">processGameObjectSound</references>
+        <references refid="class_presentation_1ab2284a509e0dd35fb10b11bb05d220ca" compoundref="_presentation_8cpp" startline="14" endline="19">processPlayerShootSound</references>
+        <references refid="class_presentation_1a83620d7d530676ed6f38ac88f85907ae" compoundref="_presentation_8cpp" startline="350" endline="353">~Presentation</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1ae34050372fa270232dce9f2666c1f2f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::processGameObjectSound</definition>
+        <argsstring>(ObjectType object_type)</argsstring>
+        <name>processGameObjectSound</name>
+        <param>
+          <type><ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980" kindref="member">ObjectType</ref></type>
+          <declname>object_type</declname>
+        </param>
+        <briefdescription>
+<para>Updates the sound played when a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> and <ref refid="class_spider" kindref="compound">Spider</ref> are moving. Also plays the sound used when a <ref refid="class_mushroom" kindref="compound">Mushroom</ref> is being regenerated. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="129" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="21" bodyend="38"/>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980afd232a32dcfdd49f24c59870b97e66ce">MUSHROOM</references>
+        <references refid="class_presentation_1abe9fd0e9a69ea46cb1fd1b3c59dded70" compoundref="_presentation_8h" startline="157">game_sounds_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1ab2284a509e0dd35fb10b11bb05d220ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::processPlayerShootSound</definition>
+        <argsstring>()</argsstring>
+        <name>processPlayerShootSound</name>
+        <briefdescription>
+<para>Plays the sound used to indicate that a player has shot a bullet. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="133" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="14" bodyend="19"/>
+        <references refid="class_presentation_1abe9fd0e9a69ea46cb1fd1b3c59dded70" compoundref="_presentation_8h" startline="157">game_sounds_</references>
+        <references refid="class_presentation_1a7f62aed96ac24f3394d8efba586fa772a9febb5f229986f78edb73071253e9a66">GUN_SHOT</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1a83620d7d530676ed6f38ac88f85907ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Presentation::~Presentation</definition>
+        <argsstring>()</argsstring>
+        <name>~Presentation</name>
+        <briefdescription>
+<para>Default Destructor. Destroys a <ref refid="class_presentation" kindref="compound">Presentation</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="137" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="350" bodyend="353"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_presentation_1a04c43fe2cf2fe4b969c034eee5d4b1e2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::populateSpriteSheets</definition>
+        <argsstring>(const ObjectType &amp;object_type)</argsstring>
+        <name>populateSpriteSheets</name>
+        <param>
+          <type>const <ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980" kindref="member">ObjectType</ref> &amp;</type>
+          <declname>object_type</declname>
+        </param>
+        <briefdescription>
+<para>Populate <ref refid="class_sprite_sheet" kindref="compound">SpriteSheet</ref> vector, sprite_sheets_, for the different game objects that have more than one image in a texture. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type enum class ObjectType. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="172" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="85" bodyend="138"/>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980ac68f4cf41704abc0bb325bdc35cb7da5">CENTIPEDE</references>
+        <references refid="class_presentation_1a0e099ace00ac0fd6f502c8df51d67fa6" compoundref="_presentation_8cpp" startline="72" endline="83">generateSpriteSheet</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758">LEFT</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980afd232a32dcfdd49f24c59870b97e66ce">MUSHROOM</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaab50339a10e1de285ac99d4c3990b8693">NONE</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980aad43791d4a1bab20f04a2d8a85ffc34b">SCORPION</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980a9e7abc16c6a1b9bcd2d330c63933d981">SPIDER</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f">DOWN</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1a0e099ace00ac0fd6f502c8df51d67fa6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::generateSpriteSheet</definition>
+        <argsstring>(ObjectType object_type, unsigned int row, sf::Vector2u imageCount, float switchTime, Direction direction)</argsstring>
+        <name>generateSpriteSheet</name>
+        <param>
+          <type><ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980" kindref="member">ObjectType</ref></type>
+          <declname>object_type</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>sf::Vector2u</type>
+          <declname>imageCount</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>switchTime</declname>
+        </param>
+        <param>
+          <type><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Generates a <ref refid="class_sprite_sheet" kindref="compound">SpriteSheet</ref> object and saves it into the vector sprite_sheets_ for the different game objects. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type enum class ObjectType. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an unsigned int indicating the row in the sprite sheet to use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imageCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an sf::Vector2u and contains the number of columns and rows. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>switchTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a float and is the time delay used between images for movement animation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the direction the sprite faces in the image loaded as a texture. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="182" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="72" bodyend="83"/>
+        <references refid="class_presentation_1a50c6e471561f2f96b279d4a5aa1e470a" compoundref="_presentation_8h" startline="158">game_textures_</references>
+        <references refid="class_presentation_1ab1b88938eb755b4f896d8f386e4d8542" compoundref="_presentation_8h" startline="159">sprite_sheets_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1a82e1c667390dd7fb683548a9ce1c7c58" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Presentation::updateAnimations</definition>
+        <argsstring>(float delta_time)</argsstring>
+        <name>updateAnimations</name>
+        <param>
+          <type>float</type>
+          <declname>delta_time</declname>
+        </param>
+        <briefdescription>
+<para>Updates the animations of game objects that have more than one image to represent movement. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a float that will have the time elapsed from the game loop. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="190" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="273" bodyend="287"/>
+        <references refid="class_presentation_1ab1b88938eb755b4f896d8f386e4d8542" compoundref="_presentation_8h" startline="159">sprite_sheets_</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980afd232a32dcfdd49f24c59870b97e66ce">MUSHROOM</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980aad43791d4a1bab20f04a2d8a85ffc34b">SCORPION</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1ac00c099bbecd8d84bd7c536d4e6d3aa7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite Presentation::generateSpriteFromSpriteSheet</definition>
+        <argsstring>(shared_ptr&lt; IEntity &gt; object)</argsstring>
+        <name>generateSpriteFromSpriteSheet</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="class_i_entity" kindref="compound">IEntity</ref> &gt;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Returns a sprite with the correct animation for animated moving objects. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>sf::Sprite sprite with properties of the object given. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="196" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="184" bodyend="229"/>
+        <references refid="class_presentation_1a50c6e471561f2f96b279d4a5aa1e470a" compoundref="_presentation_8h" startline="158">game_textures_</references>
+        <references refid="class_presentation_1ab1b88938eb755b4f896d8f386e4d8542" compoundref="_presentation_8h" startline="159">sprite_sheets_</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980ac68f4cf41704abc0bb325bdc35cb7da5">CENTIPEDE</references>
+        <references refid="class_centipede_segment_1a55c00dc8b685be1fa126c0f07dcb7793a786329b34bbe53ab40a54a19cd597f2d">CentipedeSegment::BODY</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980afd232a32dcfdd49f24c59870b97e66ce">MUSHROOM</references>
+        <references refid="class_centipede_segment_1a395c23435c42e06001766783f074b547" compoundref="_centipede_segment_8cpp" startline="273" endline="277">CentipedeSegment::getRemainingLives</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980aad43791d4a1bab20f04a2d8a85ffc34b">SCORPION</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f">DOWN</references>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_1ac6a714a00a8c38446e8ff298c09da90b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite Presentation::generateSprite</definition>
+        <argsstring>(shared_ptr&lt; IEntity &gt; object)</argsstring>
+        <name>generateSprite</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="class_i_entity" kindref="compound">IEntity</ref> &gt;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Returns a sf::Sprite with the necessary properties of the object given. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>sf::Sprite sprite with properties of the object given. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="201" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.cpp" bodystart="231" bodyend="251"/>
+        <references refid="class_presentation_1a50c6e471561f2f96b279d4a5aa1e470a" compoundref="_presentation_8h" startline="158">game_textures_</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855">PLAYER</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980a517a025b6972ef5196709ee7e5a4f657">PLAYER_LASER_BULLET</references>
+        <references refid="class_presentation_1ac00c099bbecd8d84bd7c536d4e6d3aa7" compoundref="_presentation_8cpp" startline="184" endline="229">generateSpriteFromSpriteSheet</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Uses the SFML Graphics Library to draw all game objects on the screen. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="115">
+        <label>map&lt; GameSounds, shared_ptr&lt; sf::Music &gt; &gt;</label>
+      </node>
+      <node id="113">
+        <label>Presentation</label>
+        <link refid="class_presentation"/>
+        <childnode refid="114" relation="usage">
+          <edgelabel>sprite_sheets_</edgelabel>
+        </childnode>
+        <childnode refid="115" relation="usage">
+          <edgelabel>game_sounds_</edgelabel>
+        </childnode>
+        <childnode refid="116" relation="usage">
+          <edgelabel>game_textures_</edgelabel>
+        </childnode>
+      </node>
+      <node id="116">
+        <label>map&lt; ObjectType, sf::Texture &gt;</label>
+      </node>
+      <node id="114">
+        <label>vector&lt; SpriteSheet &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" line="36" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Presentation.h" bodystart="35" bodyend="202"/>
+    <listofallmembers>
+      <member refid="class_presentation_1a6bc63a72724405388df7409cb03be06a" prot="private" virt="non-virtual"><scope>Presentation</scope><name>background_</name></member>
+      <member refid="class_presentation_1aa37ace23fc7d4fd50e520670510dd9fe" prot="public" virt="non-virtual"><scope>Presentation</scope><name>checkInput</name></member>
+      <member refid="class_presentation_1ac13b755328c6e531b279d2e49a5503c1" prot="public" virt="non-virtual"><scope>Presentation</scope><name>displayLives</name></member>
+      <member refid="class_presentation_1a40d86f3b623cbef7a04db5a312ff1368" prot="public" virt="non-virtual"><scope>Presentation</scope><name>drawGameOverScreen</name></member>
+      <member refid="class_presentation_1a2ef4507daf2ddbf356b6dfca1c8f525a" prot="public" virt="non-virtual"><scope>Presentation</scope><name>drawGameWonScreen</name></member>
+      <member refid="class_presentation_1ad87e0f6ada6aa68c6e15456a5e7820ea" prot="public" virt="non-virtual"><scope>Presentation</scope><name>drawSplashScreen</name></member>
+      <member refid="class_presentation_1ab7600143ae53c8710de7ce4efb048273" prot="private" virt="non-virtual"><scope>Presentation</scope><name>font_</name></member>
+      <member refid="class_presentation_1abe9fd0e9a69ea46cb1fd1b3c59dded70" prot="private" virt="non-virtual"><scope>Presentation</scope><name>game_sounds_</name></member>
+      <member refid="class_presentation_1a50c6e471561f2f96b279d4a5aa1e470a" prot="private" virt="non-virtual"><scope>Presentation</scope><name>game_textures_</name></member>
+      <member refid="class_presentation_1a7f62aed96ac24f3394d8efba586fa772" prot="private" virt="non-virtual"><scope>Presentation</scope><name>GameSounds</name></member>
+      <member refid="class_presentation_1ac6a714a00a8c38446e8ff298c09da90b" prot="private" virt="non-virtual"><scope>Presentation</scope><name>generateSprite</name></member>
+      <member refid="class_presentation_1ac00c099bbecd8d84bd7c536d4e6d3aa7" prot="private" virt="non-virtual"><scope>Presentation</scope><name>generateSpriteFromSpriteSheet</name></member>
+      <member refid="class_presentation_1a0e099ace00ac0fd6f502c8df51d67fa6" prot="private" virt="non-virtual"><scope>Presentation</scope><name>generateSpriteSheet</name></member>
+      <member refid="class_presentation_1a050a12b9766886e4969069be1b841529" prot="public" virt="non-virtual"><scope>Presentation</scope><name>isDownPressed</name></member>
+      <member refid="class_presentation_1a38e0f5a84f4b0379c6f7778db94c81e2" prot="private" virt="non-virtual"><scope>Presentation</scope><name>isDownPressed_</name></member>
+      <member refid="class_presentation_1a7aebdf3fb5663b1dd11dbc30963984c2" prot="public" virt="non-virtual"><scope>Presentation</scope><name>isLeftPressed</name></member>
+      <member refid="class_presentation_1a519c0df57f7d36e69a723eb2081ddc39" prot="private" virt="non-virtual"><scope>Presentation</scope><name>isLeftPressed_</name></member>
+      <member refid="class_presentation_1ad10cbe90531e2817a33356926e538212" prot="public" virt="non-virtual"><scope>Presentation</scope><name>isRightPressed</name></member>
+      <member refid="class_presentation_1a0e2be276f4cb95173da9df04c16e7981" prot="private" virt="non-virtual"><scope>Presentation</scope><name>isRightPressed_</name></member>
+      <member refid="class_presentation_1a2f8e4c78cc85ccd9a0410370f66ffaba" prot="public" virt="non-virtual"><scope>Presentation</scope><name>isSpacePressed</name></member>
+      <member refid="class_presentation_1a3408af9750851434bdfbb2265ad4a76b" prot="private" virt="non-virtual"><scope>Presentation</scope><name>isSpacePressed_</name></member>
+      <member refid="class_presentation_1a36e1855d959346115eee06d327686551" prot="public" virt="non-virtual"><scope>Presentation</scope><name>isUpPressed</name></member>
+      <member refid="class_presentation_1af9aba72db98840fdb1d2dc892f564a3d" prot="private" virt="non-virtual"><scope>Presentation</scope><name>isUpPressed_</name></member>
+      <member refid="class_presentation_1a886dde2ac9b78eb0e1bee3aab9111be6" prot="public" virt="non-virtual"><scope>Presentation</scope><name>isWindowOpen</name></member>
+      <member refid="class_presentation_1ad61f8a299c4e23f6e9d51692929f8333" prot="public" virt="non-virtual"><scope>Presentation</scope><name>loadTextures</name></member>
+      <member refid="class_presentation_1a04c43fe2cf2fe4b969c034eee5d4b1e2" prot="private" virt="non-virtual"><scope>Presentation</scope><name>populateSpriteSheets</name></member>
+      <member refid="class_presentation_1a19a15db3b478318bbcdb894994a81fb6" prot="public" virt="non-virtual"><scope>Presentation</scope><name>Presentation</name></member>
+      <member refid="class_presentation_1ae34050372fa270232dce9f2666c1f2f6" prot="public" virt="non-virtual"><scope>Presentation</scope><name>processGameObjectSound</name></member>
+      <member refid="class_presentation_1a0ae752fb12e3530acd81469e68d743a3" prot="public" virt="non-virtual"><scope>Presentation</scope><name>processInputEvents</name></member>
+      <member refid="class_presentation_1ab2284a509e0dd35fb10b11bb05d220ca" prot="public" virt="non-virtual"><scope>Presentation</scope><name>processPlayerShootSound</name></member>
+      <member refid="class_presentation_1a07fe85f2fb3be047ed1bbf553662f754" prot="public" virt="non-virtual"><scope>Presentation</scope><name>renderWindow</name></member>
+      <member refid="class_presentation_1ab1b88938eb755b4f896d8f386e4d8542" prot="private" virt="non-virtual"><scope>Presentation</scope><name>sprite_sheets_</name></member>
+      <member refid="class_presentation_1a82e1c667390dd7fb683548a9ce1c7c58" prot="private" virt="non-virtual"><scope>Presentation</scope><name>updateAnimations</name></member>
+      <member refid="class_presentation_1ae243e0a0e6f16eaf3bcac7179e2430b9" prot="private" virt="non-virtual"><scope>Presentation</scope><name>window_</name></member>
+      <member refid="class_presentation_1a83620d7d530676ed6f38ac88f85907ae" prot="public" virt="non-virtual"><scope>Presentation</scope><name>~Presentation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

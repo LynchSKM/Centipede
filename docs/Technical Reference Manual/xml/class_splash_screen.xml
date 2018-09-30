@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_splash_screen" kind="class" language="C++" prot="public">
+    <compoundname>SplashScreen</compoundname>
+    <includes refid="_splash_screen_8h" local="no">SplashScreen.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_splash_screen_1a120ee2cfb6432220e9300a18014daf88" prot="private" static="no" mutable="no">
+        <type>sf::Texture</type>
+        <definition>sf::Texture SplashScreen::splashScreenTexture_</definition>
+        <argsstring></argsstring>
+        <name>splashScreenTexture_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SplashScreen.h" line="29" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SplashScreen.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_splash_screen_1a194c8c95fede320ed2a391582d246817" prot="private" static="no" mutable="no">
+        <type>sf::Font</type>
+        <definition>sf::Font SplashScreen::splashScreenFont_</definition>
+        <argsstring></argsstring>
+        <name>splashScreenFont_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SplashScreen.h" line="30" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SplashScreen.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_splash_screen_1af7cda68255a26779cb49fd7a26d11492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SplashScreen::SplashScreen</definition>
+        <argsstring>()</argsstring>
+        <name>SplashScreen</name>
+        <briefdescription>
+<para>Default constructor that creates a <ref refid="class_splash_screen" kindref="compound">SplashScreen</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SplashScreen.h" line="17" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SplashScreen.cpp" bodystart="4" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_splash_screen_1ae30ab2316faa3fa081f85fb61899689e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SplashScreen::show</definition>
+        <argsstring>(sf::RenderWindow &amp;render_window)</argsstring>
+        <name>show</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>render_window</declname>
+        </param>
+        <briefdescription>
+<para>Displays the <ref refid="class_splash_screen" kindref="compound">SplashScreen</ref> window. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>render_window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type sf::RenderWindow. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SplashScreen.h" line="22" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SplashScreen.cpp" bodystart="11" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_splash_screen_1aeb6a4736f6f7b9bb880d606610c2ae1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SplashScreen::~SplashScreen</definition>
+        <argsstring>()</argsstring>
+        <name>~SplashScreen</name>
+        <briefdescription>
+<para>Default destructor that destroys a <ref refid="class_splash_screen" kindref="compound">SplashScreen</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SplashScreen.h" line="26" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SplashScreen.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A presentation class that uses the SFML library to display playing instructions and the game&apos;s title. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SplashScreen.h" line="13" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SplashScreen.h" bodystart="12" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_splash_screen_1ae30ab2316faa3fa081f85fb61899689e" prot="public" virt="non-virtual"><scope>SplashScreen</scope><name>show</name></member>
+      <member refid="class_splash_screen_1af7cda68255a26779cb49fd7a26d11492" prot="public" virt="non-virtual"><scope>SplashScreen</scope><name>SplashScreen</name></member>
+      <member refid="class_splash_screen_1a194c8c95fede320ed2a391582d246817" prot="private" virt="non-virtual"><scope>SplashScreen</scope><name>splashScreenFont_</name></member>
+      <member refid="class_splash_screen_1a120ee2cfb6432220e9300a18014daf88" prot="private" virt="non-virtual"><scope>SplashScreen</scope><name>splashScreenTexture_</name></member>
+      <member refid="class_splash_screen_1aeb6a4736f6f7b9bb880d606610c2ae1e" prot="public" virt="non-virtual"><scope>SplashScreen</scope><name>~SplashScreen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

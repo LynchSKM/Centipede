@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_separating_axis_theorem" kind="class" language="C++" prot="public">
+    <compoundname>SeparatingAxisTheorem</compoundname>
+    <includes refid="_separating_axis_theorem_8h" local="no">SeparatingAxisTheorem.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" prot="private" static="no" mutable="no">
+        <type>vector&lt; Position &gt;</type>
+        <definition>vector&lt;Position&gt; SeparatingAxisTheorem::axes_</definition>
+        <argsstring></argsstring>
+        <name>axes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="47" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" prot="private" static="no" mutable="no">
+        <type>vector&lt; Position &gt;</type>
+        <definition>vector&lt;Position&gt; SeparatingAxisTheorem::vertices_rectA_</definition>
+        <argsstring></argsstring>
+        <name>vertices_rectA_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="48" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_separating_axis_theorem_1a57ea865e7718773ab625c08e5a5a033f" prot="private" static="no" mutable="no">
+        <type>vector&lt; Position &gt;</type>
+        <definition>vector&lt;Position&gt; SeparatingAxisTheorem::vertices_rectB_</definition>
+        <argsstring></argsstring>
+        <name>vertices_rectB_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="49" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_separating_axis_theorem_1aaacd09678df1c2ef9aaa5f13cb358d5b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SeparatingAxisTheorem::smallest_overlap_</definition>
+        <argsstring></argsstring>
+        <name>smallest_overlap_</name>
+        <initializer>= numeric_limits&lt;float&gt;::max()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="50" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" prot="private" static="no" mutable="no">
+        <type>Position</type>
+        <definition>Position SeparatingAxisTheorem::min_translation_vector_</definition>
+        <argsstring></argsstring>
+        <name>min_translation_vector_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="51" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_separating_axis_theorem_1a876cb95f1373c4b402f227aa0097a5e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SeparatingAxisTheorem::checkOverlap</definition>
+        <argsstring>(const BoundaryBox &amp;rect_A, const BoundaryBox &amp;rect_B)</argsstring>
+        <name>checkOverlap</name>
+        <param>
+          <type>const <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> &amp;</type>
+          <declname>rect_A</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> &amp;</type>
+          <declname>rect_B</declname>
+        </param>
+        <briefdescription>
+<para>Takes in two <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> objects and checks whether they overlap. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rect_A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> taken in by reference. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect_B</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> taken in by reference. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool which is true if there&apos;s overlap and false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="36" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.cpp" bodystart="3" bodyend="13"/>
+        <references refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" compoundref="_separating_axis_theorem_8h" startline="47">axes_</references>
+        <references refid="class_separating_axis_theorem_1a2ec4cb98d02252c57824bbdf4d5f8bbb" compoundref="_separating_axis_theorem_8cpp" startline="119" endline="126">clearAll</references>
+        <references refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" compoundref="_separating_axis_theorem_8h" startline="48">vertices_rectA_</references>
+        <references refid="class_boundary_box_1ac5f649399746662fa0176e95c632ca9c" compoundref="_boundary_box_8cpp" startline="9" endline="11">BoundaryBox::getVertices</references>
+        <references refid="class_separating_axis_theorem_1a57ea865e7718773ab625c08e5a5a033f" compoundref="_separating_axis_theorem_8h" startline="49">vertices_rectB_</references>
+        <references refid="class_separating_axis_theorem_1ac7613d7a7f5f05311260230b26486c63" compoundref="_separating_axis_theorem_8cpp" startline="24" endline="42">generateAxes</references>
+        <references refid="class_separating_axis_theorem_1a574c908ebfa5df34e2f37916956c000a" compoundref="_separating_axis_theorem_8cpp" startline="80" endline="106">checkProjectionsOverlap</references>
+      </memberdef>
+      <memberdef kind="function" id="class_separating_axis_theorem_1a68976bdca24421320b8ccedcc1e35760" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Position</type>
+        <definition>Position SeparatingAxisTheorem::getPenetrationDistance</definition>
+        <argsstring>(Position &amp;centre_1, Position &amp;centre_2)</argsstring>
+        <name>getPenetrationDistance</name>
+        <param>
+          <type>Position &amp;</type>
+          <declname>centre_1</declname>
+        </param>
+        <param>
+          <type>Position &amp;</type>
+          <declname>centre_2</declname>
+        </param>
+        <briefdescription>
+<para>Returns the minimum distances x and y to remove objects out of collision. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>centre_1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type Position and is the centre of a <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> Shape. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>centre_2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type Position and is the centre of a <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> Shape. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="44" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.cpp" bodystart="107" bodyend="117"/>
+        <references refid="class_separating_axis_theorem_1ae0658d8b891bf6db5bea7fba29c1a02c" compoundref="_separating_axis_theorem_8cpp" startline="44" endline="48">dotProduct</references>
+        <references refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" compoundref="_separating_axis_theorem_8h" startline="51">min_translation_vector_</references>
+        <references refid="class_separating_axis_theorem_1aaacd09678df1c2ef9aaa5f13cb358d5b" compoundref="_separating_axis_theorem_8h" startline="50">smallest_overlap_</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_separating_axis_theorem_1ac7613d7a7f5f05311260230b26486c63" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeparatingAxisTheorem::generateAxes</definition>
+        <argsstring>()</argsstring>
+        <name>generateAxes</name>
+        <briefdescription>
+<para>Generates the normals perpendicular to the edges of a Rectangle. The normals are stored in a vector of type Position. These normals are used as an axes for vector projection later on. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="57" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.cpp" bodystart="24" bodyend="42"/>
+        <references refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" compoundref="_separating_axis_theorem_8h" startline="48">vertices_rectA_</references>
+        <references refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" compoundref="_separating_axis_theorem_8h" startline="47">axes_</references>
+        <references refid="class_separating_axis_theorem_1a4b4dccb055bac2420135d8ce4bd3446a" compoundref="_separating_axis_theorem_8cpp" startline="15" endline="21">normalizeAxis</references>
+      </memberdef>
+      <memberdef kind="function" id="class_separating_axis_theorem_1ae0658d8b891bf6db5bea7fba29c1a02c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SeparatingAxisTheorem::dotProduct</definition>
+        <argsstring>(const Position &amp;pointA, const Position &amp;pointB)</argsstring>
+        <name>dotProduct</name>
+        <param>
+          <type>const Position &amp;</type>
+          <declname>pointA</declname>
+        </param>
+        <param>
+          <type>const Position &amp;</type>
+          <declname>pointB</declname>
+        </param>
+        <briefdescription>
+<para>Performs the dot product between two points. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type Position. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pointB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type Position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float which is the scalar result of the dot product. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="64" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.cpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_separating_axis_theorem_1a4b4dccb055bac2420135d8ce4bd3446a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Position</type>
+        <definition>Position SeparatingAxisTheorem::normalizeAxis</definition>
+        <argsstring>(const Position &amp;axis)</argsstring>
+        <name>normalizeAxis</name>
+        <param>
+          <type>const Position &amp;</type>
+          <declname>axis</declname>
+        </param>
+        <briefdescription>
+<para>Performs the normalization of an axis normal vector. The unit vector is what gets returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type Position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position which is the normalized axis vector (unit vector). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="71" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.cpp" bodystart="15" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_separating_axis_theorem_1a568f10c3f0eed05f4cf39bb1c2d380f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>tuple&lt; float, float &gt;</type>
+        <definition>tuple&lt; float, float &gt; SeparatingAxisTheorem::projectVectorsOntoAxis</definition>
+        <argsstring>(const Position &amp;axis, vector&lt; Position &gt; &amp;vertices)</argsstring>
+        <name>projectVectorsOntoAxis</name>
+        <param>
+          <type>const Position &amp;</type>
+          <declname>axis</declname>
+        </param>
+        <param>
+          <type>vector&lt; Position &gt; &amp;</type>
+          <declname>vertices</declname>
+        </param>
+        <briefdescription>
+<para>Performs vector projection onto axes generated. </para>        </briefdescription>
+        <detaileddescription>
+<para>The vertices of a Rectangle are projected onto an axis to determine where on the axis it is located. It returns the min and max projections of the Rectangle on the axis given. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type Position. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a vector of type Position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>tuple&lt;float,float&gt; first float is the min projection of the Rectangle. Second float is the max projection of the Rectangle. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="82" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.cpp" bodystart="50" bodyend="78"/>
+        <references refid="class_separating_axis_theorem_1ae0658d8b891bf6db5bea7fba29c1a02c" compoundref="_separating_axis_theorem_8cpp" startline="44" endline="48">dotProduct</references>
+      </memberdef>
+      <memberdef kind="function" id="class_separating_axis_theorem_1a574c908ebfa5df34e2f37916956c000a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SeparatingAxisTheorem::checkProjectionsOverlap</definition>
+        <argsstring>()</argsstring>
+        <name>checkProjectionsOverlap</name>
+        <briefdescription>
+<para>Iterates through the axes generated and checks for overlap on each. Each <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref>&apos;s vertices are projected onto an axis by using projectVectorsOntoAxis. If overlap occurs on each axis then true is returned, otherwise false. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="91" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.cpp" bodystart="80" bodyend="106"/>
+        <references refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" compoundref="_separating_axis_theorem_8h" startline="47">axes_</references>
+        <references refid="class_separating_axis_theorem_1a568f10c3f0eed05f4cf39bb1c2d380f1" compoundref="_separating_axis_theorem_8cpp" startline="50" endline="78">projectVectorsOntoAxis</references>
+        <references refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" compoundref="_separating_axis_theorem_8h" startline="48">vertices_rectA_</references>
+        <references refid="class_separating_axis_theorem_1a57ea865e7718773ab625c08e5a5a033f" compoundref="_separating_axis_theorem_8h" startline="49">vertices_rectB_</references>
+        <references refid="class_separating_axis_theorem_1aaacd09678df1c2ef9aaa5f13cb358d5b" compoundref="_separating_axis_theorem_8h" startline="50">smallest_overlap_</references>
+        <references refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" compoundref="_separating_axis_theorem_8h" startline="51">min_translation_vector_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_separating_axis_theorem_1a2ec4cb98d02252c57824bbdf4d5f8bbb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeparatingAxisTheorem::clearAll</definition>
+        <argsstring>()</argsstring>
+        <name>clearAll</name>
+        <briefdescription>
+<para>Clears all the vectors used as private members. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="95" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.cpp" bodystart="119" bodyend="126"/>
+        <references refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" compoundref="_separating_axis_theorem_8h" startline="47">axes_</references>
+        <references refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" compoundref="_separating_axis_theorem_8h" startline="48">vertices_rectA_</references>
+        <references refid="class_separating_axis_theorem_1a57ea865e7718773ab625c08e5a5a033f" compoundref="_separating_axis_theorem_8h" startline="49">vertices_rectB_</references>
+        <references refid="class_separating_axis_theorem_1aaacd09678df1c2ef9aaa5f13cb358d5b" compoundref="_separating_axis_theorem_8h" startline="50">smallest_overlap_</references>
+        <references refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" compoundref="_separating_axis_theorem_8h" startline="51">min_translation_vector_</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is a class used to determine overlap between <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> objects. This class makes use of the Separating Axis Theorem algorithm that checks for overlap between rectangles. Checks for overlap along all edges of the two <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> objects being checked. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="128">
+        <label>SeparatingAxisTheorem</label>
+        <link refid="class_separating_axis_theorem"/>
+        <childnode refid="129" relation="usage">
+          <edgelabel>vertices_rectB_</edgelabel>
+          <edgelabel>axes_</edgelabel>
+          <edgelabel>vertices_rectA_</edgelabel>
+        </childnode>
+      </node>
+      <node id="129">
+        <label>vector&lt; Position &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" line="29" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h" bodystart="28" bodyend="96"/>
+    <listofallmembers>
+      <member refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" prot="private" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>axes_</name></member>
+      <member refid="class_separating_axis_theorem_1a876cb95f1373c4b402f227aa0097a5e5" prot="public" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>checkOverlap</name></member>
+      <member refid="class_separating_axis_theorem_1a574c908ebfa5df34e2f37916956c000a" prot="private" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>checkProjectionsOverlap</name></member>
+      <member refid="class_separating_axis_theorem_1a2ec4cb98d02252c57824bbdf4d5f8bbb" prot="private" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>clearAll</name></member>
+      <member refid="class_separating_axis_theorem_1ae0658d8b891bf6db5bea7fba29c1a02c" prot="private" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>dotProduct</name></member>
+      <member refid="class_separating_axis_theorem_1ac7613d7a7f5f05311260230b26486c63" prot="private" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>generateAxes</name></member>
+      <member refid="class_separating_axis_theorem_1a68976bdca24421320b8ccedcc1e35760" prot="public" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>getPenetrationDistance</name></member>
+      <member refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" prot="private" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>min_translation_vector_</name></member>
+      <member refid="class_separating_axis_theorem_1a4b4dccb055bac2420135d8ce4bd3446a" prot="private" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>normalizeAxis</name></member>
+      <member refid="class_separating_axis_theorem_1a568f10c3f0eed05f4cf39bb1c2d380f1" prot="private" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>projectVectorsOntoAxis</name></member>
+      <member refid="class_separating_axis_theorem_1aaacd09678df1c2ef9aaa5f13cb358d5b" prot="private" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>smallest_overlap_</name></member>
+      <member refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" prot="private" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>vertices_rectA_</name></member>
+      <member refid="class_separating_axis_theorem_1a57ea865e7718773ab625c08e5a5a033f" prot="private" virt="non-virtual"><scope>SeparatingAxisTheorem</scope><name>vertices_rectB_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

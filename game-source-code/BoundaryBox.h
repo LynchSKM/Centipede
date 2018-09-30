@@ -14,21 +14,20 @@ using std::end;
 const auto pi = std::atan(1)*4;
 
 /** \class BoundaryBox
-*   \brief is a class that constructs a box
-*   shape with the given the width, height, center and rotation angle if any.
-*   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*   Version
-*/
+ *  \brief This class constructs a rectangle shape with the given the width, height, 
+ *	center and rotation angle if any.
+ *	\author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *	\version 3.0
+ */
 
 class BoundaryBox
 {
     public:
-        /** \brief Parameterized Constructor
-         *
-         * \param centre is of type Position and holds the centre position of the box.
-         * \param width is of type float and holds the full width of the box.
-         * \param height is of type float and holds the full height of the box.
-         * \param rotationAngle is of type float and holds the rotated angle of the box, if any).
+        /** \brief Parameterized Constructor. Creates a BoundaryBox object.
+         * 	\param centre is of type Position and holds the centre position of the box.
+         * 	\param width is of type float and holds the full width of the box.
+         * 	\param height is of type float and holds the full height of the box.
+         * 	\param rotationAngle is of type float and holds the rotated angle of the box, if any).
          */
         BoundaryBox(Position centre, float width, float height, float rotationAngle);
 
@@ -38,7 +37,7 @@ class BoundaryBox
          */
         vector <Position> getVertices() const;
 
-        /** \brief Default Destructor - Destroys a Boundary box.
+        /** \brief Default Destructor. Destroys a Boundary box.
          */
         ~BoundaryBox();
     private:
@@ -49,9 +48,9 @@ class BoundaryBox
         Position centre_;
 
         /** \brief Calculates the vertex of the boundary box.
-         *  \details Given a radius from the centre point and the angle relative to
-         * the centre point, a vertex can be calculated. These values are obtained by
-         * constructing the rectangle shape at an orientation of zero.
+         *  Given a radius from the centre point and the angle relative to
+         * 	the centre point, a vertex can be calculated. These values are obtained by
+         * 	constructing the rectangle shape at an orientation of zero.
          *  \param radius is a float and contains the radius (half diagonal length) from centre.
          *  \param angle is a float and contains the angle a vertex is from the centre's axis.
          *  \return Position which is a vertex.
@@ -60,7 +59,6 @@ class BoundaryBox
 
         /** \brief Takes in two sides of a right angled triangle and performs
          *  trig math to get a hypotenuse and angle between hypotenuse and adjacent.
-         *
          *  \param opposite is a float and contains the length of the opposite side.
          *  \param adjacent is a float and contains the length of the adjacent side.
          *  \return tuple<float, float> containing the angle and the hypotenuse.
@@ -72,19 +70,16 @@ class BoundaryBox
          *  classes that require it. This function pushes the generated vertices
          *  into a vector in the vertex order: Upper Left, Upper Right, Bottom Left
          *  and Bottom Right.
-         *
          */
         void sortPoints();
 
         /** \brief Builds a boundary box around a centre point with the parameters
-         *  taken in by the constructor.
-         *  \details Creates vertices using the calculateVertex function. The created
-         *  vertices are then push into the private member vector in the order specified.
-         *  Gets called in the constructor to immediately create the boundary box once
-         *  all the parameters needed are saved.
+         *  taken in by the constructor. Creates vertices using the calculateVertex 
+		 *	function. The created vertices are then push into the private member 
+		 *	vector in the order specified. Gets called in the constructor to 
+		 *	immediately create the boundary box once all the parameters needed are saved.
          */
         void constructBoundaryBox();
-
 };
 
 #endif // BOUNDARYBOX_H

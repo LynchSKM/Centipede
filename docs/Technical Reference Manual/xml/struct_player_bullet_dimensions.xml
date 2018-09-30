@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct_player_bullet_dimensions" kind="struct" language="C++" prot="public">
+    <compoundname>PlayerBulletDimensions</compoundname>
+    <includes refid="_player_bullet_8h" local="no">PlayerBullet.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_player_bullet_dimensions_1a2e4f9d114ad6c48e02671c5aa1a474ff" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float PlayerBulletDimensions::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>= 12.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/PlayerBullet.h" line="14" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/PlayerBullet.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_player_bullet_dimensions_1a6ff5235e1a26a2f1c59cf10342902dd7" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float PlayerBulletDimensions::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>= 2.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/PlayerBullet.h" line="15" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/PlayerBullet.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_player_bullet_dimensions_1a2c55e33cf71fe300bcc0518ee1df0729" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float PlayerBulletDimensions::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <initializer>= 2.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/PlayerBullet.h" line="16" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/PlayerBullet.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains information about a <ref refid="class_player_bullet" kindref="compound">PlayerBullet</ref>&apos;s height, width and speed. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/PlayerBullet.h" line="13" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/PlayerBullet.h" bodystart="12" bodyend="17"/>
+    <listofallmembers>
+      <member refid="struct_player_bullet_dimensions_1a2e4f9d114ad6c48e02671c5aa1a474ff" prot="public" virt="non-virtual"><scope>PlayerBulletDimensions</scope><name>height</name></member>
+      <member refid="struct_player_bullet_dimensions_1a2c55e33cf71fe300bcc0518ee1df0729" prot="public" virt="non-virtual"><scope>PlayerBulletDimensions</scope><name>speed</name></member>
+      <member refid="struct_player_bullet_dimensions_1a6ff5235e1a26a2f1c59cf10342902dd7" prot="public" virt="non-virtual"><scope>PlayerBulletDimensions</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -8,27 +8,27 @@
 #include "Direction.h"
 
 /** \class IMovingEntity
-*   \brief This is a Interface Class that inherits from the IEntity class. It
-*   contains pure virtual functions that will be overridden by derived classes.
-*   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*   \version
-*/
+ *  \brief This is a Interface Class that inherits from the IEntity class. It
+ *  contains pure virtual functions that will be overridden by derived classes.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *  \version 3.0
+ */
 
 class IMovingEntity: public IEntity
 {
     public:
 
-        /** A pure virtual function that moves derived class objects.
+        /** \brief A pure virtual function that moves derived class objects.
          */
         virtual void move() = 0;
 
         /** \brief A pure virtual function that returns the direction of an object.
-         * \return Direction an enum of the enum class Direction.
+         *  \return Direction an enum of the enum class Direction.
          */
         virtual Direction getDirection() const = 0;
 
         /** \brief A pure virtual function that sets the direction of an object.
-         * \param direction an enum of enum class Direction.
+         *  \param direction an enum of enum class Direction.
          */
         virtual void setDirection(Direction direction) = 0;
 

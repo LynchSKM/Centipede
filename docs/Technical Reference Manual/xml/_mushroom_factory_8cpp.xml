@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_mushroom_factory_8cpp" kind="file" language="C++">
+    <compoundname>MushroomFactory.cpp</compoundname>
+    <includes refid="_mushroom_factory_8h" local="yes">MushroomFactory.h</includes>
+    <incdepgraph>
+      <node id="512">
+        <label>POSITION.H</label>
+      </node>
+      <node id="516">
+        <label>Grid.h</label>
+        <link refid="_grid_8h"/>
+      </node>
+      <node id="513">
+        <label>cmath</label>
+      </node>
+      <node id="508">
+        <label>Mushroom.h</label>
+        <link refid="_mushroom_8h"/>
+        <childnode refid="509" relation="include">
+        </childnode>
+      </node>
+      <node id="518">
+        <label>map</label>
+      </node>
+      <node id="511">
+        <label>BoundaryBox.h</label>
+        <link refid="_boundary_box_8h"/>
+        <childnode refid="512" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="514" relation="include">
+        </childnode>
+        <childnode refid="515" relation="include">
+        </childnode>
+      </node>
+      <node id="514">
+        <label>tuple</label>
+      </node>
+      <node id="515">
+        <label>vector</label>
+      </node>
+      <node id="510">
+        <label>ObjectType.h</label>
+        <link refid="_object_type_8h"/>
+      </node>
+      <node id="506">
+        <label>MushroomFactory.cpp</label>
+        <link refid="_mushroom_factory_8cpp"/>
+        <childnode refid="507" relation="include">
+        </childnode>
+      </node>
+      <node id="509">
+        <label>IEntity.h</label>
+        <link refid="_i_entity_8h"/>
+        <childnode refid="510" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+        <childnode refid="512" relation="include">
+        </childnode>
+      </node>
+      <node id="507">
+        <label>MushroomFactory.h</label>
+        <link refid="_mushroom_factory_8h"/>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="516" relation="include">
+        </childnode>
+        <childnode refid="515" relation="include">
+        </childnode>
+        <childnode refid="517" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="518" relation="include">
+        </childnode>
+      </node>
+      <node id="517">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mushroom_factory_8h" kindref="compound">MushroomFactory.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_mushroom_factory_1a3b4de42bdd76dfc0fa606a62e1454ded" refkind="member"><highlight class="normal"><ref refid="class_mushroom_factory_1a3b4de42bdd76dfc0fa606a62e1454ded" kindref="member">MushroomFactory::MushroomFactory</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_grid" kindref="compound">Grid</ref>&amp;<sp/>grid):grid_{grid},<ref refid="class_mushroom_factory_1a9b19f54a19087d49626372add120e534" kindref="member">maxCol_</ref>{31},<sp/><ref refid="class_mushroom_factory_1a2d1cfceaf9ee1940655a8c17097b6374" kindref="member">maxRow_</ref>{37},</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mushroom_factory_1ad89adde6ea132260a2c159ca6ea984cd" kindref="member">maxMushrooms_</ref>{60}</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ctor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Build<sp/>map:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mushroom_factory_1ab36c470ed0457df44768bca51bccab31" kindref="member">defineRowAndCol</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10" refid="class_mushroom_factory_1a3e73a23df68b11e5fc1af1212db52b1e" refkind="member"><highlight class="normal">vector<sp/>&lt;shared_ptr&lt;Mushroom&gt;&gt;<ref refid="class_mushroom_factory_1a3e73a23df68b11e5fc1af1212db52b1e" kindref="member">MushroomFactory::generateMushrooms</ref>()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;shared_ptr&lt;Mushroom&gt;&gt;<sp/>mushrooms;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0,<sp/>y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>numMushrooms_<sp/>=<sp/>rand()%<ref refid="class_mushroom_factory_1ad89adde6ea132260a2c159ca6ea984cd" kindref="member">maxMushrooms_</ref><sp/>+50;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i&lt;numMushrooms_;i++){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>rand()%<ref refid="class_mushroom_factory_1a2d1cfceaf9ee1940655a8c17097b6374" kindref="member">maxRow_</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>rand()%<ref refid="class_mushroom_factory_1a9b19f54a19087d49626372add120e534" kindref="member">maxCol_</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="class_mushroom_factory_1a1cb4662503b400d0f7948c824e4e0620" kindref="member">isCellOccupied</ref>(x,y)){</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mushroom_ptr<sp/>=<sp/>make_shared&lt;Mushroom&gt;(<ref refid="class_mushroom_factory_1ae313f7723eb9188611cbb7358662ed54" kindref="member">gridPointLink</ref>(Position(x,y)));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mushrooms.push_back(mushroom_ptr);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//if</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mushrooms;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_mushroom_factory_1a3f433ade66a5a36958c8ec8fbdef0896" refkind="member"><highlight class="normal">shared_ptr&lt;Mushroom&gt;<sp/><ref refid="class_mushroom_factory_1a3f433ade66a5a36958c8ec8fbdef0896" kindref="member">MushroomFactory::generateAMushroom</ref>(Position<sp/>position)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mush_position<sp/>=<sp/><ref refid="class_mushroom_factory_1aa7e089232dee317d81b62b1cf8b7660d" kindref="member">gridRowCol</ref>(position);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mushroom_ptr<sp/>=<sp/>make_shared&lt;Mushroom&gt;(<ref refid="class_mushroom_factory_1ae313f7723eb9188611cbb7358662ed54" kindref="member">gridPointLink</ref>(mush_position));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mushroom_ptr;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_mushroom_factory_1ab36c470ed0457df44768bca51bccab31" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mushroom_factory_1ab36c470ed0457df44768bca51bccab31" kindref="member">MushroomFactory::defineRowAndCol</ref>()</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_mushroom_factory_1a2d1cfceaf9ee1940655a8c17097b6374" kindref="member">maxRow_</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="class_mushroom_factory_1a9b19f54a19087d49626372add120e534" kindref="member">maxCol_</ref>;<sp/>j++){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cellID<sp/>=<sp/>(maxRow_*(i+1)<sp/>+<sp/>(j+1));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tempId<sp/>=<sp/>pair&lt;int,bool&gt;(cellID,</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mushroom_factory_1a5be7c60c73b023d3a20019eca825d285" kindref="member">cell_ID_List_</ref>.insert(tempId);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_mushroom_factory_1aa7e089232dee317d81b62b1cf8b7660d" refkind="member"><highlight class="normal">Position<sp/><ref refid="class_mushroom_factory_1aa7e089232dee317d81b62b1cf8b7660d" kindref="member">MushroomFactory::gridRowCol</ref>(Position<sp/>position)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(position.getY_pos()&gt;=<sp/>624.0)<sp/>position.setY_pos(616.0);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>round((position.getX_pos()-8.0)/16.0);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>round((position.getY_pos()-24.0)/16.0);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Position(x,y);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_mushroom_factory_1ae313f7723eb9188611cbb7358662ed54" refkind="member"><highlight class="normal">Position<sp/><ref refid="class_mushroom_factory_1ae313f7723eb9188611cbb7358662ed54" kindref="member">MushroomFactory::gridPointLink</ref>(Position<sp/>position)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>round(position.getX_pos()*16<sp/>+8.0);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>round(position.getY_pos()*16<sp/>+24.0);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Position(x,y);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57" refid="class_mushroom_factory_1a1cb4662503b400d0f7948c824e4e0620" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_mushroom_factory_1a1cb4662503b400d0f7948c824e4e0620" kindref="member">MushroomFactory::isCellOccupied</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cellID<sp/>=<sp/>(<ref refid="class_mushroom_factory_1a2d1cfceaf9ee1940655a8c17097b6374" kindref="member">maxRow_</ref>*(x+1)<sp/>+<sp/>(y+1));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cell_itr<sp/>=<sp/><ref refid="class_mushroom_factory_1a5be7c60c73b023d3a20019eca825d285" kindref="member">cell_ID_List_</ref>.find(cellID);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(cell_itr<sp/>!=<sp/><ref refid="class_mushroom_factory_1a5be7c60c73b023d3a20019eca825d285" kindref="member">cell_ID_List_</ref>.end()){</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(cell_itr-&gt;second)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cell_itr-&gt;second;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>cell_itr-&gt;second<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//if</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="class_mushroom_factory_1aa0371c87a301d2be7c87c1d2703b982c" refkind="member"><highlight class="normal"><ref refid="class_mushroom_factory_1aa0371c87a301d2be7c87c1d2703b982c" kindref="member">MushroomFactory::~MushroomFactory</ref>()</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//dtor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.cpp"/>
+  </compounddef>
+</doxygen>

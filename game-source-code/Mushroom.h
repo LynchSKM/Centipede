@@ -2,13 +2,24 @@
 #define MUSHROOM_H
 
 #include "IEntity.h"
-#include "Dimensions.h"
+
+/** \struct MushroomDimensions
+ *	\brief Contains information about a Mushroom's height, and width.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *	\version 3.0
+ */
+struct MushroomDimensions
+{
+    const float height = 15.0;
+    const float width = 16.0;
+
+};
 
 /** \class Mushroom
  *  \brief This is a class that defines a Mushroom object. It contains virtual functions
  *  inherited from IEntity that will be overridden.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
- *  \version
+ *  \version 3.0
  */
 class Mushroom : public IEntity
 {

@@ -2,8 +2,20 @@
 #define SCORPION_H
 
 #include "IMovingEntity.h"
-#include "Dimensions.h"
 #include "Grid.h"
+
+/** \struct ScorpionDimensions
+ *	\brief Contains information about a Scorpion's height, width and speed.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *	\version 3.0
+ */
+struct ScorpionDimensions
+{
+    const float height = 16.0;
+    const float width = 32.0;
+    const float speed = 0.4;
+
+};
 
 /** \class Scorpion
  *  \brief This is a class that inherits from the IMovingEntity class. It models
@@ -27,42 +39,42 @@ class Scorpion : public IMovingEntity
         virtual ~Scorpion();
 
         /** \brief Inherited from IMovingEntity. A virtual function that
-         *  moves a scorpion object.
+         *  moves a Scorpion object.
          */
         virtual void move() override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that
-         *  returns the direction of a scorpion object.
+         *  returns the direction of a Scorpion object.
          *  \return Direction an enum of type enum class Direction.
          */
         virtual Direction getDirection() const override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that sets
-         *  the direction of a scorpion object.
+         *  the direction of a Scorpion object.
          *  \param direction an enum of enum class Direction.
          */
         virtual void setDirection(Direction direction) override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that returns a
-         *  enum ObjectType::SCORPION of ObjectType of a scorpion object.
+         *  enum ObjectType::SCORPION of ObjectType of a Scorpion object.
          *  \return ObjectType an enum of the strongly typed enum class ObjectType.
          */
         virtual ObjectType getObjectType() const override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that returns
-         *  a Position of the scorpion object.
-         *  \return Position of the scorpion object.
+         *  a Position of the Scorpion object.
+         *  \return Position
          */
         virtual Position getPosition() const override;
 
-        /** \brief Inherited from IMovingEntity. A virtual function that returns a BoundaryBox indicating
-         *  the rectangular area covered by a scorpion object.
+        /** \brief Inherited from IMovingEntity. A virtual function that returns 
+		 *	a BoundaryBox indicating the rectangular area covered by a Scorpion object.
          *  \return BoundaryBox object of the type BoundaryBox.
          */
         virtual BoundaryBox getBoundaryBox() override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that queries
-         *  if a scorpion object is still alive or not.
+         *  if a Scorpion object is still alive or not.
          *  \return bool
          */
         virtual bool isAlive() const override;
@@ -73,26 +85,26 @@ class Scorpion : public IMovingEntity
          */
         virtual void eliminated() override;
 
-        /** \brief Inherited from IMovingEntity. A virtual function that can be
-         *  used to bring scorpion object back to life.
+        /** \brief Inherited from IMovingEntity. A virtual function that will not
+         *  be implemented because a Scorpion has one life only.
          *  \return void
          */
         virtual void reincarnate() override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that
-         *  will be used to return the remaining lives of a scorpion object.
-         *  \return int containing the number of remaining lives.
+         *  will be used to return the remaining lives of a Scorpion object.
+         *  \return int indicating the number of remaining lives.
          */
         virtual int getRemainingLives() const override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that will be
-         *  used to return the poisoned status of a scorpion object.
-         *  \return bool stating whether the scorpion object is poisoned or not.
+         *  used to return false for the poisoned status of a Scorpion object.
+         *  \return bool
          */
         virtual bool isPoisoned() const override;
 
-        /** \brief Inherited from IMovingEntity. A virtual function that will be
-         *  used to poison a scorpion object by changing the poisoned status to true.
+        /** \brief Inherited from IMovingEntity. A virtual function that will not be
+         *  be implemented because a Scorpion object cannot be poisoned.
          */
         virtual void poison() override;
 
@@ -105,12 +117,12 @@ class Scorpion : public IMovingEntity
         bool isAlive_;
 
         /** \brief A function that decrements x axis of the object's position
-         *  such that it moves left.
+         *  such that the Scorpion object moves left.
          */
         void moveLeft();
 
         /** \brief A function that increments x axis of the object's position.
-         *  such that it moves right.
+         *  such that Scorpion object moves right.
          */
         void moveRight();
 };

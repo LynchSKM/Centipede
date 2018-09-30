@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_spatial_hash" kind="class" language="C++" prot="public">
+    <compoundname>SpatialHash</compoundname>
+    <includes refid="_spatial_hash_8h" local="no">SpatialHash.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spatial_hash_1a525703c707c364fb5365b90a2fec8400" prot="private" static="no" mutable="no">
+        <type><ref refid="class_grid" kindref="compound">Grid</ref></type>
+        <definition>Grid SpatialHash::grid_</definition>
+        <argsstring></argsstring>
+        <name>grid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="68" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spatial_hash_1a7fd81b6076b8dc56de145bc933ed1cca" prot="private" static="no" mutable="no">
+        <type>map&lt; unsigned int, vector&lt; shared_ptr&lt; <ref refid="class_i_entity" kindref="compound">IEntity</ref> &gt; &gt; &gt;</type>
+        <definition>map&lt;unsigned int, vector&lt;shared_ptr&lt;IEntity&gt; &gt; &gt; SpatialHash::game_object_table_</definition>
+        <argsstring></argsstring>
+        <name>game_object_table_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="69" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spatial_hash_1a4d0b5f614a759f61d76c4daad53266f4" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int SpatialHash::cell_size_</definition>
+        <argsstring></argsstring>
+        <name>cell_size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="70" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spatial_hash_1a2a685a824f21fef91bc7439fda0965a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpatialHash::SpatialHash</definition>
+        <argsstring>(const Grid &amp;grid)</argsstring>
+        <name>SpatialHash</name>
+        <param>
+          <type>const <ref refid="class_grid" kindref="compound">Grid</ref> &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <briefdescription>
+<para>Parameterized constructor. Creates a <ref refid="class_spatial_hash" kindref="compound">SpatialHash</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type <ref refid="class_grid" kindref="compound">Grid</ref> and has the screen&apos;s width and height </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="41" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.cpp" bodystart="4" bodyend="8"/>
+        <references refid="class_spatial_hash_1a4d0b5f614a759f61d76c4daad53266f4" compoundref="_spatial_hash_8h" startline="70">cell_size_</references>
+        <references refid="class_spatial_hash_1a23c64fe77b32c1b1480295aabe2978b8" compoundref="_spatial_hash_8cpp" startline="10" endline="29">buildMap</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spatial_hash_1a0f1fc93eebd653259103671e619df094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpatialHash::generateSpatialHashTable</definition>
+        <argsstring>(vector&lt; IEntity_ptr &gt; &amp;game_objects)</argsstring>
+        <name>generateSpatialHashTable</name>
+        <param>
+          <type>vector&lt; <ref refid="_spatial_hash_8h_1ae582ab202da5e80230f32e4d667f7fa9" kindref="member">IEntity_ptr</ref> &gt; &amp;</type>
+          <declname>game_objects</declname>
+        </param>
+        <briefdescription>
+<para>Saves the cell locations of an object into a map which will be used to query the objects near it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>game_objects</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is vector of <ref refid="class_i_entity" kindref="compound">IEntity</ref> and contains the game objects created in the game. S</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="48" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.cpp" bodystart="31" bodyend="40"/>
+        <references refid="class_spatial_hash_1a66a559d3ee222216bf08f7ea36be7417" compoundref="_spatial_hash_8cpp" startline="132" endline="141">clearAll</references>
+        <references refid="class_spatial_hash_1a663251e84c6eca8303b181c480e76de2" compoundref="_spatial_hash_8cpp" startline="113" endline="130">saveLocations</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spatial_hash_1a4ce61752d2ec67c16323002d345df77b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="_spatial_hash_8h_1ae582ab202da5e80230f32e4d667f7fa9" kindref="member">IEntity_ptr</ref> &gt;</type>
+        <definition>vector&lt; IEntity_ptr &gt; SpatialHash::retrieveNearbyObjects</definition>
+        <argsstring>(IEntity_ptr object)</argsstring>
+        <name>retrieveNearbyObjects</name>
+        <param>
+          <type><ref refid="_spatial_hash_8h_1ae582ab202da5e80230f32e4d667f7fa9" kindref="member">IEntity_ptr</ref></type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Queries the map for the cells the object is located in and returns a vector of shared pointers to all the objects in the cells where the object of interest is located. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a shared pointer of type <ref refid="class_i_entity" kindref="compound">IEntity</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vector&lt;shared_ptr&lt;IEntity&gt;&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="56" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.cpp" bodystart="42" bodyend="76"/>
+        <references refid="class_spatial_hash_1a3a9f73d146cb3d5969fdbd78e524f84b" compoundref="_spatial_hash_8cpp" startline="78" endline="90">getObjectLocations</references>
+        <references refid="class_spatial_hash_1a5d0a1d19c6251359bfa99b9b2738de57" compoundref="_spatial_hash_8cpp" startline="100" endline="111">generateMapKeys</references>
+        <references refid="class_spatial_hash_1a7fd81b6076b8dc56de145bc933ed1cca" compoundref="_spatial_hash_8h" startline="69">game_object_table_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spatial_hash_1a66a559d3ee222216bf08f7ea36be7417" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpatialHash::clearAll</definition>
+        <argsstring>()</argsstring>
+        <name>clearAll</name>
+        <briefdescription>
+<para>Clears the vectors in the game_object_table_. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="61" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.cpp" bodystart="132" bodyend="141"/>
+        <references refid="class_spatial_hash_1a7fd81b6076b8dc56de145bc933ed1cca" compoundref="_spatial_hash_8h" startline="69">game_object_table_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spatial_hash_1a94d1324fb7380ff6cdd98574df2d62a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpatialHash::~SpatialHash</definition>
+        <argsstring>()</argsstring>
+        <name>~SpatialHash</name>
+        <briefdescription>
+<para>Default Destructor. Destroys a <ref refid="class_spatial_hash" kindref="compound">SpatialHash</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="65" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.cpp" bodystart="143" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spatial_hash_1a23c64fe77b32c1b1480295aabe2978b8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpatialHash::buildMap</definition>
+        <argsstring>()</argsstring>
+        <name>buildMap</name>
+        <briefdescription>
+<para>Builds the map game_object_table_. The keys are integers corresponding to cell ids and values are empty vectors in the beginning. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="78" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.cpp" bodystart="10" bodyend="29"/>
+        <references refid="class_spatial_hash_1a525703c707c364fb5365b90a2fec8400" compoundref="_spatial_hash_8h" startline="68">grid_</references>
+        <references refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" compoundref="_grid_8cpp" startline="15" endline="17">Grid::getHeight</references>
+        <references refid="class_spatial_hash_1a4d0b5f614a759f61d76c4daad53266f4" compoundref="_spatial_hash_8h" startline="70">cell_size_</references>
+        <references refid="class_grid_1a0d9e03cd17d99ff13a044d027012a9e2" compoundref="_grid_8cpp" startline="11" endline="13">Grid::getWidth</references>
+        <references refid="class_spatial_hash_1a7fd81b6076b8dc56de145bc933ed1cca" compoundref="_spatial_hash_8h" startline="69">game_object_table_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spatial_hash_1a3a9f73d146cb3d5969fdbd78e524f84b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; Position &gt;</type>
+        <definition>vector&lt; Position &gt; SpatialHash::getObjectLocations</definition>
+        <argsstring>(IEntity_ptr &amp;object)</argsstring>
+        <name>getObjectLocations</name>
+        <param>
+          <type><ref refid="_spatial_hash_8h_1ae582ab202da5e80230f32e4d667f7fa9" kindref="member">IEntity_ptr</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves the screen positions where the object&apos;s centre and boundary box vertices are located. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a shared pointer of type <ref refid="class_i_entity" kindref="compound">IEntity</ref> taken by reference. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vector&lt;Position&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="85" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.cpp" bodystart="78" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spatial_hash_1ae1b06cf6d968ceaf8731a9ecbb06c836" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int SpatialHash::generateMapKey</definition>
+        <argsstring>(const Position &amp;position)</argsstring>
+        <name>generateMapKey</name>
+        <param>
+          <type>const Position &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Maps a position to a cell based on the grid&apos;s width, height and the chosen cell size. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type Position taken by reference. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned int </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="92" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.cpp" bodystart="92" bodyend="98"/>
+        <references refid="class_spatial_hash_1a4d0b5f614a759f61d76c4daad53266f4" compoundref="_spatial_hash_8h" startline="70">cell_size_</references>
+        <references refid="class_spatial_hash_1a525703c707c364fb5365b90a2fec8400" compoundref="_spatial_hash_8h" startline="68">grid_</references>
+        <references refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" compoundref="_grid_8cpp" startline="15" endline="17">Grid::getHeight</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spatial_hash_1a5d0a1d19c6251359bfa99b9b2738de57" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; SpatialHash::generateMapKeys</definition>
+        <argsstring>(vector&lt; Position &gt; &amp;positions)</argsstring>
+        <name>generateMapKeys</name>
+        <param>
+          <type>vector&lt; Position &gt; &amp;</type>
+          <declname>positions</declname>
+        </param>
+        <briefdescription>
+<para>Maps positions to a cell based on the grid&apos;s width, height, and the chosen cell size. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>positions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a vector of type Position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vector&lt;unsigned int&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="99" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.cpp" bodystart="100" bodyend="111"/>
+        <references refid="class_spatial_hash_1ae1b06cf6d968ceaf8731a9ecbb06c836" compoundref="_spatial_hash_8cpp" startline="92" endline="98">generateMapKey</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spatial_hash_1a663251e84c6eca8303b181c480e76de2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpatialHash::saveLocations</definition>
+        <argsstring>(IEntity_ptr object)</argsstring>
+        <name>saveLocations</name>
+        <param>
+          <type><ref refid="_spatial_hash_8h_1ae582ab202da5e80230f32e4d667f7fa9" kindref="member">IEntity_ptr</ref></type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Saves a shared pointer to the object at the cells where the object is located into the map game_object_table_;. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a shared_ptr to <ref refid="class_i_entity" kindref="compound">IEntity</ref> and is pointing to a game object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="106" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.cpp" bodystart="113" bodyend="130"/>
+        <references refid="class_spatial_hash_1a3a9f73d146cb3d5969fdbd78e524f84b" compoundref="_spatial_hash_8cpp" startline="78" endline="90">getObjectLocations</references>
+        <references refid="class_spatial_hash_1a5d0a1d19c6251359bfa99b9b2738de57" compoundref="_spatial_hash_8cpp" startline="100" endline="111">generateMapKeys</references>
+        <references refid="class_spatial_hash_1a7fd81b6076b8dc56de145bc933ed1cca" compoundref="_spatial_hash_8h" startline="69">game_object_table_</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class will be used by collision detection to query for objects around the object of interest. The screen is divided up into cells. A map will be populated with the cell&apos;s id as a key and the value will be a stl vector container that has shared_ptr(s) to game objects in each cell. Shared pointers to other objects will be returned for cells where an object exists. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="131">
+        <label>SpatialHash</label>
+        <link refid="class_spatial_hash"/>
+        <childnode refid="132" relation="usage">
+          <edgelabel>grid_</edgelabel>
+        </childnode>
+        <childnode refid="133" relation="usage">
+          <edgelabel>game_object_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="133">
+        <label>map&lt; unsigned int, vector&lt; shared_ptr&lt; IEntity &gt; &gt; &gt;</label>
+      </node>
+      <node id="132">
+        <label>Grid</label>
+        <link refid="class_grid"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" line="36" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SpatialHash.h" bodystart="35" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_spatial_hash_1a23c64fe77b32c1b1480295aabe2978b8" prot="private" virt="non-virtual"><scope>SpatialHash</scope><name>buildMap</name></member>
+      <member refid="class_spatial_hash_1a4d0b5f614a759f61d76c4daad53266f4" prot="private" virt="non-virtual"><scope>SpatialHash</scope><name>cell_size_</name></member>
+      <member refid="class_spatial_hash_1a66a559d3ee222216bf08f7ea36be7417" prot="public" virt="non-virtual"><scope>SpatialHash</scope><name>clearAll</name></member>
+      <member refid="class_spatial_hash_1a7fd81b6076b8dc56de145bc933ed1cca" prot="private" virt="non-virtual"><scope>SpatialHash</scope><name>game_object_table_</name></member>
+      <member refid="class_spatial_hash_1ae1b06cf6d968ceaf8731a9ecbb06c836" prot="private" virt="non-virtual"><scope>SpatialHash</scope><name>generateMapKey</name></member>
+      <member refid="class_spatial_hash_1a5d0a1d19c6251359bfa99b9b2738de57" prot="private" virt="non-virtual"><scope>SpatialHash</scope><name>generateMapKeys</name></member>
+      <member refid="class_spatial_hash_1a0f1fc93eebd653259103671e619df094" prot="public" virt="non-virtual"><scope>SpatialHash</scope><name>generateSpatialHashTable</name></member>
+      <member refid="class_spatial_hash_1a3a9f73d146cb3d5969fdbd78e524f84b" prot="private" virt="non-virtual"><scope>SpatialHash</scope><name>getObjectLocations</name></member>
+      <member refid="class_spatial_hash_1a525703c707c364fb5365b90a2fec8400" prot="private" virt="non-virtual"><scope>SpatialHash</scope><name>grid_</name></member>
+      <member refid="class_spatial_hash_1a4ce61752d2ec67c16323002d345df77b" prot="public" virt="non-virtual"><scope>SpatialHash</scope><name>retrieveNearbyObjects</name></member>
+      <member refid="class_spatial_hash_1a663251e84c6eca8303b181c480e76de2" prot="private" virt="non-virtual"><scope>SpatialHash</scope><name>saveLocations</name></member>
+      <member refid="class_spatial_hash_1a2a685a824f21fef91bc7439fda0965a6" prot="public" virt="non-virtual"><scope>SpatialHash</scope><name>SpatialHash</name></member>
+      <member refid="class_spatial_hash_1a94d1324fb7380ff6cdd98574df2d62a3" prot="public" virt="non-virtual"><scope>SpatialHash</scope><name>~SpatialHash</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

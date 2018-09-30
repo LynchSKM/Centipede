@@ -2,25 +2,24 @@
 #include <cmath>
 
 using std::round;
+struct CentipedeSegmentDemensions CentipedeSegment::dimensions_;
 
-CentipedeSegment::CentipedeSegment(const Grid& grid, BodyType bodytype, Position position, Direction cur_Direction):
+CentipedeSegment::CentipedeSegment(const Grid& grid, BodyType bodytype,
+                                   Position position, Direction cur_Direction):
 cur_Direction_{cur_Direction},
 bodytype_{bodytype},
-objectType_{ObjectType::CENTIPEDE},
-position_{position}, grid_{grid}
+position_{position},
+grid_{grid}
 {
     prev_Direction_ = Direction::DOWN;
     moveDownCount_ = 0;
     changeWhenPoisoned_ = false;
     centAtbottom_ = false;
-
 }
 
 bool CentipedeSegment::isEntryMovement()
 {
-
-    struct CentipedeSegmentDemensions dimensions;
-    auto speed = dimensions.speed;
+    auto speed = dimensions_.speed;
     auto half_screen_width = grid_.getWidth()/2.0f;
 
     if(position_.getY_pos() < 0 && cur_Direction_==Direction::LEFT ){
@@ -36,7 +35,6 @@ bool CentipedeSegment::isEntryMovement()
             return true;
         }
     }
-
     return false;
 }
 
@@ -80,9 +78,8 @@ void CentipedeSegment::checkHeadCollisions()
 
 void CentipedeSegment::moveUp()
 {
-    struct CentipedeSegmentDemensions dimensions;
     float maxHeight = grid_.getHeight()- grid_.getHeight()*0.2;
-    auto newYPos = position_.getY_pos() - dimensions.speedY;
+    auto newYPos = position_.getY_pos()-dimensions_.speedY;
     if(newYPos > maxHeight){
         position_.setY_pos(newYPos);
         if(prev_Direction_==Direction::LEFT){
@@ -104,9 +101,8 @@ void CentipedeSegment::moveUp()
 
 void CentipedeSegment::moveDown()
 {
-    struct CentipedeSegmentDemensions dimensions;
-    float maxHeight = grid_.getHeight()-(dimensions.height/2.0f);
-    auto newYPos = position_.getY_pos() + dimensions.speedY;
+    float maxHeight = grid_.getHeight()-(dimensions_.height/2.0f);
+    auto newYPos = position_.getY_pos()+dimensions_.speedY;
 
     if(newYPos <= maxHeight)
     {
@@ -135,16 +131,15 @@ void CentipedeSegment::moveDown()
 
 void CentipedeSegment::moveLeft()
 {
-    struct CentipedeSegmentDemensions dimensions;
-    float maxWidth = grid_.getWidth()-(dimensions.width/2.0f);
-    auto newXPos = position_.getX_pos()- dimensions.speed;
+    float maxWidth = grid_.getWidth()-(dimensions_.width/2.0f);
+    auto newXPos = position_.getX_pos()-dimensions_.speed;
 
-    if(isPoisoned() && centAtbottom_)newXPos = position_.getX_pos()-(dimensions.width+1);
+    if(isPoisoned() && centAtbottom_)newXPos = position_.getX_pos()-(dimensions_.width+1);
 
     newXPos = (round(newXPos*10))/10;
 
 
-    if(newXPos < maxWidth && newXPos > (dimensions.width/2.0f)){
+    if(newXPos < maxWidth && newXPos > (dimensions_.width/2.0f)){
         position_.setX_pos(newXPos);
     }else{
         if(prev_Direction_==Direction::UP){
@@ -159,11 +154,10 @@ void CentipedeSegment::moveLeft()
 
 void CentipedeSegment::moveRight()
 {
-    struct CentipedeSegmentDemensions dimensions;
-    float maxWidth = grid_.getWidth()-(dimensions.width/2.0f);
-    auto newXPos = position_.getX_pos()+ dimensions.speed;
+    float maxWidth = grid_.getWidth()-(dimensions_.width/2.0f);
+    auto newXPos = position_.getX_pos()+dimensions_.speed;
 
-    if(isPoisoned() && centAtbottom_)newXPos = position_.getX_pos()+ (dimensions.width+1);
+    if(isPoisoned() && centAtbottom_)newXPos = position_.getX_pos()+(dimensions_.width+1);
 
     newXPos = (round(newXPos*10))/10;
 
@@ -186,11 +180,10 @@ void CentipedeSegment::move()
     if(isEntryMovement())return;
     if(isPoisonedMovementComplete_) isPoisoned_ = false;
     if(!isPoisoned_)//Normal movement
-    {   struct CentipedeSegmentDemensions dimensions;
-
+    {
         if(bodytype_==BodyType::BODY) checkHeadCollisions();
-        switch (cur_Direction_){
-
+        switch (cur_Direction_)
+        {
             case Direction::DOWN:
                 moveDown();
                 break;
@@ -216,7 +209,6 @@ void CentipedeSegment::move()
     else
     {
         //poisoned movement
-        //setDirection(Direction::DOWN);
         isPoisonedMovement();
     }
 }
@@ -254,7 +246,7 @@ void CentipedeSegment::setDirection(Direction direction)
 
 ObjectType CentipedeSegment::getObjectType() const
 {
-    return objectType_;
+    return ObjectType::CENTIPEDE;
 }
 
 CentipedeSegment::BodyType CentipedeSegment::getBodyType() const{
@@ -263,9 +255,9 @@ CentipedeSegment::BodyType CentipedeSegment::getBodyType() const{
 
 void CentipedeSegment::setBodyType(BodyType body_type)
 {
+    if(body_type==BodyType::HEAD) clearHeadCollisions();
     bodytype_ = body_type;
 }
-
 
 Position CentipedeSegment::getPosition() const
 {
@@ -274,16 +266,13 @@ Position CentipedeSegment::getPosition() const
 
 BoundaryBox CentipedeSegment::getBoundaryBox()
 {
-    struct CentipedeSegmentDemensions Dimension;
-    BoundaryBox box{position_,Dimension.width,Dimension.height,0};
-    return box;
+    return BoundaryBox{position_,dimensions_.width,dimensions_.height,0};
 }
 
 
 int CentipedeSegment::getRemainingLives() const
 {
     if(isAlive()) return 1;
-
     return 0;
 }
 
@@ -316,10 +305,12 @@ Direction CentipedeSegment::getDirection() const
 {
     return cur_Direction_;
 }
+
 Direction CentipedeSegment::getPrevDirection() const
 {
     return prev_Direction_;
 }
+
 void CentipedeSegment::changeDirection()
 {
     if(prev_Direction_==Direction::DOWN)setDirection(Direction::DOWN);

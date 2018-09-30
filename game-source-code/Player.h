@@ -9,17 +9,28 @@ using std::vector;
 
 #include "IMovingEntity.h"
 #include "Grid.h"
-#include "Dimensions.h"
 #include "PlayerBullet.h"
 #include "StopWatch.h"
 
+/** \struct PlayerDimension
+ *	\brief Contains information about a Player's height, width and speed.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *	\version 3.0
+ */
+struct PlayerDimension
+{
+    const float height = 16.0;
+    const float width = 16.0;
+    const float speed = 1.0;
+};
+
 /** \class Player
-*   \brief This is a Player Class that inherits from the IMovingEntity class. It
-*   contains virtual functions that have been overridden and new ones.
-*
-*   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*   \version
-*/
+ *  \brief This is a Player Class that inherits from the IMovingEntity class. It
+ *  contains virtual functions that have been overridden. It models
+ *	a Player object. A Player can move and can shoot bullets.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *  \version 3.0
+ */
 class Player : public IMovingEntity
 {
     public:
@@ -29,16 +40,17 @@ class Player : public IMovingEntity
          */
         Player(const Grid& grid);
 
-        /**< \brief Destroys the player object */
+        /** \brief Virtual Destructor. Destroys a Player object.
+		 */
         virtual ~Player();
 
         /** \brief Inherited from IMovingEntity. A virtual function that
-         *   moves a Player object.
+         *  moves a Player object.
          */
         virtual void move() override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that
-         *  returns a enum of ObjectType of the Player object.
+         *  returns a enum of ObjectType::Player.
          *  \return An enum of the strongly typed enum class ObjectType.
          */
         virtual ObjectType getObjectType() const override;
@@ -82,24 +94,24 @@ class Player : public IMovingEntity
 
         /** \brief Inherited from IMovingEntity. A virtual function that
          *  gets a constant copy of the Player object's number of lives left.
-         *  \return an int a constant copy of the numberOfLives_.
+         *  \return int indicating the player's remaining lives.
          */
         int getRemainingLives() const override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that will be
-         * used to bring the Player object back to life, if the remaining lives
-         * are not zero.
+         *  used to bring the Player object back to life, if the remaining lives
+         *  are not zero.
          */
 		virtual void reincarnate() override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that will be
-         *  used to return the poisoned status of a Player object.
-         *  \return bool stating whether the Player object is poisoned or not.
+         *  to return false for the poisoned status of a Player object.
+         *  \return bool
          */
         virtual bool isPoisoned() const override;
 
-        /** \brief Inherited from IMovingEntity. A virtual function that will be
-         *  used to poison a Player object by changing the poisoned status to true.
+        /** \brief Inherited from IMovingEntity. A virtual function that will not
+         *  be implemented because a Player object cannot be poisoned.
          */
         virtual void poison() override;
 
@@ -108,18 +120,18 @@ class Player : public IMovingEntity
          */
         vector <shared_ptr<IMovingEntity>> shoot();
 
-        /** \brief adds the given score to the player's current score.
+        /** \brief Adds the given score to the player's current score.
          *  \param score of type int.
          */
         void addScore(int score);
 
         /** \brief A function that creates a constant copy of the player's score
          *  and returns it.
-         *  \return an int, a constant copy of the score.
+         *  \return int
          */
         int getScore() const;
 
-        /** \brief returns true if the player has collided with a deadly enemy.
+        /** \brief Returns true if the player has collided with a deadly enemy.
          */
 		bool isHit();
 

@@ -10,13 +10,13 @@
  *  \brief A class that crops the texture to the correct image for game objects
  *  to be drawn on the screen.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
- *  Version
+ *  \version 3.0
  */
 
 class SpriteSheet
 {
     public:
-        /**\brief Parameterised SpriteSheet constructor.
+        /**\brief Parameterized SpriteSheet constructor. Creates a SpriteSheet object.
          *
          * \param objectType is of type enum class ObjectType.
          * \param gameObjectTexture is a pointer to an sf::Texture.
@@ -24,7 +24,7 @@ class SpriteSheet
          * \param switchTime is a float that the the time delay between images.
          * \param row is an unsigned int containing the row where the image can be located.
          * \param direction is of type enum class direction and contains the default
-         *  direction the game object faces in the texture.
+         *	direction the game object faces in the texture.
          */
         SpriteSheet(ObjectType objectType, sf::Texture* gameObjectTexture,
                     sf::Vector2u imageCount, const float switchTime,
@@ -34,34 +34,33 @@ class SpriteSheet
         /**\brief Increments the image currently being looked at in the texture
          * to animate movement.
          * \param deltaTime const float will be used to determine whether current
-         *  image should be incremented after some delay.
-         * \return void
+         * image should be incremented after some delay.
          */
         void update(const float deltaTime);
 
-        /** \brief This function will create a rect shape in the texture so that
+        /**\brief This function will create a rect shape in the texture so that
          * the correct image is taken from the spritesheet. It takes in a direction
          * and compares it with the default direction in the texture.
-         * \param direction is of type Direction enum class
+         * \param direction is of type Direction enum class.
          * \return sf::IntRect
          */
         sf::IntRect getTextureRect(Direction direction);
 
-        /** \brief This function will create a rect shape in the texture so that
-         * the correct image is taken from the spritesheet. It takes in a int for those
-         * that have more than one image and are stationary objects.
-         * \param direction is of type Direction enum class
+        /**\brief This function will create a rect shape in the texture so that
+         * the correct image is taken from the spritesheet. It takes in a int that
+		 * represents a column in the texture for those that have more than one 
+		 * image and are stationary objects.
+         * \param col is an integer containing the column of interest in the texture.
          * \return sf::IntRect
          */
         sf::IntRect getTextureRect(int col);
 
-
-        /** \brief This function will return the object type.
+        /**\brief This function will return the object type.
          * \return ObjectType which is of enum class ObjectType.
          */
         ObjectType getObjectType() const {return object_type_;};
 
-         /** \brief Default Destructor. Destroys a SpriteSheet object.
+        /** \brief Default Destructor. Destroys a SpriteSheet object.
          */
         ~SpriteSheet();
     private:

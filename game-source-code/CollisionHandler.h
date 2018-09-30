@@ -6,7 +6,6 @@
 #include "SpatialHash.h"
 #include "SeparatingAxisTheorem.h"
 #include "CentipedeSegment.h"
-#include "Dimensions.h"
 #include "ObjectType.h"
 
 #include <algorithm>
@@ -23,12 +22,12 @@ using std::shared_ptr;
 using std::dynamic_pointer_cast;
 using IMovingEntity_ptr = shared_ptr<IMovingEntity>;
 
-/**\class CollisionHandler
-*  \brief  A Logic Layer class that determines whether collisions have occurred
-*   between game objects.
-*  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*  \version 3.0
-*/
+/**	\class CollisionHandler
+ * 	\brief A Logic Layer class that determines whether collisions have occurred
+ * 	between game objects.
+ * 	\author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ * 	\version 3.0
+ */
 class CollisionHandler
 {
     public:
@@ -135,13 +134,13 @@ class CollisionHandler
 
         /** \brief Checks collisions between a scorpion and mushroom.
          *  If a collision occurs with a mushroom, the mushroom is set to poisoned.
-         *  \param scorpion vector of shared pointer(s) to an IMovingEntity object of ObjectType::SCORPION.
+         *  \param scorpions vector of shared pointer(s) to an IMovingEntity object of ObjectType::SCORPION.
          */
         void scorpionCollidesWithMushroom(vector<IMovingEntity_ptr>& scorpions);
 
         /** \brief Checks collisions between a spider and mushroom.
          *  If a collision occurs with a mushroom, the mushroom is set to eliminated.
-         *  \param spider vector of shared pointer(s) to an IMovingEntity object of ObjectType::SPIDER.
+         *  \param spiders vector of shared pointer(s) to an IMovingEntity object of ObjectType::SPIDER.
          */
         void spiderCollidesWithMushroom(vector<IMovingEntity_ptr>& spiders);
 };

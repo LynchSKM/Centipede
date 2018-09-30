@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct_centipede_segment_demensions" kind="struct" language="C++" prot="public">
+    <compoundname>CentipedeSegmentDemensions</compoundname>
+    <includes refid="_centipede_segment_8h" local="no">CentipedeSegment.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_centipede_segment_demensions_1a5fe72b3d92336d95fef3bfb46d463a28" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float CentipedeSegmentDemensions::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>= 14.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="18" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_centipede_segment_demensions_1aaf72df94b0ca213b5d888c2f8e96f7ce" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float CentipedeSegmentDemensions::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>= 14.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="19" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_centipede_segment_demensions_1adf0ca8f196addc8de0aca7cfa208072f" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float CentipedeSegmentDemensions::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="20" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_centipede_segment_demensions_1a2f9c317efca671a8377635fadba38432" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float CentipedeSegmentDemensions::speedY</definition>
+        <argsstring></argsstring>
+        <name>speedY</name>
+        <initializer>= 16.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="21" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains information about a <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref>&apos;s height, width and speed. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="17" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="16" bodyend="22"/>
+    <listofallmembers>
+      <member refid="struct_centipede_segment_demensions_1a5fe72b3d92336d95fef3bfb46d463a28" prot="public" virt="non-virtual"><scope>CentipedeSegmentDemensions</scope><name>height</name></member>
+      <member refid="struct_centipede_segment_demensions_1adf0ca8f196addc8de0aca7cfa208072f" prot="public" virt="non-virtual"><scope>CentipedeSegmentDemensions</scope><name>speed</name></member>
+      <member refid="struct_centipede_segment_demensions_1a2f9c317efca671a8377635fadba38432" prot="public" virt="non-virtual"><scope>CentipedeSegmentDemensions</scope><name>speedY</name></member>
+      <member refid="struct_centipede_segment_demensions_1aaf72df94b0ca213b5d888c2f8e96f7ce" prot="public" virt="non-virtual"><scope>CentipedeSegmentDemensions</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

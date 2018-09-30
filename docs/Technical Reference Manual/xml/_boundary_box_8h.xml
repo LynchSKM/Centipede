@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_boundary_box_8h" kind="file" language="C++">
+    <compoundname>BoundaryBox.h</compoundname>
+    <includes local="yes">POSITION.H</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_boundary_box_8cpp" local="yes">BoundaryBox.cpp</includedby>
+    <includedby refid="_separating_axis_theorem_8h" local="yes">SeparatingAxisTheorem.h</includedby>
+    <includedby refid="_i_entity_8h" local="yes">IEntity.h</includedby>
+    <includedby refid="_i_moving_entity_8h" local="yes">IMovingEntity.h</includedby>
+    <incdepgraph>
+      <node id="23">
+        <label>POSITION.H</label>
+      </node>
+      <node id="24">
+        <label>cmath</label>
+      </node>
+      <node id="22">
+        <label>BoundaryBox.h</label>
+        <link refid="_boundary_box_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>tuple</label>
+      </node>
+      <node id="26">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="49">
+        <label>Scorpion.cpp</label>
+        <link refid="_scorpion_8cpp"/>
+      </node>
+      <node id="56">
+        <label>SpatialHash.h</label>
+        <link refid="_spatial_hash_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>BoundaryBox.cpp</label>
+        <link refid="_boundary_box_8cpp"/>
+      </node>
+      <node id="47">
+        <label>PlayerBullet.cpp</label>
+        <link refid="_player_bullet_8cpp"/>
+      </node>
+      <node id="39">
+        <label>IMovingEntity.h</label>
+        <link refid="_i_moving_entity_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>CentipedeSegment.cpp</label>
+        <link refid="_centipede_segment_8cpp"/>
+      </node>
+      <node id="32">
+        <label>Logic.cpp</label>
+        <link refid="_logic_8cpp"/>
+      </node>
+      <node id="52">
+        <label>Mushroom.h</label>
+        <link refid="_mushroom_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>CollisionHandler.cpp</label>
+        <link refid="_collision_handler_8cpp"/>
+      </node>
+      <node id="46">
+        <label>PlayerBullet.h</label>
+        <link refid="_player_bullet_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>SeparatingAxisTheorem.cpp</label>
+        <link refid="_separating_axis_theorem_8cpp"/>
+      </node>
+      <node id="27">
+        <label>BoundaryBox.h</label>
+        <link refid="_boundary_box_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>EnemyFactory.cpp</label>
+        <link refid="_enemy_factory_8cpp"/>
+      </node>
+      <node id="38">
+        <label>Presentation.cpp</label>
+        <link refid="_presentation_8cpp"/>
+      </node>
+      <node id="50">
+        <label>Spider.h</label>
+        <link refid="_spider_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>CollisionHandler.h</label>
+        <link refid="_collision_handler_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="55">
+        <label>Mushroom.cpp</label>
+        <link refid="_mushroom_8cpp"/>
+      </node>
+      <node id="51">
+        <label>Spider.cpp</label>
+        <link refid="_spider_8cpp"/>
+      </node>
+      <node id="48">
+        <label>Scorpion.h</label>
+        <link refid="_scorpion_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Logic.h</label>
+        <link refid="_logic_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>EnemyFactory.h</label>
+        <link refid="_enemy_factory_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>CentipedeSegment.h</label>
+        <link refid="_centipede_segment_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>Player.cpp</label>
+        <link refid="_player_8cpp"/>
+      </node>
+      <node id="54">
+        <label>MushroomFactory.cpp</label>
+        <link refid="_mushroom_factory_8cpp"/>
+      </node>
+      <node id="29">
+        <label>SeparatingAxisTheorem.h</label>
+        <link refid="_separating_axis_theorem_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>SpatialHash.cpp</label>
+        <link refid="_spatial_hash_8cpp"/>
+      </node>
+      <node id="36">
+        <label>IEntity.h</label>
+        <link refid="_i_entity_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Presentation.h</label>
+        <link refid="_presentation_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>MushroomFactory.h</label>
+        <link refid="_mushroom_factory_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_boundary_box" prot="public">BoundaryBox</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_boundary_box_8h_1adc2f2809730e32868dbca4d9a6c314bb" prot="public" static="no" mutable="no">
+        <type>const auto</type>
+        <definition>const auto pi</definition>
+        <argsstring></argsstring>
+        <name>pi</name>
+        <initializer>= std::atan(1)*4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/BoundaryBox.h" line="14" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/BoundaryBox.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BOUNDARYBOX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BOUNDARYBOX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;POSITION.H&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::tuple;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::vector;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::begin;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::end;</highlight></codeline>
+<codeline lineno="14" refid="_boundary_box_8h_1adc2f2809730e32868dbca4d9a6c314bb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="_boundary_box_8h_1adc2f2809730e32868dbca4d9a6c314bb" kindref="member">pi</ref><sp/>=<sp/>std::atan(1)*4;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_boundary_box" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_boundary_box_1a7f8687dbb5b79bf3d54002ddb4722ff0" kindref="member">BoundaryBox</ref>(Position<sp/>centre,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rotationAngle);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector<sp/>&lt;Position&gt;<sp/><ref refid="class_boundary_box_1ac5f649399746662fa0176e95c632ca9c" kindref="member">getVertices</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_boundary_box_1a65bb6862f97d835fe47776fe7315b4f7" kindref="member">~BoundaryBox</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44" refid="class_boundary_box_1a246c4bfcc9da01012fbedfa879fcd265" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Position&gt;<sp/><ref refid="class_boundary_box_1a246c4bfcc9da01012fbedfa879fcd265" kindref="member">vertices_</ref>;</highlight></codeline>
+<codeline lineno="45" refid="class_boundary_box_1aae1686f559881ce7200bfb7053e6f929" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_boundary_box_1aae1686f559881ce7200bfb7053e6f929" kindref="member">height_</ref>;</highlight></codeline>
+<codeline lineno="46" refid="class_boundary_box_1a3f2d30f339ddb5f89856a9d5aafc20c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_boundary_box_1a3f2d30f339ddb5f89856a9d5aafc20c6" kindref="member">width_</ref>;</highlight></codeline>
+<codeline lineno="47" refid="class_boundary_box_1af3fe4268ffbd8de696a92d5dfbe6f658" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_boundary_box_1af3fe4268ffbd8de696a92d5dfbe6f658" kindref="member">rotationAngle_</ref>;</highlight></codeline>
+<codeline lineno="48" refid="class_boundary_box_1a897a8c477d6822a62725ca75269c813f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Position<sp/><ref refid="class_boundary_box_1a897a8c477d6822a62725ca75269c813f" kindref="member">centre_</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Position<sp/><ref refid="class_boundary_box_1a1cba9f491c3a5426b9ee2528724d5a08" kindref="member">calculateVertex</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>radius,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tuple&lt;float,<sp/>float&gt;<sp/><ref refid="class_boundary_box_1acf00608cd66309da5475b0d440ec7b64" kindref="member">pointModArg</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>opposite,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>adjacent);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_boundary_box_1a7c1a771b3bae59a88bce67dc3a00856d" kindref="member">sortPoints</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_boundary_box_1ab955a613deab2629c4d780bf79463a70" kindref="member">constructBoundaryBox</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BOUNDARYBOX_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/BoundaryBox.h"/>
+  </compounddef>
+</doxygen>

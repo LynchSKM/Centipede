@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_direction_8h" kind="file" language="C++">
+    <compoundname>Direction.h</compoundname>
+    <includedby refid="_i_moving_entity_8h" local="yes">IMovingEntity.h</includedby>
+    <includedby refid="_sprite_sheet_8h" local="yes">SpriteSheet.h</includedby>
+    <invincdepgraph>
+      <node id="157">
+        <label>Scorpion.cpp</label>
+        <link refid="_scorpion_8cpp"/>
+      </node>
+      <node id="155">
+        <label>PlayerBullet.cpp</label>
+        <link refid="_player_bullet_8cpp"/>
+      </node>
+      <node id="140">
+        <label>IMovingEntity.h</label>
+        <link refid="_i_moving_entity_8h"/>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+      </node>
+      <node id="151">
+        <label>CentipedeSegment.cpp</label>
+        <link refid="_centipede_segment_8cpp"/>
+      </node>
+      <node id="143">
+        <label>Logic.cpp</label>
+        <link refid="_logic_8cpp"/>
+      </node>
+      <node id="161">
+        <label>SpriteSheet.cpp</label>
+        <link refid="_sprite_sheet_8cpp"/>
+      </node>
+      <node id="150">
+        <label>CollisionHandler.cpp</label>
+        <link refid="_collision_handler_8cpp"/>
+      </node>
+      <node id="154">
+        <label>PlayerBullet.h</label>
+        <link refid="_player_bullet_8h"/>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+      </node>
+      <node id="148">
+        <label>EnemyFactory.cpp</label>
+        <link refid="_enemy_factory_8cpp"/>
+      </node>
+      <node id="145">
+        <label>Presentation.cpp</label>
+        <link refid="_presentation_8cpp"/>
+      </node>
+      <node id="158">
+        <label>Spider.h</label>
+        <link refid="_spider_8h"/>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>CollisionHandler.h</label>
+        <link refid="_collision_handler_8h"/>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="159">
+        <label>Spider.cpp</label>
+        <link refid="_spider_8cpp"/>
+      </node>
+      <node id="156">
+        <label>Scorpion.h</label>
+        <link refid="_scorpion_8h"/>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+      </node>
+      <node id="142">
+        <label>Logic.h</label>
+        <link refid="_logic_8h"/>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>EnemyFactory.h</label>
+        <link refid="_enemy_factory_8h"/>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+      </node>
+      <node id="146">
+        <label>CentipedeSegment.h</label>
+        <link refid="_centipede_segment_8h"/>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+      </node>
+      <node id="153">
+        <label>Player.cpp</label>
+        <link refid="_player_8cpp"/>
+      </node>
+      <node id="152">
+        <label>Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>SpriteSheet.h</label>
+        <link refid="_sprite_sheet_8h"/>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="139">
+        <label>Direction.h</label>
+        <link refid="_direction_8h"/>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+      </node>
+      <node id="141">
+        <label>Presentation.h</label>
+        <link refid="_presentation_8h"/>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" prot="public" static="no">
+        <name>Direction</name>
+        <enumvalue id="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaafbaedde498cdead4f2780217646e9ba1" prot="public">
+          <name>UP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>is coded as int of value 0. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f" prot="public">
+          <name>DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>is coded as int of value 1. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758" prot="public">
+          <name>LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>is coded as int of value 2. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403" prot="public">
+          <name>RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>is coded as int of value 3. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>is coded as int of value 4. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>A strongly typed enum class representing the directions game objects could be facing. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Direction.h" line="12" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Direction.h" bodystart="11" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DIRECTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" refkind="member"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaafbaedde498cdead4f2780217646e9ba1" kindref="member">UP</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f" kindref="member">DOWN</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758" kindref="member">LEFT</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403" kindref="member">RIGHT</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaab50339a10e1de285ac99d4c3990b8693" kindref="member">NONE</ref><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>DIRECTION_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Direction.h"/>
+  </compounddef>
+</doxygen>

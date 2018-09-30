@@ -15,59 +15,58 @@ using std::shared_ptr;
 using std::make_shared;
 
 /** \class MushroomFactory
- *  \brief creates all the mushroom objects of the game.
+ *  \brief Creates all the mushroom objects of the game.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
- *  \version
+ *  \version 3.0
  */
 class MushroomFactory
 {
     public:
 
-        /** \brief a parameterized constructor.
-         * \param grid of type Grid.
+        /** \brief Parameterized constructor. Creates a MushroomFactory object.
+         *  \param grid of type Grid.
          */
         MushroomFactory(const Grid& grid);
 
-        /** \brief destroys the Mushroom Factory object.
+        /** \brief Default Destructor. Destroys a Mushroom Factory object.
          */
         ~MushroomFactory();
 
-        /** \brief generates mushrooms.
-         * \return a vector of shared ptr to Mushroom.
+        /** \brief Generates mushrooms.
+         *  \return vector<shared_ptr<Mushroom>>
          */
         vector <shared_ptr<Mushroom>> generateMushrooms();
 
-        /** \brief generates a mushroom at the given position.
-         *  \param a position of type Position
-         * \return a  shared ptr to a mushroom.
+        /** \brief Generates a mushroom at the given position.
+         *  \param position is of type Position.
+         *  \return shared_ptr<Mushroom>
          */
         shared_ptr<Mushroom> generateAMushroom(Position position);
 
-
     private:
-        Grid grid_;
+        const Grid grid_;
         int maxCol_, maxRow_, maxMushrooms_;
         map<unsigned int, bool> cell_ID_List_;
-        /** \brief maps the grid into rows and columns.
+        /** \brief Maps the grid into rows and columns (cells).
          */
         void defineRowAndCol();
 
-        /** \brief maps the position into the defined xpos and ypos.
-         *  \param a position of type Position.
-         *  \return a position of type Position.
+        /** \brief Maps the position into the defined xpos and ypos.
+         *  \param position is of type Position.
+         *  \return Position
          */
         Position gridPointLink(Position position);
 
-        /** \brief maps the position into the defined rows and columns.
-         *  \param a position of type Position.
-         *  \return a position of type Position.
+        /** \brief Maps the position into the defined rows and columns.
+         *  \param position is of type Position.
+         *  \return Position
          */
         Position gridRowCol(Position position);
 
-        /** \brief checks if the cell is occupied.
-         *  \param cell xpos int.
-         *  \param cell ypos int.
-         *  \return a bool stating if the cell is occupied or not.
+        /** \brief Checks if a cell is occupied.
+         *  \param x is an int and contains the centre x position of a cell.
+         *  \param y is an int and contains the centre y position of a cell.
+         *  \return bool stating if the cell is occupied or not.
          */
         bool isCellOccupied(int x, int y);
 };

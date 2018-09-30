@@ -2,9 +2,20 @@
 #define SPIDER_H
 
 #include "IMovingEntity.h"
-#include "Dimensions.h"
 #include "ObjectType.h"
 #include "Grid.h"
+
+/** \struct SpiderDimensions
+ *	\brief Contains information about a Spider's height, width and speed.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *	\version 3.0
+ */
+struct SpiderDimensions
+{
+    const float height = 16.0;
+    const float width = 30.0;
+    const float speed = 0.8;
+};
 
 /** \class Spider
  *  \brief This is a class that inherits from the IMovingEntity class. It models
@@ -33,7 +44,7 @@ class Spider : public IMovingEntity
 
         /** \brief Inherited from IMovingEntity. A virtual function that returns
          *  the direction of a Spider object.
-         *  \return Direction an enum of the enum class Direction.
+         *  \return Direction an enum of type enum class Direction.
          */
         virtual Direction getDirection() const override;
 
@@ -44,7 +55,7 @@ class Spider : public IMovingEntity
         virtual void setDirection(Direction direction)override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that returns
-         *  a enum of ObjectType::SPIDER.
+         *  an enum of ObjectType::SPIDER.
          *  \return ObjectType an enum of the strongly typed enum class ObjectType.
          */
         virtual ObjectType getObjectType() const override;
@@ -73,26 +84,26 @@ class Spider : public IMovingEntity
          */
         virtual void eliminated() override;
 
-        /** \brief Inherited from IMovingEntity. A virtual function that will be
-         *  used to bring a Spider object back to life.
+        /** \brief Inherited from IMovingEntity. A virtual function that will not
+         *  be implemented because a Spider only has one life.
          *  \return void
          */
         virtual void reincarnate() override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that
          *  will be used to return the remaining lives of a Spider object.
-         *  \return int containing the number of remaining lives.
+         *  \return int indicating the number of remaining lives.
          */
         virtual int getRemainingLives() const override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that will be
-         *  used to return the poisoned status of a Spider object.
-         *  \return bool stating whether a Spider object is poisoned or not.
+         *  to return false for the poisoned status of a Spider object.
+         *  \return bool
          */
         virtual bool isPoisoned() const override;
 
-        /** \brief Inherited from IMovingEntity. A virtual function that will be
-         *  used to poison a Spider object by changing the poisoned status to true.
+        /** \brief Inherited from IMovingEntity. A virtual function that will not
+         *  be implemented because a Spider cannot be poisoned.
          */
         virtual void poison() override;
 
@@ -108,17 +119,17 @@ class Spider : public IMovingEntity
         static struct SpiderDimensions dimensions_;
 
         /** \brief A function that modifies the position of the object such that the
-         * object moves up.
+         * 	object moves up.
          */
         void moveUp();
 
         /** \brief A function that modifies the position of the object such that the
-         * object move down.
+         * 	object moves down.
          */
         void moveDown();
 
-        /** \brief generates the next turning point and gets the slope of the line
-         * to that point.
+        /** \brief Generates the next turning point and gets the slope of the line
+         * 	to that point.
          */
         void CalculateSlope();
 };

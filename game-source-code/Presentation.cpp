@@ -20,7 +20,6 @@ void Presentation::processPlayerShootSound()
 
 void Presentation::processGameObjectSound(ObjectType object_type)
 {
-
     auto temp_object_with_sound_start = static_cast<int>(ObjectType::MUSHROOM);
     auto temp_object = static_cast<int>(object_type);
     if(temp_object>=temp_object_with_sound_start)

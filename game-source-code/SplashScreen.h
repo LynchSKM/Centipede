@@ -13,16 +13,16 @@ class SplashScreen
 {
     public:
         /** \brief Default constructor that creates a SplashScreen object.
-        */
+         */
         SplashScreen();
 
         /** \brief Displays the SplashScreen window.
-        *   \param render_window is of type sf::RenderWindow.
-        */
+         *  \param render_window is of type sf::RenderWindow.
+         */
         void show(sf::RenderWindow& render_window);
 
         /** \brief Default destructor that destroys a SplashScreen object.
-        */
+         */
         ~SplashScreen();
 
     private:

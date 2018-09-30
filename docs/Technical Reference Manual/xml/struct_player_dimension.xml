@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct_player_dimension" kind="struct" language="C++" prot="public">
+    <compoundname>PlayerDimension</compoundname>
+    <includes refid="_player_8h" local="no">Player.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float PlayerDimension::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>= 16.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="22" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_player_dimension_1a4d956985539b298b9f44c76d0bd94ad8" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float PlayerDimension::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>= 16.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="23" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float PlayerDimension::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="24" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains information about a <ref refid="class_player" kindref="compound">Player</ref>&apos;s height, width and speed. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="21" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="20" bodyend="25"/>
+    <listofallmembers>
+      <member refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" prot="public" virt="non-virtual"><scope>PlayerDimension</scope><name>height</name></member>
+      <member refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" prot="public" virt="non-virtual"><scope>PlayerDimension</scope><name>speed</name></member>
+      <member refid="struct_player_dimension_1a4d956985539b298b9f44c76d0bd94ad8" prot="public" virt="non-virtual"><scope>PlayerDimension</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

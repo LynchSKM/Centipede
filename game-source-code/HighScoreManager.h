@@ -8,17 +8,17 @@ using std::string;
 using std::ios;
 using std::fstream;
 
-/**\class HighScoreManager
-*  \brief  A class that reads and writes the high score to a textfile.
-*  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*
-*/
+/** \class HighScoreManager
+ *  \brief A class that reads and writes the high score to a textfile.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *	\version 3.0
+ */
 
-class HighScoreManager{
+class HighScoreManager
+{
     public:
 
-        /** \brief HighScoreManager - Class Constructor
-         *  \details Creates HighScoreManger object.
+        /** \brief Default Constructor. Creates HighScoreManger object.
          */
         HighScoreManager();
 
@@ -33,15 +33,14 @@ class HighScoreManager{
          */
         void setHighScore(int score);
 
-         /** \brief Class Destructor
-         *   \details Destroys HighScoreManger object.
-         */
+         /** \brief Default Destructor. Destroys HighScoreManger object.
+          */
         ~HighScoreManager();
 
     private:
-        int highScore_;/**< An int variable that holds the high score. */
-        fstream file_; /**< A variable that holds the text file. */
-        string filePath_;/**< A variable that holds the path to the text file.*/
+        int highScore_;		/**< An int variable that holds the high score.*/
+        fstream file_; 		/**< A variable that holds the text file.*/
+        string filePath_;	/**< A variable that holds the path to the text file.*/
 };
 
 #endif // HIGHSCOREMANAGER_H

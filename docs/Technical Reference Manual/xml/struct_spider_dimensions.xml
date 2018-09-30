@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct_spider_dimensions" kind="struct" language="C++" prot="public">
+    <compoundname>SpiderDimensions</compoundname>
+    <includes refid="_spider_8h" local="no">Spider.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_spider_dimensions_1a1c4c51873e5970c32999e93a5968f03d" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float SpiderDimensions::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>= 16.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Spider.h" line="15" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Spider.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_spider_dimensions_1ad8036b28dace07ce077dbc5514b854ab" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float SpiderDimensions::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>= 30.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Spider.h" line="16" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Spider.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_spider_dimensions_1a4246968368969766cc3410d3d8a30d58" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float SpiderDimensions::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <initializer>= 0.8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Spider.h" line="17" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Spider.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains information about a <ref refid="class_spider" kindref="compound">Spider</ref>&apos;s height, width and speed. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Spider.h" line="14" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Spider.h" bodystart="13" bodyend="18"/>
+    <listofallmembers>
+      <member refid="struct_spider_dimensions_1a1c4c51873e5970c32999e93a5968f03d" prot="public" virt="non-virtual"><scope>SpiderDimensions</scope><name>height</name></member>
+      <member refid="struct_spider_dimensions_1a4246968368969766cc3410d3d8a30d58" prot="public" virt="non-virtual"><scope>SpiderDimensions</scope><name>speed</name></member>
+      <member refid="struct_spider_dimensions_1ad8036b28dace07ce077dbc5514b854ab" prot="public" virt="non-virtual"><scope>SpiderDimensions</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

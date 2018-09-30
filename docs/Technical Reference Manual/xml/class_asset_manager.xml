@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_asset_manager" kind="class" language="C++" prot="public">
+    <compoundname>AssetManager</compoundname>
+    <includes refid="_asset_manager_8h" local="no">AssetManager.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728" prot="public" static="no">
+        <name>AssetType</name>
+        <enumvalue id="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a4aaf23261cd3bd2064183cf1b53f1023" prot="public">
+          <name>FONT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents the game font used. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a8d09f2179ed9a38af4aefc3ceb396dd0" prot="public">
+          <name>GUNSHOT_SOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents the sound used for bullets fired. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a86ef33df884491f473940b89335a4b72" prot="public">
+          <name>MUSHROOM_REGEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents the sound used for <ref refid="class_mushroom" kindref="compound">Mushroom</ref> regeneration. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728aebc5c5eacbc3902aa67cb7b6e6e2a3f2" prot="public">
+          <name>SCORPION_MOVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents the sound used for <ref refid="class_scorpion" kindref="compound">Scorpion</ref> movement. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a927f84b41f3304e094cad785e03ddf3a" prot="public">
+          <name>SPIDER_MOVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents the sound used for <ref refid="class_spider" kindref="compound">Spider</ref> movement. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a07c80e2a355d91402a00d82b1fa13855" prot="public">
+          <name>PLAYER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents the texture used for a <ref refid="class_player" kindref="compound">Player</ref> object. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a5fb9dc502beb6f75a2175f0ea535437d" prot="public">
+          <name>BULLET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents the texture used for a <ref refid="class_player_bullet" kindref="compound">PlayerBullet</ref> object. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728ac68f4cf41704abc0bb325bdc35cb7da5" prot="public">
+          <name>CENTIPEDE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents the texture used for a <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728afd232a32dcfdd49f24c59870b97e66ce" prot="public">
+          <name>MUSHROOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents the texture used for a <ref refid="class_mushroom" kindref="compound">Mushroom</ref> object. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728aad43791d4a1bab20f04a2d8a85ffc34b" prot="public">
+          <name>SCORPION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents the texture used for a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728a9e7abc16c6a1b9bcd2d330c63933d981" prot="public">
+          <name>SPIDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents the texture used for a <ref refid="class_spider" kindref="compound">Spider</ref> object. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>A strongly typed enum class that contains the different game assets. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" line="30" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" bodystart="29" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_asset_manager_1af90fb75825771c6cd2bee4e06fc289e1" prot="private" static="no" mutable="no">
+        <type><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728" kindref="member">AssetType</ref></type>
+        <definition>AssetType AssetManager::assetType_</definition>
+        <argsstring></argsstring>
+        <name>assetType_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A variable of type enum class AssetType. Determines the type of asset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" line="69" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_asset_manager_1a0c46a45215485aa44fe26ed4c667b454" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string AssetManager::assetPath_</definition>
+        <argsstring></argsstring>
+        <name>assetPath_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A string variable holding the path to the asset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" line="70" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_asset_manager_1a750ae7b39b633fbb6594443aa3ca704b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AssetManager::AssetManager</definition>
+        <argsstring>()</argsstring>
+        <name>AssetManager</name>
+        <briefdescription>
+<para><ref refid="class_asset_manager" kindref="compound">AssetManager</ref> - Default Class Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" line="22" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.cpp" bodystart="3" bodyend="4"/>
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1aa496cc2f1edebf56e86433ef99c1e81c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AssetManager::AssetManager</definition>
+        <argsstring>(AssetType asset_type, string asset_path)</argsstring>
+        <name>AssetManager</name>
+        <param>
+          <type><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728" kindref="member">AssetType</ref></type>
+          <declname>asset_type</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>asset_path</declname>
+        </param>
+        <briefdescription>
+<para>Parameterized Constructor. Creates an <ref refid="class_asset_manager" kindref="compound">AssetManager</ref> object. Used to create a Asset Manager object containing the type of asset being loaded and the path where to find the asset. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>asset_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type AssetType and contains the type of asset being loaded. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>asset_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type std::string and contains the path to the asset being loaded. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" line="50" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.cpp" bodystart="6" bodyend="9"/>
+        <references refid="class_asset_manager_1a0c46a45215485aa44fe26ed4c667b454" compoundref="_asset_manager_8h" startline="70">assetPath_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1a79e5640dadd7968dadc2c68f2841cc6d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728" kindref="member">AssetType</ref></type>
+        <definition>AssetManager::AssetType AssetManager::getAssetType</definition>
+        <argsstring>() const</argsstring>
+        <name>getAssetType</name>
+        <briefdescription>
+<para>Returns the AssetType related to the <ref refid="class_asset_manager" kindref="compound">AssetManager</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>AssetType enum a strongly typed enumeration of AssetType. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" line="55" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.cpp" bodystart="11" bodyend="13"/>
+        <references refid="class_asset_manager_1af90fb75825771c6cd2bee4e06fc289e1" compoundref="_asset_manager_8h" startline="69">assetType_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1ad530cf1291bc9a973b35ad7a113a5555" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string AssetManager::getAssetPath</definition>
+        <argsstring>() const</argsstring>
+        <name>getAssetPath</name>
+        <briefdescription>
+<para>Returns the path on the disk related to the asset. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string with path to the asset. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" line="60" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.cpp" bodystart="15" bodyend="17"/>
+        <references refid="class_asset_manager_1a0c46a45215485aa44fe26ed4c667b454" compoundref="_asset_manager_8h" startline="70">assetPath_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1ab6d8a0e2fee83023270c7e82c00dc0d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="class_asset_manager" kindref="compound">AssetManager</ref> &gt;</type>
+        <definition>vector&lt; AssetManager &gt; AssetManager::getAssetInfo</definition>
+        <argsstring>()</argsstring>
+        <name>getAssetInfo</name>
+        <briefdescription>
+<para>Returns a vector of type <ref refid="class_asset_manager" kindref="compound">AssetManager</ref> containing all the asset information for the project. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>vector&lt;AssetManager&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" line="66" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.cpp" bodystart="19" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>AssetManager</label>
+        <link refid="class_asset_manager"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>assetPath_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" line="18" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/AssetManager.h" bodystart="17" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_asset_manager_1a750ae7b39b633fbb6594443aa3ca704b" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>AssetManager</name></member>
+      <member refid="class_asset_manager_1aa496cc2f1edebf56e86433ef99c1e81c" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>AssetManager</name></member>
+      <member refid="class_asset_manager_1a0c46a45215485aa44fe26ed4c667b454" prot="private" virt="non-virtual"><scope>AssetManager</scope><name>assetPath_</name></member>
+      <member refid="class_asset_manager_1ab4e7588608f25b6b0bc502fc62ace728" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>AssetType</name></member>
+      <member refid="class_asset_manager_1af90fb75825771c6cd2bee4e06fc289e1" prot="private" virt="non-virtual"><scope>AssetManager</scope><name>assetType_</name></member>
+      <member refid="class_asset_manager_1ab6d8a0e2fee83023270c7e82c00dc0d7" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>getAssetInfo</name></member>
+      <member refid="class_asset_manager_1ad530cf1291bc9a973b35ad7a113a5555" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>getAssetPath</name></member>
+      <member refid="class_asset_manager_1a79e5640dadd7968dadc2c68f2841cc6d" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>getAssetType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

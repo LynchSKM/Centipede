@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_game_over_screen_8h" kind="file" language="C++">
+    <compoundname>GameOverScreen.h</compoundname>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includedby refid="_game_over_screen_8cpp" local="yes">GameOverScreen.cpp</includedby>
+    <includedby refid="_presentation_8h" local="yes">Presentation.h</includedby>
+    <incdepgraph>
+      <node id="215">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="214">
+        <label>GameOverScreen.h</label>
+        <link refid="_game_over_screen_8h"/>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="220">
+        <label>Logic.cpp</label>
+        <link refid="_logic_8cpp"/>
+      </node>
+      <node id="217">
+        <label>GameOverScreen.cpp</label>
+        <link refid="_game_over_screen_8cpp"/>
+      </node>
+      <node id="222">
+        <label>Presentation.cpp</label>
+        <link refid="_presentation_8cpp"/>
+      </node>
+      <node id="221">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="219">
+        <label>Logic.h</label>
+        <link refid="_logic_8h"/>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>GameOverScreen.h</label>
+        <link refid="_game_over_screen_8h"/>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+      </node>
+      <node id="218">
+        <label>Presentation.h</label>
+        <link refid="_presentation_8h"/>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_game_over_screen" prot="public">GameOverScreen</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GAMEOVERSCREEN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GAMEOVERSCREEN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_game_over_screen" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_game_over_screen" kindref="compound">GameOverScreen</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_over_screen_1aa222987b667b889015cfeeb936b01caa" kindref="member">GameOverScreen</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_over_screen_1aed3579e06a894e3e0f3683494ef4b278" kindref="member">show</ref>(sf::RenderWindow&amp;<sp/>render_window,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>player_score,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>high_score);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_over_screen_1ad9762d95fbfc4967ebde5e7d5a1b3499" kindref="member">~GameOverScreen</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="class_game_over_screen_1ab301dacd80a406948adf26d1124e6325" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Texture<sp/><ref refid="class_game_over_screen_1ab301dacd80a406948adf26d1124e6325" kindref="member">gameOverTexture_</ref>;</highlight></codeline>
+<codeline lineno="33" refid="class_game_over_screen_1af562f3709f30a5c480c95a1e49f9d724" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Font<sp/><ref refid="class_game_over_screen_1af562f3709f30a5c480c95a1e49f9d724" kindref="member">font_</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>GAMEOVERSCREEN_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/GameOverScreen.h"/>
+  </compounddef>
+</doxygen>

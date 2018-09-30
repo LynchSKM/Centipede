@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_grid_8h" kind="file" language="C++">
+    <compoundname>Grid.h</compoundname>
+    <includedby refid="_logic_8h" local="yes">Logic.h</includedby>
+    <includedby refid="_centipede_segment_8h" local="yes">CentipedeSegment.h</includedby>
+    <includedby refid="_player_8h" local="yes">Player.h</includedby>
+    <includedby refid="_player_bullet_8h" local="yes">PlayerBullet.h</includedby>
+    <includedby refid="_mushroom_factory_8h" local="yes">MushroomFactory.h</includedby>
+    <includedby refid="_scorpion_8h" local="yes">Scorpion.h</includedby>
+    <includedby refid="_spider_8h" local="yes">Spider.h</includedby>
+    <includedby refid="_spatial_hash_8h" local="yes">SpatialHash.h</includedby>
+    <includedby refid="_grid_8cpp" local="yes">Grid.cpp</includedby>
+    <invincdepgraph>
+      <node id="261">
+        <label>Scorpion.cpp</label>
+        <link refid="_scorpion_8cpp"/>
+      </node>
+      <node id="264">
+        <label>SpatialHash.h</label>
+        <link refid="_spatial_hash_8h"/>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="257">
+        <label>PlayerBullet.cpp</label>
+        <link refid="_player_bullet_8cpp"/>
+      </node>
+      <node id="242">
+        <label>Grid.h</label>
+        <link refid="_grid_8h"/>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+      </node>
+      <node id="253">
+        <label>CentipedeSegment.cpp</label>
+        <link refid="_centipede_segment_8cpp"/>
+      </node>
+      <node id="244">
+        <label>Logic.cpp</label>
+        <link refid="_logic_8cpp"/>
+      </node>
+      <node id="252">
+        <label>CollisionHandler.cpp</label>
+        <link refid="_collision_handler_8cpp"/>
+      </node>
+      <node id="256">
+        <label>PlayerBullet.h</label>
+        <link refid="_player_bullet_8h"/>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+      </node>
+      <node id="266">
+        <label>Grid.cpp</label>
+        <link refid="_grid_8cpp"/>
+      </node>
+      <node id="250">
+        <label>EnemyFactory.cpp</label>
+        <link refid="_enemy_factory_8cpp"/>
+      </node>
+      <node id="248">
+        <label>Presentation.cpp</label>
+        <link refid="_presentation_8cpp"/>
+      </node>
+      <node id="262">
+        <label>Spider.h</label>
+        <link refid="_spider_8h"/>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+      </node>
+      <node id="251">
+        <label>CollisionHandler.h</label>
+        <link refid="_collision_handler_8h"/>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+      </node>
+      <node id="245">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="263">
+        <label>Spider.cpp</label>
+        <link refid="_spider_8cpp"/>
+      </node>
+      <node id="260">
+        <label>Scorpion.h</label>
+        <link refid="_scorpion_8h"/>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+      </node>
+      <node id="243">
+        <label>Logic.h</label>
+        <link refid="_logic_8h"/>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+      </node>
+      <node id="249">
+        <label>EnemyFactory.h</label>
+        <link refid="_enemy_factory_8h"/>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+      </node>
+      <node id="246">
+        <label>CentipedeSegment.h</label>
+        <link refid="_centipede_segment_8h"/>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+      </node>
+      <node id="255">
+        <label>Player.cpp</label>
+        <link refid="_player_8cpp"/>
+      </node>
+      <node id="259">
+        <label>MushroomFactory.cpp</label>
+        <link refid="_mushroom_factory_8cpp"/>
+      </node>
+      <node id="254">
+        <label>Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+      </node>
+      <node id="265">
+        <label>SpatialHash.cpp</label>
+        <link refid="_spatial_hash_8cpp"/>
+      </node>
+      <node id="247">
+        <label>Presentation.h</label>
+        <link refid="_presentation_8h"/>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+      </node>
+      <node id="258">
+        <label>MushroomFactory.h</label>
+        <link refid="_mushroom_factory_8h"/>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_grid" prot="public">Grid</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GRID_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GRID_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_grid" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_grid" kindref="compound">Grid</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_grid_1a9012f210213f99cbc4e1c337554e2d9c" kindref="member">Grid</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width<sp/>=<sp/>592,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height<sp/>=<sp/>640);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_grid_1a3661d0a7f998caaaf8627d7a67072116" kindref="member">~Grid</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_grid_1a0d9e03cd17d99ff13a044d027012a9e2" kindref="member">getWidth</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" kindref="member">getHeight</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35" refid="class_grid_1a7211a0b78ff8fbe022bf18b364e4d4fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_grid_1a7211a0b78ff8fbe022bf18b364e4d4fc" kindref="member">width_</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_grid_1adf461cd870d64664474ed0974ad75583" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_grid_1adf461cd870d64664474ed0974ad75583" kindref="member">height_</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>GRID_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Grid.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,849 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_centipede_segment" kind="class" language="C++" prot="public">
+    <compoundname>CentipedeSegment</compoundname>
+    <basecompoundref refid="class_i_moving_entity" prot="public" virt="non-virtual">IMovingEntity</basecompoundref>
+    <includes refid="_centipede_segment_8h" local="no">CentipedeSegment.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_centipede_segment_1a55c00dc8b685be1fa126c0f07dcb7793" prot="public" static="no">
+        <name>BodyType</name>
+        <enumvalue id="class_centipede_segment_1a55c00dc8b685be1fa126c0f07dcb7793ae15e216fc1c639f787b1231ecdfa1bf8" prot="public">
+          <name>HEAD</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents whether a <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> is a head. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_centipede_segment_1a55c00dc8b685be1fa126c0f07dcb7793a786329b34bbe53ab40a54a19cd597f2d" prot="public">
+          <name>BODY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Represents whether a <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> is a body. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>A strongly typed enum class representing the BodyType of the centipede. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="42" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="41" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_centipede_segment_1a3e7c22d5aeb56aa391ba55c8b3063ad7" prot="private" static="no" mutable="no">
+        <type><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
+        <definition>Direction CentipedeSegment::cur_Direction_</definition>
+        <argsstring></argsstring>
+        <name>cur_Direction_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="163" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1a5743e60939dc11fe605547396ffbc888" prot="private" static="no" mutable="no">
+        <type><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
+        <definition>Direction CentipedeSegment::prev_Direction_</definition>
+        <argsstring></argsstring>
+        <name>prev_Direction_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="164" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1a9de3df69d547eb546764b2cb49374db4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_centipede_segment_1a55c00dc8b685be1fa126c0f07dcb7793" kindref="member">BodyType</ref></type>
+        <definition>BodyType CentipedeSegment::bodytype_</definition>
+        <argsstring></argsstring>
+        <name>bodytype_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="165" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1aef7ea203e48b03da7a442e3ec9e5f2f8" prot="private" static="no" mutable="no">
+        <type>Position</type>
+        <definition>Position CentipedeSegment::position_</definition>
+        <argsstring></argsstring>
+        <name>position_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="166" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1a1beaa3fa3a07e008e7f87d94df32de4b" prot="private" static="no" mutable="no">
+        <type>const <ref refid="class_grid" kindref="compound">Grid</ref></type>
+        <definition>const Grid CentipedeSegment::grid_</definition>
+        <argsstring></argsstring>
+        <name>grid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="167" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1a6b7805097f029108bb357ef94bb2979d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CentipedeSegment::rotationAngle_</definition>
+        <argsstring></argsstring>
+        <name>rotationAngle_</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="168" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1aeca130ccf117692257412a2665ad2390" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CentipedeSegment::isPoisoned_</definition>
+        <argsstring></argsstring>
+        <name>isPoisoned_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="169" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1a3936697c3650cb9d8c9c8d52f3fc9993" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CentipedeSegment::isPoisonedMovementComplete_</definition>
+        <argsstring></argsstring>
+        <name>isPoisonedMovementComplete_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="170" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1afab2ad54a5575aeecb7b55b3e646b8fe" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CentipedeSegment::alive_</definition>
+        <argsstring></argsstring>
+        <name>alive_</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="171" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1a2b8f08a48143686d69adf4dac2068515" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CentipedeSegment::moveDownCount_</definition>
+        <argsstring></argsstring>
+        <name>moveDownCount_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="172" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1a6bd41e2f33c2bfaf8397e5a6adceb3a1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CentipedeSegment::changeWhenPoisoned_</definition>
+        <argsstring></argsstring>
+        <name>changeWhenPoisoned_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="173" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1ac4bc2dfdfa527746dbbc584181da32c4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CentipedeSegment::centAtbottom_</definition>
+        <argsstring></argsstring>
+        <name>centAtbottom_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="174" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1ad226f22b87a9e5d30098ebdf2e573157" prot="private" static="no" mutable="no">
+        <type>vector&lt; Position &gt;</type>
+        <definition>vector&lt;Position&gt; CentipedeSegment::head_collision_positions_</definition>
+        <argsstring></argsstring>
+        <name>head_collision_positions_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="175" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_centipede_segment_1acff8108efe68bc2a321400e19d6bf615" prot="private" static="no" mutable="no">
+        <type>vector&lt; bool &gt;</type>
+        <definition>vector&lt;bool&gt; CentipedeSegment::are_head_collision_positions_poisioned_</definition>
+        <argsstring></argsstring>
+        <name>are_head_collision_positions_poisioned_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="176" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_centipede_segment_1ada28445100f986ff7174ee520c700ef6" prot="private" static="yes" mutable="no">
+        <type>struct <ref refid="struct_centipede_segment_demensions" kindref="compound">CentipedeSegmentDemensions</ref></type>
+        <definition>struct CentipedeSegmentDemensions CentipedeSegment::dimensions_</definition>
+        <argsstring></argsstring>
+        <name>dimensions_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="176" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_centipede_segment_1a04484eeab8a66e4c3dee776c4b70ad68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CentipedeSegment::CentipedeSegment</definition>
+        <argsstring>(const Grid &amp;grid, BodyType bodytype, Position position, Direction cur_Direction)</argsstring>
+        <name>CentipedeSegment</name>
+        <param>
+          <type>const <ref refid="class_grid" kindref="compound">Grid</ref> &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type><ref refid="class_centipede_segment_1a55c00dc8b685be1fa126c0f07dcb7793" kindref="member">BodyType</ref></type>
+          <declname>bodytype</declname>
+        </param>
+        <param>
+          <type>Position</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
+          <declname>cur_Direction</declname>
+        </param>
+        <briefdescription>
+<para>Parameterized Constructor. Creates a centipede segment object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type grid. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bodytype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type BodyType enum class. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type Position. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cur_Direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type Direction enum class. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="53" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="7" bodyend="18"/>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f">DOWN</references>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1aac251c0ece67b47f328dc042c9bba046" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CentipedeSegment::~CentipedeSegment</definition>
+        <argsstring>()</argsstring>
+        <name>~CentipedeSegment</name>
+        <briefdescription>
+<para>Virtual Destructor. Destroys a <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="57" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="325" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1ac6bc689b4060d0a0d89eb7a38acc1f21" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::move</definition>
+        <argsstring>() override</argsstring>
+        <name>move</name>
+        <reimplements refid="class_i_moving_entity_1a5894f3ff2c9b15299e94e84c3234236e">move</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that moves a <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="61" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="178" bodyend="214"/>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f">DOWN</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758">LEFT</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403">RIGHT</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaafbaedde498cdead4f2780217646e9ba1">UP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1af4997b2a2ba86db0e9392084c7909341" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
+        <definition>Direction CentipedeSegment::getDirection</definition>
+        <argsstring>() const override</argsstring>
+        <name>getDirection</name>
+        <reimplements refid="class_i_moving_entity_1ae72b13230406be63bf6431887e9b1286">getDirection</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that returns the current direction of a <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Direction an enum of the enum class Direction. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="67" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="304" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a176b0a6e5291b5b91825a88bd1ede947" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::setDirection</definition>
+        <argsstring>(Direction direction) override</argsstring>
+        <name>setDirection</name>
+        <reimplements refid="class_i_moving_entity_1a8fe095ff0e0617e6d57280c98c5a3b35">setDirection</reimplements>
+        <param>
+          <type><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that sets the direction of a <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an enum of enum class Direction. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="73" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="241" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1abd9a41303ae5ee32410d28e83a5d23fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980" kindref="member">ObjectType</ref></type>
+        <definition>ObjectType CentipedeSegment::getObjectType</definition>
+        <argsstring>() const override</argsstring>
+        <name>getObjectType</name>
+        <reimplements refid="class_i_moving_entity_1a847e36ca99c5a9cc9636e17c2172431d">getObjectType</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that returns a enum of ObjectType of a <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>An enum of the strongly typed enum class ObjectType. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="79" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="247" bodyend="250"/>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980ac68f4cf41704abc0bb325bdc35cb7da5">CENTIPEDE</references>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1ab7bd41a559ce78481ad3af450700143e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Position</type>
+        <definition>Position CentipedeSegment::getPosition</definition>
+        <argsstring>() const override</argsstring>
+        <name>getPosition</name>
+        <reimplements refid="class_i_moving_entity_1ae1da868e3a806bcec08a2a1b85cd55b2">getPosition</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that returns a centre position of the <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Position of the <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object containing its current position. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="85" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a1b611a3397911b94f9d9f20e630940a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref></type>
+        <definition>BoundaryBox CentipedeSegment::getBoundaryBox</definition>
+        <argsstring>() override</argsstring>
+        <name>getBoundaryBox</name>
+        <reimplements refid="class_i_moving_entity_1a57296163f5bcc2fdc411e551b7cdf048">getBoundaryBox</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that returns a <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> indicating the rectangular area covered by a <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> object of the type <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="91" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="267" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1abf0473bac503e25944cebff09e2c600a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool CentipedeSegment::isAlive</definition>
+        <argsstring>() const override</argsstring>
+        <name>isAlive</name>
+        <reimplements refid="class_i_moving_entity_1a20afa4c19be2b8ac12dcd48a1399b42e">isAlive</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that queries if a <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object is still alive or not. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="97" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="284" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a175911cccfe0d8026b00184b0a9d9847" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::eliminated</definition>
+        <argsstring>() override</argsstring>
+        <name>eliminated</name>
+        <reimplements refid="class_i_moving_entity_1adf5c51d0261ca88cabe426035e35d3f4">eliminated</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that sets the <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object as not alive when killed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="103" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="289" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a395c23435c42e06001766783f074b547" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int CentipedeSegment::getRemainingLives</definition>
+        <argsstring>() const override</argsstring>
+        <name>getRemainingLives</name>
+        <reimplements refid="class_i_moving_entity_1a7cb604cf82c50ebc008c17b76f979b53">getRemainingLives</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that gets a constant copy of the <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object&apos;s number of lives left. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int containing the number of lives. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="109" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="273" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1ab4ebf574e950470f1eb44e7908274470" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::reincarnate</definition>
+        <argsstring>() override</argsstring>
+        <name>reincarnate</name>
+        <reimplements refid="class_i_moving_entity_1a13789b262b1181554e021ddda4b48dbc">reincarnate</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that will not be implemented because <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> objects have one life only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="114" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="279" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a86c70cd3201c47d9e2e7408cd5dc1ad8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool CentipedeSegment::isPoisoned</definition>
+        <argsstring>() const override</argsstring>
+        <name>isPoisoned</name>
+        <reimplements refid="class_i_moving_entity_1ab655d8dfe0684e4bc6f34ae9d57ed654">isPoisoned</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that will be used to return the poisoned status of the <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> objects. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool stating whether the <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object is poisoned or not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="120" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="299" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1ab60529c5fb3731e744a24bdafa28393e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::poison</definition>
+        <argsstring>() override</argsstring>
+        <name>poison</name>
+        <reimplements refid="class_i_moving_entity_1a0331437e754efc8696d809b51043b339">poison</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that will be used to poison a <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> object by changing the poisoned status to true. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="125" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="294" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a9bd509a3c0338310d2dc6da14a3a12f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
+        <definition>Direction CentipedeSegment::getPrevDirection</definition>
+        <argsstring>() const</argsstring>
+        <name>getPrevDirection</name>
+        <briefdescription>
+<para>A function that returns the previous direction of an object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The direction of the object of type Direction of the enum class. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="130" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="309" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a4f2f8959d0689a2eff1f6c5eb833f91b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::changeDirection</definition>
+        <argsstring>()</argsstring>
+        <name>changeDirection</name>
+        <briefdescription>
+<para>A function that changes the direction of the object to Down, this is called when a collision is detected in front of an object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="135" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="314" bodyend="319"/>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f">DOWN</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaafbaedde498cdead4f2780217646e9ba1">UP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a5fde14ed8fc73752eaaf1b8fcc2b94e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_centipede_segment_1a55c00dc8b685be1fa126c0f07dcb7793" kindref="member">BodyType</ref></type>
+        <definition>CentipedeSegment::BodyType CentipedeSegment::getBodyType</definition>
+        <argsstring>() const</argsstring>
+        <name>getBodyType</name>
+        <briefdescription>
+<para>A function that returns the body type of the centipede segment. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The body type of the object of type BodyType of the enum class. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="140" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="252" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1ac6d38060fd33a0564aa25e7393431a18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::setBodyType</definition>
+        <argsstring>(BodyType body_type)</argsstring>
+        <name>setBodyType</name>
+        <param>
+          <type><ref refid="class_centipede_segment_1a55c00dc8b685be1fa126c0f07dcb7793" kindref="member">BodyType</ref></type>
+          <declname>body_type</declname>
+        </param>
+        <briefdescription>
+<para>A function that sets the body type of the centipede segment. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>body_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type BodyType of the enum class. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="145" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="256" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a0cc7ef5619008142a4b5e50e6948cdea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CentipedeSegment::getRotationAngle</definition>
+        <argsstring>() const</argsstring>
+        <name>getRotationAngle</name>
+        <briefdescription>
+<para>A function that returns the rotation angle of the centipede segment. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The rotation angle of type float. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="150" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="320" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a0baecdc693620a1b09eef2c226425b6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::collisionAt</definition>
+        <argsstring>(Position position, bool poisionedCollision)</argsstring>
+        <name>collisionAt</name>
+        <param>
+          <type>Position</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>poisionedCollision</declname>
+        </param>
+        <briefdescription>
+<para>A function that saves positions where the head of centipede train had a collision. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="155" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="47" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a788a82ec5bb9158a4bcd1deaa11747f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::clearHeadCollisions</definition>
+        <argsstring>()</argsstring>
+        <name>clearHeadCollisions</name>
+        <briefdescription>
+<para>A function that clears the vector of positions where the head of centipede train had a collision. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="160" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_centipede_segment_1af5fcaca2c707087d173bb53688b6ddb6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CentipedeSegment::isEntryMovement</definition>
+        <argsstring>()</argsstring>
+        <name>isEntryMovement</name>
+        <briefdescription>
+<para>Controls the movements of the centipede segment upon entry. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="181" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="20" bodyend="39"/>
+        <references refid="struct_centipede_segment_demensions_1adf0ca8f196addc8de0aca7cfa208072f" compoundref="_centipede_segment_8h" startline="20">CentipedeSegmentDemensions::speed</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758">LEFT</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403">RIGHT</references>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1aa8572273f2bc8a2020a42126773a6d2d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::moveUp</definition>
+        <argsstring>()</argsstring>
+        <name>moveUp</name>
+        <briefdescription>
+<para>A function that decrements y axis of the object&apos;s position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="185" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="79" bodyend="100"/>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758">LEFT</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403">RIGHT</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaafbaedde498cdead4f2780217646e9ba1">UP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a32d379102fa95a16fa131b3303683fea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::moveDown</definition>
+        <argsstring>()</argsstring>
+        <name>moveDown</name>
+        <briefdescription>
+<para>A function that increments y axis of the object&apos;s position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="189" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="102" bodyend="130"/>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758">LEFT</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403">RIGHT</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f">DOWN</references>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a00708a448ef307756f3c3a0a28a0da31" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::moveLeft</definition>
+        <argsstring>()</argsstring>
+        <name>moveLeft</name>
+        <briefdescription>
+<para>A function that decrements x axis of the object&apos;s position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="193" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="132" bodyend="153"/>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaafbaedde498cdead4f2780217646e9ba1">UP</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f">DOWN</references>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a6556489a691cd1a5d6a39de6e28da08d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::moveRight</definition>
+        <argsstring>()</argsstring>
+        <name>moveRight</name>
+        <briefdescription>
+<para>A function that increments x axis of the object&apos;s position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="197" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="155" bodyend="176"/>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaafbaedde498cdead4f2780217646e9ba1">UP</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f">DOWN</references>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a0527b11bda8b6e5a96629fbb5ba2ed9c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::checkHeadCollisions</definition>
+        <argsstring>()</argsstring>
+        <name>checkHeadCollisions</name>
+        <briefdescription>
+<para>Determines whether the <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> has reached a position where the head collided. If it has the <ref refid="class_centipede_segment_1a4f2f8959d0689a2eff1f6c5eb833f91b" kindref="member">changeDirection()</ref> function is called. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="202" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="61" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_centipede_segment_1a48577193056f9c1b25a4fc524b0fcebb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentipedeSegment::isPoisonedMovement</definition>
+        <argsstring>()</argsstring>
+        <name>isPoisonedMovement</name>
+        <briefdescription>
+<para>Moves the centipede segment accordingly when it is poisoned. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="206" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.cpp" bodystart="216" bodyend="238"/>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f">DOWN</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758">LEFT</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403">RIGHT</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is class inherits from the <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref> class. It contains virtual functions that will be overridden by <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> class. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6">
+        <label>CentipedeSegment</label>
+        <link refid="class_centipede_segment"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>IEntity</label>
+        <link refid="class_i_entity"/>
+      </node>
+      <node id="7">
+        <label>IMovingEntity</label>
+        <link refid="class_i_moving_entity"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>vector&lt; bool &gt;</label>
+      </node>
+      <node id="9">
+        <label>CentipedeSegment</label>
+        <link refid="class_centipede_segment"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>grid_</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>dimensions_</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>head_collision_positions_</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>are_head_collision_positions_poisioned_</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>IEntity</label>
+        <link refid="class_i_entity"/>
+      </node>
+      <node id="13">
+        <label>CentipedeSegmentDemensions</label>
+        <link refid="struct_centipede_segment_demensions"/>
+      </node>
+      <node id="12">
+        <label>Grid</label>
+        <link refid="class_grid"/>
+      </node>
+      <node id="10">
+        <label>IMovingEntity</label>
+        <link refid="class_i_moving_entity"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>vector&lt; Position &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" line="32" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/CentipedeSegment.h" bodystart="31" bodyend="207"/>
+    <listofallmembers>
+      <member refid="class_centipede_segment_1afab2ad54a5575aeecb7b55b3e646b8fe" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>alive_</name></member>
+      <member refid="class_centipede_segment_1acff8108efe68bc2a321400e19d6bf615" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>are_head_collision_positions_poisioned_</name></member>
+      <member refid="class_centipede_segment_1a55c00dc8b685be1fa126c0f07dcb7793" prot="public" virt="non-virtual"><scope>CentipedeSegment</scope><name>BodyType</name></member>
+      <member refid="class_centipede_segment_1a9de3df69d547eb546764b2cb49374db4" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>bodytype_</name></member>
+      <member refid="class_centipede_segment_1ac4bc2dfdfa527746dbbc584181da32c4" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>centAtbottom_</name></member>
+      <member refid="class_centipede_segment_1a04484eeab8a66e4c3dee776c4b70ad68" prot="public" virt="non-virtual"><scope>CentipedeSegment</scope><name>CentipedeSegment</name></member>
+      <member refid="class_centipede_segment_1a4f2f8959d0689a2eff1f6c5eb833f91b" prot="public" virt="non-virtual"><scope>CentipedeSegment</scope><name>changeDirection</name></member>
+      <member refid="class_centipede_segment_1a6bd41e2f33c2bfaf8397e5a6adceb3a1" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>changeWhenPoisoned_</name></member>
+      <member refid="class_centipede_segment_1a0527b11bda8b6e5a96629fbb5ba2ed9c" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>checkHeadCollisions</name></member>
+      <member refid="class_centipede_segment_1a788a82ec5bb9158a4bcd1deaa11747f3" prot="public" virt="non-virtual"><scope>CentipedeSegment</scope><name>clearHeadCollisions</name></member>
+      <member refid="class_centipede_segment_1a0baecdc693620a1b09eef2c226425b6f" prot="public" virt="non-virtual"><scope>CentipedeSegment</scope><name>collisionAt</name></member>
+      <member refid="class_centipede_segment_1a3e7c22d5aeb56aa391ba55c8b3063ad7" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>cur_Direction_</name></member>
+      <member refid="class_centipede_segment_1ada28445100f986ff7174ee520c700ef6" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>dimensions_</name></member>
+      <member refid="class_centipede_segment_1a175911cccfe0d8026b00184b0a9d9847" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>eliminated</name></member>
+      <member refid="class_centipede_segment_1a5fde14ed8fc73752eaaf1b8fcc2b94e9" prot="public" virt="non-virtual"><scope>CentipedeSegment</scope><name>getBodyType</name></member>
+      <member refid="class_centipede_segment_1a1b611a3397911b94f9d9f20e630940a4" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>getBoundaryBox</name></member>
+      <member refid="class_centipede_segment_1af4997b2a2ba86db0e9392084c7909341" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>getDirection</name></member>
+      <member refid="class_centipede_segment_1abd9a41303ae5ee32410d28e83a5d23fa" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>getObjectType</name></member>
+      <member refid="class_centipede_segment_1ab7bd41a559ce78481ad3af450700143e" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>getPosition</name></member>
+      <member refid="class_centipede_segment_1a9bd509a3c0338310d2dc6da14a3a12f9" prot="public" virt="non-virtual"><scope>CentipedeSegment</scope><name>getPrevDirection</name></member>
+      <member refid="class_centipede_segment_1a395c23435c42e06001766783f074b547" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>getRemainingLives</name></member>
+      <member refid="class_centipede_segment_1a0cc7ef5619008142a4b5e50e6948cdea" prot="public" virt="non-virtual"><scope>CentipedeSegment</scope><name>getRotationAngle</name></member>
+      <member refid="class_centipede_segment_1a1beaa3fa3a07e008e7f87d94df32de4b" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>grid_</name></member>
+      <member refid="class_centipede_segment_1ad226f22b87a9e5d30098ebdf2e573157" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>head_collision_positions_</name></member>
+      <member refid="class_centipede_segment_1abf0473bac503e25944cebff09e2c600a" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>isAlive</name></member>
+      <member refid="class_centipede_segment_1af5fcaca2c707087d173bb53688b6ddb6" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>isEntryMovement</name></member>
+      <member refid="class_centipede_segment_1a86c70cd3201c47d9e2e7408cd5dc1ad8" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>isPoisoned</name></member>
+      <member refid="class_centipede_segment_1aeca130ccf117692257412a2665ad2390" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>isPoisoned_</name></member>
+      <member refid="class_centipede_segment_1a48577193056f9c1b25a4fc524b0fcebb" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>isPoisonedMovement</name></member>
+      <member refid="class_centipede_segment_1a3936697c3650cb9d8c9c8d52f3fc9993" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>isPoisonedMovementComplete_</name></member>
+      <member refid="class_centipede_segment_1ac6bc689b4060d0a0d89eb7a38acc1f21" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>move</name></member>
+      <member refid="class_centipede_segment_1a32d379102fa95a16fa131b3303683fea" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>moveDown</name></member>
+      <member refid="class_centipede_segment_1a2b8f08a48143686d69adf4dac2068515" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>moveDownCount_</name></member>
+      <member refid="class_centipede_segment_1a00708a448ef307756f3c3a0a28a0da31" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>moveLeft</name></member>
+      <member refid="class_centipede_segment_1a6556489a691cd1a5d6a39de6e28da08d" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>moveRight</name></member>
+      <member refid="class_centipede_segment_1aa8572273f2bc8a2020a42126773a6d2d" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>moveUp</name></member>
+      <member refid="class_centipede_segment_1ab60529c5fb3731e744a24bdafa28393e" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>poison</name></member>
+      <member refid="class_centipede_segment_1aef7ea203e48b03da7a442e3ec9e5f2f8" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>position_</name></member>
+      <member refid="class_centipede_segment_1a5743e60939dc11fe605547396ffbc888" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>prev_Direction_</name></member>
+      <member refid="class_centipede_segment_1ab4ebf574e950470f1eb44e7908274470" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>reincarnate</name></member>
+      <member refid="class_centipede_segment_1a6b7805097f029108bb357ef94bb2979d" prot="private" virt="non-virtual"><scope>CentipedeSegment</scope><name>rotationAngle_</name></member>
+      <member refid="class_centipede_segment_1ac6d38060fd33a0564aa25e7393431a18" prot="public" virt="non-virtual"><scope>CentipedeSegment</scope><name>setBodyType</name></member>
+      <member refid="class_centipede_segment_1a176b0a6e5291b5b91825a88bd1ede947" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>setDirection</name></member>
+      <member refid="class_centipede_segment_1aac251c0ece67b47f328dc042c9bba046" prot="public" virt="non-virtual"><scope>CentipedeSegment</scope><name>~CentipedeSegment</name></member>
+      <member refid="class_i_entity_1a8aea4fbca51d17a0ce314aaa4633f28e" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>~IEntity</name></member>
+      <member refid="class_i_moving_entity_1a2d7480d85770952b23fc554efe95a40a" prot="public" virt="virtual"><scope>CentipedeSegment</scope><name>~IMovingEntity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

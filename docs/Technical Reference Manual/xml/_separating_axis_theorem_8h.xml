@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_separating_axis_theorem_8h" kind="file" language="C++">
+    <compoundname>SeparatingAxisTheorem.h</compoundname>
+    <includes local="yes">POSITION.H</includes>
+    <includes refid="_boundary_box_8h" local="yes">BoundaryBox.h</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_collision_handler_8h" local="yes">CollisionHandler.h</includedby>
+    <includedby refid="_separating_axis_theorem_8cpp" local="yes">SeparatingAxisTheorem.cpp</includedby>
+    <incdepgraph>
+      <node id="748">
+        <label>limits</label>
+      </node>
+      <node id="743">
+        <label>POSITION.H</label>
+      </node>
+      <node id="745">
+        <label>cmath</label>
+      </node>
+      <node id="744">
+        <label>BoundaryBox.h</label>
+        <link refid="_boundary_box_8h"/>
+        <childnode refid="743" relation="include">
+        </childnode>
+        <childnode refid="745" relation="include">
+        </childnode>
+        <childnode refid="746" relation="include">
+        </childnode>
+        <childnode refid="747" relation="include">
+        </childnode>
+      </node>
+      <node id="746">
+        <label>tuple</label>
+      </node>
+      <node id="747">
+        <label>vector</label>
+      </node>
+      <node id="742">
+        <label>SeparatingAxisTheorem.h</label>
+        <link refid="_separating_axis_theorem_8h"/>
+        <childnode refid="743" relation="include">
+        </childnode>
+        <childnode refid="744" relation="include">
+        </childnode>
+        <childnode refid="745" relation="include">
+        </childnode>
+        <childnode refid="748" relation="include">
+        </childnode>
+        <childnode refid="749" relation="include">
+        </childnode>
+        <childnode refid="746" relation="include">
+        </childnode>
+        <childnode refid="747" relation="include">
+        </childnode>
+      </node>
+      <node id="749">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="753">
+        <label>Logic.cpp</label>
+        <link refid="_logic_8cpp"/>
+      </node>
+      <node id="755">
+        <label>CollisionHandler.cpp</label>
+        <link refid="_collision_handler_8cpp"/>
+      </node>
+      <node id="756">
+        <label>SeparatingAxisTheorem.cpp</label>
+        <link refid="_separating_axis_theorem_8cpp"/>
+      </node>
+      <node id="751">
+        <label>CollisionHandler.h</label>
+        <link refid="_collision_handler_8h"/>
+        <childnode refid="752" relation="include">
+        </childnode>
+        <childnode refid="755" relation="include">
+        </childnode>
+      </node>
+      <node id="754">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="752">
+        <label>Logic.h</label>
+        <link refid="_logic_8h"/>
+        <childnode refid="753" relation="include">
+        </childnode>
+        <childnode refid="754" relation="include">
+        </childnode>
+      </node>
+      <node id="750">
+        <label>SeparatingAxisTheorem.h</label>
+        <link refid="_separating_axis_theorem_8h"/>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="756" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_separating_axis_theorem" prot="public">SeparatingAxisTheorem</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SEPARATINGAXISTHEOREM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEPARATINGAXISTHEOREM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;POSITION.H&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_boundary_box_8h" kindref="compound">BoundaryBox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::tuple;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::vector;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::numeric_limits;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::min;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::max;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_separating_axis_theorem" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_separating_axis_theorem" kindref="compound">SeparatingAxisTheorem</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_separating_axis_theorem_1a876cb95f1373c4b402f227aa0097a5e5" kindref="member">checkOverlap</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref>&amp;<sp/>rect_A,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref>&amp;<sp/>rect_B);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Position<sp/><ref refid="class_separating_axis_theorem_1a68976bdca24421320b8ccedcc1e35760" kindref="member">getPenetrationDistance</ref>(Position&amp;<sp/>centre_1,<sp/>Position&amp;<sp/>centre_2);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47" refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Position&gt;<sp/><ref refid="class_separating_axis_theorem_1a17f40582c7cf160b4f493b1347661cb4" kindref="member">axes_</ref>;</highlight></codeline>
+<codeline lineno="48" refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Position&gt;<sp/><ref refid="class_separating_axis_theorem_1a6fa43d8177316c41d698bdfc539577ff" kindref="member">vertices_rectA_</ref>;</highlight></codeline>
+<codeline lineno="49" refid="class_separating_axis_theorem_1a57ea865e7718773ab625c08e5a5a033f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Position&gt;<sp/><ref refid="class_separating_axis_theorem_1a57ea865e7718773ab625c08e5a5a033f" kindref="member">vertices_rectB_</ref>;</highlight></codeline>
+<codeline lineno="50" refid="class_separating_axis_theorem_1aaacd09678df1c2ef9aaa5f13cb358d5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_separating_axis_theorem_1aaacd09678df1c2ef9aaa5f13cb358d5b" kindref="member">smallest_overlap_</ref><sp/>=<sp/>numeric_limits&lt;float&gt;::max();</highlight></codeline>
+<codeline lineno="51" refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Position<sp/><ref refid="class_separating_axis_theorem_1a7fae39134074d344cf5dcd74fb3ce53c" kindref="member">min_translation_vector_</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_separating_axis_theorem_1ac7613d7a7f5f05311260230b26486c63" kindref="member">generateAxes</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_separating_axis_theorem_1ae0658d8b891bf6db5bea7fba29c1a02c" kindref="member">dotProduct</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Position&amp;<sp/>pointA,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Position&amp;<sp/>pointB);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Position<sp/><ref refid="class_separating_axis_theorem_1a4b4dccb055bac2420135d8ce4bd3446a" kindref="member">normalizeAxis</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Position&amp;<sp/>axis);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tuple&lt;float,<sp/>float&gt;<sp/><ref refid="class_separating_axis_theorem_1a568f10c3f0eed05f4cf39bb1c2d380f1" kindref="member">projectVectorsOntoAxis</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Position&amp;<sp/>axis,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Position&gt;&amp;<sp/>vertices);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_separating_axis_theorem_1a574c908ebfa5df34e2f37916956c000a" kindref="member">checkProjectionsOverlap</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_separating_axis_theorem_1a2ec4cb98d02252c57824bbdf4d5f8bbb" kindref="member">clearAll</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SEPARATINGAXISTHEOREM_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/SeparatingAxisTheorem.h"/>
+  </compounddef>
+</doxygen>

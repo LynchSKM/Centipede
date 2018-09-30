@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_mushroom_factory" kind="class" language="C++" prot="public">
+    <compoundname>MushroomFactory</compoundname>
+    <includes refid="_mushroom_factory_8h" local="no">MushroomFactory.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mushroom_factory_1ab5d7b6faba0a3c28e09d19028e872c3c" prot="private" static="no" mutable="no">
+        <type>const <ref refid="class_grid" kindref="compound">Grid</ref></type>
+        <definition>const Grid MushroomFactory::grid_</definition>
+        <argsstring></argsstring>
+        <name>grid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="47" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mushroom_factory_1a9b19f54a19087d49626372add120e534" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MushroomFactory::maxCol_</definition>
+        <argsstring></argsstring>
+        <name>maxCol_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="48" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mushroom_factory_1a2d1cfceaf9ee1940655a8c17097b6374" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MushroomFactory::maxRow_</definition>
+        <argsstring></argsstring>
+        <name>maxRow_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="48" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mushroom_factory_1ad89adde6ea132260a2c159ca6ea984cd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MushroomFactory::maxMushrooms_</definition>
+        <argsstring></argsstring>
+        <name>maxMushrooms_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="48" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mushroom_factory_1a5be7c60c73b023d3a20019eca825d285" prot="private" static="no" mutable="no">
+        <type>map&lt; unsigned int, bool &gt;</type>
+        <definition>map&lt;unsigned int, bool&gt; MushroomFactory::cell_ID_List_</definition>
+        <argsstring></argsstring>
+        <name>cell_ID_List_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="49" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mushroom_factory_1a3b4de42bdd76dfc0fa606a62e1454ded" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MushroomFactory::MushroomFactory</definition>
+        <argsstring>(const Grid &amp;grid)</argsstring>
+        <name>MushroomFactory</name>
+        <param>
+          <type>const <ref refid="class_grid" kindref="compound">Grid</ref> &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <briefdescription>
+<para>Parameterized constructor. Creates a <ref refid="class_mushroom_factory" kindref="compound">MushroomFactory</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of type <ref refid="class_grid" kindref="compound">Grid</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="29" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.cpp" bodystart="3" bodyend="9"/>
+        <references refid="class_mushroom_factory_1a9b19f54a19087d49626372add120e534" compoundref="_mushroom_factory_8h" startline="48">maxCol_</references>
+        <references refid="class_mushroom_factory_1a2d1cfceaf9ee1940655a8c17097b6374" compoundref="_mushroom_factory_8h" startline="48">maxRow_</references>
+        <references refid="class_mushroom_factory_1ad89adde6ea132260a2c159ca6ea984cd" compoundref="_mushroom_factory_8h" startline="48">maxMushrooms_</references>
+        <references refid="class_mushroom_factory_1ab36c470ed0457df44768bca51bccab31" compoundref="_mushroom_factory_8cpp" startline="33" endline="41">defineRowAndCol</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mushroom_factory_1aa0371c87a301d2be7c87c1d2703b982c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MushroomFactory::~MushroomFactory</definition>
+        <argsstring>()</argsstring>
+        <name>~MushroomFactory</name>
+        <briefdescription>
+<para>Default Destructor. Destroys a <ref refid="class_mushroom" kindref="compound">Mushroom</ref> Factory object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="33" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mushroom_factory_1a3e73a23df68b11e5fc1af1212db52b1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; shared_ptr&lt; <ref refid="class_mushroom" kindref="compound">Mushroom</ref> &gt; &gt;</type>
+        <definition>vector&lt; shared_ptr&lt; Mushroom &gt; &gt; MushroomFactory::generateMushrooms</definition>
+        <argsstring>()</argsstring>
+        <name>generateMushrooms</name>
+        <briefdescription>
+<para>Generates mushrooms. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>vector&lt;shared_ptr&lt;Mushroom&gt;&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="38" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.cpp" bodystart="10" bodyend="24"/>
+        <references refid="class_mushroom_factory_1ad89adde6ea132260a2c159ca6ea984cd" compoundref="_mushroom_factory_8h" startline="48">maxMushrooms_</references>
+        <references refid="class_mushroom_factory_1a2d1cfceaf9ee1940655a8c17097b6374" compoundref="_mushroom_factory_8h" startline="48">maxRow_</references>
+        <references refid="class_mushroom_factory_1a9b19f54a19087d49626372add120e534" compoundref="_mushroom_factory_8h" startline="48">maxCol_</references>
+        <references refid="class_mushroom_factory_1a1cb4662503b400d0f7948c824e4e0620" compoundref="_mushroom_factory_8cpp" startline="57" endline="66">isCellOccupied</references>
+        <references refid="class_mushroom_factory_1ae313f7723eb9188611cbb7358662ed54" compoundref="_mushroom_factory_8cpp" startline="51" endline="56">gridPointLink</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mushroom_factory_1a3f433ade66a5a36958c8ec8fbdef0896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="class_mushroom" kindref="compound">Mushroom</ref> &gt;</type>
+        <definition>shared_ptr&lt; Mushroom &gt; MushroomFactory::generateAMushroom</definition>
+        <argsstring>(Position position)</argsstring>
+        <name>generateAMushroom</name>
+        <param>
+          <type>Position</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Generates a mushroom at the given position. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type Position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>shared_ptr&lt;Mushroom&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="44" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.cpp" bodystart="26" bodyend="31"/>
+        <references refid="class_mushroom_factory_1aa7e089232dee317d81b62b1cf8b7660d" compoundref="_mushroom_factory_8cpp" startline="43" endline="49">gridRowCol</references>
+        <references refid="class_mushroom_factory_1ae313f7723eb9188611cbb7358662ed54" compoundref="_mushroom_factory_8cpp" startline="51" endline="56">gridPointLink</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_mushroom_factory_1ab36c470ed0457df44768bca51bccab31" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MushroomFactory::defineRowAndCol</definition>
+        <argsstring>()</argsstring>
+        <name>defineRowAndCol</name>
+        <briefdescription>
+<para>Maps the grid into rows and columns (cells). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="52" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.cpp" bodystart="33" bodyend="41"/>
+        <references refid="class_mushroom_factory_1a2d1cfceaf9ee1940655a8c17097b6374" compoundref="_mushroom_factory_8h" startline="48">maxRow_</references>
+        <references refid="class_mushroom_factory_1a9b19f54a19087d49626372add120e534" compoundref="_mushroom_factory_8h" startline="48">maxCol_</references>
+        <references refid="class_mushroom_factory_1a5be7c60c73b023d3a20019eca825d285" compoundref="_mushroom_factory_8h" startline="49">cell_ID_List_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mushroom_factory_1ae313f7723eb9188611cbb7358662ed54" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Position</type>
+        <definition>Position MushroomFactory::gridPointLink</definition>
+        <argsstring>(Position position)</argsstring>
+        <name>gridPointLink</name>
+        <param>
+          <type>Position</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Maps the position into the defined xpos and ypos. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type Position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="58" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.cpp" bodystart="51" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mushroom_factory_1aa7e089232dee317d81b62b1cf8b7660d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Position</type>
+        <definition>Position MushroomFactory::gridRowCol</definition>
+        <argsstring>(Position position)</argsstring>
+        <name>gridRowCol</name>
+        <param>
+          <type>Position</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Maps the position into the defined rows and columns. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type Position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="64" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.cpp" bodystart="43" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mushroom_factory_1a1cb4662503b400d0f7948c824e4e0620" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MushroomFactory::isCellOccupied</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>isCellOccupied</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a cell is occupied. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an int and contains the centre x position of a cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an int and contains the centre y position of a cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool stating if the cell is occupied or not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="71" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.cpp" bodystart="57" bodyend="66"/>
+        <references refid="class_mushroom_factory_1a2d1cfceaf9ee1940655a8c17097b6374" compoundref="_mushroom_factory_8h" startline="48">maxRow_</references>
+        <references refid="class_mushroom_factory_1a5be7c60c73b023d3a20019eca825d285" compoundref="_mushroom_factory_8h" startline="49">cell_ID_List_</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Creates all the mushroom objects of the game. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="90">
+        <label>map&lt; unsigned int, bool &gt;</label>
+      </node>
+      <node id="89">
+        <label>MushroomFactory</label>
+        <link refid="class_mushroom_factory"/>
+        <childnode refid="90" relation="usage">
+          <edgelabel>cell_ID_List_</edgelabel>
+        </childnode>
+        <childnode refid="91" relation="usage">
+          <edgelabel>grid_</edgelabel>
+        </childnode>
+      </node>
+      <node id="91">
+        <label>Grid</label>
+        <link refid="class_grid"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" line="23" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/MushroomFactory.h" bodystart="22" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_mushroom_factory_1a5be7c60c73b023d3a20019eca825d285" prot="private" virt="non-virtual"><scope>MushroomFactory</scope><name>cell_ID_List_</name></member>
+      <member refid="class_mushroom_factory_1ab36c470ed0457df44768bca51bccab31" prot="private" virt="non-virtual"><scope>MushroomFactory</scope><name>defineRowAndCol</name></member>
+      <member refid="class_mushroom_factory_1a3f433ade66a5a36958c8ec8fbdef0896" prot="public" virt="non-virtual"><scope>MushroomFactory</scope><name>generateAMushroom</name></member>
+      <member refid="class_mushroom_factory_1a3e73a23df68b11e5fc1af1212db52b1e" prot="public" virt="non-virtual"><scope>MushroomFactory</scope><name>generateMushrooms</name></member>
+      <member refid="class_mushroom_factory_1ab5d7b6faba0a3c28e09d19028e872c3c" prot="private" virt="non-virtual"><scope>MushroomFactory</scope><name>grid_</name></member>
+      <member refid="class_mushroom_factory_1ae313f7723eb9188611cbb7358662ed54" prot="private" virt="non-virtual"><scope>MushroomFactory</scope><name>gridPointLink</name></member>
+      <member refid="class_mushroom_factory_1aa7e089232dee317d81b62b1cf8b7660d" prot="private" virt="non-virtual"><scope>MushroomFactory</scope><name>gridRowCol</name></member>
+      <member refid="class_mushroom_factory_1a1cb4662503b400d0f7948c824e4e0620" prot="private" virt="non-virtual"><scope>MushroomFactory</scope><name>isCellOccupied</name></member>
+      <member refid="class_mushroom_factory_1a9b19f54a19087d49626372add120e534" prot="private" virt="non-virtual"><scope>MushroomFactory</scope><name>maxCol_</name></member>
+      <member refid="class_mushroom_factory_1ad89adde6ea132260a2c159ca6ea984cd" prot="private" virt="non-virtual"><scope>MushroomFactory</scope><name>maxMushrooms_</name></member>
+      <member refid="class_mushroom_factory_1a2d1cfceaf9ee1940655a8c17097b6374" prot="private" virt="non-virtual"><scope>MushroomFactory</scope><name>maxRow_</name></member>
+      <member refid="class_mushroom_factory_1a3b4de42bdd76dfc0fa606a62e1454ded" prot="public" virt="non-virtual"><scope>MushroomFactory</scope><name>MushroomFactory</name></member>
+      <member refid="class_mushroom_factory_1aa0371c87a301d2be7c87c1d2703b982c" prot="public" virt="non-virtual"><scope>MushroomFactory</scope><name>~MushroomFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_scorpion" kind="class" language="C++" prot="public">
+    <compoundname>Scorpion</compoundname>
+    <basecompoundref refid="class_i_moving_entity" prot="public" virt="non-virtual">IMovingEntity</basecompoundref>
+    <includes refid="_scorpion_8h" local="no">Scorpion.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_scorpion_1a643c9b086d91083fa9d5a12c6183b5ef" prot="private" static="no" mutable="no">
+        <type>const <ref refid="class_grid" kindref="compound">Grid</ref></type>
+        <definition>const Grid Scorpion::grid_</definition>
+        <argsstring></argsstring>
+        <name>grid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="113" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scorpion_1ab91da31fbbea6a7ec837d6d35b44375e" prot="private" static="no" mutable="no">
+        <type>Position</type>
+        <definition>Position Scorpion::position_</definition>
+        <argsstring></argsstring>
+        <name>position_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="114" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scorpion_1af07941f91292c30ff35aa40c0c0a441c" prot="private" static="no" mutable="no">
+        <type><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
+        <definition>Direction Scorpion::direction_</definition>
+        <argsstring></argsstring>
+        <name>direction_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="115" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scorpion_1a6c150f7c8502cb5fffbe589c59c71f14" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Scorpion::isAlive_</definition>
+        <argsstring></argsstring>
+        <name>isAlive_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="117" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_scorpion_1a59719e538039254c0d0497cc37343d6d" prot="private" static="yes" mutable="no">
+        <type>struct <ref refid="struct_scorpion_dimensions" kindref="compound">ScorpionDimensions</ref></type>
+        <definition>struct ScorpionDimensions Scorpion::dimensions_</definition>
+        <argsstring></argsstring>
+        <name>dimensions_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="115" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_scorpion_1acf463b731459f599605191edba33cec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scorpion::Scorpion</definition>
+        <argsstring>(const Grid &amp;grid)</argsstring>
+        <name>Scorpion</name>
+        <param>
+          <type>const <ref refid="class_grid" kindref="compound">Grid</ref> &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <briefdescription>
+<para>Parameterized Constructor. Creates a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of type <ref refid="class_grid" kindref="compound">Grid</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="35" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="6" bodyend="20"/>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758">LEFT</references>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1ae889eeddcb85816e1a4b440314c1f65c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Scorpion::~Scorpion</definition>
+        <argsstring>()</argsstring>
+        <name>~Scorpion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual Destructor. Destroys a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="39" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="119" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1a884cd8bc9621a1ce22d47446db53fc38" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scorpion::move</definition>
+        <argsstring>() override</argsstring>
+        <name>move</name>
+        <reimplements refid="class_i_moving_entity_1a5894f3ff2c9b15299e94e84c3234236e">move</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that moves a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="44" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="57" bodyend="61"/>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758">LEFT</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403">RIGHT</references>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1aeb85af5f3b431f14eb00cf8e7a78b8ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
+        <definition>Direction Scorpion::getDirection</definition>
+        <argsstring>() const override</argsstring>
+        <name>getDirection</name>
+        <reimplements refid="class_i_moving_entity_1ae72b13230406be63bf6431887e9b1286">getDirection</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that returns the direction of a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Direction an enum of type enum class Direction. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="50" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1af42ed115d6cb52f51e634ee0a3256dbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scorpion::setDirection</definition>
+        <argsstring>(Direction direction) override</argsstring>
+        <name>setDirection</name>
+        <reimplements refid="class_i_moving_entity_1a8fe095ff0e0617e6d57280c98c5a3b35">setDirection</reimplements>
+        <param>
+          <type><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that sets the direction of a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an enum of enum class Direction. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="56" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1afe79fcb1f98f0b927d44e388c6477240" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980" kindref="member">ObjectType</ref></type>
+        <definition>ObjectType Scorpion::getObjectType</definition>
+        <argsstring>() const override</argsstring>
+        <name>getObjectType</name>
+        <reimplements refid="class_i_moving_entity_1a847e36ca99c5a9cc9636e17c2172431d">getObjectType</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that returns a enum <ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980aad43791d4a1bab20f04a2d8a85ffc34b" kindref="member">ObjectType::SCORPION</ref> of ObjectType of a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ObjectType an enum of the strongly typed enum class ObjectType. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="62" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="73" bodyend="76"/>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980aad43791d4a1bab20f04a2d8a85ffc34b">SCORPION</references>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1a030817699e9bd7cd97b3fa7b66103793" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Position</type>
+        <definition>Position Scorpion::getPosition</definition>
+        <argsstring>() const override</argsstring>
+        <name>getPosition</name>
+        <reimplements refid="class_i_moving_entity_1ae1da868e3a806bcec08a2a1b85cd55b2">getPosition</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that returns a Position of the <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Position </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="68" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1ad6572f7bc30ac5744ff1bd171365cf49" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref></type>
+        <definition>BoundaryBox Scorpion::getBoundaryBox</definition>
+        <argsstring>() override</argsstring>
+        <name>getBoundaryBox</name>
+        <reimplements refid="class_i_moving_entity_1a57296163f5bcc2fdc411e551b7cdf048">getBoundaryBox</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that returns a <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> indicating the rectangular area covered by a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref> object of the type <ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="74" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1aa4d924d9cc0e3f05b5e7fe44407b1007" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Scorpion::isAlive</definition>
+        <argsstring>() const override</argsstring>
+        <name>isAlive</name>
+        <reimplements refid="class_i_moving_entity_1a20afa4c19be2b8ac12dcd48a1399b42e">isAlive</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that queries if a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object is still alive or not. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="80" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1acea1c304af387b17dbdfc4776188699b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scorpion::eliminated</definition>
+        <argsstring>() override</argsstring>
+        <name>eliminated</name>
+        <reimplements refid="class_i_moving_entity_1adf5c51d0261ca88cabe426035e35d3f4">eliminated</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that sets the <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object as not alive when killed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="86" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1a945c892b63c7738006130248165fffc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scorpion::reincarnate</definition>
+        <argsstring>() override</argsstring>
+        <name>reincarnate</name>
+        <reimplements refid="class_i_moving_entity_1a13789b262b1181554e021ddda4b48dbc">reincarnate</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that will not be implemented because a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> has one life only. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="92" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1a169dbddbe47ff24e7609915f09e6982a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int Scorpion::getRemainingLives</definition>
+        <argsstring>() const override</argsstring>
+        <name>getRemainingLives</name>
+        <reimplements refid="class_i_moving_entity_1a7cb604cf82c50ebc008c17b76f979b53">getRemainingLives</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that will be used to return the remaining lives of a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int indicating the number of remaining lives. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="98" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="103" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1a611f920523a55ab4b60e49e65f2bbf2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Scorpion::isPoisoned</definition>
+        <argsstring>() const override</argsstring>
+        <name>isPoisoned</name>
+        <reimplements refid="class_i_moving_entity_1ab655d8dfe0684e4bc6f34ae9d57ed654">isPoisoned</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that will be used to return false for the poisoned status of a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="104" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1a18f90f9ec4d3b737a11c5d5d1e504477" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scorpion::poison</definition>
+        <argsstring>() override</argsstring>
+        <name>poison</name>
+        <reimplements refid="class_i_moving_entity_1a0331437e754efc8696d809b51043b339">poison</reimplements>
+        <briefdescription>
+<para>Inherited from <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. A virtual function that will not be be implemented because a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object cannot be poisoned. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="109" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="114" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_scorpion_1ac455b0a8472ddfec0c8a3e2bef8e87a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Scorpion::moveLeft</definition>
+        <argsstring>()</argsstring>
+        <name>moveLeft</name>
+        <briefdescription>
+<para>A function that decrements x axis of the object&apos;s position such that the <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object moves left. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="122" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="21" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scorpion_1a6220ca4cfc5c17f4a96ab4e35b198bc7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Scorpion::moveRight</definition>
+        <argsstring>()</argsstring>
+        <name>moveRight</name>
+        <briefdescription>
+<para>A function that increments x axis of the object&apos;s position. such that <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object moves right. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="127" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.cpp" bodystart="39" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is a class that inherits from the <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref> class. It models a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> object in the game. It contains virtual functions that will be overridden. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="119">
+        <label>IEntity</label>
+        <link refid="class_i_entity"/>
+      </node>
+      <node id="118">
+        <label>IMovingEntity</label>
+        <link refid="class_i_moving_entity"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>Scorpion</label>
+        <link refid="class_scorpion"/>
+        <childnode refid="118" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="124">
+        <label>ScorpionDimensions</label>
+        <link refid="struct_scorpion_dimensions"/>
+      </node>
+      <node id="122">
+        <label>IEntity</label>
+        <link refid="class_i_entity"/>
+      </node>
+      <node id="123">
+        <label>Grid</label>
+        <link refid="class_grid"/>
+      </node>
+      <node id="121">
+        <label>IMovingEntity</label>
+        <link refid="class_i_moving_entity"/>
+        <childnode refid="122" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>Scorpion</label>
+        <link refid="class_scorpion"/>
+        <childnode refid="121" relation="public-inheritance">
+        </childnode>
+        <childnode refid="123" relation="usage">
+          <edgelabel>grid_</edgelabel>
+        </childnode>
+        <childnode refid="124" relation="usage">
+          <edgelabel>dimensions_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" line="29" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Scorpion.h" bodystart="28" bodyend="128"/>
+    <listofallmembers>
+      <member refid="class_scorpion_1a59719e538039254c0d0497cc37343d6d" prot="private" virt="non-virtual"><scope>Scorpion</scope><name>dimensions_</name></member>
+      <member refid="class_scorpion_1af07941f91292c30ff35aa40c0c0a441c" prot="private" virt="non-virtual"><scope>Scorpion</scope><name>direction_</name></member>
+      <member refid="class_scorpion_1acea1c304af387b17dbdfc4776188699b" prot="public" virt="virtual"><scope>Scorpion</scope><name>eliminated</name></member>
+      <member refid="class_scorpion_1ad6572f7bc30ac5744ff1bd171365cf49" prot="public" virt="virtual"><scope>Scorpion</scope><name>getBoundaryBox</name></member>
+      <member refid="class_scorpion_1aeb85af5f3b431f14eb00cf8e7a78b8ab" prot="public" virt="virtual"><scope>Scorpion</scope><name>getDirection</name></member>
+      <member refid="class_scorpion_1afe79fcb1f98f0b927d44e388c6477240" prot="public" virt="virtual"><scope>Scorpion</scope><name>getObjectType</name></member>
+      <member refid="class_scorpion_1a030817699e9bd7cd97b3fa7b66103793" prot="public" virt="virtual"><scope>Scorpion</scope><name>getPosition</name></member>
+      <member refid="class_scorpion_1a169dbddbe47ff24e7609915f09e6982a" prot="public" virt="virtual"><scope>Scorpion</scope><name>getRemainingLives</name></member>
+      <member refid="class_scorpion_1a643c9b086d91083fa9d5a12c6183b5ef" prot="private" virt="non-virtual"><scope>Scorpion</scope><name>grid_</name></member>
+      <member refid="class_scorpion_1aa4d924d9cc0e3f05b5e7fe44407b1007" prot="public" virt="virtual"><scope>Scorpion</scope><name>isAlive</name></member>
+      <member refid="class_scorpion_1a6c150f7c8502cb5fffbe589c59c71f14" prot="private" virt="non-virtual"><scope>Scorpion</scope><name>isAlive_</name></member>
+      <member refid="class_scorpion_1a611f920523a55ab4b60e49e65f2bbf2d" prot="public" virt="virtual"><scope>Scorpion</scope><name>isPoisoned</name></member>
+      <member refid="class_scorpion_1a884cd8bc9621a1ce22d47446db53fc38" prot="public" virt="virtual"><scope>Scorpion</scope><name>move</name></member>
+      <member refid="class_scorpion_1ac455b0a8472ddfec0c8a3e2bef8e87a6" prot="private" virt="non-virtual"><scope>Scorpion</scope><name>moveLeft</name></member>
+      <member refid="class_scorpion_1a6220ca4cfc5c17f4a96ab4e35b198bc7" prot="private" virt="non-virtual"><scope>Scorpion</scope><name>moveRight</name></member>
+      <member refid="class_scorpion_1a18f90f9ec4d3b737a11c5d5d1e504477" prot="public" virt="virtual"><scope>Scorpion</scope><name>poison</name></member>
+      <member refid="class_scorpion_1ab91da31fbbea6a7ec837d6d35b44375e" prot="private" virt="non-virtual"><scope>Scorpion</scope><name>position_</name></member>
+      <member refid="class_scorpion_1a945c892b63c7738006130248165fffc4" prot="public" virt="virtual"><scope>Scorpion</scope><name>reincarnate</name></member>
+      <member refid="class_scorpion_1acf463b731459f599605191edba33cec4" prot="public" virt="non-virtual"><scope>Scorpion</scope><name>Scorpion</name></member>
+      <member refid="class_scorpion_1af42ed115d6cb52f51e634ee0a3256dbd" prot="public" virt="virtual"><scope>Scorpion</scope><name>setDirection</name></member>
+      <member refid="class_i_entity_1a8aea4fbca51d17a0ce314aaa4633f28e" prot="public" virt="virtual"><scope>Scorpion</scope><name>~IEntity</name></member>
+      <member refid="class_i_moving_entity_1a2d7480d85770952b23fc554efe95a40a" prot="public" virt="virtual"><scope>Scorpion</scope><name>~IMovingEntity</name></member>
+      <member refid="class_scorpion_1ae889eeddcb85816e1a4b440314c1f65c" prot="public" virt="virtual"><scope>Scorpion</scope><name>~Scorpion</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

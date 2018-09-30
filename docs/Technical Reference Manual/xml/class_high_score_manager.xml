@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_high_score_manager" kind="class" language="C++" prot="public">
+    <compoundname>HighScoreManager</compoundname>
+    <includes refid="_high_score_manager_8h" local="no">HighScoreManager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_high_score_manager_1a48dfc36183bab90b10fe1d8ab11dba51" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HighScoreManager::highScore_</definition>
+        <argsstring></argsstring>
+        <name>highScore_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An int variable that holds the high score. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.h" line="41" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_high_score_manager_1aecbd806918adc16057b36cd190b20908" prot="private" static="no" mutable="no">
+        <type>fstream</type>
+        <definition>fstream HighScoreManager::file_</definition>
+        <argsstring></argsstring>
+        <name>file_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A variable that holds the text file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.h" line="42" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_high_score_manager_1a98247ef57919a34c9df55ab62968b91f" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HighScoreManager::filePath_</definition>
+        <argsstring></argsstring>
+        <name>filePath_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A variable that holds the path to the text file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.h" line="43" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_high_score_manager_1ae01a22c8dd935d779e8148c1beba5377" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HighScoreManager::HighScoreManager</definition>
+        <argsstring>()</argsstring>
+        <name>HighScoreManager</name>
+        <briefdescription>
+<para>Default Constructor. Creates HighScoreManger object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.h" line="23" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.cpp" bodystart="3" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_high_score_manager_1a837c949b77d955cd2047fe70584a1347" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int HighScoreManager::getHighScore</definition>
+        <argsstring>()</argsstring>
+        <name>getHighScore</name>
+        <briefdescription>
+<para>Returns the high score of the game. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.h" line="28" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.cpp" bodystart="7" bodyend="12"/>
+        <references refid="class_high_score_manager_1aecbd806918adc16057b36cd190b20908" compoundref="_high_score_manager_8h" startline="42">file_</references>
+        <references refid="class_high_score_manager_1a98247ef57919a34c9df55ab62968b91f" compoundref="_high_score_manager_8h" startline="43">filePath_</references>
+        <references refid="class_high_score_manager_1a48dfc36183bab90b10fe1d8ab11dba51" compoundref="_high_score_manager_8h" startline="41">highScore_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_high_score_manager_1abd2310fe0af525415d5721b1a80421ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HighScoreManager::setHighScore</definition>
+        <argsstring>(int score)</argsstring>
+        <name>setHighScore</name>
+        <param>
+          <type>int</type>
+          <declname>score</declname>
+        </param>
+        <briefdescription>
+<para>Sets the high score of the game. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is of type int. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.h" line="34" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.cpp" bodystart="14" bodyend="19"/>
+        <references refid="class_high_score_manager_1a48dfc36183bab90b10fe1d8ab11dba51" compoundref="_high_score_manager_8h" startline="41">highScore_</references>
+        <references refid="class_high_score_manager_1aecbd806918adc16057b36cd190b20908" compoundref="_high_score_manager_8h" startline="42">file_</references>
+        <references refid="class_high_score_manager_1a98247ef57919a34c9df55ab62968b91f" compoundref="_high_score_manager_8h" startline="43">filePath_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_high_score_manager_1abd3e95d303e831b9829fd32ef2f0b9d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HighScoreManager::~HighScoreManager</definition>
+        <argsstring>()</argsstring>
+        <name>~HighScoreManager</name>
+        <briefdescription>
+<para>Default Destructor. Destroys HighScoreManger object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.h" line="38" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.cpp" bodystart="21" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class that reads and writes the high score to a textfile. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="39">
+        <label>string</label>
+      </node>
+      <node id="38">
+        <label>fstream</label>
+      </node>
+      <node id="37">
+        <label>HighScoreManager</label>
+        <link refid="class_high_score_manager"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>file_</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>filePath_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.h" line="18" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/HighScoreManager.h" bodystart="17" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_high_score_manager_1aecbd806918adc16057b36cd190b20908" prot="private" virt="non-virtual"><scope>HighScoreManager</scope><name>file_</name></member>
+      <member refid="class_high_score_manager_1a98247ef57919a34c9df55ab62968b91f" prot="private" virt="non-virtual"><scope>HighScoreManager</scope><name>filePath_</name></member>
+      <member refid="class_high_score_manager_1a837c949b77d955cd2047fe70584a1347" prot="public" virt="non-virtual"><scope>HighScoreManager</scope><name>getHighScore</name></member>
+      <member refid="class_high_score_manager_1a48dfc36183bab90b10fe1d8ab11dba51" prot="private" virt="non-virtual"><scope>HighScoreManager</scope><name>highScore_</name></member>
+      <member refid="class_high_score_manager_1ae01a22c8dd935d779e8148c1beba5377" prot="public" virt="non-virtual"><scope>HighScoreManager</scope><name>HighScoreManager</name></member>
+      <member refid="class_high_score_manager_1abd2310fe0af525415d5721b1a80421ee" prot="public" virt="non-virtual"><scope>HighScoreManager</scope><name>setHighScore</name></member>
+      <member refid="class_high_score_manager_1abd3e95d303e831b9829fd32ef2f0b9d3" prot="public" virt="non-virtual"><scope>HighScoreManager</scope><name>~HighScoreManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

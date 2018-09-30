@@ -2,16 +2,27 @@
 #define PLAYERBULLET_H
 
 #include "IMovingEntity.h"
-#include "Dimensions.h"
 #include "Grid.h"
 
+/** \struct PlayerBulletDimensions
+ *	\brief Contains information about a PlayerBullet's height, width and speed.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *	\version 3.0
+ */
+struct PlayerBulletDimensions
+{
+    const float height = 12.0;
+    const float width = 2.0;
+    const float speed = 2.0;
+};
+
 /** \class PlayerBullet
-*   \brief This is a class that inherits from the IMovingEntity class. It models
-*   a player's laser bullet object in the game. It contains virtual functions that
-*   will be overridden.
-*   \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
-*   \version
-*/
+ *  \brief This is a class that inherits from the IMovingEntity class. It models
+ *  a Player's laser bullet object in the game. It contains virtual functions that
+ *  will be overridden.
+ *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
+ *  \version 3.0
+ */
 
 class PlayerBullet : public IMovingEntity
 {
@@ -19,7 +30,7 @@ class PlayerBullet : public IMovingEntity
 
         /** \brief Parameterized Constructor. Creates a PlayerBullet object.
          *  \param position of type Position contains the centre position.
-         *  \param grid is of type const Grid and contains screen width and height.
+         *  \param grid is of type const Grid and contains the screen's width and height.
          */
         PlayerBullet(Position position, const Grid& grid);
 
@@ -56,8 +67,8 @@ class PlayerBullet : public IMovingEntity
          */
         virtual Position getPosition() const override;
 
-        /** \brief Inherited from IMovingEntity. A virtual function that returns a BoundaryBox indicating
-         *  the rectangular area covered by a PlayerBullet object.
+        /** \brief Inherited from IMovingEntity. A virtual function that returns 
+		 *	a BoundaryBox indicating the rectangular area covered by a PlayerBullet object.
          *  \return BoundaryBox object of the type BoundaryBox.
          */
         virtual BoundaryBox getBoundaryBox() override;
@@ -82,18 +93,18 @@ class PlayerBullet : public IMovingEntity
 
         /** \brief Inherited from IMovingEntity. A virtual function that
          *  will be used to return the remaining lives of a PlayerBullet object.
-         *  \return int containing the number of remaining lives.
+         *  \return int indicating the number of remaining lives.
          */
         virtual int getRemainingLives() const override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that will be
-         *  used to return the poisoned status of a PlayerBullet object.
-         *  \return bool stating whether the PlayerBullet object is poisoned or not.
+         *  to return false for the poisoned status of a PlayerBullet object.
+         *  \return bool
          */
         virtual bool isPoisoned() const override;
 
-        /** \brief Inherited from IMovingEntity. A virtual function that will be
-         *  used to poison a PlayerBullet object by changing the poisoned status to true.
+        /** \brief Inherited from IMovingEntity. A virtual function that will not 
+         *  be implemented as a PlayerBullet cannot be poisoned.
          */
         virtual void poison() override;
 

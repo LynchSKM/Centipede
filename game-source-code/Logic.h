@@ -19,8 +19,7 @@ using std::vector;
 using std::shared_ptr;
 
 /** \class Logic
- *  \brief This class controls the behaviour of the game objects created
- *  before they get displayed on the screen.
+ *  \brief This class performs the logic that defines how the game objects behave.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -86,19 +85,19 @@ class Logic
          */
         void updateGameObjects();
 
-        /** \brief Generates all the game enemies.
+        /** \brief Generates all the game's moving enemies.
          */
         void generateGameEnemies();
 
-        /** \brief Generates the a centipede with one head, and multiple body segments.
+        /** \brief Generates the a Centipede with one head, and multiple body segments.
          */
         void generateNormalCentipede();
 
-        /** \brief Generates centipede heads.
+        /** \brief Generates Centipede heads.
          */
         void generateCentipedeHeads();
 
-        /** \brief Generates mushrooms
+        /** \brief Generates Mushroom objects.
          */
         void generateMushrooms();
 
@@ -127,12 +126,12 @@ class Logic
          */
         void removeDeadEntities();
 
-        /** \brief Removes all centipede segments from vector(s) where they exist,
-         *  reset the position of the player and generate a new centipede train.
+        /** \brief Removes all Centipede segments from vector(s) where they exist,
+         *  reset the position of the player and generate a new Centipede train.
          */
         void reincarnatePlayer();
 
-        /** \brief Resets calls reincarnate of the mushroom object.
+        /** \brief Resets reincarnate of the Mushroom objects in the game.
          */
         void reincarnateMushroom();
 };

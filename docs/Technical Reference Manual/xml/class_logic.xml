@@ -1,0 +1,811 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_logic" kind="class" language="C++" prot="public">
+    <compoundname>Logic</compoundname>
+    <includes refid="_logic_8h" local="no">Logic.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_logic_1a82cb53aaf924d2979028f9a6d020de61" prot="private" static="no" mutable="no">
+        <type>const <ref refid="class_grid" kindref="compound">Grid</ref></type>
+        <definition>const Grid Logic::grid_</definition>
+        <argsstring></argsstring>
+        <name>grid_</name>
+        <initializer>{592, 640}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="44" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_1a2d169914d13b7edd132ac7fb74ff8587" prot="private" static="no" mutable="no">
+        <type><ref refid="class_presentation" kindref="compound">Presentation</ref></type>
+        <definition>Presentation Logic::presentation_</definition>
+        <argsstring></argsstring>
+        <name>presentation_</name>
+        <initializer>{grid_.getWidth(), grid_.getHeight()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="45" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_1ad484dea3aa386ca99193d050ae7d72f6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_high_score_manager" kindref="compound">HighScoreManager</ref></type>
+        <definition>HighScoreManager Logic::highScoreManager_</definition>
+        <argsstring></argsstring>
+        <name>highScoreManager_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="46" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_1a8a7a77acc4b4118c250c8582b76341d5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_asset_manager" kindref="compound">AssetManager</ref></type>
+        <definition>AssetManager Logic::assetManager_</definition>
+        <argsstring></argsstring>
+        <name>assetManager_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="47" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_1a4e613c86b994577e051391b52d5c6023" prot="private" static="no" mutable="no">
+        <type><ref refid="class_enemy_factory" kindref="compound">EnemyFactory</ref></type>
+        <definition>EnemyFactory Logic::enemyFactory_</definition>
+        <argsstring></argsstring>
+        <name>enemyFactory_</name>
+        <initializer>{<ref refid="class_logic_1a82cb53aaf924d2979028f9a6d020de61" kindref="member">grid_</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="48" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_1a39e57818cd82815230430030b1b102bf" prot="private" static="no" mutable="no">
+        <type><ref refid="class_collision_handler" kindref="compound">CollisionHandler</ref></type>
+        <definition>CollisionHandler Logic::collisionHandler_</definition>
+        <argsstring></argsstring>
+        <name>collisionHandler_</name>
+        <initializer>{<ref refid="class_logic_1a82cb53aaf924d2979028f9a6d020de61" kindref="member">grid_</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="49" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_1a186d1bbd333005f0b2e28ca119f3c12e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stop_watch" kindref="compound">StopWatch</ref></type>
+        <definition>StopWatch Logic::game_timer_</definition>
+        <argsstring></argsstring>
+        <name>game_timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="50" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_1a68de8520fc152e5123e99deef16c5fdd" prot="private" static="no" mutable="no">
+        <type>shared_ptr&lt; <ref refid="class_player" kindref="compound">Player</ref> &gt;</type>
+        <definition>shared_ptr&lt;Player&gt; Logic::player_</definition>
+        <argsstring></argsstring>
+        <name>player_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="51" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_1ae3267db699ca8b8836380d084c53407e" prot="private" static="no" mutable="no">
+        <type>vector&lt; shared_ptr&lt; <ref refid="class_i_entity" kindref="compound">IEntity</ref> &gt; &gt;</type>
+        <definition>vector&lt;shared_ptr&lt;IEntity&gt; &gt; Logic::game_objects_</definition>
+        <argsstring></argsstring>
+        <name>game_objects_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="52" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" prot="private" static="no" mutable="no">
+        <type>vector&lt; shared_ptr&lt; <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref> &gt; &gt;</type>
+        <definition>vector&lt;shared_ptr&lt;IMovingEntity&gt; &gt; Logic::moving_game_objects_</definition>
+        <argsstring></argsstring>
+        <name>moving_game_objects_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="53" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_1a3d9bd013cf00f46880fa26e3bd538798" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Logic::high_score_</definition>
+        <argsstring></argsstring>
+        <name>high_score_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="54" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_1a725785d85f3db11790dafd8f60178a3a" prot="private" static="no" mutable="no">
+        <type><ref refid="_screen_state_8h_1a5fc5d61fa8521ce5476183998579fa9b" kindref="member">ScreenState</ref></type>
+        <definition>ScreenState Logic::screen_state_</definition>
+        <argsstring></argsstring>
+        <name>screen_state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="55" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_1a599becacc903f250d42996ca11bba165" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Logic::debounceSpaceKey_</definition>
+        <argsstring></argsstring>
+        <name>debounceSpaceKey_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="56" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_logic_1a65e13b69a0b4ae0c31be94bcfe11898a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Logic::Logic</definition>
+        <argsstring>()</argsstring>
+        <name>Logic</name>
+        <briefdescription>
+<para>Default <ref refid="class_logic" kindref="compound">Logic</ref> constructor. An instance of the game is created and the game objects are initialized. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="33" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="3" bodyend="11"/>
+        <references refid="_screen_state_8h_1a5fc5d61fa8521ce5476183998579fa9ba4bc3676fb57b17c09fe7f8d707f8bddb">SPLASHSCREEN</references>
+        <references refid="class_logic_1a68de8520fc152e5123e99deef16c5fdd" compoundref="_logic_8h" startline="51">player_</references>
+        <references refid="class_logic_1a82cb53aaf924d2979028f9a6d020de61" compoundref="_logic_8h" startline="44">grid_</references>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+        <references refid="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" compoundref="_logic_8h" startline="53">moving_game_objects_</references>
+        <references refid="class_logic_1a599becacc903f250d42996ca11bba165" compoundref="_logic_8h" startline="56">debounceSpaceKey_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1abf175ef9069615527bfbd10864b20df4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+<para>Runs the game loop. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="37" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="37" bodyend="73"/>
+        <references refid="class_logic_1a725785d85f3db11790dafd8f60178a3a" compoundref="_logic_8h" startline="55">screen_state_</references>
+        <references refid="_screen_state_8h_1a5fc5d61fa8521ce5476183998579fa9ba4bc3676fb57b17c09fe7f8d707f8bddb">SPLASHSCREEN</references>
+        <references refid="class_logic_1a70bcf051b34e52fe521163360316d468" compoundref="_logic_8cpp" startline="79" endline="83">renderSplashScreen</references>
+        <references refid="class_logic_1a08101e1a7d5b42ea590ec2b67fda6800" compoundref="_logic_8cpp" startline="74" endline="77">loadAssets</references>
+        <references refid="class_logic_1a3d9bd013cf00f46880fa26e3bd538798" compoundref="_logic_8h" startline="54">high_score_</references>
+        <references refid="class_logic_1ad484dea3aa386ca99193d050ae7d72f6" compoundref="_logic_8h" startline="46">highScoreManager_</references>
+        <references refid="class_high_score_manager_1a837c949b77d955cd2047fe70584a1347" compoundref="_high_score_manager_8cpp" startline="7" endline="12">HighScoreManager::getHighScore</references>
+        <references refid="class_logic_1a11a5ad0679ef70b1bf64b8367c0f5532" compoundref="_logic_8cpp" startline="152" endline="157">generateMushrooms</references>
+        <references refid="class_logic_1a186d1bbd333005f0b2e28ca119f3c12e" compoundref="_logic_8h" startline="50">game_timer_</references>
+        <references refid="class_stop_watch_1a09a3c8f9ab03d7b28e4f8b90a833974e" compoundref="_stop_watch_8cpp" startline="7" endline="14">StopWatch::start</references>
+        <references refid="_screen_state_8h_1a5fc5d61fa8521ce5476183998579fa9ba672c666d785edfbef0349157a2860741">GAME_ACTIVE</references>
+        <references refid="class_stop_watch_1a6e80b598d9304e37d8768b716e713e0e" compoundref="_stop_watch_8cpp" startline="37" endline="43">StopWatch::stop</references>
+        <references refid="class_stop_watch_1ad6490eb30c0bc63168a62c315506f25a" compoundref="_stop_watch_8cpp" startline="58" endline="61">StopWatch::getRunTime</references>
+        <references refid="class_logic_1a92b3982ff6e3ec9d07a69369e579853e" compoundref="_logic_8cpp" startline="13" endline="35">getInputCommands</references>
+        <references refid="class_logic_1a2d169914d13b7edd132ac7fb74ff8587" compoundref="_logic_8h" startline="45">presentation_</references>
+        <references refid="class_presentation_1a886dde2ac9b78eb0e1bee3aab9111be6" compoundref="_presentation_8h" startline="124" endline="124">Presentation::isWindowOpen</references>
+        <references refid="class_logic_1a7d8384f6a1bd8e31c327109b1aa4e998" compoundref="_logic_8cpp" startline="127" endline="132">generateGameEnemies</references>
+        <references refid="class_logic_1a23f4a972858bbea364850ebf0d188be6" compoundref="_logic_8cpp" startline="85" endline="95">updateGameObjects</references>
+        <references refid="class_logic_1a91ff0c77244fcb15a77d506837751c74" compoundref="_logic_8cpp" startline="159" endline="163">checkCollisions</references>
+        <references refid="class_logic_1a847b8ccc9d13f1f80c2d0f6c897820a4" compoundref="_logic_8cpp" startline="165" endline="173">generateMushroomAtCollision</references>
+        <references refid="class_logic_1a9b0352a47003b5278d9197710bdd9d6b" compoundref="_logic_8cpp" startline="249" endline="272">updateScores</references>
+        <references refid="class_logic_1a1e2f8545edc283391961c8689ac96d12" compoundref="_logic_8cpp" startline="223" endline="247">reincarnatePlayer</references>
+        <references refid="class_logic_1abb059b52631dc541c89e46370d3bc688" compoundref="_logic_8cpp" startline="97" endline="108">removeDeadEntities</references>
+        <references refid="class_logic_1ac6f88cd30d7a149e8ab101ebf7cba8d2" compoundref="_logic_8cpp" startline="110" endline="115">renderGameObjects</references>
+        <references refid="_screen_state_8h_1a5fc5d61fa8521ce5476183998579fa9ba357b7d04408862c6e227b07b3b32faad">GAMEOVERSCREEN</references>
+        <references refid="class_logic_1a43609f2dc8b0575d2cc9d4381079abdb" compoundref="_logic_8cpp" startline="117" endline="120">renderGameOverScreen</references>
+        <references refid="_screen_state_8h_1a5fc5d61fa8521ce5476183998579fa9ba2d4519f36ee13488676e3136e470e125">GAMEWONSCREEN</references>
+        <references refid="class_logic_1a1a7332c942409bdb5cbcc26ddadbe6e9" compoundref="_logic_8cpp" startline="122" endline="125">renderGameWonScreen</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a406131db5b87e8d4b396aec37f3c1f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Logic::~Logic</definition>
+        <argsstring>()</argsstring>
+        <name>~Logic</name>
+        <briefdescription>
+<para>Default Destructor. Destroys an instance of the game. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="41" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="274" bodyend="277"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_logic_1a70bcf051b34e52fe521163360316d468" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::renderSplashScreen</definition>
+        <argsstring>()</argsstring>
+        <name>renderSplashScreen</name>
+        <briefdescription>
+<para>Displays the splash screen at the start of the game. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="62" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="79" bodyend="83"/>
+        <references refid="class_logic_1a2d169914d13b7edd132ac7fb74ff8587" compoundref="_logic_8h" startline="45">presentation_</references>
+        <references refid="class_presentation_1ad87e0f6ada6aa68c6e15456a5e7820ea" compoundref="_presentation_8cpp" startline="289" endline="293">Presentation::drawSplashScreen</references>
+        <references refid="class_logic_1a725785d85f3db11790dafd8f60178a3a" compoundref="_logic_8h" startline="55">screen_state_</references>
+        <references refid="_screen_state_8h_1a5fc5d61fa8521ce5476183998579fa9ba672c666d785edfbef0349157a2860741">GAME_ACTIVE</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a92b3982ff6e3ec9d07a69369e579853e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::getInputCommands</definition>
+        <argsstring>()</argsstring>
+        <name>getInputCommands</name>
+        <briefdescription>
+<para>Tells presentation to process input from keyboard. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="66" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="13" bodyend="35"/>
+        <references refid="class_logic_1a2d169914d13b7edd132ac7fb74ff8587" compoundref="_logic_8h" startline="45">presentation_</references>
+        <references refid="class_presentation_1a0ae752fb12e3530acd81469e68d743a3" compoundref="_presentation_8cpp" startline="49" endline="70">Presentation::processInputEvents</references>
+        <references refid="class_presentation_1a7aebdf3fb5663b1dd11dbc30963984c2" compoundref="_presentation_8h" startline="99" endline="99">Presentation::isLeftPressed</references>
+        <references refid="class_logic_1a68de8520fc152e5123e99deef16c5fdd" compoundref="_logic_8h" startline="51">player_</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758">LEFT</references>
+        <references refid="class_presentation_1ad10cbe90531e2817a33356926e538212" compoundref="_presentation_8h" startline="104" endline="104">Presentation::isRightPressed</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403">RIGHT</references>
+        <references refid="class_presentation_1a36e1855d959346115eee06d327686551" compoundref="_presentation_8h" startline="109" endline="109">Presentation::isUpPressed</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaafbaedde498cdead4f2780217646e9ba1">UP</references>
+        <references refid="class_presentation_1a050a12b9766886e4969069be1b841529" compoundref="_presentation_8h" startline="114" endline="114">Presentation::isDownPressed</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f">DOWN</references>
+        <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaab50339a10e1de285ac99d4c3990b8693">NONE</references>
+        <references refid="class_logic_1a599becacc903f250d42996ca11bba165" compoundref="_logic_8h" startline="56">debounceSpaceKey_</references>
+        <references refid="class_presentation_1a2f8e4c78cc85ccd9a0410370f66ffaba" compoundref="_presentation_8h" startline="119" endline="119">Presentation::isSpacePressed</references>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+        <references refid="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" compoundref="_logic_8h" startline="53">moving_game_objects_</references>
+        <references refid="class_presentation_1ab2284a509e0dd35fb10b11bb05d220ca" compoundref="_presentation_8cpp" startline="14" endline="19">Presentation::processPlayerShootSound</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a08101e1a7d5b42ea590ec2b67fda6800" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::loadAssets</definition>
+        <argsstring>()</argsstring>
+        <name>loadAssets</name>
+        <briefdescription>
+<para>Loads paths to the textures used by the game. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="70" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="74" bodyend="77"/>
+        <references refid="class_logic_1a2d169914d13b7edd132ac7fb74ff8587" compoundref="_logic_8h" startline="45">presentation_</references>
+        <references refid="class_presentation_1ad61f8a299c4e23f6e9d51692929f8333" compoundref="_presentation_8cpp" startline="140" endline="182">Presentation::loadTextures</references>
+        <references refid="class_logic_1a8a7a77acc4b4118c250c8582b76341d5" compoundref="_logic_8h" startline="47">assetManager_</references>
+        <references refid="class_asset_manager_1ab6d8a0e2fee83023270c7e82c00dc0d7" compoundref="_asset_manager_8cpp" startline="19" endline="41">AssetManager::getAssetInfo</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1ac6f88cd30d7a149e8ab101ebf7cba8d2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::renderGameObjects</definition>
+        <argsstring>()</argsstring>
+        <name>renderGameObjects</name>
+        <briefdescription>
+<para>Gives <ref refid="class_presentation" kindref="compound">Presentation</ref> a vector of game objects to be drawn. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="74" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="110" bodyend="115"/>
+        <references refid="class_logic_1a2d169914d13b7edd132ac7fb74ff8587" compoundref="_logic_8h" startline="45">presentation_</references>
+        <references refid="class_presentation_1a07fe85f2fb3be047ed1bbf553662f754" compoundref="_presentation_8cpp" startline="253" endline="271">Presentation::renderWindow</references>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+        <references refid="class_logic_1a68de8520fc152e5123e99deef16c5fdd" compoundref="_logic_8h" startline="51">player_</references>
+        <references refid="class_logic_1a3d9bd013cf00f46880fa26e3bd538798" compoundref="_logic_8h" startline="54">high_score_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a43609f2dc8b0575d2cc9d4381079abdb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::renderGameOverScreen</definition>
+        <argsstring>()</argsstring>
+        <name>renderGameOverScreen</name>
+        <briefdescription>
+<para>Displays the game over screen when the player has lost the game. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="78" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="117" bodyend="120"/>
+        <references refid="class_logic_1a2d169914d13b7edd132ac7fb74ff8587" compoundref="_logic_8h" startline="45">presentation_</references>
+        <references refid="class_presentation_1a40d86f3b623cbef7a04db5a312ff1368" compoundref="_presentation_8cpp" startline="295" endline="299">Presentation::drawGameOverScreen</references>
+        <references refid="class_logic_1a68de8520fc152e5123e99deef16c5fdd" compoundref="_logic_8h" startline="51">player_</references>
+        <references refid="class_logic_1a3d9bd013cf00f46880fa26e3bd538798" compoundref="_logic_8h" startline="54">high_score_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a1a7332c942409bdb5cbcc26ddadbe6e9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::renderGameWonScreen</definition>
+        <argsstring>()</argsstring>
+        <name>renderGameWonScreen</name>
+        <briefdescription>
+<para>Displays the game won screen when the player has won the game. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="82" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="122" bodyend="125"/>
+        <references refid="class_logic_1a2d169914d13b7edd132ac7fb74ff8587" compoundref="_logic_8h" startline="45">presentation_</references>
+        <references refid="class_presentation_1a2ef4507daf2ddbf356b6dfca1c8f525a" compoundref="_presentation_8cpp" startline="301" endline="305">Presentation::drawGameWonScreen</references>
+        <references refid="class_logic_1a68de8520fc152e5123e99deef16c5fdd" compoundref="_logic_8h" startline="51">player_</references>
+        <references refid="class_logic_1a3d9bd013cf00f46880fa26e3bd538798" compoundref="_logic_8h" startline="54">high_score_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a23f4a972858bbea364850ebf0d188be6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::updateGameObjects</definition>
+        <argsstring>()</argsstring>
+        <name>updateGameObjects</name>
+        <briefdescription>
+<para>Moves all the game objects that can be moved. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="86" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="85" bodyend="95"/>
+        <references refid="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" compoundref="_logic_8h" startline="53">moving_game_objects_</references>
+        <references refid="class_logic_1a2d169914d13b7edd132ac7fb74ff8587" compoundref="_logic_8h" startline="45">presentation_</references>
+        <references refid="class_presentation_1ae34050372fa270232dce9f2666c1f2f6" compoundref="_presentation_8cpp" startline="21" endline="38">Presentation::processGameObjectSound</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a7d8384f6a1bd8e31c327109b1aa4e998" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::generateGameEnemies</definition>
+        <argsstring>()</argsstring>
+        <name>generateGameEnemies</name>
+        <briefdescription>
+<para>Generates all the game&apos;s moving enemies. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="90" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="127" bodyend="132"/>
+        <references refid="class_logic_1ab11c4016cf06a493412935202921bbf0" compoundref="_logic_8cpp" startline="134" endline="142">generateNormalCentipede</references>
+        <references refid="class_logic_1ae5f432d4b5b457a7f88c42b34f28f682" compoundref="_logic_8cpp" startline="175" endline="182">generateAScorpion</references>
+        <references refid="class_logic_1a8e083d0e64f6166e1621578c34270e37" compoundref="_logic_8cpp" startline="184" endline="191">generateASpider</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1ab11c4016cf06a493412935202921bbf0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::generateNormalCentipede</definition>
+        <argsstring>()</argsstring>
+        <name>generateNormalCentipede</name>
+        <briefdescription>
+<para>Generates the a Centipede with one head, and multiple body segments. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="94" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="134" bodyend="142"/>
+        <references refid="class_logic_1a4e613c86b994577e051391b52d5c6023" compoundref="_logic_8h" startline="48">enemyFactory_</references>
+        <references refid="class_enemy_factory_1acfe15021ab3cf9554ef67ad9f99cddd2" compoundref="_enemy_factory_8cpp" startline="20" endline="49">EnemyFactory::generateNormalCentipede</references>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+        <references refid="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" compoundref="_logic_8h" startline="53">moving_game_objects_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a16d5915e489331198e33318c4e59eeeb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::generateCentipedeHeads</definition>
+        <argsstring>()</argsstring>
+        <name>generateCentipedeHeads</name>
+        <briefdescription>
+<para>Generates Centipede heads. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="98" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="144" bodyend="151"/>
+        <references refid="class_logic_1a4e613c86b994577e051391b52d5c6023" compoundref="_logic_8h" startline="48">enemyFactory_</references>
+        <references refid="class_enemy_factory_1ac9ee16ae90b9825dd771081bbc7c8436" compoundref="_enemy_factory_8cpp" startline="51" endline="79">EnemyFactory::generateCentipedeHeads</references>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+        <references refid="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" compoundref="_logic_8h" startline="53">moving_game_objects_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a11a5ad0679ef70b1bf64b8367c0f5532" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::generateMushrooms</definition>
+        <argsstring>()</argsstring>
+        <name>generateMushrooms</name>
+        <briefdescription>
+<para>Generates <ref refid="class_mushroom" kindref="compound">Mushroom</ref> objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="102" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="152" bodyend="157"/>
+        <references refid="class_logic_1a4e613c86b994577e051391b52d5c6023" compoundref="_logic_8h" startline="48">enemyFactory_</references>
+        <references refid="class_enemy_factory_1a37dd0744a52ee6224838fc6404c3d227" compoundref="_enemy_factory_8cpp" startline="80" endline="83">EnemyFactory::generateMushrooms</references>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a847b8ccc9d13f1f80c2d0f6c897820a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::generateMushroomAtCollision</definition>
+        <argsstring>()</argsstring>
+        <name>generateMushroomAtCollision</name>
+        <briefdescription>
+<para>Transforms all dead centipede segments from vector(s) into mushrooms. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="106" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="165" bodyend="173"/>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980ac68f4cf41704abc0bb325bdc35cb7da5">CENTIPEDE</references>
+        <references refid="class_logic_1a4e613c86b994577e051391b52d5c6023" compoundref="_logic_8h" startline="48">enemyFactory_</references>
+        <references refid="class_enemy_factory_1aa1b66cbf60b34c4b1abf11fb7fcbbc56" compoundref="_enemy_factory_8cpp" startline="85" endline="88">EnemyFactory::generateAMushroom</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1ae5f432d4b5b457a7f88c42b34f28f682" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::generateAScorpion</definition>
+        <argsstring>()</argsstring>
+        <name>generateAScorpion</name>
+        <briefdescription>
+<para>Generates a <ref refid="class_scorpion" kindref="compound">Scorpion</ref> at a random position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="110" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="175" bodyend="182"/>
+        <references refid="class_logic_1a4e613c86b994577e051391b52d5c6023" compoundref="_logic_8h" startline="48">enemyFactory_</references>
+        <references refid="class_enemy_factory_1ad87f4af7e5dcbc83ca6ae121c70b898d" compoundref="_enemy_factory_8cpp" startline="90" endline="99">EnemyFactory::generateAScorpion</references>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+        <references refid="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" compoundref="_logic_8h" startline="53">moving_game_objects_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a8e083d0e64f6166e1621578c34270e37" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::generateASpider</definition>
+        <argsstring>()</argsstring>
+        <name>generateASpider</name>
+        <briefdescription>
+<para>Generates a <ref refid="class_spider" kindref="compound">Spider</ref> at random either at the left or right boundary. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="114" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="184" bodyend="191"/>
+        <references refid="class_logic_1a4e613c86b994577e051391b52d5c6023" compoundref="_logic_8h" startline="48">enemyFactory_</references>
+        <references refid="class_enemy_factory_1a6284d34c8ec52603ddeb9134326968d3" compoundref="_enemy_factory_8cpp" startline="101" endline="110">EnemyFactory::generateASpider</references>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+        <references refid="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" compoundref="_logic_8h" startline="53">moving_game_objects_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a91ff0c77244fcb15a77d506837751c74" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::checkCollisions</definition>
+        <argsstring>()</argsstring>
+        <name>checkCollisions</name>
+        <briefdescription>
+<para>Checks for collisions between game objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="118" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="159" bodyend="163"/>
+        <references refid="class_logic_1a39e57818cd82815230430030b1b102bf" compoundref="_logic_8h" startline="49">collisionHandler_</references>
+        <references refid="class_collision_handler_1af5ab6a0cfb3a81d178d41d4b51725c10" compoundref="_collision_handler_8cpp" startline="47" endline="72">CollisionHandler::checkCollisions</references>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+        <references refid="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" compoundref="_logic_8h" startline="53">moving_game_objects_</references>
+        <references refid="class_logic_1a68de8520fc152e5123e99deef16c5fdd" compoundref="_logic_8h" startline="51">player_</references>
+        <references refid="class_collision_handler_1ae8362426985017db4901d9eb427e2d6d" compoundref="_collision_handler_8cpp" startline="9" endline="14">CollisionHandler::getPointsObtained</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a9b0352a47003b5278d9197710bdd9d6b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::updateScores</definition>
+        <argsstring>()</argsstring>
+        <name>updateScores</name>
+        <briefdescription>
+<para>Checks whether the player&apos;s score has passed the current high score and updates the high score if true. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="123" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="249" bodyend="272"/>
+        <references refid="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" compoundref="_logic_8h" startline="53">moving_game_objects_</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980ac68f4cf41704abc0bb325bdc35cb7da5">CENTIPEDE</references>
+        <references refid="class_logic_1a68de8520fc152e5123e99deef16c5fdd" compoundref="_logic_8h" startline="51">player_</references>
+        <references refid="class_logic_1ad484dea3aa386ca99193d050ae7d72f6" compoundref="_logic_8h" startline="46">highScoreManager_</references>
+        <references refid="class_high_score_manager_1a837c949b77d955cd2047fe70584a1347" compoundref="_high_score_manager_8cpp" startline="7" endline="12">HighScoreManager::getHighScore</references>
+        <references refid="class_logic_1a725785d85f3db11790dafd8f60178a3a" compoundref="_logic_8h" startline="55">screen_state_</references>
+        <references refid="_screen_state_8h_1a5fc5d61fa8521ce5476183998579fa9ba357b7d04408862c6e227b07b3b32faad">GAMEOVERSCREEN</references>
+        <references refid="_screen_state_8h_1a5fc5d61fa8521ce5476183998579fa9ba2d4519f36ee13488676e3136e470e125">GAMEWONSCREEN</references>
+        <references refid="class_high_score_manager_1abd2310fe0af525415d5721b1a80421ee" compoundref="_high_score_manager_8cpp" startline="14" endline="19">HighScoreManager::setHighScore</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1abb059b52631dc541c89e46370d3bc688" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::removeDeadEntities</definition>
+        <argsstring>()</argsstring>
+        <name>removeDeadEntities</name>
+        <briefdescription>
+<para>Removes all dead entities from vector(s) where they exist. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="127" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="97" bodyend="108"/>
+        <references refid="_logic_8h_1a7c9ef220b1c6b51245f5c781e4048d34" compoundref="_logic_8h" startline="146" endline="151">container_erase_if</references>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+        <references refid="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" compoundref="_logic_8h" startline="53">moving_game_objects_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1a1e2f8545edc283391961c8689ac96d12" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::reincarnatePlayer</definition>
+        <argsstring>()</argsstring>
+        <name>reincarnatePlayer</name>
+        <briefdescription>
+<para>Removes all Centipede segments from vector(s) where they exist, reset the position of the player and generate a new Centipede train. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="132" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="223" bodyend="247"/>
+        <references refid="class_logic_1a68de8520fc152e5123e99deef16c5fdd" compoundref="_logic_8h" startline="51">player_</references>
+        <references refid="_logic_8h_1a7c9ef220b1c6b51245f5c781e4048d34" compoundref="_logic_8h" startline="146" endline="151">container_erase_if</references>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855">PLAYER</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980afd232a32dcfdd49f24c59870b97e66ce">MUSHROOM</references>
+        <references refid="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" compoundref="_logic_8h" startline="53">moving_game_objects_</references>
+        <references refid="class_logic_1aab21423a4918a4047718cfdcda896aa3" compoundref="_logic_8cpp" startline="193" endline="221">reincarnateMushroom</references>
+        <references refid="class_logic_1a4e613c86b994577e051391b52d5c6023" compoundref="_logic_8h" startline="48">enemyFactory_</references>
+        <references refid="class_enemy_factory_1a9c5b63ab5d3df76f1cb907365cf09bfe" compoundref="_enemy_factory_8cpp" startline="112" endline="118">EnemyFactory::reset</references>
+        <references refid="class_logic_1ab11c4016cf06a493412935202921bbf0" compoundref="_logic_8cpp" startline="134" endline="142">generateNormalCentipede</references>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_1aab21423a4918a4047718cfdcda896aa3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logic::reincarnateMushroom</definition>
+        <argsstring>()</argsstring>
+        <name>reincarnateMushroom</name>
+        <briefdescription>
+<para>Resets reincarnate of the <ref refid="class_mushroom" kindref="compound">Mushroom</ref> objects in the game. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="136" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.cpp" bodystart="193" bodyend="221"/>
+        <references refid="class_logic_1a186d1bbd333005f0b2e28ca119f3c12e" compoundref="_logic_8h" startline="50">game_timer_</references>
+        <references refid="class_stop_watch_1add564bbd185e94d010fb1acff1620844" compoundref="_stop_watch_8cpp" startline="16" endline="23">StopWatch::pause</references>
+        <references refid="class_stop_watch_1a09a3c8f9ab03d7b28e4f8b90a833974e" compoundref="_stop_watch_8cpp" startline="7" endline="14">StopWatch::start</references>
+        <references refid="class_logic_1ae3267db699ca8b8836380d084c53407e" compoundref="_logic_8h" startline="52">game_objects_</references>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980afd232a32dcfdd49f24c59870b97e66ce">MUSHROOM</references>
+        <references refid="class_stop_watch_1a2bf006c59e86045c58a7d2ac5269c849" compoundref="_stop_watch_8h" startline="54" endline="54">StopWatch::getPauseTime</references>
+        <references refid="class_logic_1ac6f88cd30d7a149e8ab101ebf7cba8d2" compoundref="_logic_8cpp" startline="110" endline="115">renderGameObjects</references>
+        <references refid="class_logic_1a2d169914d13b7edd132ac7fb74ff8587" compoundref="_logic_8h" startline="45">presentation_</references>
+        <references refid="class_presentation_1ae34050372fa270232dce9f2666c1f2f6" compoundref="_presentation_8cpp" startline="21" endline="38">Presentation::processGameObjectSound</references>
+        <references refid="class_stop_watch_1a8fa0ea2811a7244d4687ba682cef222d" compoundref="_stop_watch_8cpp" startline="25" endline="35">StopWatch::resume</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class performs the logic that defines how the game objects behave. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="63">
+        <label>AssetManager</label>
+        <link refid="class_asset_manager"/>
+        <childnode refid="64" relation="usage">
+          <edgelabel>assetPath_</edgelabel>
+        </childnode>
+      </node>
+      <node id="72">
+        <label>map&lt; unsigned int, bool &gt;</label>
+      </node>
+      <node id="68">
+        <label>map&lt; GameSounds, shared_ptr&lt; sf::Music &gt; &gt;</label>
+      </node>
+      <node id="66">
+        <label>Presentation</label>
+        <link refid="class_presentation"/>
+        <childnode refid="67" relation="usage">
+          <edgelabel>sprite_sheets_</edgelabel>
+        </childnode>
+        <childnode refid="68" relation="usage">
+          <edgelabel>game_sounds_</edgelabel>
+        </childnode>
+        <childnode refid="69" relation="usage">
+          <edgelabel>game_textures_</edgelabel>
+        </childnode>
+      </node>
+      <node id="75">
+        <label>SpatialHash</label>
+        <link refid="class_spatial_hash"/>
+        <childnode refid="61" relation="usage">
+          <edgelabel>grid_</edgelabel>
+        </childnode>
+        <childnode refid="76" relation="usage">
+          <edgelabel>game_object_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="74">
+        <label>CollisionHandler</label>
+        <link refid="class_collision_handler"/>
+        <childnode refid="75" relation="usage">
+          <edgelabel>spatial_hash_</edgelabel>
+        </childnode>
+        <childnode refid="77" relation="usage">
+          <edgelabel>sat_algorithm_</edgelabel>
+        </childnode>
+      </node>
+      <node id="76">
+        <label>map&lt; unsigned int, vector&lt; shared_ptr&lt; IEntity &gt; &gt; &gt;</label>
+      </node>
+      <node id="64">
+        <label>string</label>
+      </node>
+      <node id="71">
+        <label>MushroomFactory</label>
+        <link refid="class_mushroom_factory"/>
+        <childnode refid="72" relation="usage">
+          <edgelabel>cell_ID_List_</edgelabel>
+        </childnode>
+        <childnode refid="61" relation="usage">
+          <edgelabel>grid_</edgelabel>
+        </childnode>
+      </node>
+      <node id="70">
+        <label>EnemyFactory</label>
+        <link refid="class_enemy_factory"/>
+        <childnode refid="61" relation="usage">
+          <edgelabel>grid_</edgelabel>
+        </childnode>
+        <childnode refid="71" relation="usage">
+          <edgelabel>mushroomfactory_</edgelabel>
+        </childnode>
+      </node>
+      <node id="80">
+        <label>fstream</label>
+      </node>
+      <node id="79">
+        <label>HighScoreManager</label>
+        <link refid="class_high_score_manager"/>
+        <childnode refid="80" relation="usage">
+          <edgelabel>file_</edgelabel>
+        </childnode>
+        <childnode refid="64" relation="usage">
+          <edgelabel>filePath_</edgelabel>
+        </childnode>
+      </node>
+      <node id="60">
+        <label>vector&lt; shared_ptr&lt; IEntity &gt; &gt;</label>
+      </node>
+      <node id="69">
+        <label>map&lt; ObjectType, sf::Texture &gt;</label>
+      </node>
+      <node id="65">
+        <label>StopWatch</label>
+        <link refid="class_stop_watch"/>
+      </node>
+      <node id="59">
+        <label>Logic</label>
+        <link refid="class_logic"/>
+        <childnode refid="60" relation="usage">
+          <edgelabel>game_objects_</edgelabel>
+        </childnode>
+        <childnode refid="61" relation="usage">
+          <edgelabel>grid_</edgelabel>
+        </childnode>
+        <childnode refid="62" relation="usage">
+          <edgelabel>moving_game_objects_</edgelabel>
+        </childnode>
+        <childnode refid="63" relation="usage">
+          <edgelabel>assetManager_</edgelabel>
+        </childnode>
+        <childnode refid="65" relation="usage">
+          <edgelabel>game_timer_</edgelabel>
+        </childnode>
+        <childnode refid="66" relation="usage">
+          <edgelabel>presentation_</edgelabel>
+        </childnode>
+        <childnode refid="70" relation="usage">
+          <edgelabel>enemyFactory_</edgelabel>
+        </childnode>
+        <childnode refid="73" relation="usage">
+          <edgelabel>player_</edgelabel>
+        </childnode>
+        <childnode refid="74" relation="usage">
+          <edgelabel>collisionHandler_</edgelabel>
+        </childnode>
+        <childnode refid="79" relation="usage">
+          <edgelabel>highScoreManager_</edgelabel>
+        </childnode>
+      </node>
+      <node id="73">
+        <label>shared_ptr&lt; Player &gt;</label>
+      </node>
+      <node id="62">
+        <label>vector&lt; shared_ptr&lt; IMovingEntity &gt; &gt;</label>
+      </node>
+      <node id="67">
+        <label>vector&lt; SpriteSheet &gt;</label>
+      </node>
+      <node id="77">
+        <label>SeparatingAxisTheorem</label>
+        <link refid="class_separating_axis_theorem"/>
+        <childnode refid="78" relation="usage">
+          <edgelabel>vertices_rectB_</edgelabel>
+          <edgelabel>axes_</edgelabel>
+          <edgelabel>vertices_rectA_</edgelabel>
+        </childnode>
+      </node>
+      <node id="61">
+        <label>Grid</label>
+        <link refid="class_grid"/>
+      </node>
+      <node id="78">
+        <label>vector&lt; Position &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" line="28" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Logic.h" bodystart="27" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_logic_1a8a7a77acc4b4118c250c8582b76341d5" prot="private" virt="non-virtual"><scope>Logic</scope><name>assetManager_</name></member>
+      <member refid="class_logic_1a91ff0c77244fcb15a77d506837751c74" prot="private" virt="non-virtual"><scope>Logic</scope><name>checkCollisions</name></member>
+      <member refid="class_logic_1a39e57818cd82815230430030b1b102bf" prot="private" virt="non-virtual"><scope>Logic</scope><name>collisionHandler_</name></member>
+      <member refid="class_logic_1a599becacc903f250d42996ca11bba165" prot="private" virt="non-virtual"><scope>Logic</scope><name>debounceSpaceKey_</name></member>
+      <member refid="class_logic_1a4e613c86b994577e051391b52d5c6023" prot="private" virt="non-virtual"><scope>Logic</scope><name>enemyFactory_</name></member>
+      <member refid="class_logic_1ae3267db699ca8b8836380d084c53407e" prot="private" virt="non-virtual"><scope>Logic</scope><name>game_objects_</name></member>
+      <member refid="class_logic_1a186d1bbd333005f0b2e28ca119f3c12e" prot="private" virt="non-virtual"><scope>Logic</scope><name>game_timer_</name></member>
+      <member refid="class_logic_1ae5f432d4b5b457a7f88c42b34f28f682" prot="private" virt="non-virtual"><scope>Logic</scope><name>generateAScorpion</name></member>
+      <member refid="class_logic_1a8e083d0e64f6166e1621578c34270e37" prot="private" virt="non-virtual"><scope>Logic</scope><name>generateASpider</name></member>
+      <member refid="class_logic_1a16d5915e489331198e33318c4e59eeeb" prot="private" virt="non-virtual"><scope>Logic</scope><name>generateCentipedeHeads</name></member>
+      <member refid="class_logic_1a7d8384f6a1bd8e31c327109b1aa4e998" prot="private" virt="non-virtual"><scope>Logic</scope><name>generateGameEnemies</name></member>
+      <member refid="class_logic_1a847b8ccc9d13f1f80c2d0f6c897820a4" prot="private" virt="non-virtual"><scope>Logic</scope><name>generateMushroomAtCollision</name></member>
+      <member refid="class_logic_1a11a5ad0679ef70b1bf64b8367c0f5532" prot="private" virt="non-virtual"><scope>Logic</scope><name>generateMushrooms</name></member>
+      <member refid="class_logic_1ab11c4016cf06a493412935202921bbf0" prot="private" virt="non-virtual"><scope>Logic</scope><name>generateNormalCentipede</name></member>
+      <member refid="class_logic_1a92b3982ff6e3ec9d07a69369e579853e" prot="private" virt="non-virtual"><scope>Logic</scope><name>getInputCommands</name></member>
+      <member refid="class_logic_1a82cb53aaf924d2979028f9a6d020de61" prot="private" virt="non-virtual"><scope>Logic</scope><name>grid_</name></member>
+      <member refid="class_logic_1a3d9bd013cf00f46880fa26e3bd538798" prot="private" virt="non-virtual"><scope>Logic</scope><name>high_score_</name></member>
+      <member refid="class_logic_1ad484dea3aa386ca99193d050ae7d72f6" prot="private" virt="non-virtual"><scope>Logic</scope><name>highScoreManager_</name></member>
+      <member refid="class_logic_1a08101e1a7d5b42ea590ec2b67fda6800" prot="private" virt="non-virtual"><scope>Logic</scope><name>loadAssets</name></member>
+      <member refid="class_logic_1a65e13b69a0b4ae0c31be94bcfe11898a" prot="public" virt="non-virtual"><scope>Logic</scope><name>Logic</name></member>
+      <member refid="class_logic_1ab1f6dc176fd15cd87bb2c00cc1419edc" prot="private" virt="non-virtual"><scope>Logic</scope><name>moving_game_objects_</name></member>
+      <member refid="class_logic_1a68de8520fc152e5123e99deef16c5fdd" prot="private" virt="non-virtual"><scope>Logic</scope><name>player_</name></member>
+      <member refid="class_logic_1a2d169914d13b7edd132ac7fb74ff8587" prot="private" virt="non-virtual"><scope>Logic</scope><name>presentation_</name></member>
+      <member refid="class_logic_1aab21423a4918a4047718cfdcda896aa3" prot="private" virt="non-virtual"><scope>Logic</scope><name>reincarnateMushroom</name></member>
+      <member refid="class_logic_1a1e2f8545edc283391961c8689ac96d12" prot="private" virt="non-virtual"><scope>Logic</scope><name>reincarnatePlayer</name></member>
+      <member refid="class_logic_1abb059b52631dc541c89e46370d3bc688" prot="private" virt="non-virtual"><scope>Logic</scope><name>removeDeadEntities</name></member>
+      <member refid="class_logic_1ac6f88cd30d7a149e8ab101ebf7cba8d2" prot="private" virt="non-virtual"><scope>Logic</scope><name>renderGameObjects</name></member>
+      <member refid="class_logic_1a43609f2dc8b0575d2cc9d4381079abdb" prot="private" virt="non-virtual"><scope>Logic</scope><name>renderGameOverScreen</name></member>
+      <member refid="class_logic_1a1a7332c942409bdb5cbcc26ddadbe6e9" prot="private" virt="non-virtual"><scope>Logic</scope><name>renderGameWonScreen</name></member>
+      <member refid="class_logic_1a70bcf051b34e52fe521163360316d468" prot="private" virt="non-virtual"><scope>Logic</scope><name>renderSplashScreen</name></member>
+      <member refid="class_logic_1abf175ef9069615527bfbd10864b20df4" prot="public" virt="non-virtual"><scope>Logic</scope><name>run</name></member>
+      <member refid="class_logic_1a725785d85f3db11790dafd8f60178a3a" prot="private" virt="non-virtual"><scope>Logic</scope><name>screen_state_</name></member>
+      <member refid="class_logic_1a23f4a972858bbea364850ebf0d188be6" prot="private" virt="non-virtual"><scope>Logic</scope><name>updateGameObjects</name></member>
+      <member refid="class_logic_1a9b0352a47003b5278d9197710bdd9d6b" prot="private" virt="non-virtual"><scope>Logic</scope><name>updateScores</name></member>
+      <member refid="class_logic_1a406131db5b87e8d4b396aec37f3c1f69" prot="public" virt="non-virtual"><scope>Logic</scope><name>~Logic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

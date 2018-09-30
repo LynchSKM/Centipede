@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Centipede Game</title>
+    <detaileddescription>
+<para>This project was aimed at the development of a 2D game based on Atari&apos;s Centipede. SFML version 2.5.0 was required to be used as the graphics library and C++17 as the chosen standard for compilation.<itemizedlist>
+<listitem><para>The game has a <ref refid="class_player" kindref="compound">Player</ref> that can be moved up, down, left or right in a fixed area near the bottom of the screen.</para></listitem><listitem><para>The game has Scorpions, Spiders and Centipedes that the <ref refid="class_player" kindref="compound">Player</ref> can shoot to gain points and win the game. Each has a different movement when generated on the game screen adding some difficulty to the game.</para></listitem><listitem><para>Mushrooms are also generated and can be shot by the <ref refid="class_player" kindref="compound">Player</ref>. These act as obstacles for the Centipede(s) in the game.</para></listitem><listitem><para>Mushrooms can be poisoned by <ref refid="class_scorpion" kindref="compound">Scorpion</ref> objects.</para></listitem><listitem><para>Centipede Segments that are shot turn into <ref refid="class_mushroom" kindref="compound">Mushroom</ref> objects.</para></listitem><listitem><para>Centipede(s) that touch poisoned Mushrooms dive down into the <ref refid="class_player" kindref="compound">Player</ref>&apos;s area. </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>
