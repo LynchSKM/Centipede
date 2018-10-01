@@ -109,11 +109,6 @@ bool Player::isPoisoned() const
     return false;
 }
 
-void Player::poison()
-{
-
-}
-
 vector<shared_ptr<PlayerBullet>> Player::shoot()
 {
     auto x = position_.getX_pos()-dimensions_.speed;
@@ -140,4 +135,14 @@ void Player::reincarnate()
         position_.setY_pos(grid_.getHeight()-dimensions_.height*0.5);
         hasBeenHit_ = false;
     }//if
+}
+
+void Player::poison()
+{
+
+}
+
+int Player::getHitPoints() const
+{
+    return 0;
 }

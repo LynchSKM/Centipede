@@ -2,18 +2,18 @@
 
 struct MushroomDimensions Mushroom::dimensions_;
 
-Mushroom::Mushroom(Position position):position_{position},
-        objectType_{ObjectType::MUSHROOM},
-        isPoisoned_{false},
-        isAlive_{true},
-        numberOfLives_{4}
+Mushroom::Mushroom(Position position):
+    position_{position},
+    isPoisoned_{false},
+    isAlive_{true},
+    numberOfLives_{4}
 {
     //ctor
 }
 
 ObjectType Mushroom::getObjectType() const
 {
-    return objectType_;
+    return ObjectType::MUSHROOM;
 }
 
 Position Mushroom::getPosition() const
@@ -23,8 +23,7 @@ Position Mushroom::getPosition() const
 
 BoundaryBox Mushroom::getBoundaryBox()
 {
-    BoundaryBox box{position_, dimensions_.width, dimensions_.height, 0.0};
-    return box;
+    return BoundaryBox{position_, dimensions_.width, dimensions_.height, 0.0};
 }
 
 bool Mushroom::isAlive() const
@@ -63,6 +62,12 @@ void Mushroom::reincarnate()
     if(!isAlive()) return;
     numberOfLives_ = 4;
     isPoisoned_ = false;
+}
+
+int Mushroom::getHitPoints() const
+{
+    if(isPoisoned()) return 2;
+    return 1;
 }
 
 Mushroom::~Mushroom()

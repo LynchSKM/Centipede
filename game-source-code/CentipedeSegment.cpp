@@ -279,7 +279,7 @@ int CentipedeSegment::getRemainingLives() const
 
 void CentipedeSegment::reincarnate()
 {
-
+    return;
 }
 
 bool CentipedeSegment::isAlive() const
@@ -295,6 +295,12 @@ void CentipedeSegment::eliminated()
 void CentipedeSegment::poison()
 {
     isPoisoned_ = true;
+}
+
+int CentipedeSegment::getHitPoints() const
+{
+    auto hitPoints = 100;
+    return hitPoints;
 }
 
 bool CentipedeSegment::isPoisoned() const

@@ -4,17 +4,18 @@ struct PlayerBulletDimensions PlayerBullet::dimensions_;
 
 PlayerBullet::PlayerBullet(Position position, const Grid& grid):
     position_{position},
-    grid_{grid}
-{   setDirection(Direction::UP);
-    alive_ = true;
-    objectType_ = ObjectType::PLAYER_LASER_BULLET;
+    grid_{grid},
+    alive_{true},
+    direction_{Direction::UP}
+{
+
 }
 
 void PlayerBullet::move()
 {
     auto newYPos = position_.getY_pos() - dimensions_.speed;
-
-    if(newYPos > 8.0f)position_.setY_pos(newYPos);
+    auto half = 2.0f;
+    if(newYPos > (dimensions_.height/half)) position_.setY_pos(newYPos);
     else eliminated();
 }
 
@@ -30,7 +31,7 @@ void PlayerBullet::setDirection(Direction direction)
 
 ObjectType PlayerBullet::getObjectType() const
 {
-    return objectType_;
+    return ObjectType::PLAYER_LASER_BULLET;
 }
 
 Position PlayerBullet::getPosition() const
@@ -72,7 +73,12 @@ bool PlayerBullet::isPoisoned() const
 
 void PlayerBullet::poison()
 {
+    return;
+}
 
+int PlayerBullet::getHitPoints() const
+{
+    return 0;
 }
 
 PlayerBullet::~PlayerBullet()

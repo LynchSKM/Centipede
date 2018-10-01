@@ -128,27 +128,10 @@ void CollisionHandler::playerBulletCollidesWithEnemies(vector<IMovingEntity_ptr>
                 {
                     bullet->eliminated();
                     object->eliminated();
+                    points_obtained_+=object->getHitPoints();
 
-                    // Get points:
-                    switch(object->getObjectType())
-                    {
-                        case ObjectType::MUSHROOM :
-                            if(object->isPoisoned()) points_obtained_+=2;
-                            else points_obtained_+=1;
-                            break;
-
-                        case ObjectType::SCORPION:
-                            points_obtained_+=40;
-                            break;
-
-                        case ObjectType::CENTIPEDE:
-                            points_obtained_+=100;
-                            splitCentipedeTrain(centipede, object);
-                            break;
-
-                        default:
-                            break;
-                    }//switch
+                    if(object->getObjectType()==ObjectType::CENTIPEDE)
+                        splitCentipedeTrain(centipede, object);
                 }
             }
         }

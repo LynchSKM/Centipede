@@ -87,9 +87,13 @@ class Mushroom : public IEntity
          */
         virtual void poison() override;
 
+        /** \brief Inherited from IEntity. A virtual function that will be
+         *  used to return a Mushroom object's hit points.
+         */
+        virtual int getHitPoints() const override;
+
     private:
         Position position_;
-        ObjectType objectType_;
         bool isPoisoned_;
         bool isAlive_;
         int numberOfLives_;
@@ -98,7 +102,6 @@ class Mushroom : public IEntity
         /** \brief Decrements the lives of the mushroom.
          */
         void decrementLives();
-
 };
 
 #endif // MUSHROOM_H

@@ -107,6 +107,11 @@ class Spider : public IMovingEntity
          */
         virtual void poison() override;
 
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         *  used to return a Spider object's hit points.
+         */
+        virtual int getHitPoints() const override;
+
     private:
         const Grid grid_;
         Position position_;

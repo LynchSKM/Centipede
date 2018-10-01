@@ -19,8 +19,8 @@ using std::vector;
 struct PlayerDimension
 {
     const float height = 16.0;
-    const float width = 16.0;
-    const float speed = 1.0;
+    const float width  = 16.0;
+    const float speed  = 1.0;
 };
 
 /** \class Player
@@ -113,6 +113,11 @@ class Player : public IMovingEntity
          *  be implemented because a Player object cannot be poisoned.
          */
         virtual void poison() override;
+
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         *  not be implemented as a Player doesn't have hit points.
+         */
+        virtual int getHitPoints() const override;
 
         /** \brief Creates player bullets and returns them in a vector.
          *  \return vector<shared_ptr<PlayerBullet>>

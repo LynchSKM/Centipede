@@ -85,6 +85,11 @@ class IMovingEntity: public IEntity
          */
         virtual void poison() = 0;
 
+        /** \brief Inherited from IEntity. A pure virtual function that will be
+         *  used to return a derived class object's hit points.
+         */
+        virtual int getHitPoints() const = 0;
+
         /** \brief A virtual destructor that destroys an IMovingEntity object.
          */
         virtual ~IMovingEntity(){};

@@ -186,7 +186,7 @@ void Spider::setDirection(Direction direction)
 
 void Spider::reincarnate()
 {
-
+    return;
 }
 
 bool Spider::isPoisoned() const
@@ -196,7 +196,13 @@ bool Spider::isPoisoned() const
 
 void Spider::poison()
 {
+    return;
+}
 
+int Spider::getHitPoints() const
+{
+    auto hitPoints = 300;
+    return hitPoints;
 }
 
 Spider::~Spider()

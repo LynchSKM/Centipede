@@ -113,8 +113,15 @@ bool Scorpion::isPoisoned() const
 
 void Scorpion::poison()
 {
-
+    return;
 }
+
+int Scorpion::getHitPoints() const
+{
+    auto hitPoints = 40;
+    return hitPoints;
+}
+
 
 Scorpion::~Scorpion()
 {

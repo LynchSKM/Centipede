@@ -124,6 +124,11 @@ class CentipedeSegment : public IMovingEntity
          */
         virtual void poison() override;
 
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         *  used to return a CentipedeSegment object's hit points.
+         */
+        virtual int getHitPoints() const override;
+
         /** \brief A function that returns the previous direction of an object.
          *  \return The direction of the object of type Direction of the enum class.
          */

@@ -67,7 +67,7 @@ class Scorpion : public IMovingEntity
          */
         virtual Position getPosition() const override;
 
-        /** \brief Inherited from IMovingEntity. A virtual function that returns 
+        /** \brief Inherited from IMovingEntity. A virtual function that returns
 		 *	a BoundaryBox indicating the rectangular area covered by a Scorpion object.
          *  \return BoundaryBox object of the type BoundaryBox.
          */
@@ -107,6 +107,11 @@ class Scorpion : public IMovingEntity
          *  be implemented because a Scorpion object cannot be poisoned.
          */
         virtual void poison() override;
+
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         *  used to return a Scorpion object's hit points.
+         */
+        virtual int getHitPoints() const override;
 
     private:
 

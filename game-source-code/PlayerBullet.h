@@ -67,7 +67,7 @@ class PlayerBullet : public IMovingEntity
          */
         virtual Position getPosition() const override;
 
-        /** \brief Inherited from IMovingEntity. A virtual function that returns 
+        /** \brief Inherited from IMovingEntity. A virtual function that returns
 		 *	a BoundaryBox indicating the rectangular area covered by a PlayerBullet object.
          *  \return BoundaryBox object of the type BoundaryBox.
          */
@@ -103,14 +103,18 @@ class PlayerBullet : public IMovingEntity
          */
         virtual bool isPoisoned() const override;
 
-        /** \brief Inherited from IMovingEntity. A virtual function that will not 
+        /** \brief Inherited from IMovingEntity. A virtual function that will not
          *  be implemented as a PlayerBullet cannot be poisoned.
          */
         virtual void poison() override;
 
+        /** \brief Inherited from IMovingEntity. A virtual function that will be
+         *  not be implemented as a PlayerBullet doesn't have hit points.
+         */
+        virtual int getHitPoints() const override;
+
     private:
         bool alive_;
-        ObjectType objectType_;
         Position position_;
         const Grid grid_;
         Direction direction_;
