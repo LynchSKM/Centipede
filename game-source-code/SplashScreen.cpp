@@ -36,9 +36,19 @@ void SplashScreen::show(sf::RenderWindow& render_window){
     controls_sprite.setOrigin(controls_texture.getSize().x/half, controls_texture.getSize().y/half);
     controls_sprite.setPosition(render_window.getSize().x/half, render_window.getSize().y/half+50);
 
+    sf::Text continue_to_game_text("Continue => Press Enter", splashScreenFont_);
+    continue_to_game_text.setCharacterSize(24);
+    continue_to_game_text.setFillColor(sf::Color::Green);
+    continue_to_game_text.setStyle(sf::Text::Bold);
+    titleRect = continue_to_game_text.getLocalBounds();
+    continue_to_game_text.setOrigin(titleRect.left + titleRect.width/half,
+    titleRect.top  + titleRect.height/half);
+    continue_to_game_text.setPosition(render_window.getSize().x/half, render_window.getSize().y/1.09f);
+
     render_window.clear();
     //render_window.draw(background_sprite);
     render_window.draw(splash_screen_title);
+    render_window.draw(continue_to_game_text);
     render_window.draw(controls_sprite);
     render_window.display();
 
