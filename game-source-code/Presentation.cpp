@@ -85,55 +85,39 @@ void Presentation::generateSpriteSheet(ObjectType object_type, unsigned int row,
 void Presentation::populateSpriteSheets(const ObjectType& object_type)
 {
     auto switch_time = 0.3f;
-    auto row = 0u;
-    auto image_count_columns = 0u;
-    auto image_count_rows = 0u;
-    switch(object_type){
+    auto image_count_columns = 1u;
+    auto image_count_rows = 1u;
+    auto direction = Direction::NONE;
+    switch(object_type)
+    {
         case ObjectType::CENTIPEDE:
-            row = 0u;
-             // CentipedeSegment Head
             image_count_columns = 8u;
             image_count_rows    = 2u;
-            generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
-                                image_count_rows}, switch_time, Direction::LEFT);
-            row = 1u; // CentipedeSegment Body
-            generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
-                                image_count_rows}, switch_time, Direction::LEFT);
+            direction = Direction::LEFT;
             break;
-
         case ObjectType::MUSHROOM:
             image_count_columns = 4u;
             image_count_rows    = 2u;
-            row = 0u; // Normal Mushroom
+            direction = Direction::NONE;
             switch_time = 0.0f;
-            generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
-                                image_count_rows}, switch_time, Direction::NONE);
-            row = 1u; // Poisoned Mushroom
-            generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
-                                image_count_rows}, switch_time, Direction::NONE);
             break;
-
         case ObjectType::SCORPION:
             image_count_columns = 4u;
             image_count_rows    = 1u;
-            row = 0u;
-             // Scorpion
-            generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
-                                image_count_rows}, switch_time, Direction::LEFT);
+            direction = Direction::LEFT;
             break;
         case ObjectType::SPIDER:
             image_count_columns = 8u;
             image_count_rows    = 2u;
-            row = 0u;
-             // Scorpion
-            generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
-                                image_count_rows}, switch_time, Direction::DOWN);
+            direction = Direction::NONE;
             break;
         default:
             break;
 
     }//switch
-
+    for(auto row = 0u; row<image_count_rows; row++)
+        generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
+                            image_count_rows}, switch_time, direction);
     return;
 }
 
