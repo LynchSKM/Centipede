@@ -95,5 +95,9 @@ var files =
     [ "StopWatch.cpp", "_stop_watch_8cpp.html", null ],
     [ "StopWatch.h", "_stop_watch_8h.html", [
       [ "StopWatch", "class_stop_watch.html", "class_stop_watch" ]
+    ] ],
+    [ "Weapon.cpp", "_weapon_8cpp.html", null ],
+    [ "Weapon.h", "_weapon_8h.html", [
+      [ "Weapon", "class_weapon.html", "class_weapon" ]
     ] ]
 ];

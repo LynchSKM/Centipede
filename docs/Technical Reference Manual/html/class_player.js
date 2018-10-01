@@ -17,15 +17,13 @@ var class_player =
     [ "poison", "class_player.html#a02cfcf9b1c798596594a9e9e0b5f64a0", null ],
     [ "reincarnate", "class_player.html#aea83d5edc3dbd5cf8f44d38da57dc02b", null ],
     [ "setDirection", "class_player.html#a4b1ae38fa48bb6db1a1783af28935402", null ],
-    [ "shoot", "class_player.html#a87ee64cb925735f3d1516cc62a7a6311", null ],
+    [ "shoot", "class_player.html#a3ca4a0c411b674096dc30c6a6da8f305", null ],
+    [ "dimensions_", "class_player.html#a854d2be4ad2453d5373227db1413134e", null ],
     [ "direction_", "class_player.html#a035573615cefddd933c9e6babd5605fe", null ],
     [ "grid_", "class_player.html#a488aefe7db11bf1d6e7a8adfa52a2b4e", null ],
     [ "hasBeenHit_", "class_player.html#a50b3d8da6a0895a8dbe32d15fc1475d8", null ],
     [ "numberOfLives_", "class_player.html#a4fbd6d307e3c8361da9e65eefba59aef", null ],
-    [ "objectType_", "class_player.html#a3e6f28c430e292e5b02d726343de36bc", null ],
     [ "position_", "class_player.html#a09e7aba1297b153aa896dc84a2eacce0", null ],
-    [ "reload_time", "class_player.html#a5aeb798d1d4ed038421e9ea001e47236", null ],
-    [ "reload_timer", "class_player.html#ae9d6bae67d3896422573a38cce7f800a", null ],
     [ "score_", "class_player.html#a423e2096b25d4965a84e4a8bf38c7683", null ],
-    [ "timeSinceLastShoot", "class_player.html#a9e505498701d853cf3de3660e8d25dde", null ]
+    [ "weapon_", "class_player.html#a79f43d0218a8e66a4d6578f618c8bc83", null ]
 ];

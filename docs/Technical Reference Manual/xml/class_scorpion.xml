@@ -341,51 +341,51 @@
 <simplesect kind="version"><para>3.0 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="119">
+      <node id="121">
         <label>IEntity</label>
         <link refid="class_i_entity"/>
       </node>
-      <node id="118">
+      <node id="120">
         <label>IMovingEntity</label>
         <link refid="class_i_moving_entity"/>
-        <childnode refid="119" relation="public-inheritance">
+        <childnode refid="121" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="117">
+      <node id="119">
         <label>Scorpion</label>
         <link refid="class_scorpion"/>
-        <childnode refid="118" relation="public-inheritance">
+        <childnode refid="120" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="124">
+      <node id="126">
         <label>ScorpionDimensions</label>
         <link refid="struct_scorpion_dimensions"/>
       </node>
-      <node id="122">
+      <node id="124">
         <label>IEntity</label>
         <link refid="class_i_entity"/>
       </node>
-      <node id="123">
+      <node id="125">
         <label>Grid</label>
         <link refid="class_grid"/>
       </node>
-      <node id="121">
+      <node id="123">
         <label>IMovingEntity</label>
         <link refid="class_i_moving_entity"/>
-        <childnode refid="122" relation="public-inheritance">
+        <childnode refid="124" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="120">
+      <node id="122">
         <label>Scorpion</label>
         <link refid="class_scorpion"/>
-        <childnode refid="121" relation="public-inheritance">
+        <childnode refid="123" relation="public-inheritance">
         </childnode>
-        <childnode refid="123" relation="usage">
+        <childnode refid="125" relation="usage">
           <edgelabel>grid_</edgelabel>
         </childnode>
-        <childnode refid="124" relation="usage">
+        <childnode refid="126" relation="usage">
           <edgelabel>dimensions_</edgelabel>
         </childnode>
       </node>

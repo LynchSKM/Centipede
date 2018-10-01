@@ -413,52 +413,52 @@
 <simplesect kind="version"><para>3.0 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="134">
+      <node id="136">
         <label>Spider</label>
         <link refid="class_spider"/>
-        <childnode refid="135" relation="public-inheritance">
+        <childnode refid="137" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="136">
+      <node id="138">
         <label>IEntity</label>
         <link refid="class_i_entity"/>
       </node>
-      <node id="135">
+      <node id="137">
         <label>IMovingEntity</label>
         <link refid="class_i_moving_entity"/>
-        <childnode refid="136" relation="public-inheritance">
+        <childnode refid="138" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="137">
+      <node id="139">
         <label>Spider</label>
         <link refid="class_spider"/>
-        <childnode refid="138" relation="public-inheritance">
+        <childnode refid="140" relation="public-inheritance">
         </childnode>
-        <childnode refid="140" relation="usage">
+        <childnode refid="142" relation="usage">
           <edgelabel>grid_</edgelabel>
         </childnode>
-        <childnode refid="141" relation="usage">
+        <childnode refid="143" relation="usage">
           <edgelabel>dimensions_</edgelabel>
         </childnode>
       </node>
-      <node id="139">
+      <node id="141">
         <label>IEntity</label>
         <link refid="class_i_entity"/>
       </node>
-      <node id="141">
+      <node id="143">
         <label>SpiderDimensions</label>
         <link refid="struct_spider_dimensions"/>
       </node>
-      <node id="140">
+      <node id="142">
         <label>Grid</label>
         <link refid="class_grid"/>
       </node>
-      <node id="138">
+      <node id="140">
         <label>IMovingEntity</label>
         <link refid="class_i_moving_entity"/>
-        <childnode refid="139" relation="public-inheritance">
+        <childnode refid="141" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

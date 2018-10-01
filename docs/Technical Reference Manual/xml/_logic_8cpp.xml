@@ -4,343 +4,37 @@
     <compoundname>Logic.cpp</compoundname>
     <includes refid="_logic_8h" local="yes">Logic.h</includes>
     <incdepgraph>
-      <node id="347">
+      <node id="357">
         <label>SFML/Graphics.hpp</label>
       </node>
-      <node id="384">
+      <node id="395">
         <label>SpatialHash.h</label>
         <link refid="_spatial_hash_8h"/>
-        <childnode refid="345" relation="include">
-        </childnode>
-        <childnode refid="354" relation="include">
-        </childnode>
-        <childnode refid="357" relation="include">
-        </childnode>
-        <childnode refid="353" relation="include">
-        </childnode>
-        <childnode refid="352" relation="include">
-        </childnode>
-        <childnode refid="351" relation="include">
-        </childnode>
-        <childnode refid="350" relation="include">
-        </childnode>
-      </node>
-      <node id="386">
-        <label>limits</label>
-      </node>
-      <node id="357">
-        <label>POSITION.H</label>
-      </node>
-      <node id="360">
-        <label>IMovingEntity.h</label>
-        <link refid="_i_moving_entity_8h"/>
-        <childnode refid="354" relation="include">
-        </childnode>
         <childnode refid="355" relation="include">
-        </childnode>
-        <childnode refid="356" relation="include">
-        </childnode>
-        <childnode refid="357" relation="include">
-        </childnode>
-        <childnode refid="361" relation="include">
-        </childnode>
-      </node>
-      <node id="366">
-        <label>GameWonScreen.h</label>
-        <link refid="_game_won_screen_8h"/>
-        <childnode refid="347" relation="include">
         </childnode>
         <childnode refid="364" relation="include">
         </childnode>
-      </node>
-      <node id="348">
-        <label>SFML/Audio/Sound.hpp</label>
-      </node>
-      <node id="345">
-        <label>Grid.h</label>
-        <link refid="_grid_8h"/>
-      </node>
-      <node id="358">
-        <label>cmath</label>
-      </node>
-      <node id="343">
-        <label>Logic.cpp</label>
-        <link refid="_logic_8cpp"/>
-        <childnode refid="344" relation="include">
-        </childnode>
-      </node>
-      <node id="363">
-        <label>AssetManager.h</label>
-        <link refid="_asset_manager_8h"/>
-        <childnode refid="364" relation="include">
-        </childnode>
-        <childnode refid="351" relation="include">
-        </childnode>
-      </node>
-      <node id="373">
-        <label>ScreenState.h</label>
-        <link refid="_screen_state_8h"/>
-      </node>
-      <node id="364">
-        <label>string</label>
-      </node>
-      <node id="379">
-        <label>Mushroom.h</label>
-        <link refid="_mushroom_8h"/>
-        <childnode refid="354" relation="include">
-        </childnode>
-      </node>
-      <node id="350">
-        <label>map</label>
-      </node>
-      <node id="375">
-        <label>PlayerBullet.h</label>
-        <link refid="_player_bullet_8h"/>
-        <childnode refid="360" relation="include">
-        </childnode>
-        <childnode refid="345" relation="include">
-        </childnode>
-      </node>
-      <node id="372">
-        <label>fstream</label>
-      </node>
-      <node id="356">
-        <label>BoundaryBox.h</label>
-        <link refid="_boundary_box_8h"/>
-        <childnode refid="357" relation="include">
-        </childnode>
-        <childnode refid="358" relation="include">
-        </childnode>
-        <childnode refid="359" relation="include">
-        </childnode>
-        <childnode refid="351" relation="include">
-        </childnode>
-      </node>
-      <node id="371">
-        <label>HighScoreManager.h</label>
-        <link refid="_high_score_manager_8h"/>
-        <childnode refid="364" relation="include">
-        </childnode>
-        <childnode refid="372" relation="include">
-        </childnode>
-      </node>
-      <node id="359">
-        <label>tuple</label>
-      </node>
-      <node id="382">
-        <label>ctime</label>
-      </node>
-      <node id="369">
-        <label>SFML/Graphics/Texture.hpp</label>
-      </node>
-      <node id="351">
-        <label>vector</label>
-      </node>
-      <node id="381">
-        <label>Spider.h</label>
-        <link refid="_spider_8h"/>
-        <childnode refid="360" relation="include">
-        </childnode>
-        <childnode refid="355" relation="include">
-        </childnode>
-        <childnode refid="345" relation="include">
-        </childnode>
-      </node>
-      <node id="383">
-        <label>CollisionHandler.h</label>
-        <link refid="_collision_handler_8h"/>
-        <childnode refid="354" relation="include">
-        </childnode>
-        <childnode refid="360" relation="include">
-        </childnode>
-        <childnode refid="384" relation="include">
-        </childnode>
-        <childnode refid="385" relation="include">
-        </childnode>
-        <childnode refid="362" relation="include">
-        </childnode>
-        <childnode refid="355" relation="include">
-        </childnode>
-        <childnode refid="353" relation="include">
-        </childnode>
-        <childnode refid="351" relation="include">
-        </childnode>
-        <childnode refid="352" relation="include">
-        </childnode>
-      </node>
-      <node id="355">
-        <label>ObjectType.h</label>
-        <link refid="_object_type_8h"/>
-      </node>
-      <node id="365">
-        <label>SplashScreen.h</label>
-        <link refid="_splash_screen_8h"/>
-        <childnode refid="347" relation="include">
-        </childnode>
-      </node>
-      <node id="370">
-        <label>SFML/Graphics/Rect.hpp</label>
-      </node>
-      <node id="376">
-        <label>StopWatch.h</label>
-        <link refid="_stop_watch_8h"/>
-      </node>
-      <node id="380">
-        <label>Scorpion.h</label>
-        <link refid="_scorpion_8h"/>
-        <childnode refid="360" relation="include">
-        </childnode>
-        <childnode refid="345" relation="include">
-        </childnode>
-      </node>
-      <node id="344">
-        <label>Logic.h</label>
-        <link refid="_logic_8h"/>
-        <childnode refid="345" relation="include">
-        </childnode>
-        <childnode refid="346" relation="include">
-        </childnode>
-        <childnode refid="371" relation="include">
-        </childnode>
-        <childnode refid="373" relation="include">
-        </childnode>
-        <childnode refid="374" relation="include">
-        </childnode>
-        <childnode refid="376" relation="include">
-        </childnode>
-        <childnode refid="377" relation="include">
-        </childnode>
-        <childnode refid="383" relation="include">
-        </childnode>
-        <childnode refid="351" relation="include">
-        </childnode>
-        <childnode refid="352" relation="include">
-        </childnode>
-        <childnode refid="353" relation="include">
-        </childnode>
-        <childnode refid="382" relation="include">
-        </childnode>
-      </node>
-      <node id="377">
-        <label>EnemyFactory.h</label>
-        <link refid="_enemy_factory_8h"/>
-        <childnode refid="362" relation="include">
-        </childnode>
-        <childnode refid="378" relation="include">
-        </childnode>
-        <childnode refid="380" relation="include">
-        </childnode>
-        <childnode refid="381" relation="include">
-        </childnode>
-        <childnode refid="351" relation="include">
-        </childnode>
-        <childnode refid="352" relation="include">
-        </childnode>
-        <childnode refid="382" relation="include">
-        </childnode>
-      </node>
-      <node id="362">
-        <label>CentipedeSegment.h</label>
-        <link refid="_centipede_segment_8h"/>
-        <childnode refid="360" relation="include">
-        </childnode>
-        <childnode refid="345" relation="include">
-        </childnode>
-        <childnode refid="353" relation="include">
-        </childnode>
-        <childnode refid="351" relation="include">
-        </childnode>
-      </node>
-      <node id="385">
-        <label>SeparatingAxisTheorem.h</label>
-        <link refid="_separating_axis_theorem_8h"/>
-        <childnode refid="357" relation="include">
-        </childnode>
-        <childnode refid="356" relation="include">
-        </childnode>
-        <childnode refid="358" relation="include">
-        </childnode>
-        <childnode refid="386" relation="include">
-        </childnode>
-        <childnode refid="353" relation="include">
-        </childnode>
-        <childnode refid="359" relation="include">
-        </childnode>
-        <childnode refid="351" relation="include">
-        </childnode>
-      </node>
-      <node id="374">
-        <label>Player.h</label>
-        <link refid="_player_8h"/>
-        <childnode refid="352" relation="include">
-        </childnode>
-        <childnode refid="351" relation="include">
-        </childnode>
-        <childnode refid="360" relation="include">
-        </childnode>
-        <childnode refid="345" relation="include">
-        </childnode>
-        <childnode refid="375" relation="include">
-        </childnode>
-        <childnode refid="376" relation="include">
-        </childnode>
-      </node>
-      <node id="368">
-        <label>SpriteSheet.h</label>
-        <link refid="_sprite_sheet_8h"/>
-        <childnode refid="369" relation="include">
-        </childnode>
-        <childnode refid="370" relation="include">
-        </childnode>
-        <childnode refid="361" relation="include">
-        </childnode>
-        <childnode refid="355" relation="include">
-        </childnode>
-      </node>
-      <node id="354">
-        <label>IEntity.h</label>
-        <link refid="_i_entity_8h"/>
-        <childnode refid="355" relation="include">
-        </childnode>
-        <childnode refid="356" relation="include">
-        </childnode>
-        <childnode refid="357" relation="include">
-        </childnode>
-      </node>
-      <node id="367">
-        <label>GameOverScreen.h</label>
-        <link refid="_game_over_screen_8h"/>
-        <childnode refid="347" relation="include">
-        </childnode>
-      </node>
-      <node id="361">
-        <label>Direction.h</label>
-        <link refid="_direction_8h"/>
-      </node>
-      <node id="346">
-        <label>Presentation.h</label>
-        <link refid="_presentation_8h"/>
-        <childnode refid="347" relation="include">
-        </childnode>
-        <childnode refid="348" relation="include">
-        </childnode>
-        <childnode refid="349" relation="include">
-        </childnode>
-        <childnode refid="350" relation="include">
-        </childnode>
-        <childnode refid="351" relation="include">
-        </childnode>
-        <childnode refid="352" relation="include">
-        </childnode>
-        <childnode refid="353" relation="include">
-        </childnode>
-        <childnode refid="354" relation="include">
-        </childnode>
-        <childnode refid="360" relation="include">
-        </childnode>
-        <childnode refid="362" relation="include">
+        <childnode refid="367" relation="include">
         </childnode>
         <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+      </node>
+      <node id="397">
+        <label>limits</label>
+      </node>
+      <node id="367">
+        <label>POSITION.H</label>
+      </node>
+      <node id="370">
+        <label>IMovingEntity.h</label>
+        <link refid="_i_moving_entity_8h"/>
+        <childnode refid="364" relation="include">
         </childnode>
         <childnode refid="365" relation="include">
         </childnode>
@@ -348,33 +42,351 @@
         </childnode>
         <childnode refid="367" relation="include">
         </childnode>
-        <childnode refid="368" relation="include">
+        <childnode refid="371" relation="include">
         </childnode>
+      </node>
+      <node id="376">
+        <label>GameWonScreen.h</label>
+        <link refid="_game_won_screen_8h"/>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="374" relation="include">
+        </childnode>
+      </node>
+      <node id="358">
+        <label>SFML/Audio/Sound.hpp</label>
+      </node>
+      <node id="355">
+        <label>Grid.h</label>
+        <link refid="_grid_8h"/>
+      </node>
+      <node id="368">
+        <label>cmath</label>
       </node>
       <node id="353">
-        <label>algorithm</label>
+        <label>Logic.cpp</label>
+        <link refid="_logic_8cpp"/>
+        <childnode refid="354" relation="include">
+        </childnode>
       </node>
-      <node id="349">
-        <label>SFML/Audio/Music.hpp</label>
+      <node id="373">
+        <label>AssetManager.h</label>
+        <link refid="_asset_manager_8h"/>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+      <node id="383">
+        <label>ScreenState.h</label>
+        <link refid="_screen_state_8h"/>
+      </node>
+      <node id="374">
+        <label>string</label>
+      </node>
+      <node id="390">
+        <label>Mushroom.h</label>
+        <link refid="_mushroom_8h"/>
+        <childnode refid="364" relation="include">
+        </childnode>
+      </node>
+      <node id="360">
+        <label>map</label>
+      </node>
+      <node id="387">
+        <label>PlayerBullet.h</label>
+        <link refid="_player_bullet_8h"/>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="382">
+        <label>fstream</label>
+      </node>
+      <node id="366">
+        <label>BoundaryBox.h</label>
+        <link refid="_boundary_box_8h"/>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+      <node id="381">
+        <label>HighScoreManager.h</label>
+        <link refid="_high_score_manager_8h"/>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="382" relation="include">
+        </childnode>
+      </node>
+      <node id="369">
+        <label>tuple</label>
+      </node>
+      <node id="393">
+        <label>ctime</label>
+      </node>
+      <node id="379">
+        <label>SFML/Graphics/Texture.hpp</label>
+      </node>
+      <node id="361">
+        <label>vector</label>
+      </node>
+      <node id="392">
+        <label>Spider.h</label>
+        <link refid="_spider_8h"/>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="394">
+        <label>CollisionHandler.h</label>
+        <link refid="_collision_handler_8h"/>
+        <childnode refid="364" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="396" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+      </node>
+      <node id="365">
+        <label>ObjectType.h</label>
+        <link refid="_object_type_8h"/>
+      </node>
+      <node id="375">
+        <label>SplashScreen.h</label>
+        <link refid="_splash_screen_8h"/>
+        <childnode refid="357" relation="include">
+        </childnode>
+      </node>
+      <node id="380">
+        <label>SFML/Graphics/Rect.hpp</label>
+      </node>
+      <node id="386">
+        <label>StopWatch.h</label>
+        <link refid="_stop_watch_8h"/>
+      </node>
+      <node id="391">
+        <label>Scorpion.h</label>
+        <link refid="_scorpion_8h"/>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="354">
+        <label>Logic.h</label>
+        <link refid="_logic_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="381" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="384" relation="include">
+        </childnode>
+        <childnode refid="386" relation="include">
+        </childnode>
+        <childnode refid="388" relation="include">
+        </childnode>
+        <childnode refid="394" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="393" relation="include">
+        </childnode>
+      </node>
+      <node id="388">
+        <label>EnemyFactory.h</label>
+        <link refid="_enemy_factory_8h"/>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="389" relation="include">
+        </childnode>
+        <childnode refid="391" relation="include">
+        </childnode>
+        <childnode refid="392" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="393" relation="include">
+        </childnode>
+      </node>
+      <node id="372">
+        <label>CentipedeSegment.h</label>
+        <link refid="_centipede_segment_8h"/>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+      <node id="396">
+        <label>SeparatingAxisTheorem.h</label>
+        <link refid="_separating_axis_theorem_8h"/>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="397" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+      </node>
+      <node id="384">
+        <label>Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="385" relation="include">
+        </childnode>
       </node>
       <node id="378">
-        <label>MushroomFactory.h</label>
-        <link refid="_mushroom_factory_8h"/>
+        <label>SpriteSheet.h</label>
+        <link refid="_sprite_sheet_8h"/>
         <childnode refid="379" relation="include">
         </childnode>
-        <childnode refid="345" relation="include">
+        <childnode refid="380" relation="include">
         </childnode>
-        <childnode refid="351" relation="include">
+        <childnode refid="371" relation="include">
         </childnode>
-        <childnode refid="352" relation="include">
+        <childnode refid="365" relation="include">
+        </childnode>
+      </node>
+      <node id="364">
+        <label>IEntity.h</label>
+        <link refid="_i_entity_8h"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+      </node>
+      <node id="377">
+        <label>GameOverScreen.h</label>
+        <link refid="_game_over_screen_8h"/>
+        <childnode refid="357" relation="include">
+        </childnode>
+      </node>
+      <node id="371">
+        <label>Direction.h</label>
+        <link refid="_direction_8h"/>
+      </node>
+      <node id="356">
+        <label>Presentation.h</label>
+        <link refid="_presentation_8h"/>
+        <childnode refid="357" relation="include">
         </childnode>
         <childnode refid="358" relation="include">
         </childnode>
-        <childnode refid="350" relation="include">
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="364" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+        <childnode refid="378" relation="include">
         </childnode>
       </node>
-      <node id="352">
+      <node id="363">
+        <label>algorithm</label>
+      </node>
+      <node id="359">
+        <label>SFML/Audio/Music.hpp</label>
+      </node>
+      <node id="389">
+        <label>MushroomFactory.h</label>
+        <link refid="_mushroom_factory_8h"/>
+        <childnode refid="390" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+      </node>
+      <node id="362">
         <label>memory</label>
+      </node>
+      <node id="385">
+        <label>Weapon.h</label>
+        <link refid="_weapon_8h"/>
+        <childnode refid="386" relation="include">
+        </childnode>
+        <childnode refid="387" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <briefdescription>

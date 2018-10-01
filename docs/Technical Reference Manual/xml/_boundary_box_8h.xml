@@ -37,23 +37,23 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="49">
+      <node id="51">
         <label>Scorpion.cpp</label>
         <link refid="_scorpion_8cpp"/>
       </node>
-      <node id="56">
+      <node id="58">
         <label>SpatialHash.h</label>
         <link refid="_spatial_hash_8h"/>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="57" relation="include">
+        <childnode refid="59" relation="include">
         </childnode>
       </node>
       <node id="28">
         <label>BoundaryBox.cpp</label>
         <link refid="_boundary_box_8cpp"/>
       </node>
-      <node id="47">
+      <node id="49">
         <label>PlayerBullet.cpp</label>
         <link refid="_player_bullet_8cpp"/>
       </node>
@@ -68,9 +68,9 @@
         </childnode>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
-        </childnode>
         <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
@@ -83,12 +83,12 @@
         <label>Logic.cpp</label>
         <link refid="_logic_8cpp"/>
       </node>
-      <node id="52">
+      <node id="54">
         <label>Mushroom.h</label>
         <link refid="_mushroom_8h"/>
-        <childnode refid="53" relation="include">
-        </childnode>
         <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
         </childnode>
       </node>
       <node id="34">
@@ -98,10 +98,14 @@
       <node id="46">
         <label>PlayerBullet.h</label>
         <link refid="_player_bullet_8h"/>
-        <childnode refid="44" relation="include">
-        </childnode>
         <childnode refid="47" relation="include">
         </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>Weapon.cpp</label>
+        <link refid="_weapon_8cpp"/>
       </node>
       <node id="35">
         <label>SeparatingAxisTheorem.cpp</label>
@@ -127,12 +131,12 @@
         <label>Presentation.cpp</label>
         <link refid="_presentation_8cpp"/>
       </node>
-      <node id="50">
+      <node id="52">
         <label>Spider.h</label>
         <link refid="_spider_8h"/>
         <childnode refid="41" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="53" relation="include">
         </childnode>
       </node>
       <node id="30">
@@ -147,20 +151,20 @@
         <label>main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="55">
+      <node id="57">
         <label>Mushroom.cpp</label>
         <link refid="_mushroom_8cpp"/>
       </node>
-      <node id="51">
+      <node id="53">
         <label>Spider.cpp</label>
         <link refid="_spider_8cpp"/>
       </node>
-      <node id="48">
+      <node id="50">
         <label>Scorpion.h</label>
         <link refid="_scorpion_8h"/>
         <childnode refid="41" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="51" relation="include">
         </childnode>
       </node>
       <node id="31">
@@ -195,7 +199,7 @@
         <label>Player.cpp</label>
         <link refid="_player_8cpp"/>
       </node>
-      <node id="54">
+      <node id="56">
         <label>MushroomFactory.cpp</label>
         <link refid="_mushroom_factory_8cpp"/>
       </node>
@@ -215,7 +219,7 @@
         <childnode refid="45" relation="include">
         </childnode>
       </node>
-      <node id="57">
+      <node id="59">
         <label>SpatialHash.cpp</label>
         <link refid="_spatial_hash_8cpp"/>
       </node>
@@ -226,11 +230,11 @@
         </childnode>
         <childnode refid="39" relation="include">
         </childnode>
-        <childnode refid="52" relation="include">
+        <childnode refid="54" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="56" relation="include">
+        <childnode refid="58" relation="include">
         </childnode>
       </node>
       <node id="37">
@@ -241,12 +245,20 @@
         <childnode refid="38" relation="include">
         </childnode>
       </node>
-      <node id="53">
+      <node id="55">
         <label>MushroomFactory.h</label>
         <link refid="_mushroom_factory_8h"/>
         <childnode refid="41" relation="include">
         </childnode>
-        <childnode refid="54" relation="include">
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>Weapon.h</label>
+        <link refid="_weapon_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

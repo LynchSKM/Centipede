@@ -4,26 +4,26 @@
     <compoundname>ScreenState.h</compoundname>
     <includedby refid="_logic_8h" local="yes">Logic.h</includedby>
     <invincdepgraph>
-      <node id="730">
+      <node id="749">
         <label>Logic.cpp</label>
         <link refid="_logic_8cpp"/>
       </node>
-      <node id="728">
+      <node id="747">
         <label>ScreenState.h</label>
         <link refid="_screen_state_8h"/>
-        <childnode refid="729" relation="include">
+        <childnode refid="748" relation="include">
         </childnode>
       </node>
-      <node id="731">
+      <node id="750">
         <label>main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="729">
+      <node id="748">
         <label>Logic.h</label>
         <link refid="_logic_8h"/>
-        <childnode refid="730" relation="include">
+        <childnode refid="749" relation="include">
         </childnode>
-        <childnode refid="731" relation="include">
+        <childnode refid="750" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

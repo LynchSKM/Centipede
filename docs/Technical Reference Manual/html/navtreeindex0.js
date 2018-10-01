@@ -98,6 +98,9 @@ var NAVTREEINDEX0 =
 "_stop_watch_8cpp.html":[2,0,48],
 "_stop_watch_8h.html":[2,0,49],
 "_stop_watch_8h_source.html":[2,0,49],
+"_weapon_8cpp.html":[2,0,50],
+"_weapon_8h.html":[2,0,51],
+"_weapon_8h_source.html":[2,0,51],
 "annotated.html":[1,0],
 "class_asset_manager.html":[1,0,0],
 "class_asset_manager.html#a0c46a45215485aa44fe26ed4c667b454":[1,0,0,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX0 =
 "class_i_entity.html#a27edea02cb754d0d3f94e1020b9fb19a":[1,0,10,1],
 "class_i_entity.html#a292e36b7c495008e22531cac64e95d5d":[1,0,10,4],
 "class_i_entity.html#a38bb9c809f0b0f95409780c4d48c6a90":[1,0,10,8],
-"class_i_entity.html#a3c69e2d0dd2bd40ec5865a1d974d5403":[1,0,10,6],
-"class_i_entity.html#a47fcdca7421587554746557400d0b793":[1,0,10,3],
-"class_i_entity.html#a65eb3725427ee2ac88dd8d21cef2bb27":[1,0,10,2],
-"class_i_entity.html#a8aea4fbca51d17a0ce314aaa4633f28e":[1,0,10,0]
+"class_i_entity.html#a3c69e2d0dd2bd40ec5865a1d974d5403":[1,0,10,6]
 };

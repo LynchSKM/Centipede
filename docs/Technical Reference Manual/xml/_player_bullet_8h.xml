@@ -4,117 +4,129 @@
     <compoundname>PlayerBullet.h</compoundname>
     <includes refid="_i_moving_entity_8h" local="yes">IMovingEntity.h</includes>
     <includes refid="_grid_8h" local="yes">Grid.h</includes>
-    <includedby refid="_player_8h" local="yes">Player.h</includedby>
+    <includedby refid="_weapon_8h" local="yes">Weapon.h</includedby>
     <includedby refid="_player_bullet_8cpp" local="yes">PlayerBullet.cpp</includedby>
     <incdepgraph>
-      <node id="623">
+      <node id="640">
         <label>POSITION.H</label>
       </node>
-      <node id="619">
+      <node id="636">
         <label>IMovingEntity.h</label>
         <link refid="_i_moving_entity_8h"/>
-        <childnode refid="620" relation="include">
+        <childnode refid="637" relation="include">
         </childnode>
-        <childnode refid="621" relation="include">
+        <childnode refid="638" relation="include">
         </childnode>
-        <childnode refid="622" relation="include">
+        <childnode refid="639" relation="include">
         </childnode>
-        <childnode refid="623" relation="include">
+        <childnode refid="640" relation="include">
         </childnode>
-        <childnode refid="627" relation="include">
+        <childnode refid="644" relation="include">
         </childnode>
       </node>
-      <node id="628">
+      <node id="645">
         <label>Grid.h</label>
         <link refid="_grid_8h"/>
       </node>
-      <node id="624">
+      <node id="641">
         <label>cmath</label>
       </node>
-      <node id="618">
+      <node id="635">
         <label>PlayerBullet.h</label>
         <link refid="_player_bullet_8h"/>
-        <childnode refid="619" relation="include">
+        <childnode refid="636" relation="include">
         </childnode>
-        <childnode refid="628" relation="include">
+        <childnode refid="645" relation="include">
         </childnode>
       </node>
-      <node id="622">
+      <node id="639">
         <label>BoundaryBox.h</label>
         <link refid="_boundary_box_8h"/>
-        <childnode refid="623" relation="include">
+        <childnode refid="640" relation="include">
         </childnode>
-        <childnode refid="624" relation="include">
+        <childnode refid="641" relation="include">
         </childnode>
-        <childnode refid="625" relation="include">
+        <childnode refid="642" relation="include">
         </childnode>
-        <childnode refid="626" relation="include">
+        <childnode refid="643" relation="include">
         </childnode>
       </node>
-      <node id="625">
+      <node id="642">
         <label>tuple</label>
       </node>
-      <node id="626">
+      <node id="643">
         <label>vector</label>
       </node>
-      <node id="621">
+      <node id="638">
         <label>ObjectType.h</label>
         <link refid="_object_type_8h"/>
       </node>
-      <node id="620">
+      <node id="637">
         <label>IEntity.h</label>
         <link refid="_i_entity_8h"/>
-        <childnode refid="621" relation="include">
+        <childnode refid="638" relation="include">
         </childnode>
-        <childnode refid="622" relation="include">
+        <childnode refid="639" relation="include">
         </childnode>
-        <childnode refid="623" relation="include">
+        <childnode refid="640" relation="include">
         </childnode>
       </node>
-      <node id="627">
+      <node id="644">
         <label>Direction.h</label>
         <link refid="_direction_8h"/>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="635">
+      <node id="654">
         <label>PlayerBullet.cpp</label>
         <link refid="_player_bullet_8cpp"/>
       </node>
-      <node id="632">
+      <node id="650">
         <label>Logic.cpp</label>
         <link refid="_logic_8cpp"/>
       </node>
-      <node id="629">
+      <node id="646">
         <label>PlayerBullet.h</label>
         <link refid="_player_bullet_8h"/>
-        <childnode refid="630" relation="include">
+        <childnode refid="647" relation="include">
         </childnode>
-        <childnode refid="635" relation="include">
+        <childnode refid="654" relation="include">
         </childnode>
       </node>
-      <node id="633">
+      <node id="653">
+        <label>Weapon.cpp</label>
+        <link refid="_weapon_8cpp"/>
+      </node>
+      <node id="651">
         <label>main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="631">
+      <node id="649">
         <label>Logic.h</label>
         <link refid="_logic_8h"/>
-        <childnode refid="632" relation="include">
+        <childnode refid="650" relation="include">
         </childnode>
-        <childnode refid="633" relation="include">
+        <childnode refid="651" relation="include">
         </childnode>
       </node>
-      <node id="634">
+      <node id="652">
         <label>Player.cpp</label>
         <link refid="_player_8cpp"/>
       </node>
-      <node id="630">
+      <node id="648">
         <label>Player.h</label>
         <link refid="_player_8h"/>
-        <childnode refid="631" relation="include">
+        <childnode refid="649" relation="include">
         </childnode>
-        <childnode refid="634" relation="include">
+        <childnode refid="652" relation="include">
+        </childnode>
+      </node>
+      <node id="647">
+        <label>Weapon.h</label>
+        <link refid="_weapon_8h"/>
+        <childnode refid="648" relation="include">
+        </childnode>
+        <childnode refid="653" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

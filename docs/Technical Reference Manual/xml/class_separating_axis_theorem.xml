@@ -321,16 +321,16 @@
 <simplesect kind="version"><para>3.0 </para></simplesect>
 </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="128">
+      <node id="130">
         <label>SeparatingAxisTheorem</label>
         <link refid="class_separating_axis_theorem"/>
-        <childnode refid="129" relation="usage">
+        <childnode refid="131" relation="usage">
           <edgelabel>vertices_rectB_</edgelabel>
           <edgelabel>axes_</edgelabel>
           <edgelabel>vertices_rectA_</edgelabel>
         </childnode>
       </node>
-      <node id="129">
+      <node id="131">
         <label>vector&lt; Position &gt;</label>
       </node>
     </collaborationgraph>

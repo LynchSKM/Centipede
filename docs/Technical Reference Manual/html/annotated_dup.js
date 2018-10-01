@@ -29,5 +29,6 @@ var annotated_dup =
     [ "SpiderDimensions", "struct_spider_dimensions.html", "struct_spider_dimensions" ],
     [ "SplashScreen", "class_splash_screen.html", "class_splash_screen" ],
     [ "SpriteSheet", "class_sprite_sheet.html", "class_sprite_sheet" ],
-    [ "StopWatch", "class_stop_watch.html", "class_stop_watch" ]
+    [ "StopWatch", "class_stop_watch.html", "class_stop_watch" ],
+    [ "Weapon", "class_weapon.html", "class_weapon" ]
 ];

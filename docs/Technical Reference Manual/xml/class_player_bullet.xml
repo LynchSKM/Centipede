@@ -335,51 +335,51 @@
 <simplesect kind="version"><para>3.0 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="100">
+      <node id="102">
         <label>PlayerBullet</label>
         <link refid="class_player_bullet"/>
-        <childnode refid="101" relation="public-inheritance">
+        <childnode refid="103" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="102">
+      <node id="104">
         <label>IEntity</label>
         <link refid="class_i_entity"/>
       </node>
-      <node id="101">
+      <node id="103">
         <label>IMovingEntity</label>
         <link refid="class_i_moving_entity"/>
-        <childnode refid="102" relation="public-inheritance">
+        <childnode refid="104" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="103">
+      <node id="105">
         <label>PlayerBullet</label>
         <link refid="class_player_bullet"/>
-        <childnode refid="104" relation="public-inheritance">
+        <childnode refid="106" relation="public-inheritance">
         </childnode>
-        <childnode refid="106" relation="usage">
+        <childnode refid="108" relation="usage">
           <edgelabel>dimensions_</edgelabel>
         </childnode>
-        <childnode refid="107" relation="usage">
+        <childnode refid="109" relation="usage">
           <edgelabel>grid_</edgelabel>
         </childnode>
       </node>
-      <node id="105">
+      <node id="107">
         <label>IEntity</label>
         <link refid="class_i_entity"/>
       </node>
-      <node id="107">
+      <node id="109">
         <label>Grid</label>
         <link refid="class_grid"/>
       </node>
-      <node id="104">
+      <node id="106">
         <label>IMovingEntity</label>
         <link refid="class_i_moving_entity"/>
-        <childnode refid="105" relation="public-inheritance">
+        <childnode refid="107" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="106">
+      <node id="108">
         <label>PlayerBulletDimensions</label>
         <link refid="struct_player_bullet_dimensions"/>
       </node>

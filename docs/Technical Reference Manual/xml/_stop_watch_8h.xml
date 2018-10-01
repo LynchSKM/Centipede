@@ -2,50 +2,62 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="_stop_watch_8h" kind="file" language="C++">
     <compoundname>StopWatch.h</compoundname>
-    <includedby refid="_player_8h" local="yes">Player.h</includedby>
+    <includedby refid="_weapon_8h" local="yes">Weapon.h</includedby>
     <includedby refid="_logic_8h" local="yes">Logic.h</includedby>
     <includedby refid="_stop_watch_8cpp" local="yes">StopWatch.cpp</includedby>
     <invincdepgraph>
-      <node id="864">
+      <node id="884">
         <label>Logic.cpp</label>
         <link refid="_logic_8cpp"/>
       </node>
-      <node id="865">
+      <node id="887">
+        <label>Weapon.cpp</label>
+        <link refid="_weapon_8cpp"/>
+      </node>
+      <node id="885">
         <label>main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="867">
+      <node id="888">
         <label>StopWatch.cpp</label>
         <link refid="_stop_watch_8cpp"/>
       </node>
-      <node id="861">
+      <node id="880">
         <label>StopWatch.h</label>
         <link refid="_stop_watch_8h"/>
-        <childnode refid="862" relation="include">
+        <childnode refid="881" relation="include">
         </childnode>
-        <childnode refid="863" relation="include">
+        <childnode refid="883" relation="include">
         </childnode>
-        <childnode refid="867" relation="include">
+        <childnode refid="888" relation="include">
         </childnode>
       </node>
-      <node id="863">
+      <node id="883">
         <label>Logic.h</label>
         <link refid="_logic_8h"/>
-        <childnode refid="864" relation="include">
+        <childnode refid="884" relation="include">
         </childnode>
-        <childnode refid="865" relation="include">
+        <childnode refid="885" relation="include">
         </childnode>
       </node>
-      <node id="866">
+      <node id="886">
         <label>Player.cpp</label>
         <link refid="_player_8cpp"/>
       </node>
-      <node id="862">
+      <node id="882">
         <label>Player.h</label>
         <link refid="_player_8h"/>
-        <childnode refid="863" relation="include">
+        <childnode refid="883" relation="include">
         </childnode>
-        <childnode refid="866" relation="include">
+        <childnode refid="886" relation="include">
+        </childnode>
+      </node>
+      <node id="881">
+        <label>Weapon.h</label>
+        <link refid="_weapon_8h"/>
+        <childnode refid="882" relation="include">
+        </childnode>
+        <childnode refid="887" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

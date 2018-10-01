@@ -52,6 +52,8 @@
     <innerfile refid="_sprite_sheet_8h">SpriteSheet.h</innerfile>
     <innerfile refid="_stop_watch_8cpp">StopWatch.cpp</innerfile>
     <innerfile refid="_stop_watch_8h">StopWatch.h</innerfile>
+    <innerfile refid="_weapon_8cpp">Weapon.cpp</innerfile>
+    <innerfile refid="_weapon_8h">Weapon.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

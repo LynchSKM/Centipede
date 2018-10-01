@@ -148,9 +148,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a02cfcf9b1c798596594a9e9e0b5f64a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a02cfcf9b1c798596594a9e9e0b5f64a0">poison</a> () override</td></tr>
 <tr class="memdesc:a02cfcf9b1c798596594a9e9e0b5f64a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that will not be implemented because a <a class="el" href="class_player.html" title="This is a Player Class that inherits from the IMovingEntity class. It contains virtual functions that...">Player</a> object cannot be poisoned.  <a href="#a02cfcf9b1c798596594a9e9e0b5f64a0">More...</a><br /></td></tr>
 <tr class="separator:a02cfcf9b1c798596594a9e9e0b5f64a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87ee64cb925735f3d1516cc62a7a6311"><td class="memItemLeft" align="right" valign="top">vector&lt; shared_ptr&lt; <a class="el" href="class_i_moving_entity.html">IMovingEntity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a87ee64cb925735f3d1516cc62a7a6311">shoot</a> ()</td></tr>
-<tr class="memdesc:a87ee64cb925735f3d1516cc62a7a6311"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates player bullets and stores them in a vector.  <a href="#a87ee64cb925735f3d1516cc62a7a6311">More...</a><br /></td></tr>
-<tr class="separator:a87ee64cb925735f3d1516cc62a7a6311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca4a0c411b674096dc30c6a6da8f305"><td class="memItemLeft" align="right" valign="top">vector&lt; shared_ptr&lt; <a class="el" href="class_player_bullet.html">PlayerBullet</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3ca4a0c411b674096dc30c6a6da8f305">shoot</a> ()</td></tr>
+<tr class="memdesc:a3ca4a0c411b674096dc30c6a6da8f305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates player bullets and returns them in a vector.  <a href="#a3ca4a0c411b674096dc30c6a6da8f305">More...</a><br /></td></tr>
+<tr class="separator:a3ca4a0c411b674096dc30c6a6da8f305"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78c89f5a5b61269fe3c8bfde9d3aa62a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a78c89f5a5b61269fe3c8bfde9d3aa62a">addScore</a> (int score)</td></tr>
 <tr class="memdesc:a78c89f5a5b61269fe3c8bfde9d3aa62a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the given score to the player's current score.  <a href="#a78c89f5a5b61269fe3c8bfde9d3aa62a">More...</a><br /></td></tr>
 <tr class="separator:a78c89f5a5b61269fe3c8bfde9d3aa62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,8 +171,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a3e6f28c430e292e5b02d726343de36bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3e6f28c430e292e5b02d726343de36bc">objectType_</a></td></tr>
-<tr class="separator:a3e6f28c430e292e5b02d726343de36bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fbd6d307e3c8361da9e65eefba59aef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a4fbd6d307e3c8361da9e65eefba59aef">numberOfLives_</a></td></tr>
 <tr class="separator:a4fbd6d307e3c8361da9e65eefba59aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a423e2096b25d4965a84e4a8bf38c7683"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a423e2096b25d4965a84e4a8bf38c7683">score_</a> = 0</td></tr>
@@ -181,16 +179,14 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a50b3d8da6a0895a8dbe32d15fc1475d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a488aefe7db11bf1d6e7a8adfa52a2b4e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_grid.html">Grid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a488aefe7db11bf1d6e7a8adfa52a2b4e">grid_</a></td></tr>
 <tr class="separator:a488aefe7db11bf1d6e7a8adfa52a2b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9d6bae67d3896422573a38cce7f800a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stop_watch.html">StopWatch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae9d6bae67d3896422573a38cce7f800a">reload_timer</a></td></tr>
-<tr class="separator:ae9d6bae67d3896422573a38cce7f800a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e505498701d853cf3de3660e8d25dde"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a9e505498701d853cf3de3660e8d25dde">timeSinceLastShoot</a></td></tr>
-<tr class="separator:a9e505498701d853cf3de3660e8d25dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aeb798d1d4ed038421e9ea001e47236"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5aeb798d1d4ed038421e9ea001e47236">reload_time</a></td></tr>
-<tr class="separator:a5aeb798d1d4ed038421e9ea001e47236"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09e7aba1297b153aa896dc84a2eacce0"><td class="memItemLeft" align="right" valign="top">Position&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a09e7aba1297b153aa896dc84a2eacce0">position_</a></td></tr>
 <tr class="separator:a09e7aba1297b153aa896dc84a2eacce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a035573615cefddd933c9e6babd5605fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a035573615cefddd933c9e6babd5605fe">direction_</a></td></tr>
 <tr class="separator:a035573615cefddd933c9e6babd5605fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f43d0218a8e66a4d6578f618c8bc83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_weapon.html">Weapon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a79f43d0218a8e66a4d6578f618c8bc83">weapon_</a></td></tr>
+<tr class="separator:a79f43d0218a8e66a4d6578f618c8bc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a854d2be4ad2453d5373227db1413134e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_player_dimension.html">PlayerDimension</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a854d2be4ad2453d5373227db1413134e">dimensions_</a></td></tr>
+<tr class="separator:a854d2be4ad2453d5373227db1413134e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is a <a class="el" href="class_player.html" title="This is a Player Class that inherits from the IMovingEntity class. It contains virtual functions that...">Player</a> Class that inherits from the <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a> class. It contains virtual functions that have been overridden. It models a <a class="el" href="class_player.html" title="This is a Player Class that inherits from the IMovingEntity class. It contains virtual functions that...">Player</a> object. A <a class="el" href="class_player.html" title="This is a Player Class that inherits from the IMovingEntity class. It contains virtual functions that...">Player</a> can move and can shoot bullets. </p>
@@ -679,14 +675,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a87ee64cb925735f3d1516cc62a7a6311"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87ee64cb925735f3d1516cc62a7a6311">&#9670;&nbsp;</a></span>shoot()</h2>
+<a id="a3ca4a0c411b674096dc30c6a6da8f305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ca4a0c411b674096dc30c6a6da8f305">&#9670;&nbsp;</a></span>shoot()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt; shared_ptr&lt; <a class="el" href="class_i_moving_entity.html">IMovingEntity</a> &gt; &gt; Player::shoot </td>
+          <td class="memname">vector&lt; shared_ptr&lt; <a class="el" href="class_player_bullet.html">PlayerBullet</a> &gt; &gt; Player::shoot </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -694,12 +690,34 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates player bullets and stores them in a vector. </p>
-<dl class="section return"><dt>Returns</dt><dd>a vector of shared_ptr to <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. </dd></dl>
+<p>Creates player bullets and returns them in a vector. </p>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;shared_ptr&lt;PlayerBullet&gt;&gt; </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a854d2be4ad2453d5373227db1413134e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a854d2be4ad2453d5373227db1413134e">&#9670;&nbsp;</a></span>dimensions_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_player_dimension.html">PlayerDimension</a> Player::dimensions_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a035573615cefddd933c9e6babd5605fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a035573615cefddd933c9e6babd5605fe">&#9670;&nbsp;</a></span>direction_</h2>
 
@@ -788,28 +806,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3e6f28c430e292e5b02d726343de36bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e6f28c430e292e5b02d726343de36bc">&#9670;&nbsp;</a></span>objectType_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> Player::objectType_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a09e7aba1297b153aa896dc84a2eacce0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09e7aba1297b153aa896dc84a2eacce0">&#9670;&nbsp;</a></span>position_</h2>
 
@@ -821,50 +817,6 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">Position Player::position_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5aeb798d1d4ed038421e9ea001e47236"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aeb798d1d4ed038421e9ea001e47236">&#9670;&nbsp;</a></span>reload_time</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double Player::reload_time</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae9d6bae67d3896422573a38cce7f800a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9d6bae67d3896422573a38cce7f800a">&#9670;&nbsp;</a></span>reload_timer</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_stop_watch.html">StopWatch</a> Player::reload_timer</td>
         </tr>
       </table>
   </td>
@@ -898,8 +850,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9e505498701d853cf3de3660e8d25dde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e505498701d853cf3de3660e8d25dde">&#9670;&nbsp;</a></span>timeSinceLastShoot</h2>
+<a id="a79f43d0218a8e66a4d6578f618c8bc83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79f43d0218a8e66a4d6578f618c8bc83">&#9670;&nbsp;</a></span>weapon_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -908,7 +860,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double Player::timeSinceLastShoot</td>
+          <td class="memname"><a class="el" href="class_weapon.html">Weapon</a> Player::weapon_</td>
         </tr>
       </table>
   </td>
@@ -930,7 +882,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_player.html">Player</a></li>
-    <li class="footer">Generated on Mon Oct 1 2018 01:24:34 for elen3009-project-2018 by
+    <li class="footer">Generated on Mon Oct 1 2018 02:00:52 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

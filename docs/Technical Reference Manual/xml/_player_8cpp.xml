@@ -4,102 +4,114 @@
     <compoundname>Player.cpp</compoundname>
     <includes refid="_player_8h" local="yes">Player.h</includes>
     <incdepgraph>
-      <node id="578">
+      <node id="593">
         <label>POSITION.H</label>
       </node>
-      <node id="574">
+      <node id="589">
         <label>IMovingEntity.h</label>
         <link refid="_i_moving_entity_8h"/>
-        <childnode refid="575" relation="include">
+        <childnode refid="590" relation="include">
         </childnode>
-        <childnode refid="576" relation="include">
+        <childnode refid="591" relation="include">
         </childnode>
-        <childnode refid="577" relation="include">
+        <childnode refid="592" relation="include">
         </childnode>
-        <childnode refid="578" relation="include">
+        <childnode refid="593" relation="include">
         </childnode>
-        <childnode refid="581" relation="include">
+        <childnode refid="596" relation="include">
         </childnode>
       </node>
-      <node id="582">
+      <node id="597">
         <label>Grid.h</label>
         <link refid="_grid_8h"/>
       </node>
-      <node id="579">
+      <node id="594">
         <label>cmath</label>
       </node>
-      <node id="583">
+      <node id="600">
         <label>PlayerBullet.h</label>
         <link refid="_player_bullet_8h"/>
-        <childnode refid="574" relation="include">
+        <childnode refid="589" relation="include">
         </childnode>
-        <childnode refid="582" relation="include">
+        <childnode refid="597" relation="include">
         </childnode>
       </node>
-      <node id="577">
+      <node id="592">
         <label>BoundaryBox.h</label>
         <link refid="_boundary_box_8h"/>
-        <childnode refid="578" relation="include">
+        <childnode refid="593" relation="include">
         </childnode>
-        <childnode refid="579" relation="include">
+        <childnode refid="594" relation="include">
         </childnode>
-        <childnode refid="580" relation="include">
+        <childnode refid="595" relation="include">
         </childnode>
-        <childnode refid="573" relation="include">
+        <childnode refid="588" relation="include">
         </childnode>
       </node>
-      <node id="580">
+      <node id="595">
         <label>tuple</label>
       </node>
-      <node id="573">
+      <node id="588">
         <label>vector</label>
       </node>
-      <node id="576">
+      <node id="591">
         <label>ObjectType.h</label>
         <link refid="_object_type_8h"/>
       </node>
-      <node id="584">
+      <node id="599">
         <label>StopWatch.h</label>
         <link refid="_stop_watch_8h"/>
       </node>
-      <node id="570">
+      <node id="585">
         <label>Player.cpp</label>
         <link refid="_player_8cpp"/>
-        <childnode refid="571" relation="include">
+        <childnode refid="586" relation="include">
         </childnode>
       </node>
-      <node id="571">
+      <node id="586">
         <label>Player.h</label>
         <link refid="_player_8h"/>
-        <childnode refid="572" relation="include">
+        <childnode refid="587" relation="include">
         </childnode>
-        <childnode refid="573" relation="include">
+        <childnode refid="588" relation="include">
         </childnode>
-        <childnode refid="574" relation="include">
+        <childnode refid="589" relation="include">
         </childnode>
-        <childnode refid="582" relation="include">
+        <childnode refid="597" relation="include">
         </childnode>
-        <childnode refid="583" relation="include">
-        </childnode>
-        <childnode refid="584" relation="include">
+        <childnode refid="598" relation="include">
         </childnode>
       </node>
-      <node id="575">
+      <node id="590">
         <label>IEntity.h</label>
         <link refid="_i_entity_8h"/>
-        <childnode refid="576" relation="include">
+        <childnode refid="591" relation="include">
         </childnode>
-        <childnode refid="577" relation="include">
+        <childnode refid="592" relation="include">
         </childnode>
-        <childnode refid="578" relation="include">
+        <childnode refid="593" relation="include">
         </childnode>
       </node>
-      <node id="581">
+      <node id="596">
         <label>Direction.h</label>
         <link refid="_direction_8h"/>
       </node>
-      <node id="572">
+      <node id="587">
         <label>memory</label>
+      </node>
+      <node id="598">
+        <label>Weapon.h</label>
+        <link refid="_weapon_8h"/>
+        <childnode refid="599" relation="include">
+        </childnode>
+        <childnode refid="600" relation="include">
+        </childnode>
+        <childnode refid="593" relation="include">
+        </childnode>
+        <childnode refid="587" relation="include">
+        </childnode>
+        <childnode refid="588" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -109,161 +121,147 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_player_8h" kindref="compound">Player.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="class_player_1ae1264a74e8aed292f9a57a4234a12ce1" refkind="member"><highlight class="normal"><ref refid="class_player_1ae1264a74e8aed292f9a57a4234a12ce1" kindref="member">Player::Player</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_grid" kindref="compound">Grid</ref>&amp;<sp/>grid):grid_{grid},<ref refid="class_player_1a3e6f28c430e292e5b02d726343de36bc" kindref="member">objectType_</ref>{<ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855" kindref="member">ObjectType::PLAYER</ref>},<sp/><ref refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" kindref="member">numberOfLives_</ref>{3},<sp/><ref refid="class_player_1a035573615cefddd933c9e6babd5605fe" kindref="member">direction_</ref>{<ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaab50339a10e1de285ac99d4c3990b8693" kindref="member">Direction::NONE</ref>}</highlight></codeline>
-<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setX_pos(<ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1a0d9e03cd17d99ff13a044d027012a9e2" kindref="member">getWidth</ref>()/2.0);</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_player_dimension" kindref="compound">PlayerDimension</ref><sp/>playerDimension;</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setY_pos(<ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" kindref="member">getHeight</ref>()-playerDimension.<ref refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" kindref="member">height</ref>*0.5);</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1ae9d6bae67d3896422573a38cce7f800a" kindref="member">reload_timer</ref>.<ref refid="class_stop_watch_1a09a3c8f9ab03d7b28e4f8b90a833974e" kindref="member">start</ref>();</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a9e505498701d853cf3de3660e8d25dde" kindref="member">timeSinceLastShoot</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a5aeb798d1d4ed038421e9ea001e47236" kindref="member">reload_time</ref><sp/>=<sp/>0.175;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" refkind="member"><highlight class="normal"><ref refid="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" kindref="member">Player::~Player</ref>(){</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="class_player_1a1d35b7b1cd1a890042abdfdc55cafb14" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a1d35b7b1cd1a890042abdfdc55cafb14" kindref="member">Player::move</ref>()</highlight></codeline>
-<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_player_dimension" kindref="compound">PlayerDimension</ref><sp/>Dimension;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxWidth<sp/>=<sp/><ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1a0d9e03cd17d99ff13a044d027012a9e2" kindref="member">getWidth</ref>()-16.0f;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>minHeight<sp/>=<sp/><ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" kindref="member">getHeight</ref>()-<sp/><ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" kindref="member">getHeight</ref>()*0.2;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxHeight<sp/>=<sp/><ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" kindref="member">getHeight</ref>();</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>newXPos<sp/>=<sp/>0.0f;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>newYPos<sp/>=<sp/>0.0f;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_player_1a035573615cefddd933c9e6babd5605fe" kindref="member">direction_</ref>){</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f" kindref="member">Direction::DOWN</ref>:</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newYPos<sp/>=<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.getY_pos()<sp/>+<sp/>Dimension.<ref refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" kindref="member">speed</ref>;</highlight></codeline>
+<codeline lineno="3" refid="class_player_1ae1264a74e8aed292f9a57a4234a12ce1" refkind="member"><highlight class="normal"><ref refid="class_player_1ae1264a74e8aed292f9a57a4234a12ce1" kindref="member">Player::Player</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_grid" kindref="compound">Grid</ref>&amp;<sp/>grid):</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>grid_{grid},</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" kindref="member">numberOfLives_</ref>{3},</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a035573615cefddd933c9e6babd5605fe" kindref="member">direction_</ref>{<ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaab50339a10e1de285ac99d4c3990b8693" kindref="member">Direction::NONE</ref>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setX_pos(<ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1a0d9e03cd17d99ff13a044d027012a9e2" kindref="member">getWidth</ref>()/2.0);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setY_pos(<ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" kindref="member">getHeight</ref>()-<ref refid="class_player_1a854d2be4ad2453d5373227db1413134e" kindref="member">dimensions_</ref>.<ref refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" kindref="member">height</ref>*0.5);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" refkind="member"><highlight class="normal"><ref refid="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" kindref="member">Player::~Player</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_player_1a1d35b7b1cd1a890042abdfdc55cafb14" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a1d35b7b1cd1a890042abdfdc55cafb14" kindref="member">Player::move</ref>()</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxWidth<sp/><sp/>=<sp/><ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1a0d9e03cd17d99ff13a044d027012a9e2" kindref="member">getWidth</ref>()-16.0f;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>minHeight<sp/>=<sp/><ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" kindref="member">getHeight</ref>()-<sp/><ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" kindref="member">getHeight</ref>()*0.2;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxHeight<sp/>=<sp/><ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" kindref="member">getHeight</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>newXPos<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>newYPos<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_player_1a035573615cefddd933c9e6babd5605fe" kindref="member">direction_</ref>)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f" kindref="member">Direction::DOWN</ref>:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newYPos<sp/>=<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.getY_pos()<sp/>+<sp/><ref refid="class_player_1a854d2be4ad2453d5373227db1413134e" kindref="member">dimensions_</ref>.<ref refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" kindref="member">speed</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newYPos<sp/>&lt;=<sp/>(maxHeight-8.0f))<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setY_pos(newYPos);</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newYPos<sp/>&lt;=<sp/>(maxHeight-8.0f))<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setY_pos(newYPos);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758" kindref="member">Direction::LEFT</ref>:</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newXPos<sp/>=<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.getX_pos()-<sp/>Dimension.<ref refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" kindref="member">speed</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758" kindref="member">Direction::LEFT</ref>:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newXPos<sp/>=<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.getX_pos()-<ref refid="class_player_1a854d2be4ad2453d5373227db1413134e" kindref="member">dimensions_</ref>.<ref refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" kindref="member">speed</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newXPos<sp/>&gt;=<sp/>8.0f)<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setX_pos(newXPos);</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newXPos<sp/>&gt;=<sp/>8.0f)<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setX_pos(newXPos);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403" kindref="member">Direction::RIGHT</ref>:</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newXPos<sp/>=<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.getX_pos()+<sp/>Dimension.<ref refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" kindref="member">speed</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403" kindref="member">Direction::RIGHT</ref>:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newXPos<sp/>=<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.getX_pos()+<ref refid="class_player_1a854d2be4ad2453d5373227db1413134e" kindref="member">dimensions_</ref>.<ref refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" kindref="member">speed</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newXPos<sp/>&lt;=<sp/>(maxWidth+8.0f))<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setX_pos(newXPos);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newXPos<sp/>&lt;=<sp/>(maxWidth+8.0f))<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setX_pos(newXPos);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaafbaedde498cdead4f2780217646e9ba1" kindref="member">Direction::UP</ref>:</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newYPos<sp/>=<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.getY_pos()<sp/>-<sp/>Dimension.<ref refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" kindref="member">speed</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaafbaedde498cdead4f2780217646e9ba1" kindref="member">Direction::UP</ref>:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newYPos<sp/>=<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.getY_pos()<sp/>-<sp/><ref refid="class_player_1a854d2be4ad2453d5373227db1413134e" kindref="member">dimensions_</ref>.<ref refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" kindref="member">speed</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newYPos&gt;=<sp/>minHeight)<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setY_pos(newYPos);</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newYPos&gt;=<sp/>minHeight)<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setY_pos(newYPos);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>default<sp/>:</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>default<sp/>:</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//switch</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="class_player_1a8ea245370effb787864b15c6d3b9da8b" refkind="member"><highlight class="normal"><ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980" kindref="member">ObjectType</ref><sp/><ref refid="class_player_1a8ea245370effb787864b15c6d3b9da8b" kindref="member">Player::getObjectType</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="62"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_1a3e6f28c430e292e5b02d726343de36bc" kindref="member">objectType_</ref>;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="class_player_1aff8414311198ed6cc5fdc94073c5d6c3" refkind="member"><highlight class="normal">Position<sp/><ref refid="class_player_1aff8414311198ed6cc5fdc94073c5d6c3" kindref="member">Player::getPosition</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="67"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71" refid="class_player_1ac7a81aa0978a947b68033525dbdbce3b" refkind="member"><highlight class="normal"><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref><sp/><ref refid="class_player_1ac7a81aa0978a947b68033525dbdbce3b" kindref="member">Player::getBoundaryBox</ref>()</highlight></codeline>
-<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_player_dimension" kindref="compound">PlayerDimension</ref><sp/>player_box;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref><sp/>box{<ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>,player_box.<ref refid="struct_player_dimension_1a4d956985539b298b9f44c76d0bd94ad8" kindref="member">width</ref>,<sp/>player_box.<ref refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" kindref="member">height</ref>,<sp/>0.0};</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//boundary_box_<sp/>=<sp/>box;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>box;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79" refid="class_player_1ae945f733814a4fa0e5206bb5a65049f5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_1ae945f733814a4fa0e5206bb5a65049f5" kindref="member">Player::isAlive</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="80"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" kindref="member">numberOfLives_</ref>&gt;0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86" refid="class_player_1a0d03e19852d55e723299269143eed972" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a0d03e19852d55e723299269143eed972" kindref="member">Player::eliminated</ref>()</highlight></codeline>
-<codeline lineno="87"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" kindref="member">hasBeenHit_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" kindref="member">numberOfLives_</ref>--;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//switch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_player_1a8ea245370effb787864b15c6d3b9da8b" refkind="member"><highlight class="normal"><ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980" kindref="member">ObjectType</ref><sp/><ref refid="class_player_1a8ea245370effb787864b15c6d3b9da8b" kindref="member">Player::getObjectType</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="60"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855" kindref="member">ObjectType::PLAYER</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_player_1aff8414311198ed6cc5fdc94073c5d6c3" refkind="member"><highlight class="normal">Position<sp/><ref refid="class_player_1aff8414311198ed6cc5fdc94073c5d6c3" kindref="member">Player::getPosition</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="65"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="class_player_1ac7a81aa0978a947b68033525dbdbce3b" refkind="member"><highlight class="normal"><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref><sp/><ref refid="class_player_1ac7a81aa0978a947b68033525dbdbce3b" kindref="member">Player::getBoundaryBox</ref>()</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref>{<ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>,<ref refid="class_player_1a854d2be4ad2453d5373227db1413134e" kindref="member">dimensions_</ref>.<ref refid="struct_player_dimension_1a4d956985539b298b9f44c76d0bd94ad8" kindref="member">width</ref>,<sp/><ref refid="class_player_1a854d2be4ad2453d5373227db1413134e" kindref="member">dimensions_</ref>.<ref refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" kindref="member">height</ref>,<sp/>0.0};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_player_1ae945f733814a4fa0e5206bb5a65049f5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_1ae945f733814a4fa0e5206bb5a65049f5" kindref="member">Player::isAlive</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="75"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" kindref="member">numberOfLives_</ref>&gt;0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_player_1a0d03e19852d55e723299269143eed972" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a0d03e19852d55e723299269143eed972" kindref="member">Player::eliminated</ref>()</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" kindref="member">hasBeenHit_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" kindref="member">numberOfLives_</ref>--;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="class_player_1a1f81977b3897c45394f2c6b76100bc0d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_1a1f81977b3897c45394f2c6b76100bc0d" kindref="member">Player::isHit</ref>()</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" kindref="member">hasBeenHit_</ref>;</highlight></codeline>
 <codeline lineno="90"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="91" refid="class_player_1a1f81977b3897c45394f2c6b76100bc0d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_1a1f81977b3897c45394f2c6b76100bc0d" kindref="member">Player::isHit</ref>()</highlight></codeline>
-<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" kindref="member">hasBeenHit_</ref>;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96" refid="class_player_1a0c082a39764e0aea1e2c3ef5710a4380" refkind="member"><highlight class="normal"><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref><sp/><ref refid="class_player_1a0c082a39764e0aea1e2c3ef5710a4380" kindref="member">Player::getDirection</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="97"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_1a035573615cefddd933c9e6babd5605fe" kindref="member">direction_</ref>;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101" refid="class_player_1a4b1ae38fa48bb6db1a1783af28935402" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a4b1ae38fa48bb6db1a1783af28935402" kindref="member">Player::setDirection</ref>(<ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref><sp/>direction)</highlight></codeline>
-<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a035573615cefddd933c9e6babd5605fe" kindref="member">direction_</ref><sp/>=<sp/>direction;</highlight></codeline>
-<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106" refid="class_player_1a8b960f63915f61b6d511865290dc3a56" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_player_1a8b960f63915f61b6d511865290dc3a56" kindref="member">Player::getRemainingLives</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="107"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" kindref="member">numberOfLives_</ref>;</highlight></codeline>
-<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111" refid="class_player_1a0c8161e76c6c2a68d423174020e34387" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_1a0c8161e76c6c2a68d423174020e34387" kindref="member">Player::isPoisoned</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="112"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116" refid="class_player_1a02cfcf9b1c798596594a9e9e0b5f64a0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a02cfcf9b1c798596594a9e9e0b5f64a0" kindref="member">Player::poison</ref>()</highlight></codeline>
-<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121" refid="class_player_1a87ee64cb925735f3d1516cc62a7a6311" refkind="member"><highlight class="normal">vector<sp/>&lt;shared_ptr&lt;IMovingEntity&gt;&gt;<sp/><ref refid="class_player_1a87ee64cb925735f3d1516cc62a7a6311" kindref="member">Player::shoot</ref>()</highlight></codeline>
-<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;shared_ptr&lt;IMovingEntity&gt;&gt;<sp/>bullets;</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1ae9d6bae67d3896422573a38cce7f800a" kindref="member">reload_timer</ref>.<ref refid="class_stop_watch_1add564bbd185e94d010fb1acff1620844" kindref="member">pause</ref>();</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>time_elapsed<sp/>=<sp/><ref refid="class_player_1ae9d6bae67d3896422573a38cce7f800a" kindref="member">reload_timer</ref>.<ref refid="class_stop_watch_1a2bf006c59e86045c58a7d2ac5269c849" kindref="member">getPauseTime</ref>();</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((time_elapsed-<ref refid="class_player_1a9e505498701d853cf3de3660e8d25dde" kindref="member">timeSinceLastShoot</ref>)&gt;<ref refid="class_player_1a5aeb798d1d4ed038421e9ea001e47236" kindref="member">reload_time</ref>){</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_player_bullet_dimensions" kindref="compound">PlayerBulletDimensions</ref><sp/>dimension;</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>xVal<sp/>=<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.getX_pos()-dimension.<ref refid="struct_player_bullet_dimensions_1a2c55e33cf71fe300bcc0518ee1df0729" kindref="member">speed</ref>;</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>yVal<sp/>=<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.getY_pos()-dimension.<ref refid="struct_player_bullet_dimensions_1a2e4f9d114ad6c48e02671c5aa1a474ff" kindref="member">height</ref>/2.0f;</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bullets.push_back(std::make_shared&lt;PlayerBullet&gt;(Position{xVal,yVal},<ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>));</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_1a9e505498701d853cf3de3660e8d25dde" kindref="member">timeSinceLastShoot</ref><sp/>=<sp/>time_elapsed;</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_1ae9d6bae67d3896422573a38cce7f800a" kindref="member">reload_timer</ref>.<ref refid="class_stop_watch_1a8fa0ea2811a7244d4687ba682cef222d" kindref="member">resume</ref>();</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bullets;</highlight></codeline>
-<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138" refid="class_player_1a78c89f5a5b61269fe3c8bfde9d3aa62a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a78c89f5a5b61269fe3c8bfde9d3aa62a" kindref="member">Player::addScore</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>score)</highlight></codeline>
-<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a423e2096b25d4965a84e4a8bf38c7683" kindref="member">score_</ref><sp/>+=<sp/>score;</highlight></codeline>
-<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143" refid="class_player_1acbdb2bae8d732157af0ca5f5438a2b63" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_player_1acbdb2bae8d732157af0ca5f5438a2b63" kindref="member">Player::getScore</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="144"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_1a423e2096b25d4965a84e4a8bf38c7683" kindref="member">score_</ref>;</highlight></codeline>
-<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="148" refid="class_player_1aea83d5edc3dbd5cf8f44d38da57dc02b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1aea83d5edc3dbd5cf8f44d38da57dc02b" kindref="member">Player::reincarnate</ref>()</highlight></codeline>
-<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_player_1ae945f733814a4fa0e5206bb5a65049f5" kindref="member">isAlive</ref>()){</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_player_dimension" kindref="compound">PlayerDimension</ref><sp/>playerDimension;</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setX_pos(<ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1a0d9e03cd17d99ff13a044d027012a9e2" kindref="member">getWidth</ref>()/2.0);</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setY_pos(<ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" kindref="member">getHeight</ref>()-playerDimension.<ref refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" kindref="member">height</ref>*0.5);</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" kindref="member">hasBeenHit_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//if</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="class_player_1a0c082a39764e0aea1e2c3ef5710a4380" refkind="member"><highlight class="normal"><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref><sp/><ref refid="class_player_1a0c082a39764e0aea1e2c3ef5710a4380" kindref="member">Player::getDirection</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="93"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_1a035573615cefddd933c9e6babd5605fe" kindref="member">direction_</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_player_1a4b1ae38fa48bb6db1a1783af28935402" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a4b1ae38fa48bb6db1a1783af28935402" kindref="member">Player::setDirection</ref>(<ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref><sp/>direction)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a035573615cefddd933c9e6babd5605fe" kindref="member">direction_</ref><sp/>=<sp/>direction;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_player_1a8b960f63915f61b6d511865290dc3a56" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_player_1a8b960f63915f61b6d511865290dc3a56" kindref="member">Player::getRemainingLives</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="103"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" kindref="member">numberOfLives_</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="class_player_1a0c8161e76c6c2a68d423174020e34387" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_1a0c8161e76c6c2a68d423174020e34387" kindref="member">Player::isPoisoned</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="108"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="class_player_1a02cfcf9b1c798596594a9e9e0b5f64a0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a02cfcf9b1c798596594a9e9e0b5f64a0" kindref="member">Player::poison</ref>()</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="class_player_1a3ca4a0c411b674096dc30c6a6da8f305" refkind="member"><highlight class="normal">vector&lt;shared_ptr&lt;PlayerBullet&gt;&gt;<sp/><ref refid="class_player_1a3ca4a0c411b674096dc30c6a6da8f305" kindref="member">Player::shoot</ref>()</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.getX_pos()-<ref refid="class_player_1a854d2be4ad2453d5373227db1413134e" kindref="member">dimensions_</ref>.<ref refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" kindref="member">speed</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>y<sp/>=<sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.getY_pos()-<ref refid="class_player_1a854d2be4ad2453d5373227db1413134e" kindref="member">dimensions_</ref>.<ref refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" kindref="member">height</ref>/2.0f;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_1a79f43d0218a8e66a4d6578f618c8bc83" kindref="member">weapon_</ref>.<ref refid="class_weapon_1aec2629951989a4478b8dc65011537f16" kindref="member">fire</ref>(<ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>,<sp/>Position{x,<sp/>y});</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="class_player_1a78c89f5a5b61269fe3c8bfde9d3aa62a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a78c89f5a5b61269fe3c8bfde9d3aa62a" kindref="member">Player::addScore</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>score)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1a423e2096b25d4965a84e4a8bf38c7683" kindref="member">score_</ref><sp/>+=<sp/>score;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="class_player_1acbdb2bae8d732157af0ca5f5438a2b63" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_player_1acbdb2bae8d732157af0ca5f5438a2b63" kindref="member">Player::getScore</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="131"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_1a423e2096b25d4965a84e4a8bf38c7683" kindref="member">score_</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="class_player_1aea83d5edc3dbd5cf8f44d38da57dc02b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1aea83d5edc3dbd5cf8f44d38da57dc02b" kindref="member">Player::reincarnate</ref>()</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_player_1ae945f733814a4fa0e5206bb5a65049f5" kindref="member">isAlive</ref>())</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setX_pos(<ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1a0d9e03cd17d99ff13a044d027012a9e2" kindref="member">getWidth</ref>()/2.0);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" kindref="member">position_</ref>.setY_pos(<ref refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" kindref="member">grid_</ref>.<ref refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" kindref="member">getHeight</ref>()-<ref refid="class_player_1a854d2be4ad2453d5373227db1413134e" kindref="member">dimensions_</ref>.<ref refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" kindref="member">height</ref>*0.5);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" kindref="member">hasBeenHit_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//if</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp"/>
   </compounddef>

@@ -22,7 +22,7 @@ struct CentipedeSegmentDemensions
 };
 
 /** \class CentipedeSegment
- *  \brief This is class inherits from the IMovingEntity class. It
+ *  \brief This is a class that inherits from the IMovingEntity class. It
  *  contains virtual functions that will be overridden by CentipedeSegment class.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0

@@ -854,26 +854,26 @@
 <simplesect kind="version"><para>3.0 </para></simplesect>
 </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="115">
+      <node id="117">
         <label>map&lt; GameSounds, shared_ptr&lt; sf::Music &gt; &gt;</label>
       </node>
-      <node id="113">
+      <node id="115">
         <label>Presentation</label>
         <link refid="class_presentation"/>
-        <childnode refid="114" relation="usage">
+        <childnode refid="116" relation="usage">
           <edgelabel>sprite_sheets_</edgelabel>
         </childnode>
-        <childnode refid="115" relation="usage">
+        <childnode refid="117" relation="usage">
           <edgelabel>game_sounds_</edgelabel>
         </childnode>
-        <childnode refid="116" relation="usage">
+        <childnode refid="118" relation="usage">
           <edgelabel>game_textures_</edgelabel>
         </childnode>
       </node>
-      <node id="116">
+      <node id="118">
         <label>map&lt; ObjectType, sf::Texture &gt;</label>
       </node>
-      <node id="114">
+      <node id="116">
         <label>vector&lt; SpriteSheet &gt;</label>
       </node>
     </collaborationgraph>

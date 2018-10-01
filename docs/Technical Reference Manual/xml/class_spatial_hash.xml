@@ -297,20 +297,20 @@
 <simplesect kind="version"><para>3.0 </para></simplesect>
 </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="131">
+      <node id="133">
         <label>SpatialHash</label>
         <link refid="class_spatial_hash"/>
-        <childnode refid="132" relation="usage">
+        <childnode refid="134" relation="usage">
           <edgelabel>grid_</edgelabel>
         </childnode>
-        <childnode refid="133" relation="usage">
+        <childnode refid="135" relation="usage">
           <edgelabel>game_object_table_</edgelabel>
         </childnode>
       </node>
-      <node id="133">
+      <node id="135">
         <label>map&lt; unsigned int, vector&lt; shared_ptr&lt; IEntity &gt; &gt; &gt;</label>
       </node>
-      <node id="132">
+      <node id="134">
         <label>Grid</label>
         <link refid="class_grid"/>
       </node>

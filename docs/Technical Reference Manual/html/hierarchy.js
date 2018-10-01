@@ -31,5 +31,6 @@ var hierarchy =
     [ "SpiderDimensions", "struct_spider_dimensions.html", null ],
     [ "SplashScreen", "class_splash_screen.html", null ],
     [ "SpriteSheet", "class_sprite_sheet.html", null ],
-    [ "StopWatch", "class_stop_watch.html", null ]
+    [ "StopWatch", "class_stop_watch.html", null ],
+    [ "Weapon", "class_weapon.html", null ]
 ];

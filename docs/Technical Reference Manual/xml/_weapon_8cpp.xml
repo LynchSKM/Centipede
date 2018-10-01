@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_weapon_8cpp" kind="file" language="C++">
+    <compoundname>Weapon.cpp</compoundname>
+    <includes refid="_weapon_8h" local="yes">Weapon.h</includes>
+    <incdepgraph>
+      <node id="897">
+        <label>POSITION.H</label>
+      </node>
+      <node id="893">
+        <label>IMovingEntity.h</label>
+        <link refid="_i_moving_entity_8h"/>
+        <childnode refid="894" relation="include">
+        </childnode>
+        <childnode refid="895" relation="include">
+        </childnode>
+        <childnode refid="896" relation="include">
+        </childnode>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="901" relation="include">
+        </childnode>
+      </node>
+      <node id="902">
+        <label>Grid.h</label>
+        <link refid="_grid_8h"/>
+      </node>
+      <node id="898">
+        <label>cmath</label>
+      </node>
+      <node id="892">
+        <label>PlayerBullet.h</label>
+        <link refid="_player_bullet_8h"/>
+        <childnode refid="893" relation="include">
+        </childnode>
+        <childnode refid="902" relation="include">
+        </childnode>
+      </node>
+      <node id="889">
+        <label>Weapon.cpp</label>
+        <link refid="_weapon_8cpp"/>
+        <childnode refid="890" relation="include">
+        </childnode>
+      </node>
+      <node id="896">
+        <label>BoundaryBox.h</label>
+        <link refid="_boundary_box_8h"/>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="898" relation="include">
+        </childnode>
+        <childnode refid="899" relation="include">
+        </childnode>
+        <childnode refid="900" relation="include">
+        </childnode>
+      </node>
+      <node id="899">
+        <label>tuple</label>
+      </node>
+      <node id="900">
+        <label>vector</label>
+      </node>
+      <node id="895">
+        <label>ObjectType.h</label>
+        <link refid="_object_type_8h"/>
+      </node>
+      <node id="891">
+        <label>StopWatch.h</label>
+        <link refid="_stop_watch_8h"/>
+      </node>
+      <node id="894">
+        <label>IEntity.h</label>
+        <link refid="_i_entity_8h"/>
+        <childnode refid="895" relation="include">
+        </childnode>
+        <childnode refid="896" relation="include">
+        </childnode>
+        <childnode refid="897" relation="include">
+        </childnode>
+      </node>
+      <node id="901">
+        <label>Direction.h</label>
+        <link refid="_direction_8h"/>
+      </node>
+      <node id="903">
+        <label>memory</label>
+      </node>
+      <node id="890">
+        <label>Weapon.h</label>
+        <link refid="_weapon_8h"/>
+        <childnode refid="891" relation="include">
+        </childnode>
+        <childnode refid="892" relation="include">
+        </childnode>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="903" relation="include">
+        </childnode>
+        <childnode refid="900" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_weapon_8h" kindref="compound">Weapon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_weapon_1a42dbc46dd70319a24763992c4ebbd396" refkind="member"><highlight class="normal"><ref refid="class_weapon_1a42dbc46dd70319a24763992c4ebbd396" kindref="member">Weapon::Weapon</ref>():</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>timeSinceLastShoot_{0},</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_weapon_1a9ab7fbfae71ecfa0ff738a5ad4e8430a" kindref="member">reload_time_</ref>{0.175}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_weapon_1a966e161010d1fcaccfcafecfbb793824" kindref="member">reload_timer_</ref>.<ref refid="class_stop_watch_1a09a3c8f9ab03d7b28e4f8b90a833974e" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_weapon_1aec2629951989a4478b8dc65011537f16" refkind="member"><highlight class="normal">vector&lt;shared_ptr&lt;PlayerBullet&gt;&gt;<sp/><ref refid="class_weapon_1aec2629951989a4478b8dc65011537f16" kindref="member">Weapon::fire</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_grid" kindref="compound">Grid</ref>&amp;<sp/>grid,<sp/>Position<sp/>start_position)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;shared_ptr&lt;PlayerBullet&gt;&gt;<sp/>bullets;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_weapon_1a966e161010d1fcaccfcafecfbb793824" kindref="member">reload_timer_</ref>.<ref refid="class_stop_watch_1add564bbd185e94d010fb1acff1620844" kindref="member">pause</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>time_elapsed<sp/>=<sp/><ref refid="class_weapon_1a966e161010d1fcaccfcafecfbb793824" kindref="member">reload_timer_</ref>.<ref refid="class_stop_watch_1a2bf006c59e86045c58a7d2ac5269c849" kindref="member">getPauseTime</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((time_elapsed-<ref refid="class_weapon_1a62e6efb7aa3056316067ff2038ca1a93" kindref="member">timeSinceLastShoot_</ref>)&gt;<ref refid="class_weapon_1a9ab7fbfae71ecfa0ff738a5ad4e8430a" kindref="member">reload_time_</ref>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bullets.push_back(std::make_shared&lt;PlayerBullet&gt;(start_position,grid));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_1a62e6efb7aa3056316067ff2038ca1a93" kindref="member">timeSinceLastShoot_</ref><sp/>=<sp/>time_elapsed;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_1a966e161010d1fcaccfcafecfbb793824" kindref="member">reload_timer_</ref>.<ref refid="class_stop_watch_1a8fa0ea2811a7244d4687ba682cef222d" kindref="member">resume</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bullets;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_weapon_1a420e7ba3d2017e6de3e93eb579cfd3fa" refkind="member"><highlight class="normal"><ref refid="class_weapon_1a420e7ba3d2017e6de3e93eb579cfd3fa" kindref="member">Weapon::~Weapon</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//dtor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Weapon.cpp"/>
+  </compounddef>
+</doxygen>

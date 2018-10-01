@@ -5,24 +5,24 @@
     <includes refid="_splash_screen_8h" local="yes">SplashScreen.h</includes>
     <includes local="no">string</includes>
     <incdepgraph>
-      <node id="824">
+      <node id="843">
         <label>SFML/Graphics.hpp</label>
       </node>
-      <node id="825">
+      <node id="844">
         <label>string</label>
       </node>
-      <node id="822">
+      <node id="841">
         <label>SplashScreen.cpp</label>
         <link refid="_splash_screen_8cpp"/>
-        <childnode refid="823" relation="include">
+        <childnode refid="842" relation="include">
         </childnode>
-        <childnode refid="825" relation="include">
+        <childnode refid="844" relation="include">
         </childnode>
       </node>
-      <node id="823">
+      <node id="842">
         <label>SplashScreen.h</label>
         <link refid="_splash_screen_8h"/>
-        <childnode refid="824" relation="include">
+        <childnode refid="843" relation="include">
         </childnode>
       </node>
     </incdepgraph>

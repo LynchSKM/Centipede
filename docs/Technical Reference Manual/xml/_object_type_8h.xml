@@ -8,214 +8,226 @@
     <includedby refid="_spider_8h" local="yes">Spider.h</includedby>
     <includedby refid="_collision_handler_8h" local="yes">CollisionHandler.h</includedby>
     <invincdepgraph>
-      <node id="559">
+      <node id="574">
         <label>Scorpion.cpp</label>
         <link refid="_scorpion_8cpp"/>
       </node>
-      <node id="566">
+      <node id="581">
         <label>SpatialHash.h</label>
         <link refid="_spatial_hash_8h"/>
-        <childnode refid="551" relation="include">
+        <childnode refid="564" relation="include">
         </childnode>
-        <childnode refid="567" relation="include">
+        <childnode refid="582" relation="include">
         </childnode>
       </node>
-      <node id="557">
+      <node id="572">
         <label>PlayerBullet.cpp</label>
         <link refid="_player_bullet_8cpp"/>
       </node>
-      <node id="547">
+      <node id="560">
         <label>IMovingEntity.h</label>
         <link refid="_i_moving_entity_8h"/>
-        <childnode refid="542" relation="include">
+        <childnode refid="555" relation="include">
         </childnode>
-        <childnode refid="548" relation="include">
+        <childnode refid="561" relation="include">
         </childnode>
-        <childnode refid="554" relation="include">
+        <childnode refid="567" relation="include">
         </childnode>
-        <childnode refid="556" relation="include">
+        <childnode refid="569" relation="include">
         </childnode>
-        <childnode refid="558" relation="include">
+        <childnode refid="573" relation="include">
         </childnode>
-        <childnode refid="560" relation="include">
+        <childnode refid="575" relation="include">
         </childnode>
-        <childnode refid="551" relation="include">
+        <childnode refid="564" relation="include">
         </childnode>
       </node>
-      <node id="553">
+      <node id="566">
         <label>CentipedeSegment.cpp</label>
         <link refid="_centipede_segment_8cpp"/>
       </node>
-      <node id="544">
+      <node id="557">
         <label>Logic.cpp</label>
         <link refid="_logic_8cpp"/>
       </node>
-      <node id="569">
+      <node id="584">
         <label>SpriteSheet.cpp</label>
         <link refid="_sprite_sheet_8cpp"/>
       </node>
-      <node id="562">
+      <node id="577">
         <label>Mushroom.h</label>
         <link refid="_mushroom_8h"/>
-        <childnode refid="563" relation="include">
+        <childnode refid="578" relation="include">
+        </childnode>
+        <childnode refid="580" relation="include">
+        </childnode>
+      </node>
+      <node id="565">
+        <label>CollisionHandler.cpp</label>
+        <link refid="_collision_handler_8cpp"/>
+      </node>
+      <node id="569">
+        <label>PlayerBullet.h</label>
+        <link refid="_player_bullet_8h"/>
+        <childnode refid="570" relation="include">
+        </childnode>
+        <childnode refid="572" relation="include">
+        </childnode>
+      </node>
+      <node id="571">
+        <label>Weapon.cpp</label>
+        <link refid="_weapon_8cpp"/>
+      </node>
+      <node id="563">
+        <label>EnemyFactory.cpp</label>
+        <link refid="_enemy_factory_8cpp"/>
+      </node>
+      <node id="559">
+        <label>Presentation.cpp</label>
+        <link refid="_presentation_8cpp"/>
+      </node>
+      <node id="575">
+        <label>Spider.h</label>
+        <link refid="_spider_8h"/>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="576" relation="include">
+        </childnode>
+      </node>
+      <node id="564">
+        <label>CollisionHandler.h</label>
+        <link refid="_collision_handler_8h"/>
+        <childnode refid="556" relation="include">
         </childnode>
         <childnode refid="565" relation="include">
         </childnode>
       </node>
-      <node id="552">
-        <label>CollisionHandler.cpp</label>
-        <link refid="_collision_handler_8cpp"/>
-      </node>
-      <node id="556">
-        <label>PlayerBullet.h</label>
-        <link refid="_player_bullet_8h"/>
-        <childnode refid="554" relation="include">
-        </childnode>
-        <childnode refid="557" relation="include">
-        </childnode>
-      </node>
-      <node id="550">
-        <label>EnemyFactory.cpp</label>
-        <link refid="_enemy_factory_8cpp"/>
-      </node>
-      <node id="546">
-        <label>Presentation.cpp</label>
-        <link refid="_presentation_8cpp"/>
-      </node>
-      <node id="560">
-        <label>Spider.h</label>
-        <link refid="_spider_8h"/>
-        <childnode refid="549" relation="include">
-        </childnode>
-        <childnode refid="561" relation="include">
-        </childnode>
-      </node>
-      <node id="551">
-        <label>CollisionHandler.h</label>
-        <link refid="_collision_handler_8h"/>
-        <childnode refid="543" relation="include">
-        </childnode>
-        <childnode refid="552" relation="include">
-        </childnode>
-      </node>
-      <node id="545">
+      <node id="558">
         <label>main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="540">
+      <node id="553">
         <label>ObjectType.h</label>
         <link refid="_object_type_8h"/>
-        <childnode refid="541" relation="include">
-        </childnode>
-        <childnode refid="547" relation="include">
-        </childnode>
-        <childnode refid="568" relation="include">
+        <childnode refid="554" relation="include">
         </childnode>
         <childnode refid="560" relation="include">
         </childnode>
-        <childnode refid="551" relation="include">
+        <childnode refid="583" relation="include">
+        </childnode>
+        <childnode refid="575" relation="include">
+        </childnode>
+        <childnode refid="564" relation="include">
         </childnode>
       </node>
-      <node id="565">
+      <node id="580">
         <label>Mushroom.cpp</label>
         <link refid="_mushroom_8cpp"/>
       </node>
-      <node id="561">
+      <node id="576">
         <label>Spider.cpp</label>
         <link refid="_spider_8cpp"/>
       </node>
-      <node id="558">
+      <node id="573">
         <label>Scorpion.h</label>
         <link refid="_scorpion_8h"/>
-        <childnode refid="549" relation="include">
+        <childnode refid="562" relation="include">
         </childnode>
-        <childnode refid="559" relation="include">
+        <childnode refid="574" relation="include">
         </childnode>
       </node>
-      <node id="543">
+      <node id="556">
         <label>Logic.h</label>
         <link refid="_logic_8h"/>
-        <childnode refid="544" relation="include">
+        <childnode refid="557" relation="include">
         </childnode>
-        <childnode refid="545" relation="include">
+        <childnode refid="558" relation="include">
         </childnode>
       </node>
-      <node id="549">
+      <node id="562">
         <label>EnemyFactory.h</label>
         <link refid="_enemy_factory_8h"/>
-        <childnode refid="543" relation="include">
+        <childnode refid="556" relation="include">
         </childnode>
-        <childnode refid="550" relation="include">
+        <childnode refid="563" relation="include">
         </childnode>
       </node>
-      <node id="548">
+      <node id="561">
         <label>CentipedeSegment.h</label>
         <link refid="_centipede_segment_8h"/>
-        <childnode refid="542" relation="include">
-        </childnode>
-        <childnode refid="549" relation="include">
-        </childnode>
-        <childnode refid="551" relation="include">
-        </childnode>
-        <childnode refid="553" relation="include">
-        </childnode>
-      </node>
-      <node id="555">
-        <label>Player.cpp</label>
-        <link refid="_player_8cpp"/>
-      </node>
-      <node id="564">
-        <label>MushroomFactory.cpp</label>
-        <link refid="_mushroom_factory_8cpp"/>
-      </node>
-      <node id="554">
-        <label>Player.h</label>
-        <link refid="_player_8h"/>
-        <childnode refid="543" relation="include">
-        </childnode>
         <childnode refid="555" relation="include">
-        </childnode>
-      </node>
-      <node id="568">
-        <label>SpriteSheet.h</label>
-        <link refid="_sprite_sheet_8h"/>
-        <childnode refid="542" relation="include">
-        </childnode>
-        <childnode refid="569" relation="include">
-        </childnode>
-      </node>
-      <node id="567">
-        <label>SpatialHash.cpp</label>
-        <link refid="_spatial_hash_8cpp"/>
-      </node>
-      <node id="541">
-        <label>IEntity.h</label>
-        <link refid="_i_entity_8h"/>
-        <childnode refid="542" relation="include">
-        </childnode>
-        <childnode refid="547" relation="include">
         </childnode>
         <childnode refid="562" relation="include">
         </childnode>
-        <childnode refid="551" relation="include">
+        <childnode refid="564" relation="include">
         </childnode>
         <childnode refid="566" relation="include">
         </childnode>
       </node>
-      <node id="542">
-        <label>Presentation.h</label>
-        <link refid="_presentation_8h"/>
-        <childnode refid="543" relation="include">
+      <node id="568">
+        <label>Player.cpp</label>
+        <link refid="_player_8cpp"/>
+      </node>
+      <node id="579">
+        <label>MushroomFactory.cpp</label>
+        <link refid="_mushroom_factory_8cpp"/>
+      </node>
+      <node id="567">
+        <label>Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="556" relation="include">
         </childnode>
-        <childnode refid="546" relation="include">
+        <childnode refid="568" relation="include">
         </childnode>
       </node>
-      <node id="563">
-        <label>MushroomFactory.h</label>
-        <link refid="_mushroom_factory_8h"/>
-        <childnode refid="549" relation="include">
+      <node id="583">
+        <label>SpriteSheet.h</label>
+        <link refid="_sprite_sheet_8h"/>
+        <childnode refid="555" relation="include">
+        </childnode>
+        <childnode refid="584" relation="include">
+        </childnode>
+      </node>
+      <node id="582">
+        <label>SpatialHash.cpp</label>
+        <link refid="_spatial_hash_8cpp"/>
+      </node>
+      <node id="554">
+        <label>IEntity.h</label>
+        <link refid="_i_entity_8h"/>
+        <childnode refid="555" relation="include">
+        </childnode>
+        <childnode refid="560" relation="include">
+        </childnode>
+        <childnode refid="577" relation="include">
         </childnode>
         <childnode refid="564" relation="include">
+        </childnode>
+        <childnode refid="581" relation="include">
+        </childnode>
+      </node>
+      <node id="555">
+        <label>Presentation.h</label>
+        <link refid="_presentation_8h"/>
+        <childnode refid="556" relation="include">
+        </childnode>
+        <childnode refid="559" relation="include">
+        </childnode>
+      </node>
+      <node id="578">
+        <label>MushroomFactory.h</label>
+        <link refid="_mushroom_factory_8h"/>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="579" relation="include">
+        </childnode>
+      </node>
+      <node id="570">
+        <label>Weapon.h</label>
+        <link refid="_weapon_8h"/>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

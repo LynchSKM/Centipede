@@ -1,54 +1,52 @@
 #include "Player.h"
 
-Player::Player(const Grid& grid):grid_{grid},objectType_{ObjectType::PLAYER}, numberOfLives_{3}, direction_{Direction::NONE}
+Player::Player(const Grid& grid):
+    grid_{grid},
+    numberOfLives_{3},
+    direction_{Direction::NONE}
 {
     position_.setX_pos(grid_.getWidth()/2.0);
-    struct PlayerDimension playerDimension;
-    position_.setY_pos(grid_.getHeight()-playerDimension.height*0.5);
-
-    reload_timer.start();
-    timeSinceLastShoot = 0;
-    reload_time = 0.175;
+    position_.setY_pos(grid_.getHeight()-dimensions_.height*0.5);
 }
 
-Player::~Player(){
+Player::~Player()
+{
 
 }
 
 void Player::move()
 {
-    struct PlayerDimension Dimension;
-    float maxWidth = grid_.getWidth()-16.0f;
+    float maxWidth  = grid_.getWidth()-16.0f;
     float minHeight = grid_.getHeight()- grid_.getHeight()*0.2;
     float maxHeight = grid_.getHeight();
     auto newXPos = 0.0f;
     auto newYPos = 0.0f;
 
-    switch (direction_){
-
+    switch (direction_)
+    {
         case Direction::DOWN:
-            newYPos = position_.getY_pos() + Dimension.speed;
+            newYPos = position_.getY_pos() + dimensions_.speed;
 
             if(newYPos <= (maxHeight-8.0f)) position_.setY_pos(newYPos);
 
             break;
 
         case Direction::LEFT:
-            newXPos = position_.getX_pos()- Dimension.speed;
+            newXPos = position_.getX_pos()-dimensions_.speed;
 
             if(newXPos >= 8.0f) position_.setX_pos(newXPos);
 
             break;
 
         case Direction::RIGHT:
-            newXPos = position_.getX_pos()+ Dimension.speed;
+            newXPos = position_.getX_pos()+dimensions_.speed;
 
             if(newXPos <= (maxWidth+8.0f)) position_.setX_pos(newXPos);
 
             break;
 
         case Direction::UP:
-            newYPos = position_.getY_pos() - Dimension.speed;
+            newYPos = position_.getY_pos() - dimensions_.speed;
 
             if(newYPos>= minHeight) position_.setY_pos(newYPos);
 
@@ -60,7 +58,7 @@ void Player::move()
 
 ObjectType Player::getObjectType() const
 {
-    return objectType_;
+    return ObjectType::PLAYER;
 }
 
 Position Player::getPosition() const
@@ -70,10 +68,7 @@ Position Player::getPosition() const
 
 BoundaryBox Player::getBoundaryBox()
 {
-    struct PlayerDimension player_box;
-    BoundaryBox box{position_,player_box.width, player_box.height, 0.0};
-    //boundary_box_ = box;
-    return box;
+    return BoundaryBox{position_,dimensions_.width, dimensions_.height, 0.0};
 }
 
 bool Player::isAlive() const
@@ -88,6 +83,7 @@ void Player::eliminated()
     hasBeenHit_ = true;
     numberOfLives_--;
 }
+
 bool Player::isHit()
 {
     return hasBeenHit_;
@@ -118,21 +114,12 @@ void Player::poison()
 
 }
 
-vector <shared_ptr<IMovingEntity>> Player::shoot()
+vector<shared_ptr<PlayerBullet>> Player::shoot()
 {
-    vector<shared_ptr<IMovingEntity>> bullets;
-    reload_timer.pause();
-    auto time_elapsed = reload_timer.getPauseTime();
-    if((time_elapsed-timeSinceLastShoot)>reload_time){
-        struct PlayerBulletDimensions dimension;
-        auto xVal = position_.getX_pos()-dimension.speed;
-        auto yVal = position_.getY_pos()-dimension.height/2.0f;
+    auto x = position_.getX_pos()-dimensions_.speed;
+    auto y = position_.getY_pos()-dimensions_.height/2.0f;
 
-        bullets.push_back(std::make_shared<PlayerBullet>(Position{xVal,yVal},grid_));
-        timeSinceLastShoot = time_elapsed;
-        reload_timer.resume();
-    }
-    return bullets;
+    return weapon_.fire(grid_, Position{x, y});
 }
 
 void Player::addScore(int score)
@@ -147,11 +134,10 @@ int Player::getScore() const
 
 void Player::reincarnate()
 {
-    if(isAlive()){
-        struct PlayerDimension playerDimension;
+    if(isAlive())
+    {
         position_.setX_pos(grid_.getWidth()/2.0);
-        position_.setY_pos(grid_.getHeight()-playerDimension.height*0.5);
-
+        position_.setY_pos(grid_.getHeight()-dimensions_.height*0.5);
         hasBeenHit_ = false;
     }//if
 }

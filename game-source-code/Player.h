@@ -9,8 +9,7 @@ using std::vector;
 
 #include "IMovingEntity.h"
 #include "Grid.h"
-#include "PlayerBullet.h"
-#include "StopWatch.h"
+#include "Weapon.h"
 
 /** \struct PlayerDimension
  *	\brief Contains information about a Player's height, width and speed.
@@ -115,10 +114,10 @@ class Player : public IMovingEntity
          */
         virtual void poison() override;
 
-        /** \brief Creates player bullets and stores them in a vector.
-         *  \return a vector of shared_ptr to IMovingEntity.
+        /** \brief Creates player bullets and returns them in a vector.
+         *  \return vector<shared_ptr<PlayerBullet>>
          */
-        vector <shared_ptr<IMovingEntity>> shoot();
+        vector<shared_ptr<PlayerBullet>> shoot();
 
         /** \brief Adds the given score to the player's current score.
          *  \param score of type int.
@@ -137,16 +136,14 @@ class Player : public IMovingEntity
 
     private:
 
-		ObjectType objectType_;
         int numberOfLives_;
         int score_ = 0;
         bool hasBeenHit_;
         const Grid grid_;
-        StopWatch reload_timer;
-        double timeSinceLastShoot;
-        double reload_time;
         Position position_;
         Direction direction_;
+        Weapon weapon_;
+        struct PlayerDimension dimensions_;
 };
 
 #endif // PLAYER_H

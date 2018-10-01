@@ -729,7 +729,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>This is class inherits from the <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref> class. It contains virtual functions that will be overridden by <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> class. </para>    </briefdescription>
+<para>This is a class that inherits from the <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref> class. It contains virtual functions that will be overridden by <ref refid="class_centipede_segment" kindref="compound">CentipedeSegment</ref> class. </para>    </briefdescription>
     <detaileddescription>
 <para><simplesect kind="author"><para>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </para></simplesect>
 <simplesect kind="version"><para>3.0 </para></simplesect>

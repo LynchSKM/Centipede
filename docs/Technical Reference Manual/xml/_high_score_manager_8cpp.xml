@@ -4,24 +4,24 @@
     <compoundname>HighScoreManager.cpp</compoundname>
     <includes refid="_high_score_manager_8h" local="yes">HighScoreManager.h</includes>
     <incdepgraph>
-      <node id="269">
+      <node id="275">
         <label>string</label>
       </node>
-      <node id="267">
+      <node id="273">
         <label>HighScoreManager.cpp</label>
         <link refid="_high_score_manager_8cpp"/>
-        <childnode refid="268" relation="include">
+        <childnode refid="274" relation="include">
         </childnode>
       </node>
-      <node id="270">
+      <node id="276">
         <label>fstream</label>
       </node>
-      <node id="268">
+      <node id="274">
         <label>HighScoreManager.h</label>
         <link refid="_high_score_manager_8h"/>
-        <childnode refid="269" relation="include">
+        <childnode refid="275" relation="include">
         </childnode>
-        <childnode refid="270" relation="include">
+        <childnode refid="276" relation="include">
         </childnode>
       </node>
     </incdepgraph>

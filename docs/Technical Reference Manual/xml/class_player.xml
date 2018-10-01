@@ -5,19 +5,6 @@
     <basecompoundref refid="class_i_moving_entity" prot="public" virt="non-virtual">IMovingEntity</basecompoundref>
     <includes refid="_player_8h" local="no">Player.h</includes>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_player_1a3e6f28c430e292e5b02d726343de36bc" prot="private" static="no" mutable="no">
-        <type><ref refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980" kindref="member">ObjectType</ref></type>
-        <definition>ObjectType Player::objectType_</definition>
-        <argsstring></argsstring>
-        <name>objectType_</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="140" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="140" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" prot="private" static="no" mutable="no">
         <type>int</type>
         <definition>int Player::numberOfLives_</definition>
@@ -29,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="141" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="141" bodyend="-1"/>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="139" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="139" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_player_1a423e2096b25d4965a84e4a8bf38c7683" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -43,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="142" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="142" bodyend="-1"/>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="140" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="140" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -56,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="143" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="143" bodyend="-1"/>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="141" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="141" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" prot="private" static="no" mutable="no">
         <type>const <ref refid="class_grid" kindref="compound">Grid</ref></type>
@@ -69,46 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="144" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="144" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_player_1ae9d6bae67d3896422573a38cce7f800a" prot="private" static="no" mutable="no">
-        <type><ref refid="class_stop_watch" kindref="compound">StopWatch</ref></type>
-        <definition>StopWatch Player::reload_timer</definition>
-        <argsstring></argsstring>
-        <name>reload_timer</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="145" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="145" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_player_1a9e505498701d853cf3de3660e8d25dde" prot="private" static="no" mutable="no">
-        <type>double</type>
-        <definition>double Player::timeSinceLastShoot</definition>
-        <argsstring></argsstring>
-        <name>timeSinceLastShoot</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="146" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="146" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_player_1a5aeb798d1d4ed038421e9ea001e47236" prot="private" static="no" mutable="no">
-        <type>double</type>
-        <definition>double Player::reload_time</definition>
-        <argsstring></argsstring>
-        <name>reload_time</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="147" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="147" bodyend="-1"/>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="142" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="142" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_player_1a09e7aba1297b153aa896dc84a2eacce0" prot="private" static="no" mutable="no">
         <type>Position</type>
@@ -121,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="148" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="148" bodyend="-1"/>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="143" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="143" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_player_1a035573615cefddd933c9e6babd5605fe" prot="private" static="no" mutable="no">
         <type><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
@@ -134,7 +82,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="149" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="149" bodyend="-1"/>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="144" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1a79f43d0218a8e66a4d6578f618c8bc83" prot="private" static="no" mutable="no">
+        <type><ref refid="class_weapon" kindref="compound">Weapon</ref></type>
+        <definition>Weapon Player::weapon_</definition>
+        <argsstring></argsstring>
+        <name>weapon_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="145" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1a854d2be4ad2453d5373227db1413134e" prot="private" static="no" mutable="no">
+        <type>struct <ref refid="struct_player_dimension" kindref="compound">PlayerDimension</ref></type>
+        <definition>struct PlayerDimension Player::dimensions_</definition>
+        <argsstring></argsstring>
+        <name>dimensions_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="145" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="146" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -161,21 +135,16 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="41" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="3" bodyend="12"/>
-        <references refid="class_player_1a3e6f28c430e292e5b02d726343de36bc" compoundref="_player_8h" startline="140">objectType_</references>
-        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855">PLAYER</references>
-        <references refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" compoundref="_player_8h" startline="141">numberOfLives_</references>
-        <references refid="class_player_1a035573615cefddd933c9e6babd5605fe" compoundref="_player_8h" startline="149">direction_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="40" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="3" bodyend="10"/>
+        <references refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" compoundref="_player_8h" startline="139">numberOfLives_</references>
+        <references refid="class_player_1a035573615cefddd933c9e6babd5605fe" compoundref="_player_8h" startline="144">direction_</references>
         <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaab50339a10e1de285ac99d4c3990b8693">NONE</references>
-        <references refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" compoundref="_player_8h" startline="148">position_</references>
-        <references refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" compoundref="_player_8h" startline="144">grid_</references>
+        <references refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" compoundref="_player_8h" startline="143">position_</references>
+        <references refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" compoundref="_player_8h" startline="142">grid_</references>
         <references refid="class_grid_1a0d9e03cd17d99ff13a044d027012a9e2" compoundref="_grid_8cpp" startline="11" endline="13">Grid::getWidth</references>
         <references refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" compoundref="_grid_8cpp" startline="15" endline="17">Grid::getHeight</references>
-        <references refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" compoundref="_player_8h" startline="22">PlayerDimension::height</references>
-        <references refid="class_player_1ae9d6bae67d3896422573a38cce7f800a" compoundref="_player_8h" startline="145">reload_timer</references>
-        <references refid="class_stop_watch_1a09a3c8f9ab03d7b28e4f8b90a833974e" compoundref="_stop_watch_8cpp" startline="7" endline="14">StopWatch::start</references>
-        <references refid="class_player_1a9e505498701d853cf3de3660e8d25dde" compoundref="_player_8h" startline="146">timeSinceLastShoot</references>
-        <references refid="class_player_1a5aeb798d1d4ed038421e9ea001e47236" compoundref="_player_8h" startline="147">reload_time</references>
+        <references refid="class_player_1a854d2be4ad2453d5373227db1413134e" compoundref="_player_8h" startline="146">dimensions_</references>
+        <references refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" compoundref="_player_8h" startline="21">PlayerDimension::height</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -188,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="45" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="14" bodyend="16"/>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="44" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="12" bodyend="15"/>
       </memberdef>
       <memberdef kind="function" id="class_player_1a1d35b7b1cd1a890042abdfdc55cafb14" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -202,14 +171,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="50" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="18" bodyend="59"/>
-        <references refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" compoundref="_player_8h" startline="144">grid_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="49" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="17" bodyend="57"/>
+        <references refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" compoundref="_player_8h" startline="142">grid_</references>
         <references refid="class_grid_1a0d9e03cd17d99ff13a044d027012a9e2" compoundref="_grid_8cpp" startline="11" endline="13">Grid::getWidth</references>
         <references refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" compoundref="_grid_8cpp" startline="15" endline="17">Grid::getHeight</references>
-        <references refid="class_player_1a035573615cefddd933c9e6babd5605fe" compoundref="_player_8h" startline="149">direction_</references>
+        <references refid="class_player_1a035573615cefddd933c9e6babd5605fe" compoundref="_player_8h" startline="144">direction_</references>
         <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f">DOWN</references>
-        <references refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" compoundref="_player_8h" startline="148">position_</references>
-        <references refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" compoundref="_player_8h" startline="24">PlayerDimension::speed</references>
+        <references refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" compoundref="_player_8h" startline="143">position_</references>
+        <references refid="class_player_1a854d2be4ad2453d5373227db1413134e" compoundref="_player_8h" startline="146">dimensions_</references>
+        <references refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" compoundref="_player_8h" startline="23">PlayerDimension::speed</references>
         <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758">LEFT</references>
         <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403">RIGHT</references>
         <references refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aaafbaedde498cdead4f2780217646e9ba1">UP</references>
@@ -227,8 +197,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="56" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="61" bodyend="64"/>
-        <references refid="class_player_1a3e6f28c430e292e5b02d726343de36bc" compoundref="_player_8h" startline="140">objectType_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="55" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="59" bodyend="62"/>
+        <references refid="_object_type_8h_1a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855">PLAYER</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1aff8414311198ed6cc5fdc94073c5d6c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>Position</type>
@@ -243,8 +213,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="62" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="66" bodyend="69"/>
-        <references refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" compoundref="_player_8h" startline="148">position_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="61" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="64" bodyend="67"/>
+        <references refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" compoundref="_player_8h" startline="143">position_</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1ac7a81aa0978a947b68033525dbdbce3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_boundary_box" kindref="compound">BoundaryBox</ref></type>
@@ -259,10 +229,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="69" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="71" bodyend="77"/>
-        <references refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" compoundref="_player_8h" startline="148">position_</references>
-        <references refid="struct_player_dimension_1a4d956985539b298b9f44c76d0bd94ad8" compoundref="_player_8h" startline="23">PlayerDimension::width</references>
-        <references refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" compoundref="_player_8h" startline="22">PlayerDimension::height</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="68" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="69" bodyend="72"/>
+        <references refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" compoundref="_player_8h" startline="143">position_</references>
+        <references refid="class_player_1a854d2be4ad2453d5373227db1413134e" compoundref="_player_8h" startline="146">dimensions_</references>
+        <references refid="struct_player_dimension_1a4d956985539b298b9f44c76d0bd94ad8" compoundref="_player_8h" startline="22">PlayerDimension::width</references>
+        <references refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" compoundref="_player_8h" startline="21">PlayerDimension::height</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1ae945f733814a4fa0e5206bb5a65049f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -277,8 +248,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="75" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="79" bodyend="84"/>
-        <references refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" compoundref="_player_8h" startline="141">numberOfLives_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="74" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="74" bodyend="79"/>
+        <references refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" compoundref="_player_8h" startline="139">numberOfLives_</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1a0d03e19852d55e723299269143eed972" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -293,9 +264,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="81" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="86" bodyend="90"/>
-        <references refid="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" compoundref="_player_8h" startline="143">hasBeenHit_</references>
-        <references refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" compoundref="_player_8h" startline="141">numberOfLives_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="80" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="81" bodyend="85"/>
+        <references refid="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" compoundref="_player_8h" startline="141">hasBeenHit_</references>
+        <references refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" compoundref="_player_8h" startline="139">numberOfLives_</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1a0c082a39764e0aea1e2c3ef5710a4380" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="_direction_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
@@ -310,8 +281,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="87" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="96" bodyend="99"/>
-        <references refid="class_player_1a035573615cefddd933c9e6babd5605fe" compoundref="_player_8h" startline="149">direction_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="86" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="92" bodyend="95"/>
+        <references refid="class_player_1a035573615cefddd933c9e6babd5605fe" compoundref="_player_8h" startline="144">direction_</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1a4b1ae38fa48bb6db1a1783af28935402" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -337,8 +308,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="93" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="101" bodyend="104"/>
-        <references refid="class_player_1a035573615cefddd933c9e6babd5605fe" compoundref="_player_8h" startline="149">direction_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="92" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="97" bodyend="100"/>
+        <references refid="class_player_1a035573615cefddd933c9e6babd5605fe" compoundref="_player_8h" startline="144">direction_</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1a8b960f63915f61b6d511865290dc3a56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -353,8 +324,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="99" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="106" bodyend="109"/>
-        <references refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" compoundref="_player_8h" startline="141">numberOfLives_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="98" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="102" bodyend="105"/>
+        <references refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" compoundref="_player_8h" startline="139">numberOfLives_</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1aea83d5edc3dbd5cf8f44d38da57dc02b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -368,14 +339,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="105" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="148" bodyend="157"/>
-        <references refid="class_player_1ae945f733814a4fa0e5206bb5a65049f5" compoundref="_player_8cpp" startline="79" endline="84">isAlive</references>
-        <references refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" compoundref="_player_8h" startline="148">position_</references>
-        <references refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" compoundref="_player_8h" startline="144">grid_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="104" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="135" bodyend="143"/>
+        <references refid="class_player_1ae945f733814a4fa0e5206bb5a65049f5" compoundref="_player_8cpp" startline="74" endline="79">isAlive</references>
+        <references refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" compoundref="_player_8h" startline="143">position_</references>
+        <references refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" compoundref="_player_8h" startline="142">grid_</references>
         <references refid="class_grid_1a0d9e03cd17d99ff13a044d027012a9e2" compoundref="_grid_8cpp" startline="11" endline="13">Grid::getWidth</references>
         <references refid="class_grid_1adfc1ee3214afb8c1a84e5106e2c499c4" compoundref="_grid_8cpp" startline="15" endline="17">Grid::getHeight</references>
-        <references refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" compoundref="_player_8h" startline="22">PlayerDimension::height</references>
-        <references refid="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" compoundref="_player_8h" startline="143">hasBeenHit_</references>
+        <references refid="class_player_1a854d2be4ad2453d5373227db1413134e" compoundref="_player_8h" startline="146">dimensions_</references>
+        <references refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" compoundref="_player_8h" startline="21">PlayerDimension::height</references>
+        <references refid="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" compoundref="_player_8h" startline="141">hasBeenHit_</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1a0c8161e76c6c2a68d423174020e34387" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -390,7 +362,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="111" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="111" bodyend="114"/>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="110" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="107" bodyend="110"/>
       </memberdef>
       <memberdef kind="function" id="class_player_1a02cfcf9b1c798596594a9e9e0b5f64a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -404,31 +376,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="116" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="116" bodyend="119"/>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="115" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="112" bodyend="115"/>
       </memberdef>
-      <memberdef kind="function" id="class_player_1a87ee64cb925735f3d1516cc62a7a6311" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>vector&lt; shared_ptr&lt; <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref> &gt; &gt;</type>
-        <definition>vector&lt; shared_ptr&lt; IMovingEntity &gt; &gt; Player::shoot</definition>
+      <memberdef kind="function" id="class_player_1a3ca4a0c411b674096dc30c6a6da8f305" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; shared_ptr&lt; <ref refid="class_player_bullet" kindref="compound">PlayerBullet</ref> &gt; &gt;</type>
+        <definition>vector&lt; shared_ptr&lt; PlayerBullet &gt; &gt; Player::shoot</definition>
         <argsstring>()</argsstring>
         <name>shoot</name>
         <briefdescription>
-<para>Creates player bullets and stores them in a vector. </para>        </briefdescription>
+<para>Creates player bullets and returns them in a vector. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>a vector of shared_ptr to <ref refid="class_i_moving_entity" kindref="compound">IMovingEntity</ref>. </para></simplesect>
+<para><simplesect kind="return"><para>vector&lt;shared_ptr&lt;PlayerBullet&gt;&gt; </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="121" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="121" bodyend="136"/>
-        <references refid="class_player_1ae9d6bae67d3896422573a38cce7f800a" compoundref="_player_8h" startline="145">reload_timer</references>
-        <references refid="class_stop_watch_1add564bbd185e94d010fb1acff1620844" compoundref="_stop_watch_8cpp" startline="16" endline="23">StopWatch::pause</references>
-        <references refid="class_stop_watch_1a2bf006c59e86045c58a7d2ac5269c849" compoundref="_stop_watch_8h" startline="54" endline="54">StopWatch::getPauseTime</references>
-        <references refid="class_player_1a9e505498701d853cf3de3660e8d25dde" compoundref="_player_8h" startline="146">timeSinceLastShoot</references>
-        <references refid="class_player_1a5aeb798d1d4ed038421e9ea001e47236" compoundref="_player_8h" startline="147">reload_time</references>
-        <references refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" compoundref="_player_8h" startline="148">position_</references>
-        <references refid="struct_player_bullet_dimensions_1a2c55e33cf71fe300bcc0518ee1df0729" compoundref="_player_bullet_8h" startline="16">PlayerBulletDimensions::speed</references>
-        <references refid="struct_player_bullet_dimensions_1a2e4f9d114ad6c48e02671c5aa1a474ff" compoundref="_player_bullet_8h" startline="14">PlayerBulletDimensions::height</references>
-        <references refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" compoundref="_player_8h" startline="144">grid_</references>
-        <references refid="class_stop_watch_1a8fa0ea2811a7244d4687ba682cef222d" compoundref="_stop_watch_8cpp" startline="25" endline="35">StopWatch::resume</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="120" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="117" bodyend="123"/>
+        <references refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" compoundref="_player_8h" startline="143">position_</references>
+        <references refid="class_player_1a854d2be4ad2453d5373227db1413134e" compoundref="_player_8h" startline="146">dimensions_</references>
+        <references refid="struct_player_dimension_1a4ac3eb207437126aee444648d72e4ebd" compoundref="_player_8h" startline="23">PlayerDimension::speed</references>
+        <references refid="struct_player_dimension_1a1f6649f3a563d00b4195f1ddc15149a3" compoundref="_player_8h" startline="21">PlayerDimension::height</references>
+        <references refid="class_player_1a79f43d0218a8e66a4d6578f618c8bc83" compoundref="_player_8h" startline="145">weapon_</references>
+        <references refid="class_weapon_1aec2629951989a4478b8dc65011537f16" compoundref="_weapon_8cpp" startline="10" endline="22">Weapon::fire</references>
+        <references refid="class_player_1a488aefe7db11bf1d6e7a8adfa52a2b4e" compoundref="_player_8h" startline="142">grid_</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1a78c89f5a5b61269fe3c8bfde9d3aa62a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -453,8 +422,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="126" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="138" bodyend="141"/>
-        <references refid="class_player_1a423e2096b25d4965a84e4a8bf38c7683" compoundref="_player_8h" startline="142">score_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="125" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="125" bodyend="128"/>
+        <references refid="class_player_1a423e2096b25d4965a84e4a8bf38c7683" compoundref="_player_8h" startline="140">score_</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1acbdb2bae8d732157af0ca5f5438a2b63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -468,8 +437,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="132" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="143" bodyend="146"/>
-        <references refid="class_player_1a423e2096b25d4965a84e4a8bf38c7683" compoundref="_player_8h" startline="142">score_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="131" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="130" bodyend="133"/>
+        <references refid="class_player_1a423e2096b25d4965a84e4a8bf38c7683" compoundref="_player_8h" startline="140">score_</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1a1f81977b3897c45394f2c6b76100bc0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -482,8 +451,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="136" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="91" bodyend="94"/>
-        <references refid="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" compoundref="_player_8h" startline="143">hasBeenHit_</references>
+        <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="135" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.cpp" bodystart="87" bodyend="90"/>
+        <references refid="class_player_1a50b3d8da6a0895a8dbe32d15fc1475d8" compoundref="_player_8h" startline="141">hasBeenHit_</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -512,6 +481,17 @@
     </inheritancegraph>
     <collaborationgraph>
       <node id="99">
+        <label>PlayerDimension</label>
+        <link refid="struct_player_dimension"/>
+      </node>
+      <node id="100">
+        <label>Weapon</label>
+        <link refid="class_weapon"/>
+        <childnode refid="101" relation="usage">
+          <edgelabel>reload_timer_</edgelabel>
+        </childnode>
+      </node>
+      <node id="101">
         <label>StopWatch</label>
         <link refid="class_stop_watch"/>
       </node>
@@ -528,7 +508,10 @@
           <edgelabel>grid_</edgelabel>
         </childnode>
         <childnode refid="99" relation="usage">
-          <edgelabel>reload_timer</edgelabel>
+          <edgelabel>dimensions_</edgelabel>
+        </childnode>
+        <childnode refid="100" relation="usage">
+          <edgelabel>weapon_</edgelabel>
         </childnode>
       </node>
       <node id="98">
@@ -542,9 +525,10 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="35" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="34" bodyend="150"/>
+    <location file="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" line="34" column="1" bodyfile="C:/Users/Lynch-Stephen/Documents/Lecture Notes/3rd year/Semester II/ELEN3009/2018/Project/Code/game-source-code/Player.h" bodystart="33" bodyend="147"/>
     <listofallmembers>
       <member refid="class_player_1a78c89f5a5b61269fe3c8bfde9d3aa62a" prot="public" virt="non-virtual"><scope>Player</scope><name>addScore</name></member>
+      <member refid="class_player_1a854d2be4ad2453d5373227db1413134e" prot="private" virt="non-virtual"><scope>Player</scope><name>dimensions_</name></member>
       <member refid="class_player_1a035573615cefddd933c9e6babd5605fe" prot="private" virt="non-virtual"><scope>Player</scope><name>direction_</name></member>
       <member refid="class_player_1a0d03e19852d55e723299269143eed972" prot="public" virt="virtual"><scope>Player</scope><name>eliminated</name></member>
       <member refid="class_player_1ac7a81aa0978a947b68033525dbdbce3b" prot="public" virt="virtual"><scope>Player</scope><name>getBoundaryBox</name></member>
@@ -560,17 +544,14 @@
       <member refid="class_player_1a0c8161e76c6c2a68d423174020e34387" prot="public" virt="virtual"><scope>Player</scope><name>isPoisoned</name></member>
       <member refid="class_player_1a1d35b7b1cd1a890042abdfdc55cafb14" prot="public" virt="virtual"><scope>Player</scope><name>move</name></member>
       <member refid="class_player_1a4fbd6d307e3c8361da9e65eefba59aef" prot="private" virt="non-virtual"><scope>Player</scope><name>numberOfLives_</name></member>
-      <member refid="class_player_1a3e6f28c430e292e5b02d726343de36bc" prot="private" virt="non-virtual"><scope>Player</scope><name>objectType_</name></member>
       <member refid="class_player_1ae1264a74e8aed292f9a57a4234a12ce1" prot="public" virt="non-virtual"><scope>Player</scope><name>Player</name></member>
       <member refid="class_player_1a02cfcf9b1c798596594a9e9e0b5f64a0" prot="public" virt="virtual"><scope>Player</scope><name>poison</name></member>
       <member refid="class_player_1a09e7aba1297b153aa896dc84a2eacce0" prot="private" virt="non-virtual"><scope>Player</scope><name>position_</name></member>
       <member refid="class_player_1aea83d5edc3dbd5cf8f44d38da57dc02b" prot="public" virt="virtual"><scope>Player</scope><name>reincarnate</name></member>
-      <member refid="class_player_1a5aeb798d1d4ed038421e9ea001e47236" prot="private" virt="non-virtual"><scope>Player</scope><name>reload_time</name></member>
-      <member refid="class_player_1ae9d6bae67d3896422573a38cce7f800a" prot="private" virt="non-virtual"><scope>Player</scope><name>reload_timer</name></member>
       <member refid="class_player_1a423e2096b25d4965a84e4a8bf38c7683" prot="private" virt="non-virtual"><scope>Player</scope><name>score_</name></member>
       <member refid="class_player_1a4b1ae38fa48bb6db1a1783af28935402" prot="public" virt="virtual"><scope>Player</scope><name>setDirection</name></member>
-      <member refid="class_player_1a87ee64cb925735f3d1516cc62a7a6311" prot="public" virt="non-virtual"><scope>Player</scope><name>shoot</name></member>
-      <member refid="class_player_1a9e505498701d853cf3de3660e8d25dde" prot="private" virt="non-virtual"><scope>Player</scope><name>timeSinceLastShoot</name></member>
+      <member refid="class_player_1a3ca4a0c411b674096dc30c6a6da8f305" prot="public" virt="non-virtual"><scope>Player</scope><name>shoot</name></member>
+      <member refid="class_player_1a79f43d0218a8e66a4d6578f618c8bc83" prot="private" virt="non-virtual"><scope>Player</scope><name>weapon_</name></member>
       <member refid="class_i_entity_1a8aea4fbca51d17a0ce314aaa4633f28e" prot="public" virt="virtual"><scope>Player</scope><name>~IEntity</name></member>
       <member refid="class_i_moving_entity_1a2d7480d85770952b23fc554efe95a40a" prot="public" virt="virtual"><scope>Player</scope><name>~IMovingEntity</name></member>
       <member refid="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" prot="public" virt="virtual"><scope>Player</scope><name>~Player</name></member>

@@ -103,6 +103,7 @@ INPUT                  = \
 	"..\..\Code\game-source-code\Logic.h" \
 	"..\..\Code\game-source-code\EnemyFactory.h" \
 	"..\..\Code\game-source-code\Grid.h" \
+	"..\..\Code\game-source-code\Weapon.h" \
 	"..\..\Code\game-source-code\HighScoreManager.cpp" \
 	"..\..\Code\game-source-code\Grid.cpp" \
 	"..\..\Code\game-source-code\CollisionHandler.h" \
@@ -110,6 +111,7 @@ INPUT                  = \
 	"..\..\Code\game-source-code\Logic.cpp" \
 	"..\..\Code\game-source-code\SpatialHash.h" \
 	"..\..\Code\game-source-code\Mushroom.cpp" \
+	"..\..\Code\game-source-code\Weapon.cpp" \
 	"..\..\Code\game-source-code\GameOverScreen.h" \
 	"..\..\Code\game-source-code\StopWatch.cpp" \
 	"..\..\Code\game-source-code\CentipedeSegment.cpp" \
