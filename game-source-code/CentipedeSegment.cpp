@@ -215,6 +215,7 @@ void CentipedeSegment::move()
 
 void CentipedeSegment::isPoisonedMovement()
 {
+    auto speedfactor = static_cast<int>(round(dimensions_.width/dimensions_.speed));
     isPoisonedMovementComplete_ = false;
     if(moveDownCount_ == 0)
     {   setDirection(Direction::DOWN);
@@ -234,7 +235,7 @@ void CentipedeSegment::isPoisonedMovement()
             moveRight();
         }//if
     }//if
-    moveDownCount_ = (++moveDownCount_)%50;
+    moveDownCount_ = (++moveDownCount_)%(speedfactor);
 }
 
 
