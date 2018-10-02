@@ -100,24 +100,6 @@ $(document).ready(function(){initNavTree('class_logic.html','');});
  <a href="class_logic.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_logic_8h_source.html">Logic.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Logic:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic__coll__graph.png" border="0" usemap="#_logic_coll__map" alt="Collaboration graph"/></div>
-<map name="_logic_coll__map" id="_logic_coll__map">
-<area shape="rect" id="node3" href="class_grid.html" title="This class contains details about the screen such as the screen width and height. ..." alt="" coords="49,433,95,460"/>
-<area shape="rect" id="node12" href="class_enemy_factory.html" title="Creates all the enemy objects of the game and Mushrooms. " alt="" coords="692,443,799,469"/>
-<area shape="rect" id="node13" href="class_mushroom_factory.html" title="Creates all the mushroom objects of the game. " alt="" coords="357,477,484,504"/>
-<area shape="rect" id="node17" href="class_spatial_hash.html" title="This class will be used by collision detection to query for objects around the object of interest..." alt="" coords="375,548,467,575"/>
-<area shape="rect" id="node5" href="class_asset_manager.html" title="A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. " alt="" coords="692,291,799,317"/>
-<area shape="rect" id="node22" href="class_high_score_manager.html" title="A class that reads and writes the high score to a textfile. " alt="" coords="679,341,811,368"/>
-<area shape="rect" id="node7" href="class_stop_watch.html" title="This class models a Stopwatch and returns time values in seconds. " alt="" coords="702,240,789,267"/>
-<area shape="rect" id="node8" href="class_presentation.html" title="Uses the SFML Graphics Library to draw all game objects on the screen. " alt="" coords="698,189,793,216"/>
-<area shape="rect" id="node16" href="class_collision_handler.html" title="A Logic Layer class that determines whether collisions have occurred between game objects..." alt="" coords="688,548,803,575"/>
-<area shape="rect" id="node19" href="class_separating_axis_theorem.html" title="This is a class used to determine overlap between BoundaryBox objects. This class makes use of the Se..." alt="" coords="341,665,501,692"/>
-<area shape="rect" id="node20" href="class_position.html" title="A class that contains an x and y value representing a screen position. " alt="" coords="37,665,107,692"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -288,55 +270,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks for collisions between game objects. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a91ff0c77244fcb15a77d506837751c74_cgraph.png" border="0" usemap="#class_logic_a91ff0c77244fcb15a77d506837751c74_cgraph" alt=""/></div>
-<map name="class_logic_a91ff0c77244fcb15a77d506837751c74_cgraph" id="class_logic_a91ff0c77244fcb15a77d506837751c74_cgraph">
-<area shape="rect" id="node2" href="class_collision_handler.html#af5ab6a0cfb3a81d178d41d4b51725c10" title="Checks for collisions between the game objects that are still alive. " alt="" coords="205,262,420,289"/>
-<area shape="rect" id="node34" href="class_collision_handler.html#ae8362426985017db4901d9eb427e2d6d" title="Returns the points the player has obtained from killing game enemies. " alt="" coords="223,314,402,355"/>
-<area shape="rect" id="node3" href="class_spatial_hash.html#a0f1fc93eebd653259103671e619df094" title="Saves the cell locations of an object into a map which will be used to query the objects near it..." alt="" coords="471,59,661,100"/>
-<area shape="rect" id="node4" href="class_spatial_hash.html#a66a559d3ee222216bf08f7ea36be7417" title="Clears the vectors in the game_object_table_. " alt="" coords="743,12,886,38"/>
-<area shape="rect" id="node12" href="class_collision_handler.html#a37cb4c55ba1331f2d83215cdc5aba859" title="Copies the objects from a vector of the specified object type in the range given to another vector..." alt="" coords="468,517,664,544"/>
-<area shape="rect" id="node14" href="class_collision_handler.html#a20ca57634b9d0ce59c70dabdffa794fa" title="Checks collisions between a player and other game objects. If a collision occurs, with a Mushroom the..." alt="" coords="487,255,645,296"/>
-<area shape="rect" id="node24" href="class_collision_handler.html#a12201e56c07089e1387bc055450b538b" title="Checks whether a player bullet collides with every other game object near it. If collisions occur bot..." alt="" coords="477,320,655,362"/>
-<area shape="rect" id="node28" href="class_collision_handler.html#a92610ee252c8b7046313a16e2e442d73" title="Checks collisions between a centipede and a centipede. If a collision occurs, then both Centipedes go..." alt="" coords="477,451,655,492"/>
-<area shape="rect" id="node31" href="class_collision_handler.html#a4c5bf9b1317b76bd678987e22bb4b27a" title="Checks collisions between a centipede and a mushroom. If a collision occurs, the Centipede segment go..." alt="" coords="477,386,655,427"/>
-<area shape="rect" id="node32" href="class_collision_handler.html#a731ea157e7dc96266016a61829dc5088" title="Checks collisions between a scorpion and mushroom. If a collision occurs with a mushroom, the mushroom is set to poisoned. " alt="" coords="480,124,652,166"/>
-<area shape="rect" id="node33" href="class_collision_handler.html#a900349e6e1bc68c330f87d12800027ab" title="Checks collisions between a spider and mushroom. If a collision occurs with a mushroom, the mushroom is set to eliminated. " alt="" coords="487,190,645,231"/>
-<area shape="rect" id="node5" href="class_spatial_hash.html#a663251e84c6eca8303b181c480e76de2" title="Saves a shared pointer to the object at the cells where the object is located into the map game_objec..." alt="" coords="723,66,906,93"/>
-<area shape="rect" id="node6" href="class_spatial_hash.html#a3a9f73d146cb3d5969fdbd78e524f84b" title="Retrieves the screen positions where the object&#39;s centre and boundary box vertices are located..." alt="" coords="967,56,1179,82"/>
-<area shape="rect" id="node7" href="class_spatial_hash.html#a5d0a1d19c6251359bfa99b9b2738de57" title="Maps positions to a cell based on the grid&#39;s width, height, and the chosen cell size. " alt="" coords="971,106,1176,133"/>
-<area shape="rect" id="node8" href="class_spatial_hash.html#ae1b06cf6d968ceaf8731a9ecbb06c836" title="Maps a position to a cell based on the grid&#39;s width, height and the chosen cell size. " alt="" coords="1476,98,1675,125"/>
-<area shape="rect" id="node9" href="class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="1723,186,1854,213"/>
-<area shape="rect" id="node10" href="class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="1723,256,1855,282"/>
-<area shape="rect" id="node11" href="class_grid.html#adfc1ee3214afb8c1a84e5106e2c499c4" title="Returns the grid&#39;s height. " alt="" coords="1734,98,1843,125"/>
-<area shape="rect" id="node13" href="class_collision_handler.html#a2af9c06d92903020f02d352cbd8b7f8c" title="Returns the number of objects of the specified object type in the range given. " alt="" coords="715,517,915,544"/>
-<area shape="rect" id="node15" href="class_spatial_hash.html#a4ce61752d2ec67c16323002d345df77b" title="Queries the map for the cells the object is located in and returns a vector of shared pointers to all..." alt="" coords="723,195,906,236"/>
-<area shape="rect" id="node16" href="class_separating_axis_theorem.html#a876cb95f1373c4b402f227aa0097a5e5" title="Takes in two BoundaryBox objects and checks whether they overlap. " alt="" coords="735,271,895,312"/>
-<area shape="rect" id="node17" href="class_separating_axis_theorem.html#a2ec4cb98d02252c57824bbdf4d5f8bbb" title="Clears all the vectors used as private members. " alt="" coords="993,274,1153,315"/>
-<area shape="rect" id="node18" href="class_boundary_box.html#ac5f649399746662fa0176e95c632ca9c" title="A function that returns the vertices of the boundary box in a vector of type Position. " alt="" coords="986,340,1161,366"/>
-<area shape="rect" id="node19" href="class_separating_axis_theorem.html#ac7613d7a7f5f05311260230b26486c63" title="Generates the normals perpendicular to the edges of a Rectangle. The normals are stored in a vector o..." alt="" coords="1249,150,1409,191"/>
-<area shape="rect" id="node21" href="class_separating_axis_theorem.html#a574c908ebfa5df34e2f37916956c000a" title="Iterates through the axes generated and checks for overlap on each. Each BoundaryBox&#39;s vertices are p..." alt="" coords="987,208,1160,250"/>
-<area shape="rect" id="node20" href="class_separating_axis_theorem.html#a4b4dccb055bac2420135d8ce4bd3446a" title="Performs the normalization of an axis normal vector. The unit vector is what gets returned..." alt="" coords="1495,150,1655,191"/>
-<area shape="rect" id="node22" href="class_separating_axis_theorem.html#a568f10c3f0eed05f4cf39bb1c2d380f1" title="Performs vector projection onto axes generated. " alt="" coords="1245,242,1413,283"/>
-<area shape="rect" id="node23" href="class_separating_axis_theorem.html#ae0658d8b891bf6db5bea7fba29c1a02c" title="Performs the dot product between two points. " alt="" coords="1495,267,1655,308"/>
-<area shape="rect" id="node25" href="class_collision_handler.html#a67170a2ac5e0e27f852da93928dfbbd3" title="Updates the centipede train after a bullet has collided with a segment. Sets the next segment as a Ce..." alt="" coords="712,383,917,424"/>
-<area shape="rect" id="node26" href="class_centipede_segment.html#ac6d38060fd33a0564aa25e7393431a18" title="A function that sets the body type of the centipede segment. " alt="" coords="965,441,1181,468"/>
-<area shape="rect" id="node27" href="class_centipede_segment.html#a788a82ec5bb9158a4bcd1deaa11747f3" title="A function that clears the vector of positions where the head of centipede train had a collision..." alt="" coords="1229,434,1428,475"/>
-<area shape="rect" id="node29" href="class_collision_handler.html#aae8c579d8f9e003a7776bd093f70ad92" title="Updates the train behind a head that has has collided with a Mushroom or another Centipede train..." alt="" coords="733,451,896,492"/>
-<area shape="rect" id="node30" href="class_centipede_segment.html#a0baecdc693620a1b09eef2c226425b6f" title="A function that saves positions where the head of centipede train had a collision. " alt="" coords="973,492,1173,518"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a91ff0c77244fcb15a77d506837751c74_icgraph.png" border="0" usemap="#class_logic_a91ff0c77244fcb15a77d506837751c74_icgraph" alt=""/></div>
-<map name="class_logic_a91ff0c77244fcb15a77d506837751c74_icgraph" id="class_logic_a91ff0c77244fcb15a77d506837751c74_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="205,5,284,32"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="332,5,383,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -364,24 +297,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Generates a <a class="el" href="class_scorpion.html" title="This is a class that inherits from the IMovingEntity class. It models a Scorpion object in the game...">Scorpion</a> at a random position. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_ae5f432d4b5b457a7f88c42b34f28f682_cgraph.png" border="0" usemap="#class_logic_ae5f432d4b5b457a7f88c42b34f28f682_cgraph" alt=""/></div>
-<map name="class_logic_ae5f432d4b5b457a7f88c42b34f28f682_cgraph" id="class_logic_ae5f432d4b5b457a7f88c42b34f28f682_cgraph">
-<area shape="rect" id="node2" href="class_enemy_factory.html#ad87f4af7e5dcbc83ca6ae121c70b898d" title="Generates a scorpion at a random position. " alt="" coords="224,5,449,32"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_ae5f432d4b5b457a7f88c42b34f28f682_icgraph.png" border="0" usemap="#class_logic_ae5f432d4b5b457a7f88c42b34f28f682_icgraph" alt=""/></div>
-<map name="class_logic_ae5f432d4b5b457a7f88c42b34f28f682_icgraph" id="class_logic_ae5f432d4b5b457a7f88c42b34f28f682_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#a7d8384f6a1bd8e31c327109b1aa4e998" title="Generates all the game&#39;s moving enemies. " alt="" coords="224,5,421,32"/>
-<area shape="rect" id="node3" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="469,5,548,32"/>
-<area shape="rect" id="node4" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="596,5,647,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -409,24 +324,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Generates a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> at random either at the left or right boundary. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a8e083d0e64f6166e1621578c34270e37_cgraph.png" border="0" usemap="#class_logic_a8e083d0e64f6166e1621578c34270e37_cgraph" alt=""/></div>
-<map name="class_logic_a8e083d0e64f6166e1621578c34270e37_cgraph" id="class_logic_a8e083d0e64f6166e1621578c34270e37_cgraph">
-<area shape="rect" id="node2" href="class_enemy_factory.html#a6284d34c8ec52603ddeb9134326968d3" title="Generates a spider periodically. " alt="" coords="211,5,421,32"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a8e083d0e64f6166e1621578c34270e37_icgraph.png" border="0" usemap="#class_logic_a8e083d0e64f6166e1621578c34270e37_icgraph" alt=""/></div>
-<map name="class_logic_a8e083d0e64f6166e1621578c34270e37_icgraph" id="class_logic_a8e083d0e64f6166e1621578c34270e37_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#a7d8384f6a1bd8e31c327109b1aa4e998" title="Generates all the game&#39;s moving enemies. " alt="" coords="211,5,408,32"/>
-<area shape="rect" id="node3" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="456,5,535,32"/>
-<area shape="rect" id="node4" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="583,5,633,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -454,16 +351,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Generates Centipede heads. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a16d5915e489331198e33318c4e59eeeb_cgraph.png" border="0" usemap="#class_logic_a16d5915e489331198e33318c4e59eeeb_cgraph" alt=""/></div>
-<map name="class_logic_a16d5915e489331198e33318c4e59eeeb_cgraph" id="class_logic_a16d5915e489331198e33318c4e59eeeb_cgraph">
-<area shape="rect" id="node2" href="class_enemy_factory.html#ac9ee16ae90b9825dd771081bbc7c8436" title="Generates centipede heads. " alt="" coords="223,23,445,65"/>
-<area shape="rect" id="node3" href="class_grid.html#adfc1ee3214afb8c1a84e5106e2c499c4" title="Returns the grid&#39;s height. " alt="" coords="493,5,603,32"/>
-<area shape="rect" id="node4" href="class_grid.html#a0d9e03cd17d99ff13a044d027012a9e2" title="Returns the grid&#39;s width. " alt="" coords="495,56,601,83"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -491,29 +378,6 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Generates all the game's moving enemies. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a7d8384f6a1bd8e31c327109b1aa4e998_cgraph.png" border="0" usemap="#class_logic_a7d8384f6a1bd8e31c327109b1aa4e998_cgraph" alt=""/></div>
-<map name="class_logic_a7d8384f6a1bd8e31c327109b1aa4e998_cgraph" id="class_logic_a7d8384f6a1bd8e31c327109b1aa4e998_cgraph">
-<area shape="rect" id="node2" href="class_logic.html#ab11c4016cf06a493412935202921bbf0" title="Generates the a Centipede with one head, and multiple body segments. " alt="" coords="251,17,461,43"/>
-<area shape="rect" id="node5" href="class_logic.html#ae5f432d4b5b457a7f88c42b34f28f682" title="Generates a Scorpion at a random position. " alt="" coords="271,71,441,98"/>
-<area shape="rect" id="node7" href="class_logic.html#a8e083d0e64f6166e1621578c34270e37" title="Generates a Spider at random either at the left or right boundary. " alt="" coords="277,122,435,149"/>
-<area shape="rect" id="node3" href="class_enemy_factory.html#acfe15021ab3cf9554ef67ad9f99cddd2" title="Generates a Centipede made up of centipede segments. " alt="" coords="519,5,725,47"/>
-<area shape="rect" id="node4" href="class_grid.html#a0d9e03cd17d99ff13a044d027012a9e2" title="Returns the grid&#39;s width. " alt="" coords="783,13,889,39"/>
-<area shape="rect" id="node6" href="class_enemy_factory.html#ad87f4af7e5dcbc83ca6ae121c70b898d" title="Generates a scorpion at a random position. " alt="" coords="509,71,735,98"/>
-<area shape="rect" id="node8" href="class_enemy_factory.html#a6284d34c8ec52603ddeb9134326968d3" title="Generates a spider periodically. " alt="" coords="517,122,727,149"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a7d8384f6a1bd8e31c327109b1aa4e998_icgraph.png" border="0" usemap="#class_logic_a7d8384f6a1bd8e31c327109b1aa4e998_icgraph" alt=""/></div>
-<map name="class_logic_a7d8384f6a1bd8e31c327109b1aa4e998_icgraph" id="class_logic_a7d8384f6a1bd8e31c327109b1aa4e998_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="251,5,329,32"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="377,5,428,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -541,29 +405,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Transforms all dead centipede segments from vector(s) into mushrooms. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a847b8ccc9d13f1f80c2d0f6c897820a4_cgraph.png" border="0" usemap="#class_logic_a847b8ccc9d13f1f80c2d0f6c897820a4_cgraph" alt=""/></div>
-<map name="class_logic_a847b8ccc9d13f1f80c2d0f6c897820a4_cgraph" id="class_logic_a847b8ccc9d13f1f80c2d0f6c897820a4_cgraph">
-<area shape="rect" id="node2" href="class_enemy_factory.html#aa1b66cbf60b34c4b1abf11fb7fcbbc56" title="Generates a mushrooms at a given position. " alt="" coords="239,31,473,57"/>
-<area shape="rect" id="node3" href="class_mushroom_factory.html#a3f433ade66a5a36958c8ec8fbdef0896" title="Generates a mushroom at the given position. " alt="" coords="521,23,707,65"/>
-<area shape="rect" id="node4" href="class_mushroom_factory.html#aa7e089232dee317d81b62b1cf8b7660d" title="Maps the position into the defined rows and columns. " alt="" coords="760,56,960,83"/>
-<area shape="rect" id="node8" href="class_mushroom_factory.html#ae313f7723eb9188611cbb7358662ed54" title="Maps the position into the defined xpos and ypos. " alt="" coords="755,5,965,32"/>
-<area shape="rect" id="node5" href="class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="1013,56,1145,83"/>
-<area shape="rect" id="node6" href="class_position.html#a9b2b2f9964cf342152fa98bcae3ccadc" title="Sets the y coordinate of an object. " alt="" coords="1013,107,1145,133"/>
-<area shape="rect" id="node7" href="class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="1014,5,1145,32"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a847b8ccc9d13f1f80c2d0f6c897820a4_icgraph.png" border="0" usemap="#class_logic_a847b8ccc9d13f1f80c2d0f6c897820a4_icgraph" alt=""/></div>
-<map name="class_logic_a847b8ccc9d13f1f80c2d0f6c897820a4_icgraph" id="class_logic_a847b8ccc9d13f1f80c2d0f6c897820a4_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="239,13,317,39"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="365,13,416,39"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -591,28 +432,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Generates <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> objects. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a11a5ad0679ef70b1bf64b8367c0f5532_cgraph.png" border="0" usemap="#class_logic_a11a5ad0679ef70b1bf64b8367c0f5532_cgraph" alt=""/></div>
-<map name="class_logic_a11a5ad0679ef70b1bf64b8367c0f5532_cgraph" id="class_logic_a11a5ad0679ef70b1bf64b8367c0f5532_cgraph">
-<area shape="rect" id="node2" href="class_enemy_factory.html#a37dd0744a52ee6224838fc6404c3d227" title="Generates mushrooms at random positions. " alt="" coords="232,31,465,57"/>
-<area shape="rect" id="node3" href="class_mushroom_factory.html#a3e73a23df68b11e5fc1af1212db52b1e" title="Generates mushrooms. " alt="" coords="513,23,699,65"/>
-<area shape="rect" id="node4" href="class_mushroom_factory.html#a1cb4662503b400d0f7948c824e4e0620" title="Checks if a cell is occupied. " alt="" coords="747,5,969,32"/>
-<area shape="rect" id="node5" href="class_mushroom_factory.html#ae313f7723eb9188611cbb7358662ed54" title="Maps the position into the defined xpos and ypos. " alt="" coords="753,56,963,83"/>
-<area shape="rect" id="node6" href="class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="1018,31,1149,57"/>
-<area shape="rect" id="node7" href="class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="1017,81,1149,108"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a11a5ad0679ef70b1bf64b8367c0f5532_icgraph.png" border="0" usemap="#class_logic_a11a5ad0679ef70b1bf64b8367c0f5532_icgraph" alt=""/></div>
-<map name="class_logic_a11a5ad0679ef70b1bf64b8367c0f5532_icgraph" id="class_logic_a11a5ad0679ef70b1bf64b8367c0f5532_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="232,5,311,32"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="359,5,409,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -640,26 +459,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Generates the a Centipede with one head, and multiple body segments. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_ab11c4016cf06a493412935202921bbf0_cgraph.png" border="0" usemap="#class_logic_ab11c4016cf06a493412935202921bbf0_cgraph" alt=""/></div>
-<map name="class_logic_ab11c4016cf06a493412935202921bbf0_cgraph" id="class_logic_ab11c4016cf06a493412935202921bbf0_cgraph">
-<area shape="rect" id="node2" href="class_enemy_factory.html#acfe15021ab3cf9554ef67ad9f99cddd2" title="Generates a Centipede made up of centipede segments. " alt="" coords="264,5,471,47"/>
-<area shape="rect" id="node3" href="class_grid.html#a0d9e03cd17d99ff13a044d027012a9e2" title="Returns the grid&#39;s width. " alt="" coords="519,13,625,39"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_ab11c4016cf06a493412935202921bbf0_icgraph.png" border="0" usemap="#class_logic_ab11c4016cf06a493412935202921bbf0_icgraph" alt=""/></div>
-<map name="class_logic_ab11c4016cf06a493412935202921bbf0_icgraph" id="class_logic_ab11c4016cf06a493412935202921bbf0_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#a7d8384f6a1bd8e31c327109b1aa4e998" title="Generates all the game&#39;s moving enemies. " alt="" coords="264,5,461,32"/>
-<area shape="rect" id="node5" href="class_logic.html#a1e2f8545edc283391961c8689ac96d12" title="Removes all Centipede segments from vector(s) where they exist, reset the position of the player and ..." alt="" coords="281,56,444,83"/>
-<area shape="rect" id="node3" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="509,31,588,57"/>
-<area shape="rect" id="node4" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="636,31,687,57"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -687,30 +486,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Tells presentation to process input from keyboard. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a92b3982ff6e3ec9d07a69369e579853e_cgraph.png" border="0" usemap="#class_logic_a92b3982ff6e3ec9d07a69369e579853e_cgraph" alt=""/></div>
-<map name="class_logic_a92b3982ff6e3ec9d07a69369e579853e_cgraph" id="class_logic_a92b3982ff6e3ec9d07a69369e579853e_cgraph">
-<area shape="rect" id="node2" href="class_presentation.html#a0ae752fb12e3530acd81469e68d743a3" title="Determines the keyboard keys pressed and acts accordingly. Polling is used by default. " alt="" coords="237,5,415,47"/>
-<area shape="rect" id="node4" href="class_presentation.html#a7aebdf3fb5663b1dd11dbc30963984c2" title="Returns a bool indicating whether a key was pressed. " alt="" coords="235,71,417,98"/>
-<area shape="rect" id="node5" href="class_presentation.html#ad10cbe90531e2817a33356926e538212" title="Returns a bool indicating whether a key was pressed. " alt="" coords="231,122,421,149"/>
-<area shape="rect" id="node6" href="class_presentation.html#a36e1855d959346115eee06d327686551" title="Returns a bool indicating whether a key was pressed. " alt="" coords="237,173,415,199"/>
-<area shape="rect" id="node7" href="class_presentation.html#a050a12b9766886e4969069be1b841529" title="Returns a bool indicating whether a key was pressed. " alt="" coords="229,223,423,250"/>
-<area shape="rect" id="node8" href="class_presentation.html#a2f8e4c78cc85ccd9a0410370f66ffaba" title="Returns a bool indicating whether a key was pressed. " alt="" coords="227,274,425,301"/>
-<area shape="rect" id="node9" href="class_presentation.html#ab2284a509e0dd35fb10b11bb05d220ca" title="Plays the sound used to indicate that a player has shot a bullet. " alt="" coords="233,325,419,367"/>
-<area shape="rect" id="node3" href="class_presentation.html#aa37ace23fc7d4fd50e520670510dd9fe" title="Checks which key was pressed/released and updates its status. " alt="" coords="473,13,640,39"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a92b3982ff6e3ec9d07a69369e579853e_icgraph.png" border="0" usemap="#class_logic_a92b3982ff6e3ec9d07a69369e579853e_icgraph" alt=""/></div>
-<map name="class_logic_a92b3982ff6e3ec9d07a69369e579853e_icgraph" id="class_logic_a92b3982ff6e3ec9d07a69369e579853e_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="227,5,305,32"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="353,5,404,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -738,26 +513,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Loads paths to the textures used by the game. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a08101e1a7d5b42ea590ec2b67fda6800_cgraph.png" border="0" usemap="#class_logic_a08101e1a7d5b42ea590ec2b67fda6800_cgraph" alt=""/></div>
-<map name="class_logic_a08101e1a7d5b42ea590ec2b67fda6800_cgraph" id="class_logic_a08101e1a7d5b42ea590ec2b67fda6800_cgraph">
-<area shape="rect" id="node2" href="class_presentation.html#ad61f8a299c4e23f6e9d51692929f8333" title="Loads all the game&#39;s textures. " alt="" coords="185,13,362,39"/>
-<area shape="rect" id="node5" href="class_asset_manager.html#ab6d8a0e2fee83023270c7e82c00dc0d7" title="Returns a vector of type AssetManager containing all the asset information for the project..." alt="" coords="180,63,367,90"/>
-<area shape="rect" id="node3" href="class_presentation.html#a04c43fe2cf2fe4b969c034eee5d4b1e2" title="Populate SpriteSheet vector, sprite_sheets_, for the different game objects that have more than one i..." alt="" coords="415,5,601,47"/>
-<area shape="rect" id="node4" href="class_presentation.html#a0e099ace00ac0fd6f502c8df51d67fa6" title="Generates a SpriteSheet object and saves it into the vector sprite_sheets_ for the different game obj..." alt="" coords="649,5,836,47"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a08101e1a7d5b42ea590ec2b67fda6800_icgraph.png" border="0" usemap="#class_logic_a08101e1a7d5b42ea590ec2b67fda6800_icgraph" alt=""/></div>
-<map name="class_logic_a08101e1a7d5b42ea590ec2b67fda6800_icgraph" id="class_logic_a08101e1a7d5b42ea590ec2b67fda6800_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="180,5,259,32"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="307,5,357,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -785,36 +540,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Resets reincarnate of the <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> objects in the game. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_aab21423a4918a4047718cfdcda896aa3_cgraph.png" border="0" usemap="#class_logic_aab21423a4918a4047718cfdcda896aa3_cgraph" alt=""/></div>
-<map name="class_logic_aab21423a4918a4047718cfdcda896aa3_cgraph" id="class_logic_aab21423a4918a4047718cfdcda896aa3_cgraph">
-<area shape="rect" id="node2" href="class_stop_watch.html#add564bbd185e94d010fb1acff1620844" title="Pauses the stopwatch. " alt="" coords="267,5,397,32"/>
-<area shape="rect" id="node3" href="class_stop_watch.html#a09a3c8f9ab03d7b28e4f8b90a833974e" title="Starts the timer. " alt="" coords="271,56,393,83"/>
-<area shape="rect" id="node4" href="class_stop_watch.html#a2bf006c59e86045c58a7d2ac5269c849" title="Returns the amount time in seconds between start() and pause(). " alt="" coords="243,107,421,133"/>
-<area shape="rect" id="node5" href="class_logic.html#ac6f88cd30d7a149e8ab101ebf7cba8d2" title="Gives Presentation a vector of game objects to be drawn. " alt="" coords="243,157,421,184"/>
-<area shape="rect" id="node13" href="class_presentation.html#ae34050372fa270232dce9f2666c1f2f6" title="Updates the sound played when a Scorpion and Spider are moving. Also plays the sound used when a Mush..." alt="" coords="240,209,424,250"/>
-<area shape="rect" id="node14" href="class_stop_watch.html#a8fa0ea2811a7244d4687ba682cef222d" title="Resumes the stopwatch. " alt="" coords="263,275,401,301"/>
-<area shape="rect" id="node6" href="class_presentation.html#a07fe85f2fb3be047ed1bbf553662f754" title="Draws all the game objects onto the screen. Including the player&#39;s score, lives and the game&#39;s highes..." alt="" coords="472,157,657,184"/>
-<area shape="rect" id="node7" href="class_presentation.html#ac13b755328c6e531b279d2e49a5503c1" title="Displays the player&#39;s lives, current score and the high score of the game. " alt="" coords="722,107,895,133"/>
-<area shape="rect" id="node8" href="class_presentation.html#ac6a714a00a8c38446e8ff298c09da90b" title="Returns a sf::Sprite with the necessary properties of the object given. " alt="" coords="715,157,902,184"/>
-<area shape="rect" id="node12" href="class_presentation.html#a82e1c667390dd7fb683548a9ce1c7c58" title="Updates the animations of game objects that have more than one image to represent movement..." alt="" coords="705,208,912,235"/>
-<area shape="rect" id="node9" href="class_presentation.html#ac00c099bbecd8d84bd7c536d4e6d3aa7" title="Returns a sprite with the correct animation for animated moving objects. " alt="" coords="960,150,1147,191"/>
-<area shape="rect" id="node10" href="class_centipede_segment.html#a395c23435c42e06001766783f074b547" title="Inherited from IMovingEntity. A virtual function that gets a constant copy of the CentipedeSegment ob..." alt="" coords="1195,150,1413,191"/>
-<area shape="rect" id="node11" href="class_centipede_segment.html#abf0473bac503e25944cebff09e2c600a" title="Inherited from IMovingEntity. A virtual function that queries if a CentipedeSegment object is still a..." alt="" coords="1461,157,1639,184"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_aab21423a4918a4047718cfdcda896aa3_icgraph.png" border="0" usemap="#class_logic_aab21423a4918a4047718cfdcda896aa3_icgraph" alt=""/></div>
-<map name="class_logic_aab21423a4918a4047718cfdcda896aa3_icgraph" id="class_logic_aab21423a4918a4047718cfdcda896aa3_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#a1e2f8545edc283391961c8689ac96d12" title="Removes all Centipede segments from vector(s) where they exist, reset the position of the player and ..." alt="" coords="240,5,403,32"/>
-<area shape="rect" id="node3" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="451,5,529,32"/>
-<area shape="rect" id="node4" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="577,5,628,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -842,41 +567,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Removes all Centipede segments from vector(s) where they exist, reset the position of the player and generate a new Centipede train. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a1e2f8545edc283391961c8689ac96d12_cgraph.png" border="0" usemap="#class_logic_a1e2f8545edc283391961c8689ac96d12_cgraph" alt=""/></div>
-<map name="class_logic_a1e2f8545edc283391961c8689ac96d12_cgraph" id="class_logic_a1e2f8545edc283391961c8689ac96d12_cgraph">
-<area shape="rect" id="node2" href="_logic_8h.html#a7c9ef220b1c6b51245f5c781e4048d34" title="container_erase_if &#45; a function that erases elements in a container based on a specified condition de..." alt="" coords="258,107,385,133"/>
-<area shape="rect" id="node3" href="class_logic.html#aab21423a4918a4047718cfdcda896aa3" title="Resets reincarnate of the Mushroom objects in the game. " alt="" coords="228,157,415,184"/>
-<area shape="rect" id="node17" href="class_enemy_factory.html#a9c5b63ab5d3df76f1cb907365cf09bfe" title="Resets states of generated objects to false. " alt="" coords="249,208,393,235"/>
-<area shape="rect" id="node18" href="class_logic.html#ab11c4016cf06a493412935202921bbf0" title="Generates the a Centipede with one head, and multiple body segments. " alt="" coords="216,296,427,323"/>
-<area shape="rect" id="node4" href="class_stop_watch.html#add564bbd185e94d010fb1acff1620844" title="Pauses the stopwatch. " alt="" coords="513,5,643,32"/>
-<area shape="rect" id="node5" href="class_stop_watch.html#a09a3c8f9ab03d7b28e4f8b90a833974e" title="Starts the timer. " alt="" coords="517,56,639,83"/>
-<area shape="rect" id="node6" href="class_stop_watch.html#a2bf006c59e86045c58a7d2ac5269c849" title="Returns the amount time in seconds between start() and pause(). " alt="" coords="489,107,667,133"/>
-<area shape="rect" id="node7" href="class_logic.html#ac6f88cd30d7a149e8ab101ebf7cba8d2" title="Gives Presentation a vector of game objects to be drawn. " alt="" coords="489,157,667,184"/>
-<area shape="rect" id="node15" href="class_presentation.html#ae34050372fa270232dce9f2666c1f2f6" title="Updates the sound played when a Scorpion and Spider are moving. Also plays the sound used when a Mush..." alt="" coords="486,209,670,250"/>
-<area shape="rect" id="node16" href="class_stop_watch.html#a8fa0ea2811a7244d4687ba682cef222d" title="Resumes the stopwatch. " alt="" coords="509,275,647,301"/>
-<area shape="rect" id="node8" href="class_presentation.html#a07fe85f2fb3be047ed1bbf553662f754" title="Draws all the game objects onto the screen. Including the player&#39;s score, lives and the game&#39;s highes..." alt="" coords="729,157,915,184"/>
-<area shape="rect" id="node9" href="class_presentation.html#ac13b755328c6e531b279d2e49a5503c1" title="Displays the player&#39;s lives, current score and the high score of the game. " alt="" coords="979,107,1153,133"/>
-<area shape="rect" id="node10" href="class_presentation.html#ac6a714a00a8c38446e8ff298c09da90b" title="Returns a sf::Sprite with the necessary properties of the object given. " alt="" coords="973,157,1159,184"/>
-<area shape="rect" id="node14" href="class_presentation.html#a82e1c667390dd7fb683548a9ce1c7c58" title="Updates the animations of game objects that have more than one image to represent movement..." alt="" coords="963,208,1169,235"/>
-<area shape="rect" id="node11" href="class_presentation.html#ac00c099bbecd8d84bd7c536d4e6d3aa7" title="Returns a sprite with the correct animation for animated moving objects. " alt="" coords="1217,150,1404,191"/>
-<area shape="rect" id="node12" href="class_centipede_segment.html#a395c23435c42e06001766783f074b547" title="Inherited from IMovingEntity. A virtual function that gets a constant copy of the CentipedeSegment ob..." alt="" coords="1452,150,1671,191"/>
-<area shape="rect" id="node13" href="class_centipede_segment.html#abf0473bac503e25944cebff09e2c600a" title="Inherited from IMovingEntity. A virtual function that queries if a CentipedeSegment object is still a..." alt="" coords="1719,157,1896,184"/>
-<area shape="rect" id="node19" href="class_enemy_factory.html#acfe15021ab3cf9554ef67ad9f99cddd2" title="Generates a Centipede made up of centipede segments. " alt="" coords="475,326,681,367"/>
-<area shape="rect" id="node20" href="class_grid.html#a0d9e03cd17d99ff13a044d027012a9e2" title="Returns the grid&#39;s width. " alt="" coords="769,333,875,360"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a1e2f8545edc283391961c8689ac96d12_icgraph.png" border="0" usemap="#class_logic_a1e2f8545edc283391961c8689ac96d12_icgraph" alt=""/></div>
-<map name="class_logic_a1e2f8545edc283391961c8689ac96d12_icgraph" id="class_logic_a1e2f8545edc283391961c8689ac96d12_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="216,5,295,32"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="343,5,393,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -904,23 +594,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Removes all dead entities from vector(s) where they exist. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_abb059b52631dc541c89e46370d3bc688_cgraph.png" border="0" usemap="#class_logic_abb059b52631dc541c89e46370d3bc688_cgraph" alt=""/></div>
-<map name="class_logic_abb059b52631dc541c89e46370d3bc688_cgraph" id="class_logic_abb059b52631dc541c89e46370d3bc688_cgraph">
-<area shape="rect" id="node2" href="_logic_8h.html#a7c9ef220b1c6b51245f5c781e4048d34" title="container_erase_if &#45; a function that erases elements in a container based on a specified condition de..." alt="" coords="229,5,356,32"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_abb059b52631dc541c89e46370d3bc688_icgraph.png" border="0" usemap="#class_logic_abb059b52631dc541c89e46370d3bc688_icgraph" alt=""/></div>
-<map name="class_logic_abb059b52631dc541c89e46370d3bc688_icgraph" id="class_logic_abb059b52631dc541c89e46370d3bc688_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="229,5,308,32"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="356,5,407,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -948,31 +621,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Gives <a class="el" href="class_presentation.html" title="Uses the SFML Graphics Library to draw all game objects on the screen. ">Presentation</a> a vector of game objects to be drawn. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_ac6f88cd30d7a149e8ab101ebf7cba8d2_cgraph.png" border="0" usemap="#class_logic_ac6f88cd30d7a149e8ab101ebf7cba8d2_cgraph" alt=""/></div>
-<map name="class_logic_ac6f88cd30d7a149e8ab101ebf7cba8d2_cgraph" id="class_logic_ac6f88cd30d7a149e8ab101ebf7cba8d2_cgraph">
-<area shape="rect" id="node2" href="class_presentation.html#a07fe85f2fb3be047ed1bbf553662f754" title="Draws all the game objects onto the screen. Including the player&#39;s score, lives and the game&#39;s highes..." alt="" coords="231,56,416,83"/>
-<area shape="rect" id="node3" href="class_presentation.html#ac13b755328c6e531b279d2e49a5503c1" title="Displays the player&#39;s lives, current score and the high score of the game. " alt="" coords="481,5,654,32"/>
-<area shape="rect" id="node4" href="class_presentation.html#ac6a714a00a8c38446e8ff298c09da90b" title="Returns a sf::Sprite with the necessary properties of the object given. " alt="" coords="474,56,661,83"/>
-<area shape="rect" id="node8" href="class_presentation.html#a82e1c667390dd7fb683548a9ce1c7c58" title="Updates the animations of game objects that have more than one image to represent movement..." alt="" coords="464,107,671,133"/>
-<area shape="rect" id="node5" href="class_presentation.html#ac00c099bbecd8d84bd7c536d4e6d3aa7" title="Returns a sprite with the correct animation for animated moving objects. " alt="" coords="719,49,905,90"/>
-<area shape="rect" id="node6" href="class_centipede_segment.html#a395c23435c42e06001766783f074b547" title="Inherited from IMovingEntity. A virtual function that gets a constant copy of the CentipedeSegment ob..." alt="" coords="953,49,1172,90"/>
-<area shape="rect" id="node7" href="class_centipede_segment.html#abf0473bac503e25944cebff09e2c600a" title="Inherited from IMovingEntity. A virtual function that queries if a CentipedeSegment object is still a..." alt="" coords="1220,56,1397,83"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_ac6f88cd30d7a149e8ab101ebf7cba8d2_icgraph.png" border="0" usemap="#class_logic_ac6f88cd30d7a149e8ab101ebf7cba8d2_icgraph" alt=""/></div>
-<map name="class_logic_ac6f88cd30d7a149e8ab101ebf7cba8d2_icgraph" id="class_logic_ac6f88cd30d7a149e8ab101ebf7cba8d2_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="676,5,755,32"/>
-<area shape="rect" id="node4" href="class_logic.html#aab21423a4918a4047718cfdcda896aa3" title="Resets reincarnate of the Mushroom objects in the game. " alt="" coords="231,31,417,57"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="803,5,853,32"/>
-<area shape="rect" id="node5" href="class_logic.html#a1e2f8545edc283391961c8689ac96d12" title="Removes all Centipede segments from vector(s) where they exist, reset the position of the player and ..." alt="" coords="465,31,628,57"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -1000,24 +648,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Displays the game over screen when the player has lost the game. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a43609f2dc8b0575d2cc9d4381079abdb_cgraph.png" border="0" usemap="#class_logic_a43609f2dc8b0575d2cc9d4381079abdb_cgraph" alt=""/></div>
-<map name="class_logic_a43609f2dc8b0575d2cc9d4381079abdb_cgraph" id="class_logic_a43609f2dc8b0575d2cc9d4381079abdb_cgraph">
-<area shape="rect" id="node2" href="class_presentation.html#a40d86f3b623cbef7a04db5a312ff1368" title="Displays a Game Over Screen at the end of the game. " alt="" coords="252,5,443,47"/>
-<area shape="rect" id="node3" href="class_game_over_screen.html#aed3579e06a894e3e0f3683494ef4b278" title="Displays the SplashScreen window. " alt="" coords="491,13,653,39"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a43609f2dc8b0575d2cc9d4381079abdb_icgraph.png" border="0" usemap="#class_logic_a43609f2dc8b0575d2cc9d4381079abdb_icgraph" alt=""/></div>
-<map name="class_logic_a43609f2dc8b0575d2cc9d4381079abdb_icgraph" id="class_logic_a43609f2dc8b0575d2cc9d4381079abdb_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="252,5,331,32"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="379,5,429,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -1045,24 +675,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Displays the game won screen when the player has won the game. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a1a7332c942409bdb5cbcc26ddadbe6e9_cgraph.png" border="0" usemap="#class_logic_a1a7332c942409bdb5cbcc26ddadbe6e9_cgraph" alt=""/></div>
-<map name="class_logic_a1a7332c942409bdb5cbcc26ddadbe6e9_cgraph" id="class_logic_a1a7332c942409bdb5cbcc26ddadbe6e9_cgraph">
-<area shape="rect" id="node2" href="class_presentation.html#a2ef4507daf2ddbf356b6dfca1c8f525a" title="Displays a Game Won Screen at the end of the game. " alt="" coords="253,5,445,47"/>
-<area shape="rect" id="node3" href="class_game_won_screen.html#aaa58eb6d7d1b13468cc65cecd0243b59" title="Displays the SplashScreen window. " alt="" coords="493,13,656,39"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a1a7332c942409bdb5cbcc26ddadbe6e9_icgraph.png" border="0" usemap="#class_logic_a1a7332c942409bdb5cbcc26ddadbe6e9_icgraph" alt=""/></div>
-<map name="class_logic_a1a7332c942409bdb5cbcc26ddadbe6e9_icgraph" id="class_logic_a1a7332c942409bdb5cbcc26ddadbe6e9_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="253,5,332,32"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="380,5,431,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -1090,24 +702,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Displays the splash screen at the start of the game. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a70bcf051b34e52fe521163360316d468_cgraph.png" border="0" usemap="#class_logic_a70bcf051b34e52fe521163360316d468_cgraph" alt=""/></div>
-<map name="class_logic_a70bcf051b34e52fe521163360316d468_cgraph" id="class_logic_a70bcf051b34e52fe521163360316d468_cgraph">
-<area shape="rect" id="node2" href="class_presentation.html#ad87e0f6ada6aa68c6e15456a5e7820ea" title="Displays a Splashscreen at the beginning of the game. " alt="" coords="232,5,403,47"/>
-<area shape="rect" id="node3" href="class_splash_screen.html#ae30ab2316faa3fa081f85fb61899689e" title="Displays the SplashScreen window. " alt="" coords="451,13,592,39"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a70bcf051b34e52fe521163360316d468_icgraph.png" border="0" usemap="#class_logic_a70bcf051b34e52fe521163360316d468_icgraph" alt=""/></div>
-<map name="class_logic_a70bcf051b34e52fe521163360316d468_icgraph" id="class_logic_a70bcf051b34e52fe521163360316d468_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="232,5,311,32"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="359,5,409,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -1127,70 +721,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Runs the game loop. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_abf175ef9069615527bfbd10864b20df4_cgraph.png" border="0" usemap="#class_logic_abf175ef9069615527bfbd10864b20df4_cgraph" alt=""/></div>
-<map name="class_logic_abf175ef9069615527bfbd10864b20df4_cgraph" id="class_logic_abf175ef9069615527bfbd10864b20df4_cgraph">
-<area shape="rect" id="node2" href="class_logic.html#a70bcf051b34e52fe521163360316d468" title="Displays the splash screen at the start of the game. " alt="" coords="143,42,321,69"/>
-<area shape="rect" id="node5" href="class_logic.html#a08101e1a7d5b42ea590ec2b67fda6800" title="Loads paths to the textures used by the game. " alt="" coords="169,122,295,149"/>
-<area shape="rect" id="node9" href="class_high_score_manager.html#a837c949b77d955cd2047fe70584a1347" title="Returns the high score of the game. " alt="" coords="405,173,589,215"/>
-<area shape="rect" id="node10" href="class_logic.html#a11a5ad0679ef70b1bf64b8367c0f5532" title="Generates Mushroom objects. " alt="" coords="143,305,321,331"/>
-<area shape="rect" id="node13" href="class_stop_watch.html#a09a3c8f9ab03d7b28e4f8b90a833974e" title="Starts the timer. " alt="" coords="705,370,827,397"/>
-<area shape="rect" id="node14" href="class_stop_watch.html#a6e80b598d9304e37d8768b716e713e0e" title="Stops the timer and resets. " alt="" coords="172,710,292,737"/>
-<area shape="rect" id="node15" href="class_stop_watch.html#ad6490eb30c0bc63168a62c315506f25a" title="Returns the amount of time in seconds that has passed in the piece of code. " alt="" coords="150,761,314,787"/>
-<area shape="rect" id="node16" href="class_logic.html#a92b3982ff6e3ec9d07a69369e579853e" title="Tells presentation to process input from keyboard. " alt="" coords="145,913,319,939"/>
-<area shape="rect" id="node25" href="class_presentation.html#a886dde2ac9b78eb0e1bee3aab9111be6" title="Returns a bool indicating whether the render window is open. " alt="" coords="137,963,327,990"/>
-<area shape="rect" id="node26" href="class_logic.html#a7d8384f6a1bd8e31c327109b1aa4e998" title="Generates all the game&#39;s moving enemies. " alt="" coords="133,659,331,686"/>
-<area shape="rect" id="node31" href="class_logic.html#a23f4a972858bbea364850ebf0d188be6" title="Moves all the game objects that can be moved. " alt="" coords="142,431,322,458"/>
-<area shape="rect" id="node33" href="class_logic.html#a91ff0c77244fcb15a77d506837751c74" title="Checks for collisions between game objects. " alt="" coords="156,1205,308,1231"/>
-<area shape="rect" id="node36" href="class_logic.html#a847b8ccc9d13f1f80c2d0f6c897820a4" title="Transforms all dead centipede segments from vector(s) into mushrooms. " alt="" coords="139,1264,325,1305"/>
-<area shape="rect" id="node38" href="class_logic.html#a9b0352a47003b5278d9197710bdd9d6b" title="Checks whether the player&#39;s score has passed the current high score and updates the high score if tru..." alt="" coords="161,246,303,273"/>
-<area shape="rect" id="node40" href="class_logic.html#a1e2f8545edc283391961c8689ac96d12" title="Removes all Centipede segments from vector(s) where they exist, reset the position of the player and ..." alt="" coords="151,558,313,585"/>
-<area shape="rect" id="node43" href="class_logic.html#ac6f88cd30d7a149e8ab101ebf7cba8d2" title="Gives Presentation a vector of game objects to be drawn. " alt="" coords="677,505,855,531"/>
-<area shape="rect" id="node46" href="class_logic.html#abb059b52631dc541c89e46370d3bc688" title="Removes all dead entities from vector(s) where they exist. " alt="" coords="144,609,320,635"/>
-<area shape="rect" id="node47" href="class_logic.html#a43609f2dc8b0575d2cc9d4381079abdb" title="Displays the game over screen when the player has lost the game. " alt="" coords="133,1346,331,1373"/>
-<area shape="rect" id="node49" href="class_logic.html#a1a7332c942409bdb5cbcc26ddadbe6e9" title="Displays the game won screen when the player has won the game. " alt="" coords="132,1429,332,1455"/>
-<area shape="rect" id="node3" href="class_presentation.html#ad87e0f6ada6aa68c6e15456a5e7820ea" title="Displays a Splashscreen at the beginning of the game. " alt="" coords="412,5,583,47"/>
-<area shape="rect" id="node4" href="class_splash_screen.html#ae30ab2316faa3fa081f85fb61899689e" title="Displays the SplashScreen window. " alt="" coords="695,13,837,39"/>
-<area shape="rect" id="node6" href="class_presentation.html#ad61f8a299c4e23f6e9d51692929f8333" title="Loads all the game&#39;s textures. " alt="" coords="409,122,586,149"/>
-<area shape="rect" id="node8" href="class_asset_manager.html#ab6d8a0e2fee83023270c7e82c00dc0d7" title="Returns a vector of type AssetManager containing all the asset information for the project..." alt="" coords="404,71,591,98"/>
-<area shape="rect" id="node7" href="class_presentation.html#a04c43fe2cf2fe4b969c034eee5d4b1e2" title="Populate SpriteSheet vector, sprite_sheets_, for the different game objects that have more than one i..." alt="" coords="673,115,859,156"/>
-<area shape="rect" id="node11" href="class_enemy_factory.html#a37dd0744a52ee6224838fc6404c3d227" title="Generates mushrooms at random positions. " alt="" coords="381,305,614,331"/>
-<area shape="rect" id="node12" href="class_mushroom_factory.html#a3e73a23df68b11e5fc1af1212db52b1e" title="Generates mushrooms. " alt="" coords="673,297,859,339"/>
-<area shape="rect" id="node17" href="class_presentation.html#a0ae752fb12e3530acd81469e68d743a3" title="Determines the keyboard keys pressed and acts accordingly. Polling is used by default. " alt="" coords="409,1029,586,1071"/>
-<area shape="rect" id="node19" href="class_presentation.html#a7aebdf3fb5663b1dd11dbc30963984c2" title="Returns a bool indicating whether a key was pressed. " alt="" coords="406,1095,589,1122"/>
-<area shape="rect" id="node20" href="class_presentation.html#ad10cbe90531e2817a33356926e538212" title="Returns a bool indicating whether a key was pressed. " alt="" coords="402,1146,593,1173"/>
-<area shape="rect" id="node21" href="class_presentation.html#a36e1855d959346115eee06d327686551" title="Returns a bool indicating whether a key was pressed. " alt="" coords="409,811,586,838"/>
-<area shape="rect" id="node22" href="class_presentation.html#a050a12b9766886e4969069be1b841529" title="Returns a bool indicating whether a key was pressed. " alt="" coords="401,862,594,889"/>
-<area shape="rect" id="node23" href="class_presentation.html#a2f8e4c78cc85ccd9a0410370f66ffaba" title="Returns a bool indicating whether a key was pressed. " alt="" coords="398,913,597,939"/>
-<area shape="rect" id="node24" href="class_presentation.html#ab2284a509e0dd35fb10b11bb05d220ca" title="Plays the sound used to indicate that a player has shot a bullet. " alt="" coords="404,964,591,1005"/>
-<area shape="rect" id="node18" href="class_presentation.html#aa37ace23fc7d4fd50e520670510dd9fe" title="Checks which key was pressed/released and updates its status. " alt="" coords="683,1037,849,1063"/>
-<area shape="rect" id="node27" href="class_logic.html#ab11c4016cf06a493412935202921bbf0" title="Generates the a Centipede with one head, and multiple body segments. " alt="" coords="392,659,603,686"/>
-<area shape="rect" id="node29" href="class_logic.html#ae5f432d4b5b457a7f88c42b34f28f682" title="Generates a Scorpion at a random position. " alt="" coords="412,710,583,737"/>
-<area shape="rect" id="node30" href="class_logic.html#a8e083d0e64f6166e1621578c34270e37" title="Generates a Spider at random either at the left or right boundary. " alt="" coords="419,761,576,787"/>
-<area shape="rect" id="node28" href="class_enemy_factory.html#acfe15021ab3cf9554ef67ad9f99cddd2" title="Generates a Centipede made up of centipede segments. " alt="" coords="663,652,869,693"/>
-<area shape="rect" id="node32" href="class_presentation.html#ae34050372fa270232dce9f2666c1f2f6" title="Updates the sound played when a Scorpion and Spider are moving. Also plays the sound used when a Mush..." alt="" coords="674,435,858,476"/>
-<area shape="rect" id="node34" href="class_collision_handler.html#af5ab6a0cfb3a81d178d41d4b51725c10" title="Checks for collisions between the game objects that are still alive. " alt="" coords="390,1263,605,1290"/>
-<area shape="rect" id="node35" href="class_collision_handler.html#ae8362426985017db4901d9eb427e2d6d" title="Returns the points the player has obtained from killing game enemies. " alt="" coords="408,1197,587,1239"/>
-<area shape="rect" id="node37" href="class_enemy_factory.html#aa1b66cbf60b34c4b1abf11fb7fcbbc56" title="Generates a mushrooms at a given position. " alt="" coords="380,1314,615,1341"/>
-<area shape="rect" id="node39" href="class_high_score_manager.html#abd2310fe0af525415d5721b1a80421ee" title="Sets the high score of the game. " alt="" coords="405,239,589,280"/>
-<area shape="rect" id="node41" href="_logic_8h.html#a7c9ef220b1c6b51245f5c781e4048d34" title="container_erase_if &#45; a function that erases elements in a container based on a specified condition de..." alt="" coords="434,609,561,635"/>
-<area shape="rect" id="node42" href="class_logic.html#aab21423a4918a4047718cfdcda896aa3" title="Resets reincarnate of the Mushroom objects in the game. " alt="" coords="404,457,591,483"/>
-<area shape="rect" id="node45" href="class_enemy_factory.html#a9c5b63ab5d3df76f1cb907365cf09bfe" title="Resets states of generated objects to false. " alt="" coords="425,558,569,585"/>
-<area shape="rect" id="node44" href="class_presentation.html#a07fe85f2fb3be047ed1bbf553662f754" title="Draws all the game objects onto the screen. Including the player&#39;s score, lives and the game&#39;s highes..." alt="" coords="917,505,1103,531"/>
-<area shape="rect" id="node48" href="class_presentation.html#a40d86f3b623cbef7a04db5a312ff1368" title="Displays a Game Over Screen at the end of the game. " alt="" coords="402,1365,593,1407"/>
-<area shape="rect" id="node50" href="class_presentation.html#a2ef4507daf2ddbf356b6dfca1c8f525a" title="Displays a Game Won Screen at the end of the game. " alt="" coords="401,1431,593,1472"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_abf175ef9069615527bfbd10864b20df4_icgraph.png" border="0" usemap="#class_logic_abf175ef9069615527bfbd10864b20df4_icgraph" alt=""/></div>
-<map name="class_logic_abf175ef9069615527bfbd10864b20df4_icgraph" id="class_logic_abf175ef9069615527bfbd10864b20df4_icgraph">
-<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="132,5,183,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -1218,23 +748,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Moves all the game objects that can be moved. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a23f4a972858bbea364850ebf0d188be6_cgraph.png" border="0" usemap="#class_logic_a23f4a972858bbea364850ebf0d188be6_cgraph" alt=""/></div>
-<map name="class_logic_a23f4a972858bbea364850ebf0d188be6_cgraph" id="class_logic_a23f4a972858bbea364850ebf0d188be6_cgraph">
-<area shape="rect" id="node2" href="class_presentation.html#ae34050372fa270232dce9f2666c1f2f6" title="Updates the sound played when a Scorpion and Spider are moving. Also plays the sound used when a Mush..." alt="" coords="233,5,417,47"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a23f4a972858bbea364850ebf0d188be6_icgraph.png" border="0" usemap="#class_logic_a23f4a972858bbea364850ebf0d188be6_icgraph" alt=""/></div>
-<map name="class_logic_a23f4a972858bbea364850ebf0d188be6_icgraph" id="class_logic_a23f4a972858bbea364850ebf0d188be6_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="233,5,312,32"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="360,5,411,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -1262,24 +775,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Checks whether the player's score has passed the current high score and updates the high score if true. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a9b0352a47003b5278d9197710bdd9d6b_cgraph.png" border="0" usemap="#class_logic_a9b0352a47003b5278d9197710bdd9d6b_cgraph" alt=""/></div>
-<map name="class_logic_a9b0352a47003b5278d9197710bdd9d6b_cgraph" id="class_logic_a9b0352a47003b5278d9197710bdd9d6b_cgraph">
-<area shape="rect" id="node2" href="class_high_score_manager.html#a837c949b77d955cd2047fe70584a1347" title="Returns the high score of the game. " alt="" coords="195,5,379,47"/>
-<area shape="rect" id="node3" href="class_high_score_manager.html#abd2310fe0af525415d5721b1a80421ee" title="Sets the high score of the game. " alt="" coords="195,71,379,112"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_logic_a9b0352a47003b5278d9197710bdd9d6b_icgraph.png" border="0" usemap="#class_logic_a9b0352a47003b5278d9197710bdd9d6b_icgraph" alt=""/></div>
-<map name="class_logic_a9b0352a47003b5278d9197710bdd9d6b_icgraph" id="class_logic_a9b0352a47003b5278d9197710bdd9d6b_icgraph">
-<area shape="rect" id="node2" href="class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="195,5,273,32"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="321,5,372,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -1580,7 +1075,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_logic.html">Logic</a></li>
-    <li class="footer">Generated on Tue Oct 2 2018 22:12:47 for elen3009-project-2018 by
+    <li class="footer">Generated on Tue Oct 2 2018 23:18:00 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>
