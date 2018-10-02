@@ -1,0 +1,3 @@
+<map id="Scorpion::moveLeft" name="Scorpion::moveLeft">
+<area shape="rect" id="node2" href="$class_scorpion.html#a884cd8bc9621a1ce22d47446db53fc38" title="Inherited from IMovingEntity. A virtual function that moves a Scorpion object. " alt="" coords="185,5,296,32"/>
+</map>

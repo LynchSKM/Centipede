@@ -4,6 +4,7 @@ var class_i_moving_entity =
     [ "eliminated", "class_i_moving_entity.html#adf5c51d0261ca88cabe426035e35d3f4", null ],
     [ "getBoundaryBox", "class_i_moving_entity.html#a57296163f5bcc2fdc411e551b7cdf048", null ],
     [ "getDirection", "class_i_moving_entity.html#ae72b13230406be63bf6431887e9b1286", null ],
+    [ "getHitPoints", "class_i_moving_entity.html#a5c9e0ee005efc8956466dca6f1f7f1e4", null ],
     [ "getObjectType", "class_i_moving_entity.html#a847e36ca99c5a9cc9636e17c2172431d", null ],
     [ "getPosition", "class_i_moving_entity.html#ae1da868e3a806bcec08a2a1b85cd55b2", null ],
     [ "getRemainingLives", "class_i_moving_entity.html#a7cb604cf82c50ebc008c17b76f979b53", null ],

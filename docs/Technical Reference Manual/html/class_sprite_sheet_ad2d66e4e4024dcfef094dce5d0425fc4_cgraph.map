@@ -1,0 +1,3 @@
+<map id="SpriteSheet::getTextureRect" name="SpriteSheet::getTextureRect">
+<area shape="rect" id="node2" href="$class_sprite_sheet.html#a8eaa96e9faf9472811f94bfd3bb209da" title="This function creates the sf::IntRect around the texture. " alt="" coords="240,5,401,32"/>
+</map>

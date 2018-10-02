@@ -1,0 +1,11 @@
+<map id="CentipedeSegment::isAlive" name="CentipedeSegment::isAlive">
+<area shape="rect" id="node2" href="$class_centipede_segment.html#a395c23435c42e06001766783f074b547" title="Inherited from IMovingEntity. A virtual function that gets a constant copy of the CentipedeSegment ob..." alt="" coords="231,5,449,47"/>
+<area shape="rect" id="node3" href="$class_presentation.html#ac00c099bbecd8d84bd7c536d4e6d3aa7" title="Returns a sprite with the correct animation for animated moving objects. " alt="" coords="497,5,684,47"/>
+<area shape="rect" id="node4" href="$class_presentation.html#ac6a714a00a8c38446e8ff298c09da90b" title="Returns a sf::Sprite with the necessary properties of the object given. " alt="" coords="732,13,919,39"/>
+<area shape="rect" id="node5" href="$class_presentation.html#a07fe85f2fb3be047ed1bbf553662f754" title="Draws all the game objects onto the screen. Including the player&#39;s score, lives and the game&#39;s highes..." alt="" coords="967,13,1152,39"/>
+<area shape="rect" id="node6" href="$class_logic.html#ac6f88cd30d7a149e8ab101ebf7cba8d2" title="Gives Presentation a vector of game objects to be drawn. " alt="" coords="1200,13,1377,39"/>
+<area shape="rect" id="node7" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="1871,13,1949,39"/>
+<area shape="rect" id="node9" href="$class_logic.html#aab21423a4918a4047718cfdcda896aa3" title="Resets reincarnate of the Mushroom objects in the game. " alt="" coords="1425,38,1612,65"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1997,13,2048,39"/>
+<area shape="rect" id="node10" href="$class_logic.html#a1e2f8545edc283391961c8689ac96d12" title="Removes all Centipede segments from vector(s) where they exist, reset the position of the player and ..." alt="" coords="1660,38,1823,65"/>
+</map>

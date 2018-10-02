@@ -1,0 +1,8 @@
+<map id="CentipedeSegment::moveLeft" name="CentipedeSegment::moveLeft">
+<area shape="rect" id="node2" href="$class_centipede_segment.html#aa8572273f2bc8a2020a42126773a6d2d" title="A function that decrements y axis of the object&#39;s position. " alt="" coords="244,130,431,156"/>
+<area shape="rect" id="node3" href="$class_centipede_segment.html#a32d379102fa95a16fa131b3303683fea" title="A function that increments y axis of the object&#39;s position. " alt="" coords="727,110,929,136"/>
+<area shape="rect" id="node5" href="$class_centipede_segment.html#ac6bc689b4060d0a0d89eb7a38acc1f21" title="Inherited from IMovingEntity. A virtual function that moves a CentipedeSegment object. " alt="" coords="1229,131,1400,158"/>
+<area shape="rect" id="node7" href="$class_centipede_segment.html#a48577193056f9c1b25a4fc524b0fcebb" title="Moves the centipede segment accordingly when it is poisoned. " alt="" coords="977,212,1181,253"/>
+<area shape="rect" id="node6" href="$class_centipede_segment.html#a6556489a691cd1a5d6a39de6e28da08d" title="A function that increments x axis of the object&#39;s position. " alt="" coords="479,192,679,219"/>
+<area shape="rect" id="node4" href="$class_centipede_segment.html#af5fcaca2c707087d173bb53688b6ddb6" title="Controls the movements of the centipede segment upon entry. " alt="" coords="989,94,1170,136"/>
+</map>

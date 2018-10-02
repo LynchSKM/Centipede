@@ -1,0 +1,11 @@
+<map id="Spider::move" name="Spider::move">
+<area shape="rect" id="node2" href="$class_grid.html#a0d9e03cd17d99ff13a044d027012a9e2" title="Returns the grid&#39;s width. " alt="" coords="513,65,620,92"/>
+<area shape="rect" id="node3" href="$class_grid.html#adfc1ee3214afb8c1a84e5106e2c499c4" title="Returns the grid&#39;s height. " alt="" coords="703,167,813,193"/>
+<area shape="rect" id="node4" href="$class_spider.html#a456d9495aca3a636e584b3d8678596fd" title="A function that modifies the position of the object such that the object moves up. " alt="" coords="151,293,264,320"/>
+<area shape="rect" id="node10" href="$class_spider.html#ace407f694d63ed88367963310747c739" title="A function that modifies the position of the object such that the object moves down. " alt="" coords="312,293,441,320"/>
+<area shape="rect" id="node5" href="$class_spider.html#a8bdb1e16cfce886971ac1ec53d019233" title="Generates the next turning point and gets the slope of the line to that point. " alt="" coords="489,369,644,396"/>
+<area shape="rect" id="node6" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="693,369,823,396"/>
+<area shape="rect" id="node7" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="692,420,824,447"/>
+<area shape="rect" id="node8" href="$class_position.html#ae50185d42f183d854df81e88e2bd578e" title="Sets the x coordinate of an object. " alt="" coords="693,521,823,548"/>
+<area shape="rect" id="node9" href="$class_position.html#a9b2b2f9964cf342152fa98bcae3ccadc" title="Sets the y coordinate of an object. " alt="" coords="692,268,824,295"/>
+</map>

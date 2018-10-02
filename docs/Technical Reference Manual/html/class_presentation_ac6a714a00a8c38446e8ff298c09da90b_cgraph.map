@@ -1,0 +1,5 @@
+<map id="Presentation::generateSprite" name="Presentation::generateSprite">
+<area shape="rect" id="node2" href="$class_presentation.html#ac00c099bbecd8d84bd7c536d4e6d3aa7" title="Returns a sprite with the correct animation for animated moving objects. " alt="" coords="240,5,427,47"/>
+<area shape="rect" id="node3" href="$class_centipede_segment.html#a395c23435c42e06001766783f074b547" title="Inherited from IMovingEntity. A virtual function that gets a constant copy of the CentipedeSegment ob..." alt="" coords="475,5,693,47"/>
+<area shape="rect" id="node4" href="$class_centipede_segment.html#abf0473bac503e25944cebff09e2c600a" title="Inherited from IMovingEntity. A virtual function that queries if a CentipedeSegment object is still a..." alt="" coords="741,13,919,39"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="CentipedeSegment::checkHeadCollisions" name="CentipedeSegment::checkHeadCollisions">
+<area shape="rect" id="node2" href="$class_centipede_segment.html#ab60529c5fb3731e744a24bdafa28393e" title="Inherited from IMovingEntity. A virtual function that will be used to poison a CentipedeSegment objec..." alt="" coords="261,5,439,32"/>
+<area shape="rect" id="node3" href="$class_centipede_segment.html#a4f2f8959d0689a2eff1f6c5eb833f91b" title="A function that changes the direction of the object to Down, this is called when a collision is detec..." alt="" coords="259,57,441,98"/>
+<area shape="rect" id="node4" href="$class_centipede_segment.html#a176b0a6e5291b5b91825a88bd1ede947" title="Inherited from IMovingEntity. A virtual function that sets the direction of a CentipedeSegment object..." alt="" coords="489,64,699,91"/>
+</map>

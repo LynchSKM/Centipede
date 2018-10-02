@@ -1,0 +1,3 @@
+<map id="PlayerBullet::eliminated" name="PlayerBullet::eliminated">
+<area shape="rect" id="node2" href="$class_player_bullet.html#aa56a8f4f9db3978834521b58cffa9004" title="Inherited from IMovingEntity. A virtual function that moves a PlayerBullet object. " alt="" coords="212,5,343,32"/>
+</map>

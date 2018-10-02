@@ -1,0 +1,4 @@
+<map id="Logic::updateScores" name="Logic::updateScores">
+<area shape="rect" id="node2" href="$class_high_score_manager.html#a837c949b77d955cd2047fe70584a1347" title="Returns the high score of the game. " alt="" coords="195,5,379,47"/>
+<area shape="rect" id="node3" href="$class_high_score_manager.html#abd2310fe0af525415d5721b1a80421ee" title="Sets the high score of the game. " alt="" coords="195,71,379,112"/>
+</map>

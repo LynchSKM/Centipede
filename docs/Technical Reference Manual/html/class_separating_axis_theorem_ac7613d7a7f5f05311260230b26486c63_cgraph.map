@@ -1,0 +1,5 @@
+<map id="SeparatingAxisTheorem::generateAxes" name="SeparatingAxisTheorem::generateAxes">
+<area shape="rect" id="node2" href="$class_separating_axis_theorem.html#a4b4dccb055bac2420135d8ce4bd3446a" title="Performs the normalization of an axis normal vector. The unit vector is what gets returned..." alt="" coords="213,23,373,65"/>
+<area shape="rect" id="node3" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="422,5,553,32"/>
+<area shape="rect" id="node4" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="421,56,553,83"/>
+</map>

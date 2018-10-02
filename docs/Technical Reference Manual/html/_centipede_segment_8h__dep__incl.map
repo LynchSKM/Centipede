@@ -1,0 +1,12 @@
+<map id="CentipedeSegment.h" name="CentipedeSegment.h">
+<area shape="rect" id="node2" href="$_centipede_segment_8cpp.html" title="CentipedeSegment.cpp" alt="" coords="5,80,163,107"/>
+<area shape="rect" id="node3" href="$_collision_handler_8h.html" title="CollisionHandler.h" alt="" coords="187,80,314,107"/>
+<area shape="rect" id="node8" href="$_enemy_factory_8h.html" title="EnemyFactory.h" alt="" coords="338,80,457,107"/>
+<area shape="rect" id="node10" href="$_presentation_8h.html" title="Presentation.h" alt="" coords="481,80,588,107"/>
+<area shape="rect" id="node4" href="$_collision_handler_8cpp.html" title="CollisionHandler.cpp" alt="" coords="129,155,269,181"/>
+<area shape="rect" id="node5" href="$_logic_8h.html" title="Logic.h" alt="" coords="293,155,357,181"/>
+<area shape="rect" id="node6" href="$_logic_8cpp.html" title="Logic.cpp" alt="" coords="235,229,314,256"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title="main.cpp" alt="" coords="339,229,413,256"/>
+<area shape="rect" id="node9" href="$_enemy_factory_8cpp.html" title="EnemyFactory.cpp" alt="" coords="382,155,514,181"/>
+<area shape="rect" id="node11" href="$_presentation_8cpp.html" title="Presentation.cpp" alt="" coords="539,155,659,181"/>
+</map>

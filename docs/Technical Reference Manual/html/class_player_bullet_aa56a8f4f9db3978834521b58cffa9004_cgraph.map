@@ -1,0 +1,5 @@
+<map id="PlayerBullet::move" name="PlayerBullet::move">
+<area shape="rect" id="node2" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="197,5,329,32"/>
+<area shape="rect" id="node3" href="$class_position.html#a9b2b2f9964cf342152fa98bcae3ccadc" title="Sets the y coordinate of an object. " alt="" coords="197,56,329,83"/>
+<area shape="rect" id="node4" href="$class_player_bullet.html#a947a81e6063e03132a96f5d8164b7ff2" title="Inherited from IMovingEntity. A virtual function that sets the derived class object as not alive when..." alt="" coords="184,107,343,133"/>
+</map>

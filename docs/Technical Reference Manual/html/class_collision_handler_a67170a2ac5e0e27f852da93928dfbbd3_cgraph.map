@@ -1,0 +1,4 @@
+<map id="CollisionHandler::splitCentipedeTrain" name="CollisionHandler::splitCentipedeTrain">
+<area shape="rect" id="node2" href="$class_centipede_segment.html#ac6d38060fd33a0564aa25e7393431a18" title="A function that sets the body type of the centipede segment. " alt="" coords="259,5,475,32"/>
+<area shape="rect" id="node3" href="$class_centipede_segment.html#a788a82ec5bb9158a4bcd1deaa11747f3" title="A function that clears the vector of positions where the head of centipede train had a collision..." alt="" coords="523,23,721,65"/>
+</map>

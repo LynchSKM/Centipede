@@ -1,0 +1,3 @@
+<map id="Weapon" name="Weapon">
+<area shape="rect" id="node2" href="$class_stop_watch.html" title="This class models a Stopwatch and returns time values in seconds. " alt="" coords="5,5,92,32"/>
+</map>

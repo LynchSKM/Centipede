@@ -1,0 +1,5 @@
+<map id="MushroomFactory::gridRowCol" name="MushroomFactory::gridRowCol">
+<area shape="rect" id="node2" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="253,5,385,32"/>
+<area shape="rect" id="node3" href="$class_position.html#a9b2b2f9964cf342152fa98bcae3ccadc" title="Sets the y coordinate of an object. " alt="" coords="253,56,385,83"/>
+<area shape="rect" id="node4" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="254,107,385,133"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="HighScoreManager::setHighScore" name="HighScoreManager::setHighScore">
+<area shape="rect" id="node2" href="$class_logic.html#a9b0352a47003b5278d9197710bdd9d6b" title="Checks whether the player&#39;s score has passed the current high score and updates the high score if tru..." alt="" coords="237,13,379,39"/>
+<area shape="rect" id="node3" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="427,13,505,39"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="553,13,604,39"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Spider" name="Spider">
+<area shape="rect" id="node2" href="$class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th..." alt="" coords="5,81,104,108"/>
+<area shape="rect" id="node3" href="$class_i_entity.html" title="This is a Interface Class containing pure virtual functions that will be overridden by derived classe..." alt="" coords="25,5,84,32"/>
+<area shape="rect" id="node4" href="$class_grid.html" title="This class contains details about the screen such as the screen width and height. ..." alt="" coords="129,81,175,108"/>
+<area shape="rect" id="node5" href="$class_position.html" title="A class that contains an x and y value representing a screen position. " alt="" coords="200,81,269,108"/>
+<area shape="rect" id="node6" href="$struct_spider_dimensions.html" title="Contains information about a Spider&#39;s height, width and speed. " alt="" coords="294,81,421,108"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="MushroomFactory::generateAMushroom" name="MushroomFactory::generateAMushroom">
+<area shape="rect" id="node2" href="$class_mushroom_factory.html#aa7e089232dee317d81b62b1cf8b7660d" title="Maps the position into the defined rows and columns. " alt="" coords="244,56,444,83"/>
+<area shape="rect" id="node6" href="$class_mushroom_factory.html#ae313f7723eb9188611cbb7358662ed54" title="Maps the position into the defined xpos and ypos. " alt="" coords="239,5,449,32"/>
+<area shape="rect" id="node3" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="497,56,629,83"/>
+<area shape="rect" id="node4" href="$class_position.html#a9b2b2f9964cf342152fa98bcae3ccadc" title="Sets the y coordinate of an object. " alt="" coords="497,107,629,133"/>
+<area shape="rect" id="node5" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="498,5,629,32"/>
+</map>

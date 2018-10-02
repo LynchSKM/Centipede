@@ -1,0 +1,21 @@
+<map id="Logic::reincarnatePlayer" name="Logic::reincarnatePlayer">
+<area shape="rect" id="node2" href="$_logic_8h.html#a7c9ef220b1c6b51245f5c781e4048d34" title="container_erase_if &#45; a function that erases elements in a container based on a specified condition de..." alt="" coords="258,107,385,133"/>
+<area shape="rect" id="node3" href="$class_logic.html#aab21423a4918a4047718cfdcda896aa3" title="Resets reincarnate of the Mushroom objects in the game. " alt="" coords="228,157,415,184"/>
+<area shape="rect" id="node17" href="$class_enemy_factory.html#a9c5b63ab5d3df76f1cb907365cf09bfe" title="Resets states of generated objects to false. " alt="" coords="249,208,393,235"/>
+<area shape="rect" id="node18" href="$class_logic.html#ab11c4016cf06a493412935202921bbf0" title="Generates the a Centipede with one head, and multiple body segments. " alt="" coords="216,296,427,323"/>
+<area shape="rect" id="node4" href="$class_stop_watch.html#add564bbd185e94d010fb1acff1620844" title="Pauses the stopwatch. " alt="" coords="513,5,643,32"/>
+<area shape="rect" id="node5" href="$class_stop_watch.html#a09a3c8f9ab03d7b28e4f8b90a833974e" title="Starts the timer. " alt="" coords="517,56,639,83"/>
+<area shape="rect" id="node6" href="$class_stop_watch.html#a2bf006c59e86045c58a7d2ac5269c849" title="Returns the amount time in seconds between start() and pause(). " alt="" coords="489,107,667,133"/>
+<area shape="rect" id="node7" href="$class_logic.html#ac6f88cd30d7a149e8ab101ebf7cba8d2" title="Gives Presentation a vector of game objects to be drawn. " alt="" coords="489,157,667,184"/>
+<area shape="rect" id="node15" href="$class_presentation.html#ae34050372fa270232dce9f2666c1f2f6" title="Updates the sound played when a Scorpion and Spider are moving. Also plays the sound used when a Mush..." alt="" coords="486,209,670,250"/>
+<area shape="rect" id="node16" href="$class_stop_watch.html#a8fa0ea2811a7244d4687ba682cef222d" title="Resumes the stopwatch. " alt="" coords="509,275,647,301"/>
+<area shape="rect" id="node8" href="$class_presentation.html#a07fe85f2fb3be047ed1bbf553662f754" title="Draws all the game objects onto the screen. Including the player&#39;s score, lives and the game&#39;s highes..." alt="" coords="729,157,915,184"/>
+<area shape="rect" id="node9" href="$class_presentation.html#ac13b755328c6e531b279d2e49a5503c1" title="Displays the player&#39;s lives, current score and the high score of the game. " alt="" coords="979,107,1153,133"/>
+<area shape="rect" id="node10" href="$class_presentation.html#ac6a714a00a8c38446e8ff298c09da90b" title="Returns a sf::Sprite with the necessary properties of the object given. " alt="" coords="973,157,1159,184"/>
+<area shape="rect" id="node14" href="$class_presentation.html#a82e1c667390dd7fb683548a9ce1c7c58" title="Updates the animations of game objects that have more than one image to represent movement..." alt="" coords="963,208,1169,235"/>
+<area shape="rect" id="node11" href="$class_presentation.html#ac00c099bbecd8d84bd7c536d4e6d3aa7" title="Returns a sprite with the correct animation for animated moving objects. " alt="" coords="1217,150,1404,191"/>
+<area shape="rect" id="node12" href="$class_centipede_segment.html#a395c23435c42e06001766783f074b547" title="Inherited from IMovingEntity. A virtual function that gets a constant copy of the CentipedeSegment ob..." alt="" coords="1452,150,1671,191"/>
+<area shape="rect" id="node13" href="$class_centipede_segment.html#abf0473bac503e25944cebff09e2c600a" title="Inherited from IMovingEntity. A virtual function that queries if a CentipedeSegment object is still a..." alt="" coords="1719,157,1896,184"/>
+<area shape="rect" id="node19" href="$class_enemy_factory.html#acfe15021ab3cf9554ef67ad9f99cddd2" title="Generates a Centipede made up of centipede segments. " alt="" coords="475,326,681,367"/>
+<area shape="rect" id="node20" href="$class_grid.html#a0d9e03cd17d99ff13a044d027012a9e2" title="Returns the grid&#39;s width. " alt="" coords="769,333,875,360"/>
+</map>

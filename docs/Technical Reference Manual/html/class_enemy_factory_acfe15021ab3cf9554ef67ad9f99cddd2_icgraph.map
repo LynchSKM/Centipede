@@ -1,0 +1,7 @@
+<map id="EnemyFactory::generateNormalCentipede" name="EnemyFactory::generateNormalCentipede">
+<area shape="rect" id="node2" href="$class_logic.html#ab11c4016cf06a493412935202921bbf0" title="Generates the a Centipede with one head, and multiple body segments. " alt="" coords="260,31,471,57"/>
+<area shape="rect" id="node3" href="$class_logic.html#a7d8384f6a1bd8e31c327109b1aa4e998" title="Generates all the game&#39;s moving enemies. " alt="" coords="519,5,716,32"/>
+<area shape="rect" id="node6" href="$class_logic.html#a1e2f8545edc283391961c8689ac96d12" title="Removes all Centipede segments from vector(s) where they exist, reset the position of the player and ..." alt="" coords="536,56,699,83"/>
+<area shape="rect" id="node4" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="764,31,843,57"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="891,31,941,57"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Weapon::fire" name="Weapon::fire">
+<area shape="rect" id="node2" href="$class_stop_watch.html#add564bbd185e94d010fb1acff1620844" title="Pauses the stopwatch. " alt="" coords="172,5,303,32"/>
+<area shape="rect" id="node3" href="$class_stop_watch.html#a2bf006c59e86045c58a7d2ac5269c849" title="Returns the amount time in seconds between start() and pause(). " alt="" coords="148,56,327,83"/>
+<area shape="rect" id="node4" href="$class_stop_watch.html#a8fa0ea2811a7244d4687ba682cef222d" title="Resumes the stopwatch. " alt="" coords="168,107,307,133"/>
+</map>

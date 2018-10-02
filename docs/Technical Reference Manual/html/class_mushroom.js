@@ -5,6 +5,7 @@ var class_mushroom =
     [ "decrementLives", "class_mushroom.html#aea32363f28d76187d775a1cc31d7621f", null ],
     [ "eliminated", "class_mushroom.html#a1b5fc7894d89cc3844964d8468babb0e", null ],
     [ "getBoundaryBox", "class_mushroom.html#a97ad2582d0ab517c806092803e288d82", null ],
+    [ "getHitPoints", "class_mushroom.html#a8a40ec892ac0c23f5f492bdcf73a210f", null ],
     [ "getObjectType", "class_mushroom.html#a2d6eca03b66c36cb39c3c2473a8ee37f", null ],
     [ "getPosition", "class_mushroom.html#a76096fbfc48bdefcb596dc4583ccdcd4", null ],
     [ "getRemainingLives", "class_mushroom.html#a9389aa0ef2fff5c746d25208c038915d", null ],
@@ -16,6 +17,5 @@ var class_mushroom =
     [ "isAlive_", "class_mushroom.html#a5c17485a8e022634ca010a6e8362735f", null ],
     [ "isPoisoned_", "class_mushroom.html#a953aa6a6aa1bce0531e952f5bae1a389", null ],
     [ "numberOfLives_", "class_mushroom.html#a0d0b352c9f711e8bcb115ae1773bdf53", null ],
-    [ "objectType_", "class_mushroom.html#a8f0de88dc9eea7e398127ab267b373bb", null ],
     [ "position_", "class_mushroom.html#a8dcf6cc9403f2b9dd8f87c2b3c493679", null ]
 ];

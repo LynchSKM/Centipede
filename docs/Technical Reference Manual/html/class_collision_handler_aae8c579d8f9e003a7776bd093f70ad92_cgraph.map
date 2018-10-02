@@ -1,0 +1,4 @@
+<map id="CollisionHandler::updateCentipedeTrain" name="CollisionHandler::updateCentipedeTrain">
+<area shape="rect" id="node2" href="$class_centipede_segment.html#a0baecdc693620a1b09eef2c226425b6f" title="A function that saves positions where the head of centipede train had a collision. " alt="" coords="216,13,416,39"/>
+<area shape="rect" id="node3" href="$class_centipede_segment.html#a788a82ec5bb9158a4bcd1deaa11747f3" title="A function that clears the vector of positions where the head of centipede train had a collision..." alt="" coords="464,5,663,47"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="Player::shoot" name="Player::shoot">
+<area shape="rect" id="node2" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="153,5,283,32"/>
+<area shape="rect" id="node3" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="152,56,284,83"/>
+<area shape="rect" id="node4" href="$class_weapon.html#aec2629951989a4478b8dc65011537f16" title="Creates player bullet at the specified position and returns them in a vector. " alt="" coords="171,107,265,133"/>
+<area shape="rect" id="node5" href="$class_stop_watch.html#add564bbd185e94d010fb1acff1620844" title="Pauses the stopwatch. " alt="" coords="356,56,487,83"/>
+<area shape="rect" id="node6" href="$class_stop_watch.html#a2bf006c59e86045c58a7d2ac5269c849" title="Returns the amount time in seconds between start() and pause(). " alt="" coords="332,107,511,133"/>
+<area shape="rect" id="node7" href="$class_stop_watch.html#a8fa0ea2811a7244d4687ba682cef222d" title="Resumes the stopwatch. " alt="" coords="352,157,491,184"/>
+</map>

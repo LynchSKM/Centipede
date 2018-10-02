@@ -20,6 +20,7 @@ var annotated_dup =
     [ "PlayerBullet", "class_player_bullet.html", "class_player_bullet" ],
     [ "PlayerBulletDimensions", "struct_player_bullet_dimensions.html", "struct_player_bullet_dimensions" ],
     [ "PlayerDimension", "struct_player_dimension.html", "struct_player_dimension" ],
+    [ "Position", "class_position.html", "class_position" ],
     [ "Presentation", "class_presentation.html", "class_presentation" ],
     [ "Scorpion", "class_scorpion.html", "class_scorpion" ],
     [ "ScorpionDimensions", "struct_scorpion_dimensions.html", "struct_scorpion_dimensions" ],

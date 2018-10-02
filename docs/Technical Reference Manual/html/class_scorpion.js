@@ -5,6 +5,7 @@ var class_scorpion =
     [ "eliminated", "class_scorpion.html#acea1c304af387b17dbdfc4776188699b", null ],
     [ "getBoundaryBox", "class_scorpion.html#ad6572f7bc30ac5744ff1bd171365cf49", null ],
     [ "getDirection", "class_scorpion.html#aeb85af5f3b431f14eb00cf8e7a78b8ab", null ],
+    [ "getHitPoints", "class_scorpion.html#a3b57af27909a6e48ae099f6f6aff82bd", null ],
     [ "getObjectType", "class_scorpion.html#afe79fcb1f98f0b927d44e388c6477240", null ],
     [ "getPosition", "class_scorpion.html#a030817699e9bd7cd97b3fa7b66103793", null ],
     [ "getRemainingLives", "class_scorpion.html#a169dbddbe47ff24e7609915f09e6982a", null ],

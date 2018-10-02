@@ -1,0 +1,9 @@
+<map id="Logic::generateGameEnemies" name="Logic::generateGameEnemies">
+<area shape="rect" id="node2" href="$class_logic.html#ab11c4016cf06a493412935202921bbf0" title="Generates the a Centipede with one head, and multiple body segments. " alt="" coords="251,17,461,43"/>
+<area shape="rect" id="node5" href="$class_logic.html#ae5f432d4b5b457a7f88c42b34f28f682" title="Generates a Scorpion at a random position. " alt="" coords="271,71,441,98"/>
+<area shape="rect" id="node7" href="$class_logic.html#a8e083d0e64f6166e1621578c34270e37" title="Generates a Spider at random either at the left or right boundary. " alt="" coords="277,122,435,149"/>
+<area shape="rect" id="node3" href="$class_enemy_factory.html#acfe15021ab3cf9554ef67ad9f99cddd2" title="Generates a Centipede made up of centipede segments. " alt="" coords="519,5,725,47"/>
+<area shape="rect" id="node4" href="$class_grid.html#a0d9e03cd17d99ff13a044d027012a9e2" title="Returns the grid&#39;s width. " alt="" coords="783,13,889,39"/>
+<area shape="rect" id="node6" href="$class_enemy_factory.html#ad87f4af7e5dcbc83ca6ae121c70b898d" title="Generates a scorpion at a random position. " alt="" coords="509,71,735,98"/>
+<area shape="rect" id="node8" href="$class_enemy_factory.html#a6284d34c8ec52603ddeb9134326968d3" title="Generates a spider periodically. " alt="" coords="517,122,727,149"/>
+</map>

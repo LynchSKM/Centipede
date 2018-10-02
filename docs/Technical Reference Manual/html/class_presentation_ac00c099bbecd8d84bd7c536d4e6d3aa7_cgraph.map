@@ -1,0 +1,4 @@
+<map id="Presentation::generateSpriteFromSpriteSheet" name="Presentation::generateSpriteFromSpriteSheet">
+<area shape="rect" id="node2" href="$class_centipede_segment.html#a395c23435c42e06001766783f074b547" title="Inherited from IMovingEntity. A virtual function that gets a constant copy of the CentipedeSegment ob..." alt="" coords="240,5,459,47"/>
+<area shape="rect" id="node3" href="$class_centipede_segment.html#abf0473bac503e25944cebff09e2c600a" title="Inherited from IMovingEntity. A virtual function that queries if a CentipedeSegment object is still a..." alt="" coords="507,13,684,39"/>
+</map>

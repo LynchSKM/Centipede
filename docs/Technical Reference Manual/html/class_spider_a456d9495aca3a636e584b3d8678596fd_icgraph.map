@@ -1,0 +1,4 @@
+<map id="Spider::moveUp" name="Spider::moveUp">
+<area shape="rect" id="node2" href="$class_spider.html#ace407f694d63ed88367963310747c739" title="A function that modifies the position of the object such that the object moves down. " alt="" coords="167,5,296,32"/>
+<area shape="rect" id="node3" href="$class_spider.html#aec113188217436f4434be35684916b39" title="Inherited from IMovingEntity. A virtual function that moves a Spider object. " alt="" coords="344,31,441,57"/>
+</map>

@@ -6,6 +6,7 @@ var class_spider =
     [ "eliminated", "class_spider.html#aeb23ee990c5c952c588341833bb41657", null ],
     [ "getBoundaryBox", "class_spider.html#a58f57b76220c51c4101e155aca15c5d2", null ],
     [ "getDirection", "class_spider.html#af141a04cbaf8a68c44e449cb9a518608", null ],
+    [ "getHitPoints", "class_spider.html#a0e0489555011321b29379e1b4abe1b38", null ],
     [ "getObjectType", "class_spider.html#a9ea74d5b6e4c99dd175cf6a9db9e2de2", null ],
     [ "getPosition", "class_spider.html#a2de5c65fb5f1aad1d6b15294203acb27", null ],
     [ "getRemainingLives", "class_spider.html#ac4a828c44ae66ae80db4882d471cef8c", null ],

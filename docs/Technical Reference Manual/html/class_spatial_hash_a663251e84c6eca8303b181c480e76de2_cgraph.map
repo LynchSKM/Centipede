@@ -1,0 +1,8 @@
+<map id="SpatialHash::saveLocations" name="SpatialHash::saveLocations">
+<area shape="rect" id="node2" href="$class_spatial_hash.html#a3a9f73d146cb3d5969fdbd78e524f84b" title="Retrieves the screen positions where the object&#39;s centre and boundary box vertices are located..." alt="" coords="236,5,448,32"/>
+<area shape="rect" id="node3" href="$class_spatial_hash.html#a5d0a1d19c6251359bfa99b9b2738de57" title="Maps positions to a cell based on the grid&#39;s width, height, and the chosen cell size. " alt="" coords="239,56,445,83"/>
+<area shape="rect" id="node4" href="$class_spatial_hash.html#ae1b06cf6d968ceaf8731a9ecbb06c836" title="Maps a position to a cell based on the grid&#39;s width, height and the chosen cell size. " alt="" coords="496,56,695,83"/>
+<area shape="rect" id="node5" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="743,5,874,32"/>
+<area shape="rect" id="node6" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="743,56,875,83"/>
+<area shape="rect" id="node7" href="$class_grid.html#adfc1ee3214afb8c1a84e5106e2c499c4" title="Returns the grid&#39;s height. " alt="" coords="754,107,863,133"/>
+</map>

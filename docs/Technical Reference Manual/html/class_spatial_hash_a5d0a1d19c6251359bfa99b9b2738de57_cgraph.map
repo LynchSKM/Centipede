@@ -1,0 +1,6 @@
+<map id="SpatialHash::generateMapKeys" name="SpatialHash::generateMapKeys">
+<area shape="rect" id="node2" href="$class_spatial_hash.html#ae1b06cf6d968ceaf8731a9ecbb06c836" title="Maps a position to a cell based on the grid&#39;s width, height and the chosen cell size. " alt="" coords="259,56,457,83"/>
+<area shape="rect" id="node3" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="506,5,637,32"/>
+<area shape="rect" id="node4" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="505,56,637,83"/>
+<area shape="rect" id="node5" href="$class_grid.html#adfc1ee3214afb8c1a84e5106e2c499c4" title="Returns the grid&#39;s height. " alt="" coords="517,107,626,133"/>
+</map>

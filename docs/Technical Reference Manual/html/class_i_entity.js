@@ -3,6 +3,7 @@ var class_i_entity =
     [ "~IEntity", "class_i_entity.html#a8aea4fbca51d17a0ce314aaa4633f28e", null ],
     [ "eliminated", "class_i_entity.html#a27edea02cb754d0d3f94e1020b9fb19a", null ],
     [ "getBoundaryBox", "class_i_entity.html#a65eb3725427ee2ac88dd8d21cef2bb27", null ],
+    [ "getHitPoints", "class_i_entity.html#abf791514caf40c40872a7d7ac85109e4", null ],
     [ "getObjectType", "class_i_entity.html#a47fcdca7421587554746557400d0b793", null ],
     [ "getPosition", "class_i_entity.html#a292e36b7c495008e22531cac64e95d5d", null ],
     [ "getRemainingLives", "class_i_entity.html#aaa6462285a2af284289e31dd5d823243", null ],

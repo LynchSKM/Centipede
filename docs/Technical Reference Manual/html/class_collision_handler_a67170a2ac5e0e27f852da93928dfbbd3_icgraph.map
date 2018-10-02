@@ -1,0 +1,7 @@
+<map id="CollisionHandler::splitCentipedeTrain" name="CollisionHandler::splitCentipedeTrain">
+<area shape="rect" id="node2" href="$class_collision_handler.html#a12201e56c07089e1387bc055450b538b" title="Checks whether a player bullet collides with every other game object near it. If collisions occur bot..." alt="" coords="259,5,437,47"/>
+<area shape="rect" id="node3" href="$class_collision_handler.html#af5ab6a0cfb3a81d178d41d4b51725c10" title="Checks for collisions between the game objects that are still alive. " alt="" coords="485,13,700,39"/>
+<area shape="rect" id="node4" href="$class_logic.html#a91ff0c77244fcb15a77d506837751c74" title="Checks for collisions between game objects. " alt="" coords="748,13,900,39"/>
+<area shape="rect" id="node5" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="948,13,1027,39"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1075,13,1125,39"/>
+</map>

@@ -15,7 +15,7 @@ var searchData=
   ['centre_5f',['centre_',['../class_boundary_box.html#a897a8c477d6822a62725ca75269c813f',1,'BoundaryBox']]],
   ['changedirection',['changeDirection',['../class_centipede_segment.html#a4f2f8959d0689a2eff1f6c5eb833f91b',1,'CentipedeSegment']]],
   ['changewhenpoisoned_5f',['changeWhenPoisoned_',['../class_centipede_segment.html#a6bd41e2f33c2bfaf8397e5a6adceb3a1',1,'CentipedeSegment']]],
-  ['checkcollisions',['checkCollisions',['../class_logic.html#a91ff0c77244fcb15a77d506837751c74',1,'Logic::checkCollisions()'],['../class_collision_handler.html#af5ab6a0cfb3a81d178d41d4b51725c10',1,'CollisionHandler::checkCollisions()']]],
+  ['checkcollisions',['checkCollisions',['../class_collision_handler.html#af5ab6a0cfb3a81d178d41d4b51725c10',1,'CollisionHandler::checkCollisions()'],['../class_logic.html#a91ff0c77244fcb15a77d506837751c74',1,'Logic::checkCollisions()']]],
   ['checkheadcollisions',['checkHeadCollisions',['../class_centipede_segment.html#a0527b11bda8b6e5a96629fbb5ba2ed9c',1,'CentipedeSegment']]],
   ['checkinput',['checkInput',['../class_presentation.html#aa37ace23fc7d4fd50e520670510dd9fe',1,'Presentation']]],
   ['checkoverlap',['checkOverlap',['../class_separating_axis_theorem.html#a876cb95f1373c4b402f227aa0097a5e5',1,'SeparatingAxisTheorem']]],

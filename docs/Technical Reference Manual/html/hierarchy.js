@@ -24,6 +24,7 @@ var hierarchy =
     [ "MushroomFactory", "class_mushroom_factory.html", null ],
     [ "PlayerBulletDimensions", "struct_player_bullet_dimensions.html", null ],
     [ "PlayerDimension", "struct_player_dimension.html", null ],
+    [ "Position", "class_position.html", null ],
     [ "Presentation", "class_presentation.html", null ],
     [ "ScorpionDimensions", "struct_scorpion_dimensions.html", null ],
     [ "SeparatingAxisTheorem", "class_separating_axis_theorem.html", null ],

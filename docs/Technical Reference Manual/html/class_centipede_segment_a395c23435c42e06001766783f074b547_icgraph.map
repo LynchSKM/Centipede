@@ -1,0 +1,10 @@
+<map id="CentipedeSegment::getRemainingLives" name="CentipedeSegment::getRemainingLives">
+<area shape="rect" id="node2" href="$class_presentation.html#ac00c099bbecd8d84bd7c536d4e6d3aa7" title="Returns a sprite with the correct animation for animated moving objects. " alt="" coords="272,5,459,47"/>
+<area shape="rect" id="node3" href="$class_presentation.html#ac6a714a00a8c38446e8ff298c09da90b" title="Returns a sf::Sprite with the necessary properties of the object given. " alt="" coords="507,13,693,39"/>
+<area shape="rect" id="node4" href="$class_presentation.html#a07fe85f2fb3be047ed1bbf553662f754" title="Draws all the game objects onto the screen. Including the player&#39;s score, lives and the game&#39;s highes..." alt="" coords="741,13,927,39"/>
+<area shape="rect" id="node5" href="$class_logic.html#ac6f88cd30d7a149e8ab101ebf7cba8d2" title="Gives Presentation a vector of game objects to be drawn. " alt="" coords="975,13,1152,39"/>
+<area shape="rect" id="node6" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="1645,13,1724,39"/>
+<area shape="rect" id="node8" href="$class_logic.html#aab21423a4918a4047718cfdcda896aa3" title="Resets reincarnate of the Mushroom objects in the game. " alt="" coords="1200,38,1387,65"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1772,13,1823,39"/>
+<area shape="rect" id="node9" href="$class_logic.html#a1e2f8545edc283391961c8689ac96d12" title="Removes all Centipede segments from vector(s) where they exist, reset the position of the player and ..." alt="" coords="1435,38,1597,65"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Logic::generateMushroomAtCollision" name="Logic::generateMushroomAtCollision">
+<area shape="rect" id="node2" href="$class_enemy_factory.html#aa1b66cbf60b34c4b1abf11fb7fcbbc56" title="Generates a mushrooms at a given position. " alt="" coords="239,31,473,57"/>
+<area shape="rect" id="node3" href="$class_mushroom_factory.html#a3f433ade66a5a36958c8ec8fbdef0896" title="Generates a mushroom at the given position. " alt="" coords="521,23,707,65"/>
+<area shape="rect" id="node4" href="$class_mushroom_factory.html#aa7e089232dee317d81b62b1cf8b7660d" title="Maps the position into the defined rows and columns. " alt="" coords="760,56,960,83"/>
+<area shape="rect" id="node8" href="$class_mushroom_factory.html#ae313f7723eb9188611cbb7358662ed54" title="Maps the position into the defined xpos and ypos. " alt="" coords="755,5,965,32"/>
+<area shape="rect" id="node5" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="1013,56,1145,83"/>
+<area shape="rect" id="node6" href="$class_position.html#a9b2b2f9964cf342152fa98bcae3ccadc" title="Sets the y coordinate of an object. " alt="" coords="1013,107,1145,133"/>
+<area shape="rect" id="node7" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="1014,5,1145,32"/>
+</map>

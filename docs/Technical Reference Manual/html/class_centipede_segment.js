@@ -14,6 +14,7 @@ var class_centipede_segment =
     [ "getBodyType", "class_centipede_segment.html#a5fde14ed8fc73752eaaf1b8fcc2b94e9", null ],
     [ "getBoundaryBox", "class_centipede_segment.html#a1b611a3397911b94f9d9f20e630940a4", null ],
     [ "getDirection", "class_centipede_segment.html#af4997b2a2ba86db0e9392084c7909341", null ],
+    [ "getHitPoints", "class_centipede_segment.html#a8a0704da508ca629b20cdf9200c54f0b", null ],
     [ "getObjectType", "class_centipede_segment.html#abd9a41303ae5ee32410d28e83a5d23fa", null ],
     [ "getPosition", "class_centipede_segment.html#ab7bd41a559ce78481ad3af450700143e", null ],
     [ "getPrevDirection", "class_centipede_segment.html#a9bd509a3c0338310d2dc6da14a3a12f9", null ],

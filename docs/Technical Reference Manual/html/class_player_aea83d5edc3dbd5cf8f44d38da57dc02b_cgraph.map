@@ -1,0 +1,7 @@
+<map id="Player::reincarnate" name="Player::reincarnate">
+<area shape="rect" id="node2" href="$class_player.html#ae945f733814a4fa0e5206bb5a65049f5" title="Inherited from IMovingEntity. A virtual function that queries if a Player object is still alive or no..." alt="" coords="198,5,302,32"/>
+<area shape="rect" id="node3" href="$class_position.html#ae50185d42f183d854df81e88e2bd578e" title="Sets the x coordinate of an object. " alt="" coords="185,56,315,83"/>
+<area shape="rect" id="node4" href="$class_grid.html#a0d9e03cd17d99ff13a044d027012a9e2" title="Returns the grid&#39;s width. " alt="" coords="197,107,303,133"/>
+<area shape="rect" id="node5" href="$class_position.html#a9b2b2f9964cf342152fa98bcae3ccadc" title="Sets the y coordinate of an object. " alt="" coords="184,157,316,184"/>
+<area shape="rect" id="node6" href="$class_grid.html#adfc1ee3214afb8c1a84e5106e2c499c4" title="Returns the grid&#39;s height. " alt="" coords="195,208,305,235"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Presentation::generateSpriteFromSpriteSheet" name="Presentation::generateSpriteFromSpriteSheet">
+<area shape="rect" id="node2" href="$class_presentation.html#ac6a714a00a8c38446e8ff298c09da90b" title="Returns a sf::Sprite with the necessary properties of the object given. " alt="" coords="240,13,427,39"/>
+<area shape="rect" id="node3" href="$class_presentation.html#a07fe85f2fb3be047ed1bbf553662f754" title="Draws all the game objects onto the screen. Including the player&#39;s score, lives and the game&#39;s highes..." alt="" coords="475,13,660,39"/>
+<area shape="rect" id="node4" href="$class_logic.html#ac6f88cd30d7a149e8ab101ebf7cba8d2" title="Gives Presentation a vector of game objects to be drawn. " alt="" coords="708,13,885,39"/>
+<area shape="rect" id="node5" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="1379,13,1457,39"/>
+<area shape="rect" id="node7" href="$class_logic.html#aab21423a4918a4047718cfdcda896aa3" title="Resets reincarnate of the Mushroom objects in the game. " alt="" coords="933,38,1120,65"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1505,13,1556,39"/>
+<area shape="rect" id="node8" href="$class_logic.html#a1e2f8545edc283391961c8689ac96d12" title="Removes all Centipede segments from vector(s) where they exist, reset the position of the player and ..." alt="" coords="1168,38,1331,65"/>
+</map>

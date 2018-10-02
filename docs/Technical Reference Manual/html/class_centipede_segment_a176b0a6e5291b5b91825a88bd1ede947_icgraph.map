@@ -1,0 +1,11 @@
+<map id="CentipedeSegment::setDirection" name="CentipedeSegment::setDirection">
+<area shape="rect" id="node2" href="$class_centipede_segment.html#aa8572273f2bc8a2020a42126773a6d2d" title="A function that decrements y axis of the object&#39;s position. " alt="" coords="263,188,449,215"/>
+<area shape="rect" id="node3" href="$class_centipede_segment.html#a32d379102fa95a16fa131b3303683fea" title="A function that increments y axis of the object&#39;s position. " alt="" coords="499,137,701,164"/>
+<area shape="rect" id="node6" href="$class_centipede_segment.html#a00708a448ef307756f3c3a0a28a0da31" title="A function that decrements x axis of the object&#39;s position. " alt="" coords="755,12,946,39"/>
+<area shape="rect" id="node7" href="$class_centipede_segment.html#a48577193056f9c1b25a4fc524b0fcebb" title="Moves the centipede segment accordingly when it is poisoned. " alt="" coords="999,258,1203,299"/>
+<area shape="rect" id="node8" href="$class_centipede_segment.html#a6556489a691cd1a5d6a39de6e28da08d" title="A function that increments x axis of the object&#39;s position. " alt="" coords="751,265,951,292"/>
+<area shape="rect" id="node9" href="$class_centipede_segment.html#a4f2f8959d0689a2eff1f6c5eb833f91b" title="A function that changes the direction of the object to Down, this is called when a collision is detec..." alt="" coords="265,415,447,457"/>
+<area shape="rect" id="node5" href="$class_centipede_segment.html#ac6bc689b4060d0a0d89eb7a38acc1f21" title="Inherited from IMovingEntity. A virtual function that moves a CentipedeSegment object. " alt="" coords="1251,207,1421,233"/>
+<area shape="rect" id="node4" href="$class_centipede_segment.html#af5fcaca2c707087d173bb53688b6ddb6" title="Controls the movements of the centipede segment upon entry. " alt="" coords="1010,55,1191,97"/>
+<area shape="rect" id="node10" href="$class_centipede_segment.html#a0527b11bda8b6e5a96629fbb5ba2ed9c" title="Determines whether the CentipedeSegment has reached a position where the head collided. If it has the changeDirection() function is called. " alt="" coords="497,415,703,457"/>
+</map>

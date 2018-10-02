@@ -1,0 +1,4 @@
+<map id="Logic::renderSplashScreen" name="Logic::renderSplashScreen">
+<area shape="rect" id="node2" href="$class_presentation.html#ad87e0f6ada6aa68c6e15456a5e7820ea" title="Displays a Splashscreen at the beginning of the game. " alt="" coords="232,5,403,47"/>
+<area shape="rect" id="node3" href="$class_splash_screen.html#ae30ab2316faa3fa081f85fb61899689e" title="Displays the SplashScreen window. " alt="" coords="451,13,592,39"/>
+</map>

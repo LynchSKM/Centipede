@@ -1,0 +1,3 @@
+<map id="PlayerBullet::getRemainingLives" name="PlayerBullet::getRemainingLives">
+<area shape="rect" id="node2" href="$class_player_bullet.html#a492840c1a8b69c35eecaf4c7b41e21ab" title="Inherited from IMovingEntity. A virtual function that queries if a PlayerBullet object is still alive..." alt="" coords="232,13,369,39"/>
+</map>

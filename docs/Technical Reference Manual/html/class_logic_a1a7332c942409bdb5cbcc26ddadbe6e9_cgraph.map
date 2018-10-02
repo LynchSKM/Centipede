@@ -1,0 +1,4 @@
+<map id="Logic::renderGameWonScreen" name="Logic::renderGameWonScreen">
+<area shape="rect" id="node2" href="$class_presentation.html#a2ef4507daf2ddbf356b6dfca1c8f525a" title="Displays a Game Won Screen at the end of the game. " alt="" coords="253,5,445,47"/>
+<area shape="rect" id="node3" href="$class_game_won_screen.html#aaa58eb6d7d1b13468cc65cecd0243b59" title="Displays the SplashScreen window. " alt="" coords="493,13,656,39"/>
+</map>

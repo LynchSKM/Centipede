@@ -1,0 +1,6 @@
+<map id="EnemyFactory::generateASpider" name="EnemyFactory::generateASpider">
+<area shape="rect" id="node2" href="$class_logic.html#a8e083d0e64f6166e1621578c34270e37" title="Generates a Spider at random either at the left or right boundary. " alt="" coords="264,5,421,32"/>
+<area shape="rect" id="node3" href="$class_logic.html#a7d8384f6a1bd8e31c327109b1aa4e998" title="Generates all the game&#39;s moving enemies. " alt="" coords="469,5,667,32"/>
+<area shape="rect" id="node4" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="715,5,793,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="841,5,892,32"/>
+</map>

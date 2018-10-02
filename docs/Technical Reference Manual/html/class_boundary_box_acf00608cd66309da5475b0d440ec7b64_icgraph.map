@@ -1,0 +1,3 @@
+<map id="BoundaryBox::pointModArg" name="BoundaryBox::pointModArg">
+<area shape="rect" id="node2" href="$class_boundary_box.html#ab955a613deab2629c4d780bf79463a70" title="Builds a boundary box around a centre point with the parameters taken in by the constructor. Creates vertices using the calculateVertex function. The created vertices are then push into the private member vector in the order specified. Gets called in the constructor to immediately create the boundary box once all the parameters needed are saved. " alt="" coords="235,5,475,32"/>
+</map>

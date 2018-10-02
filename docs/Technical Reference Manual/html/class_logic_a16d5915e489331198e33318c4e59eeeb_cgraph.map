@@ -1,0 +1,5 @@
+<map id="Logic::generateCentipedeHeads" name="Logic::generateCentipedeHeads">
+<area shape="rect" id="node2" href="$class_enemy_factory.html#ac9ee16ae90b9825dd771081bbc7c8436" title="Generates centipede heads. " alt="" coords="223,23,445,65"/>
+<area shape="rect" id="node3" href="$class_grid.html#adfc1ee3214afb8c1a84e5106e2c499c4" title="Returns the grid&#39;s height. " alt="" coords="493,5,603,32"/>
+<area shape="rect" id="node4" href="$class_grid.html#a0d9e03cd17d99ff13a044d027012a9e2" title="Returns the grid&#39;s width. " alt="" coords="495,56,601,83"/>
+</map>

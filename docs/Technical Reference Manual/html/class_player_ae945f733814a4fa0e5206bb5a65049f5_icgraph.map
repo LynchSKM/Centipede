@@ -1,0 +1,3 @@
+<map id="Player::isAlive" name="Player::isAlive">
+<area shape="rect" id="node2" href="$class_player.html#aea83d5edc3dbd5cf8f44d38da57dc02b" title="Inherited from IMovingEntity. A virtual function that will be used to bring the Player object back to..." alt="" coords="157,5,288,32"/>
+</map>

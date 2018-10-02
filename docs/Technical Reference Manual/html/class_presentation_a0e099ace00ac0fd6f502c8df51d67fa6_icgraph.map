@@ -1,0 +1,7 @@
+<map id="Presentation::generateSpriteSheet" name="Presentation::generateSpriteSheet">
+<area shape="rect" id="node2" href="$class_presentation.html#a04c43fe2cf2fe4b969c034eee5d4b1e2" title="Populate SpriteSheet vector, sprite_sheets_, for the different game objects that have more than one i..." alt="" coords="240,5,427,47"/>
+<area shape="rect" id="node3" href="$class_presentation.html#ad61f8a299c4e23f6e9d51692929f8333" title="Loads all the game&#39;s textures. " alt="" coords="475,13,652,39"/>
+<area shape="rect" id="node4" href="$class_logic.html#a08101e1a7d5b42ea590ec2b67fda6800" title="Loads paths to the textures used by the game. " alt="" coords="700,13,827,39"/>
+<area shape="rect" id="node5" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="875,13,953,39"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1001,13,1052,39"/>
+</map>

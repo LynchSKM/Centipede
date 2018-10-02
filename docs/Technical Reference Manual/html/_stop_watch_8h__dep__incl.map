@@ -1,0 +1,10 @@
+<map id="StopWatch.h" name="StopWatch.h">
+<area shape="rect" id="node2" href="$_weapon_8h.html" title="Weapon.h" alt="" coords="113,80,195,107"/>
+<area shape="rect" id="node4" href="$_logic_8h.html" title="Logic.h" alt="" coords="161,229,225,256"/>
+<area shape="rect" id="node9" href="$_stop_watch_8cpp.html" title="StopWatch.cpp" alt="" coords="277,80,389,107"/>
+<area shape="rect" id="node3" href="$_player_8h.html" title="Player.h" alt="" coords="12,155,83,181"/>
+<area shape="rect" id="node8" href="$_weapon_8cpp.html" title="Weapon.cpp" alt="" coords="107,155,201,181"/>
+<area shape="rect" id="node7" href="$_player_8cpp.html" title="Player.cpp" alt="" coords="5,229,89,256"/>
+<area shape="rect" id="node5" href="$_logic_8cpp.html" title="Logic.cpp" alt="" coords="103,304,181,331"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="main.cpp" alt="" coords="206,304,281,331"/>
+</map>

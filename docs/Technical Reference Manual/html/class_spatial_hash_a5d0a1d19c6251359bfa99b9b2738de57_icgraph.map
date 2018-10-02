@@ -1,0 +1,15 @@
+<map id="SpatialHash::generateMapKeys" name="SpatialHash::generateMapKeys">
+<area shape="rect" id="node2" href="$class_spatial_hash.html#a4ce61752d2ec67c16323002d345df77b" title="Queries the map for the cells the object is located in and returns a vector of shared pointers to all..." alt="" coords="259,201,441,243"/>
+<area shape="rect" id="node13" href="$class_spatial_hash.html#a663251e84c6eca8303b181c480e76de2" title="Saves a shared pointer to the object at the cells where the object is located into the map game_objec..." alt="" coords="259,335,441,362"/>
+<area shape="rect" id="node3" href="$class_collision_handler.html#a20ca57634b9d0ce59c70dabdffa794fa" title="Checks collisions between a player and other game objects. If a collision occurs, with a Mushroom the..." alt="" coords="505,5,664,47"/>
+<area shape="rect" id="node8" href="$class_collision_handler.html#a12201e56c07089e1387bc055450b538b" title="Checks whether a player bullet collides with every other game object near it. If collisions occur bot..." alt="" coords="495,71,674,112"/>
+<area shape="rect" id="node9" href="$class_collision_handler.html#a92610ee252c8b7046313a16e2e442d73" title="Checks collisions between a centipede and a centipede. If a collision occurs, then both Centipedes go..." alt="" coords="495,136,674,177"/>
+<area shape="rect" id="node10" href="$class_collision_handler.html#a4c5bf9b1317b76bd678987e22bb4b27a" title="Checks collisions between a centipede and a mushroom. If a collision occurs, the Centipede segment go..." alt="" coords="495,201,674,243"/>
+<area shape="rect" id="node11" href="$class_collision_handler.html#a731ea157e7dc96266016a61829dc5088" title="Checks collisions between a scorpion and mushroom. If a collision occurs with a mushroom, the mushroom is set to poisoned. " alt="" coords="499,267,671,308"/>
+<area shape="rect" id="node12" href="$class_collision_handler.html#a900349e6e1bc68c330f87d12800027ab" title="Checks collisions between a spider and mushroom. If a collision occurs with a mushroom, the mushroom is set to eliminated. " alt="" coords="505,332,664,373"/>
+<area shape="rect" id="node4" href="$class_collision_handler.html#af5ab6a0cfb3a81d178d41d4b51725c10" title="Checks for collisions between the game objects that are still alive. " alt="" coords="728,209,943,235"/>
+<area shape="rect" id="node5" href="$class_logic.html#a91ff0c77244fcb15a77d506837751c74" title="Checks for collisions between game objects. " alt="" coords="991,209,1143,235"/>
+<area shape="rect" id="node6" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="1191,209,1269,235"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1317,209,1368,235"/>
+<area shape="rect" id="node14" href="$class_spatial_hash.html#a0f1fc93eebd653259103671e619df094" title="Saves the cell locations of an object into a map which will be used to query the objects near it..." alt="" coords="489,397,680,439"/>
+</map>

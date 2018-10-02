@@ -1,0 +1,13 @@
+<map id="Logic" name="Logic">
+<area shape="rect" id="node3" href="$class_grid.html" title="This class contains details about the screen such as the screen width and height. ..." alt="" coords="49,433,95,460"/>
+<area shape="rect" id="node12" href="$class_enemy_factory.html" title="Creates all the enemy objects of the game and Mushrooms. " alt="" coords="692,443,799,469"/>
+<area shape="rect" id="node13" href="$class_mushroom_factory.html" title="Creates all the mushroom objects of the game. " alt="" coords="357,477,484,504"/>
+<area shape="rect" id="node17" href="$class_spatial_hash.html" title="This class will be used by collision detection to query for objects around the object of interest..." alt="" coords="375,548,467,575"/>
+<area shape="rect" id="node5" href="$class_asset_manager.html" title="A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. " alt="" coords="692,291,799,317"/>
+<area shape="rect" id="node22" href="$class_high_score_manager.html" title="A class that reads and writes the high score to a textfile. " alt="" coords="679,341,811,368"/>
+<area shape="rect" id="node7" href="$class_stop_watch.html" title="This class models a Stopwatch and returns time values in seconds. " alt="" coords="702,240,789,267"/>
+<area shape="rect" id="node8" href="$class_presentation.html" title="Uses the SFML Graphics Library to draw all game objects on the screen. " alt="" coords="698,189,793,216"/>
+<area shape="rect" id="node16" href="$class_collision_handler.html" title="A Logic Layer class that determines whether collisions have occurred between game objects..." alt="" coords="688,548,803,575"/>
+<area shape="rect" id="node19" href="$class_separating_axis_theorem.html" title="This is a class used to determine overlap between BoundaryBox objects. This class makes use of the Se..." alt="" coords="341,665,501,692"/>
+<area shape="rect" id="node20" href="$class_position.html" title="A class that contains an x and y value representing a screen position. " alt="" coords="37,665,107,692"/>
+</map>

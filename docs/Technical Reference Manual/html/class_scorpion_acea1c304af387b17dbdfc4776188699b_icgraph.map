@@ -1,0 +1,5 @@
+<map id="Scorpion::eliminated" name="Scorpion::eliminated">
+<area shape="rect" id="node2" href="$class_scorpion.html#ac455b0a8472ddfec0c8a3e2bef8e87a6" title="A function that decrements x axis of the object&#39;s position such that the Scorpion object moves left..." alt="" coords="198,5,330,32"/>
+<area shape="rect" id="node4" href="$class_scorpion.html#a6220ca4cfc5c17f4a96ab4e35b198bc7" title="A function that increments x axis of the object&#39;s position. such that Scorpion object moves right..." alt="" coords="193,56,335,83"/>
+<area shape="rect" id="node3" href="$class_scorpion.html#a884cd8bc9621a1ce22d47446db53fc38" title="Inherited from IMovingEntity. A virtual function that moves a Scorpion object. " alt="" coords="383,31,493,57"/>
+</map>

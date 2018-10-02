@@ -1,0 +1,6 @@
+<map id="Logic::loadAssets" name="Logic::loadAssets">
+<area shape="rect" id="node2" href="$class_presentation.html#ad61f8a299c4e23f6e9d51692929f8333" title="Loads all the game&#39;s textures. " alt="" coords="185,13,362,39"/>
+<area shape="rect" id="node5" href="$class_asset_manager.html#ab6d8a0e2fee83023270c7e82c00dc0d7" title="Returns a vector of type AssetManager containing all the asset information for the project..." alt="" coords="180,63,367,90"/>
+<area shape="rect" id="node3" href="$class_presentation.html#a04c43fe2cf2fe4b969c034eee5d4b1e2" title="Populate SpriteSheet vector, sprite_sheets_, for the different game objects that have more than one i..." alt="" coords="415,5,601,47"/>
+<area shape="rect" id="node4" href="$class_presentation.html#a0e099ace00ac0fd6f502c8df51d67fa6" title="Generates a SpriteSheet object and saves it into the vector sprite_sheets_ for the different game obj..." alt="" coords="649,5,836,47"/>
+</map>

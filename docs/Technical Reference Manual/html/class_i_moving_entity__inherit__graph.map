@@ -1,0 +1,8 @@
+<map id="IMovingEntity" name="IMovingEntity">
+<area shape="rect" id="node3" href="$class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b..." alt="" coords="5,155,137,181"/>
+<area shape="rect" id="node4" href="$class_player.html" title="This is a Player Class that inherits from the IMovingEntity class. It contains virtual functions that..." alt="" coords="162,155,221,181"/>
+<area shape="rect" id="node5" href="$class_player_bullet.html" title="This is a class that inherits from the IMovingEntity class. It models a Player&#39;s laser bullet object ..." alt="" coords="245,155,337,181"/>
+<area shape="rect" id="node6" href="$class_scorpion.html" title="This is a class that inherits from the IMovingEntity class. It models a Scorpion object in the game..." alt="" coords="361,155,435,181"/>
+<area shape="rect" id="node7" href="$class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game..." alt="" coords="459,155,518,181"/>
+<area shape="rect" id="node2" href="$class_i_entity.html" title="This is a Interface Class containing pure virtual functions that will be overridden by derived classe..." alt="" coords="262,5,321,32"/>
+</map>

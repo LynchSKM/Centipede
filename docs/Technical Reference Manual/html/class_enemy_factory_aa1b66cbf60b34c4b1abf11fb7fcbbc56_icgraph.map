@@ -1,0 +1,5 @@
+<map id="EnemyFactory::generateAMushroom" name="EnemyFactory::generateAMushroom">
+<area shape="rect" id="node2" href="$class_logic.html#a847b8ccc9d13f1f80c2d0f6c897820a4" title="Transforms all dead centipede segments from vector(s) into mushrooms. " alt="" coords="288,5,473,47"/>
+<area shape="rect" id="node3" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="521,13,600,39"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="648,13,699,39"/>
+</map>

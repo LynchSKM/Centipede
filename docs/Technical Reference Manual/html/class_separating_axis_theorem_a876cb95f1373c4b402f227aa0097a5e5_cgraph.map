@@ -1,0 +1,11 @@
+<map id="SeparatingAxisTheorem::checkOverlap" name="SeparatingAxisTheorem::checkOverlap">
+<area shape="rect" id="node2" href="$class_separating_axis_theorem.html#a2ec4cb98d02252c57824bbdf4d5f8bbb" title="Clears all the vectors used as private members. " alt="" coords="221,5,381,47"/>
+<area shape="rect" id="node3" href="$class_boundary_box.html#ac5f649399746662fa0176e95c632ca9c" title="A function that returns the vertices of the boundary box in a vector of type Position. " alt="" coords="213,71,388,98"/>
+<area shape="rect" id="node4" href="$class_separating_axis_theorem.html#ac7613d7a7f5f05311260230b26486c63" title="Generates the normals perpendicular to the edges of a Rectangle. The normals are stored in a vector o..." alt="" coords="440,185,600,227"/>
+<area shape="rect" id="node8" href="$class_separating_axis_theorem.html#a574c908ebfa5df34e2f37916956c000a" title="Iterates through the axes generated and checks for overlap on each. Each BoundaryBox&#39;s vertices are p..." alt="" coords="214,123,387,164"/>
+<area shape="rect" id="node5" href="$class_separating_axis_theorem.html#a4b4dccb055bac2420135d8ce4bd3446a" title="Performs the normalization of an axis normal vector. The unit vector is what gets returned..." alt="" coords="652,199,812,240"/>
+<area shape="rect" id="node6" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="861,147,991,174"/>
+<area shape="rect" id="node7" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="860,89,992,115"/>
+<area shape="rect" id="node9" href="$class_separating_axis_theorem.html#a568f10c3f0eed05f4cf39bb1c2d380f1" title="Performs vector projection onto axes generated. " alt="" coords="436,95,604,136"/>
+<area shape="rect" id="node10" href="$class_separating_axis_theorem.html#ae0658d8b891bf6db5bea7fba29c1a02c" title="Performs the dot product between two points. " alt="" coords="652,81,812,123"/>
+</map>

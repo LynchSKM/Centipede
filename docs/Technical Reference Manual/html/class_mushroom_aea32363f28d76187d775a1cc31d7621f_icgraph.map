@@ -1,0 +1,3 @@
+<map id="Mushroom::decrementLives" name="Mushroom::decrementLives">
+<area shape="rect" id="node2" href="$class_mushroom.html#a1b5fc7894d89cc3844964d8468babb0e" title="Inherited from IEntity. A virtual function that sets the Mushroom object as not alive when killed..." alt="" coords="235,5,385,32"/>
+</map>

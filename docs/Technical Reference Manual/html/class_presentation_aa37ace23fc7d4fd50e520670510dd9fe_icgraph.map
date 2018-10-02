@@ -1,0 +1,6 @@
+<map id="Presentation::checkInput" name="Presentation::checkInput">
+<area shape="rect" id="node2" href="$class_presentation.html#a0ae752fb12e3530acd81469e68d743a3" title="Determines the keyboard keys pressed and acts accordingly. Polling is used by default. " alt="" coords="220,5,397,47"/>
+<area shape="rect" id="node3" href="$class_logic.html#a92b3982ff6e3ec9d07a69369e579853e" title="Tells presentation to process input from keyboard. " alt="" coords="445,13,619,39"/>
+<area shape="rect" id="node4" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="667,13,745,39"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="793,13,844,39"/>
+</map>

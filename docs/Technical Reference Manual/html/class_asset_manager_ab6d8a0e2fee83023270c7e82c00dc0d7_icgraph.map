@@ -1,0 +1,5 @@
+<map id="AssetManager::getAssetInfo" name="AssetManager::getAssetInfo">
+<area shape="rect" id="node2" href="$class_logic.html#a08101e1a7d5b42ea590ec2b67fda6800" title="Loads paths to the textures used by the game. " alt="" coords="240,5,367,32"/>
+<area shape="rect" id="node3" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="415,5,493,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="541,5,592,32"/>
+</map>

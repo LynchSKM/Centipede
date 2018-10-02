@@ -1,0 +1,3 @@
+<map id="SpriteSheet::createRect" name="SpriteSheet::createRect">
+<area shape="rect" id="node2" href="$class_sprite_sheet.html#ad2d66e4e4024dcfef094dce5d0425fc4" title="This function will create a rect shape in the texture so that the correct image is taken from the spr..." alt="" coords="215,5,401,32"/>
+</map>

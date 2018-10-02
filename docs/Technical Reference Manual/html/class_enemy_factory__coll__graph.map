@@ -1,0 +1,4 @@
+<map id="EnemyFactory" name="EnemyFactory">
+<area shape="rect" id="node2" href="$class_grid.html" title="This class contains details about the screen such as the screen width and height. ..." alt="" coords="5,13,52,39"/>
+<area shape="rect" id="node3" href="$class_mushroom_factory.html" title="Creates all the mushroom objects of the game. " alt="" coords="83,109,209,136"/>
+</map>

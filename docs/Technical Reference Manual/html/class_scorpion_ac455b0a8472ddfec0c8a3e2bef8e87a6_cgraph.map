@@ -1,0 +1,6 @@
+<map id="Scorpion::moveLeft" name="Scorpion::moveLeft">
+<area shape="rect" id="node2" href="$class_grid.html#a0d9e03cd17d99ff13a044d027012a9e2" title="Returns the grid&#39;s width. " alt="" coords="202,5,309,32"/>
+<area shape="rect" id="node3" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="190,56,321,83"/>
+<area shape="rect" id="node4" href="$class_position.html#ae50185d42f183d854df81e88e2bd578e" title="Sets the x coordinate of an object. " alt="" coords="190,107,321,133"/>
+<area shape="rect" id="node5" href="$class_scorpion.html#acea1c304af387b17dbdfc4776188699b" title="Inherited from IMovingEntity. A virtual function that sets the Scorpion object as not alive when kill..." alt="" coords="185,157,325,184"/>
+</map>

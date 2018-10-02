@@ -1,0 +1,8 @@
+<map id="Presentation::renderWindow" name="Presentation::renderWindow">
+<area shape="rect" id="node2" href="$class_presentation.html#ac13b755328c6e531b279d2e49a5503c1" title="Displays the player&#39;s lives, current score and the high score of the game. " alt="" coords="255,5,429,32"/>
+<area shape="rect" id="node3" href="$class_presentation.html#ac6a714a00a8c38446e8ff298c09da90b" title="Returns a sf::Sprite with the necessary properties of the object given. " alt="" coords="249,56,435,83"/>
+<area shape="rect" id="node7" href="$class_presentation.html#a82e1c667390dd7fb683548a9ce1c7c58" title="Updates the animations of game objects that have more than one image to represent movement..." alt="" coords="239,107,445,133"/>
+<area shape="rect" id="node4" href="$class_presentation.html#ac00c099bbecd8d84bd7c536d4e6d3aa7" title="Returns a sprite with the correct animation for animated moving objects. " alt="" coords="493,49,680,90"/>
+<area shape="rect" id="node5" href="$class_centipede_segment.html#a395c23435c42e06001766783f074b547" title="Inherited from IMovingEntity. A virtual function that gets a constant copy of the CentipedeSegment ob..." alt="" coords="728,49,947,90"/>
+<area shape="rect" id="node6" href="$class_centipede_segment.html#abf0473bac503e25944cebff09e2c600a" title="Inherited from IMovingEntity. A virtual function that queries if a CentipedeSegment object is still a..." alt="" coords="995,56,1172,83"/>
+</map>

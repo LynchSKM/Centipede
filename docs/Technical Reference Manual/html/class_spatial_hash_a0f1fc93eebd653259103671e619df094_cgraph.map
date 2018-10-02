@@ -1,0 +1,10 @@
+<map id="SpatialHash::generateSpatialHashTable" name="SpatialHash::generateSpatialHashTable">
+<area shape="rect" id="node2" href="$class_spatial_hash.html#a66a559d3ee222216bf08f7ea36be7417" title="Clears the vectors in the game_object_table_. " alt="" coords="264,5,407,32"/>
+<area shape="rect" id="node3" href="$class_spatial_hash.html#a663251e84c6eca8303b181c480e76de2" title="Saves a shared pointer to the object at the cells where the object is located into the map game_objec..." alt="" coords="244,56,427,83"/>
+<area shape="rect" id="node4" href="$class_spatial_hash.html#a3a9f73d146cb3d5969fdbd78e524f84b" title="Retrieves the screen positions where the object&#39;s centre and boundary box vertices are located..." alt="" coords="475,31,687,57"/>
+<area shape="rect" id="node5" href="$class_spatial_hash.html#a5d0a1d19c6251359bfa99b9b2738de57" title="Maps positions to a cell based on the grid&#39;s width, height, and the chosen cell size. " alt="" coords="478,81,683,108"/>
+<area shape="rect" id="node6" href="$class_spatial_hash.html#ae1b06cf6d968ceaf8731a9ecbb06c836" title="Maps a position to a cell based on the grid&#39;s width, height and the chosen cell size. " alt="" coords="735,81,933,108"/>
+<area shape="rect" id="node7" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="982,31,1113,57"/>
+<area shape="rect" id="node8" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="981,81,1113,108"/>
+<area shape="rect" id="node9" href="$class_grid.html#adfc1ee3214afb8c1a84e5106e2c499c4" title="Returns the grid&#39;s height. " alt="" coords="993,132,1102,159"/>
+</map>

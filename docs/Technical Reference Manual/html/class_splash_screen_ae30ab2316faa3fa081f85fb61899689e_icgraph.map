@@ -1,0 +1,6 @@
+<map id="SplashScreen::show" name="SplashScreen::show">
+<area shape="rect" id="node2" href="$class_presentation.html#ad87e0f6ada6aa68c6e15456a5e7820ea" title="Displays a Splashscreen at the beginning of the game. " alt="" coords="195,5,365,47"/>
+<area shape="rect" id="node3" href="$class_logic.html#a70bcf051b34e52fe521163360316d468" title="Displays the splash screen at the start of the game. " alt="" coords="413,13,592,39"/>
+<area shape="rect" id="node4" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="640,13,719,39"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="767,13,817,39"/>
+</map>

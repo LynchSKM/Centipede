@@ -1,0 +1,6 @@
+<map id="container_erase_if" name="container_erase_if">
+<area shape="rect" id="node2" href="$class_logic.html#abb059b52631dc541c89e46370d3bc688" title="Removes all dead entities from vector(s) where they exist. " alt="" coords="180,5,356,32"/>
+<area shape="rect" id="node5" href="$class_logic.html#a1e2f8545edc283391961c8689ac96d12" title="Removes all Centipede segments from vector(s) where they exist, reset the position of the player and ..." alt="" coords="187,56,349,83"/>
+<area shape="rect" id="node3" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="404,31,483,57"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="531,31,581,57"/>
+</map>

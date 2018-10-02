@@ -1,0 +1,6 @@
+<map id="EnemyFactory::generateAScorpion" name="EnemyFactory::generateAScorpion">
+<area shape="rect" id="node2" href="$class_logic.html#ae5f432d4b5b457a7f88c42b34f28f682" title="Generates a Scorpion at a random position. " alt="" coords="279,5,449,32"/>
+<area shape="rect" id="node3" href="$class_logic.html#a7d8384f6a1bd8e31c327109b1aa4e998" title="Generates all the game&#39;s moving enemies. " alt="" coords="497,5,695,32"/>
+<area shape="rect" id="node4" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="743,5,821,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="869,5,920,32"/>
+</map>

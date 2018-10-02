@@ -1,0 +1,8 @@
+<map id="Player::move" name="Player::move">
+<area shape="rect" id="node2" href="$class_grid.html#a0d9e03cd17d99ff13a044d027012a9e2" title="Returns the grid&#39;s width. " alt="" coords="163,5,270,32"/>
+<area shape="rect" id="node3" href="$class_grid.html#adfc1ee3214afb8c1a84e5106e2c499c4" title="Returns the grid&#39;s height. " alt="" coords="162,56,271,83"/>
+<area shape="rect" id="node4" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="151,107,283,133"/>
+<area shape="rect" id="node5" href="$class_position.html#a9b2b2f9964cf342152fa98bcae3ccadc" title="Sets the y coordinate of an object. " alt="" coords="151,157,283,184"/>
+<area shape="rect" id="node6" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="151,208,282,235"/>
+<area shape="rect" id="node7" href="$class_position.html#ae50185d42f183d854df81e88e2bd578e" title="Sets the x coordinate of an object. " alt="" coords="151,259,282,285"/>
+</map>

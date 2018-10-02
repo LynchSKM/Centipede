@@ -1,0 +1,5 @@
+<map id="Spider::CalculateSlope" name="Spider::CalculateSlope">
+<area shape="rect" id="node2" href="$class_spider.html#a456d9495aca3a636e584b3d8678596fd" title="A function that modifies the position of the object such that the object moves up. " alt="" coords="208,31,321,57"/>
+<area shape="rect" id="node3" href="$class_spider.html#ace407f694d63ed88367963310747c739" title="A function that modifies the position of the object such that the object moves down. " alt="" coords="369,5,499,32"/>
+<area shape="rect" id="node4" href="$class_spider.html#aec113188217436f4434be35684916b39" title="Inherited from IMovingEntity. A virtual function that moves a Spider object. " alt="" coords="547,31,644,57"/>
+</map>

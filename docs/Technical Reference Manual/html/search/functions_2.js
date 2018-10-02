@@ -6,7 +6,7 @@ var searchData=
   ['centipedecollideswithmushroom',['centipedeCollidesWithMushroom',['../class_collision_handler.html#a4c5bf9b1317b76bd678987e22bb4b27a',1,'CollisionHandler']]],
   ['centipedesegment',['CentipedeSegment',['../class_centipede_segment.html#a04484eeab8a66e4c3dee776c4b70ad68',1,'CentipedeSegment']]],
   ['changedirection',['changeDirection',['../class_centipede_segment.html#a4f2f8959d0689a2eff1f6c5eb833f91b',1,'CentipedeSegment']]],
-  ['checkcollisions',['checkCollisions',['../class_logic.html#a91ff0c77244fcb15a77d506837751c74',1,'Logic::checkCollisions()'],['../class_collision_handler.html#af5ab6a0cfb3a81d178d41d4b51725c10',1,'CollisionHandler::checkCollisions()']]],
+  ['checkcollisions',['checkCollisions',['../class_collision_handler.html#af5ab6a0cfb3a81d178d41d4b51725c10',1,'CollisionHandler::checkCollisions()'],['../class_logic.html#a91ff0c77244fcb15a77d506837751c74',1,'Logic::checkCollisions()']]],
   ['checkheadcollisions',['checkHeadCollisions',['../class_centipede_segment.html#a0527b11bda8b6e5a96629fbb5ba2ed9c',1,'CentipedeSegment']]],
   ['checkinput',['checkInput',['../class_presentation.html#aa37ace23fc7d4fd50e520670510dd9fe',1,'Presentation']]],
   ['checkoverlap',['checkOverlap',['../class_separating_axis_theorem.html#a876cb95f1373c4b402f227aa0097a5e5',1,'SeparatingAxisTheorem']]],

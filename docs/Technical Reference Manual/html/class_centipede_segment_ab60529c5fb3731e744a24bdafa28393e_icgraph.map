@@ -1,0 +1,4 @@
+<map id="CentipedeSegment::poison" name="CentipedeSegment::poison">
+<area shape="rect" id="node2" href="$class_centipede_segment.html#a0527b11bda8b6e5a96629fbb5ba2ed9c" title="Determines whether the CentipedeSegment has reached a position where the head collided. If it has the changeDirection() function is called. " alt="" coords="232,5,437,47"/>
+<area shape="rect" id="node3" href="$class_centipede_segment.html#ac6bc689b4060d0a0d89eb7a38acc1f21" title="Inherited from IMovingEntity. A virtual function that moves a CentipedeSegment object. " alt="" coords="485,13,656,39"/>
+</map>

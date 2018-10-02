@@ -1,0 +1,7 @@
+<map id="Presentation::renderWindow" name="Presentation::renderWindow">
+<area shape="rect" id="node2" href="$class_logic.html#ac6f88cd30d7a149e8ab101ebf7cba8d2" title="Gives Presentation a vector of game objects to be drawn. " alt="" coords="239,5,416,32"/>
+<area shape="rect" id="node3" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="909,5,988,32"/>
+<area shape="rect" id="node5" href="$class_logic.html#aab21423a4918a4047718cfdcda896aa3" title="Resets reincarnate of the Mushroom objects in the game. " alt="" coords="464,31,651,57"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1036,5,1087,32"/>
+<area shape="rect" id="node6" href="$class_logic.html#a1e2f8545edc283391961c8689ac96d12" title="Removes all Centipede segments from vector(s) where they exist, reset the position of the player and ..." alt="" coords="699,31,861,57"/>
+</map>

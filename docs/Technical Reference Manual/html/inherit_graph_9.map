@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_i_entity.html" title="This is a Interface Class containing pure virtual functions that will be overridden by derived classe..." alt="" coords="5,132,64,159"/>
+<area shape="rect" id="node2" href="$class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th..." alt="" coords="112,107,211,133"/>
+<area shape="rect" id="node8" href="$class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ..." alt="" coords="120,157,203,184"/>
+<area shape="rect" id="node3" href="$class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b..." alt="" coords="259,5,391,32"/>
+<area shape="rect" id="node4" href="$class_player.html" title="This is a Player Class that inherits from the IMovingEntity class. It contains virtual functions that..." alt="" coords="295,56,354,83"/>
+<area shape="rect" id="node5" href="$class_player_bullet.html" title="This is a class that inherits from the IMovingEntity class. It models a Player&#39;s laser bullet object ..." alt="" coords="279,107,371,133"/>
+<area shape="rect" id="node6" href="$class_scorpion.html" title="This is a class that inherits from the IMovingEntity class. It models a Scorpion object in the game..." alt="" coords="288,157,361,184"/>
+<area shape="rect" id="node7" href="$class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game..." alt="" coords="295,208,354,235"/>
+</map>

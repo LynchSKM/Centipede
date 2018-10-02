@@ -6,6 +6,7 @@ var class_player =
     [ "eliminated", "class_player.html#a0d03e19852d55e723299269143eed972", null ],
     [ "getBoundaryBox", "class_player.html#ac7a81aa0978a947b68033525dbdbce3b", null ],
     [ "getDirection", "class_player.html#a0c082a39764e0aea1e2c3ef5710a4380", null ],
+    [ "getHitPoints", "class_player.html#ae7d9f8ac5297dbef6005293bb0c41c8a", null ],
     [ "getObjectType", "class_player.html#a8ea245370effb787864b15c6d3b9da8b", null ],
     [ "getPosition", "class_player.html#aff8414311198ed6cc5fdc94073c5d6c3", null ],
     [ "getRemainingLives", "class_player.html#a8b960f63915f61b6d511865290dc3a56", null ],

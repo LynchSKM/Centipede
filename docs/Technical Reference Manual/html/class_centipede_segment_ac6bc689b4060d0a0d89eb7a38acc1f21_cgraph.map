@@ -1,0 +1,19 @@
+<map id="CentipedeSegment::move" name="CentipedeSegment::move">
+<area shape="rect" id="node2" href="$class_centipede_segment.html#af5fcaca2c707087d173bb53688b6ddb6" title="Controls the movements of the centipede segment upon entry. " alt="" coords="236,95,417,137"/>
+<area shape="rect" id="node6" href="$class_centipede_segment.html#a32d379102fa95a16fa131b3303683fea" title="A function that increments y axis of the object&#39;s position. " alt="" coords="477,445,680,472"/>
+<area shape="rect" id="node10" href="$class_centipede_segment.html#a6556489a691cd1a5d6a39de6e28da08d" title="A function that increments x axis of the object&#39;s position. " alt="" coords="728,332,928,359"/>
+<area shape="rect" id="node13" href="$class_centipede_segment.html#aa8572273f2bc8a2020a42126773a6d2d" title="A function that decrements y axis of the object&#39;s position. " alt="" coords="976,508,1163,535"/>
+<area shape="rect" id="node14" href="$class_centipede_segment.html#a00708a448ef307756f3c3a0a28a0da31" title="A function that decrements x axis of the object&#39;s position. " alt="" coords="1211,609,1401,636"/>
+<area shape="rect" id="node15" href="$class_centipede_segment.html#a0527b11bda8b6e5a96629fbb5ba2ed9c" title="Determines whether the CentipedeSegment has reached a position where the head collided. If it has the changeDirection() function is called. " alt="" coords="224,879,429,921"/>
+<area shape="rect" id="node18" href="$class_centipede_segment.html#a48577193056f9c1b25a4fc524b0fcebb" title="Moves the centipede segment accordingly when it is poisoned. " alt="" coords="225,442,429,483"/>
+<area shape="rect" id="node3" href="$class_grid.html#a0d9e03cd17d99ff13a044d027012a9e2" title="Returns the grid&#39;s width. " alt="" coords="1501,255,1607,281"/>
+<area shape="rect" id="node4" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="1240,153,1372,180"/>
+<area shape="rect" id="node5" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="1489,204,1619,231"/>
+<area shape="rect" id="node7" href="$class_grid.html#adfc1ee3214afb8c1a84e5106e2c499c4" title="Returns the grid&#39;s height. " alt="" coords="1251,457,1361,484"/>
+<area shape="rect" id="node8" href="$class_position.html#a9b2b2f9964cf342152fa98bcae3ccadc" title="Sets the y coordinate of an object. " alt="" coords="1240,559,1372,585"/>
+<area shape="rect" id="node9" href="$class_centipede_segment.html#a176b0a6e5291b5b91825a88bd1ede947" title="Inherited from IMovingEntity. A virtual function that sets the direction of a CentipedeSegment object..." alt="" coords="1449,697,1659,724"/>
+<area shape="rect" id="node11" href="$class_centipede_segment.html#a86c70cd3201c47d9e2e7408cd5dc1ad8" title="Inherited from IMovingEntity. A virtual function that will be used to return the poisoned status of t..." alt="" coords="1452,432,1656,459"/>
+<area shape="rect" id="node12" href="$class_position.html#ae50185d42f183d854df81e88e2bd578e" title="Sets the x coordinate of an object. " alt="" coords="1489,547,1619,573"/>
+<area shape="rect" id="node16" href="$class_centipede_segment.html#ab60529c5fb3731e744a24bdafa28393e" title="Inherited from IMovingEntity. A virtual function that will be used to poison a CentipedeSegment objec..." alt="" coords="489,887,668,913"/>
+<area shape="rect" id="node17" href="$class_centipede_segment.html#a4f2f8959d0689a2eff1f6c5eb833f91b" title="A function that changes the direction of the object to Down, this is called when a collision is detec..." alt="" coords="737,909,919,950"/>
+</map>

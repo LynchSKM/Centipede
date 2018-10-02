@@ -1,0 +1,5 @@
+<map id="CollisionHandler::checkCollisions" name="CollisionHandler::checkCollisions">
+<area shape="rect" id="node2" href="$class_logic.html#a91ff0c77244fcb15a77d506837751c74" title="Checks for collisions between game objects. " alt="" coords="268,5,420,32"/>
+<area shape="rect" id="node3" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="468,5,547,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="595,5,645,32"/>
+</map>

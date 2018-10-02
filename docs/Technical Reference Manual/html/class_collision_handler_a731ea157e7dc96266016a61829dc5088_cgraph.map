@@ -1,0 +1,17 @@
+<map id="CollisionHandler::scorpionCollidesWithMushroom" name="CollisionHandler::scorpionCollidesWithMushroom">
+<area shape="rect" id="node2" href="$class_spatial_hash.html#a4ce61752d2ec67c16323002d345df77b" title="Queries the map for the cells the object is located in and returns a vector of shared pointers to all..." alt="" coords="433,37,616,78"/>
+<area shape="rect" id="node9" href="$class_separating_axis_theorem.html#a876cb95f1373c4b402f227aa0097a5e5" title="Takes in two BoundaryBox objects and checks whether they overlap. " alt="" coords="225,167,385,209"/>
+<area shape="rect" id="node3" href="$class_spatial_hash.html#a3a9f73d146cb3d5969fdbd78e524f84b" title="Retrieves the screen positions where the object&#39;s centre and boundary box vertices are located..." alt="" coords="664,5,876,32"/>
+<area shape="rect" id="node4" href="$class_spatial_hash.html#a5d0a1d19c6251359bfa99b9b2738de57" title="Maps positions to a cell based on the grid&#39;s width, height, and the chosen cell size. " alt="" coords="667,56,873,83"/>
+<area shape="rect" id="node5" href="$class_spatial_hash.html#ae1b06cf6d968ceaf8731a9ecbb06c836" title="Maps a position to a cell based on the grid&#39;s width, height and the chosen cell size. " alt="" coords="924,56,1123,83"/>
+<area shape="rect" id="node6" href="$class_position.html#a91a545036c56351aed70b0e54ba5ef37" title="Gets a constant copy of the current x coordinate of the object. " alt="" coords="1171,213,1302,240"/>
+<area shape="rect" id="node7" href="$class_position.html#ad3479bfdf87a1ff1684b6db134bbc34d" title="Gets a constant copy of the current y coordinate of the object. " alt="" coords="1171,144,1303,171"/>
+<area shape="rect" id="node8" href="$class_grid.html#adfc1ee3214afb8c1a84e5106e2c499c4" title="Returns the grid&#39;s height. " alt="" coords="1182,56,1291,83"/>
+<area shape="rect" id="node10" href="$class_separating_axis_theorem.html#a2ec4cb98d02252c57824bbdf4d5f8bbb" title="Clears all the vectors used as private members. " alt="" coords="445,167,605,209"/>
+<area shape="rect" id="node11" href="$class_boundary_box.html#ac5f649399746662fa0176e95c632ca9c" title="A function that returns the vertices of the boundary box in a vector of type Position. " alt="" coords="437,233,612,260"/>
+<area shape="rect" id="node12" href="$class_separating_axis_theorem.html#ac7613d7a7f5f05311260230b26486c63" title="Generates the normals perpendicular to the edges of a Rectangle. The normals are stored in a vector o..." alt="" coords="445,102,605,143"/>
+<area shape="rect" id="node14" href="$class_separating_axis_theorem.html#a574c908ebfa5df34e2f37916956c000a" title="Iterates through the axes generated and checks for overlap on each. Each BoundaryBox&#39;s vertices are p..." alt="" coords="438,285,611,326"/>
+<area shape="rect" id="node13" href="$class_separating_axis_theorem.html#a4b4dccb055bac2420135d8ce4bd3446a" title="Performs the normalization of an axis normal vector. The unit vector is what gets returned..." alt="" coords="943,107,1103,149"/>
+<area shape="rect" id="node15" href="$class_separating_axis_theorem.html#a568f10c3f0eed05f4cf39bb1c2d380f1" title="Performs vector projection onto axes generated. " alt="" coords="686,282,854,323"/>
+<area shape="rect" id="node16" href="$class_separating_axis_theorem.html#ae0658d8b891bf6db5bea7fba29c1a02c" title="Performs the dot product between two points. " alt="" coords="943,225,1103,266"/>
+</map>

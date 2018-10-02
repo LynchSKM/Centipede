@@ -1,0 +1,8 @@
+<map id="StopWatch::pause" name="StopWatch::pause">
+<area shape="rect" id="node2" href="$class_logic.html#aab21423a4918a4047718cfdcda896aa3" title="Resets reincarnate of the Mushroom objects in the game. " alt="" coords="184,5,371,32"/>
+<area shape="rect" id="node6" href="$class_weapon.html#aec2629951989a4478b8dc65011537f16" title="Creates player bullet at the specified position and returns them in a vector. " alt="" coords="230,56,325,83"/>
+<area shape="rect" id="node3" href="$class_logic.html#a1e2f8545edc283391961c8689ac96d12" title="Removes all Centipede segments from vector(s) where they exist, reset the position of the player and ..." alt="" coords="419,5,581,32"/>
+<area shape="rect" id="node4" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="629,5,708,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="756,5,807,32"/>
+<area shape="rect" id="node7" href="$class_player.html#a3ca4a0c411b674096dc30c6a6da8f305" title="Creates player bullets and returns them in a vector. " alt="" coords="451,56,549,83"/>
+</map>

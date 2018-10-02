@@ -1,0 +1,4 @@
+<map id="Logic::renderGameOverScreen" name="Logic::renderGameOverScreen">
+<area shape="rect" id="node2" href="$class_presentation.html#a40d86f3b623cbef7a04db5a312ff1368" title="Displays a Game Over Screen at the end of the game. " alt="" coords="252,5,443,47"/>
+<area shape="rect" id="node3" href="$class_game_over_screen.html#aed3579e06a894e3e0f3683494ef4b278" title="Displays the SplashScreen window. " alt="" coords="491,13,653,39"/>
+</map>

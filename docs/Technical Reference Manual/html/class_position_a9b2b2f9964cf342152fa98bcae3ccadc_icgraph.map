@@ -1,0 +1,22 @@
+<map id="Position::setY_pos" name="Position::setY_pos">
+<area shape="rect" id="node2" href="$class_centipede_segment.html#aa8572273f2bc8a2020a42126773a6d2d" title="A function that decrements y axis of the object&#39;s position. " alt="" coords="192,149,379,176"/>
+<area shape="rect" id="node3" href="$class_centipede_segment.html#a32d379102fa95a16fa131b3303683fea" title="A function that increments y axis of the object&#39;s position. " alt="" coords="433,149,636,176"/>
+<area shape="rect" id="node9" href="$class_mushroom_factory.html#aa7e089232dee317d81b62b1cf8b7660d" title="Maps the position into the defined rows and columns. " alt="" coords="185,251,385,277"/>
+<area shape="rect" id="node15" href="$class_player.html#a1d35b7b1cd1a890042abdfdc55cafb14" title="Inherited from IMovingEntity. A virtual function that moves a Player object. " alt="" coords="237,301,334,328"/>
+<area shape="rect" id="node16" href="$class_player.html#aea83d5edc3dbd5cf8f44d38da57dc02b" title="Inherited from IMovingEntity. A virtual function that will be used to bring the Player object back to..." alt="" coords="220,352,351,379"/>
+<area shape="rect" id="node17" href="$class_player_bullet.html#aa56a8f4f9db3978834521b58cffa9004" title="Inherited from IMovingEntity. A virtual function that moves a PlayerBullet object. " alt="" coords="220,403,351,429"/>
+<area shape="rect" id="node18" href="$class_spider.html#a8bdb1e16cfce886971ac1ec53d019233" title="Generates the next turning point and gets the slope of the line to that point. " alt="" coords="208,504,363,531"/>
+<area shape="rect" id="node19" href="$class_spider.html#a456d9495aca3a636e584b3d8678596fd" title="A function that modifies the position of the object such that the object moves up. " alt="" coords="478,555,591,581"/>
+<area shape="rect" id="node20" href="$class_spider.html#ace407f694d63ed88367963310747c739" title="A function that modifies the position of the object such that the object moves down. " alt="" coords="737,504,866,531"/>
+<area shape="rect" id="node5" href="$class_centipede_segment.html#ac6bc689b4060d0a0d89eb7a38acc1f21" title="Inherited from IMovingEntity. A virtual function that moves a CentipedeSegment object. " alt="" coords="1219,120,1389,147"/>
+<area shape="rect" id="node6" href="$class_centipede_segment.html#a00708a448ef307756f3c3a0a28a0da31" title="A function that decrements x axis of the object&#39;s position. " alt="" coords="706,251,897,277"/>
+<area shape="rect" id="node8" href="$class_centipede_segment.html#a6556489a691cd1a5d6a39de6e28da08d" title="A function that increments x axis of the object&#39;s position. " alt="" coords="701,48,901,75"/>
+<area shape="rect" id="node4" href="$class_centipede_segment.html#af5fcaca2c707087d173bb53688b6ddb6" title="Controls the movements of the centipede segment upon entry. " alt="" coords="978,83,1159,125"/>
+<area shape="rect" id="node7" href="$class_centipede_segment.html#a48577193056f9c1b25a4fc524b0fcebb" title="Moves the centipede segment accordingly when it is poisoned. " alt="" coords="967,201,1171,242"/>
+<area shape="rect" id="node10" href="$class_mushroom_factory.html#a3f433ade66a5a36958c8ec8fbdef0896" title="Generates a mushroom at the given position. " alt="" coords="442,289,627,330"/>
+<area shape="rect" id="node11" href="$class_enemy_factory.html#aa1b66cbf60b34c4b1abf11fb7fcbbc56" title="Generates a mushrooms at a given position. " alt="" coords="684,313,919,340"/>
+<area shape="rect" id="node12" href="$class_logic.html#a847b8ccc9d13f1f80c2d0f6c897820a4" title="Transforms all dead centipede segments from vector(s) into mushrooms. " alt="" coords="976,318,1161,359"/>
+<area shape="rect" id="node13" href="$class_logic.html#abf175ef9069615527bfbd10864b20df4" title="Runs the game loop. " alt="" coords="1265,325,1343,352"/>
+<area shape="rect" id="node14" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="1437,325,1488,352"/>
+<area shape="rect" id="node21" href="$class_spider.html#aec113188217436f4434be35684916b39" title="Inherited from IMovingEntity. A virtual function that moves a Spider object. " alt="" coords="1020,529,1117,556"/>
+</map>
