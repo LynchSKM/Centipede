@@ -2,6 +2,7 @@
 #include "Mushroom.h"
 #include "Player.h"
 #include "Scorpion.h"
+#include "Spider.h"
 
 using std::make_shared;
 using std::dynamic_pointer_cast;
@@ -372,8 +373,7 @@ TEST_CASE("Collision between Scorpion and Mushroom poisons the Mushroom")
     vector<IEntity_ptr> game_objects;
     vector<IMovingEntity_ptr> moving_game_objects;
 
-    auto x = 400.0f;
-    auto y = 56.0f;
+    auto x = grid.getWidth()/2.0f;
 
     auto scorpion = make_shared<Scorpion>(grid);
     auto mushroom = make_shared<Mushroom>(Position(x, scorpion->getPosition().getY_pos()));
@@ -382,13 +382,8 @@ TEST_CASE("Collision between Scorpion and Mushroom poisons the Mushroom")
     game_objects.push_back(scorpion);
     moving_game_objects.push_back(scorpion);
 
-    auto moves_to_be_made = game_objects.at(1)->getPosition().getX_pos();
-    moves_to_be_made -= (dimensions_scorpion.width/2.0f);
-    moves_to_be_made -= (mushroom->getPosition().getX_pos()+dimensions_mushroom.width/2.0f);
-    moves_to_be_made /= dimensions_scorpion.speed;
-    moves_to_be_made = static_cast<int>(moves_to_be_made);
-
-    for(auto moves_made = 0; moves_made<=moves_to_be_made+1; moves_made++)
+    //move the scorpion across the screen
+    while(scorpion->isAlive())
     {
         collision_handler.checkCollisions(game_objects, moving_game_objects);
         // move
@@ -396,6 +391,7 @@ TEST_CASE("Collision between Scorpion and Mushroom poisons the Mushroom")
             object->move();
     }//for
 
+    CHECK_FALSE(sat_algorithm.checkOverlap(mushroom->getBoundaryBox(),scorpion->getBoundaryBox()));
     CHECK(mushroom->isPoisoned());
 }
 
@@ -465,5 +461,50 @@ TEST_CASE("Collision between Player and Centipede is detected successfully")
     CHECK(player->isAlive());
     CHECK(player->getRemainingLives()==player_lives);
     CHECK_FALSE(centipede_head->isAlive());
+}
+
+// ================ Spider COLLISIONS ================
+TEST_CASE("Collision between Spider and Mushroom is detected successfully.")
+{
+    const Grid grid{592, 640};
+    CollisionHandler collision_handler{grid};
+    SeparatingAxisTheorem sat_algorithm{};
+    struct MushroomDimensions dimensions_mushroom;
+    struct SpiderDimensions dimensions_spider;
+    vector<IEntity_ptr> game_objects;
+    vector<IMovingEntity_ptr> moving_game_objects;
+
+    auto spider = make_shared<Spider>(grid);
+    game_objects.push_back(spider);
+    moving_game_objects.push_back(spider);
+
+    auto spider_pos = spider->getPosition();
+    auto x = grid.getWidth()/2.0f;
+    auto y = 0.0f;
+
+    //create a column of mushrooms
+    for(auto i=30; i<40;i++)
+    {
+        auto y = i*16 +24.0f;
+        auto mushroom = make_shared<Mushroom>(Position{x, y});
+        game_objects.push_back(mushroom);
+    }
+
+    // move the spider across the screen
+    while(spider->isAlive())
+    {
+        collision_handler.checkCollisions(game_objects, moving_game_objects);
+        // move
+        for(auto& object : moving_game_objects)
+            object->move();
+    }//for
+
+   auto alive_objects = count_if(game_objects.begin(), game_objects.end(),
+                                 [](const IEntity_ptr& object)
+                                 {
+                                    return(object->isAlive());
+                                 });
+
+    CHECK_FALSE(game_objects.size() == alive_objects);
 }
 

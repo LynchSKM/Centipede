@@ -143,16 +143,22 @@ void CollisionHandler::splitCentipedeTrain(vector<IMovingEntity_ptr>& centipede,
 {
     //Reorder centipede:
     auto iter_new_head = find(centipede.begin(), centipede.end(), segment);
-    auto iter_segment  = find(centipede.begin(), centipede.end(), segment);
-    ++iter_new_head;
-    ++iter_segment;
+    iter_new_head = find_if(iter_new_head,
+                            centipede.end(),
+                         [](const IMovingEntity_ptr& object)
+                         {
+                            return(object->isAlive());
+                         });
+
     if(iter_new_head!=centipede.end())
     {
         auto centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(*iter_new_head);
+        if(centipede_seg_ptr->getBodyType() == CentipedeSegment::BodyType::HEAD) return;
         centipede_seg_ptr->setBodyType(CentipedeSegment::BodyType::HEAD);
 
         auto centipede_new_head_y_pos = centipede_seg_ptr->getPosition().getY_pos();
 
+        auto iter_segment  = find(centipede.begin(), centipede.end(), *iter_new_head);
         // Update train:
         for(++iter_segment; iter_segment!=centipede.end(); ++iter_segment)
         {
