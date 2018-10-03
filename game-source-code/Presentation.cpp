@@ -82,42 +82,17 @@ void Presentation::generateSpriteSheet(ObjectType object_type, unsigned int row,
 
 }
 
-void Presentation::populateSpriteSheets(const ObjectType& object_type)
+void Presentation::populateSpriteSheets(const AssetManager& asset, const ObjectType& object_type)
 {
     auto switch_time = 0.3f;
-    auto image_count_columns = 1u;
-    auto image_count_rows = 1u;
-    auto direction = Direction::NONE;
-    switch(object_type)
-    {
-        case ObjectType::CENTIPEDE:
-            image_count_columns = 8u;
-            image_count_rows    = 2u;
-            direction = Direction::LEFT;
-            break;
-        case ObjectType::MUSHROOM:
-            image_count_columns = 4u;
-            image_count_rows    = 2u;
-            direction = Direction::NONE;
-            switch_time = 0.0f;
-            break;
-        case ObjectType::SCORPION:
-            image_count_columns = 4u;
-            image_count_rows    = 1u;
-            direction = Direction::LEFT;
-            break;
-        case ObjectType::SPIDER:
-            image_count_columns = 8u;
-            image_count_rows    = 2u;
-            direction = Direction::NONE;
-            break;
-        default:
-            break;
+    auto [details, direction] = asset.getTextureDetails();
+    if(details.empty()) return;
 
-    }//switch
-    for(auto row = 0u; row<image_count_rows; row++)
-        generateSpriteSheet(object_type, row, sf::Vector2u{image_count_columns,
-                            image_count_rows}, switch_time, direction);
+    auto rows_in_image    = details.at(0);
+    auto columns_in_image = details.at(1);
+    for(auto row = 0u; row<rows_in_image; row++)
+        generateSpriteSheet(object_type, row, sf::Vector2u{columns_in_image,
+                            rows_in_image}, switch_time, direction);
     return;
 }
 
@@ -161,7 +136,7 @@ void Presentation::loadTextures(vector<AssetManager>game_assets)
         game_textures_.insert(temp_pair);
 
         // If object with animated movement, generate spritesheet object.
-        populateSpriteSheets(temp_object_type);
+        populateSpriteSheets(*iter_asset, temp_object_type);
     }//for
 }
 

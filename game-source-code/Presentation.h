@@ -169,7 +169,7 @@ class Presentation
          *  for the different game objects that have more than one image in a texture.
          * 	\param object_type is of type enum class ObjectType.
          */
-        void populateSpriteSheets(const ObjectType& object_type);
+        void populateSpriteSheets(const AssetManager& asset, const ObjectType& object_type);
 
        /** \brief Generates a SpriteSheet object and saves it into the vector
          *  sprite_sheets_ for the different game objects.

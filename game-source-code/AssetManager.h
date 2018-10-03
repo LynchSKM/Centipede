@@ -3,9 +3,16 @@
 
 #include <string>
 #include <vector>
+#include <map>
+#include <tuple>
+
+#include "Direction.h"
 
 using std::string;
 using std::vector;
+using std::map;
+using std::pair;
+using std::tuple;
 
 /** \class AssetManager
  *  \brief A data class containing a AssetType and the path to the asset.Loads
@@ -65,9 +72,37 @@ class AssetManager
          */
         vector<AssetManager> getAssetInfo();
 
+        /**	\brief Returns a tuple with a vector of type unsigned int containing
+         *  the rows and columns in an image and a direction enum which gives
+         *  information about the direction images face in the texture.
+         * 	\return tuple<vector<unsigned int>, Direction>
+         */
+        tuple<vector<unsigned int>, Direction> getTextureDetails() const;
+
+        /**	\brief Populates the map used to store the rows and columns found in
+         *  an image for each game object. It also populates the map used to store
+         *  the default direction that images face in the texture. It is a static
+         *  function because the maps being updated are private static members.
+         */
+        static void loadTextureDetails();
+
 	private:
-		AssetType assetType_;	/**< A variable of type enum class AssetType. Determines the type of asset. */
-		string assetPath_; 		/**< A string variable holding the path to the asset. */
+		AssetType assetType_;	/**< A variable of type enum class AssetType. Determines the type of asset.*/
+		string assetPath_; 		/**< A string variable holding the path to the asset.*/
+		static map<AssetType, vector<unsigned int>> texture_details_;
+		/**< A static map that holds the rows and columns in an image for each texture.*/
+
+		static map<AssetType, Direction> texture_direction_;
+        /**< A static map that holds the default direction objects face in an image for each texture.*/
+
+        /**	\brief A private static function that helps loadTextureDetails().
+         *  \param type_asset is of type AssetType.
+         *  \param rows_in_image is an int containing the rows in an image.
+         *  \param columns_in_image is an int containing the columns in an image.
+         *  \param direction is an Direction enum containing the default direction faced in an image.
+         */
+		static void captureDetails(AssetType type_asset, int rows_in_image,
+                                   int columns_in_image, Direction direction);
 };
 
 #endif //ASSETMANAGER_H

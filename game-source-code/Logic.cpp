@@ -20,11 +20,13 @@ void Logic::getInputCommands()
     else if(presentation_.isDownPressed()) player_->setDirection(Direction::DOWN);
     else player_->setDirection(Direction::NONE);
 
-    if(!debounceSpaceKey_ && presentation_.isSpacePressed()) {
+    if(!debounceSpaceKey_ && presentation_.isSpacePressed())
+    {
         debounceSpaceKey_ = true;
         auto bullet_Vector = player_->shoot();
 
-        for(auto &bullets: bullet_Vector) {
+        for(auto &bullets: bullet_Vector)
+        {
             game_objects_.push_back(bullets);
             moving_game_objects_.push_back(bullets);
         }//for
@@ -73,6 +75,7 @@ void Logic::run()
 }
 void Logic::loadAssets()
 {
+    AssetManager::loadTextureDetails();
     presentation_.loadTextures(assetManager_.getAssetInfo());
 }
 
@@ -97,12 +100,14 @@ void Logic::updateGameObjects()
 void Logic::removeDeadEntities()
 {
     container_erase_if(game_objects_,
-    [](shared_ptr<IEntity>& game_object) {
+    [](shared_ptr<IEntity>& game_object)
+    {
         return (!game_object->isAlive());
     });
 
     container_erase_if(moving_game_objects_,
-    [](shared_ptr<IMovingEntity>& game_object) {
+    [](shared_ptr<IMovingEntity>& game_object)
+    {
         return (!game_object->isAlive());
     });
 }
@@ -133,7 +138,6 @@ void Logic::generateGameEnemies()
 
 void Logic::generateNormalCentipede()
 {
-
     for(auto& segment: enemyFactory_.generateNormalCentipede())
     {
         game_objects_.push_back(segment);
@@ -149,7 +153,8 @@ void Logic::generateCentipedeHeads()
         moving_game_objects_.push_back(segment);
     }//for
 }
-void Logic::generateMushrooms() {
+void Logic::generateMushrooms()
+{
     for(auto& mushroom: enemyFactory_.generateMushrooms())
     {
         game_objects_.push_back(mushroom);
@@ -263,7 +268,6 @@ void Logic::updateScores()
         screen_state_= ScreenState::GAMEOVERSCREEN;
     else if(CentipedeDead && player_->isAlive() || (!player_->isAlive() && highScorePassed))
         screen_state_= ScreenState::GAMEWONSCREEN;
-
 
     if(highScorePassed)
     {
