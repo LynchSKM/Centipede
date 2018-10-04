@@ -5,7 +5,7 @@
 
 TEST_CASE("The Grid's width and height are initialized with default values and be retrieved properly"){
 
-    Grid testGrid{};
+    Grid testGrid{800, 600};
 
     CHECK(testGrid.getWidth()==800);
     CHECK(testGrid.getHeight()==600);
