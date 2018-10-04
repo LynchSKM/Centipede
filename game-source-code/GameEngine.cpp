@@ -94,7 +94,7 @@ void GameEngine::generateGameEnemies()
     if(!resetLevel_  && numberOfCentipedesSeg == 0)
     {
         reset();
-        auto decrease_delay_by = 4.0;
+        auto decrease_delay_by = 3.0;
         enemyFactory_.setSpiderReleaseTime(enemyFactory_.getSpiderReleaseTime()-decrease_delay_by);
         ++gameLevel_;
         hasLevelledUp_ = true;
@@ -225,6 +225,7 @@ void GameEngine::generateNormalCentipede()
 
 void GameEngine::generateCentipedeHeads(int numberOfHeads)
 {
+    if(numberOfHeads>3) numberOfHeads = 3;
     for(auto& head_segment : enemyFactory_.generateCentipedeHeads(numberOfHeads))
     {
         game_objects_.push_back(head_segment);

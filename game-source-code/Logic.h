@@ -3,16 +3,11 @@
 
 #include "Grid.h"
 #include "Presentation.h"
-#include "HighScoreManager.h"
 #include "ScreenState.h"
-#include "Player.h"
 #include "StopWatch.h"
-#include "EnemyFactory.h"
-#include "CollisionHandler.h"
+#include "GameEngine.h"
 
-#include <vector>
 #include <memory>
-#include <algorithm>
 #include <ctime>
 
 using std::vector;
@@ -43,19 +38,15 @@ class Logic
     private:
         const Grid grid_{592, 640};
         Presentation presentation_{grid_.getWidth(), grid_.getHeight()};
-        HighScoreManager highScoreManager_;
+        GameEngine gameEngine_{grid_};
         AssetManager assetManager_;
-        EnemyFactory enemyFactory_{grid_};
-        CollisionHandler collisionHandler_{grid_};
         StopWatch game_timer_;
-        shared_ptr<Player> player_;
-        vector<shared_ptr<IEntity>> game_objects_;
-        vector<shared_ptr<IMovingEntity>> moving_game_objects_;
-        int high_score_;
         ScreenState screen_state_;
-        bool debounceSpaceKey_;
 
         // Private functions:
+        /** \brief Displays the splash screen at the start of the game.
+         */
+         void startUp();
 
         /** \brief Displays the splash screen at the start of the game.
          */
@@ -81,50 +72,18 @@ class Logic
          */
         void renderGameWonScreen();
 
-        /** \brief Moves all the game objects that can be moved.
+        /** \brief Runs the logic for the game.
          */
-        void updateGameObjects();
+        void updateGame();
 
-        /** \brief Generates all the game's moving enemies.
+        /** \brief Plays sound for spider and scorpion as they move.
          */
-        void generateGameEnemies();
-
-        /** \brief Generates the a Centipede with one head, and multiple body segments.
-         */
-        void generateNormalCentipede();
-
-        /** \brief Generates Centipede heads.
-         */
-        void generateCentipedeHeads();
-
-        /** \brief Generates Mushroom objects.
-         */
-        void generateMushrooms();
-
-        /** \brief Transforms all dead centipede segments from vector(s) into mushrooms.
-         */
-        void generateMushroomAtCollision();
-
-        /** \brief Generates a Scorpion at a random position.
-         */
-        void generateAScorpion();
-
-        /** \brief Generates a Spider at random either at the left or right boundary.
-         */
-        void generateASpider();
-
-        /** \brief Checks for collisions between game objects.
-         */
-        void checkCollisions();
+        void updateMovingObjectsSound();
 
         /** \brief Checks whether the player's score has passed the current high
          * score and updates the high score if true.
          */
         void updateScores();
-
-        /** \brief Removes all dead entities from vector(s) where they exist.
-         */
-        void removeDeadEntities();
 
         /** \brief Removes all Centipede segments from vector(s) where they exist,
          *  reset the position of the player and generate a new Centipede train.
@@ -133,21 +92,11 @@ class Logic
 
         /** \brief Resets reincarnate of the Mushroom objects in the game.
          */
-        void reincarnateMushroom();
-};
+        void reincarnateMushrooms();
 
-/**\brief  container_erase_if - a function that erases elements in a container based on a
- * specified condition determined by the Predicate.
- *
- * \param container a std container passed by reference to be iterated through.
- * \param predicate can be a function that returns true or false.
- */
-template<typename TypeContainer, typename PredicateT>
-inline void container_erase_if(TypeContainer& container, const PredicateT& predicate)
-{
-    container.erase(remove_if(begin(container),
-                              end(container), predicate),
-                    end(container));
-}//
+        /** \brief Plays the levelUp sound if the player's level has advanced.
+         */
+        void levelUp();
+};
 
 #endif // LOGIC_H
