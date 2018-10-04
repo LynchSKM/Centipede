@@ -153,7 +153,6 @@ void CollisionHandler::splitCentipedeTrain(vector<IMovingEntity_ptr>& centipede,
     if(iter_new_head!=centipede.end())
     {
         auto centipede_seg_ptr = dynamic_pointer_cast<CentipedeSegment>(*iter_new_head);
-        if(centipede_seg_ptr->getBodyType() == CentipedeSegment::BodyType::HEAD) return;
         centipede_seg_ptr->setBodyType(CentipedeSegment::BodyType::HEAD);
 
         auto centipede_new_head_y_pos = centipede_seg_ptr->getPosition().getY_pos();
