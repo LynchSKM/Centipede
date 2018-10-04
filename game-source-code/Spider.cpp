@@ -27,7 +27,7 @@ Spider::Spider(const Grid& grid):
 void Spider::CalculateSlope()
 {
     float minHeight = grid_.getHeight()- grid_.getHeight()*0.25;
-    float maxHeight = grid_.getHeight();
+    float maxHeight = grid_.getHeight()- dimensions_.height/2.0f;
     auto xpos = 0.0f;
     auto ypos = 0.0f;
     auto multFactor = 4;
@@ -98,7 +98,7 @@ void Spider::moveUp()
 void Spider::moveDown()
 {
     float maxWidth  = grid_.getWidth();
-    float maxHeight = grid_.getHeight();
+    float maxHeight = grid_.getHeight()- dimensions_.height/2.0f;
     auto newXpos = 0.f;
     auto newYpos = 0.f;
 
@@ -126,10 +126,6 @@ void Spider::moveDown()
 
 void Spider::move()
 {
-    float maxWidth  = grid_.getWidth();
-    float minHeight = grid_.getHeight()- grid_.getHeight()*0.25;
-    float maxHeight = grid_.getHeight();
-
     switch(movementDirection_)
     {
         case Direction::UP:
