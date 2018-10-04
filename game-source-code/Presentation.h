@@ -73,64 +73,73 @@ class Presentation
          *  \param remaining_lives is an int representing the player's remaining lives.
          *  \param player_score is an int that has the player's current score.
          *  \param high_score is an int that has the game's highest score.
+         *  \param game_level is a  tuple<const int, const int> that indicates
+         *  the current game level and max game level.
          */
         void displayLives(const int remaining_lives, const int player_score,
-                          const int high_score);
+                          const int high_score, tuple<const int, const int> game_level);
 
         /**	\brief Draws all the game objects onto the screen. Including the player's
          *  score, lives and the game's highest score.
-         * 	\param game_objects is a vector of shared pointers to IEntity objects.
+         * 	\param game_objects is a const vector of shared pointers to IEntity objects.
          * 	\param remaining_lives is an int and contains the player's remaining lives.
          * 	\param player_score is an int that has the player's current score.
          * 	\param high_score is an int that has the game's highest score.
+         *  \param game_level is a  tuple<const int, const int> that indicates
+         *  the current game level and max game level.
          */
-        void renderWindow(vector<shared_ptr<IEntity>>& game_objects,
+        void renderWindow(const vector<shared_ptr<IEntity>>& game_objects,
                           const int remaining_lives, const int player_score,
-                          const int high_score);
+                          const int high_score, tuple<const int, const int> game_level);
 
         /** \brief Loads all the game's textures.
-         *  \param game_assets is a vector of AssetManager
+         *  \param game_assets is a const vector of AssetManager passed by reference.
          */
-        void loadTextures(vector<AssetManager> game_assets);
+        void loadTextures(const vector<AssetManager>& game_assets);
 
         /** \brief Returns a bool indicating whether a key was pressed.
-         *  \return a bool indicating key status.
+         *  \return bool indicating key status.
          */
         bool isLeftPressed(){return isLeftPressed_;};
 
         /** \brief Returns a bool indicating whether a key was pressed.
-         *  \return a bool indicating key status.
+         *  \return bool indicating key status.
          */
         bool isRightPressed(){return isRightPressed_;};
 
         /** \brief Returns a bool indicating whether a key was pressed.
-         *  \return a bool indicating key status.
+         *  \return bool indicating key status.
          */
         bool isUpPressed(){return isUpPressed_;};
 
         /** \brief Returns a bool indicating whether a key was pressed.
-         *  \return a bool indicating key status.
+         *  \return bool indicating key status.
          */
         bool isDownPressed(){return isDownPressed_;};
 
         /** \brief Returns a bool indicating whether a key was pressed.
-         *  \return a bool indicating key status.
+         *  \return bool indicating key status.
          */
         bool isSpacePressed(){return isSpacePressed_;};
 
         /** \brief Returns a bool indicating whether the render window is open.
-         *  \return a bool window open status.
+         *  \return bool window open status.
          */
         bool isWindowOpen() const {return window_.isOpen();};
 
         /** \brief Updates the sound played when a Scorpion and Spider are moving.
          *  Also plays the sound used when a Mushroom is being regenerated.
+         *  \param object_type is an enum of the strongly typed enum class ObjectType.
          */
         void processGameObjectSound(ObjectType object_type);
 
         /** \brief Plays the sound used to indicate that a player has shot a bullet.
          */
         void processPlayerShootSound();
+
+        /** \brief Plays the sound used to indicate that a player levelled up.
+         */
+        void processLevelUpSound();
 
         /** \brief Default Destructor. Destroys a Presentation object.
          */
@@ -148,10 +157,11 @@ class Presentation
 		 */
         enum class GameSounds
         {
-            GUN_SHOT = 0,	/**< is coded as int of value 0.*/
-            MUSHROOM_REGEN, /**< is coded as int of value 1.*/
-            SCORPION_MOVE,	/**< is coded as int of value 2.*/
-            SPIDER_MOVE		/**< is coded as int of value 3.*/
+            GUN_SHOT = 0,   /**< Represents the sound used for bullets fired.*/
+            LEVEL_UP,       /**< Represents the sound used for Levelling up.*/
+            MUSHROOM_REGEN, /**< Represents the sound used for Mushroom regeneration.*/
+            SCORPION_MOVE,  /**< Represents the sound used for Scorpion movement.*/
+            SPIDER_MOVE     /**< Represents the sound used for Spider movement.*/
         };
 
         map<GameSounds, shared_ptr<sf::Music>> game_sounds_;
@@ -167,6 +177,7 @@ class Presentation
 
         /** \brief Populate SpriteSheet vector, sprite_sheets_,
          *  for the different game objects that have more than one image in a texture.
+         *  \param asset is of type AssetManager which contains a game asset.
          * 	\param object_type is of type enum class ObjectType.
          */
         void populateSpriteSheets(const AssetManager& asset, const ObjectType& object_type);
@@ -191,14 +202,16 @@ class Presentation
 
         /** \brief Returns a sprite with the correct animation for animated moving
          *  objects.
+         *  \param object is a constant shared pointer to an IEntity.
          *  \return sf::Sprite sprite with properties of the object given.
          */
-        sf::Sprite generateSpriteFromSpriteSheet(shared_ptr<IEntity> object);
+        sf::Sprite generateSpriteFromSpriteSheet(const shared_ptr<IEntity>& object);
 
         /** \brief Returns a sf::Sprite with the necessary properties of the object given.
+         *  \param object is a constant shared pointer to an IEntity.
          *  \return sf::Sprite sprite with properties of the object given.
          */
-         sf::Sprite generateSprite(shared_ptr<IEntity> object);
+         sf::Sprite generateSprite(const shared_ptr<IEntity>& object);
 };
 
 #endif // PRESENTATION_H

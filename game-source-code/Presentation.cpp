@@ -11,6 +11,14 @@ isSpacePressed_{false}
 {
 
 }
+
+void Presentation::processLevelUpSound()
+{
+    auto iter_map = game_sounds_.find(GameSounds::LEVEL_UP);
+    (iter_map->second)->stop();
+    (iter_map->second)->play();
+}
+
 void Presentation::processPlayerShootSound()
 {
     auto iter_map = game_sounds_.find(GameSounds::GUN_SHOT);
@@ -22,10 +30,11 @@ void Presentation::processGameObjectSound(ObjectType object_type)
 {
     auto temp_object_with_sound_start = static_cast<int>(ObjectType::MUSHROOM);
     auto temp_object = static_cast<int>(object_type);
+    auto temp_mushroom_regen_sound =  static_cast<int>(GameSounds::MUSHROOM_REGEN);
     if(temp_object>=temp_object_with_sound_start)
     {
         temp_object-=temp_object_with_sound_start;
-        auto temp_sound = static_cast<GameSounds>(temp_object+1);
+        auto temp_sound = static_cast<GameSounds>(temp_object+temp_mushroom_regen_sound);
         auto iter_map = game_sounds_.find(temp_sound);
         if((iter_map->second)->getStatus()!=sf::Music::Playing)
         {
@@ -34,7 +43,6 @@ void Presentation::processGameObjectSound(ObjectType object_type)
             (iter_map->second)->play();
         }
     }
-
 }
 
 void Presentation::checkInput(const sf::Keyboard::Key key, const bool isPressed)
@@ -85,18 +93,18 @@ void Presentation::generateSpriteSheet(ObjectType object_type, unsigned int row,
 void Presentation::populateSpriteSheets(const AssetManager& asset, const ObjectType& object_type)
 {
     auto switch_time = 0.3f;
-    auto [details, direction] = asset.getTextureDetails();
+    auto [details, default_direction_in_image] = asset.getTextureDetails();
     if(details.empty()) return;
 
     auto rows_in_image    = details.at(0);
     auto columns_in_image = details.at(1);
     for(auto row = 0u; row<rows_in_image; row++)
         generateSpriteSheet(object_type, row, sf::Vector2u{columns_in_image,
-                            rows_in_image}, switch_time, direction);
+                            rows_in_image}, switch_time, default_direction_in_image);
     return;
 }
 
-void Presentation::loadTextures(vector<AssetManager>game_assets)
+void Presentation::loadTextures(const vector<AssetManager>& game_assets)
 {
     auto iter_last_sound = std::find_if(game_assets.begin(), game_assets.end(),
                         [](const AssetManager& asset)
@@ -140,7 +148,7 @@ void Presentation::loadTextures(vector<AssetManager>game_assets)
     }//for
 }
 
-sf::Sprite Presentation::generateSpriteFromSpriteSheet(shared_ptr<IEntity> object){
+sf::Sprite Presentation::generateSpriteFromSpriteSheet(const shared_ptr<IEntity>& object){
      // Search for spritesheet:
      sf::Sprite gameObjectsSprite;
      auto entity_type = object->getObjectType();
@@ -187,7 +195,7 @@ sf::Sprite Presentation::generateSpriteFromSpriteSheet(shared_ptr<IEntity> objec
     return gameObjectsSprite;
 }
 
-sf::Sprite Presentation::generateSprite(shared_ptr<IEntity> object){
+sf::Sprite Presentation::generateSprite(const shared_ptr<IEntity>& object){
     sf::Sprite gameObjectsSprite;
     auto iter_map = game_textures_.find(object->getObjectType());
     auto half = 2.0f;
@@ -209,12 +217,12 @@ sf::Sprite Presentation::generateSprite(shared_ptr<IEntity> object){
     return gameObjectsSprite;
 }
 
-void Presentation::renderWindow(vector<shared_ptr<IEntity>>& game_objects,
+void Presentation::renderWindow(const vector<shared_ptr<IEntity>>& game_objects,
                                 const int remaining_lives, const int player_score,
-                                const int high_score)
+                                const int high_score, tuple<const int, const int> game_level)
 {
     window_.clear();
-    displayLives(remaining_lives, player_score, high_score);
+    displayLives(remaining_lives, player_score, high_score, game_level);
 
     for(const auto& object : game_objects){
         sf::Sprite gameObjectsSprite = generateSprite(object);
@@ -238,10 +246,8 @@ void Presentation::updateAnimations(float delta_time){
             auto temp = delta_time;
             if(sprite_image.getObjectType()==ObjectType::SCORPION)
                 temp/=4.0f;
-
             sprite_image.update(temp);
         }//if
-
     }//for
 }
 
@@ -264,7 +270,7 @@ void Presentation::drawGameWonScreen(const int player_score, const int high_scor
 }
 
 void Presentation::displayLives(const int remaining_lives, const int player_score,
-                                const int high_score)
+                                const int high_score, tuple<const int, const int> game_level)
 {
     sf::Sprite lives_sprite;
     auto half = 2.0f;
@@ -275,16 +281,29 @@ void Presentation::displayLives(const int remaining_lives, const int player_scor
 
     // Draw lives using a sprite and player texture:
     auto xPos = (iter_map->second).getSize().x;
-    for(auto i=0; i<(remaining_lives-1); i++){
+    for(auto i=0; i<(remaining_lives-1); i++)
+    {
         lives_sprite.setPosition(xPos, (iter_map->second).getSize().y/half);
         window_.draw(lives_sprite);
         xPos+=(iter_map->second).getSize().x;
-    }//for
+    }
+
+    // Draw levels
+    auto [current_level, max_level] = game_level;
+    string level = "Level "+std::to_string(current_level)+" of "+std::to_string(max_level);
+    sf::Text level_text(level, font_);
+    level_text.setCharacterSize(18);
+    sf::FloatRect titleRect = level_text.getLocalBounds();
+    level_text.setOrigin(titleRect.left + titleRect.width/half,
+    titleRect.top  + titleRect.height/half);
+    level_text.setFillColor(sf::Color::Green);
+    xPos+=100.0f;
+    level_text.setPosition(xPos, level_text.getCharacterSize()/half);
 
     // Draw Score and high score:
     sf::Text score_text(std::to_string(player_score), font_);
     score_text.setCharacterSize(20);
-    sf::FloatRect titleRect = score_text.getLocalBounds();
+    titleRect = score_text.getLocalBounds();
     score_text.setOrigin(titleRect.left + titleRect.width/half,
     titleRect.top  + titleRect.height/half);
     score_text.setFillColor(sf::Color::Magenta);
@@ -303,6 +322,7 @@ void Presentation::displayLives(const int remaining_lives, const int player_scor
                                         high_score_text.getCharacterSize()/half));
 
     window_.draw(score_text);
+    window_.draw(level_text);
     window_.draw(high_score_text);
 }
 

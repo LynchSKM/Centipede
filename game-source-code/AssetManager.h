@@ -37,6 +37,7 @@ class AssetManager
 		{
             FONT = 0,       /**< Represents the game font used.*/
             GUNSHOT_SOUND,  /**< Represents the sound used for bullets fired.*/
+            LEVEL_UP,       /**< Represents the sound used for Levelling up.*/
             MUSHROOM_REGEN, /**< Represents the sound used for Mushroom regeneration.*/
             SCORPION_MOVE,  /**< Represents the sound used for Scorpion movement.*/
             SPIDER_MOVE,    /**< Represents the sound used for Spider movement.*/
@@ -89,11 +90,8 @@ class AssetManager
 	private:
 		AssetType assetType_;	/**< A variable of type enum class AssetType. Determines the type of asset.*/
 		string assetPath_; 		/**< A string variable holding the path to the asset.*/
-		static map<AssetType, vector<unsigned int>> texture_details_;
-		/**< A static map that holds the rows and columns in an image for each texture.*/
-
-		static map<AssetType, Direction> texture_direction_;
-        /**< A static map that holds the default direction objects face in an image for each texture.*/
+		static map<AssetType, tuple<vector<unsigned int>, Direction>> texture_details_;
+		/**< A static map that holds the rows, columns and default direction in an image for each texture.*/
 
         /**	\brief A private static function that helps loadTextureDetails().
          *  \param type_asset is of type AssetType.

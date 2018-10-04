@@ -1,7 +1,6 @@
 #include "AssetManager.h"
 
-map<AssetManager::AssetType, vector<unsigned int>> AssetManager::texture_details_;
-map<AssetManager::AssetType, Direction> AssetManager::texture_direction_;
+map<AssetManager::AssetType, tuple<vector<unsigned int>, Direction>> AssetManager::texture_details_;
 
 AssetManager::AssetManager()
 {
@@ -16,17 +15,13 @@ AssetManager::AssetManager(AssetType asset_type, string asset_path)
 
 tuple<vector<unsigned int>, Direction> AssetManager::getTextureDetails() const
 {
-    vector<unsigned int> details;
+    auto details = std::make_tuple(vector<unsigned int>(), Direction::NONE);
     auto direction = Direction::NONE;
     auto iter_found = texture_details_.find(assetType_);
     if(iter_found != texture_details_.end())
-    {
-        auto iter_direc = texture_direction_.find(assetType_);
         details   = iter_found->second;
-        direction = iter_direc->second;
-    }
 
-    return {details, direction};
+    return {details};
 }
 void AssetManager::captureDetails(AssetType type_asset, int rows_in_image,
                                   int columns_in_image, Direction direction)
@@ -35,11 +30,9 @@ void AssetManager::captureDetails(AssetType type_asset, int rows_in_image,
     temp_details.push_back(rows_in_image);
     temp_details.push_back(columns_in_image);
 
-    auto temp_pair = pair<AssetType, vector<unsigned int>>(type_asset, temp_details);
-    auto temp_pair_direc = pair<AssetType, Direction>(type_asset, direction);
-
+    auto temp_pair = pair<AssetType, tuple<vector<unsigned int>, Direction>>(type_asset,
+                                            std::make_tuple(temp_details, direction));
     texture_details_.insert(temp_pair);
-    texture_direction_.insert(temp_pair_direc);
 }
 
 void AssetManager::loadTextureDetails()
@@ -92,6 +85,7 @@ string AssetManager::getAssetPath() const{
 vector<AssetManager> AssetManager::getAssetInfo(){
 	vector<string> file_paths = {"Assets/Font.ttf",
                                 "Assets/shoot.wav",
+                                "Assets/LevelUp.wav",
                                 "Assets/mushroom_regenerate.wav",
                                 "Assets/scorpion_move.wav",
                                 "Assets/spider_move.wav",
