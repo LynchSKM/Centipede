@@ -24,7 +24,6 @@ TEST_CASE("Game initializes correctly.")
 
 TEST_CASE("Moving Entities besides the Player are successfully created in the game.")
 {
-
     Grid testGrid{592,640};
     GameEngine testGameEngine{testGrid};
 
@@ -114,6 +113,5 @@ TEST_CASE("Player Bullet is fired when space pressed is true.")
 
     testGameEngine.getInputCommands({isLeftPressed, isRightPressed, isUpPressed,
                                     isDownPressed, isSpacePressed});
-
     CHECK(testGameEngine.isPlayerBulletFired());
 }

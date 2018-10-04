@@ -131,10 +131,6 @@ class GameEngine
         EnemyFactory enemyFactory_;
         HighScoreManager highScoreManager_;
 
-        bool isCentipedeGenerated_       = false;
-        bool isCentipedeHeadsGenerated_  = false;
-        bool isScorpionGenerated_        = false;
-        bool isMushroomsGenerated_       = false;
         bool resetLevel_                 = true;
         bool hasLevelledUp_              = true;
         bool AllGameStageComplete_       = false;
@@ -145,14 +141,7 @@ class GameEngine
         const int maxLevel_ = 5;
         int high_score_     = 0;
 
-        StopWatch SpiderTimer_;
-        StopWatch CentiHeadsTimer_;
         StopWatch mushroom_reincarnate_timer;
-
-        double timeSinceLastSpider_;
-        double spiderReleaseTime_;
-        double timeSinceLastcentiHeads_;
-        double centiHeadsReleaseTime_;
         double timeSinceLastMushroomRegen;
 
         /** \brief Generates a Centipede made up of centipede segments.

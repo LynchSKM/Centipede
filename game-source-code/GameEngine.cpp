@@ -9,9 +9,6 @@ timeSinceLastMushroomRegen{0}
 {
     //ctor
     srand(time(0));
-    SpiderTimer_.start();
-    CentiHeadsTimer_.start();
-    mushroom_reincarnate_timer.start();
 
     player_ = std::make_shared<Player>(grid_);
     game_objects_.push_back(player_);
@@ -79,7 +76,6 @@ void GameEngine::levelUp()
 
 void GameEngine::generateMushrooms()
 {
-    if(isMushroomsGenerated_) return;
     for(auto& mushroom: mushroomfactory_.generateMushrooms())
     {
         game_objects_.push_back(mushroom);
