@@ -5,6 +5,7 @@
 #include "MushroomFactory.h"
 #include "Scorpion.h"
 #include "Spider.h"
+#include "StopWatch.h"
 
 #include <vector>
 #include <memory>
@@ -37,20 +38,10 @@ class EnemyFactory
         vector <shared_ptr<CentipedeSegment>> generateNormalCentipede();
 
         /** \brief Generates centipede heads.
+         *  \param number_of_heads is an int containing the number of heads to be generated.
          *  \return vector<shared_ptr<CentipedeSegment>>
          */
-        vector <shared_ptr<CentipedeSegment>> generateCentipedeHeads();
-
-        /** \brief Generates mushrooms at random positions.
-         *  \return vector<shared_ptr<Mushroom>>
-         */
-        vector <shared_ptr<Mushroom>> generateMushrooms();
-
-        /** \brief Generates a mushrooms at a given position.
-         *  \param position is of type Position.
-         *  \return shared_ptr<Mushroom>
-         */
-        shared_ptr<Mushroom> generateAMushroom(Position position);
+        vector <shared_ptr<CentipedeSegment>> generateCentipedeHeads(const int number_of_heads);
 
         /** \brief Generates a scorpion at a random position.
          *  \return vector<shared ptr<Scorpion>>
@@ -64,16 +55,32 @@ class EnemyFactory
 
         /** \brief Resets states of generated objects to false.
          */
-         void reset();
+        void reset();
+
+        /** \brief Returns the current delay of the timer.
+         *  \return double
+         */
+        double getSpiderReleaseTime() const;
+
+        /** \brief Sets the Spider release time delay.
+         *  \param new_delay is a double containing the new delay for the Spider generation.
+         */
+        void setSpiderReleaseTime(double new_delay);
 
     private:
         const Grid grid_;
-        int max_number_enemies_;
         bool isCentipedeGenerated_;
         bool isCentipedeHeadsGenerated_;
         bool isScorpionGenerated_;
-        bool isSpiderGenerated_;
-        MushroomFactory mushroomfactory_;
+
+        StopWatch SpiderTimer_;
+        StopWatch CentiHeadsTimer_;
+        StopWatch mushroom_reincarnate_timer;
+
+        double timeSinceLastSpider_;
+        double spiderReleaseTime_;
+        double timeSinceLastcentiHeads_;
+        double centiHeadsReleaseTime_;
 };
 
 #endif // ENEMYFACTORY_H

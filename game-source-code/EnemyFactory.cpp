@@ -3,10 +3,12 @@
 EnemyFactory::EnemyFactory(const Grid& grid):
 grid_{grid},
 isCentipedeGenerated_{false},
-mushroomfactory_{grid},
 isCentipedeHeadsGenerated_{false},
 isScorpionGenerated_{false},
-isSpiderGenerated_{false}
+timeSinceLastSpider_{0},
+spiderReleaseTime_{15.0},
+centiHeadsReleaseTime_{7.5},
+timeSinceLastcentiHeads_{0}
 {
     //ctor
     srand(time(0));
@@ -20,7 +22,7 @@ EnemyFactory::~EnemyFactory()
 vector <shared_ptr<CentipedeSegment>> EnemyFactory::generateNormalCentipede()
 {
     vector<shared_ptr<CentipedeSegment>> centipede;
-    if(!isCentipedeGenerated_)
+     if(!isCentipedeGenerated_)
     {
         auto numberOfSegments = 10;
         struct CentipedeSegmentDemensions dimension;
@@ -29,6 +31,7 @@ vector <shared_ptr<CentipedeSegment>> EnemyFactory::generateNormalCentipede()
         auto centipede_head_ptr = make_shared<CentipedeSegment>(grid_, CentipedeSegment::BodyType::HEAD,
                                                        Position{half_screen_width, -8.0f}, direction);
         centipede.push_back(centipede_head_ptr);
+
         auto direction_of_head = centipede_head_ptr->getDirection();
         auto start_Xposition = centipede_head_ptr->getPosition().getX_pos();
 
@@ -48,43 +51,39 @@ vector <shared_ptr<CentipedeSegment>> EnemyFactory::generateNormalCentipede()
     return centipede;
 }
 
-vector <shared_ptr<CentipedeSegment>> EnemyFactory::generateCentipedeHeads()
+vector <shared_ptr<CentipedeSegment>> EnemyFactory::generateCentipedeHeads(const int number_of_heads)
 {
     vector<shared_ptr<CentipedeSegment>> centipede_heads;
+    struct CentipedeSegmentDemensions centiDimensions;
     auto direction_right = true;
+    auto start_Y_pos = grid_.getHeight()-((centiDimensions.width+2.0f)*7.5f);
     if(!isCentipedeHeadsGenerated_)
     {
-        auto numberOfSegments = 2;
-        auto start_Y_pos = grid_.getHeight()-56.0f;
-        for(auto i=0;i<numberOfSegments;i++)
+        CentiHeadsTimer_.pause();
+        auto time_elapsed = CentiHeadsTimer_.getPauseTime();
+        if((time_elapsed-timeSinceLastcentiHeads_)>centiHeadsReleaseTime_)
         {
-            auto direction = Direction::RIGHT;
-            auto start_Xposition = 8.0f;
-            if(!direction_right)
+            for(auto i=0;i<number_of_heads;i++)
             {
-                direction = Direction::LEFT;
-                start_Xposition = grid_.getWidth()-8.0f;
-                //
+                auto direction = Direction::RIGHT;
+                auto start_Xposition = centiDimensions.width/2.0f;
+                if(!direction_right)
+                {
+                    direction = Direction::LEFT;
+                    start_Xposition = grid_.getWidth()-centiDimensions.width/2.0f;
+                }
+                start_Y_pos+= (centiDimensions.height + 2.0f);
+                auto centipedeSeg_ptr = make_shared<CentipedeSegment>(grid_, CentipedeSegment::BodyType::HEAD,
+                                                           Position{start_Xposition, start_Y_pos}, direction);
+                centipede_heads.push_back(centipedeSeg_ptr);
+                direction_right = !direction_right;
             }
-
-            auto centipedeSeg_ptr = make_shared<CentipedeSegment>(grid_, CentipedeSegment::BodyType::HEAD,
-                                                       Position{start_Xposition, start_Y_pos}, direction);
-            centipede_heads.push_back(centipedeSeg_ptr);
-            direction_right = !direction_right;
+            timeSinceLastcentiHeads_ = time_elapsed;
+            isCentipedeHeadsGenerated_ = true;
         }
-
-        isCentipedeHeadsGenerated_ = true;
-    }//if
+        CentiHeadsTimer_.resume();
+    }
     return centipede_heads;
-}
-vector <shared_ptr<Mushroom>> EnemyFactory::generateMushrooms()
-{
-    return mushroomfactory_.generateMushrooms();
-}
-
-shared_ptr<Mushroom> EnemyFactory::generateAMushroom(Position position)
-{
-    return mushroomfactory_.generateAMushroom(position);
 }
 
 vector <shared_ptr<Scorpion>> EnemyFactory::generateAScorpion()
@@ -101,11 +100,16 @@ vector <shared_ptr<Scorpion>> EnemyFactory::generateAScorpion()
 vector <shared_ptr<Spider>> EnemyFactory::generateASpider()
 {
     vector<shared_ptr<Spider>> spider;
-    if(!isSpiderGenerated_)
+    SpiderTimer_.pause();
+    auto time_elapsed = SpiderTimer_.getPauseTime();
+    if((time_elapsed-timeSinceLastSpider_)>spiderReleaseTime_)
     {
-        spider.push_back(make_shared<Spider>(grid_));
-        isSpiderGenerated_ = true;
+        auto spider_ptr = make_shared<Spider>(grid_);
+        spider.push_back(spider_ptr);
+
+        timeSinceLastSpider_ = time_elapsed;
     }
+    SpiderTimer_.resume();
     return spider;
 }
 
@@ -114,5 +118,22 @@ void EnemyFactory::reset()
     isCentipedeGenerated_      = false;
     isCentipedeHeadsGenerated_ = false;
     isScorpionGenerated_       = false;
-    isSpiderGenerated_         = false;
+
+    timeSinceLastSpider_       = SpiderTimer_.getProcessTime();
+    timeSinceLastcentiHeads_   = CentiHeadsTimer_.getProcessTime();
+
+    SpiderTimer_.stop();
+    CentiHeadsTimer_.stop();
+    SpiderTimer_.start();
+    CentiHeadsTimer_.start();
+}
+
+double EnemyFactory::getSpiderReleaseTime() const
+{
+    return spiderReleaseTime_;
+}
+
+void EnemyFactory::setSpiderReleaseTime(double new_delay)
+{
+    spiderReleaseTime_ = new_delay;
 }
