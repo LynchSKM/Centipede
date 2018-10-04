@@ -2,7 +2,7 @@
 
 Weapon::Weapon():
     timeSinceLastShoot_{0},
-    reload_time_{0.175}
+    reload_time_{0.15}
 {
     reload_timer_.start();
 }
@@ -16,9 +16,14 @@ vector<shared_ptr<PlayerBullet>> Weapon::fire(const Grid& grid, Position start_p
     {
         bullets.push_back(std::make_shared<PlayerBullet>(start_position,grid));
         timeSinceLastShoot_ = time_elapsed;
-        reload_timer_.resume();
     }
+    reload_timer_.resume();
     return bullets;
+}
+
+double Weapon::getReloadTime() const
+{
+    return reload_time_;
 }
 
 Weapon::~Weapon()

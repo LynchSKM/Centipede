@@ -19,7 +19,7 @@ using std::vector;
 class Weapon
 {
     public:
-        /** Default Constructor. Creates a Weapon object.
+        /** \brief Default Constructor. Creates a Weapon object.
          */
         Weapon();
 
@@ -30,7 +30,11 @@ class Weapon
          */
         vector<shared_ptr<PlayerBullet>> fire(const Grid& grid, Position start_position);
 
-        /** Default Destructor. Destroys a Weapon object.
+        /** \brief Returns the reload time of the weapon.
+         */
+        double getReloadTime() const;
+
+        /** \brief Default Destructor. Destroys a Weapon object.
          */
         ~Weapon();
 
