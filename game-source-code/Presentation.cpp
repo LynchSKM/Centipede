@@ -7,7 +7,9 @@ isLeftPressed_{false},
 isRightPressed_{false},
 isUpPressed_{false},
 isDownPressed_{false},
-isSpacePressed_{false}
+isSpacePressed_{false},
+game_level_colours_{sf::Color::White, sf::Color(125, 50, 80), sf::Color::White,
+                    sf::Color(125, 50, 80), sf::Color::Magenta}
 {
 
 }
@@ -223,9 +225,16 @@ void Presentation::renderWindow(const vector<shared_ptr<IEntity>>& game_objects,
 {
     window_.clear();
     displayLives(remaining_lives, player_score, high_score, game_level);
+    auto[current_level, max_level] = game_level;
 
-    for(const auto& object : game_objects){
+    int number_of_colours = game_level_colours_.size();
+    auto level = (current_level-1)%number_of_colours;
+    auto level_colour = game_level_colours_.at(level);
+
+    for(const auto& object : game_objects)
+    {
         sf::Sprite gameObjectsSprite = generateSprite(object);
+        gameObjectsSprite.setColor(level_colour);
         // Set position:
         gameObjectsSprite.setPosition(object->getPosition().getX_pos(),
                                       object->getPosition().getY_pos());

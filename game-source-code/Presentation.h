@@ -167,6 +167,7 @@ class Presentation
         map<GameSounds, shared_ptr<sf::Music>> game_sounds_;
         map<ObjectType, sf::Texture> game_textures_;
         vector<SpriteSheet> sprite_sheets_;
+        vector<sf::Color> game_level_colours_;
 
         //input keys
         bool isLeftPressed_;
