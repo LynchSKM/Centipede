@@ -88,7 +88,6 @@ void Logic::levelUp()
     game_timer_.pause();
     if(gameEngine_.playerHasLevelledUp())
     {
-        renderGameObjects();
         presentation_.processLevelUpSound();
         gameEngine_.levelUp();
     }
