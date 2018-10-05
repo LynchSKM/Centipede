@@ -361,6 +361,48 @@ TEST_CASE("Centipede train follows head's collision with Mushroom even after Mus
 
 }
 
+TEST_CASE("Collision between Centipede Heads is resolved correctly")
+{
+    const Grid grid{592, 640};
+    CollisionHandler collision_handler{grid};
+    SeparatingAxisTheorem sat_algorithm{};
+    struct CentipedeSegmentDemensions dimension_centipede;
+    vector<IEntity_ptr> game_objects;
+    vector<IMovingEntity_ptr> moving_game_objects;
+
+    auto x = 115.0f;
+    auto y = 56.0f;
+    auto centipede_head_1_ptr = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
+                                      Position{x, y}, Direction::LEFT);
+
+    game_objects.push_back(centipede_head_1_ptr);
+    moving_game_objects.push_back(centipede_head_1_ptr);
+
+    //
+    x = 100.0f;
+    auto centipede_head_2_ptr = make_shared<CentipedeSegment>(grid,CentipedeSegment::BodyType::HEAD,
+                                      Position{x, y}, Direction::RIGHT);
+
+    game_objects.push_back(centipede_head_2_ptr);
+    moving_game_objects.push_back(centipede_head_2_ptr);
+
+    auto moves_to_be_made = 2;
+
+    for(auto moves_made = 0; moves_made<=moves_to_be_made+1; moves_made++)
+    {
+        collision_handler.checkCollisions(game_objects, moving_game_objects);
+        // move
+        for(auto& object : moving_game_objects)
+            object->move();
+        if(moves_made == 0)
+            CHECK(sat_algorithm.checkOverlap(centipede_head_1_ptr->getBoundaryBox(),
+                                             centipede_head_2_ptr->getBoundaryBox()));
+    }//for
+
+    CHECK(centipede_head_1_ptr->getDirection() == Direction::RIGHT);
+    CHECK(centipede_head_2_ptr->getDirection() == Direction::RIGHT);
+}
+
 // ================ SCORPION COLLISION ================
 
 TEST_CASE("Collision between Scorpion and Mushroom poisons the Mushroom")
