@@ -15,7 +15,7 @@ void Logic::getInputCommands()
     auto isDownPressed  = presentation_.isDownPressed();
     auto isSpacePressed = presentation_.isSpacePressed();
 
-    gameEngine_.getInputCommands({isLeftPressed, isRightPressed, isUpPressed,
+    gameEngine_.processInputCommands({isLeftPressed, isRightPressed, isUpPressed,
                                    isDownPressed, isSpacePressed});
 
     if(gameEngine_.isPlayerBulletFired()) presentation_.processPlayerShootSound();

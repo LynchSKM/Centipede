@@ -59,7 +59,7 @@ TEST_CASE("Player can be moved successfully based on keyboard input.")
     auto isUpPressed    = false;
     auto isDownPressed  = false;
     auto isSpacePressed = false;
-    testGameEngine.getInputCommands({isLeftPressed, isRightPressed, isUpPressed,
+    testGameEngine.processInputCommands({isLeftPressed, isRightPressed, isUpPressed,
                                     isDownPressed, isSpacePressed});
     testGameEngine.runGameLogic();
 
@@ -111,7 +111,7 @@ TEST_CASE("Player Bullet is fired when space pressed is true.")
     auto isDownPressed  = false;
     auto isSpacePressed = true; //Shoot
 
-    testGameEngine.getInputCommands({isLeftPressed, isRightPressed, isUpPressed,
+    testGameEngine.processInputCommands({isLeftPressed, isRightPressed, isUpPressed,
                                     isDownPressed, isSpacePressed});
     CHECK(testGameEngine.isPlayerBulletFired());
 }

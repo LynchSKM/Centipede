@@ -24,7 +24,14 @@ using std::shared_ptr;
 using std::make_shared;
 
 /** \class GameEngine
- *  \brief Creates all the enemy objects of the game and Mushrooms.
+ *  \brief This class has the responsibility of creating all the enemy objects
+ *  of the game and the creation of Mushrooms. It also moves all the moving game
+ *  objects. Queries keyboard input in order for the Player object to be moved
+ *  and to be able to shoot PlayerBullet objects. It also performs the collision
+ *  checks using a CollisionHandler class object. It is also responsible for
+ *  reincarnating the Player and Mushrooms as well. It keeps track of the current
+ *  game level. It also updates the high score. It also performs the logic needed
+ *  to reset a level when the Player gets reincarnated.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -32,7 +39,7 @@ class GameEngine
 {
     public:
 
-        /** \brief Parameterized constructor. Creates an GameEngine object.
+        /** \brief Parameterized constructor. Creates a GameEngine object.
          *  \param grid of type Grid.
          */
         GameEngine(const Grid& grid);
@@ -46,15 +53,15 @@ class GameEngine
          *  containing the key pressed bool for left, right, up, down, and space
          *  keys events.
          */
-        void getInputCommands(tuple<bool, bool, bool, bool, bool> keyboard_inputs);
+        void processInputCommands(tuple<bool, bool, bool, bool, bool> keyboard_inputs);
 
         /** \brief Returns true or false depending on whether the Player shot a
          *  bullet.
+         *  \return bool
          */
         bool isPlayerBulletFired() const;
 
-        /** \brief Performs the level up logic. Which is just a delay used while
-         *  the level up sound is played.
+        /** \brief Performs the level up logic. This is just a delay.
          */
         void levelUp();
 
@@ -71,6 +78,8 @@ class GameEngine
         void runGameLogic();
 
         /** \brief Sets number of lives to max of Mushroom's that are not dead yet.
+         *  Returns a bool if it successfully regenerated a Mushroom.
+         *  \return bool
          */
         bool isMushroomReincarnationComplete();
 
@@ -85,6 +94,8 @@ class GameEngine
          bool playerHasLevelledUp();
 
         /** \brief Reset the position of the player and generate a new Centipede train.
+         *  Returns a bool indicating whether or not the Player was reincarnated.
+         *  \return bool
          */
         bool reincarnatePlayer();
 
@@ -149,7 +160,7 @@ class GameEngine
         void generateNormalCentipede();
 
         /** \brief Generates centipede heads.
-         *  \param numberOfHeads an int.
+         *  \param numberOfHeads an int containing the number of heads to be generated.
          */
         void generateCentipedeHeads(int numberOfHeads);
 

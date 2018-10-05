@@ -22,7 +22,7 @@ GameEngine::~GameEngine()
     //dtor
 }
 
-void GameEngine::getInputCommands(tuple<bool, bool, bool, bool, bool> keyboard_inputs)
+void GameEngine::processInputCommands(tuple<bool, bool, bool, bool, bool> keyboard_inputs)
 {
     bulletFired_ = false;
     auto [isLeftPressed,isRightPressed,isUpPressed,isDownPressed,isSpacePressed] = keyboard_inputs;
