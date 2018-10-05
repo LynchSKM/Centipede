@@ -55,23 +55,21 @@ bool GameEngine::isPlayerBulletFired() const
 
 void GameEngine::levelUp()
 {
-    if(playerHasLevelledUp())
-    {
-        StopWatch level_up_timer;
-        level_up_timer.start();
-        auto delay = 2.0;
-        auto time_elapsed = level_up_timer.getProcessTime();
-        delay += time_elapsed;
 
-        while(true)
-        {
-            if(time_elapsed>delay) break;
-            level_up_timer.pause();
-            time_elapsed = level_up_timer.getPauseTime();
-            level_up_timer.resume();
-        }
-        hasLevelledUp_ = false;
+    StopWatch level_up_timer;
+    level_up_timer.start();
+    auto delay = 2.0;
+    auto time_elapsed = level_up_timer.getProcessTime();
+    delay += time_elapsed;
+
+    while(true)
+    {
+        if(time_elapsed>delay) break;
+        level_up_timer.pause();
+        time_elapsed = level_up_timer.getPauseTime();
+        level_up_timer.resume();
     }
+    hasLevelledUp_ = false;
 }
 
 void GameEngine::generateMushrooms()
