@@ -122,29 +122,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2ef4507daf2ddbf356b6dfca1c8f525a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a2ef4507daf2ddbf356b6dfca1c8f525a">drawGameWonScreen</a> (const int player_score, const int high_score)</td></tr>
 <tr class="memdesc:a2ef4507daf2ddbf356b6dfca1c8f525a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a Game Won Screen at the end of the game.  <a href="#a2ef4507daf2ddbf356b6dfca1c8f525a">More...</a><br /></td></tr>
 <tr class="separator:a2ef4507daf2ddbf356b6dfca1c8f525a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac13b755328c6e531b279d2e49a5503c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#ac13b755328c6e531b279d2e49a5503c1">displayLives</a> (const int remaining_lives, const int player_score, const int high_score)</td></tr>
-<tr class="memdesc:ac13b755328c6e531b279d2e49a5503c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the player's lives, current score and the high score of the game.  <a href="#ac13b755328c6e531b279d2e49a5503c1">More...</a><br /></td></tr>
-<tr class="separator:ac13b755328c6e531b279d2e49a5503c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07fe85f2fb3be047ed1bbf553662f754"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a07fe85f2fb3be047ed1bbf553662f754">renderWindow</a> (vector&lt; shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;game_objects, const int remaining_lives, const int player_score, const int high_score)</td></tr>
-<tr class="memdesc:a07fe85f2fb3be047ed1bbf553662f754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws all the game objects onto the screen. Including the player's score, lives and the game's highest score.  <a href="#a07fe85f2fb3be047ed1bbf553662f754">More...</a><br /></td></tr>
-<tr class="separator:a07fe85f2fb3be047ed1bbf553662f754"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad61f8a299c4e23f6e9d51692929f8333"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#ad61f8a299c4e23f6e9d51692929f8333">loadTextures</a> (vector&lt; <a class="el" href="class_asset_manager.html">AssetManager</a> &gt; game_assets)</td></tr>
-<tr class="memdesc:ad61f8a299c4e23f6e9d51692929f8333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads all the game's textures.  <a href="#ad61f8a299c4e23f6e9d51692929f8333">More...</a><br /></td></tr>
-<tr class="separator:ad61f8a299c4e23f6e9d51692929f8333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf962e6ea5d6086bd884ce3174afb276"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#aaf962e6ea5d6086bd884ce3174afb276">renderWindow</a> (const vector&lt; shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;game_objects, const int remaining_lives, const int player_score, const int high_score, tuple&lt; const int, const int &gt; game_level)</td></tr>
+<tr class="memdesc:aaf962e6ea5d6086bd884ce3174afb276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws all the game objects onto the screen. Including the player's score, lives and the game's highest score.  <a href="#aaf962e6ea5d6086bd884ce3174afb276">More...</a><br /></td></tr>
+<tr class="separator:aaf962e6ea5d6086bd884ce3174afb276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec30fe146777b680e0920645af0f180"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a3ec30fe146777b680e0920645af0f180">loadTextures</a> (const vector&lt; <a class="el" href="class_asset_manager.html">AssetManager</a> &gt; &amp;game_assets)</td></tr>
+<tr class="memdesc:a3ec30fe146777b680e0920645af0f180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads all the game's textures.  <a href="#a3ec30fe146777b680e0920645af0f180">More...</a><br /></td></tr>
+<tr class="separator:a3ec30fe146777b680e0920645af0f180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aebdf3fb5663b1dd11dbc30963984c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a7aebdf3fb5663b1dd11dbc30963984c2">isLeftPressed</a> ()</td></tr>
-<tr class="memdesc:a7aebdf3fb5663b1dd11dbc30963984c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bool indicating whether a key was pressed.  <a href="#a7aebdf3fb5663b1dd11dbc30963984c2">More...</a><br /></td></tr>
+<tr class="memdesc:a7aebdf3fb5663b1dd11dbc30963984c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bool indicating whether the LEFT arrow key was pressed.  <a href="#a7aebdf3fb5663b1dd11dbc30963984c2">More...</a><br /></td></tr>
 <tr class="separator:a7aebdf3fb5663b1dd11dbc30963984c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad10cbe90531e2817a33356926e538212"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#ad10cbe90531e2817a33356926e538212">isRightPressed</a> ()</td></tr>
-<tr class="memdesc:ad10cbe90531e2817a33356926e538212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bool indicating whether a key was pressed.  <a href="#ad10cbe90531e2817a33356926e538212">More...</a><br /></td></tr>
+<tr class="memdesc:ad10cbe90531e2817a33356926e538212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bool indicating whether the RIGHT arrow key was pressed.  <a href="#ad10cbe90531e2817a33356926e538212">More...</a><br /></td></tr>
 <tr class="separator:ad10cbe90531e2817a33356926e538212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e1855d959346115eee06d327686551"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a36e1855d959346115eee06d327686551">isUpPressed</a> ()</td></tr>
-<tr class="memdesc:a36e1855d959346115eee06d327686551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bool indicating whether a key was pressed.  <a href="#a36e1855d959346115eee06d327686551">More...</a><br /></td></tr>
+<tr class="memdesc:a36e1855d959346115eee06d327686551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bool indicating whether the UP arrow key was pressed.  <a href="#a36e1855d959346115eee06d327686551">More...</a><br /></td></tr>
 <tr class="separator:a36e1855d959346115eee06d327686551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a050a12b9766886e4969069be1b841529"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a050a12b9766886e4969069be1b841529">isDownPressed</a> ()</td></tr>
-<tr class="memdesc:a050a12b9766886e4969069be1b841529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bool indicating whether a key was pressed.  <a href="#a050a12b9766886e4969069be1b841529">More...</a><br /></td></tr>
+<tr class="memdesc:a050a12b9766886e4969069be1b841529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bool indicating whether the DOWN arrow key was pressed.  <a href="#a050a12b9766886e4969069be1b841529">More...</a><br /></td></tr>
 <tr class="separator:a050a12b9766886e4969069be1b841529"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f8e4c78cc85ccd9a0410370f66ffaba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a2f8e4c78cc85ccd9a0410370f66ffaba">isSpacePressed</a> ()</td></tr>
-<tr class="memdesc:a2f8e4c78cc85ccd9a0410370f66ffaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bool indicating whether a key was pressed.  <a href="#a2f8e4c78cc85ccd9a0410370f66ffaba">More...</a><br /></td></tr>
+<tr class="memdesc:a2f8e4c78cc85ccd9a0410370f66ffaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bool indicating whether the SPACEBAR key was pressed.  <a href="#a2f8e4c78cc85ccd9a0410370f66ffaba">More...</a><br /></td></tr>
 <tr class="separator:a2f8e4c78cc85ccd9a0410370f66ffaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a886dde2ac9b78eb0e1bee3aab9111be6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a886dde2ac9b78eb0e1bee3aab9111be6">isWindowOpen</a> () const</td></tr>
 <tr class="memdesc:a886dde2ac9b78eb0e1bee3aab9111be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bool indicating whether the render window is open.  <a href="#a886dde2ac9b78eb0e1bee3aab9111be6">More...</a><br /></td></tr>
@@ -155,37 +152,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab2284a509e0dd35fb10b11bb05d220ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#ab2284a509e0dd35fb10b11bb05d220ca">processPlayerShootSound</a> ()</td></tr>
 <tr class="memdesc:ab2284a509e0dd35fb10b11bb05d220ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the sound used to indicate that a player has shot a bullet.  <a href="#ab2284a509e0dd35fb10b11bb05d220ca">More...</a><br /></td></tr>
 <tr class="separator:ab2284a509e0dd35fb10b11bb05d220ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98614c822f19a1c5c3760b46f7994942"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a98614c822f19a1c5c3760b46f7994942">processLevelUpSound</a> ()</td></tr>
+<tr class="memdesc:a98614c822f19a1c5c3760b46f7994942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the sound used to indicate that a player levelled up.  <a href="#a98614c822f19a1c5c3760b46f7994942">More...</a><br /></td></tr>
+<tr class="separator:a98614c822f19a1c5c3760b46f7994942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83620d7d530676ed6f38ac88f85907ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a83620d7d530676ed6f38ac88f85907ae">~Presentation</a> ()</td></tr>
 <tr class="memdesc:a83620d7d530676ed6f38ac88f85907ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Destructor. Destroys a <a class="el" href="class_presentation.html" title="Uses the SFML Graphics Library to draw all game objects on the screen. ">Presentation</a> object.  <a href="#a83620d7d530676ed6f38ac88f85907ae">More...</a><br /></td></tr>
 <tr class="separator:a83620d7d530676ed6f38ac88f85907ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:a7f62aed96ac24f3394d8efba586fa772"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a7f62aed96ac24f3394d8efba586fa772">GameSounds</a> { <a class="el" href="class_presentation.html#a7f62aed96ac24f3394d8efba586fa772a9febb5f229986f78edb73071253e9a66">GameSounds::GUN_SHOT</a> = 0, 
+<tr class="memitem:a7f62aed96ac24f3394d8efba586fa772"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a7f62aed96ac24f3394d8efba586fa772">GameSounds</a> { <br />
+&#160;&#160;<a class="el" href="class_presentation.html#a7f62aed96ac24f3394d8efba586fa772a9febb5f229986f78edb73071253e9a66">GameSounds::GUN_SHOT</a> = 0, 
+<a class="el" href="class_presentation.html#a7f62aed96ac24f3394d8efba586fa772a7ee2caf3f0273d8e39547764c90ea65f">GameSounds::LEVEL_UP</a>, 
 <a class="el" href="class_presentation.html#a7f62aed96ac24f3394d8efba586fa772a86ef33df884491f473940b89335a4b72">GameSounds::MUSHROOM_REGEN</a>, 
 <a class="el" href="class_presentation.html#a7f62aed96ac24f3394d8efba586fa772aebc5c5eacbc3902aa67cb7b6e6e2a3f2">GameSounds::SCORPION_MOVE</a>, 
-<a class="el" href="class_presentation.html#a7f62aed96ac24f3394d8efba586fa772a927f84b41f3304e094cad785e03ddf3a">GameSounds::SPIDER_MOVE</a>
+<br />
+&#160;&#160;<a class="el" href="class_presentation.html#a7f62aed96ac24f3394d8efba586fa772a927f84b41f3304e094cad785e03ddf3a">GameSounds::SPIDER_MOVE</a>
+<br />
  }</td></tr>
-<tr class="memdesc:a7f62aed96ac24f3394d8efba586fa772"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is a strongly typed enum class representing the type of game sounds.  <a href="class_presentation.html#a7f62aed96ac24f3394d8efba586fa772">More...</a><br /></td></tr>
+<tr class="memdesc:a7f62aed96ac24f3394d8efba586fa772"><td class="mdescLeft">&#160;</td><td class="mdescRight">A strongly typed enum class representing the type of game sounds.  <a href="class_presentation.html#a7f62aed96ac24f3394d8efba586fa772">More...</a><br /></td></tr>
 <tr class="separator:a7f62aed96ac24f3394d8efba586fa772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a04c43fe2cf2fe4b969c034eee5d4b1e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a04c43fe2cf2fe4b969c034eee5d4b1e2">populateSpriteSheets</a> (const <a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> &amp;object_type)</td></tr>
-<tr class="memdesc:a04c43fe2cf2fe4b969c034eee5d4b1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate <a class="el" href="class_sprite_sheet.html" title="A class that crops the texture to the correct image for game objects to be drawn on the screen...">SpriteSheet</a> vector, sprite_sheets_, for the different game objects that have more than one image in a texture.  <a href="#a04c43fe2cf2fe4b969c034eee5d4b1e2">More...</a><br /></td></tr>
-<tr class="separator:a04c43fe2cf2fe4b969c034eee5d4b1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa388ea55a6650933a6d5a30686886640"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#aa388ea55a6650933a6d5a30686886640">displayLives</a> (const int remaining_lives, const int player_score, const int high_score, tuple&lt; const int, const int &gt; game_level, const sf::Color level_colour)</td></tr>
+<tr class="memdesc:aa388ea55a6650933a6d5a30686886640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the player's lives, current score, the high score and current and max game levels of the game on the render window.  <a href="#aa388ea55a6650933a6d5a30686886640">More...</a><br /></td></tr>
+<tr class="separator:aa388ea55a6650933a6d5a30686886640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81b7364caefc1ec13188e453ba6b1d14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a81b7364caefc1ec13188e453ba6b1d14">populateSpriteSheets</a> (const <a class="el" href="class_asset_manager.html">AssetManager</a> &amp;asset, const <a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> &amp;object_type)</td></tr>
+<tr class="memdesc:a81b7364caefc1ec13188e453ba6b1d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate <a class="el" href="class_sprite_sheet.html" title="A class that crops the texture to the correct image for game objects to be drawn on the screen...">SpriteSheet</a> vector, sprite_sheets_, for the different game objects that have more than one image in a texture.  <a href="#a81b7364caefc1ec13188e453ba6b1d14">More...</a><br /></td></tr>
+<tr class="separator:a81b7364caefc1ec13188e453ba6b1d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e099ace00ac0fd6f502c8df51d67fa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a0e099ace00ac0fd6f502c8df51d67fa6">generateSpriteSheet</a> (<a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> object_type, unsigned int row, sf::Vector2u imageCount, float switchTime, <a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction)</td></tr>
 <tr class="memdesc:a0e099ace00ac0fd6f502c8df51d67fa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a <a class="el" href="class_sprite_sheet.html" title="A class that crops the texture to the correct image for game objects to be drawn on the screen...">SpriteSheet</a> object and saves it into the vector sprite_sheets_ for the different game objects.  <a href="#a0e099ace00ac0fd6f502c8df51d67fa6">More...</a><br /></td></tr>
 <tr class="separator:a0e099ace00ac0fd6f502c8df51d67fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82e1c667390dd7fb683548a9ce1c7c58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a82e1c667390dd7fb683548a9ce1c7c58">updateAnimations</a> (float delta_time)</td></tr>
 <tr class="memdesc:a82e1c667390dd7fb683548a9ce1c7c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the animations of game objects that have more than one image to represent movement.  <a href="#a82e1c667390dd7fb683548a9ce1c7c58">More...</a><br /></td></tr>
 <tr class="separator:a82e1c667390dd7fb683548a9ce1c7c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac00c099bbecd8d84bd7c536d4e6d3aa7"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#ac00c099bbecd8d84bd7c536d4e6d3aa7">generateSpriteFromSpriteSheet</a> (shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt; object)</td></tr>
-<tr class="memdesc:ac00c099bbecd8d84bd7c536d4e6d3aa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a sprite with the correct animation for animated moving objects.  <a href="#ac00c099bbecd8d84bd7c536d4e6d3aa7">More...</a><br /></td></tr>
-<tr class="separator:ac00c099bbecd8d84bd7c536d4e6d3aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6a714a00a8c38446e8ff298c09da90b"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#ac6a714a00a8c38446e8ff298c09da90b">generateSprite</a> (shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt; object)</td></tr>
-<tr class="memdesc:ac6a714a00a8c38446e8ff298c09da90b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a sf::Sprite with the necessary properties of the object given.  <a href="#ac6a714a00a8c38446e8ff298c09da90b">More...</a><br /></td></tr>
-<tr class="separator:ac6a714a00a8c38446e8ff298c09da90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1c7ceef51c2e5974128e411696a4e40"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#ac1c7ceef51c2e5974128e411696a4e40">generateSpriteFromSpriteSheet</a> (const shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt; &amp;object)</td></tr>
+<tr class="memdesc:ac1c7ceef51c2e5974128e411696a4e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a sprite with the correct animation for animated moving objects in the game.  <a href="#ac1c7ceef51c2e5974128e411696a4e40">More...</a><br /></td></tr>
+<tr class="separator:ac1c7ceef51c2e5974128e411696a4e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f950e8992b506ef5035cc864e37248b"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a0f950e8992b506ef5035cc864e37248b">generateSprite</a> (const shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt; &amp;object)</td></tr>
+<tr class="memdesc:a0f950e8992b506ef5035cc864e37248b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a sf::Sprite with the necessary properties of the object given.  <a href="#a0f950e8992b506ef5035cc864e37248b">More...</a><br /></td></tr>
+<tr class="separator:a0f950e8992b506ef5035cc864e37248b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -201,6 +208,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a50c6e471561f2f96b279d4a5aa1e470a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1b88938eb755b4f896d8f386e4d8542"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_sprite_sheet.html">SpriteSheet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#ab1b88938eb755b4f896d8f386e4d8542">sprite_sheets_</a></td></tr>
 <tr class="separator:ab1b88938eb755b4f896d8f386e4d8542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed68c18d830a3105a7548d022477794"><td class="memItemLeft" align="right" valign="top">vector&lt; sf::Color &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#abed68c18d830a3105a7548d022477794">game_level_colours_</a></td></tr>
+<tr class="separator:abed68c18d830a3105a7548d022477794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a519c0df57f7d36e69a723eb2081ddc39"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a519c0df57f7d36e69a723eb2081ddc39">isLeftPressed_</a></td></tr>
 <tr class="separator:a519c0df57f7d36e69a723eb2081ddc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e2be276f4cb95173da9df04c16e7981"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presentation.html#a0e2be276f4cb95173da9df04c16e7981">isRightPressed_</a></td></tr>
@@ -237,17 +246,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Is a strongly typed enum class representing the type of game sounds. </p>
+<p>A strongly typed enum class representing the type of game sounds. </p>
 <dl class="section author"><dt>Author</dt><dd>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7f62aed96ac24f3394d8efba586fa772a9febb5f229986f78edb73071253e9a66"></a>GUN_SHOT&#160;</td><td class="fielddoc"><p>is coded as int of value 0. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7f62aed96ac24f3394d8efba586fa772a9febb5f229986f78edb73071253e9a66"></a>GUN_SHOT&#160;</td><td class="fielddoc"><p>Represents the sound used for bullets fired. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7f62aed96ac24f3394d8efba586fa772a86ef33df884491f473940b89335a4b72"></a>MUSHROOM_REGEN&#160;</td><td class="fielddoc"><p>is coded as int of value 1. </p>
+<tr><td class="fieldname"><a id="a7f62aed96ac24f3394d8efba586fa772a7ee2caf3f0273d8e39547764c90ea65f"></a>LEVEL_UP&#160;</td><td class="fielddoc"><p>Represents the sound used for Levelling up. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7f62aed96ac24f3394d8efba586fa772aebc5c5eacbc3902aa67cb7b6e6e2a3f2"></a>SCORPION_MOVE&#160;</td><td class="fielddoc"><p>is coded as int of value 2. </p>
+<tr><td class="fieldname"><a id="a7f62aed96ac24f3394d8efba586fa772a86ef33df884491f473940b89335a4b72"></a>MUSHROOM_REGEN&#160;</td><td class="fielddoc"><p>Represents the sound used for <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> regeneration. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7f62aed96ac24f3394d8efba586fa772a927f84b41f3304e094cad785e03ddf3a"></a>SPIDER_MOVE&#160;</td><td class="fielddoc"><p>is coded as int of value 3. </p>
+<tr><td class="fieldname"><a id="a7f62aed96ac24f3394d8efba586fa772aebc5c5eacbc3902aa67cb7b6e6e2a3f2"></a>SCORPION_MOVE&#160;</td><td class="fielddoc"><p>Represents the sound used for <a class="el" href="class_scorpion.html" title="This is a class that inherits from the IMovingEntity class. It models a Scorpion object in the game...">Scorpion</a> movement. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7f62aed96ac24f3394d8efba586fa772a927f84b41f3304e094cad785e03ddf3a"></a>SPIDER_MOVE&#160;</td><td class="fielddoc"><p>Represents the sound used for <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> movement. </p>
 </td></tr>
 </table>
 
@@ -348,11 +359,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac13b755328c6e531b279d2e49a5503c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac13b755328c6e531b279d2e49a5503c1">&#9670;&nbsp;</a></span>displayLives()</h2>
+<a id="aa388ea55a6650933a6d5a30686886640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa388ea55a6650933a6d5a30686886640">&#9670;&nbsp;</a></span>displayLives()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Presentation::displayLives </td>
@@ -370,7 +384,19 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>high_score</em>&#160;</td>
+          <td class="paramname"><em>high_score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tuple&lt; const int, const int &gt;&#160;</td>
+          <td class="paramname"><em>game_level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sf::Color&#160;</td>
+          <td class="paramname"><em>level_colour</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -378,14 +404,21 @@ Private Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Displays the player's lives, current score and the high score of the game. </p>
+<p>Displays the player's lives, current score, the high score and current and max game levels of the game on the render window. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">remaining_lives</td><td>is an int representing the player's remaining lives. </td></tr>
     <tr><td class="paramname">player_score</td><td>is an int that has the player's current score. </td></tr>
     <tr><td class="paramname">high_score</td><td>is an int that has the game's highest score. </td></tr>
+    <tr><td class="paramname">game_level</td><td>is a tuple&lt;const int, const int&gt; that indicates the current game level and max game level. </td></tr>
+    <tr><td class="paramname">level_colour</td><td>is a sf::Color containing the sprite colour used for the current game level. </td></tr>
   </table>
   </dd>
 </dl>
@@ -485,8 +518,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac6a714a00a8c38446e8ff298c09da90b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6a714a00a8c38446e8ff298c09da90b">&#9670;&nbsp;</a></span>generateSprite()</h2>
+<a id="a0f950e8992b506ef5035cc864e37248b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f950e8992b506ef5035cc864e37248b">&#9670;&nbsp;</a></span>generateSprite()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -497,7 +530,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">sf::Sprite Presentation::generateSprite </td>
           <td>(</td>
-          <td class="paramtype">shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&#160;</td>
+          <td class="paramtype">const shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>object</em></td><td>)</td>
           <td></td>
         </tr>
@@ -510,12 +543,18 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a sf::Sprite with the necessary properties of the object given. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>is a constant shared pointer to an <a class="el" href="class_i_entity.html" title="This is a Interface Class containing pure virtual functions that will be overridden by derived classe...">IEntity</a> passed by reference. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>sf::Sprite sprite with properties of the object given. </dd></dl>
 
 </div>
 </div>
-<a id="ac00c099bbecd8d84bd7c536d4e6d3aa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac00c099bbecd8d84bd7c536d4e6d3aa7">&#9670;&nbsp;</a></span>generateSpriteFromSpriteSheet()</h2>
+<a id="ac1c7ceef51c2e5974128e411696a4e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1c7ceef51c2e5974128e411696a4e40">&#9670;&nbsp;</a></span>generateSpriteFromSpriteSheet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -526,7 +565,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">sf::Sprite Presentation::generateSpriteFromSpriteSheet </td>
           <td>(</td>
-          <td class="paramtype">shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&#160;</td>
+          <td class="paramtype">const shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>object</em></td><td>)</td>
           <td></td>
         </tr>
@@ -538,7 +577,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a sprite with the correct animation for animated moving objects. </p>
+<p>Returns a sprite with the correct animation for animated moving objects in the game. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>is a constant shared pointer to an <a class="el" href="class_i_entity.html" title="This is a Interface Class containing pure virtual functions that will be overridden by derived classe...">IEntity</a> passed by reference. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>sf::Sprite sprite with properties of the object given. </dd></dl>
 
 </div>
@@ -632,8 +677,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a bool indicating whether a key was pressed. </p>
-<dl class="section return"><dt>Returns</dt><dd>a bool indicating key status. </dd></dl>
+<p>Returns a bool indicating whether the DOWN arrow key was pressed. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool indicating key status. </dd></dl>
 
 </div>
 </div>
@@ -660,8 +705,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a bool indicating whether a key was pressed. </p>
-<dl class="section return"><dt>Returns</dt><dd>a bool indicating key status. </dd></dl>
+<p>Returns a bool indicating whether the LEFT arrow key was pressed. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool indicating key status. </dd></dl>
 
 </div>
 </div>
@@ -688,8 +733,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a bool indicating whether a key was pressed. </p>
-<dl class="section return"><dt>Returns</dt><dd>a bool indicating key status. </dd></dl>
+<p>Returns a bool indicating whether the RIGHT arrow key was pressed. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool indicating key status. </dd></dl>
 
 </div>
 </div>
@@ -716,8 +761,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a bool indicating whether a key was pressed. </p>
-<dl class="section return"><dt>Returns</dt><dd>a bool indicating key status. </dd></dl>
+<p>Returns a bool indicating whether the SPACEBAR key was pressed. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool indicating key status. </dd></dl>
 
 </div>
 </div>
@@ -744,8 +789,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a bool indicating whether a key was pressed. </p>
-<dl class="section return"><dt>Returns</dt><dd>a bool indicating key status. </dd></dl>
+<p>Returns a bool indicating whether the UP arrow key was pressed. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool indicating key status. </dd></dl>
 
 </div>
 </div>
@@ -773,12 +818,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a bool indicating whether the render window is open. </p>
-<dl class="section return"><dt>Returns</dt><dd>a bool window open status. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool window open status. </dd></dl>
 
 </div>
 </div>
-<a id="ad61f8a299c4e23f6e9d51692929f8333"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad61f8a299c4e23f6e9d51692929f8333">&#9670;&nbsp;</a></span>loadTextures()</h2>
+<a id="a3ec30fe146777b680e0920645af0f180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ec30fe146777b680e0920645af0f180">&#9670;&nbsp;</a></span>loadTextures()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -786,7 +831,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Presentation::loadTextures </td>
           <td>(</td>
-          <td class="paramtype">vector&lt; <a class="el" href="class_asset_manager.html">AssetManager</a> &gt;&#160;</td>
+          <td class="paramtype">const vector&lt; <a class="el" href="class_asset_manager.html">AssetManager</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>game_assets</em></td><td>)</td>
           <td></td>
         </tr>
@@ -796,15 +841,15 @@ Private Attributes</h2></td></tr>
 <p>Loads all the game's textures. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">game_assets</td><td>is a vector of <a class="el" href="class_asset_manager.html" title="A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. ">AssetManager</a> </td></tr>
+    <tr><td class="paramname">game_assets</td><td>is a const vector of <a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a> passed by reference. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a04c43fe2cf2fe4b969c034eee5d4b1e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04c43fe2cf2fe4b969c034eee5d4b1e2">&#9670;&nbsp;</a></span>populateSpriteSheets()</h2>
+<a id="a81b7364caefc1ec13188e453ba6b1d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81b7364caefc1ec13188e453ba6b1d14">&#9670;&nbsp;</a></span>populateSpriteSheets()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -815,9 +860,19 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Presentation::populateSpriteSheets </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> &amp;&#160;</td>
-          <td class="paramname"><em>object_type</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_asset_manager.html">AssetManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>asset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> &amp;&#160;</td>
+          <td class="paramname"><em>object_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -830,6 +885,7 @@ Private Attributes</h2></td></tr>
 <p>Populate <a class="el" href="class_sprite_sheet.html" title="A class that crops the texture to the correct image for game objects to be drawn on the screen...">SpriteSheet</a> vector, sprite_sheets_, for the different game objects that have more than one image in a texture. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">asset</td><td>is of type <a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a> which contains a game asset. </td></tr>
     <tr><td class="paramname">object_type</td><td>is of type enum class ObjectType. </td></tr>
   </table>
   </dd>
@@ -854,6 +910,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Updates the sound played when a <a class="el" href="class_scorpion.html" title="This is a class that inherits from the IMovingEntity class. It models a Scorpion object in the game...">Scorpion</a> and <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> are moving. Also plays the sound used when a <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> is being regenerated. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object_type</td><td>is an enum of the strongly typed enum class ObjectType. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -876,6 +938,25 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a98614c822f19a1c5c3760b46f7994942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98614c822f19a1c5c3760b46f7994942">&#9670;&nbsp;</a></span>processLevelUpSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Presentation::processLevelUpSound </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plays the sound used to indicate that a player levelled up. </p>
+
+</div>
+</div>
 <a id="ab2284a509e0dd35fb10b11bb05d220ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2284a509e0dd35fb10b11bb05d220ca">&#9670;&nbsp;</a></span>processPlayerShootSound()</h2>
 
@@ -895,8 +976,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a07fe85f2fb3be047ed1bbf553662f754"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07fe85f2fb3be047ed1bbf553662f754">&#9670;&nbsp;</a></span>renderWindow()</h2>
+<a id="aaf962e6ea5d6086bd884ce3174afb276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf962e6ea5d6086bd884ce3174afb276">&#9670;&nbsp;</a></span>renderWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -904,7 +985,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Presentation::renderWindow </td>
           <td>(</td>
-          <td class="paramtype">vector&lt; shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const vector&lt; shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>game_objects</em>, </td>
         </tr>
         <tr>
@@ -923,7 +1004,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>high_score</em>&#160;</td>
+          <td class="paramname"><em>high_score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tuple&lt; const int, const int &gt;&#160;</td>
+          <td class="paramname"><em>game_level</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -936,10 +1023,11 @@ Private Attributes</h2></td></tr>
 <p>Draws all the game objects onto the screen. Including the player's score, lives and the game's highest score. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">game_objects</td><td>is a vector of shared pointers to <a class="el" href="class_i_entity.html" title="This is a Interface Class containing pure virtual functions that will be overridden by derived classe...">IEntity</a> objects. </td></tr>
+    <tr><td class="paramname">game_objects</td><td>is a const vector of shared pointers to <a class="el" href="class_i_entity.html" title="This is a Interface Class containing pure virtual functions that will be overridden by derived classe...">IEntity</a> objects. </td></tr>
     <tr><td class="paramname">remaining_lives</td><td>is an int and contains the player's remaining lives. </td></tr>
     <tr><td class="paramname">player_score</td><td>is an int that has the player's current score. </td></tr>
     <tr><td class="paramname">high_score</td><td>is an int that has the game's highest score. </td></tr>
+    <tr><td class="paramname">game_level</td><td>is a tuple&lt;const int, const int&gt; that indicates the current game level and max game level. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1014,6 +1102,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">sf::Font Presentation::font_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abed68c18d830a3105a7548d022477794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed68c18d830a3105a7548d022477794">&#9670;&nbsp;</a></span>game_level_colours_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;sf::Color&gt; Presentation::game_level_colours_</td>
         </tr>
       </table>
   </td>
@@ -1233,7 +1343,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_presentation.html">Presentation</a></li>
-    <li class="footer">Generated on Tue Oct 2 2018 23:18:01 for elen3009-project-2018 by
+    <li class="footer">Generated on Fri Oct 5 2018 21:28:44 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

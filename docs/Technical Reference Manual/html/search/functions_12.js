@@ -4,6 +4,7 @@ var searchData=
   ['_7ecentipedesegment',['~CentipedeSegment',['../class_centipede_segment.html#aac251c0ece67b47f328dc042c9bba046',1,'CentipedeSegment']]],
   ['_7ecollisionhandler',['~CollisionHandler',['../class_collision_handler.html#a99f5524cf1706f9ea95500cf273a9d97',1,'CollisionHandler']]],
   ['_7eenemyfactory',['~EnemyFactory',['../class_enemy_factory.html#aa8bb5ef447537d445698e44999d2f497',1,'EnemyFactory']]],
+  ['_7egameengine',['~GameEngine',['../class_game_engine.html#a8e59d8341ef9d2dcc62eee1437e37f14',1,'GameEngine']]],
   ['_7egameoverscreen',['~GameOverScreen',['../class_game_over_screen.html#ad9762d95fbfc4967ebde5e7d5a1b3499',1,'GameOverScreen']]],
   ['_7egamewonscreen',['~GameWonScreen',['../class_game_won_screen.html#aca635ecfb9329ec3d628d615649bbbbb',1,'GameWonScreen']]],
   ['_7egrid',['~Grid',['../class_grid.html#a3661d0a7f998caaaf8627d7a67072116',1,'Grid']]],

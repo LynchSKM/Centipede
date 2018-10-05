@@ -7,7 +7,8 @@
  *	\version 3.0
  */
 
-class Position{
+class Position
+{
 
 public:
 

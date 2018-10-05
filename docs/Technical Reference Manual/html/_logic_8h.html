@@ -87,23 +87,17 @@ $(document).ready(function(){initNavTree('_logic_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">Logic.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_grid_8h_source.html">Grid.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_presentation_8h_source.html">Presentation.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_high_score_manager_8h_source.html">HighScoreManager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_screen_state_8h_source.html">ScreenState.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_player_8h_source.html">Player.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_stop_watch_8h_source.html">StopWatch.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_enemy_factory_8h_source.html">EnemyFactory.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_collision_handler_8h_source.html">CollisionHandler.h</a>&quot;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>&quot;</code><br />
 <code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;ctime&gt;</code><br />
 </div>
 <p><a href="_logic_8h_source.html">Go to the source code of this file.</a></p>
@@ -111,71 +105,16 @@ $(document).ready(function(){initNavTree('_logic_8h.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html">Logic</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class performs the logic that defines how the game objects behave.  <a href="class_logic.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class uses <a class="el" href="class_game_engine.html" title="This class has the responsibility of creating all the enemy objects of the game and the creation of M...">GameEngine</a>'s function to perform the logic of the game. It tells <a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a> to load the game assets needed to present the game logic. It then presents the logic to the <a class="el" href="class_presentation.html" title="Uses the SFML Graphics Library to draw all game objects on the screen. ">Presentation</a> Layer for it to be rendered on the game screen. The game is controlled by this class.  <a href="class_logic.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a7c9ef220b1c6b51245f5c781e4048d34"><td class="memTemplParams" colspan="2">template&lt;typename TypeContainer , typename PredicateT &gt; </td></tr>
-<tr class="memitem:a7c9ef220b1c6b51245f5c781e4048d34"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_logic_8h.html#a7c9ef220b1c6b51245f5c781e4048d34">container_erase_if</a> (TypeContainer &amp;container, const PredicateT &amp;predicate)</td></tr>
-<tr class="memdesc:a7c9ef220b1c6b51245f5c781e4048d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">container_erase_if - a function that erases elements in a container based on a specified condition determined by the Predicate.  <a href="#a7c9ef220b1c6b51245f5c781e4048d34">More...</a><br /></td></tr>
-<tr class="separator:a7c9ef220b1c6b51245f5c781e4048d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a7c9ef220b1c6b51245f5c781e4048d34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c9ef220b1c6b51245f5c781e4048d34">&#9670;&nbsp;</a></span>container_erase_if()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TypeContainer , typename PredicateT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void container_erase_if </td>
-          <td>(</td>
-          <td class="paramtype">TypeContainer &amp;&#160;</td>
-          <td class="paramname"><em>container</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const PredicateT &amp;&#160;</td>
-          <td class="paramname"><em>predicate</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>container_erase_if - a function that erases elements in a container based on a specified condition determined by the Predicate. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">container</td><td>a std container passed by reference to be iterated through. </td></tr>
-    <tr><td class="paramname">predicate</td><td>can be a function that returns true or false. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_5cf44830e849bf467dfbbcc5ff937fbf.html">game-source-code</a></li><li class="navelem"><a class="el" href="_logic_8h.html">Logic.h</a></li>
-    <li class="footer">Generated on Tue Oct 2 2018 23:18:00 for elen3009-project-2018 by
+    <li class="footer">Generated on Fri Oct 5 2018 21:28:43 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

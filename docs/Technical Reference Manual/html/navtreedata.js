@@ -52,8 +52,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_asset_manager_8cpp.html",
-"class_i_entity.html#a27edea02cb754d0d3f94e1020b9fb19a",
-"class_spider.html#a2de5c65fb5f1aad1d6b15294203acb27"
+"class_game_engine.html#a559f37095479c7849e672ae9e8de136e",
+"class_scorpion.html#a643c9b086d91083fa9d5a12c6183b5ef"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

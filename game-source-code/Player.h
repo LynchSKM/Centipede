@@ -44,12 +44,12 @@ class Player : public IMovingEntity
         virtual ~Player();
 
         /** \brief Inherited from IMovingEntity. A virtual function that
-         *  moves a Player object.
+         *  moves a Player object left, right, up or down in a 2D movement.
          */
         virtual void move() override;
 
         /** \brief Inherited from IMovingEntity. A virtual function that
-         *  returns a enum of ObjectType::Player.
+         *  returns a enum of ObjectType::PLAYER.
          *  \return An enum of the strongly typed enum class ObjectType.
          */
         virtual ObjectType getObjectType() const override;
@@ -116,6 +116,7 @@ class Player : public IMovingEntity
 
         /** \brief Inherited from IMovingEntity. A virtual function that will be
          *  not be implemented as a Player doesn't have hit points.
+         *  \return int
          */
         virtual int getHitPoints() const override;
 

@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 </div><table border="0" cellspacing="10" cellpadding="0">
 <tr><td><img src="inherit_graph_0.png" border="0" alt="" usemap="#_asset_manager"/>
 <map name="_asset_manager" id="_asset_manager">
-<area shape="rect" id="node1" href="class_asset_manager.html" title="A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. " alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node1" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures..." alt="" coords="5,5,112,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#_boundary_box"/>
@@ -115,30 +115,35 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 </td></tr>
 <tr><td><img src="inherit_graph_4.png" border="0" alt="" usemap="#_enemy_factory"/>
 <map name="_enemy_factory" id="_enemy_factory">
-<area shape="rect" id="node1" href="class_enemy_factory.html" title="Creates all the enemy objects of the game and Mushrooms. " alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node1" href="class_enemy_factory.html" title="This class is used to creates all the enemy objects of the game. It periodically creates Spider objec..." alt="" coords="5,5,112,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_5.png" border="0" alt="" usemap="#_game_over_screen"/>
+<tr><td><img src="inherit_graph_5.png" border="0" alt="" usemap="#_game_engine"/>
+<map name="_game_engine" id="_game_engine">
+<area shape="rect" id="node1" href="class_game_engine.html" title="This class has the responsibility of creating all the enemy objects of the game and the creation of M..." alt="" coords="5,5,103,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_6.png" border="0" alt="" usemap="#_game_over_screen"/>
 <map name="_game_over_screen" id="_game_over_screen">
 <area shape="rect" id="node1" href="class_game_over_screen.html" title="A presentation layer class that uses the SFML library to display that the game is over and a summary ..." alt="" coords="5,5,129,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_6.png" border="0" alt="" usemap="#_game_won_screen"/>
+<tr><td><img src="inherit_graph_7.png" border="0" alt="" usemap="#_game_won_screen"/>
 <map name="_game_won_screen" id="_game_won_screen">
 <area shape="rect" id="node1" href="class_game_won_screen.html" title="A presentation layer class that uses the SFML library to display the player&#39;s victory and a summary o..." alt="" coords="5,5,131,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_7.png" border="0" alt="" usemap="#_grid"/>
+<tr><td><img src="inherit_graph_8.png" border="0" alt="" usemap="#_grid"/>
 <map name="_grid" id="_grid">
 <area shape="rect" id="node1" href="class_grid.html" title="This class contains details about the screen such as the screen width and height. ..." alt="" coords="5,5,52,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_8.png" border="0" alt="" usemap="#_high_score_manager"/>
+<tr><td><img src="inherit_graph_9.png" border="0" alt="" usemap="#_high_score_manager"/>
 <map name="_high_score_manager" id="_high_score_manager">
 <area shape="rect" id="node1" href="class_high_score_manager.html" title="A class that reads and writes the high score to a textfile. " alt="" coords="5,5,137,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_9.png" border="0" alt="" usemap="#_i_entity"/>
+<tr><td><img src="inherit_graph_10.png" border="0" alt="" usemap="#_i_entity"/>
 <map name="_i_entity" id="_i_entity">
 <area shape="rect" id="node1" href="class_i_entity.html" title="This is a Interface Class containing pure virtual functions that will be overridden by derived classe..." alt="" coords="5,132,64,159"/>
 <area shape="rect" id="node2" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th..." alt="" coords="112,107,211,133"/>
@@ -150,79 +155,79 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <area shape="rect" id="node7" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game..." alt="" coords="295,208,354,235"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_10.png" border="0" alt="" usemap="#_logic"/>
+<tr><td><img src="inherit_graph_11.png" border="0" alt="" usemap="#_logic"/>
 <map name="_logic" id="_logic">
-<area shape="rect" id="node1" href="class_logic.html" title="This class performs the logic that defines how the game objects behave. " alt="" coords="5,5,59,32"/>
+<area shape="rect" id="node1" href="class_logic.html" title="This class uses GameEngine&#39;s function to perform the logic of the game. It tells AssetManager to load..." alt="" coords="5,5,59,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_11.png" border="0" alt="" usemap="#_mushroom_dimensions"/>
+<tr><td><img src="inherit_graph_12.png" border="0" alt="" usemap="#_mushroom_dimensions"/>
 <map name="_mushroom_dimensions" id="_mushroom_dimensions">
 <area shape="rect" id="node1" href="struct_mushroom_dimensions.html" title="Contains information about a Mushroom&#39;s height, and width. " alt="" coords="5,5,156,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_12.png" border="0" alt="" usemap="#_mushroom_factory"/>
+<tr><td><img src="inherit_graph_13.png" border="0" alt="" usemap="#_mushroom_factory"/>
 <map name="_mushroom_factory" id="_mushroom_factory">
-<area shape="rect" id="node1" href="class_mushroom_factory.html" title="Creates all the mushroom objects of the game. " alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node1" href="class_mushroom_factory.html" title="Creates all the Mushroom objects of the game. The game grid is divided into cells of size 16x16 pixel..." alt="" coords="5,5,132,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_13.png" border="0" alt="" usemap="#_player_bullet_dimensions"/>
+<tr><td><img src="inherit_graph_14.png" border="0" alt="" usemap="#_player_bullet_dimensions"/>
 <map name="_player_bullet_dimensions" id="_player_bullet_dimensions">
 <area shape="rect" id="node1" href="struct_player_bullet_dimensions.html" title="Contains information about a PlayerBullet&#39;s height, width and speed. " alt="" coords="5,5,165,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_14.png" border="0" alt="" usemap="#_player_dimension"/>
+<tr><td><img src="inherit_graph_15.png" border="0" alt="" usemap="#_player_dimension"/>
 <map name="_player_dimension" id="_player_dimension">
 <area shape="rect" id="node1" href="struct_player_dimension.html" title="Contains information about a Player&#39;s height, width and speed. " alt="" coords="5,5,125,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_15.png" border="0" alt="" usemap="#_position"/>
+<tr><td><img src="inherit_graph_16.png" border="0" alt="" usemap="#_position"/>
 <map name="_position" id="_position">
 <area shape="rect" id="node1" href="class_position.html" title="A class that contains an x and y value representing a screen position. " alt="" coords="5,5,75,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_16.png" border="0" alt="" usemap="#_presentation"/>
+<tr><td><img src="inherit_graph_17.png" border="0" alt="" usemap="#_presentation"/>
 <map name="_presentation" id="_presentation">
 <area shape="rect" id="node1" href="class_presentation.html" title="Uses the SFML Graphics Library to draw all game objects on the screen. " alt="" coords="5,5,100,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_17.png" border="0" alt="" usemap="#_scorpion_dimensions"/>
+<tr><td><img src="inherit_graph_18.png" border="0" alt="" usemap="#_scorpion_dimensions"/>
 <map name="_scorpion_dimensions" id="_scorpion_dimensions">
 <area shape="rect" id="node1" href="struct_scorpion_dimensions.html" title="Contains information about a Scorpion&#39;s height, width and speed. " alt="" coords="5,5,147,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_18.png" border="0" alt="" usemap="#_separating_axis_theorem"/>
+<tr><td><img src="inherit_graph_19.png" border="0" alt="" usemap="#_separating_axis_theorem"/>
 <map name="_separating_axis_theorem" id="_separating_axis_theorem">
 <area shape="rect" id="node1" href="class_separating_axis_theorem.html" title="This is a class used to determine overlap between BoundaryBox objects. This class makes use of the Se..." alt="" coords="5,5,165,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_19.png" border="0" alt="" usemap="#_spatial_hash"/>
+<tr><td><img src="inherit_graph_20.png" border="0" alt="" usemap="#_spatial_hash"/>
 <map name="_spatial_hash" id="_spatial_hash">
 <area shape="rect" id="node1" href="class_spatial_hash.html" title="This class will be used by collision detection to query for objects around the object of interest..." alt="" coords="5,5,97,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_20.png" border="0" alt="" usemap="#_spider_dimensions"/>
+<tr><td><img src="inherit_graph_21.png" border="0" alt="" usemap="#_spider_dimensions"/>
 <map name="_spider_dimensions" id="_spider_dimensions">
 <area shape="rect" id="node1" href="struct_spider_dimensions.html" title="Contains information about a Spider&#39;s height, width and speed. " alt="" coords="5,5,132,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_21.png" border="0" alt="" usemap="#_splash_screen"/>
+<tr><td><img src="inherit_graph_22.png" border="0" alt="" usemap="#_splash_screen"/>
 <map name="_splash_screen" id="_splash_screen">
 <area shape="rect" id="node1" href="class_splash_screen.html" title="A presentation class that uses the SFML library to display playing instructions and the game&#39;s title..." alt="" coords="5,5,108,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_22.png" border="0" alt="" usemap="#_sprite_sheet"/>
+<tr><td><img src="inherit_graph_23.png" border="0" alt="" usemap="#_sprite_sheet"/>
 <map name="_sprite_sheet" id="_sprite_sheet">
 <area shape="rect" id="node1" href="class_sprite_sheet.html" title="A class that crops the texture to the correct image for game objects to be drawn on the screen..." alt="" coords="5,5,96,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_23.png" border="0" alt="" usemap="#_stop_watch"/>
+<tr><td><img src="inherit_graph_24.png" border="0" alt="" usemap="#_stop_watch"/>
 <map name="_stop_watch" id="_stop_watch">
 <area shape="rect" id="node1" href="class_stop_watch.html" title="This class models a Stopwatch and returns time values in seconds. " alt="" coords="5,5,92,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_24.png" border="0" alt="" usemap="#_weapon"/>
+<tr><td><img src="inherit_graph_25.png" border="0" alt="" usemap="#_weapon"/>
 <map name="_weapon" id="_weapon">
-<area shape="rect" id="node1" href="class_weapon.html" title="This is a class that models a weapon for the Player. " alt="" coords="5,5,76,32"/>
+<area shape="rect" id="node1" href="class_weapon.html" title="This is a class that models a weapon for the Player. It generates PlayerBullet objects at a Position ..." alt="" coords="5,5,76,32"/>
 </map>
 </td></tr>
 </table>
@@ -231,7 +236,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Oct 2 2018 23:18:01 for elen3009-project-2018 by
+    <li class="footer">Generated on Fri Oct 5 2018 21:28:44 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

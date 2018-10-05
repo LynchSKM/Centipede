@@ -20,7 +20,8 @@ struct ScorpionDimensions
 /** \class Scorpion
  *  \brief This is a class that inherits from the IMovingEntity class. It models
  *  a Scorpion object in the game. It contains virtual functions that
- *  will be overridden.
+ *  will be overridden. A Scorpion moves horizontally across the grid. It sets
+ *  itself to dead if it reaches the grid's left or right boundaries.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -39,7 +40,7 @@ class Scorpion : public IMovingEntity
         virtual ~Scorpion();
 
         /** \brief Inherited from IMovingEntity. A virtual function that
-         *  moves a Scorpion object.
+         *  moves a Scorpion object horizontally across the grid.
          */
         virtual void move() override;
 

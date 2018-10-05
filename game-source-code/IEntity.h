@@ -70,6 +70,7 @@ class IEntity
 
         /** \brief A pure virtual function that will be used to return a
          *  derived class object's hit points.
+         *  \return int
          */
         virtual int getHitPoints() const = 0;
 

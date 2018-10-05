@@ -14,8 +14,12 @@ using std::end;
 const auto pi = std::atan(1)*4;
 
 /** \class BoundaryBox
- *  \brief This class constructs a rectangle shape with the given the width, height, 
- *	center and rotation angle if any.
+ *  \brief This class constructs a rectangle shape with the given the width, height,
+ *	center and rotation angle if any. The construction requires the centre point
+ *  of the rectangle shape to be given. The vertices of the boundary box are then
+ *  calculated using the centre point and the rotation angle. These vertices are
+ *  stored in a vector of type Position in the order upper left, upper right,
+ *  bottom left, and bottom right.
  *	\author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *	\version 3.0
  */
@@ -32,7 +36,8 @@ class BoundaryBox
         BoundaryBox(Position centre, float width, float height, float rotationAngle);
 
         /** \brief A function that returns the vertices of the boundary box in
-         *  a vector of type Position.
+         *  a vector of type Position. The order of the vertices is upper left,
+         *  upper right, bottom left, and bottom right.
          *  \return vector<Position> containing the vertices of the boundary box.
          */
         vector <Position> getVertices() const;
@@ -50,7 +55,7 @@ class BoundaryBox
         /** \brief Calculates the vertex of the boundary box.
          *  Given a radius from the centre point and the angle relative to
          * 	the centre point, a vertex can be calculated. These values are obtained by
-         * 	constructing the rectangle shape at an orientation of zero.
+         * 	constructing the rectangle shape at a rotation of zero degrees.
          *  \param radius is a float and contains the radius (half diagonal length) from centre.
          *  \param angle is a float and contains the angle a vertex is from the centre's axis.
          *  \return Position which is a vertex.
@@ -66,7 +71,7 @@ class BoundaryBox
         tuple<float, float> pointModArg(float opposite, float adjacent);
 
         /** \brief Iterates through the vertices of a rotated boundary box.
-         *  \details The order of the vertices being saved is necessary for other
+         *  The order of the vertices being saved is necessary for other
          *  classes that require it. This function pushes the generated vertices
          *  into a vector in the vertex order: Upper Left, Upper Right, Bottom Left
          *  and Bottom Right.
@@ -74,9 +79,9 @@ class BoundaryBox
         void sortPoints();
 
         /** \brief Builds a boundary box around a centre point with the parameters
-         *  taken in by the constructor. Creates vertices using the calculateVertex 
-		 *	function. The created vertices are then push into the private member 
-		 *	vector in the order specified. Gets called in the constructor to 
+         *  taken in by the constructor. Creates vertices using the calculateVertex
+		 *	function. The created vertices are then saved into the private member
+		 *	vector vertices_ in the order specified. Gets called in the constructor to
 		 *	immediately create the boundary box once all the parameters needed are saved.
          */
         void constructBoundaryBox();

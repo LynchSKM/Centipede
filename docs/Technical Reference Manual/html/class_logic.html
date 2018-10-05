@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('class_logic.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>This class performs the logic that defines how the game objects behave.  
+<p>This class uses <a class="el" href="class_game_engine.html" title="This class has the responsibility of creating all the enemy objects of the game and the creation of M...">GameEngine</a>'s function to perform the logic of the game. It tells <a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a> to load the game assets needed to present the game logic. It then presents the logic to the <a class="el" href="class_presentation.html" title="Uses the SFML Graphics Library to draw all game objects on the screen. ">Presentation</a> Layer for it to be rendered on the game screen. The game is controlled by this class.  
  <a href="class_logic.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_logic_8h_source.html">Logic.h</a>&gt;</code></p>
@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('class_logic.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a65e13b69a0b4ae0c31be94bcfe11898a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a65e13b69a0b4ae0c31be94bcfe11898a">Logic</a> ()</td></tr>
-<tr class="memdesc:a65e13b69a0b4ae0c31be94bcfe11898a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="class_logic.html" title="This class performs the logic that defines how the game objects behave. ">Logic</a> constructor. An instance of the game is created and the game objects are initialized.  <a href="#a65e13b69a0b4ae0c31be94bcfe11898a">More...</a><br /></td></tr>
+<tr class="memdesc:a65e13b69a0b4ae0c31be94bcfe11898a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="class_logic.html" title="This class uses GameEngine&#39;s function to perform the logic of the game. It tells AssetManager to load...">Logic</a> constructor. An instance of the game is created and the game objects are initialized.  <a href="#a65e13b69a0b4ae0c31be94bcfe11898a">More...</a><br /></td></tr>
 <tr class="separator:a65e13b69a0b4ae0c31be94bcfe11898a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf175ef9069615527bfbd10864b20df4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#abf175ef9069615527bfbd10864b20df4">run</a> ()</td></tr>
 <tr class="memdesc:abf175ef9069615527bfbd10864b20df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the game loop.  <a href="#abf175ef9069615527bfbd10864b20df4">More...</a><br /></td></tr>
@@ -115,6 +115,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:a3a4eb286eb3264766bd3f155e199e166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a3a4eb286eb3264766bd3f155e199e166">startUp</a> ()</td></tr>
+<tr class="memdesc:a3a4eb286eb3264766bd3f155e199e166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates Mushrooms and plays the game start sound.  <a href="#a3a4eb286eb3264766bd3f155e199e166">More...</a><br /></td></tr>
+<tr class="separator:a3a4eb286eb3264766bd3f155e199e166"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70bcf051b34e52fe521163360316d468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a70bcf051b34e52fe521163360316d468">renderSplashScreen</a> ()</td></tr>
 <tr class="memdesc:a70bcf051b34e52fe521163360316d468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the splash screen at the start of the game.  <a href="#a70bcf051b34e52fe521163360316d468">More...</a><br /></td></tr>
 <tr class="separator:a70bcf051b34e52fe521163360316d468"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,7 +128,7 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:a08101e1a7d5b42ea590ec2b67fda6800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads paths to the textures used by the game.  <a href="#a08101e1a7d5b42ea590ec2b67fda6800">More...</a><br /></td></tr>
 <tr class="separator:a08101e1a7d5b42ea590ec2b67fda6800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6f88cd30d7a149e8ab101ebf7cba8d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#ac6f88cd30d7a149e8ab101ebf7cba8d2">renderGameObjects</a> ()</td></tr>
-<tr class="memdesc:ac6f88cd30d7a149e8ab101ebf7cba8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives <a class="el" href="class_presentation.html" title="Uses the SFML Graphics Library to draw all game objects on the screen. ">Presentation</a> a vector of game objects to be drawn.  <a href="#ac6f88cd30d7a149e8ab101ebf7cba8d2">More...</a><br /></td></tr>
+<tr class="memdesc:ac6f88cd30d7a149e8ab101ebf7cba8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives <a class="el" href="class_presentation.html" title="Uses the SFML Graphics Library to draw all game objects on the screen. ">Presentation</a> the game objects from the <a class="el" href="class_game_engine.html" title="This class has the responsibility of creating all the enemy objects of the game and the creation of M...">GameEngine</a> class to be drawn.  <a href="#ac6f88cd30d7a149e8ab101ebf7cba8d2">More...</a><br /></td></tr>
 <tr class="separator:ac6f88cd30d7a149e8ab101ebf7cba8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43609f2dc8b0575d2cc9d4381079abdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a43609f2dc8b0575d2cc9d4381079abdb">renderGameOverScreen</a> ()</td></tr>
 <tr class="memdesc:a43609f2dc8b0575d2cc9d4381079abdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the game over screen when the player has lost the game.  <a href="#a43609f2dc8b0575d2cc9d4381079abdb">More...</a><br /></td></tr>
@@ -133,45 +136,24 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a1a7332c942409bdb5cbcc26ddadbe6e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a1a7332c942409bdb5cbcc26ddadbe6e9">renderGameWonScreen</a> ()</td></tr>
 <tr class="memdesc:a1a7332c942409bdb5cbcc26ddadbe6e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the game won screen when the player has won the game.  <a href="#a1a7332c942409bdb5cbcc26ddadbe6e9">More...</a><br /></td></tr>
 <tr class="separator:a1a7332c942409bdb5cbcc26ddadbe6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23f4a972858bbea364850ebf0d188be6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a23f4a972858bbea364850ebf0d188be6">updateGameObjects</a> ()</td></tr>
-<tr class="memdesc:a23f4a972858bbea364850ebf0d188be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves all the game objects that can be moved.  <a href="#a23f4a972858bbea364850ebf0d188be6">More...</a><br /></td></tr>
-<tr class="separator:a23f4a972858bbea364850ebf0d188be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d8384f6a1bd8e31c327109b1aa4e998"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a7d8384f6a1bd8e31c327109b1aa4e998">generateGameEnemies</a> ()</td></tr>
-<tr class="memdesc:a7d8384f6a1bd8e31c327109b1aa4e998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates all the game's moving enemies.  <a href="#a7d8384f6a1bd8e31c327109b1aa4e998">More...</a><br /></td></tr>
-<tr class="separator:a7d8384f6a1bd8e31c327109b1aa4e998"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab11c4016cf06a493412935202921bbf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#ab11c4016cf06a493412935202921bbf0">generateNormalCentipede</a> ()</td></tr>
-<tr class="memdesc:ab11c4016cf06a493412935202921bbf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the a Centipede with one head, and multiple body segments.  <a href="#ab11c4016cf06a493412935202921bbf0">More...</a><br /></td></tr>
-<tr class="separator:ab11c4016cf06a493412935202921bbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16d5915e489331198e33318c4e59eeeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a16d5915e489331198e33318c4e59eeeb">generateCentipedeHeads</a> ()</td></tr>
-<tr class="memdesc:a16d5915e489331198e33318c4e59eeeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates Centipede heads.  <a href="#a16d5915e489331198e33318c4e59eeeb">More...</a><br /></td></tr>
-<tr class="separator:a16d5915e489331198e33318c4e59eeeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11a5ad0679ef70b1bf64b8367c0f5532"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a11a5ad0679ef70b1bf64b8367c0f5532">generateMushrooms</a> ()</td></tr>
-<tr class="memdesc:a11a5ad0679ef70b1bf64b8367c0f5532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> objects.  <a href="#a11a5ad0679ef70b1bf64b8367c0f5532">More...</a><br /></td></tr>
-<tr class="separator:a11a5ad0679ef70b1bf64b8367c0f5532"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a847b8ccc9d13f1f80c2d0f6c897820a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a847b8ccc9d13f1f80c2d0f6c897820a4">generateMushroomAtCollision</a> ()</td></tr>
-<tr class="memdesc:a847b8ccc9d13f1f80c2d0f6c897820a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms all dead centipede segments from vector(s) into mushrooms.  <a href="#a847b8ccc9d13f1f80c2d0f6c897820a4">More...</a><br /></td></tr>
-<tr class="separator:a847b8ccc9d13f1f80c2d0f6c897820a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5f432d4b5b457a7f88c42b34f28f682"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#ae5f432d4b5b457a7f88c42b34f28f682">generateAScorpion</a> ()</td></tr>
-<tr class="memdesc:ae5f432d4b5b457a7f88c42b34f28f682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a <a class="el" href="class_scorpion.html" title="This is a class that inherits from the IMovingEntity class. It models a Scorpion object in the game...">Scorpion</a> at a random position.  <a href="#ae5f432d4b5b457a7f88c42b34f28f682">More...</a><br /></td></tr>
-<tr class="separator:ae5f432d4b5b457a7f88c42b34f28f682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e083d0e64f6166e1621578c34270e37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a8e083d0e64f6166e1621578c34270e37">generateASpider</a> ()</td></tr>
-<tr class="memdesc:a8e083d0e64f6166e1621578c34270e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> at random either at the left or right boundary.  <a href="#a8e083d0e64f6166e1621578c34270e37">More...</a><br /></td></tr>
-<tr class="separator:a8e083d0e64f6166e1621578c34270e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91ff0c77244fcb15a77d506837751c74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a91ff0c77244fcb15a77d506837751c74">checkCollisions</a> ()</td></tr>
-<tr class="memdesc:a91ff0c77244fcb15a77d506837751c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for collisions between game objects.  <a href="#a91ff0c77244fcb15a77d506837751c74">More...</a><br /></td></tr>
-<tr class="separator:a91ff0c77244fcb15a77d506837751c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78320b6d95a7d7d7b9610be4175b7fcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a78320b6d95a7d7d7b9610be4175b7fcc">updateGame</a> ()</td></tr>
+<tr class="memdesc:a78320b6d95a7d7d7b9610be4175b7fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the logic for the game.  <a href="#a78320b6d95a7d7d7b9610be4175b7fcc">More...</a><br /></td></tr>
+<tr class="separator:a78320b6d95a7d7d7b9610be4175b7fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20aaa255bfe8db02e811f2c207a757fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a20aaa255bfe8db02e811f2c207a757fd">updateMovingObjectsSound</a> ()</td></tr>
+<tr class="memdesc:a20aaa255bfe8db02e811f2c207a757fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays sound for spider and scorpion as they move.  <a href="#a20aaa255bfe8db02e811f2c207a757fd">More...</a><br /></td></tr>
+<tr class="separator:a20aaa255bfe8db02e811f2c207a757fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b0352a47003b5278d9197710bdd9d6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a9b0352a47003b5278d9197710bdd9d6b">updateScores</a> ()</td></tr>
 <tr class="memdesc:a9b0352a47003b5278d9197710bdd9d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the player's score has passed the current high score and updates the high score if true.  <a href="#a9b0352a47003b5278d9197710bdd9d6b">More...</a><br /></td></tr>
 <tr class="separator:a9b0352a47003b5278d9197710bdd9d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb059b52631dc541c89e46370d3bc688"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#abb059b52631dc541c89e46370d3bc688">removeDeadEntities</a> ()</td></tr>
-<tr class="memdesc:abb059b52631dc541c89e46370d3bc688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all dead entities from vector(s) where they exist.  <a href="#abb059b52631dc541c89e46370d3bc688">More...</a><br /></td></tr>
-<tr class="separator:abb059b52631dc541c89e46370d3bc688"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e2f8545edc283391961c8689ac96d12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a1e2f8545edc283391961c8689ac96d12">reincarnatePlayer</a> ()</td></tr>
-<tr class="memdesc:a1e2f8545edc283391961c8689ac96d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all Centipede segments from vector(s) where they exist, reset the position of the player and generate a new Centipede train.  <a href="#a1e2f8545edc283391961c8689ac96d12">More...</a><br /></td></tr>
+<tr class="memdesc:a1e2f8545edc283391961c8689ac96d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all moving entities from the game, resets the position of the player and resets the current level of the game.  <a href="#a1e2f8545edc283391961c8689ac96d12">More...</a><br /></td></tr>
 <tr class="separator:a1e2f8545edc283391961c8689ac96d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab21423a4918a4047718cfdcda896aa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#aab21423a4918a4047718cfdcda896aa3">reincarnateMushroom</a> ()</td></tr>
-<tr class="memdesc:aab21423a4918a4047718cfdcda896aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets reincarnate of the <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> objects in the game.  <a href="#aab21423a4918a4047718cfdcda896aa3">More...</a><br /></td></tr>
-<tr class="separator:aab21423a4918a4047718cfdcda896aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f28901afa046c3605f1c78f4d092f4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a1f28901afa046c3605f1c78f4d092f4f">reincarnateMushrooms</a> ()</td></tr>
+<tr class="memdesc:a1f28901afa046c3605f1c78f4d092f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reincarnates <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> objects in the game.  <a href="#a1f28901afa046c3605f1c78f4d092f4f">More...</a><br /></td></tr>
+<tr class="separator:a1f28901afa046c3605f1c78f4d092f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a550d59c11c52f56f313d8a2cc2744472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a550d59c11c52f56f313d8a2cc2744472">levelUp</a> ()</td></tr>
+<tr class="memdesc:a550d59c11c52f56f313d8a2cc2744472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the levelUp sound if the player's level has advanced.  <a href="#a550d59c11c52f56f313d8a2cc2744472">More...</a><br /></td></tr>
+<tr class="separator:a550d59c11c52f56f313d8a2cc2744472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -179,31 +161,17 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a82cb53aaf924d2979028f9a6d020de61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d169914d13b7edd132ac7fb74ff8587"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_presentation.html">Presentation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a2d169914d13b7edd132ac7fb74ff8587">presentation_</a> {grid_.getWidth(), grid_.getHeight()}</td></tr>
 <tr class="separator:a2d169914d13b7edd132ac7fb74ff8587"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad484dea3aa386ca99193d050ae7d72f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_high_score_manager.html">HighScoreManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#ad484dea3aa386ca99193d050ae7d72f6">highScoreManager_</a></td></tr>
-<tr class="separator:ad484dea3aa386ca99193d050ae7d72f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b65a2f34bed7e03dcfe290bc7a0efe8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_engine.html">GameEngine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a0b65a2f34bed7e03dcfe290bc7a0efe8">gameEngine_</a> {<a class="el" href="class_logic.html#a82cb53aaf924d2979028f9a6d020de61">grid_</a>}</td></tr>
+<tr class="separator:a0b65a2f34bed7e03dcfe290bc7a0efe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a7a77acc4b4118c250c8582b76341d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_asset_manager.html">AssetManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a8a7a77acc4b4118c250c8582b76341d5">assetManager_</a></td></tr>
 <tr class="separator:a8a7a77acc4b4118c250c8582b76341d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e613c86b994577e051391b52d5c6023"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_enemy_factory.html">EnemyFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a4e613c86b994577e051391b52d5c6023">enemyFactory_</a> {<a class="el" href="class_logic.html#a82cb53aaf924d2979028f9a6d020de61">grid_</a>}</td></tr>
-<tr class="separator:a4e613c86b994577e051391b52d5c6023"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39e57818cd82815230430030b1b102bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collision_handler.html">CollisionHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a39e57818cd82815230430030b1b102bf">collisionHandler_</a> {<a class="el" href="class_logic.html#a82cb53aaf924d2979028f9a6d020de61">grid_</a>}</td></tr>
-<tr class="separator:a39e57818cd82815230430030b1b102bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a186d1bbd333005f0b2e28ca119f3c12e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stop_watch.html">StopWatch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a186d1bbd333005f0b2e28ca119f3c12e">game_timer_</a></td></tr>
 <tr class="separator:a186d1bbd333005f0b2e28ca119f3c12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68de8520fc152e5123e99deef16c5fdd"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a68de8520fc152e5123e99deef16c5fdd">player_</a></td></tr>
-<tr class="separator:a68de8520fc152e5123e99deef16c5fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3267db699ca8b8836380d084c53407e"><td class="memItemLeft" align="right" valign="top">vector&lt; shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#ae3267db699ca8b8836380d084c53407e">game_objects_</a></td></tr>
-<tr class="separator:ae3267db699ca8b8836380d084c53407e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1f6dc176fd15cd87bb2c00cc1419edc"><td class="memItemLeft" align="right" valign="top">vector&lt; shared_ptr&lt; <a class="el" href="class_i_moving_entity.html">IMovingEntity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#ab1f6dc176fd15cd87bb2c00cc1419edc">moving_game_objects_</a></td></tr>
-<tr class="separator:ab1f6dc176fd15cd87bb2c00cc1419edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d9bd013cf00f46880fa26e3bd538798"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a3d9bd013cf00f46880fa26e3bd538798">high_score_</a></td></tr>
-<tr class="separator:a3d9bd013cf00f46880fa26e3bd538798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a725785d85f3db11790dafd8f60178a3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_screen_state_8h.html#a5fc5d61fa8521ce5476183998579fa9b">ScreenState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a725785d85f3db11790dafd8f60178a3a">screen_state_</a></td></tr>
 <tr class="separator:a725785d85f3db11790dafd8f60178a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a599becacc903f250d42996ca11bba165"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logic.html#a599becacc903f250d42996ca11bba165">debounceSpaceKey_</a></td></tr>
-<tr class="separator:a599becacc903f250d42996ca11bba165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class performs the logic that defines how the game objects behave. </p>
+<div class="textblock"><p>This class uses <a class="el" href="class_game_engine.html" title="This class has the responsibility of creating all the enemy objects of the game and the creation of M...">GameEngine</a>'s function to perform the logic of the game. It tells <a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a> to load the game assets needed to present the game logic. It then presents the logic to the <a class="el" href="class_presentation.html" title="Uses the SFML Graphics Library to draw all game objects on the screen. ">Presentation</a> Layer for it to be rendered on the game screen. The game is controlled by this class. </p>
 <dl class="section author"><dt>Author</dt><dd>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -222,7 +190,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default <a class="el" href="class_logic.html" title="This class performs the logic that defines how the game objects behave. ">Logic</a> constructor. An instance of the game is created and the game objects are initialized. </p>
+<p>Default <a class="el" href="class_logic.html" title="This class uses GameEngine&#39;s function to perform the logic of the game. It tells AssetManager to load...">Logic</a> constructor. An instance of the game is created and the game objects are initialized. </p>
 
 </div>
 </div>
@@ -246,222 +214,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a91ff0c77244fcb15a77d506837751c74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91ff0c77244fcb15a77d506837751c74">&#9670;&nbsp;</a></span>checkCollisions()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Logic::checkCollisions </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Checks for collisions between game objects. </p>
-
-</div>
-</div>
-<a id="ae5f432d4b5b457a7f88c42b34f28f682"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5f432d4b5b457a7f88c42b34f28f682">&#9670;&nbsp;</a></span>generateAScorpion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Logic::generateAScorpion </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Generates a <a class="el" href="class_scorpion.html" title="This is a class that inherits from the IMovingEntity class. It models a Scorpion object in the game...">Scorpion</a> at a random position. </p>
-
-</div>
-</div>
-<a id="a8e083d0e64f6166e1621578c34270e37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e083d0e64f6166e1621578c34270e37">&#9670;&nbsp;</a></span>generateASpider()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Logic::generateASpider </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Generates a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> at random either at the left or right boundary. </p>
-
-</div>
-</div>
-<a id="a16d5915e489331198e33318c4e59eeeb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16d5915e489331198e33318c4e59eeeb">&#9670;&nbsp;</a></span>generateCentipedeHeads()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Logic::generateCentipedeHeads </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Generates Centipede heads. </p>
-
-</div>
-</div>
-<a id="a7d8384f6a1bd8e31c327109b1aa4e998"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d8384f6a1bd8e31c327109b1aa4e998">&#9670;&nbsp;</a></span>generateGameEnemies()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Logic::generateGameEnemies </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Generates all the game's moving enemies. </p>
-
-</div>
-</div>
-<a id="a847b8ccc9d13f1f80c2d0f6c897820a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a847b8ccc9d13f1f80c2d0f6c897820a4">&#9670;&nbsp;</a></span>generateMushroomAtCollision()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Logic::generateMushroomAtCollision </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Transforms all dead centipede segments from vector(s) into mushrooms. </p>
-
-</div>
-</div>
-<a id="a11a5ad0679ef70b1bf64b8367c0f5532"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11a5ad0679ef70b1bf64b8367c0f5532">&#9670;&nbsp;</a></span>generateMushrooms()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Logic::generateMushrooms </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Generates <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> objects. </p>
-
-</div>
-</div>
-<a id="ab11c4016cf06a493412935202921bbf0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab11c4016cf06a493412935202921bbf0">&#9670;&nbsp;</a></span>generateNormalCentipede()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Logic::generateNormalCentipede </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Generates the a Centipede with one head, and multiple body segments. </p>
-
-</div>
-</div>
 <a id="a92b3982ff6e3ec9d07a69369e579853e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a92b3982ff6e3ec9d07a69369e579853e">&#9670;&nbsp;</a></span>getInputCommands()</h2>
 
@@ -486,6 +238,33 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Tells presentation to process input from keyboard. </p>
+
+</div>
+</div>
+<a id="a550d59c11c52f56f313d8a2cc2744472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a550d59c11c52f56f313d8a2cc2744472">&#9670;&nbsp;</a></span>levelUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logic::levelUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plays the levelUp sound if the player's level has advanced. </p>
 
 </div>
 </div>
@@ -516,8 +295,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aab21423a4918a4047718cfdcda896aa3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab21423a4918a4047718cfdcda896aa3">&#9670;&nbsp;</a></span>reincarnateMushroom()</h2>
+<a id="a1f28901afa046c3605f1c78f4d092f4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f28901afa046c3605f1c78f4d092f4f">&#9670;&nbsp;</a></span>reincarnateMushrooms()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -526,7 +305,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Logic::reincarnateMushroom </td>
+          <td class="memname">void Logic::reincarnateMushrooms </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -539,7 +318,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Resets reincarnate of the <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> objects in the game. </p>
+<p>Reincarnates <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> objects in the game. </p>
 
 </div>
 </div>
@@ -566,34 +345,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Removes all Centipede segments from vector(s) where they exist, reset the position of the player and generate a new Centipede train. </p>
-
-</div>
-</div>
-<a id="abb059b52631dc541c89e46370d3bc688"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb059b52631dc541c89e46370d3bc688">&#9670;&nbsp;</a></span>removeDeadEntities()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Logic::removeDeadEntities </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Removes all dead entities from vector(s) where they exist. </p>
+<p>Removes all moving entities from the game, resets the position of the player and resets the current level of the game. </p>
 
 </div>
 </div>
@@ -620,7 +372,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gives <a class="el" href="class_presentation.html" title="Uses the SFML Graphics Library to draw all game objects on the screen. ">Presentation</a> a vector of game objects to be drawn. </p>
+<p>Gives <a class="el" href="class_presentation.html" title="Uses the SFML Graphics Library to draw all game objects on the screen. ">Presentation</a> the game objects from the <a class="el" href="class_game_engine.html" title="This class has the responsibility of creating all the enemy objects of the game and the creation of M...">GameEngine</a> class to be drawn. </p>
 
 </div>
 </div>
@@ -724,8 +476,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a23f4a972858bbea364850ebf0d188be6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23f4a972858bbea364850ebf0d188be6">&#9670;&nbsp;</a></span>updateGameObjects()</h2>
+<a id="a3a4eb286eb3264766bd3f155e199e166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a4eb286eb3264766bd3f155e199e166">&#9670;&nbsp;</a></span>startUp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -734,7 +486,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Logic::updateGameObjects </td>
+          <td class="memname">void Logic::startUp </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -747,7 +499,61 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Moves all the game objects that can be moved. </p>
+<p>Generates Mushrooms and plays the game start sound. </p>
+
+</div>
+</div>
+<a id="a78320b6d95a7d7d7b9610be4175b7fcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78320b6d95a7d7d7b9610be4175b7fcc">&#9670;&nbsp;</a></span>updateGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logic::updateGame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Runs the logic for the game. </p>
+
+</div>
+</div>
+<a id="a20aaa255bfe8db02e811f2c207a757fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20aaa255bfe8db02e811f2c207a757fd">&#9670;&nbsp;</a></span>updateMovingObjectsSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logic::updateMovingObjectsSound </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plays sound for spider and scorpion as they move. </p>
 
 </div>
 </div>
@@ -801,94 +607,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a39e57818cd82815230430030b1b102bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39e57818cd82815230430030b1b102bf">&#9670;&nbsp;</a></span>collisionHandler_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_collision_handler.html">CollisionHandler</a> Logic::collisionHandler_ {<a class="el" href="class_logic.html#a82cb53aaf924d2979028f9a6d020de61">grid_</a>}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a599becacc903f250d42996ca11bba165"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a599becacc903f250d42996ca11bba165">&#9670;&nbsp;</a></span>debounceSpaceKey_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Logic::debounceSpaceKey_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4e613c86b994577e051391b52d5c6023"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e613c86b994577e051391b52d5c6023">&#9670;&nbsp;</a></span>enemyFactory_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_enemy_factory.html">EnemyFactory</a> Logic::enemyFactory_ {<a class="el" href="class_logic.html#a82cb53aaf924d2979028f9a6d020de61">grid_</a>}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae3267db699ca8b8836380d084c53407e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3267db699ca8b8836380d084c53407e">&#9670;&nbsp;</a></span>game_objects_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt;shared_ptr&lt;<a class="el" href="class_i_entity.html">IEntity</a>&gt; &gt; Logic::game_objects_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a186d1bbd333005f0b2e28ca119f3c12e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a186d1bbd333005f0b2e28ca119f3c12e">&#9670;&nbsp;</a></span>game_timer_</h2>
 
@@ -911,6 +629,28 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0b65a2f34bed7e03dcfe290bc7a0efe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b65a2f34bed7e03dcfe290bc7a0efe8">&#9670;&nbsp;</a></span>gameEngine_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_engine.html">GameEngine</a> Logic::gameEngine_ {<a class="el" href="class_logic.html#a82cb53aaf924d2979028f9a6d020de61">grid_</a>}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a82cb53aaf924d2979028f9a6d020de61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82cb53aaf924d2979028f9a6d020de61">&#9670;&nbsp;</a></span>grid_</h2>
 
@@ -922,94 +662,6 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="class_grid.html">Grid</a> Logic::grid_ {592, 640}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3d9bd013cf00f46880fa26e3bd538798"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d9bd013cf00f46880fa26e3bd538798">&#9670;&nbsp;</a></span>high_score_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Logic::high_score_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad484dea3aa386ca99193d050ae7d72f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad484dea3aa386ca99193d050ae7d72f6">&#9670;&nbsp;</a></span>highScoreManager_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_high_score_manager.html">HighScoreManager</a> Logic::highScoreManager_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab1f6dc176fd15cd87bb2c00cc1419edc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1f6dc176fd15cd87bb2c00cc1419edc">&#9670;&nbsp;</a></span>moving_game_objects_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt;shared_ptr&lt;<a class="el" href="class_i_moving_entity.html">IMovingEntity</a>&gt; &gt; Logic::moving_game_objects_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a68de8520fc152e5123e99deef16c5fdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68de8520fc152e5123e99deef16c5fdd">&#9670;&nbsp;</a></span>player_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">shared_ptr&lt;<a class="el" href="class_player.html">Player</a>&gt; Logic::player_</td>
         </tr>
       </table>
   </td>
@@ -1075,7 +727,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_logic.html">Logic</a></li>
-    <li class="footer">Generated on Tue Oct 2 2018 23:18:00 for elen3009-project-2018 by
+    <li class="footer">Generated on Fri Oct 5 2018 21:28:44 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

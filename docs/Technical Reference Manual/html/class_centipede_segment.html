@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('class_centipede_segment.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>This is a class that inherits from the <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a> class. It contains virtual functions that will be overridden by <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> class.  
+<p>This is a class that inherits from the <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a> class. It contains virtual functions that will be overridden by <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> class. It models a centipede segment's functionality in the game. The BodyType of a <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object can be changed. A <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object can move itself. If it is <a class="el" href="class_centipede_segment.html#a55c00dc8b685be1fa126c0f07dcb7793a786329b34bbe53ab40a54a19cd597f2d">BodyType::BODY</a>, it stores where the head has had a collision and whether or not it was with a poisoned mushroom. Its movement checks if there are any head collisions and it changes direction if it is at a collision point.  
  <a href="class_centipede_segment.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_centipede_segment_8h_source.html">CentipedeSegment.h</a>&gt;</code></p>
@@ -129,7 +129,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aac251c0ece67b47f328dc042c9bba046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual Destructor. Destroys a <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object.  <a href="#aac251c0ece67b47f328dc042c9bba046">More...</a><br /></td></tr>
 <tr class="separator:aac251c0ece67b47f328dc042c9bba046"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6bc689b4060d0a0d89eb7a38acc1f21"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_centipede_segment.html#ac6bc689b4060d0a0d89eb7a38acc1f21">move</a> () override</td></tr>
-<tr class="memdesc:ac6bc689b4060d0a0d89eb7a38acc1f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that moves a <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object.  <a href="#ac6bc689b4060d0a0d89eb7a38acc1f21">More...</a><br /></td></tr>
+<tr class="memdesc:ac6bc689b4060d0a0d89eb7a38acc1f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that moves a <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object. Checks for head collision points in order to change direction. Calls the respective function to performs the poisoned movement of a <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object.  <a href="#ac6bc689b4060d0a0d89eb7a38acc1f21">More...</a><br /></td></tr>
 <tr class="separator:ac6bc689b4060d0a0d89eb7a38acc1f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4997b2a2ba86db0e9392084c7909341"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_centipede_segment.html#af4997b2a2ba86db0e9392084c7909341">getDirection</a> () const override</td></tr>
 <tr class="memdesc:af4997b2a2ba86db0e9392084c7909341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that returns the current direction of a <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object.  <a href="#af4997b2a2ba86db0e9392084c7909341">More...</a><br /></td></tr>
@@ -258,7 +258,7 @@ Static Private Attributes</h2></td></tr>
 <tr class="separator:ada28445100f986ff7174ee520c700ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is a class that inherits from the <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a> class. It contains virtual functions that will be overridden by <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> class. </p>
+<div class="textblock"><p>This is a class that inherits from the <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a> class. It contains virtual functions that will be overridden by <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> class. It models a centipede segment's functionality in the game. The BodyType of a <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object can be changed. A <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object can move itself. If it is <a class="el" href="class_centipede_segment.html#a55c00dc8b685be1fa126c0f07dcb7793a786329b34bbe53ab40a54a19cd597f2d">BodyType::BODY</a>, it stores where the head has had a collision and whether or not it was with a poisoned mushroom. Its movement checks if there are any head collisions and it changes direction if it is at a collision point. </p>
 <dl class="section author"><dt>Author</dt><dd>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
@@ -336,10 +336,10 @@ Static Private Attributes</h2></td></tr>
 <p>Parameterized Constructor. Creates a centipede segment object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">grid</td><td>is of type grid. </td></tr>
+    <tr><td class="paramname">grid</td><td>is of type <a class="el" href="class_grid.html" title="This class contains details about the screen such as the screen width and height. ...">Grid</a>. </td></tr>
     <tr><td class="paramname">bodytype</td><td>is of type BodyType enum class. </td></tr>
     <tr><td class="paramname">position</td><td>is of type <a class="el" href="class_position.html" title="A class that contains an x and y value representing a screen position. ">Position</a>. </td></tr>
-    <tr><td class="paramname">cur_Direction</td><td>is of type Direction enum class. </td></tr>
+    <tr><td class="paramname">cur_Direction</td><td>is an eum of type Direction enum class. </td></tr>
   </table>
   </dd>
 </dl>
@@ -507,7 +507,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A function that returns the body type of the centipede segment. </p>
-<dl class="section return"><dt>Returns</dt><dd>The body type of the object of type BodyType of the enum class. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>BodyType an enum of type strongly typed enum class BodyType. </dd></dl>
 
 </div>
 </div>
@@ -595,6 +595,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that will be used to return a <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object's hit points. </p>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
 <p>Implements <a class="el" href="class_i_moving_entity.html#a5c9e0ee005efc8956466dca6f1f7f1e4">IMovingEntity</a>.</p>
 
@@ -624,7 +625,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that returns a enum of ObjectType of a <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object. </p>
-<dl class="section return"><dt>Returns</dt><dd>An enum of the strongly typed enum class ObjectType. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>ObjectType an enum of the strongly typed enum class ObjectType. </dd></dl>
 
 <p>Implements <a class="el" href="class_i_moving_entity.html#a847e36ca99c5a9cc9636e17c2172431d">IMovingEntity</a>.</p>
 
@@ -726,7 +727,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A function that returns the rotation angle of the centipede segment. </p>
-<dl class="section return"><dt>Returns</dt><dd>The rotation angle of type float. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
 </div>
 </div>
@@ -867,7 +868,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that moves a <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object. </p>
+<p>Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that moves a <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object. Checks for head collision points in order to change direction. Calls the respective function to performs the poisoned movement of a <a class="el" href="class_centipede_segment.html" title="This is a class that inherits from the IMovingEntity class. It contains virtual functions that will b...">CentipedeSegment</a> object. </p>
 
 <p>Implements <a class="el" href="class_i_moving_entity.html#a5894f3ff2c9b15299e94e84c3234236e">IMovingEntity</a>.</p>
 
@@ -1442,7 +1443,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_centipede_segment.html">CentipedeSegment</a></li>
-    <li class="footer">Generated on Tue Oct 2 2018 23:18:00 for elen3009-project-2018 by
+    <li class="footer">Generated on Fri Oct 5 2018 21:28:43 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

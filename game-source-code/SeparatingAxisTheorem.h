@@ -19,8 +19,15 @@ using std::max;
 /** \class SeparatingAxisTheorem
  *  \brief This is a class used to determine overlap between BoundaryBox objects.
  *  This class makes use of the Separating Axis Theorem algorithm that checks for
- *  overlap between rectangles. Checks for overlap along all edges of the two
- *  BoundaryBox objects being checked.
+ *  overlap between convex polygons. The polygons implemented are Rectangle shapes
+ *  which are created in the BoundaryBox class.
+ *  The algorithm checks for overlap along all edges of the two BoundaryBox objects
+ *  being checked. Projects the vertices of the BoundaryBox objects onto four axes.
+ *  The axes are generated from the edges of the BoundaryBox objects, two from each one.
+ *  The projections are then used to check for overlap.
+ *  If a any of the axis detect no overlap, the algorithm returns false for no overlap.
+ *  Otherwise, the other axis are checked for overlap. The Minimum Translation Vector
+ *  (MTV) is also calculated in order to move BoundaryBox objects out of overlap.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -51,7 +58,7 @@ class SeparatingAxisTheorem
         Position min_translation_vector_;
 
         /** \brief Generates the normals perpendicular to the edges of a Rectangle.
-         *  The normals are stored in a vector of type Position. 
+         *  The normals are stored in a vector of type Position.
 		 *	These normals are used as an axes for vector projection later on.
          */
         void generateAxes();
@@ -71,7 +78,7 @@ class SeparatingAxisTheorem
         Position normalizeAxis(const Position& axis);
 
         /** \brief Performs vector projection onto axes generated.
-         *  \details The vertices of a Rectangle are projected onto an axis to
+         *  The vertices of a Rectangle, boundary box, are projected onto an axis to
          *  determine where on the axis it is located. It returns the min and max
          *  projections of the Rectangle on the axis given.
          *  \param axis is of type Position.
@@ -82,7 +89,7 @@ class SeparatingAxisTheorem
         tuple<float, float> projectVectorsOntoAxis(const Position& axis,
                                                    vector<Position>& vertices);
 
-        /** \brief Iterates through the axes generated and checks for overlap on each. 
+        /** \brief Iterates through the axes generated and checks for overlap on each.
 		 *	Each BoundaryBox's vertices are projected onto an axis by
          *  using projectVectorsOntoAxis.
          *  If overlap occurs on each axis then true is returned, otherwise false.

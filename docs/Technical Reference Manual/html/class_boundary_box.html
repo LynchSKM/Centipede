@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('class_boundary_box.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>This class constructs a rectangle shape with the given the width, height, center and rotation angle if any.  
+<p>This class constructs a rectangle shape with the given the width, height, center and rotation angle if any. The construction requires the centre point of the rectangle shape to be given. The vertices of the boundary box are then calculated using the centre point and the rotation angle. These vertices are stored in a vector of type <a class="el" href="class_position.html" title="A class that contains an x and y value representing a screen position. ">Position</a> in the order upper left, upper right, bottom left, and bottom right.  
  <a href="class_boundary_box.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_boundary_box_8h_source.html">BoundaryBox.h</a>&gt;</code></p>
@@ -107,7 +107,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7f8687dbb5b79bf3d54002ddb4722ff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterized Constructor. Creates a <a class="el" href="class_boundary_box.html" title="This class constructs a rectangle shape with the given the width, height, center and rotation angle i...">BoundaryBox</a> object.  <a href="#a7f8687dbb5b79bf3d54002ddb4722ff0">More...</a><br /></td></tr>
 <tr class="separator:a7f8687dbb5b79bf3d54002ddb4722ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5f649399746662fa0176e95c632ca9c"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_position.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_boundary_box.html#ac5f649399746662fa0176e95c632ca9c">getVertices</a> () const</td></tr>
-<tr class="memdesc:ac5f649399746662fa0176e95c632ca9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function that returns the vertices of the boundary box in a vector of type <a class="el" href="class_position.html" title="A class that contains an x and y value representing a screen position. ">Position</a>.  <a href="#ac5f649399746662fa0176e95c632ca9c">More...</a><br /></td></tr>
+<tr class="memdesc:ac5f649399746662fa0176e95c632ca9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function that returns the vertices of the boundary box in a vector of type <a class="el" href="class_position.html" title="A class that contains an x and y value representing a screen position. ">Position</a>. The order of the vertices is upper left, upper right, bottom left, and bottom right.  <a href="#ac5f649399746662fa0176e95c632ca9c">More...</a><br /></td></tr>
 <tr class="separator:ac5f649399746662fa0176e95c632ca9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65bb6862f97d835fe47776fe7315b4f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_boundary_box.html#a65bb6862f97d835fe47776fe7315b4f7">~BoundaryBox</a> ()</td></tr>
 <tr class="memdesc:a65bb6862f97d835fe47776fe7315b4f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Destructor. Destroys a Boundary box.  <a href="#a65bb6862f97d835fe47776fe7315b4f7">More...</a><br /></td></tr>
@@ -116,16 +116,16 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a1cba9f491c3a5426b9ee2528724d5a08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_boundary_box.html#a1cba9f491c3a5426b9ee2528724d5a08">calculateVertex</a> (float radius, float angle)</td></tr>
-<tr class="memdesc:a1cba9f491c3a5426b9ee2528724d5a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the vertex of the boundary box. Given a radius from the centre point and the angle relative to the centre point, a vertex can be calculated. These values are obtained by constructing the rectangle shape at an orientation of zero.  <a href="#a1cba9f491c3a5426b9ee2528724d5a08">More...</a><br /></td></tr>
+<tr class="memdesc:a1cba9f491c3a5426b9ee2528724d5a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the vertex of the boundary box. Given a radius from the centre point and the angle relative to the centre point, a vertex can be calculated. These values are obtained by constructing the rectangle shape at a rotation of zero degrees.  <a href="#a1cba9f491c3a5426b9ee2528724d5a08">More...</a><br /></td></tr>
 <tr class="separator:a1cba9f491c3a5426b9ee2528724d5a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf00608cd66309da5475b0d440ec7b64"><td class="memItemLeft" align="right" valign="top">tuple&lt; float, float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_boundary_box.html#acf00608cd66309da5475b0d440ec7b64">pointModArg</a> (float opposite, float adjacent)</td></tr>
 <tr class="memdesc:acf00608cd66309da5475b0d440ec7b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes in two sides of a right angled triangle and performs trig math to get a hypotenuse and angle between hypotenuse and adjacent.  <a href="#acf00608cd66309da5475b0d440ec7b64">More...</a><br /></td></tr>
 <tr class="separator:acf00608cd66309da5475b0d440ec7b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c1a771b3bae59a88bce67dc3a00856d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_boundary_box.html#a7c1a771b3bae59a88bce67dc3a00856d">sortPoints</a> ()</td></tr>
-<tr class="memdesc:a7c1a771b3bae59a88bce67dc3a00856d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates through the vertices of a rotated boundary box.  <a href="#a7c1a771b3bae59a88bce67dc3a00856d">More...</a><br /></td></tr>
+<tr class="memdesc:a7c1a771b3bae59a88bce67dc3a00856d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates through the vertices of a rotated boundary box. The order of the vertices being saved is necessary for other classes that require it. This function pushes the generated vertices into a vector in the vertex order: Upper Left, Upper Right, Bottom Left and Bottom Right.  <a href="#a7c1a771b3bae59a88bce67dc3a00856d">More...</a><br /></td></tr>
 <tr class="separator:a7c1a771b3bae59a88bce67dc3a00856d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab955a613deab2629c4d780bf79463a70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_boundary_box.html#ab955a613deab2629c4d780bf79463a70">constructBoundaryBox</a> ()</td></tr>
-<tr class="memdesc:ab955a613deab2629c4d780bf79463a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a boundary box around a centre point with the parameters taken in by the constructor. Creates vertices using the calculateVertex function. The created vertices are then push into the private member vector in the order specified. Gets called in the constructor to immediately create the boundary box once all the parameters needed are saved.  <a href="#ab955a613deab2629c4d780bf79463a70">More...</a><br /></td></tr>
+<tr class="memdesc:ab955a613deab2629c4d780bf79463a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a boundary box around a centre point with the parameters taken in by the constructor. Creates vertices using the calculateVertex function. The created vertices are then saved into the private member vector vertices_ in the order specified. Gets called in the constructor to immediately create the boundary box once all the parameters needed are saved.  <a href="#ab955a613deab2629c4d780bf79463a70">More...</a><br /></td></tr>
 <tr class="separator:ab955a613deab2629c4d780bf79463a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -142,7 +142,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a897a8c477d6822a62725ca75269c813f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class constructs a rectangle shape with the given the width, height, center and rotation angle if any. </p>
+<div class="textblock"><p>This class constructs a rectangle shape with the given the width, height, center and rotation angle if any. The construction requires the centre point of the rectangle shape to be given. The vertices of the boundary box are then calculated using the centre point and the rotation angle. These vertices are stored in a vector of type <a class="el" href="class_position.html" title="A class that contains an x and y value representing a screen position. ">Position</a> in the order upper left, upper right, bottom left, and bottom right. </p>
 <dl class="section author"><dt>Author</dt><dd>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -251,7 +251,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Calculates the vertex of the boundary box. Given a radius from the centre point and the angle relative to the centre point, a vertex can be calculated. These values are obtained by constructing the rectangle shape at an orientation of zero. </p>
+<p>Calculates the vertex of the boundary box. Given a radius from the centre point and the angle relative to the centre point, a vertex can be calculated. These values are obtained by constructing the rectangle shape at a rotation of zero degrees. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">radius</td><td>is a float and contains the radius (half diagonal length) from centre. </td></tr>
@@ -286,7 +286,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Builds a boundary box around a centre point with the parameters taken in by the constructor. Creates vertices using the calculateVertex function. The created vertices are then push into the private member vector in the order specified. Gets called in the constructor to immediately create the boundary box once all the parameters needed are saved. </p>
+<p>Builds a boundary box around a centre point with the parameters taken in by the constructor. Creates vertices using the calculateVertex function. The created vertices are then saved into the private member vector vertices_ in the order specified. Gets called in the constructor to immediately create the boundary box once all the parameters needed are saved. </p>
 
 </div>
 </div>
@@ -305,7 +305,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>A function that returns the vertices of the boundary box in a vector of type <a class="el" href="class_position.html" title="A class that contains an x and y value representing a screen position. ">Position</a>. </p>
+<p>A function that returns the vertices of the boundary box in a vector of type <a class="el" href="class_position.html" title="A class that contains an x and y value representing a screen position. ">Position</a>. The order of the vertices is upper left, upper right, bottom left, and bottom right. </p>
 <dl class="section return"><dt>Returns</dt><dd>vector&lt;Position&gt; containing the vertices of the boundary box. </dd></dl>
 
 </div>
@@ -379,8 +379,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Iterates through the vertices of a rotated boundary box. </p>
-<p>The order of the vertices being saved is necessary for other classes that require it. This function pushes the generated vertices into a vector in the vertex order: Upper Left, Upper Right, Bottom Left and Bottom Right. </p>
+<p>Iterates through the vertices of a rotated boundary box. The order of the vertices being saved is necessary for other classes that require it. This function pushes the generated vertices into a vector in the vertex order: Upper Left, Upper Right, Bottom Left and Bottom Right. </p>
 
 </div>
 </div>
@@ -505,7 +504,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_boundary_box.html">BoundaryBox</a></li>
-    <li class="footer">Generated on Tue Oct 2 2018 23:18:00 for elen3009-project-2018 by
+    <li class="footer">Generated on Fri Oct 5 2018 21:28:43 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

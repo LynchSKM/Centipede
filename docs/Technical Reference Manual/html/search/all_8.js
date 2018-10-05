@@ -18,6 +18,8 @@ var searchData=
   ['ishit',['isHit',['../class_player.html#a1f81977b3897c45394f2c6b76100bc0d',1,'Player']]],
   ['isleftpressed',['isLeftPressed',['../class_presentation.html#a7aebdf3fb5663b1dd11dbc30963984c2',1,'Presentation']]],
   ['isleftpressed_5f',['isLeftPressed_',['../class_presentation.html#a519c0df57f7d36e69a723eb2081ddc39',1,'Presentation']]],
+  ['ismushroomreincarnationcomplete',['isMushroomReincarnationComplete',['../class_game_engine.html#a07b49474a3a04a87474e972598bc3fc4',1,'GameEngine']]],
+  ['isplayerbulletfired',['isPlayerBulletFired',['../class_game_engine.html#ab2ef56df23459ef25fafa43992370872',1,'GameEngine']]],
   ['ispoisoned',['isPoisoned',['../class_centipede_segment.html#a86c70cd3201c47d9e2e7408cd5dc1ad8',1,'CentipedeSegment::isPoisoned()'],['../class_i_entity.html#ad7a6082df7cf5c355bbff774652d4b85',1,'IEntity::isPoisoned()'],['../class_i_moving_entity.html#ab655d8dfe0684e4bc6f34ae9d57ed654',1,'IMovingEntity::isPoisoned()'],['../class_mushroom.html#a0840e787fbd23da11c726b052ccb583e',1,'Mushroom::isPoisoned()'],['../class_player.html#a0c8161e76c6c2a68d423174020e34387',1,'Player::isPoisoned()'],['../class_player_bullet.html#a8109aea66a0c709fc9ad59a4e58015a9',1,'PlayerBullet::isPoisoned()'],['../class_scorpion.html#a611f920523a55ab4b60e49e65f2bbf2d',1,'Scorpion::isPoisoned()'],['../class_spider.html#af84ecfac0c9151519c6cf03c6ae18b14',1,'Spider::isPoisoned()']]],
   ['ispoisoned_5f',['isPoisoned_',['../class_centipede_segment.html#aeca130ccf117692257412a2665ad2390',1,'CentipedeSegment::isPoisoned_()'],['../class_mushroom.html#a953aa6a6aa1bce0531e952f5bae1a389',1,'Mushroom::isPoisoned_()']]],
   ['ispoisonedmovement',['isPoisonedMovement',['../class_centipede_segment.html#a48577193056f9c1b25a4fc524b0fcebb',1,'CentipedeSegment']]],
@@ -27,7 +29,6 @@ var searchData=
   ['isscorpiongenerated_5f',['isScorpionGenerated_',['../class_enemy_factory.html#a978031f350c388e809e81b5d49145c6d',1,'EnemyFactory']]],
   ['isspacepressed',['isSpacePressed',['../class_presentation.html#a2f8e4c78cc85ccd9a0410370f66ffaba',1,'Presentation']]],
   ['isspacepressed_5f',['isSpacePressed_',['../class_presentation.html#a3408af9750851434bdfbb2265ad4a76b',1,'Presentation']]],
-  ['isspidergenerated_5f',['isSpiderGenerated_',['../class_enemy_factory.html#ae2ff21ee4eeacfba93f54c8ec93c0c02',1,'EnemyFactory']]],
   ['isuppressed',['isUpPressed',['../class_presentation.html#a36e1855d959346115eee06d327686551',1,'Presentation']]],
   ['isuppressed_5f',['isUpPressed_',['../class_presentation.html#af9aba72db98840fdb1d2dc892f564a3d',1,'Presentation']]],
   ['iswindowopen',['isWindowOpen',['../class_presentation.html#a886dde2ac9b78eb0e1bee3aab9111be6',1,'Presentation']]]

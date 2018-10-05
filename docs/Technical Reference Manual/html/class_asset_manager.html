@@ -89,14 +89,17 @@ $(document).ready(function(){initNavTree('class_asset_manager.html','');});
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_asset_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AssetManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game.  
+<p>A data layer class containing a AssetType and the path to the asset. Loads the assets (textures, fonts, sounds) used by the game. This class also stores details about the number of images in the game textures and the direction objects face in the texture if any.  
  <a href="class_asset_manager.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_asset_manager_8h_source.html">AssetManager.h</a>&gt;</code></p>
@@ -106,15 +109,16 @@ Public Types</h2></td></tr>
 <tr class="memitem:ab4e7588608f25b6b0bc502fc62ace728"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728">AssetType</a> { <br />
 &#160;&#160;<a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a4aaf23261cd3bd2064183cf1b53f1023">AssetType::FONT</a> = 0, 
 <a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a8d09f2179ed9a38af4aefc3ceb396dd0">AssetType::GUNSHOT_SOUND</a>, 
+<a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a7ee2caf3f0273d8e39547764c90ea65f">AssetType::LEVEL_UP</a>, 
 <a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a86ef33df884491f473940b89335a4b72">AssetType::MUSHROOM_REGEN</a>, 
-<a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728aebc5c5eacbc3902aa67cb7b6e6e2a3f2">AssetType::SCORPION_MOVE</a>, 
 <br />
-&#160;&#160;<a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a927f84b41f3304e094cad785e03ddf3a">AssetType::SPIDER_MOVE</a>, 
+&#160;&#160;<a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728aebc5c5eacbc3902aa67cb7b6e6e2a3f2">AssetType::SCORPION_MOVE</a>, 
+<a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a927f84b41f3304e094cad785e03ddf3a">AssetType::SPIDER_MOVE</a>, 
 <a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a07c80e2a355d91402a00d82b1fa13855">AssetType::PLAYER</a>, 
 <a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a5fb9dc502beb6f75a2175f0ea535437d">AssetType::BULLET</a>, 
-<a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728ac68f4cf41704abc0bb325bdc35cb7da5">AssetType::CENTIPEDE</a>, 
 <br />
-&#160;&#160;<a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728afd232a32dcfdd49f24c59870b97e66ce">AssetType::MUSHROOM</a>, 
+&#160;&#160;<a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728ac68f4cf41704abc0bb325bdc35cb7da5">AssetType::CENTIPEDE</a>, 
+<a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728afd232a32dcfdd49f24c59870b97e66ce">AssetType::MUSHROOM</a>, 
 <a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728aad43791d4a1bab20f04a2d8a85ffc34b">AssetType::SCORPION</a>, 
 <a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a9e7abc16c6a1b9bcd2d330c63933d981">AssetType::SPIDER</a>
 <br />
@@ -125,20 +129,35 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a750ae7b39b633fbb6594443aa3ca704b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asset_manager.html#a750ae7b39b633fbb6594443aa3ca704b">AssetManager</a> ()</td></tr>
-<tr class="memdesc:a750ae7b39b633fbb6594443aa3ca704b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_asset_manager.html" title="A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. ">AssetManager</a> - Default Class Constructor.  <a href="#a750ae7b39b633fbb6594443aa3ca704b">More...</a><br /></td></tr>
+<tr class="memdesc:a750ae7b39b633fbb6594443aa3ca704b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a> - Default Class Constructor.  <a href="#a750ae7b39b633fbb6594443aa3ca704b">More...</a><br /></td></tr>
 <tr class="separator:a750ae7b39b633fbb6594443aa3ca704b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa496cc2f1edebf56e86433ef99c1e81c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asset_manager.html#aa496cc2f1edebf56e86433ef99c1e81c">AssetManager</a> (<a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728">AssetType</a> asset_type, string asset_path)</td></tr>
-<tr class="memdesc:aa496cc2f1edebf56e86433ef99c1e81c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterized Constructor. Creates an <a class="el" href="class_asset_manager.html" title="A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. ">AssetManager</a> object. Used to create a Asset Manager object containing the type of asset being loaded and the path where to find the asset.  <a href="#aa496cc2f1edebf56e86433ef99c1e81c">More...</a><br /></td></tr>
+<tr class="memdesc:aa496cc2f1edebf56e86433ef99c1e81c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterized Constructor. Creates an <a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a> object. Used to create an Asset Manager object containing the type of asset being loaded and the path where to find the asset.  <a href="#aa496cc2f1edebf56e86433ef99c1e81c">More...</a><br /></td></tr>
 <tr class="separator:aa496cc2f1edebf56e86433ef99c1e81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79e5640dadd7968dadc2c68f2841cc6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728">AssetType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asset_manager.html#a79e5640dadd7968dadc2c68f2841cc6d">getAssetType</a> () const</td></tr>
-<tr class="memdesc:a79e5640dadd7968dadc2c68f2841cc6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the AssetType related to the <a class="el" href="class_asset_manager.html" title="A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. ">AssetManager</a>.  <a href="#a79e5640dadd7968dadc2c68f2841cc6d">More...</a><br /></td></tr>
+<tr class="memdesc:a79e5640dadd7968dadc2c68f2841cc6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the AssetType related to the <a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a>.  <a href="#a79e5640dadd7968dadc2c68f2841cc6d">More...</a><br /></td></tr>
 <tr class="separator:a79e5640dadd7968dadc2c68f2841cc6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad530cf1291bc9a973b35ad7a113a5555"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asset_manager.html#ad530cf1291bc9a973b35ad7a113a5555">getAssetPath</a> () const</td></tr>
 <tr class="memdesc:ad530cf1291bc9a973b35ad7a113a5555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the path on the disk related to the asset.  <a href="#ad530cf1291bc9a973b35ad7a113a5555">More...</a><br /></td></tr>
 <tr class="separator:ad530cf1291bc9a973b35ad7a113a5555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6d8a0e2fee83023270c7e82c00dc0d7"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_asset_manager.html">AssetManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asset_manager.html#ab6d8a0e2fee83023270c7e82c00dc0d7">getAssetInfo</a> ()</td></tr>
-<tr class="memdesc:ab6d8a0e2fee83023270c7e82c00dc0d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of type <a class="el" href="class_asset_manager.html" title="A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. ">AssetManager</a> containing all the asset information for the project.  <a href="#ab6d8a0e2fee83023270c7e82c00dc0d7">More...</a><br /></td></tr>
+<tr class="memdesc:ab6d8a0e2fee83023270c7e82c00dc0d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of type <a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a> containing all the asset information for the project.  <a href="#ab6d8a0e2fee83023270c7e82c00dc0d7">More...</a><br /></td></tr>
 <tr class="separator:ab6d8a0e2fee83023270c7e82c00dc0d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ab700d665ef3fe7eb5b234e76485b3"><td class="memItemLeft" align="right" valign="top">tuple&lt; vector&lt; unsigned int &gt;, <a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asset_manager.html#a56ab700d665ef3fe7eb5b234e76485b3">getTextureDetails</a> () const</td></tr>
+<tr class="memdesc:a56ab700d665ef3fe7eb5b234e76485b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a tuple with a vector of type unsigned int containing the rows and columns in an image and a direction enum which gives information about the direction images face in the texture.  <a href="#a56ab700d665ef3fe7eb5b234e76485b3">More...</a><br /></td></tr>
+<tr class="separator:a56ab700d665ef3fe7eb5b234e76485b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a368b02a0bc1f5029d96d244311a40b8d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asset_manager.html#a368b02a0bc1f5029d96d244311a40b8d">loadTextureDetails</a> ()</td></tr>
+<tr class="memdesc:a368b02a0bc1f5029d96d244311a40b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates the map used to store the rows, columns and the default direction that images face in the texture for each game object. It is a static function because the map being updated is a static private member.  <a href="#a368b02a0bc1f5029d96d244311a40b8d">More...</a><br /></td></tr>
+<tr class="separator:a368b02a0bc1f5029d96d244311a40b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a917be7a066ccd660777c94b9df8b4084"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asset_manager.html#a917be7a066ccd660777c94b9df8b4084">captureDetails</a> (<a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728">AssetType</a> type_asset, int rows_in_image, int columns_in_image, <a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction)</td></tr>
+<tr class="memdesc:a917be7a066ccd660777c94b9df8b4084"><td class="mdescLeft">&#160;</td><td class="mdescRight">A private static function that helps <a class="el" href="class_asset_manager.html#a368b02a0bc1f5029d96d244311a40b8d" title="Populates the map used to store the rows, columns and the default direction that images face in the t...">loadTextureDetails()</a>. Takes in the necessary inputs to be saved into the static private map called texture_details_.  <a href="#a917be7a066ccd660777c94b9df8b4084">More...</a><br /></td></tr>
+<tr class="separator:a917be7a066ccd660777c94b9df8b4084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -146,9 +165,14 @@ Private Attributes</h2></td></tr>
 <tr class="separator:af90fb75825771c6cd2bee4e06fc289e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c46a45215485aa44fe26ed4c667b454"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asset_manager.html#a0c46a45215485aa44fe26ed4c667b454">assetPath_</a></td></tr>
 <tr class="separator:a0c46a45215485aa44fe26ed4c667b454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a740d5034ef7225f49401ed6efa73a565"><td class="memItemLeft" align="right" valign="top">static map&lt; <a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728">AssetType</a>, tuple&lt; vector&lt; unsigned int &gt;, <a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asset_manager.html#a740d5034ef7225f49401ed6efa73a565">texture_details_</a></td></tr>
+<tr class="separator:a740d5034ef7225f49401ed6efa73a565"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. </p>
+<div class="textblock"><p>A data layer class containing a AssetType and the path to the asset. Loads the assets (textures, fonts, sounds) used by the game. This class also stores details about the number of images in the game textures and the direction objects face in the texture if any. </p>
 <dl class="section author"><dt>Author</dt><dd>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
@@ -179,6 +203,8 @@ Private Attributes</h2></td></tr>
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab4e7588608f25b6b0bc502fc62ace728a4aaf23261cd3bd2064183cf1b53f1023"></a>FONT&#160;</td><td class="fielddoc"><p>Represents the game font used. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab4e7588608f25b6b0bc502fc62ace728a8d09f2179ed9a38af4aefc3ceb396dd0"></a>GUNSHOT_SOUND&#160;</td><td class="fielddoc"><p>Represents the sound used for bullets fired. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab4e7588608f25b6b0bc502fc62ace728a7ee2caf3f0273d8e39547764c90ea65f"></a>LEVEL_UP&#160;</td><td class="fielddoc"><p>Represents the sound used for Levelling up. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab4e7588608f25b6b0bc502fc62ace728a86ef33df884491f473940b89335a4b72"></a>MUSHROOM_REGEN&#160;</td><td class="fielddoc"><p>Represents the sound used for <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> regeneration. </p>
 </td></tr>
@@ -218,7 +244,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_asset_manager.html" title="A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. ">AssetManager</a> - Default Class Constructor. </p>
+<p><a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a> - Default Class Constructor. </p>
 
 </div>
 </div>
@@ -248,7 +274,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Parameterized Constructor. Creates an <a class="el" href="class_asset_manager.html" title="A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. ">AssetManager</a> object. Used to create a Asset Manager object containing the type of asset being loaded and the path where to find the asset. </p>
+<p>Parameterized Constructor. Creates an <a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a> object. Used to create an Asset Manager object containing the type of asset being loaded and the path where to find the asset. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">asset_type</td><td>is of type AssetType and contains the type of asset being loaded. </td></tr>
@@ -260,6 +286,65 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a917be7a066ccd660777c94b9df8b4084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a917be7a066ccd660777c94b9df8b4084">&#9670;&nbsp;</a></span>captureDetails()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AssetManager::captureDetails </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728">AssetType</a>&#160;</td>
+          <td class="paramname"><em>type_asset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows_in_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>columns_in_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A private static function that helps <a class="el" href="class_asset_manager.html#a368b02a0bc1f5029d96d244311a40b8d" title="Populates the map used to store the rows, columns and the default direction that images face in the t...">loadTextureDetails()</a>. Takes in the necessary inputs to be saved into the static private map called texture_details_. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type_asset</td><td>is of type AssetType. </td></tr>
+    <tr><td class="paramname">rows_in_image</td><td>is an int containing the rows in an image. </td></tr>
+    <tr><td class="paramname">columns_in_image</td><td>is an int containing the columns in an image. </td></tr>
+    <tr><td class="paramname">direction</td><td>is an Direction enum containing the default direction faced in an image. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab6d8a0e2fee83023270c7e82c00dc0d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab6d8a0e2fee83023270c7e82c00dc0d7">&#9670;&nbsp;</a></span>getAssetInfo()</h2>
 
@@ -275,7 +360,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a vector of type <a class="el" href="class_asset_manager.html" title="A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. ">AssetManager</a> containing all the asset information for the project. </p>
+<p>Returns a vector of type <a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a> containing all the asset information for the project. </p>
 <dl class="section return"><dt>Returns</dt><dd>vector&lt;AssetManager&gt; </dd></dl>
 
 </div>
@@ -315,8 +400,55 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the AssetType related to the <a class="el" href="class_asset_manager.html" title="A data class containing a AssetType and the path to the asset.Loads the assets (textures, fonts, sounds) used by the game. ">AssetManager</a>. </p>
+<p>Returns the AssetType related to the <a class="el" href="class_asset_manager.html" title="A data layer class containing a AssetType and the path to the asset. Loads the assets (textures...">AssetManager</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>AssetType enum a strongly typed enumeration of AssetType. </dd></dl>
+
+</div>
+</div>
+<a id="a56ab700d665ef3fe7eb5b234e76485b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56ab700d665ef3fe7eb5b234e76485b3">&#9670;&nbsp;</a></span>getTextureDetails()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tuple&lt; vector&lt; unsigned int &gt;, <a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> &gt; AssetManager::getTextureDetails </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a tuple with a vector of type unsigned int containing the rows and columns in an image and a direction enum which gives information about the direction images face in the texture. </p>
+<dl class="section return"><dt>Returns</dt><dd>tuple&lt;vector&lt;unsigned int&gt;, Direction&gt; </dd></dl>
+
+</div>
+</div>
+<a id="a368b02a0bc1f5029d96d244311a40b8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a368b02a0bc1f5029d96d244311a40b8d">&#9670;&nbsp;</a></span>loadTextureDetails()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AssetManager::loadTextureDetails </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Populates the map used to store the rows, columns and the default direction that images face in the texture for each game object. It is a static function because the map being updated is a static private member. </p>
 
 </div>
 </div>
@@ -367,6 +499,29 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a740d5034ef7225f49401ed6efa73a565"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740d5034ef7225f49401ed6efa73a565">&#9670;&nbsp;</a></span>texture_details_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">map&lt; <a class="el" href="class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728">AssetManager::AssetType</a>, tuple&lt; vector&lt; unsigned int &gt;, <a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> &gt; &gt; AssetManager::texture_details_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A static map that holds the rows, columns and default direction in an image for each texture. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_asset_manager_8h_source.html">AssetManager.h</a></li>
 <li><a class="el" href="_asset_manager_8cpp.html">AssetManager.cpp</a></li>
@@ -377,7 +532,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_asset_manager.html">AssetManager</a></li>
-    <li class="footer">Generated on Tue Oct 2 2018 23:18:00 for elen3009-project-2018 by
+    <li class="footer">Generated on Fri Oct 5 2018 21:28:43 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

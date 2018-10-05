@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('_collision_handler_8h.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html">CollisionHandler</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="class_logic.html" title="This class performs the logic that defines how the game objects behave. ">Logic</a> Layer class that determines whether collisions have occurred between game objects.  <a href="class_collision_handler.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="class_logic.html" title="This class uses GameEngine&#39;s function to perform the logic of the game. It tells AssetManager to load...">Logic</a> Layer class that determines whether collisions have occurred between game objects. This class makes use of the algorithm implemented in <a class="el" href="class_separating_axis_theorem.html" title="This is a class used to determine overlap between BoundaryBox objects. This class makes use of the Se...">SeparatingAxisTheorem</a> class to check for overlap between two <a class="el" href="class_boundary_box.html" title="This class constructs a rectangle shape with the given the width, height, center and rotation angle i...">BoundaryBox</a> objects. Depending on which game objects are overlapping the appropriate behaviour is determined. This class aims to reduce collision checks by making use of the <a class="el" href="class_spatial_hash.html" title="This class will be used by collision detection to query for objects around the object of interest...">SpatialHash</a> class. The spatial hash is generated every time <a class="el" href="class_collision_handler.html#af5ab6a0cfb3a81d178d41d4b51725c10" title="Checks for collisions between the game objects that are still alive. ">checkCollisions()</a> gets called. While iterating through the movable objects, the Spatial Hash is used to retrieve any nearby objects in the cell an object is located in. Collision checks are then only performed between an object and the objects in the same cell location(s).  <a href="class_collision_handler.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -137,7 +137,7 @@ Typedefs</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_5cf44830e849bf467dfbbcc5ff937fbf.html">game-source-code</a></li><li class="navelem"><a class="el" href="_collision_handler_8h.html">CollisionHandler.h</a></li>
-    <li class="footer">Generated on Tue Oct 2 2018 23:18:00 for elen3009-project-2018 by
+    <li class="footer">Generated on Fri Oct 5 2018 21:28:43 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

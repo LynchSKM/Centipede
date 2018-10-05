@@ -24,7 +24,15 @@ using IMovingEntity_ptr = shared_ptr<IMovingEntity>;
 
 /**	\class CollisionHandler
  * 	\brief A Logic Layer class that determines whether collisions have occurred
- * 	between game objects.
+ * 	between game objects. This class makes use of the algorithm implemented in
+ *  SeparatingAxisTheorem class to check for overlap between two BoundaryBox objects.
+ *  Depending on which game objects are overlapping the appropriate behaviour is
+ *  determined. This class aims to reduce collision checks by making use of the
+ *  SpatialHash class. The spatial hash is generated every time checkCollisions()
+ *  gets called. While iterating through the movable objects, the Spatial Hash is
+ *  used to retrieve any nearby objects in the cell an object is located in.
+ *  Collision checks are then only performed between an object and the objects in the
+ *  same cell location(s).
  * 	\author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  * 	\version 3.0
  */
@@ -80,7 +88,7 @@ class CollisionHandler
                                         vector<IMovingEntity_ptr>::iterator game_objects_end,
                                         ObjectType object_type);
 
-        /** \brief Checks whether a player bullet collides with every other game object near it.
+        /** \brief Checks whether a PlayerBullet collides with every other game object near it.
          *  If collisions occur both call their respective eliminated()
          *  functions. Mushroom will decrement its number of lives while others will set alive status false.
          *  \param player_bullets is a vector of shared pointers to IMovingEntity objects of ObjectType::PLAYER_LASER_BULLET.
@@ -98,7 +106,7 @@ class CollisionHandler
         void splitCentipedeTrain(vector<IMovingEntity_ptr>& centipede,
                                  IEntity_ptr& segment);
 
-        /** \brief Checks collisions between a centipede and a mushroom.
+        /** \brief Checks collisions between a centipede and a Mushroom.
          *  If a collision occurs, the Centipede segment goes down and changes direction.
          *  \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
          */
@@ -110,7 +118,7 @@ class CollisionHandler
          */
         void centipedeCollidesWithCentipede(vector<IMovingEntity_ptr>& centipede);
 
-        /** \brief Updates the train behind a head that has has collided with a
+        /** \brief Updates the train behind a head that has collided with a
          *  Mushroom or another Centipede train.
          *  \param centipede is a vector of shared pointers to IMovingEntity objects of ObjectType::CENTIPEDE.
          *  \param segment is a shared pointer to an IEntity object of type ObjectType::CENTIPEDE.
@@ -125,21 +133,22 @@ class CollisionHandler
                                   bool poisoned_position,
                                   bool move_out_of_collision);
 
-        /** \brief Checks collisions between a player and other game objects.
+        /** \brief Checks collisions between a Player and other game objects.
          *  If a collision occurs, with a Mushroom the player's direction is set to NONE.
-         *  If it's anything other than a mushroom the player loses a life.
+         *  If it's anything other than a Mushroom the player loses a life.
          *  \param player is a shared pointer to an IMovingEntity object of ObjectType::PLAYER.
          */
         void playerCollidesWithObjects(vector<IMovingEntity_ptr>& player);
 
-        /** \brief Checks collisions between a scorpion and mushroom.
+        /** \brief Checks collisions between a Scorpion and Mushroom.
          *  If a collision occurs with a mushroom, the mushroom is set to poisoned.
-         *  \param scorpions vector of shared pointer(s) to an IMovingEntity object of ObjectType::SCORPION.
+         *  \param scorpions is a vector of shared pointer(s) to an IMovingEntity object of ObjectType::SCORPION.
          */
         void scorpionCollidesWithMushroom(vector<IMovingEntity_ptr>& scorpions);
 
-        /** \brief Checks collisions between a spider and mushroom.
+        /** \brief Checks collisions between a Spider and Mushroom.
          *  If a collision occurs with a mushroom, the mushroom is set to eliminated.
+         *  Its alive status becomes false.
          *  \param spiders vector of shared pointer(s) to an IMovingEntity object of ObjectType::SPIDER.
          */
         void spiderCollidesWithMushroom(vector<IMovingEntity_ptr>& spiders);

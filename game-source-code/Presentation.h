@@ -47,8 +47,8 @@ class Presentation
         void processInputEvents();
 
         /** \brief Checks which key was pressed/released and updates its status.
-         * \param key of type Key from the sf keyboard.
-         * \param isPressed is a bool stating if there is a key that is pressed.
+         *  \param key of type Key from the sf keyboard.
+         *  \param isPressed is a bool stating if there is a key that is pressed.
          */
         void checkInput(const sf::Keyboard::Key key, const bool isPressed);
 
@@ -86,27 +86,27 @@ class Presentation
          */
         void loadTextures(const vector<AssetManager>& game_assets);
 
-        /** \brief Returns a bool indicating whether a key was pressed.
+        /** \brief Returns a bool indicating whether the LEFT arrow key was pressed.
          *  \return bool indicating key status.
          */
         bool isLeftPressed(){return isLeftPressed_;};
 
-        /** \brief Returns a bool indicating whether a key was pressed.
+        /** \brief Returns a bool indicating whether the RIGHT arrow key was pressed.
          *  \return bool indicating key status.
          */
         bool isRightPressed(){return isRightPressed_;};
 
-        /** \brief Returns a bool indicating whether a key was pressed.
+        /** \brief Returns a bool indicating whether the UP arrow key was pressed.
          *  \return bool indicating key status.
          */
         bool isUpPressed(){return isUpPressed_;};
 
-        /** \brief Returns a bool indicating whether a key was pressed.
+        /** \brief Returns a bool indicating whether the DOWN arrow key was pressed.
          *  \return bool indicating key status.
          */
         bool isDownPressed(){return isDownPressed_;};
 
-        /** \brief Returns a bool indicating whether a key was pressed.
+        /** \brief Returns a bool indicating whether the SPACEBAR key was pressed.
          *  \return bool indicating key status.
          */
         bool isSpacePressed(){return isSpacePressed_;};
@@ -140,7 +140,7 @@ class Presentation
         sf::Font font_;
 
         /** \enum GameSounds
-		 *  \brief Is a strongly typed enum class representing the type of game sounds.
+		 *  \brief A strongly typed enum class representing the type of game sounds.
 		 *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
 		 *  \version 3.0
 		 */
@@ -165,8 +165,8 @@ class Presentation
         bool isDownPressed_;
         bool isSpacePressed_;
 
-        /** \brief Displays the player's lives, current score and the high score
-         *  of the game.
+        /** \brief Displays the player's lives, current score, the high score and
+         *  current and max game levels of the game on the render window.
          *  \param remaining_lives is an int representing the player's remaining lives.
          *  \param player_score is an int that has the player's current score.
          *  \param high_score is an int that has the game's highest score.
@@ -205,14 +205,14 @@ class Presentation
         void updateAnimations(float delta_time);
 
         /** \brief Returns a sprite with the correct animation for animated moving
-         *  objects.
-         *  \param object is a constant shared pointer to an IEntity.
+         *  objects in the game.
+         *  \param object is a constant shared pointer to an IEntity passed by reference.
          *  \return sf::Sprite sprite with properties of the object given.
          */
         sf::Sprite generateSpriteFromSpriteSheet(const shared_ptr<IEntity>& object);
 
         /** \brief Returns a sf::Sprite with the necessary properties of the object given.
-         *  \param object is a constant shared pointer to an IEntity.
+         *  \param object is a constant shared pointer to an IEntity passed by reference.
          *  \return sf::Sprite sprite with properties of the object given.
          */
          sf::Sprite generateSprite(const shared_ptr<IEntity>& object);

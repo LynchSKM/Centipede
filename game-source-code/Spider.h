@@ -20,7 +20,10 @@ struct SpiderDimensions
 /** \class Spider
  *  \brief This is a class that inherits from the IMovingEntity class. It models
  *  a Spider object in the game. It contains virtual functions that
- *  will be overridden.
+ *  will be overridden. A Spider object moves in a zig-zag movement. This was
+ *  achieved by calculating slopes in a random range based on the Spider's current
+ *  position and moving it along the generated line. A Spider objects sets itself
+ *  to dead if it reaches the grid's left or right boundaries.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -38,7 +41,7 @@ class Spider : public IMovingEntity
         virtual ~Spider();
 
         /** \brief Inherited from IMovingEntity. A virtual function that moves
-         *  a Spider object.
+         *  a Spider object in a zig-zag movement.
          */
         virtual void move() override;
 
@@ -109,6 +112,7 @@ class Spider : public IMovingEntity
 
         /** \brief Inherited from IMovingEntity. A virtual function that will be
          *  used to return a Spider object's hit points.
+         *  \return int
          */
         virtual int getHitPoints() const override;
 

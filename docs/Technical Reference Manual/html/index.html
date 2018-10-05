@@ -93,7 +93,9 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="textblock"><p>This project was aimed at the development of a 2D game based on Atari's Centipede. SFML version 2.5.0 was required to be used as the graphics library and C++17 as the chosen standard for compilation.</p><ul>
 <li>The game has a <a class="el" href="class_player.html" title="This is a Player Class that inherits from the IMovingEntity class. It contains virtual functions that...">Player</a> that can be moved up, down, left or right in a fixed area near the bottom of the screen.</li>
 <li>The game has Scorpions, Spiders and Centipedes that the <a class="el" href="class_player.html" title="This is a Player Class that inherits from the IMovingEntity class. It contains virtual functions that...">Player</a> can shoot to gain points and win the game. Each has a different movement when generated on the game screen adding some difficulty to the game.</li>
-<li>Mushrooms are also generated and can be shot by the <a class="el" href="class_player.html" title="This is a Player Class that inherits from the IMovingEntity class. It contains virtual functions that...">Player</a>. These act as obstacles for the Centipede(s) in the game.</li>
+<li>A <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> moves in zigzag movement across the screen and eats <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> objects.</li>
+<li>The <a class="el" href="class_scorpion.html" title="This is a class that inherits from the IMovingEntity class. It models a Scorpion object in the game...">Scorpion</a> moves across screen and poisons <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> objects.</li>
+<li>Mushrooms are also generated and can be shot by the <a class="el" href="class_player.html" title="This is a Player Class that inherits from the IMovingEntity class. It contains virtual functions that...">Player</a>. These act as obstacles for the Centipede(s) in the game. Hitting a <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> object causes the Centipede to go down one row and change direction.</li>
 <li>Mushrooms can be poisoned by <a class="el" href="class_scorpion.html" title="This is a class that inherits from the IMovingEntity class. It models a Scorpion object in the game...">Scorpion</a> objects.</li>
 <li>Centipede Segments that are shot turn into <a class="el" href="class_mushroom.html" title="This is a class that defines a Mushroom object. It contains virtual functions inherited from IEntity ...">Mushroom</a> objects.</li>
 <li>Centipede(s) that touch poisoned Mushrooms dive down into the <a class="el" href="class_player.html" title="This is a Player Class that inherits from the IMovingEntity class. It contains virtual functions that...">Player</a>'s area. </li>
@@ -103,7 +105,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Oct 2 2018 23:18:01 for elen3009-project-2018 by
+    <li class="footer">Generated on Fri Oct 5 2018 21:28:44 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

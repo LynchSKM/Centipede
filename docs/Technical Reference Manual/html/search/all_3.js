@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['debouncespacekey_5f',['debounceSpaceKey_',['../class_logic.html#a599becacc903f250d42996ca11bba165',1,'Logic']]],
+  ['debouncespacekey_5f',['debounceSpaceKey_',['../class_game_engine.html#a7cb2ef361cb9321ff26d4c9289794a7a',1,'GameEngine']]],
   ['decrementlives',['decrementLives',['../class_mushroom.html#aea32363f28d76187d775a1cc31d7621f',1,'Mushroom']]],
   ['default_5fdirection_5f',['default_direction_',['../class_sprite_sheet.html#ab380714d6916d2058c3418304387da18',1,'SpriteSheet']]],
   ['definerowandcol',['defineRowAndCol',['../class_mushroom_factory.html#ab36c470ed0457df44768bca51bccab31',1,'MushroomFactory']]],
@@ -8,7 +8,7 @@ var searchData=
   ['direction',['Direction',['../_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa',1,'Direction.h']]],
   ['direction_2eh',['Direction.h',['../_direction_8h.html',1,'']]],
   ['direction_5f',['direction_',['../class_player.html#a035573615cefddd933c9e6babd5605fe',1,'Player::direction_()'],['../class_player_bullet.html#a4c88a15380ca5d66bd1adc3606849387',1,'PlayerBullet::direction_()'],['../class_scorpion.html#af07941f91292c30ff35aa40c0c0a441c',1,'Scorpion::direction_()']]],
-  ['displaylives',['displayLives',['../class_presentation.html#ac13b755328c6e531b279d2e49a5503c1',1,'Presentation']]],
+  ['displaylives',['displayLives',['../class_presentation.html#aa388ea55a6650933a6d5a30686886640',1,'Presentation']]],
   ['dotproduct',['dotProduct',['../class_separating_axis_theorem.html#ae0658d8b891bf6db5bea7fba29c1a02c',1,'SeparatingAxisTheorem']]],
   ['down',['DOWN',['../_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aaac4e0e4e3118472beeb2ae75827450f1f',1,'Direction.h']]],
   ['drawgameoverscreen',['drawGameOverScreen',['../class_presentation.html#a40d86f3b623cbef7a04db5a312ff1368',1,'Presentation']]],

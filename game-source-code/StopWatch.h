@@ -7,7 +7,8 @@
  *	\version 3.0
  */
 
-class StopWatch{
+class StopWatch
+{
 
 public:
 	// Constructor:
@@ -63,8 +64,7 @@ public:
 	 */
 	double getRunTime();
 
-	/** \brief Returns the amount of time in seconds that has passed since the
-	 *	process (i.e. your program) started executing.
+	/** \brief Returns the a time value in seconds at the point it is called.
 	 *	\return double
 	 */
 	double getProcessTime();

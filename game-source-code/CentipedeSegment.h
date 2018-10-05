@@ -24,6 +24,11 @@ struct CentipedeSegmentDemensions
 /** \class CentipedeSegment
  *  \brief This is a class that inherits from the IMovingEntity class. It
  *  contains virtual functions that will be overridden by CentipedeSegment class.
+ *  It models a centipede segment's functionality in the game. The BodyType of a
+ *  CentipedeSegment object can be changed. A CentipedeSegment object can move
+ *  itself. If it is BodyType::BODY, it stores where the head has had a collision
+ *  and whether or not it was with a poisoned mushroom. Its movement checks if
+ *  there are any head collisions and it changes direction if it is at a collision point.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -45,10 +50,10 @@ class CentipedeSegment : public IMovingEntity
         };
 
         /** \brief Parameterized Constructor. Creates a centipede segment object.
-         *  \param grid is of type grid.
+         *  \param grid is of type Grid.
          *  \param bodytype is of type BodyType enum class.
          *  \param position is of type Position.
-         *  \param cur_Direction is of type Direction enum class.
+         *  \param cur_Direction is an eum of type Direction enum class.
          */
         CentipedeSegment(const Grid& grid, BodyType bodytype, Position position, Direction cur_Direction);
 
@@ -57,6 +62,8 @@ class CentipedeSegment : public IMovingEntity
         virtual~CentipedeSegment();
 
         /** \brief Inherited from IMovingEntity. A virtual function that moves a CentipedeSegment object.
+         *  Checks for head collision points in order to change direction.
+         *  Calls the respective function to performs the poisoned movement of a CentipedeSegment object.
          */
         virtual void move() override;
 
@@ -74,7 +81,7 @@ class CentipedeSegment : public IMovingEntity
 
         /** \brief Inherited from IMovingEntity. A virtual function that returns
          *  a enum of ObjectType of a CentipedeSegment object.
-         *  \return An enum of the strongly typed enum class ObjectType.
+         *  \return ObjectType an enum of the strongly typed enum class ObjectType.
          */
         virtual ObjectType getObjectType() const override;
 
@@ -126,6 +133,7 @@ class CentipedeSegment : public IMovingEntity
 
         /** \brief Inherited from IMovingEntity. A virtual function that will be
          *  used to return a CentipedeSegment object's hit points.
+         *  \return int
          */
         virtual int getHitPoints() const override;
 
@@ -140,7 +148,7 @@ class CentipedeSegment : public IMovingEntity
         void changeDirection();
 
         /** \brief A function that returns the body type of the centipede segment.
-         *  \return The body type of the object of type BodyType of the enum class.
+         *  \return BodyType an enum of type strongly typed enum class BodyType.
          */
         BodyType getBodyType() const;
 
@@ -150,7 +158,7 @@ class CentipedeSegment : public IMovingEntity
         void setBodyType(BodyType body_type);
 
         /** \brief A function that returns the rotation angle of the centipede segment.
-         *  \return The rotation angle of type float.
+         *  \return float
          */
         float getRotationAngle() const;
 

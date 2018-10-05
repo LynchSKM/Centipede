@@ -6,6 +6,7 @@ var annotated_dup =
     [ "CentipedeSegmentDemensions", "struct_centipede_segment_demensions.html", "struct_centipede_segment_demensions" ],
     [ "CollisionHandler", "class_collision_handler.html", "class_collision_handler" ],
     [ "EnemyFactory", "class_enemy_factory.html", "class_enemy_factory" ],
+    [ "GameEngine", "class_game_engine.html", "class_game_engine" ],
     [ "GameOverScreen", "class_game_over_screen.html", "class_game_over_screen" ],
     [ "GameWonScreen", "class_game_won_screen.html", "class_game_won_screen" ],
     [ "Grid", "class_grid.html", "class_grid" ],

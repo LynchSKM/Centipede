@@ -15,7 +15,12 @@ using std::shared_ptr;
 using std::make_shared;
 
 /** \class MushroomFactory
- *  \brief Creates all the mushroom objects of the game.
+ *  \brief Creates all the Mushroom objects of the game. The game grid is divided
+ *  into cells of size 16x16 pixels. Each cell is paired with a bool indicating whether
+ *  the cell is occupied or not. Mushrooms are randomly created on the grid excluding the
+ *  player's screen boundary, they are created using the centre of each cell provided the
+ *  cell is not occupied. Creation of one mushroom given a position only maps the position
+ *  to a cell without querying it status.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -47,6 +52,7 @@ class MushroomFactory
         const Grid grid_;
         int maxCol_, maxRow_, maxMushrooms_;
         map<unsigned int, bool> cell_ID_List_;
+
         /** \brief Maps the grid into rows and columns (cells).
          */
         void defineRowAndCol();

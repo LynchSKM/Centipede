@@ -14,7 +14,10 @@ using std::vector;
 using std::shared_ptr;
 
 /** \class Logic
- *  \brief This class performs the logic that defines how the game objects behave.
+ *  \brief This class uses GameEngine's function to perform the logic of the game.
+ *  It tells AssetManager to load the game assets needed to present the game logic.
+ *  It then presents the logic to the Presentation Layer for it to be rendered
+ *  on the game screen. The game is controlled by this class.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -44,7 +47,7 @@ class Logic
         ScreenState screen_state_;
 
         // Private functions:
-        /** \brief Displays the splash screen at the start of the game.
+        /** \brief Generates Mushrooms and plays the game start sound.
          */
          void startUp();
 
@@ -60,7 +63,8 @@ class Logic
          */
         void loadAssets();
 
-        /** \brief Gives Presentation a vector of game objects to be drawn.
+        /** \brief Gives Presentation the game objects from the GameEngine class
+         *  to be drawn.
          */
         void renderGameObjects();
 
@@ -85,12 +89,12 @@ class Logic
          */
         void updateScores();
 
-        /** \brief Removes all Centipede segments from vector(s) where they exist,
-         *  reset the position of the player and generate a new Centipede train.
+        /** \brief Removes all moving entities from the game, resets the position
+         *  of the player and resets the current level of the game.
          */
         void reincarnatePlayer();
 
-        /** \brief Resets reincarnate of the Mushroom objects in the game.
+        /** \brief Reincarnates Mushroom objects in the game.
          */
         void reincarnateMushrooms();
 

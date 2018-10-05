@@ -5,6 +5,7 @@ var hierarchy =
     [ "CentipedeSegmentDemensions", "struct_centipede_segment_demensions.html", null ],
     [ "CollisionHandler", "class_collision_handler.html", null ],
     [ "EnemyFactory", "class_enemy_factory.html", null ],
+    [ "GameEngine", "class_game_engine.html", null ],
     [ "GameOverScreen", "class_game_over_screen.html", null ],
     [ "GameWonScreen", "class_game_won_screen.html", null ],
     [ "Grid", "class_grid.html", null ],

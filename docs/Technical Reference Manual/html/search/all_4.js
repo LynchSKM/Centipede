@@ -4,5 +4,5 @@ var searchData=
   ['enemyfactory',['EnemyFactory',['../class_enemy_factory.html',1,'EnemyFactory'],['../class_enemy_factory.html#a0d6dce92abad7b88e19af375d0869da0',1,'EnemyFactory::EnemyFactory()']]],
   ['enemyfactory_2ecpp',['EnemyFactory.cpp',['../_enemy_factory_8cpp.html',1,'']]],
   ['enemyfactory_2eh',['EnemyFactory.h',['../_enemy_factory_8h.html',1,'']]],
-  ['enemyfactory_5f',['enemyFactory_',['../class_logic.html#a4e613c86b994577e051391b52d5c6023',1,'Logic']]]
+  ['enemyfactory_5f',['enemyFactory_',['../class_game_engine.html#af7521e3e2b526512f233eb2a22c5bf87',1,'GameEngine']]]
 ];

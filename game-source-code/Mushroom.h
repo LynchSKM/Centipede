@@ -17,7 +17,8 @@ struct MushroomDimensions
 
 /** \class Mushroom
  *  \brief This is a class that defines a Mushroom object. It contains virtual functions
- *  inherited from IEntity that will be overridden.
+ *  inherited from IEntity that will be overridden. A Mushroom object has four lives, and
+ *  it can be poisoned.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -89,6 +90,7 @@ class Mushroom : public IEntity
 
         /** \brief Inherited from IEntity. A virtual function that will be
          *  used to return a Mushroom object's hit points.
+         *  \return int
          */
         virtual int getHitPoints() const override;
 

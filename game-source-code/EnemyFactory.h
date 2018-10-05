@@ -15,7 +15,10 @@ using std::shared_ptr;
 using std::make_shared;
 
 /** \class EnemyFactory
- *  \brief Creates all the enemy objects of the game and Mushrooms.
+ *  \brief This class is used to creates all the enemy objects of the game.
+ *  It periodically creates Spider objects after a specified delay. It generates
+ *  the initial Centipede train that is used in the beginning of the game. It can
+ *  also generate a specified number CentipedeSegment of BodyType::HEAD periodically.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -74,11 +77,10 @@ class EnemyFactory
         bool isScorpionGenerated_;
 
         StopWatch SpiderTimer_;
-        StopWatch CentiHeadsTimer_;
-        StopWatch mushroom_reincarnate_timer;
-
         double timeSinceLastSpider_;
         double spiderReleaseTime_;
+
+        StopWatch CentiHeadsTimer_;
         double timeSinceLastcentiHeads_;
         double centiHeadsReleaseTime_;
 };

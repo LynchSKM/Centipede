@@ -3,6 +3,7 @@ var class_asset_manager =
     [ "AssetType", "class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728", [
       [ "FONT", "class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a4aaf23261cd3bd2064183cf1b53f1023", null ],
       [ "GUNSHOT_SOUND", "class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a8d09f2179ed9a38af4aefc3ceb396dd0", null ],
+      [ "LEVEL_UP", "class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a7ee2caf3f0273d8e39547764c90ea65f", null ],
       [ "MUSHROOM_REGEN", "class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a86ef33df884491f473940b89335a4b72", null ],
       [ "SCORPION_MOVE", "class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728aebc5c5eacbc3902aa67cb7b6e6e2a3f2", null ],
       [ "SPIDER_MOVE", "class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a927f84b41f3304e094cad785e03ddf3a", null ],
@@ -15,9 +16,13 @@ var class_asset_manager =
     ] ],
     [ "AssetManager", "class_asset_manager.html#a750ae7b39b633fbb6594443aa3ca704b", null ],
     [ "AssetManager", "class_asset_manager.html#aa496cc2f1edebf56e86433ef99c1e81c", null ],
+    [ "captureDetails", "class_asset_manager.html#a917be7a066ccd660777c94b9df8b4084", null ],
     [ "getAssetInfo", "class_asset_manager.html#ab6d8a0e2fee83023270c7e82c00dc0d7", null ],
     [ "getAssetPath", "class_asset_manager.html#ad530cf1291bc9a973b35ad7a113a5555", null ],
     [ "getAssetType", "class_asset_manager.html#a79e5640dadd7968dadc2c68f2841cc6d", null ],
+    [ "getTextureDetails", "class_asset_manager.html#a56ab700d665ef3fe7eb5b234e76485b3", null ],
+    [ "loadTextureDetails", "class_asset_manager.html#a368b02a0bc1f5029d96d244311a40b8d", null ],
     [ "assetPath_", "class_asset_manager.html#a0c46a45215485aa44fe26ed4c667b454", null ],
-    [ "assetType_", "class_asset_manager.html#af90fb75825771c6cd2bee4e06fc289e1", null ]
+    [ "assetType_", "class_asset_manager.html#af90fb75825771c6cd2bee4e06fc289e1", null ],
+    [ "texture_details_", "class_asset_manager.html#a740d5034ef7225f49401ed6efa73a565", null ]
 ];

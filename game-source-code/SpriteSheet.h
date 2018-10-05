@@ -8,7 +8,9 @@
 
 /** \class SpriteSheet
  *  \brief A class that crops the texture to the correct image for game objects
- *  to be drawn on the screen.
+ *  to be drawn on the screen. Some of the textures loaded contain more than picture
+ *  of an object in the image. This class is used to crop the texture to get the
+ *  desired image. This helps with the animation of game objects on the screen.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -30,26 +32,25 @@ class SpriteSheet
                     sf::Vector2u imageCount, const float switchTime,
                     unsigned int row, Direction direction);
 
-
         /**\brief Increments the image currently being looked at in the texture
          * to animate movement.
-         * \param deltaTime const float will be used to determine whether current
+         * \param deltaTime is a const float that will be used to determine whether current
          * image should be incremented after some delay.
          */
         void update(const float deltaTime);
 
         /**\brief This function will create a rect shape in the texture so that
-         * the correct image is taken from the spritesheet. It takes in a direction
+         * the correct image is taken from the sprite sheet. It takes in a direction
          * and compares it with the default direction in the texture.
          * \param direction is of type Direction enum class.
          * \return sf::IntRect
          */
         sf::IntRect getTextureRect(Direction direction);
 
-        /**\brief This function will create a rect shape in the texture so that
-         * the correct image is taken from the spritesheet. It takes in a int that
-		 * represents a column in the texture for those that have more than one 
-		 * image and are stationary objects.
+        /**\brief This function will create a rect shape in the texture using an
+         * sf::IntRect so that the correct image is taken from the spritesheet.
+         * It takes in a int that represents a column in the texture for those
+         * that have more than one image and are stationary objects.
          * \param col is an integer containing the column of interest in the texture.
          * \return sf::IntRect
          */

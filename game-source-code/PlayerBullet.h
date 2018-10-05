@@ -19,7 +19,7 @@ struct PlayerBulletDimensions
 /** \class PlayerBullet
  *  \brief This is a class that inherits from the IMovingEntity class. It models
  *  a Player's laser bullet object in the game. It contains virtual functions that
- *  will be overridden.
+ *  will be overridden. A PlayerBullet moves upwards.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -39,7 +39,7 @@ class PlayerBullet : public IMovingEntity
         virtual ~PlayerBullet();
 
         /** \brief Inherited from IMovingEntity. A virtual function that
-         *  moves a PlayerBullet object.
+         *  moves a PlayerBullet object upwards.
          */
         virtual void move() override;
 
@@ -110,6 +110,7 @@ class PlayerBullet : public IMovingEntity
 
         /** \brief Inherited from IMovingEntity. A virtual function that will be
          *  not be implemented as a PlayerBullet doesn't have hit points.
+         *  \return int
          */
         virtual int getHitPoints() const override;
 

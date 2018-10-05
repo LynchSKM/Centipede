@@ -8,6 +8,8 @@ var searchData=
   ['spatial_5fhash_5f',['spatial_hash_',['../class_collision_handler.html#a457b068fe346dee76ea9e47216ba6558',1,'CollisionHandler']]],
   ['speed',['speed',['../struct_centipede_segment_demensions.html#adf0ca8f196addc8de0aca7cfa208072f',1,'CentipedeSegmentDemensions::speed()'],['../struct_player_dimension.html#a4ac3eb207437126aee444648d72e4ebd',1,'PlayerDimension::speed()'],['../struct_player_bullet_dimensions.html#a2c55e33cf71fe300bcc0518ee1df0729',1,'PlayerBulletDimensions::speed()'],['../struct_scorpion_dimensions.html#a3f78a01fb268d7a70ddc5a8f2fce1f33',1,'ScorpionDimensions::speed()'],['../struct_spider_dimensions.html#a4246968368969766cc3410d3d8a30d58',1,'SpiderDimensions::speed()']]],
   ['speedy',['speedY',['../struct_centipede_segment_demensions.html#a2f9c317efca671a8377635fadba38432',1,'CentipedeSegmentDemensions']]],
+  ['spiderreleasetime_5f',['spiderReleaseTime_',['../class_enemy_factory.html#a88bcf0f65df3fa8b3fba7676d6dc831b',1,'EnemyFactory']]],
+  ['spidertimer_5f',['SpiderTimer_',['../class_enemy_factory.html#afa3941c2b87db3add34fb8adfd99b3cf',1,'EnemyFactory']]],
   ['splashscreenfont_5f',['splashScreenFont_',['../class_splash_screen.html#a194c8c95fede320ed2a391582d246817',1,'SplashScreen']]],
   ['splashscreentexture_5f',['splashScreenTexture_',['../class_splash_screen.html#a120ee2cfb6432220e9300a18014daf88',1,'SplashScreen']]],
   ['sprite_5fsheets_5f',['sprite_sheets_',['../class_presentation.html#ab1b88938eb755b4f896d8f386e4d8542',1,'Presentation']]],

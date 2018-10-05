@@ -2,7 +2,7 @@
 #define SCREENSTATE_H
 
 /** \enum ScreenState
- *  \brief is a strongly typed enum class representing the different game
+ *  \brief A strongly typed enum class representing the different game
  *  screens that can be displayed.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0

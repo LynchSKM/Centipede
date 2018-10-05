@@ -17,7 +17,7 @@ class GameWonScreen
          */
         GameWonScreen();
 
-        /** \brief Displays the SplashScreen window.
+        /** \brief Displays the Game Won window.
          *  \param render_window is of type sf::RenderWindow.
          *  \param player_score is of type int. Holds the player's score.
          *  \param high_score is of type int. Holds the highest score achieved in the game.

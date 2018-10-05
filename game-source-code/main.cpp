@@ -9,8 +9,11 @@
  *  - The game has Scorpions, Spiders and Centipedes that the Player can shoot to gain
  *  points and win the game. Each has a different movement when generated on the game
  *  screen adding some difficulty to the game.
+ *  - A Spider moves in zigzag movement across the screen and eats Mushroom objects.
+ *  - The Scorpion moves across screen and poisons Mushroom objects.
  *  - Mushrooms are also generated and can be shot by the Player. These act as obstacles
- *  for the Centipede(s) in the game.
+ *  for the Centipede(s) in the game. Hitting a Mushroom object causes the Centipede
+ *  to go down one row and change direction.
  *  - Mushrooms can be poisoned by Scorpion objects.
  *  - Centipede Segments that are shot turn into Mushroom objects.
  *  - Centipede(s) that touch poisoned Mushrooms dive down into the Player's area.

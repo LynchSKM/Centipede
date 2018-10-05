@@ -18,6 +18,8 @@ var files_dup =
     [ "EnemyFactory.h", "_enemy_factory_8h.html", [
       [ "EnemyFactory", "class_enemy_factory.html", "class_enemy_factory" ]
     ] ],
+    [ "GameEngine.cpp", "_game_engine_8cpp.html", null ],
+    [ "GameEngine.h", "_game_engine_8h.html", "_game_engine_8h" ],
     [ "GameOverScreen.cpp", "_game_over_screen_8cpp.html", null ],
     [ "GameOverScreen.h", "_game_over_screen_8h.html", [
       [ "GameOverScreen", "class_game_over_screen.html", "class_game_over_screen" ]
@@ -41,7 +43,9 @@ var files_dup =
       [ "IMovingEntity", "class_i_moving_entity.html", "class_i_moving_entity" ]
     ] ],
     [ "Logic.cpp", "_logic_8cpp.html", null ],
-    [ "Logic.h", "_logic_8h.html", "_logic_8h" ],
+    [ "Logic.h", "_logic_8h.html", [
+      [ "Logic", "class_logic.html", "class_logic" ]
+    ] ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "Mushroom.cpp", "_mushroom_8cpp.html", null ],
     [ "Mushroom.h", "_mushroom_8h.html", [

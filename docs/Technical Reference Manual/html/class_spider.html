@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('class_spider.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>This is a class that inherits from the <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a> class. It models a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object in the game. It contains virtual functions that will be overridden.  
+<p>This is a class that inherits from the <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a> class. It models a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object in the game. It contains virtual functions that will be overridden. A <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object moves in a zig-zag movement. This was achieved by calculating slopes in a random range based on the <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a>'s current position and moving it along the generated line. A <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> objects sets itself to dead if it reaches the grid's left or right boundaries.  
  <a href="class_spider.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_spider_8h_source.html">Spider.h</a>&gt;</code></p>
@@ -120,7 +120,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a847823793e44603b84396dfcf3ebce40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual Destructor. Destroys a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object.  <a href="#a847823793e44603b84396dfcf3ebce40">More...</a><br /></td></tr>
 <tr class="separator:a847823793e44603b84396dfcf3ebce40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec113188217436f4434be35684916b39"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spider.html#aec113188217436f4434be35684916b39">move</a> () override</td></tr>
-<tr class="memdesc:aec113188217436f4434be35684916b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that moves a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object.  <a href="#aec113188217436f4434be35684916b39">More...</a><br /></td></tr>
+<tr class="memdesc:aec113188217436f4434be35684916b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that moves a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object in a zig-zag movement.  <a href="#aec113188217436f4434be35684916b39">More...</a><br /></td></tr>
 <tr class="separator:aec113188217436f4434be35684916b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af141a04cbaf8a68c44e449cb9a518608"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spider.html#af141a04cbaf8a68c44e449cb9a518608">getDirection</a> () const override</td></tr>
 <tr class="memdesc:af141a04cbaf8a68c44e449cb9a518608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that returns the direction of a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object.  <a href="#af141a04cbaf8a68c44e449cb9a518608">More...</a><br /></td></tr>
@@ -204,7 +204,7 @@ Static Private Attributes</h2></td></tr>
 <tr class="separator:ab20716800b9e5dc01a48855c5e4960d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is a class that inherits from the <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a> class. It models a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object in the game. It contains virtual functions that will be overridden. </p>
+<div class="textblock"><p>This is a class that inherits from the <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a> class. It models a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object in the game. It contains virtual functions that will be overridden. A <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object moves in a zig-zag movement. This was achieved by calculating slopes in a random range based on the <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a>'s current position and moving it along the generated line. A <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> objects sets itself to dead if it reaches the grid's left or right boundaries. </p>
 <dl class="section author"><dt>Author</dt><dd>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -403,6 +403,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that will be used to return a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object's hit points. </p>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
 <p>Implements <a class="el" href="class_i_moving_entity.html#a5c9e0ee005efc8956466dca6f1f7f1e4">IMovingEntity</a>.</p>
 
@@ -581,7 +582,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that moves a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object. </p>
+<p>Inherited from <a class="el" href="class_i_moving_entity.html" title="This is a Interface Class that inherits from the IEntity class. It contains pure virtual functions th...">IMovingEntity</a>. A virtual function that moves a <a class="el" href="class_spider.html" title="This is a class that inherits from the IMovingEntity class. It models a Spider object in the game...">Spider</a> object in a zig-zag movement. </p>
 
 <p>Implements <a class="el" href="class_i_moving_entity.html#a5894f3ff2c9b15299e94e84c3234236e">IMovingEntity</a>.</p>
 
@@ -945,7 +946,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_spider.html">Spider</a></li>
-    <li class="footer">Generated on Tue Oct 2 2018 23:18:01 for elen3009-project-2018 by
+    <li class="footer">Generated on Fri Oct 5 2018 21:28:44 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

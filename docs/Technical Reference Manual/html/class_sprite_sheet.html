@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('class_sprite_sheet.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>A class that crops the texture to the correct image for game objects to be drawn on the screen.  
+<p>A class that crops the texture to the correct image for game objects to be drawn on the screen. Some of the textures loaded contain more than picture of an object in the image. This class is used to crop the texture to get the desired image. This helps with the animation of game objects on the screen.  
  <a href="class_sprite_sheet.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_sprite_sheet_8h_source.html">SpriteSheet.h</a>&gt;</code></p>
@@ -110,10 +110,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afd3e66e62378b72749da2b6984d71b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the image currently being looked at in the texture to animate movement.  <a href="#afd3e66e62378b72749da2b6984d71b48">More...</a><br /></td></tr>
 <tr class="separator:afd3e66e62378b72749da2b6984d71b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2d66e4e4024dcfef094dce5d0425fc4"><td class="memItemLeft" align="right" valign="top">sf::IntRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_sheet.html#ad2d66e4e4024dcfef094dce5d0425fc4">getTextureRect</a> (<a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction)</td></tr>
-<tr class="memdesc:ad2d66e4e4024dcfef094dce5d0425fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will create a rect shape in the texture so that the correct image is taken from the spritesheet. It takes in a direction and compares it with the default direction in the texture.  <a href="#ad2d66e4e4024dcfef094dce5d0425fc4">More...</a><br /></td></tr>
+<tr class="memdesc:ad2d66e4e4024dcfef094dce5d0425fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will create a rect shape in the texture so that the correct image is taken from the sprite sheet. It takes in a direction and compares it with the default direction in the texture.  <a href="#ad2d66e4e4024dcfef094dce5d0425fc4">More...</a><br /></td></tr>
 <tr class="separator:ad2d66e4e4024dcfef094dce5d0425fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ca9cfc1f13ba597de2f7212a029e451"><td class="memItemLeft" align="right" valign="top">sf::IntRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_sheet.html#a7ca9cfc1f13ba597de2f7212a029e451">getTextureRect</a> (int col)</td></tr>
-<tr class="memdesc:a7ca9cfc1f13ba597de2f7212a029e451"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will create a rect shape in the texture so that the correct image is taken from the spritesheet. It takes in a int that represents a column in the texture for those that have more than one image and are stationary objects.  <a href="#a7ca9cfc1f13ba597de2f7212a029e451">More...</a><br /></td></tr>
+<tr class="memdesc:a7ca9cfc1f13ba597de2f7212a029e451"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will create a rect shape in the texture using an sf::IntRect so that the correct image is taken from the spritesheet. It takes in a int that represents a column in the texture for those that have more than one image and are stationary objects.  <a href="#a7ca9cfc1f13ba597de2f7212a029e451">More...</a><br /></td></tr>
 <tr class="separator:a7ca9cfc1f13ba597de2f7212a029e451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98f46126bdce6eea49cae959e75344e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_sheet.html#a98f46126bdce6eea49cae959e75344e6">getObjectType</a> () const</td></tr>
 <tr class="memdesc:a98f46126bdce6eea49cae959e75344e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will return the object type.  <a href="#a98f46126bdce6eea49cae959e75344e6">More...</a><br /></td></tr>
@@ -148,7 +148,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:afd3450e16ed84d3f60b429cd75d2f5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class that crops the texture to the correct image for game objects to be drawn on the screen. </p>
+<div class="textblock"><p>A class that crops the texture to the correct image for game objects to be drawn on the screen. Some of the textures loaded contain more than picture of an object in the image. This class is used to crop the texture to get the desired image. This helps with the animation of game objects on the screen. </p>
 <dl class="section author"><dt>Author</dt><dd>1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa. </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -315,7 +315,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function will create a rect shape in the texture so that the correct image is taken from the spritesheet. It takes in a direction and compares it with the default direction in the texture. </p>
+<p>This function will create a rect shape in the texture so that the correct image is taken from the sprite sheet. It takes in a direction and compares it with the default direction in the texture. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">direction</td><td>is of type Direction enum class. </td></tr>
@@ -342,7 +342,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function will create a rect shape in the texture so that the correct image is taken from the spritesheet. It takes in a int that represents a column in the texture for those that have more than one image and are stationary objects. </p>
+<p>This function will create a rect shape in the texture using an sf::IntRect so that the correct image is taken from the spritesheet. It takes in a int that represents a column in the texture for those that have more than one image and are stationary objects. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">col</td><td>is an integer containing the column of interest in the texture. </td></tr>
@@ -372,7 +372,7 @@ Private Attributes</h2></td></tr>
 <p>Increments the image currently being looked at in the texture to animate movement. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deltaTime</td><td>const float will be used to determine whether current image should be incremented after some delay. </td></tr>
+    <tr><td class="paramname">deltaTime</td><td>is a const float that will be used to determine whether current image should be incremented after some delay. </td></tr>
   </table>
   </dd>
 </dl>
@@ -566,7 +566,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_sprite_sheet.html">SpriteSheet</a></li>
-    <li class="footer">Generated on Tue Oct 2 2018 23:18:01 for elen3009-project-2018 by
+    <li class="footer">Generated on Fri Oct 5 2018 21:28:44 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

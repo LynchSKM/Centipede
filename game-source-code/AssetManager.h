@@ -15,8 +15,10 @@ using std::pair;
 using std::tuple;
 
 /** \class AssetManager
- *  \brief A data class containing a AssetType and the path to the asset.Loads
- *  the assets (textures, fonts, sounds) used by the game.
+ *  \brief A data layer class containing a AssetType and the path to the asset. Loads
+ *  the assets (textures, fonts, sounds) used by the game. This class also stores
+ *  details about the number of images in the game textures and the direction
+ *  objects face in the texture if any.
  *  \author 1043475 Lynch Mwaniki and 1076467 Madimetja Sethosa.
  *  \version 3.0
  */
@@ -50,7 +52,7 @@ class AssetManager
 		};
 
 		/** \brief Parameterized Constructor. Creates an AssetManager object.
-		 *	Used to create a Asset Manager object containing the type
+		 *	Used to create an Asset Manager object containing the type
 		 *	of asset being loaded and the path where to find the asset.
 		 *	\param asset_type is of type AssetType and contains the type of asset being loaded.
 		 *	\param asset_path is of type std::string and contains the path to the asset being loaded.
@@ -68,7 +70,7 @@ class AssetManager
         string getAssetPath() const;
 
         /**	\brief Returns a vector of type AssetManager containing
-         *  all the asset information for the project
+         *  all the asset information for the project.
          * 	\return vector<AssetManager>
          */
         vector<AssetManager> getAssetInfo();
@@ -80,10 +82,9 @@ class AssetManager
          */
         tuple<vector<unsigned int>, Direction> getTextureDetails() const;
 
-        /**	\brief Populates the map used to store the rows and columns found in
-         *  an image for each game object. It also populates the map used to store
-         *  the default direction that images face in the texture. It is a static
-         *  function because the maps being updated are private static members.
+        /**	\brief Populates the map used to store the rows, columns and the default
+         *  direction that images face in the texture for each game object. It is
+         *  a static function because the map being updated is a static private member.
          */
         static void loadTextureDetails();
 
@@ -94,6 +95,8 @@ class AssetManager
 		/**< A static map that holds the rows, columns and default direction in an image for each texture.*/
 
         /**	\brief A private static function that helps loadTextureDetails().
+         *  Takes in the necessary inputs to be saved into the static private map
+         *  called texture_details_.
          *  \param type_asset is of type AssetType.
          *  \param rows_in_image is an int containing the rows in an image.
          *  \param columns_in_image is an int containing the columns in an image.
