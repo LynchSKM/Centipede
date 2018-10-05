@@ -68,17 +68,6 @@ class Presentation
          */
         void drawGameWonScreen(const int player_score, const int high_score);
 
-        /** \brief Displays the player's lives, current score and the high score
-         *  of the game.
-         *  \param remaining_lives is an int representing the player's remaining lives.
-         *  \param player_score is an int that has the player's current score.
-         *  \param high_score is an int that has the game's highest score.
-         *  \param game_level is a  tuple<const int, const int> that indicates
-         *  the current game level and max game level.
-         */
-        void displayLives(const int remaining_lives, const int player_score,
-                          const int high_score, tuple<const int, const int> game_level);
-
         /**	\brief Draws all the game objects onto the screen. Including the player's
          *  score, lives and the game's highest score.
          * 	\param game_objects is a const vector of shared pointers to IEntity objects.
@@ -175,6 +164,20 @@ class Presentation
         bool isUpPressed_;
         bool isDownPressed_;
         bool isSpacePressed_;
+
+        /** \brief Displays the player's lives, current score and the high score
+         *  of the game.
+         *  \param remaining_lives is an int representing the player's remaining lives.
+         *  \param player_score is an int that has the player's current score.
+         *  \param high_score is an int that has the game's highest score.
+         *  \param game_level is a  tuple<const int, const int> that indicates
+         *  the current game level and max game level.
+         *  \param level_colour is a sf::Color containing the sprite colour used for
+         *  the current game level.
+         */
+        void displayLives(const int remaining_lives, const int player_score,
+                          const int high_score, tuple<const int, const int> game_level,
+                          const sf::Color level_colour);
 
         /** \brief Populate SpriteSheet vector, sprite_sheets_,
          *  for the different game objects that have more than one image in a texture.

@@ -224,12 +224,12 @@ void Presentation::renderWindow(const vector<shared_ptr<IEntity>>& game_objects,
                                 const int high_score, tuple<const int, const int> game_level)
 {
     window_.clear();
-    displayLives(remaining_lives, player_score, high_score, game_level);
     auto[current_level, max_level] = game_level;
-
     int number_of_colours = game_level_colours_.size();
     auto level = (current_level-1)%number_of_colours;
     auto level_colour = game_level_colours_.at(level);
+
+    displayLives(remaining_lives, player_score, high_score, game_level, level_colour);
 
     for(const auto& object : game_objects)
     {
@@ -279,9 +279,11 @@ void Presentation::drawGameWonScreen(const int player_score, const int high_scor
 }
 
 void Presentation::displayLives(const int remaining_lives, const int player_score,
-                                const int high_score, tuple<const int, const int> game_level)
+                                const int high_score, tuple<const int, const int> game_level,
+                                const sf::Color level_colour)
 {
     sf::Sprite lives_sprite;
+    lives_sprite.setColor(level_colour);
     auto half = 2.0f;
     auto iter_map = game_textures_.find(ObjectType::PLAYER);
     lives_sprite.setTexture(iter_map->second);
