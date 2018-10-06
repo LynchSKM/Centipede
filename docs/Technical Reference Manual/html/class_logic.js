@@ -15,7 +15,7 @@ var class_logic =
     [ "startUp", "class_logic.html#a3a4eb286eb3264766bd3f155e199e166", null ],
     [ "updateGame", "class_logic.html#a78320b6d95a7d7d7b9610be4175b7fcc", null ],
     [ "updateMovingObjectsSound", "class_logic.html#a20aaa255bfe8db02e811f2c207a757fd", null ],
-    [ "updateScores", "class_logic.html#a9b0352a47003b5278d9197710bdd9d6b", null ],
+    [ "updateScreenState", "class_logic.html#a012379f71ee27195cb148092a2170665", null ],
     [ "assetManager_", "class_logic.html#a8a7a77acc4b4118c250c8582b76341d5", null ],
     [ "game_timer_", "class_logic.html#a186d1bbd333005f0b2e28ca119f3c12e", null ],
     [ "gameEngine_", "class_logic.html#a0b65a2f34bed7e03dcfe290bc7a0efe8", null ],

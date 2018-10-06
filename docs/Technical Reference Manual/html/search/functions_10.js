@@ -5,5 +5,6 @@ var searchData=
   ['updatecentipedetrain',['updateCentipedeTrain',['../class_collision_handler.html#aae8c579d8f9e003a7776bd093f70ad92',1,'CollisionHandler']]],
   ['updategame',['updateGame',['../class_logic.html#a78320b6d95a7d7d7b9610be4175b7fcc',1,'Logic']]],
   ['updatemovingobjectssound',['updateMovingObjectsSound',['../class_logic.html#a20aaa255bfe8db02e811f2c207a757fd',1,'Logic']]],
-  ['updatescores',['updateScores',['../class_game_engine.html#a19657735c180060f040fdbdeb69d80c8',1,'GameEngine::updateScores()'],['../class_logic.html#a9b0352a47003b5278d9197710bdd9d6b',1,'Logic::updateScores()']]]
+  ['updatescores',['updateScores',['../class_game_engine.html#a19657735c180060f040fdbdeb69d80c8',1,'GameEngine']]],
+  ['updatescreenstate',['updateScreenState',['../class_logic.html#a012379f71ee27195cb148092a2170665',1,'Logic']]]
 ];
