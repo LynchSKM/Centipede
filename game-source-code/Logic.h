@@ -85,9 +85,9 @@ class Logic
         void updateMovingObjectsSound();
 
         /** \brief Checks whether the player's score has passed the current high
-         * score and updates the high score if true.
+         * score and whether the player is still alive and updates the screen state.
          */
-        void updateScores();
+        void updateScreenState();
 
         /** \brief Removes all moving entities from the game, resets the position
          *  of the player and resets the current level of the game.

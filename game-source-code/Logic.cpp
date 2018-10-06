@@ -53,10 +53,10 @@ void Logic::updateGame()
     getInputCommands();
     levelUp();
     gameEngine_.runGameLogic();
-    updateScores();
     reincarnatePlayer();
     renderGameObjects();
     updateMovingObjectsSound();
+    updateScreenState();
 }
 
 void Logic::startUp()
@@ -134,11 +134,10 @@ void Logic::reincarnatePlayer()
     {
         reincarnateMushrooms();
         gameEngine_.reset();
-        gameEngine_.generateGameEnemies();
     } else return;
 }
 
-void Logic::updateScores()
+void Logic::updateScreenState()
 {
     // Check highscore:
     auto[isPlayerAlive, highScorePassed, stagesComplete] = gameEngine_.getGameStatus();
