@@ -32,14 +32,14 @@ void Spider::CalculateSlope()
     auto ypos = 0.0f;
     auto multFactor = 4;
 
+    if(major_direction_ == Direction::LEFT)
+         xpos = rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width + position_.getX_pos();
+    else  xpos = position_.getX_pos() - rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width;
+
     if(movementDirection_ == Direction::DOWN)
     {
-        if(major_direction_ == Direction::LEFT)
-             xpos = rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width + position_.getX_pos();
-        else  xpos = position_.getX_pos() - rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width;
-
         auto y_difference = 0.5f*(maxHeight - position_.getY_pos());
-         ypos = rand()%static_cast<int>(y_difference) + position_.getY_pos() + y_difference;
+        ypos = rand()%static_cast<int>(y_difference) + position_.getY_pos() + y_difference;
 
         turningPoint_.setX_pos(xpos);
         turningPoint_.setY_pos(ypos);
@@ -49,12 +49,8 @@ void Spider::CalculateSlope()
     }
     else
     {
-        if(major_direction_ == Direction::LEFT)
-             xpos = rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width + position_.getX_pos();
-        else  xpos = position_.getX_pos() - rand()%static_cast<int>(multFactor*dimensions_.width) + multFactor*dimensions_.width;
-
         auto y_difference = 0.5f*(position_.getY_pos()-minHeight);
-         ypos =  position_.getY_pos() - rand()%static_cast<int>(y_difference);
+        ypos =  position_.getY_pos() - rand()%static_cast<int>(y_difference);
 
         turningPoint_.setX_pos(xpos);
         turningPoint_.setY_pos(ypos);
