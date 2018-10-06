@@ -63,6 +63,7 @@ void Logic::startUp()
 {
     gameEngine_.generateMushrooms();
     renderGameObjects();
+    gameEngine_.reset();
 }
 
 void Logic::loadAssets()
