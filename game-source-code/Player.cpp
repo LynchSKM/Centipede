@@ -117,6 +117,12 @@ vector<shared_ptr<PlayerBullet>> Player::shoot()
     return weapon_.fire(grid_, Position{x, y});
 }
 
+
+void Player::upgradePlayerWeapon()
+{
+    weapon_.upgradeWeapon();
+}
+
 void Player::addScore(int score)
 {
     score_ += score;
@@ -134,6 +140,7 @@ void Player::reincarnate()
         position_.setX_pos(grid_.getWidth()/2.0);
         position_.setY_pos(grid_.getHeight()-dimensions_.height*0.5);
         hasBeenHit_ = false;
+        weapon_.reset();
     }//if
 }
 

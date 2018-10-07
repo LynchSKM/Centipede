@@ -125,6 +125,10 @@ class Player : public IMovingEntity
          */
         vector<shared_ptr<PlayerBullet>> shoot();
 
+        /** \brief Upgrades the Player's weapon.
+         */
+        void upgradePlayerWeapon();
+
         /** \brief Adds the given score to the player's current score.
          *  \param score of type int.
          */
