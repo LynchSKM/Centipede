@@ -10,7 +10,7 @@ var searchData=
   ['rendergamewonscreen',['renderGameWonScreen',['../class_logic.html#a1a7332c942409bdb5cbcc26ddadbe6e9',1,'Logic']]],
   ['rendersplashscreen',['renderSplashScreen',['../class_logic.html#a70bcf051b34e52fe521163360316d468',1,'Logic']]],
   ['renderwindow',['renderWindow',['../class_presentation.html#aaf962e6ea5d6086bd884ce3174afb276',1,'Presentation']]],
-  ['reset',['reset',['../class_enemy_factory.html#a9c5b63ab5d3df76f1cb907365cf09bfe',1,'EnemyFactory::reset()'],['../class_game_engine.html#a559f37095479c7849e672ae9e8de136e',1,'GameEngine::reset()']]],
+  ['reset',['reset',['../class_enemy_factory.html#a9c5b63ab5d3df76f1cb907365cf09bfe',1,'EnemyFactory::reset()'],['../class_game_engine.html#a559f37095479c7849e672ae9e8de136e',1,'GameEngine::reset()'],['../class_weapon.html#a126b2f1436460fafa591687b04c6b06a',1,'Weapon::reset()']]],
   ['resume',['resume',['../class_stop_watch.html#a8fa0ea2811a7244d4687ba682cef222d',1,'StopWatch']]],
   ['retrievenearbyobjects',['retrieveNearbyObjects',['../class_spatial_hash.html#a4ce61752d2ec67c16323002d345df77b',1,'SpatialHash']]],
   ['run',['run',['../class_logic.html#abf175ef9069615527bfbd10864b20df4',1,'Logic']]],

@@ -11,5 +11,6 @@ var searchData=
   ['isrightpressed_5f',['isRightPressed_',['../class_presentation.html#a0e2be276f4cb95173da9df04c16e7981',1,'Presentation']]],
   ['isscorpiongenerated_5f',['isScorpionGenerated_',['../class_enemy_factory.html#a978031f350c388e809e81b5d49145c6d',1,'EnemyFactory']]],
   ['isspacepressed_5f',['isSpacePressed_',['../class_presentation.html#a3408af9750851434bdfbb2265ad4a76b',1,'Presentation']]],
-  ['isuppressed_5f',['isUpPressed_',['../class_presentation.html#af9aba72db98840fdb1d2dc892f564a3d',1,'Presentation']]]
+  ['isuppressed_5f',['isUpPressed_',['../class_presentation.html#af9aba72db98840fdb1d2dc892f564a3d',1,'Presentation']]],
+  ['isweaponupgraded_5f',['isWeaponUpgraded_',['../class_weapon.html#a9707cd047ce0d30e683444d98f1608a6',1,'Weapon']]]
 ];

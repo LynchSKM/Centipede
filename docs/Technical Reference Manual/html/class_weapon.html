@@ -111,6 +111,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7459c75e0ef8895c5e15dc23a500164"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#af7459c75e0ef8895c5e15dc23a500164">getReloadTime</a> () const</td></tr>
 <tr class="memdesc:af7459c75e0ef8895c5e15dc23a500164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reload time of the weapon.  <a href="#af7459c75e0ef8895c5e15dc23a500164">More...</a><br /></td></tr>
 <tr class="separator:af7459c75e0ef8895c5e15dc23a500164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0944ebfc9b36079fbd0a8ea65914d3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#ab0944ebfc9b36079fbd0a8ea65914d3f">upgradeWeapon</a> ()</td></tr>
+<tr class="memdesc:ab0944ebfc9b36079fbd0a8ea65914d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Halves the reload time of the <a class="el" href="class_player_bullet.html" title="This is a class that inherits from the IMovingEntity class. It models a Player&#39;s laser bullet object ...">PlayerBullet</a>.  <a href="#ab0944ebfc9b36079fbd0a8ea65914d3f">More...</a><br /></td></tr>
+<tr class="separator:ab0944ebfc9b36079fbd0a8ea65914d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a126b2f1436460fafa591687b04c6b06a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a126b2f1436460fafa591687b04c6b06a">reset</a> ()</td></tr>
+<tr class="memdesc:a126b2f1436460fafa591687b04c6b06a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the reload time to it default one.  <a href="#a126b2f1436460fafa591687b04c6b06a">More...</a><br /></td></tr>
+<tr class="separator:a126b2f1436460fafa591687b04c6b06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a420e7ba3d2017e6de3e93eb579cfd3fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a420e7ba3d2017e6de3e93eb579cfd3fa">~Weapon</a> ()</td></tr>
 <tr class="memdesc:a420e7ba3d2017e6de3e93eb579cfd3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Destructor. Destroys a <a class="el" href="class_weapon.html" title="This is a class that models a weapon for the Player. It generates PlayerBullet objects at a Position ...">Weapon</a> object.  <a href="#a420e7ba3d2017e6de3e93eb579cfd3fa">More...</a><br /></td></tr>
 <tr class="separator:a420e7ba3d2017e6de3e93eb579cfd3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,6 +129,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a62e6efb7aa3056316067ff2038ca1a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ab7fbfae71ecfa0ff738a5ad4e8430a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a9ab7fbfae71ecfa0ff738a5ad4e8430a">reload_time_</a></td></tr>
 <tr class="separator:a9ab7fbfae71ecfa0ff738a5ad4e8430a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9707cd047ce0d30e683444d98f1608a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a9707cd047ce0d30e683444d98f1608a6">isWeaponUpgraded_</a></td></tr>
+<tr class="separator:a9707cd047ce0d30e683444d98f1608a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is a class that models a weapon for the <a class="el" href="class_player.html" title="This is a Player Class that inherits from the IMovingEntity class. It contains virtual functions that...">Player</a>. It generates <a class="el" href="class_player_bullet.html" title="This is a class that inherits from the IMovingEntity class. It models a Player&#39;s laser bullet object ...">PlayerBullet</a> objects at a <a class="el" href="class_position.html" title="A class that contains an x and y value representing a screen position. ">Position</a> passed in after a certain reload time has elapsed. </p>
@@ -225,7 +233,67 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a126b2f1436460fafa591687b04c6b06a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126b2f1436460fafa591687b04c6b06a">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Weapon::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resets the reload time to it default one. </p>
+
+</div>
+</div>
+<a id="ab0944ebfc9b36079fbd0a8ea65914d3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0944ebfc9b36079fbd0a8ea65914d3f">&#9670;&nbsp;</a></span>upgradeWeapon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Weapon::upgradeWeapon </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Halves the reload time of the <a class="el" href="class_player_bullet.html" title="This is a class that inherits from the IMovingEntity class. It models a Player&#39;s laser bullet object ...">PlayerBullet</a>. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9707cd047ce0d30e683444d98f1608a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9707cd047ce0d30e683444d98f1608a6">&#9670;&nbsp;</a></span>isWeaponUpgraded_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Weapon::isWeaponUpgraded_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9ab7fbfae71ecfa0ff738a5ad4e8430a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ab7fbfae71ecfa0ff738a5ad4e8430a">&#9670;&nbsp;</a></span>reload_time_</h2>
 
@@ -302,7 +370,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_weapon.html">Weapon</a></li>
-    <li class="footer">Generated on Sat Oct 6 2018 22:39:56 for elen3009-project-2018 by
+    <li class="footer">Generated on Sun Oct 7 2018 18:08:16 for elen3009-project-2018 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

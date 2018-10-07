@@ -12,7 +12,7 @@ var searchData=
   ['rendergamewonscreen',['renderGameWonScreen',['../class_logic.html#a1a7332c942409bdb5cbcc26ddadbe6e9',1,'Logic']]],
   ['rendersplashscreen',['renderSplashScreen',['../class_logic.html#a70bcf051b34e52fe521163360316d468',1,'Logic']]],
   ['renderwindow',['renderWindow',['../class_presentation.html#aaf962e6ea5d6086bd884ce3174afb276',1,'Presentation']]],
-  ['reset',['reset',['../class_enemy_factory.html#a9c5b63ab5d3df76f1cb907365cf09bfe',1,'EnemyFactory::reset()'],['../class_game_engine.html#a559f37095479c7849e672ae9e8de136e',1,'GameEngine::reset()']]],
+  ['reset',['reset',['../class_enemy_factory.html#a9c5b63ab5d3df76f1cb907365cf09bfe',1,'EnemyFactory::reset()'],['../class_game_engine.html#a559f37095479c7849e672ae9e8de136e',1,'GameEngine::reset()'],['../class_weapon.html#a126b2f1436460fafa591687b04c6b06a',1,'Weapon::reset()']]],
   ['resetlevel_5f',['resetLevel_',['../class_game_engine.html#a8dea02acffad1b51ac1c93a00391c2d2',1,'GameEngine']]],
   ['resume',['resume',['../class_stop_watch.html#a8fa0ea2811a7244d4687ba682cef222d',1,'StopWatch']]],
   ['resumetime_5f',['resumeTime_',['../class_stop_watch.html#ae50947ade2acc56550d7b73b4316d187',1,'StopWatch']]],

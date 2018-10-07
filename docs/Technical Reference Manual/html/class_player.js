@@ -19,6 +19,7 @@ var class_player =
     [ "reincarnate", "class_player.html#aea83d5edc3dbd5cf8f44d38da57dc02b", null ],
     [ "setDirection", "class_player.html#a4b1ae38fa48bb6db1a1783af28935402", null ],
     [ "shoot", "class_player.html#a3ca4a0c411b674096dc30c6a6da8f305", null ],
+    [ "upgradePlayerWeapon", "class_player.html#af7317bae378e9b76c782e76e890e666a", null ],
     [ "dimensions_", "class_player.html#a854d2be4ad2453d5373227db1413134e", null ],
     [ "direction_", "class_player.html#a035573615cefddd933c9e6babd5605fe", null ],
     [ "grid_", "class_player.html#a488aefe7db11bf1d6e7a8adfa52a2b4e", null ],

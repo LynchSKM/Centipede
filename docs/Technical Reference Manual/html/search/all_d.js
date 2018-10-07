@@ -4,7 +4,7 @@ var searchData=
   ['paused',['PAUSED',['../class_stop_watch.html#a9bce443751c7ab19ccc40ae2d34837bfa99b2439e63f73ad515f7ab2447a80673',1,'StopWatch']]],
   ['pausetime_5f',['pauseTime_',['../class_stop_watch.html#ae6c5a56a849c640e50ae72b1b6107258',1,'StopWatch']]],
   ['pi',['pi',['../_boundary_box_8h.html#adc2f2809730e32868dbca4d9a6c314bb',1,'BoundaryBox.h']]],
-  ['player',['Player',['../class_player.html',1,'Player'],['../class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a07c80e2a355d91402a00d82b1fa13855',1,'AssetManager::PLAYER()'],['../class_player.html#ae1264a74e8aed292f9a57a4234a12ce1',1,'Player::Player()'],['../_object_type_8h.html#a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855',1,'PLAYER():&#160;ObjectType.h']]],
+  ['player',['Player',['../class_player.html',1,'Player'],['../class_player.html#ae1264a74e8aed292f9a57a4234a12ce1',1,'Player::Player()'],['../class_asset_manager.html#ab4e7588608f25b6b0bc502fc62ace728a07c80e2a355d91402a00d82b1fa13855',1,'AssetManager::PLAYER()'],['../_object_type_8h.html#a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855',1,'PLAYER():&#160;ObjectType.h']]],
   ['player_2ecpp',['Player.cpp',['../_player_8cpp.html',1,'']]],
   ['player_2eh',['Player.h',['../_player_8h.html',1,'']]],
   ['player_5f',['player_',['../class_game_engine.html#aae11e05fdace726b50cb3422840b089a',1,'GameEngine']]],

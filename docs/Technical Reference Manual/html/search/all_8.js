@@ -31,5 +31,6 @@ var searchData=
   ['isspacepressed_5f',['isSpacePressed_',['../class_presentation.html#a3408af9750851434bdfbb2265ad4a76b',1,'Presentation']]],
   ['isuppressed',['isUpPressed',['../class_presentation.html#a36e1855d959346115eee06d327686551',1,'Presentation']]],
   ['isuppressed_5f',['isUpPressed_',['../class_presentation.html#af9aba72db98840fdb1d2dc892f564a3d',1,'Presentation']]],
+  ['isweaponupgraded_5f',['isWeaponUpgraded_',['../class_weapon.html#a9707cd047ce0d30e683444d98f1608a6',1,'Weapon']]],
   ['iswindowopen',['isWindowOpen',['../class_presentation.html#a886dde2ac9b78eb0e1bee3aab9111be6',1,'Presentation']]]
 ];

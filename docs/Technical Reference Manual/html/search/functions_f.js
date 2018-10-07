@@ -4,6 +4,7 @@ var searchData=
   ['scorpion',['Scorpion',['../class_scorpion.html#acf463b731459f599605191edba33cec4',1,'Scorpion']]],
   ['scorpioncollideswithmushroom',['scorpionCollidesWithMushroom',['../class_collision_handler.html#a731ea157e7dc96266016a61829dc5088',1,'CollisionHandler']]],
   ['setbodytype',['setBodyType',['../class_centipede_segment.html#ac6d38060fd33a0564aa25e7393431a18',1,'CentipedeSegment']]],
+  ['setcentipedeheadsreleasetime',['setCentipedeHeadsReleaseTime',['../class_enemy_factory.html#a13f34eaf0eb17b5f41980d163b399776',1,'EnemyFactory']]],
   ['setdirection',['setDirection',['../class_centipede_segment.html#a176b0a6e5291b5b91825a88bd1ede947',1,'CentipedeSegment::setDirection()'],['../class_i_moving_entity.html#a8fe095ff0e0617e6d57280c98c5a3b35',1,'IMovingEntity::setDirection()'],['../class_player.html#a4b1ae38fa48bb6db1a1783af28935402',1,'Player::setDirection()'],['../class_player_bullet.html#a015288772826cba1860b513049469f13',1,'PlayerBullet::setDirection()'],['../class_scorpion.html#af42ed115d6cb52f51e634ee0a3256dbd',1,'Scorpion::setDirection()'],['../class_spider.html#a467243104195a4793c7305fcea92968c',1,'Spider::setDirection()']]],
   ['sethighscore',['setHighScore',['../class_high_score_manager.html#abd2310fe0af525415d5721b1a80421ee',1,'HighScoreManager']]],
   ['setspiderreleasetime',['setSpiderReleaseTime',['../class_enemy_factory.html#a634a1ee5bfbc10b23c1283cd7dacbd65',1,'EnemyFactory']]],
