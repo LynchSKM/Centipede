@@ -29,7 +29,9 @@ TEST_CASE("Bullet can move"){
 TEST_CASE("Bullet is not alive outside the grid"){
 
     Grid testGrid{650,600};
-    PlayerBullet testBullet{Position{325.0f,8.2f}, testGrid};
+    struct PlayerBulletDimensions dimensions;
+    auto y = dimensions.height/2.0f;
+    PlayerBullet testBullet{Position{325.0f, y}, testGrid};
 
     testBullet.move();
     CHECK_FALSE(testBullet.isAlive());
