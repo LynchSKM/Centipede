@@ -33,3 +33,67 @@ TEST_CASE("A Spider can be created.")
 
     CHECK_FALSE(spider.empty());
 }
+
+TEST_CASE("A Spider is not created before the delay time elapses.")
+{
+    Grid testGrid{592,640};
+    EnemyFactory testEFactory{testGrid};
+    auto delay = 15.0;
+    testEFactory.setSpiderReleaseTime(delay);
+
+    StopWatch testStopWatch{};
+    testStopWatch.start();
+
+    auto stop_watch_delay = 2.0;
+
+    //Add delay
+    while(true)
+    {
+        testStopWatch.pause();
+        auto time_elapsed = testStopWatch.getPauseTime();
+        if(time_elapsed>stop_watch_delay) break;
+        testStopWatch.resume();
+    }
+
+    auto spider  = testEFactory.generateASpider();
+    CHECK(spider.empty());
+}
+
+TEST_CASE("Centipede Heads can be created.")
+{
+    Grid testGrid{592,640};
+    EnemyFactory testEFactory{testGrid};
+    auto delay = 0.0;
+    auto number_of_heads = 2;
+
+    testEFactory.setCentipedeHeadsReleaseTime(delay);
+    auto centipedeHeads  = testEFactory.generateCentipedeHeads(number_of_heads);
+
+    CHECK_FALSE(centipedeHeads.empty());
+}
+
+TEST_CASE("Centipede Heads are not created before the delay time elapses.")
+{
+    Grid testGrid{592,640};
+    EnemyFactory testEFactory{testGrid};
+    auto delay = 15.0;
+    auto number_of_heads = 2;
+    testEFactory.setCentipedeHeadsReleaseTime(delay);
+
+    StopWatch testStopWatch{};
+    testStopWatch.start();
+
+    auto stop_watch_delay = 2.0;
+
+    //Add delay
+    while(true)
+    {
+        testStopWatch.pause();
+        auto time_elapsed = testStopWatch.getPauseTime();
+        if(time_elapsed>stop_watch_delay) break;
+        testStopWatch.resume();
+    }
+
+    auto centipedeHeads  = testEFactory.generateCentipedeHeads(number_of_heads);
+    CHECK(centipedeHeads.empty());
+}

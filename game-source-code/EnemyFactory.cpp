@@ -137,3 +137,13 @@ void EnemyFactory::setSpiderReleaseTime(double new_delay)
 {
     spiderReleaseTime_ = new_delay;
 }
+
+double EnemyFactory::getCentipedeHeadsReleaseTime() const
+{
+    return centiHeadsReleaseTime_;
+}
+
+void EnemyFactory::setCentipedeHeadsReleaseTime(double new_delay)
+{
+    centiHeadsReleaseTime_ = new_delay;
+}

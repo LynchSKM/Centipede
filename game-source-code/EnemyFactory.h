@@ -70,6 +70,17 @@ class EnemyFactory
          */
         void setSpiderReleaseTime(double new_delay);
 
+        /** \brief Returns the current delay of the timer.
+         *  \return double
+         */
+        double getCentipedeHeadsReleaseTime() const;
+
+        /** \brief Sets the Centipede heads release time delay.
+         *  \param new_delay is a double containing the new delay for the Centipede
+         *  heads generation.
+         */
+        void setCentipedeHeadsReleaseTime(double new_delay);
+
     private:
         const Grid grid_;
         bool isCentipedeGenerated_;
