@@ -36,6 +36,14 @@ class Weapon
          */
         double getReloadTime() const;
 
+        /** \brief Halves the reload time of the PlayerBullet.
+         */
+        void upgradeWeapon();
+
+        /** \brief Resets the reload time to it default one.
+         */
+        void reset();
+
         /** \brief Default Destructor. Destroys a Weapon object.
          */
         ~Weapon();
@@ -44,6 +52,7 @@ class Weapon
         StopWatch reload_timer_;
         double timeSinceLastShoot_;
         double reload_time_;
+        bool isWeaponUpgraded_;
 };
 
 #endif // WEAPON_H

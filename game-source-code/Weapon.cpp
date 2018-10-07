@@ -1,10 +1,11 @@
 #include "Weapon.h"
 
 Weapon::Weapon():
-    timeSinceLastShoot_{0},
-    reload_time_{0.15}
+    reload_time_{0.15},
+    isWeaponUpgraded_{false}
 {
     reload_timer_.start();
+    timeSinceLastShoot_ = reload_timer_.getProcessTime();
 }
 
 vector<shared_ptr<PlayerBullet>> Weapon::fire(const Grid& grid, Position start_position)
@@ -25,6 +26,21 @@ double Weapon::getReloadTime() const
 {
     return reload_time_;
 }
+
+void Weapon::upgradeWeapon()
+{
+    if(!isWeaponUpgraded_) reload_time_/=2.0;
+
+    isWeaponUpgraded_ = true;
+}
+
+void Weapon::reset()
+{
+    reload_time_        = 0.15;
+    isWeaponUpgraded_   = false;
+    timeSinceLastShoot_ = reload_timer_.getProcessTime();
+}
+
 
 Weapon::~Weapon()
 {
