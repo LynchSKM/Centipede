@@ -112,7 +112,7 @@ bool Player::isPoisoned() const
 vector<shared_ptr<PlayerBullet>> Player::shoot()
 {
     auto x = position_.getX_pos()-dimensions_.speed;
-    auto y = position_.getY_pos()-dimensions_.height/2.0f;
+    auto y = position_.getY_pos()-dimensions_.height;
 
     return weapon_.fire(grid_, Position{x, y});
 }

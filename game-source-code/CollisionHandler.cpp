@@ -100,7 +100,7 @@ void CollisionHandler::playerCollidesWithObjects(vector<IMovingEntity_ptr>& play
                     thePlayer->move();
                     thePlayer->setDirection(Direction::NONE);
                 }
-                else if(object->getObjectType()!=ObjectType::PLAYER_LASER_BULLET)
+                else
                 { // Anything else will kill player immediately besides its bullets
 
                     object->eliminated();
