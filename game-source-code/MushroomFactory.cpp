@@ -1,11 +1,15 @@
 #include "MushroomFactory.h"
+#include <cmath>
 
-MushroomFactory::MushroomFactory(const Grid& grid):grid_{grid},maxCol_{31}, maxRow_{37},
-                maxMushrooms_{60}
+MushroomFactory::MushroomFactory(const Grid& grid):grid_{grid},maxMushrooms_{60}
 {
     //ctor
+    auto cell_size = 16.0f;
+    maxRow_ = static_cast<int>(floor(grid_.getWidth()/cell_size));
+    maxCol_ = static_cast<int>(floor((grid_.getHeight()- grid_.getHeight()*0.2)/cell_size));
     // Build map:
     defineRowAndCol();
+
 }
 vector <shared_ptr<Mushroom>>MushroomFactory::generateMushrooms()
 {
